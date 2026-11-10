@@ -8,7 +8,6 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
     chapterTitle: 'Introducere: Cadrul doctrinar și arhitectura explicativă pe trei paliere cauzale',
     code: 'Introducere',
     title: 'Cadrul doctrinar și arhitectura explicativă pe trei paliere cauzale',
-    subtitle: '(Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale în fața operațiunilor informaționale ruse și a ideologiei putiniste, versiunea 1.0)',
     dominantStrata: ['A', 'B', 'C'],
     linkedFigureId: 1,
     summaryThesis: 'Războiul cognitiv operează în al șaselea domeniu operațional definit de NATO, vizând alterarea arhitecturii de procesare a realității, erodarea încrederii în instituțiile democratice și paralizia capacității decizionale prin trei straturi cauzale interdependente (Stratul A instituțional, Stratul B neurocognitiv și semiotic, Stratul C inconștient cultural și arhetipal).',
