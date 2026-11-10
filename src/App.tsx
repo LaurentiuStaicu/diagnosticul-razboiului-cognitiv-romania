@@ -11,9 +11,7 @@ import { InteractiveFigures, FIGURE_METADATA } from './components/InteractiveFig
 import { TablesAndRegionalView } from './components/TablesAndRegionalView';
 import { GlossaryAndBibliographyView } from './components/GlossaryAndBibliographyView';
 import { SearchModal, PdfDocumentView } from './components/PdfAndSearchModal';
-import { FourActsPresentation } from './components/FourActsPresentation';
 import { LandingCoverPage } from './components/LandingCoverPage';
-import { VideoSynthesisBox } from './components/VideoSynthesisBox';
 import { SocialShareButtons } from './components/SocialShareButtons';
 import {
   ContextualTooltip,
@@ -29,7 +27,6 @@ import {
 } from 'lucide-react';
 
 type ActiveNavView = 'parcurs' | 'diagrame' | 'tabele' | 'glosar' | 'pdf';
-type ParcursSubMode = 'subcapitole' | 'patru-acte';
 type AudienceReadingMode = 'academic' | 'executive';
 
 /**
@@ -88,9 +85,8 @@ function findMatchingBibliographyItems(citationText: string): BibliographyItem[]
 interface ParsedHashTarget {
   isPortalOpen: boolean;
   activeView?: ActiveNavView;
-  parcursSubMode?: ParcursSubMode;
   currentStepNumber?: number;
-  activeActNumber?: 1 | 2 | 3 | 4;
+  selectedChapterFilter?: number | 'ALL';
   activeConceptId?: string;
   labFigureId?: number;
 }
@@ -108,7 +104,6 @@ function parseHashState(hashInput: string): ParsedHashTarget {
       return {
         isPortalOpen: true,
         activeView: 'parcurs',
-        parcursSubMode: 'subcapitole',
         currentStepNumber: num,
         activeConceptId:
           target && target.keyConceptIds.length > 0 ? target.keyConceptIds[0] : undefined
@@ -117,30 +112,35 @@ function parseHashState(hashInput: string): ParsedHashTarget {
     return { isPortalOpen: false };
   }
 
-  if (rawHash.startsWith('actul-')) {
-    const actNum = parseInt(rawHash.replace('actul-', ''), 10);
-    if (actNum === 1 || actNum === 2 || actNum === 3 || actNum === 4) {
+  // Chapter navigation: #capitolul-0 .. #capitolul-6 and #introducere
+  if (rawHash === 'introducere' || rawHash === 'capitolul-0') {
+    return { isPortalOpen: true, activeView: 'parcurs', currentStepNumber: 1, selectedChapterFilter: 0 };
+  }
+  if (rawHash.startsWith('capitolul-')) {
+    const chapNum = parseInt(rawHash.replace('capitolul-', ''), 10);
+    const chapterFirstSteps: Record<number, number> = { 0: 1, 1: 2, 2: 5, 3: 8, 4: 11, 5: 14, 6: 16 };
+    if (!isNaN(chapNum) && chapterFirstSteps[chapNum] !== undefined) {
       return {
         isPortalOpen: true,
         activeView: 'parcurs',
-        parcursSubMode: 'patru-acte',
-        activeActNumber: actNum
+        currentStepNumber: chapterFirstSteps[chapNum],
+        selectedChapterFilter: chapNum
       };
     }
-    return {
-      isPortalOpen: true,
-      activeView: 'parcurs',
-      parcursSubMode: 'patru-acte',
-      activeActNumber: 1
-    };
   }
 
-  if (rawHash === '4-acte') {
+  // Graceful legacy mappings for existing bookmarks
+  if (rawHash.startsWith('actul-')) {
+    const actNum = parseInt(rawHash.replace('actul-', ''), 10);
+    const actFirstStep = actNum === 1 ? 1 : actNum === 2 ? 5 : actNum === 3 ? 11 : 16;
     return {
       isPortalOpen: true,
       activeView: 'parcurs',
-      parcursSubMode: 'patru-acte'
+      currentStepNumber: actFirstStep
     };
+  }
+  if (rawHash === '4-acte') {
+    return { isPortalOpen: true, activeView: 'parcurs', currentStepNumber: 1 };
   }
 
   if (rawHash.startsWith('figura-')) {
@@ -171,12 +171,26 @@ function parseHashState(hashInput: string): ParsedHashTarget {
   if (rawHash === 'parcurs') {
     return {
       isPortalOpen: true,
-      activeView: 'parcurs',
-      parcursSubMode: 'subcapitole'
+      activeView: 'parcurs'
     };
   }
 
   return { isPortalOpen: false };
+}
+
+function getInitialAudienceMode(): AudienceReadingMode {
+  if (typeof window === 'undefined') return 'academic';
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const mode = params.get('mode');
+    if (mode === 'executive') return 'executive';
+    if (mode === 'deep' || mode === 'academic') return 'academic';
+    const stored = localStorage.getItem('readingMode');
+    if (stored === 'executive' || stored === 'academic') return stored;
+  } catch {
+    // fallback
+  }
+  return 'academic';
 }
 
 export function App() {
@@ -188,19 +202,34 @@ export function App() {
   const [activeView, setActiveView] = useState<ActiveNavView>(
     initialHash.activeView ?? 'parcurs'
   );
-  const [parcursSubMode, setParcursSubMode] = useState<ParcursSubMode>(
-    initialHash.parcursSubMode ?? 'subcapitole'
-  );
   const [currentStepNumber, setCurrentStepNumber] = useState<number>(
     initialHash.currentStepNumber ?? 1
   );
-  const [activeActNumber, setActiveActNumber] = useState<1 | 2 | 3 | 4>(
-    initialHash.activeActNumber ?? 1
+  const [selectedChapterFilter, setSelectedChapterFilter] = useState<number | 'ALL'>(
+    initialHash.selectedChapterFilter ?? 'ALL'
   );
-  const [selectedActFilter, setSelectedActFilter] = useState<number | 'ALL'>('ALL');
   const [selectedStratumHighlight, setSelectedStratumHighlight] = useState<StratumId | 'ALL'>('ALL');
   const [readingTab, setReadingTab] = useState<'integral' | 'registre' | 'ambele'>('ambele');
-  const [audienceMode, setAudienceMode] = useState<AudienceReadingMode>('academic');
+  const [audienceMode, setAudienceMode] = useState<AudienceReadingMode>(getInitialAudienceMode);
+  const [isAcademicAccordionOpen, setIsAcademicAccordionOpen] = useState<boolean>(false);
+
+  const handleAudienceModeChange = useCallback((newMode: AudienceReadingMode) => {
+    setAudienceMode(newMode);
+    if (typeof window === 'undefined') return;
+    try {
+      localStorage.setItem('readingMode', newMode);
+      const url = new URL(window.location.href);
+      if (newMode === 'executive') {
+        url.searchParams.set('mode', 'executive');
+      } else {
+        url.searchParams.delete('mode');
+      }
+      window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+    } catch {
+      // ignore
+    }
+  }, []);
+
   const [activeConceptId, setActiveConceptId] = useState<string>(
     initialHash.activeConceptId ?? 'al-saselea-domeniu'
   );
@@ -210,41 +239,63 @@ export function App() {
 
   // Refs for accurate mobile & desktop scroll positioning
   const readingStageRef = useRef<HTMLElement | null>(null);
+  const railContainerRef = useRef<HTMLDivElement | null>(null);
   const activeStepButtonRef = useRef<HTMLButtonElement | null>(null);
   const citationDossierRef = useRef<HTMLDivElement | null>(null);
   const conceptCardRef = useRef<HTMLDivElement | null>(null);
 
-  const scrollToElementOnMobile = useCallback((targetRef: React.RefObject<HTMLElement | null>) => {
-    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
-      setTimeout(() => {
-        targetRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 60);
-    }
+  const getStickyHeaderOffset = useCallback(() => {
+    if (typeof window === 'undefined') return 0;
+    // On mobile (< 1024px): main header (~49px) + sticky mobile switcher (~46px) + margin = 108px
+    // On desktop (>= 1024px): main header (~53px) + margin = 72px
+    return window.innerWidth < 1024 ? 108 : 72;
   }, []);
+
+  const scrollToElementOnMobile = useCallback(
+    (targetRef: React.RefObject<HTMLElement | null>) => {
+      if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+        setTimeout(() => {
+          if (!targetRef.current) return;
+          const offset = getStickyHeaderOffset();
+          const rect = targetRef.current.getBoundingClientRect();
+          const targetY = rect.top + window.scrollY - offset;
+          window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+        }, 70);
+      }
+    },
+    [getStickyHeaderOffset]
+  );
 
   const scrollToReadingStage = useCallback(() => {
     if (typeof window === 'undefined') return;
     setTimeout(() => {
       if (readingStageRef.current) {
-        readingStageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const offset = getStickyHeaderOffset();
+        const rect = readingStageRef.current.getBoundingClientRect();
+        const targetY = rect.top + window.scrollY - offset;
+        window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
       } else {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-    }, 40);
-  }, []);
+    }, 50);
+  }, [getStickyHeaderOffset]);
 
-  // Center the active step button in the horizontal rail whenever currentStepNumber changes
+  // Center the active step button strictly inside the horizontal rail container (zero vertical window jump)
   useEffect(() => {
-    if (!isPortalOpen || activeView !== 'parcurs' || parcursSubMode !== 'subcapitole') return;
+    if (!isPortalOpen || activeView !== 'parcurs') return;
     const timer = setTimeout(() => {
-      activeStepButtonRef.current?.scrollIntoView({
-        behavior: 'smooth',
-        inline: 'center',
-        block: 'nearest'
-      });
+      if (railContainerRef.current && activeStepButtonRef.current) {
+        const container = railContainerRef.current;
+        const btn = activeStepButtonRef.current;
+        const targetScrollLeft = btn.offsetLeft - (container.clientWidth - btn.clientWidth) / 2;
+        container.scrollTo({
+          left: Math.max(0, targetScrollLeft),
+          behavior: 'smooth'
+        });
+      }
     }, 80);
     return () => clearTimeout(timer);
-  }, [currentStepNumber, isPortalOpen, activeView, parcursSubMode]);
+  }, [currentStepNumber, isPortalOpen, activeView]);
 
   const applyHashState = useCallback(() => {
     const parsed = parseHashState(window.location.hash);
@@ -260,23 +311,18 @@ export function App() {
       const nextView = parsed.activeView;
       setActiveView((prev) => (prev === nextView ? prev : nextView));
     }
-    if (parsed.parcursSubMode !== undefined) {
-      const nextSubMode = parsed.parcursSubMode;
-      setParcursSubMode((prev) => (prev === nextSubMode ? prev : nextSubMode));
-    }
     if (parsed.currentStepNumber !== undefined) {
       const nextStep = parsed.currentStepNumber;
       setCurrentStepNumber((prev) => (prev === nextStep ? prev : nextStep));
-      setSelectedActFilter((prev) => (prev === 'ALL' ? prev : 'ALL'));
       setSelectedAuthorCitation((prev) => (prev === null ? prev : null));
+    }
+    if (parsed.selectedChapterFilter !== undefined) {
+      const nextChap = parsed.selectedChapterFilter;
+      setSelectedChapterFilter((prev) => (prev === nextChap ? prev : nextChap));
     }
     if (parsed.activeConceptId !== undefined) {
       const nextConcept = parsed.activeConceptId;
       setActiveConceptId((prev) => (prev === nextConcept ? prev : nextConcept));
-    }
-    if (parsed.activeActNumber !== undefined) {
-      const nextAct = parsed.activeActNumber;
-      setActiveActNumber((prev) => (prev === nextAct ? prev : nextAct));
     }
     if (parsed.labFigureId !== undefined) {
       const nextFig = parsed.labFigureId;
@@ -339,7 +385,7 @@ export function App() {
     CHAPTER_EXECUTIVE_SUMMARIES.find((s) => s.chapterNumber === currentStep.chapterNumber) ||
     CHAPTER_EXECUTIVE_SUMMARIES[0];
 
-  // Dynamically synchronize <head> OpenGraph & Twitter Card meta tags with the active section, act, or figure
+  // Dynamically synchronize <head> OpenGraph & Twitter Card meta tags with the active section, chapter, or figure
   useEffect(() => {
     const baseUrl = 'https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania';
     let metaTitle = 'Diagnosticul războiului cognitiv în România (Versiunea 1.0)';
@@ -351,51 +397,17 @@ export function App() {
     let metaUrl = `${baseUrl}/`;
 
     if (isPortalOpen) {
-      if (activeView === 'parcurs' && parcursSubMode === 'subcapitole') {
-        const figId =
-          currentStep.linkedFigureId ||
-          (currentStep.actNumber === 1
-            ? 1
-            : currentStep.actNumber === 2
-            ? 3
-            : currentStep.actNumber === 3
-            ? 6
-            : 7);
+      if (activeView === 'parcurs') {
+        const figId = currentStep.linkedFigureId || 1;
         const figMeta = FIGURE_METADATA[figId] || FIGURE_METADATA[1];
-        metaTitle = `${currentStep.title} (Diagnosticul războiului cognitiv în România)`;
+        metaTitle =
+          currentStep.stepNumber === 1
+            ? 'Introducere · Diagnosticul războiului cognitiv în România (Versiunea 1.0)'
+            : `${currentStep.title} (Diagnosticul războiului cognitiv în România)`;
         metaDescription = currentStep.summaryThesis;
         metaImage = `${baseUrl}/og/og-fig-${figId}.png`;
         metaImageAlt = `${currentStep.title} (${figMeta.title})`;
         metaUrl = `${baseUrl}/share/pasul-${currentStep.stepNumber}.html`;
-      } else if (activeView === 'parcurs' && parcursSubMode === 'patru-acte') {
-        const actTitles: Record<1 | 2 | 3 | 4, { title: string; desc: string; alt: string }> = {
-          1: {
-            title: 'Actul I (Cadrul macro și rădăcina sistemică, Diagnosticul războiului cognitiv în România)',
-            desc: 'Introducere și Capitolul 1 (Arhitectura cauzală ascendentă pe Straturile A, B și C, barca lui Coleman-Hedström, determinanții Lalonde-Dever și anomalia formelor fără fond).',
-            alt: 'Actul I (Arhitectura cauzală pe trei straturi a vulnerabilității societale endogene)'
-          },
-          2: {
-            title: 'Actul II (Anatomia tensiunii și capturarea buclei OODA, Diagnosticul războiului cognitiv în România)',
-            desc: 'Capitolele 2 și 3 (Rețeaua sistema, Antilumea putinistă, starea Bobok, dubla falsificare axiologică, controlul reflexiv de rang secund și deturnarea fazei de Orientare din bucla OODA).',
-            alt: 'Actul II (Mecanismul cibernetic și semiotic al capturării cognitive în bucla OODA)'
-          },
-          3: {
-            title: 'Actul III (Dinamica forțelor, Umbra colectivă și bifurcația Track A și Track B, Diagnosticul războiului cognitiv în România)',
-            desc: 'Capitolele 4 și 5 (Conversia resurselor din Umbra colectivă, matricea comportamentală a lui Carlo M. Cipolla și bifurcarea neurocognitivă în criză acută).',
-            alt: 'Actul III (Bifurcarea procesării neurocognitive sub presiunea crizei acute)'
-          },
-          4: {
-            title: 'Actul IV (Protocolul secvențial în trei faze și modernitatea organică, Diagnosticul războiului cognitiv în România)',
-            desc: 'Capitolul 6 (Ordinea cauzală obligatorie a reconstrucției rezilienței pe determinanții Lalonde-Dever, guvernanța policentrică Ostrom și individuarea colectivă).',
-            alt: 'Actul IV (Protocolul secvențial în trei faze al reconstrucției rezilienței societale)'
-          }
-        };
-        const info = actTitles[activeActNumber];
-        metaTitle = info.title;
-        metaDescription = info.desc;
-        metaImage = `${baseUrl}/og/og-act-${activeActNumber}.png`;
-        metaImageAlt = info.alt;
-        metaUrl = `${baseUrl}/share/actul-${activeActNumber}.html`;
       } else if (activeView === 'diagrame') {
         const fig = FIGURE_METADATA[labFigureId] || FIGURE_METADATA[1];
         metaTitle = `${fig.title} (Diagnosticul războiului cognitiv în România)`;
@@ -434,12 +446,12 @@ export function App() {
     setMetaContent('meta-twitter-description', metaDescription);
     setMetaContent('meta-twitter-image', metaImage);
     setMetaContent('meta-twitter-image-alt', metaImageAlt);
-  }, [isPortalOpen, activeView, parcursSubMode, currentStep, activeActNumber, labFigureId]);
+  }, [isPortalOpen, activeView, currentStep, labFigureId]);
 
   const filteredStepsForRail =
-    selectedActFilter === 'ALL'
+    selectedChapterFilter === 'ALL'
       ? ALL_SUBCHAPTER_STEPS
-      : ALL_SUBCHAPTER_STEPS.filter((s) => s.actNumber === selectedActFilter);
+      : ALL_SUBCHAPTER_STEPS.filter((s) => s.chapterNumber === selectedChapterFilter);
 
   const activeGlossaryConcept =
     GLOSSARY_CONCEPTS.find((c) => c.id === activeConceptId) ||
@@ -641,11 +653,7 @@ export function App() {
           <button
             onClick={() => {
               setActiveView('parcurs');
-              updateUrlHash(
-                parcursSubMode === 'patru-acte'
-                  ? `actul-${activeActNumber}`
-                  : `pasul-${currentStepNumber}`
-              );
+              updateUrlHash(`pasul-${currentStepNumber}`);
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
@@ -743,11 +751,7 @@ export function App() {
             onClick={() => {
               setActiveView(tab.id);
               if (tab.id === 'parcurs') {
-                updateUrlHash(
-                  parcursSubMode === 'patru-acte'
-                    ? `actul-${activeActNumber}`
-                    : `pasul-${currentStepNumber}`
-                );
+                updateUrlHash(`pasul-${currentStepNumber}`);
               } else if (tab.id === 'diagrame') {
                 updateUrlHash(`figura-${labFigureId}`);
               } else {
@@ -768,215 +772,215 @@ export function App() {
 
       {/* MAIN WORKSPACE CONTAINER */}
       <main className="flex-1 max-w-[1440px] w-full mx-auto px-3 sm:px-8 py-5 sm:py-8">
-        {/* VIEW 1: PARCURS PAS CU PAS (Main Progressive Disclosure Explorer) */}
+        {/* VIEW 1: PARCURS PAS CU PAS (Main Monograph Reader) */}
         {activeView === 'parcurs' && (
           <div className="space-y-6">
-            {/* Mode Switcher Bar between 19-Subchapter Analytical Reader & 4-Act Cinematic Presentation */}
-            <div className="bg-[#F4F1EA] border border-[#222426] px-3.5 sm:px-4 py-3 flex flex-wrap items-center justify-between gap-3">
-              <div className="text-xs font-mono text-[#222426]">
-                Arhitectura de explorare a monografiei (Dezvăluire progresivă)
+            {/* Editorial Header Section */}
+            <section className="bg-[#F4F1EA] border border-[#222426] p-4 sm:p-6">
+              <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-5 border-b border-[#D0D5D9]">
+                <div className="max-w-3xl">
+                  <div className="text-xs font-mono text-[#6E7376] mb-1.5">
+                    Monografie științifică integrată (Versiunea 1.0 · Al șaselea domeniu operațional NATO ACT)
+                  </div>
+                  <h1 className="font-serif text-xl sm:text-3xl lg:text-4xl font-bold text-[#222426] headline-balance leading-tight">
+                    Diagnosticul războiului cognitiv în România
+                  </h1>
+                  <p className="text-xs sm:text-sm font-normal text-[#2C3539] mt-2 leading-relaxed">
+                    (Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale în fața operațiunilor informaționale ruse și a ideologiei putiniste, versiunea 1.0)
+                  </p>
+                </div>
+
+                {/* Display Register Controls */}
+                <div className="flex flex-col sm:flex-row lg:flex-col items-start sm:items-center lg:items-end gap-2 shrink-0">
+                  <div className="text-xs font-mono text-[#6E7376]">
+                    Mod de afișare a conținutului
+                  </div>
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    <button
+                      onClick={() => setReadingTab('ambele')}
+                      className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
+                        readingTab === 'ambele'
+                          ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
+                          : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
+                      }`}
+                    >
+                      Text integral și două registre
+                    </button>
+                    <button
+                      onClick={() => setReadingTab('integral')}
+                      className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
+                        readingTab === 'integral'
+                          ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
+                          : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
+                      }`}
+                    >
+                      Doar textul integral
+                    </button>
+                    <button
+                      onClick={() => setReadingTab('registre')}
+                      className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
+                        readingTab === 'registre'
+                          ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
+                          : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
+                      }`}
+                    >
+                      Descompunere pe două registre
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-wrap items-center gap-2">
-                <button
-                  onClick={() => {
-                    setParcursSubMode('subcapitole');
-                    updateUrlHash(`pasul-${currentStepNumber}`);
-                  }}
-                  className={`px-3 py-1.5 text-xs font-medium border transition-colors text-left cursor-pointer ${
-                    parcursSubMode === 'subcapitole'
-                      ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-semibold'
-                      : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
-                  }`}
-                >
-                  Lectură analitică pas cu pas (Cele 19 secțiuni integrale)
-                </button>
-                <button
-                  onClick={() => {
-                    setParcursSubMode('patru-acte');
-                    updateUrlHash(`actul-${activeActNumber}`);
-                  }}
-                  className={`px-3 py-1.5 text-xs font-medium border transition-colors text-left cursor-pointer ${
-                    parcursSubMode === 'patru-acte'
-                      ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-                      : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
-                  }`}
-                >
-                  Prezentare progresivă în 4 acte (Inclusiv regia Actului V)
-                </button>
+
+              {/* Selector pe Capitole (Introducere și Capitolele 1–6) */}
+              <div className="mt-5">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <div className="text-xs font-mono font-semibold text-[#222426]">
+                    Navigare pe capitole (Selectați pentru salt la primul subcapitol)
+                  </div>
+                  {selectedChapterFilter !== 'ALL' && (
+                    <button
+                      type="button"
+                      onClick={() => setSelectedChapterFilter('ALL')}
+                      className="text-xs font-mono text-[#6E7376] hover:text-[#222426] underline cursor-pointer"
+                    >
+                      Arată toate subcapitolele (1–19)
+                    </button>
+                  )}
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+                  {[
+                    {
+                      num: 0,
+                      title: 'Introducere',
+                      sub: 'Cadrul ontologic și metodologic',
+                      stepsLabel: 'Pasul 1 (Introducere)',
+                      firstStep: 1
+                    },
+                    {
+                      num: 1,
+                      title: 'Capitolul 1',
+                      sub: 'Vulnerabilitatea structurală internă',
+                      stepsLabel: 'Subcap. 1.1–1.3 (Pașii 2–4)',
+                      firstStep: 2
+                    },
+                    {
+                      num: 2,
+                      title: 'Capitolul 2',
+                      sub: 'Vectorul rus și falsificarea axiologică',
+                      stepsLabel: 'Subcap. 2.1–2.3 (Pașii 5–7)',
+                      firstStep: 5
+                    },
+                    {
+                      num: 3,
+                      title: 'Capitolul 3',
+                      sub: 'Mecanismul capturării în bucla OODA',
+                      stepsLabel: 'Subcap. 3.1–3.3 (Pașii 8–10)',
+                      firstStep: 8
+                    },
+                    {
+                      num: 4,
+                      title: 'Capitolul 4',
+                      sub: 'Dinamica forțelor și filtrele Umbrei',
+                      stepsLabel: 'Subcap. 4.1–4.3 (Pașii 11–13)',
+                      firstStep: 11
+                    },
+                    {
+                      num: 5,
+                      title: 'Capitolul 5',
+                      sub: 'Matricea Cipolla și bifurcația în criză',
+                      stepsLabel: 'Subcap. 5.1–5.2 (Pașii 14–15)',
+                      firstStep: 14
+                    },
+                    {
+                      num: 6,
+                      title: 'Capitolul 6',
+                      sub: 'Protocolul de reconstrucție în trei faze',
+                      stepsLabel: 'Subcap. 6.1–6.4 (Pașii 16–19)',
+                      firstStep: 16
+                    }
+                  ].map((ch) => {
+                    const isCurrentChapter = currentStep.chapterNumber === ch.num;
+                    const isFilterActive = selectedChapterFilter === ch.num;
+                    return (
+                      <button
+                        key={ch.num}
+                        onClick={() => {
+                          setSelectedChapterFilter(ch.num);
+                          handleStepSelect(ch.firstStep);
+                        }}
+                        className={`p-3 border text-left transition-all cursor-pointer ${
+                          isCurrentChapter || isFilterActive
+                            ? 'border-2 border-[#222426] bg-[#E5B822]/25 shadow-sm'
+                            : 'border-[#8C9BA5] bg-[#F6F5EE] hover:border-[#222426]'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between text-[11px] font-mono text-[#6E7376]">
+                          <span className="font-bold text-[#222426]">{ch.title}</span>
+                          <span>{ch.stepsLabel}</span>
+                        </div>
+                        <div className="font-serif text-xs sm:text-sm font-semibold text-[#222426] mt-1 leading-snug">
+                          {ch.sub}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
 
-            {parcursSubMode === 'patru-acte' ? (
-              <FourActsPresentation
-                activeActNum={activeActNumber}
-                onSelectAct={(actNum) => {
-                  setActiveActNumber(actNum);
-                  updateUrlHash(`actul-${actNum}`);
-                }}
-                onSelectStepInReader={(stepNum) => {
-                  setParcursSubMode('subcapitole');
-                  handleStepSelect(stepNum);
-                }}
-              />
-            ) : (
-              <>
-                {/* Editorial Banner & 4-Act Architecture Bar */}
-                <section className="bg-[#F4F1EA] border border-[#222426] p-4 sm:p-6">
-                  <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-5 border-b border-[#D0D5D9]">
-                    <div className="max-w-3xl">
-                      <div className="text-xs font-mono text-[#6E7376] mb-1.5">
-                        Monografie științifică integrată (Versiunea 1.0 · Al șaselea domeniu operațional NATO ACT)
-                      </div>
-                      <h1 className="font-serif text-xl sm:text-3xl lg:text-4xl font-bold text-[#222426] headline-balance leading-tight">
-                        Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale
-                      </h1>
-                      <p className="text-xs sm:text-sm text-[#6E7376] mt-2 leading-relaxed">
-                        Explorare deterministă pas cu pas a întregului document (Introducere și Capitolele 1–6), articulând sociologia instituțională (Stratul A), neuroștiințele cognitive și semiotica (Stratul B) și psihologia analitică postjungiană (Stratul C).
-                      </p>
-                    </div>
-
-                    {/* Reading Mode Controls */}
-                    <div className="flex flex-col sm:flex-row lg:flex-col items-start sm:items-center lg:items-end gap-2 shrink-0">
-                      <div className="text-xs font-mono text-[#6E7376]">
-                        Mod de afișare a conținutului
-                      </div>
-                      <div className="flex flex-wrap items-center gap-1.5">
-                        <button
-                          onClick={() => setReadingTab('ambele')}
-                          className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
-                            readingTab === 'ambele'
-                              ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
-                              : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
-                          }`}
-                        >
-                          Text integral și două registre
-                        </button>
-                        <button
-                          onClick={() => setReadingTab('integral')}
-                          className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
-                            readingTab === 'integral'
-                              ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
-                              : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
-                          }`}
-                        >
-                          Doar textul integral
-                        </button>
-                        <button
-                          onClick={() => setReadingTab('registre')}
-                          className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
-                            readingTab === 'registre'
-                              ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
-                              : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
-                          }`}
-                        >
-                          Descompunere pe două registre
-                        </button>
-                      </div>
-                    </div>
+              {/* Step-by-Step Horizontal Rail (Subcapitolele 1 la 19) */}
+              <div className="mt-5 pt-4 border-t border-[#D0D5D9]">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+                  <div className="text-xs font-mono text-[#222426]">
+                    <span className="font-bold">Subcapitole: </span>
+                    <span>Pasul {currentStep.stepNumber} din 19 ({currentStep.code})</span>
+                    {selectedChapterFilter !== 'ALL' && (
+                      <span className="text-[#6E7376] ml-1.5">(filtrat pe Capitolul {selectedChapterFilter})</span>
+                    )}
                   </div>
-
-                  {/* 4 Logical Acts Progressive Disclosure Selector */}
-                  <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                    {[
-                      {
-                        act: 1,
-                        title: 'Actul I (Cadrul macro și rădăcina sistemică)',
-                        sub: 'Introducere și Capitolul 1 (Pașii 1–4)',
-                        firstStep: 1
-                      },
-                      {
-                        act: 2,
-                        title: 'Actul II (Anatomia tensiunii și capturarea)',
-                        sub: 'Capitolele 2 și 3 (Pașii 5–10)',
-                        firstStep: 5
-                      },
-                      {
-                        act: 3,
-                        title: 'Actul III (Buclele de sistem și bifurcația)',
-                        sub: 'Capitolele 4 și 5 (Pașii 11–15)',
-                        firstStep: 11
-                      },
-                      {
-                        act: 4,
-                        title: 'Actul IV (Protocolul secvențial și sinteza)',
-                        sub: 'Capitolul 6 (Pașii 16–19)',
-                        firstStep: 16
-                      }
-                    ].map((actItem) => {
-                      const isCurrentAct = currentStep.actNumber === actItem.act;
-                      return (
-                        <button
-                          key={actItem.act}
-                          onClick={() => {
-                            setSelectedActFilter('ALL');
-                            handleStepSelect(actItem.firstStep);
-                          }}
-                          className={`p-3.5 border text-left transition-all cursor-pointer ${
-                            isCurrentAct
-                              ? 'border-2 border-[#222426] bg-[#E5B822]/25'
-                              : 'border-[#8C9BA5] bg-[#F6F5EE] hover:border-[#222426]'
-                          }`}
-                        >
-                          <div className="text-xs font-mono text-[#6E7376]">{actItem.sub}</div>
-                          <div className="font-serif text-sm font-bold text-[#222426] mt-0.5">
-                            {actItem.title}
-                          </div>
-                        </button>
-                      );
-                    })}
+                  <div className="flex flex-wrap items-center gap-1.5 text-xs font-mono">
+                    <span className="text-[#6E7376]">Filtru straturi (A, B, C)</span>
+                    {(['ALL', 'A', 'B', 'C'] as const).map((st) => (
+                      <button
+                        key={st}
+                        onClick={() => setSelectedStratumHighlight(st)}
+                        className={`px-2 py-0.5 border cursor-pointer whitespace-nowrap shrink-0 ${
+                          selectedStratumHighlight === st
+                            ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
+                            : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
+                        }`}
+                      >
+                        {st === 'ALL' ? 'Toate' : `Stratul ${st}`}
+                      </button>
+                    ))}
                   </div>
+                </div>
 
-                  {/* Step-by-Step Horizontal Rail (Steps 1 to 19) */}
-                  <div className="mt-5 pt-4 border-t border-[#D0D5D9]">
-                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                      <div className="text-xs font-mono text-[#222426]">
-                        Parcurs secvențial pas cu pas (Pasul curent {currentStep.stepNumber} din 19, {currentStep.code})
-                      </div>
-                      <div className="flex flex-wrap items-center gap-1.5 text-xs font-mono">
-                        <span className="text-[#6E7376]">Filtru straturi cauzale (A, B, C)</span>
-                        {(['ALL', 'A', 'B', 'C'] as const).map((st) => (
-                          <button
-                            key={st}
-                            onClick={() => setSelectedStratumHighlight(st)}
-                            className={`px-2 py-0.5 border cursor-pointer whitespace-nowrap shrink-0 ${
-                              selectedStratumHighlight === st
-                                ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
-                                : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
-                            }`}
-                          >
-                            {st === 'ALL' ? 'Toate' : `Stratul ${st}`}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scroll-smooth">
-                      {filteredStepsForRail.map((step) => {
-                        const isSelected = step.stepNumber === currentStepNumber;
-                        const matchesStratum =
-                          selectedStratumHighlight === 'ALL' ||
-                          step.dominantStrata.includes(selectedStratumHighlight);
-                        return (
-                          <button
-                            key={step.id}
-                            ref={isSelected ? activeStepButtonRef : null}
-                            onClick={() => handleStepSelect(step.stepNumber)}
-                            className={`px-2.5 py-1.5 text-xs font-mono border transition-all whitespace-nowrap shrink-0 cursor-pointer ${
-                              isSelected
-                                ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
-                                : matchesStratum
-                                ? 'bg-[#F6F5EE] text-[#222426] border-[#222426] hover:bg-[#E5B822]/20'
-                                : 'bg-[#F4F1EA] text-[#8C9BA5] border-[#D0D5D9] opacity-50'
-                            }`}
-                            title={step.title}
-                          >
-                            {step.stepNumber}. {step.code.replace('Subcapitolul ', 'Cap. ')}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </section>
+                <div ref={railContainerRef} className="flex items-center gap-1.5 overflow-x-auto pb-2 scroll-smooth">
+                  {filteredStepsForRail.map((step) => {
+                    const isSelected = step.stepNumber === currentStepNumber;
+                    const matchesStratum =
+                      selectedStratumHighlight === 'ALL' ||
+                      step.dominantStrata.includes(selectedStratumHighlight);
+                    return (
+                      <button
+                        key={step.id}
+                        ref={isSelected ? activeStepButtonRef : null}
+                        onClick={() => handleStepSelect(step.stepNumber)}
+                        className={`px-2.5 py-1.5 text-xs font-mono border transition-all whitespace-nowrap shrink-0 cursor-pointer ${
+                          isSelected
+                            ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
+                            : matchesStratum
+                            ? 'bg-[#F6F5EE] text-[#222426] border-[#222426] hover:bg-[#E5B822]/20'
+                            : 'bg-[#F4F1EA] text-[#8C9BA5] border-[#D0D5D9] opacity-50'
+                        }`}
+                        title={step.title}
+                      >
+                        {step.stepNumber}. {step.code.replace('Subcapitolul ', 'Subcap. ')}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </section>
 
                 {/* TWO-COLUMN ASYMMETRIC READING & SIMULATION WORKSPACE */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -990,7 +994,7 @@ export function App() {
                       {/* Step Header & Prev/Next Top Controls */}
                       <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-[#D0D5D9]">
                         <div className="text-xs font-mono text-[#6E7376]">
-                          Pasul {currentStep.stepNumber} din 19 · {currentStep.actTitle} · Straturi active ({currentStep.dominantStrata.join(', ')})
+                          Pasul {currentStep.stepNumber} din 19 · {currentStep.chapterTitle} · Straturi active ({currentStep.dominantStrata.join(', ')})
                         </div>
                         <div className="flex flex-wrap items-center gap-2">
                           <button
@@ -1020,7 +1024,7 @@ export function App() {
                         <div className="flex flex-wrap items-center gap-1.5">
                           <button
                             type="button"
-                            onClick={() => setAudienceMode('academic')}
+                            onClick={() => handleAudienceModeChange('academic')}
                             className={`px-3 py-1.5 text-xs font-mono border transition-colors cursor-pointer ${
                               audienceMode === 'academic'
                                 ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
@@ -1031,7 +1035,7 @@ export function App() {
                           </button>
                           <button
                             type="button"
-                            onClick={() => setAudienceMode('executive')}
+                            onClick={() => handleAudienceModeChange('executive')}
                             className={`px-3 py-1.5 text-xs font-mono border transition-colors cursor-pointer ${
                               audienceMode === 'executive'
                                 ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-bold'
@@ -1053,14 +1057,19 @@ export function App() {
                       </div>
 
                       {/* Chapter Kicker & Subchapter Title */}
-                      {currentStep.chapterNumber > 0 && (
-                        <div className="text-xs font-mono font-semibold text-[#6E7376] mb-1">
-                          {currentStep.chapterTitle}
-                        </div>
-                      )}
+                      <div className="text-xs font-mono font-semibold text-[#6E7376] mb-1.5">
+                        {currentStep.chapterNumber === 0
+                          ? currentStep.chapterTitle
+                          : `Capitolul ${currentStep.chapterNumber} · ${currentStep.chapterTitle.replace(/^Capitolul\s+[0-9]+:\s*/, '').replace(/^[0-9]+\.\s*/, '')}`}
+                      </div>
                       <h2 className="font-serif text-xl sm:text-3xl font-bold text-[#222426] headline-balance leading-snug">
                         {currentStep.title}
                       </h2>
+                      {currentStep.subtitle && (
+                        <p className="font-serif text-base sm:text-lg font-normal text-[#2C3539] mt-2 leading-relaxed">
+                          {currentStep.subtitle}
+                        </p>
+                      )}
 
                       {/* Systemic Thesis Box */}
                       <div className="mt-5 p-4 bg-[#F4F1EA] border border-[#222426]">
@@ -1083,7 +1092,7 @@ export function App() {
                               {currentExecutiveSummary.chapterTitle}
                             </h3>
                             <p className="text-xs sm:text-sm font-mono text-[#6E7376] mt-1">
-                              {currentExecutiveSummary.actTitle}
+                              Decupaj metodologic · {currentStep.code} (Pasul {currentStep.stepNumber} din 19)
                             </p>
                           </div>
 
@@ -1155,7 +1164,7 @@ export function App() {
                           <div className="pt-2 flex justify-end">
                             <button
                               type="button"
-                              onClick={() => setAudienceMode('academic')}
+                              onClick={() => handleAudienceModeChange('academic')}
                               className="px-3.5 py-2 text-xs font-mono font-semibold bg-[#222426] text-[#F6F5EE] border border-[#222426] hover:bg-[#2C3539] cursor-pointer"
                             >
                               Comută la textul integral academic al secțiunii →
@@ -1252,45 +1261,105 @@ export function App() {
                         </div>
                       )}
 
-                      {/* FULL VERBATIM MONOGRAPH TEXT WITH CLICKABLE ACADEMIC CITATIONS & GLOSSARY TOOLTIPS */}
-                      {(readingTab === 'integral' || readingTab === 'ambele') && (
-                        <div className="mt-6 pt-6 border-t border-[#222426]">
-                          <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                            <div className="text-xs font-mono uppercase tracking-wider text-[#6E7376]">
-                              Textul integral al secțiunii din monografie (Fidelitate textuală completă)
+                      {/* FULL VERBATIM MONOGRAPH TEXT (Direct in Academic Mode, Accordion Fold in Executive Mode) */}
+                      {audienceMode === 'executive' ? (
+                        <div className="mt-8 pt-6 border-t border-[#222426]">
+                          <div className="p-4 sm:p-5 bg-[#F4F1EA] border border-[#222426]">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                              <div>
+                                <div className="text-xs font-mono font-bold text-[#222426] uppercase tracking-wider">
+                                  Textul academic integral al secțiunii (Fidelitate completă)
+                                </div>
+                                <div className="text-xs text-[#6E7376] mt-0.5">
+                                  {isAcademicAccordionOpen
+                                    ? 'Textul complet al monografiei este expandat mai jos.'
+                                    : 'Restrâns în modul executiv. Puteți expandata analiza completă fără a părăsi sinteza decizională.'}
+                                </div>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() => setIsAcademicAccordionOpen((prev) => !prev)}
+                                className="px-4 py-2 text-xs font-mono font-bold bg-[#222426] text-[#F6F5EE] hover:bg-[#34383C] transition-colors cursor-pointer shrink-0"
+                              >
+                                {isAcademicAccordionOpen
+                                  ? 'Restrânge analiza academică ↑'
+                                  : 'Expandează analiza academică integrală a capitolului ↓'}
+                              </button>
                             </div>
-                            <div className="text-[11px] font-mono text-[#6E7376]">
-                              Selectați citările (autor, an) sau termenii subliniați pentru explicații contextuale
-                            </div>
-                          </div>
-                          <div className="space-y-5 font-serif text-base sm:text-[17px] text-[#222426] leading-[1.8] max-w-[70ch]">
-                            {currentStep.paragraphs.map((paragraph, index) => {
-                              const isFigureCaption = paragraph.startsWith('Figura ');
-                              if (isFigureCaption) {
-                                return (
-                                  <div
-                                    key={index}
-                                    className="p-4 bg-[#F4F1EA] border border-[#222426] text-xs sm:text-sm italic text-[#2C3539] leading-relaxed"
-                                  >
-                                    {paragraph}
-                                  </div>
-                                );
-                              }
-                              return (
-                                <p
-                                  key={index}
-                                  className={
-                                    index === 0
-                                      ? 'first-letter:text-4xl first-letter:font-serif first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[#222426]'
-                                      : ''
-                                  }
-                                >
-                                  {renderParagraphWithCitations(paragraph)}
-                                </p>
-                              );
-                            })}
+
+                            {isAcademicAccordionOpen && (
+                              <div className="mt-5 pt-4 border-t border-[#D0D5D9]">
+                                <div className="space-y-5 font-serif text-base sm:text-[17px] text-[#222426] leading-[1.8] max-w-[70ch]">
+                                  {currentStep.paragraphs.map((paragraph, index) => {
+                                    const isFigureCaption = paragraph.startsWith('Figura ');
+                                    if (isFigureCaption) {
+                                      return (
+                                        <div
+                                          key={index}
+                                          className="p-4 bg-[#F6F5EE] border border-[#222426] text-xs sm:text-sm italic text-[#2C3539] leading-relaxed"
+                                        >
+                                          {paragraph}
+                                        </div>
+                                      );
+                                    }
+                                    return (
+                                      <p
+                                        key={index}
+                                        className={
+                                          index === 0
+                                            ? 'first-letter:text-4xl first-letter:font-serif first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[#222426]'
+                                            : ''
+                                        }
+                                      >
+                                        {renderParagraphWithCitations(paragraph)}
+                                      </p>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            )}
                           </div>
                         </div>
+                      ) : (
+                        (readingTab === 'integral' || readingTab === 'ambele') && (
+                          <div className="mt-6 pt-6 border-t border-[#222426]">
+                            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                              <div className="text-xs font-mono uppercase tracking-wider text-[#6E7376]">
+                                Textul integral al secțiunii din monografie (Fidelitate textuală completă)
+                              </div>
+                              <div className="text-[11px] font-mono text-[#6E7376]">
+                                Selectați citările (autor, an) sau termenii subliniați pentru explicații contextuale
+                              </div>
+                            </div>
+                            <div className="space-y-5 font-serif text-base sm:text-[17px] text-[#222426] leading-[1.8] max-w-[70ch]">
+                              {currentStep.paragraphs.map((paragraph, index) => {
+                                const isFigureCaption = paragraph.startsWith('Figura ');
+                                if (isFigureCaption) {
+                                  return (
+                                    <div
+                                      key={index}
+                                      className="p-4 bg-[#F4F1EA] border border-[#222426] text-xs sm:text-sm italic text-[#2C3539] leading-relaxed"
+                                    >
+                                      {paragraph}
+                                    </div>
+                                  );
+                                }
+                                return (
+                                  <p
+                                    key={index}
+                                    className={
+                                      index === 0
+                                        ? 'first-letter:text-4xl first-letter:font-serif first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[#222426]'
+                                        : ''
+                                    }
+                                  >
+                                    {renderParagraphWithCitations(paragraph)}
+                                  </p>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )
                       )}
 
                       {/* Cited Authors in this Step (Interactive Pills) */}
@@ -1362,13 +1431,11 @@ export function App() {
                     </article>
                   </div>
 
-                  {/* RIGHT COLUMN (5 Cols): Video Synthesis Box, Synchronized Interactive Figure, Citation Dossier & Concept Inspector */}
+                  {/* RIGHT COLUMN (5 Cols): Synchronized Interactive Figure, Citation Dossier & Concept Inspector */}
                   <aside
                     id="inspector-panel"
                     className="lg:col-span-5 space-y-6 lg:sticky lg:top-20"
                   >
-                    {/* Video Synthesis Box (Gemini Notebook Video) */}
-                    <VideoSynthesisBox allowCollapse={true} />
 
                     {/* Active Bibliographic Citation Dossier (when an inline citation or author pill is clicked) */}
                     {selectedAuthorCitation && (
@@ -1509,10 +1576,8 @@ export function App() {
                     )}
                   </aside>
                 </div>
-              </>
+              </div>
             )}
-          </div>
-        )}
 
         {/* VIEW 2: LABORATORUL CELOR 7 DIAGRAME DE SISTEM */}
         {activeView === 'diagrame' && (
@@ -1585,25 +1650,12 @@ export function App() {
               <button
                 onClick={() => {
                   setActiveView('parcurs');
-                  setParcursSubMode('subcapitole');
                   updateUrlHash(`pasul-${currentStepNumber}`);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="hover:text-[#222426] transition-colors cursor-pointer"
               >
-                Parcurs pas cu pas (19 secțiuni)
-              </button>
-              <span>·</span>
-              <button
-                onClick={() => {
-                  setActiveView('parcurs');
-                  setParcursSubMode('patru-acte');
-                  updateUrlHash(`actul-${activeActNumber}`);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="hover:text-[#222426] transition-colors cursor-pointer"
-              >
-                Prezentare în 4 acte
+                Parcurs pe capitole și subcapitole (19 secțiuni)
               </button>
               <span>·</span>
               <button
@@ -1638,7 +1690,6 @@ export function App() {
         onClose={() => setIsSearchOpen(false)}
         onNavigateToStep={(stepNum) => {
           setActiveView('parcurs');
-          setParcursSubMode('subcapitole');
           handleStepSelect(stepNum);
         }}
       />

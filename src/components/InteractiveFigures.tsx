@@ -2547,14 +2547,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Bifurcation diagonal arrows from Nod de bifurcatie (x=213) to Track A (y=130, thicker strokeWidth=4 representing impulsive pull) and Track B (y=350) */}
+              {/* Bifurcation diagonal arrows from Nod de bifurcatie (x=213) to Track A (y=130, thicker strokeWidth=4 representing impulsive pull) and Track B (y=350, initial strokeWidth=2) */}
               <line
                 x1="213"
                 y1="275"
                 x2="290"
                 y2="132"
                 stroke="#F01E1E"
-                strokeWidth={fig6ActiveTrack === 'A' ? '4.5' : '3'}
+                strokeWidth={fig6ActiveTrack === 'A' ? '4.5' : '4'}
                 markerEnd="url(#arrow-red)"
               />
               <line
@@ -2563,7 +2563,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 x2="290"
                 y2="348"
                 stroke="#E5B822"
-                strokeWidth={fig6ActiveTrack === 'B' ? '3.5' : '2'}
+                strokeWidth="2"
                 markerEnd="url(#arrow-gold)"
               />
 
@@ -2638,7 +2638,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x2="498"
                   y2="116"
                   stroke="#F01E1E"
-                  strokeWidth="2.5"
+                  strokeWidth="4"
                   markerEnd="url(#arrow-red)"
                 />
 
@@ -2683,7 +2683,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x2="708"
                   y2="116"
                   stroke="#F01E1E"
-                  strokeWidth="2.5"
+                  strokeWidth="4"
                   markerEnd="url(#arrow-red)"
                 />
 
@@ -2812,7 +2812,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x2="498"
                   y2="334"
                   stroke="#E5B822"
-                  strokeWidth="3"
+                  strokeWidth="3.5"
                   markerEnd="url(#arrow-gold)"
                 />
 
@@ -2857,7 +2857,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x2="708"
                   y2="334"
                   stroke="#E5B822"
-                  strokeWidth="3"
+                  strokeWidth="3.5"
                   markerEnd="url(#arrow-gold)"
                 />
 

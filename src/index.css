@@ -7,6 +7,17 @@
   --font-mono: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 108px;
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+}
+
 :root {
   --canvas-primary: #F6F5EE;
   --canvas-secondary: #F4F1EA;

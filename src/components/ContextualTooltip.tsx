@@ -193,5 +193,9 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   {
     conceptId: 'guvernanta-policentrica-ostrom',
     regex: /\b(guvernanț(?:ă|a|ei)\s+policentric(?:ă|e))\b/i
+  },
+  {
+    conceptId: 'proairesis',
+    regex: /\b(proairesis)\b/i
   }
 ];

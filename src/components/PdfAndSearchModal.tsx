@@ -23,6 +23,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
     ? ALL_SUBCHAPTER_STEPS.filter(
         (step) =>
           step.title.toLowerCase().includes(q) ||
+          (step.subtitle && step.subtitle.toLowerCase().includes(q)) ||
           step.summaryThesis.toLowerCase().includes(q) ||
           step.paragraphs.some((p) => p.toLowerCase().includes(q))
       )
@@ -91,11 +92,16 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                 >
                   <div>
                     <div className="text-xs font-mono text-[#6E7376]">
-                      Pasul {step.stepNumber} din 19 · {step.actTitle}
+                      Pasul {step.stepNumber} din 19 · {step.chapterTitle}
                     </div>
                     <div className="font-serif text-sm font-bold text-[#222426] mt-0.5">
                       {step.title}
                     </div>
+                    {step.subtitle && (
+                      <div className="font-serif text-xs font-normal text-[#2C3539] mt-0.5 line-clamp-1">
+                        {step.subtitle}
+                      </div>
+                    )}
                     <p className="text-xs text-[#6E7376] mt-1 line-clamp-2">
                       {step.summaryThesis}
                     </p>

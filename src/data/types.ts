@@ -13,12 +13,11 @@ export interface DualRegisterItem {
 export interface SubchapterStep {
   id: string;
   stepNumber: number;
-  actNumber: 1 | 2 | 3 | 4;
-  actTitle: string;
   chapterNumber: number;
   chapterTitle: string;
   code: string;
   title: string;
+  subtitle?: string;
   dominantStrata: StratumId[];
   linkedFigureId?: number;
   summaryThesis: string;
@@ -91,7 +90,6 @@ export interface ExecutivePoint {
 export interface ChapterExecutiveSummary {
   chapterNumber: number;
   chapterTitle: string;
-  actTitle: string;
   executiveSynthesis: ExecutivePoint[];
 }
 
@@ -105,15 +103,4 @@ export interface InstitutionalProtocolRow {
   responsibleActors: string;
 }
 
-export interface CinematicScene {
-  id: string;
-  sceneNumber: number;
-  title: string;
-  timecode: string;
-  cameraAndComposition: string;
-  colorAndSymbols: string;
-  soundDesign: string;
-  voiceoverScript: string;
-  dominantAccent: 'red' | 'gold' | 'slate';
-}
 

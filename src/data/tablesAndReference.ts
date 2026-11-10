@@ -5,8 +5,7 @@ import {
   GlossaryConcept,
   BibliographyItem,
   ChapterExecutiveSummary,
-  InstitutionalProtocolRow,
-  CinematicScene
+  InstitutionalProtocolRow
 } from './types';
 import { CHAPTERS_PART_1 } from './chaptersPart1';
 import { CHAPTERS_PART_2 } from './chaptersPart2';
@@ -585,6 +584,16 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     polarity: 'neutral'
   },
   {
+    id: 'proairesis',
+    term: 'Proairesis (discernământul moral și alegerea deliberată)',
+    stratum: 'B',
+    authors: 'Aristotel (Etica Nicomahică); Epictet (Manualul); Grigorie de Nyssa; Maxim Mărturisitorul',
+    domain: 'Etică clasică, teoria deciziei și teologie patristică',
+    definition: 'Capacitatea rațională și morală a subiectului de a suspenda reacția automată impulsivă și de a alege conștient între bine și rău; facultatea deliberativă prin care conștiința își exercită libertatea ontologică în fața stimulilor manipulatori.',
+    monographContext: 'Constituie fundamentul etic și teologic al Traseului deliberativ adaptativ (Track B) din nodul de bifurcație (Figura 6), permițând dezamorsarea capturării cognitive și afirmarea demnității umane (Imago Dei).',
+    polarity: 'synthesis'
+  },
+  {
     id: 'cognitia-protectoare-a-identitatii',
     term: 'Cogniția protectoare a identității (identity-protective cognition)',
     stratum: 'B',
@@ -798,8 +807,7 @@ Regulă vizuală obligatorie: Folosește exclusiv un stil de ilustrație editori
 export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
   {
     chapterNumber: 0,
-    chapterTitle: 'Introducere (Cadrul doctrinar și arhitectura explicativă pe trei paliere cauzale)',
-    actTitle: 'Actul I (Cadrul macro și rădăcina sistemică)',
+    chapterTitle: 'Introducere: Cadrul doctrinar și arhitectura explicativă pe trei paliere cauzale',
     executiveSynthesis: [
       {
         id: 'exec-0-1',
@@ -829,8 +837,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
   },
   {
     chapterNumber: 1,
-    chapterTitle: 'Capitolul 1 (Vulnerabilitățile structurale ale societății românești și eroziunea rezilienței endogene)',
-    actTitle: 'Actul I (Cadrul macro și rădăcina sistemică)',
+    chapterTitle: 'Capitolul 1: Vulnerabilitățile structurale ale societății românești și eroziunea rezilienței endogene',
     executiveSynthesis: [
       {
         id: 'exec-1-1',
@@ -860,8 +867,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
   },
   {
     chapterNumber: 2,
-    chapterTitle: 'Capitolul 2 (Arhitectura ideologiei putiniste și camuflajul discursiv suveranist)',
-    actTitle: 'Actul II (Anatomia tensiunii și mecanismul capturării)',
+    chapterTitle: 'Capitolul 2: Arhitectura ideologiei putiniste și camuflajul discursiv suveranist',
     executiveSynthesis: [
       {
         id: 'exec-2-1',
@@ -891,8 +897,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
   },
   {
     chapterNumber: 3,
-    chapterTitle: 'Capitolul 3 (Mecanismul capturării cognitive și colonizarea deciziei în al șaselea domeniu operațional)',
-    actTitle: 'Actul II (Anatomia tensiunii și mecanismul capturării)',
+    chapterTitle: 'Capitolul 3: Mecanismul capturării cognitive și colonizarea deciziei în al șaselea domeniu operațional',
     executiveSynthesis: [
       {
         id: 'exec-3-1',
@@ -922,8 +927,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
   },
   {
     chapterNumber: 4,
-    chapterTitle: 'Capitolul 4 (Cronicizarea polarizării și dinamica autodistrugerii sociale)',
-    actTitle: 'Actul III (Dinamica forțelor, buclele de sistem și bifurcația în criză)',
+    chapterTitle: 'Capitolul 4: Cronicizarea polarizării și dinamica autodistrugerii sociale',
     executiveSynthesis: [
       {
         id: 'exec-4-1',
@@ -953,8 +957,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
   },
   {
     chapterNumber: 5,
-    chapterTitle: 'Capitolul 5 (Blocajul decizional în criză și bifurcarea procesării cognitive, Traseul A versus Traseul B)',
-    actTitle: 'Actul III (Dinamica forțelor, buclele de sistem și bifurcația în criză)',
+    chapterTitle: 'Capitolul 5: Comportamentul decizional în criză acută: Matricea lui Cipolla și bifurcația neurocognitivă',
     executiveSynthesis: [
       {
         id: 'exec-5-1',
@@ -984,8 +987,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
   },
   {
     chapterNumber: 6,
-    chapterTitle: 'Capitolul 6 (Protocolul de reconstrucție a rezilienței cognitive și instituționale)',
-    actTitle: 'Actul IV (Sinteza terminală și protocolul secvențial de reconstrucție)',
+    chapterTitle: 'Capitolul 6: Protocolul secvențial de reconstrucție a rezilienței cognitive societale',
     executiveSynthesis: [
       {
         id: 'exec-6-1',
@@ -1054,87 +1056,4 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
   }
 ];
 
-export const NEUROCOGNITIVE_PACING_RULES = [
-  {
-    id: 'pacing-1',
-    title: '1. Izolarea vizuală a fiecărui mecanism cauzal',
-    description:
-      'Fiecare cadru vectorial prezintă un singur raport cauzal dominant înainte de adăugarea stratului următor, prevenind supraîncărcarea memoriei de lucru în cortexul prefrontal dorsolateral (dlPFC).'
-  },
-  {
-    id: 'pacing-2',
-    title: '2. Pauzele alostatice de integrare (1,5–2 secunde)',
-    description:
-      'Între secvențele de tensiune (marcate în roșu-vermilion #F01E1E) și cele de sinteză (marcate în galben-muștar #E5B822) sunt inserate respirații vizuale și cadraje stabile pe fundalul #F6F5EE pentru activarea Sistemului 2 deliberativ.'
-  },
-  {
-    id: 'pacing-3',
-    title: '3. Diferențierea auditivă cromatică (40 Hz sub-bass versus violoncel și pian)',
-    description:
-      'Buclele de capturare și panică (Track A, #F01E1E) sunt însoțite de un puls sub-bass de 40 Hz și zgomot alb granular discret (tensiune amigdaliană), care se dizolvă la comutarea pe Track B (#E5B822) în acorduri acustice calde de violoncel și pian minimalist (reglare vagală și prefrontală).'
-  }
-];
-
-export const ACT_5_CINEMATIC_SCRIPT: CinematicScene[] = [
-  {
-    id: 'act5-scene-1',
-    sceneNumber: 1,
-    title: 'Scena 1 (Colapsul prefrontal și deturnarea atenției)',
-    timecode: '00:00 – 01:15',
-    cameraAndComposition:
-      'Travelling lent de apropiere (push-in) pe o siluetă umană profilată în gravură vectorială 2D pe fundalul alb-crem (#F6F5EE). Rețeaua corticală superioară (dlPFC) se estompează în gri-ardezie (#6E7376), în timp ce nodul subcortical al amigdalei pulsează în roșu-vermilion (#F01E1E), proiectând fascicule vectoriale către un ecran digital vertical.',
-    colorAndSymbols:
-      'Contrast strict între contururile negru-cărbune (#222426), rețeaua prefrontală devitalizată (#8C9BA5) și bucla dopaminergică în roșu-vermilion (#F01E1E) care îngustează câmpul vizual într-un tunel cognitiv.',
-    soundDesign:
-      'Puls sub-bass la 40 Hz combinat cu un freamăt granular de notificări digitale accelerate, sugerând hipervigilența rețelei de detecție a relevanței și suprimarea latenței de reflecție.',
-    voiceoverScript:
-      '„În momentul impactului unei crize acute, un organism social deja epuizat de uzura alostatică nu mai dispune de latența neurobiologică necesară deliberării. Sub asaltul fluxurilor algoritmice construite pe frică și indignare morală, descărcările fazice de dopamină și catecolamine deconectează funcțional cortexul prefrontal dorsolateral. Judecata analitică a Sistemului 2 se stinge, iar comanda aparatului decizional este preluată integral de amigdala bazolaterală și de reflexele automate de supraviețuire.”',
-    dominantAccent: 'red'
-  },
-  {
-    id: 'act5-scene-2',
-    sceneNumber: 2,
-    title: 'Scena 2 (Arhetipul Puer Aeternus și iluzia neutralității izolaționiste)',
-    timecode: '01:15 – 02:15',
-    cameraAndComposition:
-      'Cadru simetric în stil xilogravură arhitecturală: o cupolă de sticlă fragilă și iluzorie înconjoară silueta colectivă, în timp ce la orizont se ridică geometria sumbră a vectorului revizionist extern. Cupola se fisurează de la bază spre vârf.',
-    colorAndSymbols:
-      'Cupola iluzorie trasată în linii punctate (#6E7376) și fisuri în roșu-vermilion (#F01E1E); simbolul pendulului blocat între neputința învățată și așteptarea magică a unui Salvator providențial.',
-    soundDesign:
-      'Rezonanță metalică rece, întreruptă de tăceri suspendate și de vibrația joasă a fisurării sticlei, evocând negarea maniacală a pericolului real.',
-    voiceoverScript:
-      '„În inconștientul cultural, acest blocaj prefrontal activează sindromul Puer Aeternus colectiv: refuzul maturității istorice și al construcției instituționale metodice în favoarea gândirii magice. Capturat de nostalgia după un stat paternalist tutelar, imaginarul vulnerabilizat caută scurtătura miraculoasă a unui Salvator providențial și se refugiază în fantezia unei neutralități izolaționiste. Însă, în proximitatea unui imperiu revizionist, dezarmarea morală și decuplarea de alianțele democratice nu aduc pacea, ci paralizia instituțională a statului-țintă.”',
-    dominantAccent: 'slate'
-  },
-  {
-    id: 'act5-scene-3',
-    sceneNumber: 3,
-    title: 'Scena 3 (Track A, Antilumea și prăbușirea în enantiodromie)',
-    timecode: '02:15 – 03:20',
-    cameraAndComposition:
-      'Panoramare verticală descendentă pe diagrama bifurcației (Figura 6) și pe axa verticală a matricei lui Cipolla (Figura 5). Săgeata groasă în roșu-vermilion (strokeWidth 4) străpunge bariera instituțională fisurată și se închide într-o spirală recursivă în Cadranul III (-X, -Y).',
-    colorAndSymbols:
-      'Dominanță de roșu-vermilion (#F01E1E) pe traseul superior al buclei Track A și în Cadranul III al autosabotajului colectiv; oglinda inversată a Antilumii (Russkii Antimir).',
-    soundDesign:
-      'Crescendo ritmic de zgomot alb filtrat și puls sub-bass, oprindu-se brusc într-o pauză alostatică de 2 secunde de liniște completă înainte de tranziția spre Track B.',
-    voiceoverScript:
-      '„Fără intervenția reglării executive, procesarea se prăbușește pe Traseul A: bucla reactivă dezadaptativă. Prin legea enantiodromiei, respingerea conformismului de fațadă al elitelor extractive se răstoarnă violent în contrariul său absolut: demolarea însăși a ordinii constituționale. Crezând că îi pedepsește pe spoliatorii interni, cetățeanul capturat cognitiv cade vertical în Cadranul III al matricei lui Cipolla, devenind agentul involuntar al propriei sale ruine și al Antilumii.”',
-    dominantAccent: 'red'
-  },
-  {
-    id: 'act5-scene-4',
-    sceneNumber: 4,
-    title: 'Scena 4 (Track B, capacitatea negativă și medierea ternară suverană)',
-    timecode: '03:20 – 04:30',
-    cameraAndComposition:
-      'Comutare luminoasă în nodul de bifurcație: traseul inferior din Figura 6 se deschide larg în galben-muștar (#E5B822), conectând cortexul prefrontal dorsolateral cu o rețea policentrică de noduri comunitare și instituționale care susțin frontonul modernității organice (Figura 7).',
-    colorAndSymbols:
-      'Fluxuri vectoriale stabile în galben-muștar (#E5B822) și contururi ferme în negru-cărbune (#222426) pe fundalul cald (#F6F5EE), ilustrând echilibrul axei Ego–Sine și spațiul medierii semiotice ternare.',
-    soundDesign:
-      'Dizolvarea completă a zgomotului de fond; intrarea unei linii calde de violoncel solo și a unor acorduri rare de pian acustic, inducând calm parasimpatic și claritate cognitivă.',
-    voiceoverScript:
-      '„Dar această traiectorie nu este o fatalitate. În clipa în care decompresia alostatică și capacitatea negativă — puterea de a tolera incertitudinea fără panică — interpun o pauză metacognitivă, cortexul prefrontal preia din nou conducerea și deschide Traseul B. Stimulul este extras din urgența fricii și este verificat în comunități epistemice deschise, în regimul medierii ternare și al legii impersonale drepte. Aici, la întâlnirea dintre adevărul istoric asumat și demnitatea inalienabilă a persoanei, începe reconstrucția rezilienței și sinteza modernității organice.”',
-    dominantAccent: 'gold'
-  }
-];
 

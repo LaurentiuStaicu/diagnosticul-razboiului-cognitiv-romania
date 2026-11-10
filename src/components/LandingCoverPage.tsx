@@ -44,7 +44,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 Această lucrare demonstrează că vulnerabilitatea cognitivă a societății românești nu reprezintă un simplu deficit de alfabetizare media, ci rezultatul emergent al interacțiunii dintre anomalia istorică a „formelor fără fond” și închiderea operațională a instituțiilor extractive (Stratul A), uzura alostatică cronică și capturarea fazei de Orientare din bucla OODA prin control reflexiv (Stratul B), respectiv activarea filtrelor Umbrei colective și a comportamentului contraproductiv sistemic în criză acută (Stratul C).
               </p>
               <p className="text-[#6E7376]">
-                Explorarea interactivă reunește textul integral al celor șase capitole, descompunerea în oglindă pe două registre (teoretic și empiric), modul de prezentare progresivă în patru acte, laboratorul celor șapte diagrame cibernetice și protocolul secvențial de reconstrucție în trei faze.
+                Explorarea interactivă reunește textul integral al celor șase capitole, sinteza executivă pentru decidenți, descompunerea în oglindă pe două registre (teoretic și empiric), laboratorul celor șapte diagrame cibernetice și protocolul secvențial de reconstrucție în trei faze.
               </p>
             </div>
 
@@ -70,29 +70,8 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
             </div>
           </div>
 
-          {/* Right 5 Columns: Video Synthesis Box + 2D Vector Engraving Cover Plate */}
+          {/* Right 5 Columns: 2D Vector Engraving Cover Plate */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Embedded Documentary Video Box */}
-            <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-5">
-              <div className="text-[11px] font-mono text-[#6E7376] pb-2 mb-2.5 border-b border-[#D0D5D9] flex items-center justify-between">
-                <span>Sinteză video realizată pe baza monografiei</span>
-                <span>Modul cinematic</span>
-              </div>
-              <div className="relative w-full aspect-video border border-[#222426] bg-[#222426] overflow-hidden">
-                <iframe
-                  src="https://www.youtube.com/embed/DgeyWNYP80c?si=e4yihOKlropuTaI8&rel=0"
-                  title="Prezentare video (Diagnosticul războiului cognitiv în România)"
-                  className="w-full h-full border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
-              <p className="text-[11px] font-serif italic text-[#6E7376] mt-2 leading-relaxed">
-                Prezentare audiovizuală a arhitecturii instituționale, neurocognitive și culturale a vulnerabilității și rezilienței societale.
-              </p>
-            </div>
-
             <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-6">
               <div className="text-[11px] font-mono text-[#6E7376] pb-2 mb-3 border-b border-[#D0D5D9] flex items-center justify-between">
                 <span>Planșa sinoptică de copertă (Modelul Macro–Micro–Macro)</span>
@@ -437,25 +416,25 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
         <div className="pt-6 border-t border-[#222426] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-[#6E7376]">
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Actul I (Capitolele 0–1)
+              Stratul A (Capitolele 0–1)
             </div>
             <div>Cadrul macro, barca lui Coleman-Hedström și rădăcina instituțională</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Actul II (Capitolele 2–3)
+              Stratul B (Capitolele 2–3)
             </div>
             <div>Antilumea putinistă, dubla falsificare axiologică și bucla OODA</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Actul III (Capitolele 4–5)
+              Stratul C (Capitolele 4–5)
             </div>
             <div>Filtrele Umbrei colective, matricea lui Cipolla și bifurcația Track A/B</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Actul IV (Capitolul 6)
+              Reconstrucție (Capitolul 6)
             </div>
             <div>Protocolul secvențial Lalonde-Dever, policentricitate și modernitate organică</div>
           </div>

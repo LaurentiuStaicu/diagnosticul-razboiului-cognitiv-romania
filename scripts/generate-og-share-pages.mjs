@@ -31,7 +31,7 @@ function buildShareHtml({ slug, targetHash, title, description, imageRelPath, im
     <link rel="canonical" href="${sharePageUrl}" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 
-    <!-- OpenGraph Social Sharing Cards (Section / Act Specific) -->
+    <!-- OpenGraph Social Sharing Cards (Section / Chapter Specific) -->
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="ro_RO" />
     <meta property="og:site_name" content="Diagnosticul războiului cognitiv în România" />
@@ -44,7 +44,7 @@ function buildShareHtml({ slug, targetHash, title, description, imageRelPath, im
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="${escapeHtml(imageAlt)}" />
 
-    <!-- Twitter / X Cards (Section / Act Specific) -->
+    <!-- Twitter / X Cards (Section / Chapter Specific) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escapeHtml(title)}" />
     <meta name="twitter:description" content="${escapeHtml(description)}" />
@@ -66,12 +66,15 @@ function buildShareHtml({ slug, targetHash, title, description, imageRelPath, im
 
 // 1. Generate share pages for all 19 Subchapter Steps (pasul-1.html .. pasul-19.html)
 for (const step of ALL_SUBCHAPTER_STEPS) {
-  const figId = step.linkedFigureId || (step.actNumber === 1 ? 1 : step.actNumber === 2 ? 3 : step.actNumber === 3 ? 6 : 7);
+  const figId = step.linkedFigureId || 1;
   const figMeta = FIGURE_METADATA[figId] || FIGURE_METADATA[1];
   const html = buildShareHtml({
     slug: `pasul-${step.stepNumber}`,
     targetHash: `pasul-${step.stepNumber}`,
-    title: `${step.title} (Diagnosticul războiului cognitiv în România)`,
+    title:
+      step.stepNumber === 1
+        ? 'Introducere · Diagnosticul războiului cognitiv în România (Versiunea 1.0)'
+        : `${step.title} (Diagnosticul războiului cognitiv în România)`,
     description: step.summaryThesis,
     imageRelPath: `og/og-fig-${figId}.png`,
     imageAlt: `${step.title} (${figMeta.title})`
@@ -79,52 +82,74 @@ for (const step of ALL_SUBCHAPTER_STEPS) {
   fs.writeFileSync(path.join(outDir, `pasul-${step.stepNumber}.html`), html, 'utf-8');
 }
 
-// 2. Generate share pages for the 4 Logical Acts (actul-1.html .. actul-4.html)
-const ACTS_META = [
+// 2. Generate share pages for the 6 Chapters (capitolul-1.html .. capitolul-6.html)
+const CHAPTERS_META = [
   {
-    act: 1,
-    title: 'Actul I (Cadrul macro și rădăcina sistemică, Diagnosticul războiului cognitiv în România)',
-    description:
-      'Introducere și Capitolul 1 (Arhitectura cauzală ascendentă pe Straturile A, B și C, barca lui Coleman-Hedström, determinanții Lalonde-Dever și anomalia formelor fără fond).',
-    imageRelPath: 'og/og-act-1.png',
-    imageAlt: 'Actul I (Arhitectura cauzală pe trei straturi a vulnerabilității societale endogene)'
+    num: 1,
+    slug: 'capitolul-1',
+    targetHash: 'capitolul-1',
+    title: 'Capitolul 1 (Vulnerabilitățile structurale ale societății românești și eroziunea rezilienței endogene)',
+    description: 'Arhitectura cauzală pe cele trei straturi: anomalia istorică a formelor fără fond, uzura alostatică cronică și neputința învățată.',
+    imageRelPath: 'og/og-fig-1.png',
+    imageAlt: 'Capitolul 1 (Arhitectura cauzală pe trei straturi)'
   },
   {
-    act: 2,
-    title: 'Actul II (Anatomia tensiunii și capturarea buclei OODA, Diagnosticul războiului cognitiv în România)',
-    description:
-      'Capitolele 2 și 3 (Rețeaua sistema, Antilumea putinistă, starea Bobok, dubla falsificare axiologică, controlul reflexiv de rang secund și deturnarea fazei de Orientare din bucla OODA).',
-    imageRelPath: 'og/og-act-2.png',
-    imageAlt: 'Actul II (Mecanismul cibernetic și semiotic al capturării cognitive în bucla OODA)'
+    num: 2,
+    slug: 'capitolul-2',
+    targetHash: 'capitolul-2',
+    title: 'Capitolul 2 (Arhitectura ideologiei putiniste și camuflajul discursiv suveranist)',
+    description: 'Rețeaua sistema, Russkii Antimir, starea Bobok și dubla falsificare axiologică a conservatorismului și ortodoxiei.',
+    imageRelPath: 'og/og-fig-2.png',
+    imageAlt: 'Capitolul 2 (Dubla falsificare axiologică și camuflajul discursiv)'
   },
   {
-    act: 3,
-    title: 'Actul III (Dinamica forțelor, Umbra colectivă și bifurcația Track A și Track B, Diagnosticul războiului cognitiv în România)',
-    description:
-      'Capitolele 4 și 5 (Conversia resurselor din Umbra colectivă, matricea comportamentală a lui Carlo M. Cipolla și bifurcarea neurocognitivă în criză acută între Track A reactiv și Track B deliberativ).',
-    imageRelPath: 'og/og-act-3.png',
-    imageAlt: 'Actul III (Bifurcarea procesării neurocognitive sub presiunea crizei acute)'
+    num: 3,
+    slug: 'capitolul-3',
+    targetHash: 'capitolul-3',
+    title: 'Capitolul 3 (Mecanismul capturării cognitive și colonizarea deciziei în al șaselea domeniu operațional)',
+    description: 'Penetrarea fazei de Orientare din bucla OODA prin control reflexiv de rang secund și semioză binară a anihilării.',
+    imageRelPath: 'og/og-fig-3.png',
+    imageAlt: 'Capitolul 3 (Deturnarea fazei de Orientare din bucla OODA)'
   },
   {
-    act: 4,
-    title: 'Actul IV (Protocolul secvențial în trei faze și modernitatea organică, Diagnosticul războiului cognitiv în România)',
-    description:
-      'Capitolul 6 (Ordinea cauzală obligatorie a reconstrucției rezilienței pe determinanții Lalonde-Dever, Faza I decompresie alostatică, Faza II prebunking și validare morală, Faza III guvernanță policentrică Ostrom și individuare colectivă).',
-    imageRelPath: 'og/og-act-4.png',
-    imageAlt: 'Actul IV (Protocolul secvențial în trei faze al reconstrucției rezilienței societale)'
+    num: 4,
+    slug: 'capitolul-4',
+    targetHash: 'capitolul-4',
+    title: 'Capitolul 4 (Complexele culturale, mecanismele de apărare psihodinamică și cele cinci filtre de conversie)',
+    description: 'Dinamica forțelor și conversia resurselor latente din Umbra colectivă prin intermediul filtrelor psihologice.',
+    imageRelPath: 'og/og-fig-4.png',
+    imageAlt: 'Capitolul 4 (Filtrele Umbrei colective și arhetipul Trickster-ului)'
+  },
+  {
+    num: 5,
+    slug: 'capitolul-5',
+    targetHash: 'capitolul-5',
+    title: 'Capitolul 5 (Comportamentul decizional în criză acută: Matricea lui Cipolla și bifurcația neurocognitivă)',
+    description: 'Alunecarea în Cadranul III al autosabotajului colectiv și bifurcația între Track A reactiv și Track B deliberativ.',
+    imageRelPath: 'og/og-fig-5.png',
+    imageAlt: 'Capitolul 5 (Matricea lui Cipolla și bifurcația Track A și Track B)'
+  },
+  {
+    num: 6,
+    slug: 'capitolul-6',
+    targetHash: 'capitolul-6',
+    title: 'Capitolul 6 (Protocolul secvențial de reconstrucție a rezilienței cognitive societale)',
+    description: 'Protocolul secvențial în trei faze pe determinanții Lalonde-Dever: Faza I decompresie, Faza II prebunking, Faza III modernitate organică.',
+    imageRelPath: 'og/og-fig-7.png',
+    imageAlt: 'Capitolul 6 (Protocolul secvențial în trei faze)'
   }
 ];
 
-for (const actItem of ACTS_META) {
+for (const chap of CHAPTERS_META) {
   const html = buildShareHtml({
-    slug: `actul-${actItem.act}`,
-    targetHash: `actul-${actItem.act}`,
-    title: actItem.title,
-    description: actItem.description,
-    imageRelPath: actItem.imageRelPath,
-    imageAlt: actItem.imageAlt
+    slug: chap.slug,
+    targetHash: chap.targetHash,
+    title: `${chap.title} (Diagnosticul războiului cognitiv în România)`,
+    description: chap.description,
+    imageRelPath: chap.imageRelPath,
+    imageAlt: chap.imageAlt
   });
-  fs.writeFileSync(path.join(outDir, `actul-${actItem.act}.html`), html, 'utf-8');
+  fs.writeFileSync(path.join(outDir, `${chap.slug}.html`), html, 'utf-8');
 }
 
 // 3. Generate share pages for all 7 Interactive Vector Figures (figura-1.html .. figura-7.html)
