@@ -308,10 +308,10 @@ export const GlossaryAndBibliographyView: React.FC = () => {
               <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
                 <div>
                   <div className="text-xs font-mono text-[#6E7376]">
-                    Prompt scurt gata de copiat în câmpul „Customize” din Gemini Notebook (Modul Cinematic)
+                    Prompt scurt gata de copiat în câmpul „Customize” din Gemini Notebook (modul cinematic)
                   </div>
                   <h4 className="font-serif text-base font-bold text-[#222426]">
-                    Instrucțiune de generare (Master Style Prompt)
+                    Instrucțiune de generare (șablonul de stil din Master Blueprint)
                   </h4>
                 </div>
                 <button
@@ -326,7 +326,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                   ) : (
                     <>
                       <Copy className="w-4 h-4" />
-                      <span>Copiază Master Prompt</span>
+                      <span>Copiază instrucțiunea de stil</span>
                     </>
                   )}
                 </button>

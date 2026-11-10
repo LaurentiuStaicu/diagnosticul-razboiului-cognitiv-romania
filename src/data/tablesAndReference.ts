@@ -110,7 +110,7 @@ export const TABLE_2_DATA: Table2Row[] = [
 export const REGIONAL_CONTROL_GROUP: RegionalCase[] = [
   {
     id: 'romania',
-    country: 'România (Diagnostic de bază)',
+    country: 'România (diagnostic de bază)',
     roleInModel: 'Societatea-țintă analizată în monografie',
     exposureProfile: 'Expunere intensă la camuflaj discursiv suveranist și parazitare semiotică a ortodoxiei și conservatorismului, ocolind aversiunea istorică directă față de Rusia.',
     stratumA: 'Ordine instituțională semiconformată („forme fără fond”); coexistența instituțiilor formale euroatlantice cu rețele extractive clientelare și polarizare sociospațială severă.',
@@ -121,7 +121,7 @@ export const REGIONAL_CONTROL_GROUP: RegionalCase[] = [
   },
   {
     id: 'estonia',
-    country: 'Estonia (Reziliență instituțională și cognitivă integrată)',
+    country: 'Estonia (reziliență instituțională și cognitivă integrată)',
     roleInModel: 'Modelul articulării coerente a celor patru determinanți Lalonde-Dever',
     exposureProfile: 'Stat în prima linie geografică la granița cu Federația Rusă, cu o minoritate rusofonă semnificativă și țintă a atacurilor cibernetice și informaționale majore încă din 2007.',
     stratumA: 'Tranziție timpurie și radicală către instituții incluzive cu închidere operațională autentică; digitalizare transparentă (e-Estonia) care a eliminat corupția mică și umilința birocratică; educație echitabilă teritorial.',
@@ -132,7 +132,7 @@ export const REGIONAL_CONTROL_GROUP: RegionalCase[] = [
   },
   {
     id: 'polonia',
-    country: 'Polonia (Memorie istorică instituționalizată și consens strategic)',
+    country: 'Polonia (memorie istorică instituționalizată și consens strategic)',
     roleInModel: 'Modelul imunizării conservatorismului și a religiozității împotriva parazitării semiotice moscovite',
     exposureProfile: 'Polarizări politice și axiologice interne intense între tabăra conservatoare națională și cea liberală cosmopolită, oferind teoretic condiții pentru parazitarea discursului conservator.',
     stratumA: 'Consens strategic transpartinic asupra apărării naționale, a înzestrării militare și a consolidării flancului estic al Alianței Nord-Atlantice.',
@@ -143,7 +143,7 @@ export const REGIONAL_CONTROL_GROUP: RegionalCase[] = [
   },
   {
     id: 'moldova',
-    country: 'Republica Moldova (Mobilizare instituțională și civică sub presiune existențială)',
+    country: 'Republica Moldova (mobilizare instituțională și civică sub presiune existențială)',
     roleInModel: 'Oglinda comparativă a rezilienței în condiții de resurse reduse și asalt hibrid extrem',
     exposureProfile: 'Resurse economice și militare mult mai reduse, lipsa umbrelei NATO, șantaj energetic decenal și finanțare ilegală masivă a rețelelor oligarhice de cumpărare de voturi (Ilan Șor) plus amenințarea transnistreană.',
     stratumA: 'Crearea de instituții dedicate (precum Centrul pentru Comunicare Strategică și Combatere a Dezinformării) și aplicarea de sancțiuni legale ferme împotriva fluxurilor financiare ilicite și a canalelor de propagandă.',
@@ -157,7 +157,7 @@ export const REGIONAL_CONTROL_GROUP: RegionalCase[] = [
 export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   {
     id: 'al-saselea-domeniu',
-    term: 'Al șaselea domeniu operațional (Spațiul cognitiv)',
+    term: 'Al șaselea domeniu operațional (spațiul cognitiv)',
     stratum: 'B',
     authors: 'Claverie, Baptiste & du Cluzel (2022); du Cluzel (2020); NATO ACT',
     domain: 'Doctrină strategică și cibernetică militară',
@@ -197,7 +197,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'inchidere-operationala',
-    term: 'Închidere operațională (Autonomie funcțională)',
+    term: 'Închidere operațională (autonomie funcțională)',
     stratum: 'A',
     authors: 'Niklas Luhmann (1995, 2004)',
     domain: 'Teoria sistemelor sociale',
@@ -237,7 +237,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'axa-ego-sine',
-    term: 'Axa Ego–Sine colectivă (Deflație și inflație)',
+    term: 'Axa Ego–Sine colectivă (deflație și inflație)',
     stratum: 'C',
     authors: 'Edward F. Edinger (1972); Martin Seligman (1975)',
     domain: 'Psihologie analitică',
@@ -257,7 +257,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'uzura-alostatica',
-    term: 'Uzură alostatică (Allostatic load)',
+    term: 'Uzură alostatică (allostatic load)',
     stratum: 'B',
     authors: 'Bruce S. McEwen (1998); Robert M. Sapolsky (2004, 2017)',
     domain: 'Neurobiologia stresului',
@@ -267,7 +267,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'axa-hpa-dlpf',
-    term: 'Hiperactivarea axei HPA, amigdala bazolaterală și inhibiția dlPFC / vmPFC',
+    term: 'Hiperactivarea axei HPA, amigdala bazolaterală și inhibiția dlPFC și vmPFC',
     stratum: 'B',
     authors: 'Amy F. T. Arnsten (2009); Robert M. Sapolsky (2004, 2017); Daniel Kahneman (2011)',
     domain: 'Neuroștiințe cognitive',
@@ -277,7 +277,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'abaissement-du-niveau-mental',
-    term: 'Abaissement du niveau mental (Scăderea tensiunii conștiente)',
+    term: 'Abaissement du niveau mental (scăderea tensiunii conștiente)',
     stratum: 'C',
     authors: 'Pierre Janet; Carl Gustav Jung (1934/1960)',
     domain: 'Psihologie dinamică și analitică',
@@ -317,7 +317,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'starea-bobok',
-    term: 'Starea Bobok (Nihilismul cinic transgresiv)',
+    term: 'Starea Bobok (nihilismul cinic transgresiv)',
     stratum: 'B',
     authors: 'Fiodor Dostoievski (1873); Françoise Thom (2018); Peter Pomerantsev (2014, 2019)',
     domain: 'Politologie și psihologia propagandei',
@@ -357,7 +357,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'mediere-ternara-vs-binara',
-    term: 'Semioza ternară (Peirce / Lotman) versus Semiotica binară a anihilării',
+    term: 'Semioza ternară (Peirce și Lotman) versus semiotica binară a anihilării',
     stratum: 'B',
     authors: 'Charles Sanders Peirce (1931–1958); Iuri Lotman (1990, 1992/2009); Lotman & Uspenski (1985)',
     domain: 'Semiotica culturii',
@@ -367,7 +367,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'inchidere-cognitiva-seizing-freezing',
-    term: 'Nevoia de închidere cognitivă (Seizing / Freezing) și cogniția protectoare a identității',
+    term: 'Nevoia de închidere cognitivă (seizing și freezing) și cogniția protectoare a identității',
     stratum: 'B',
     authors: 'Arie W. Kruglanski (2004); Dan M. Kahan (2013, 2017)',
     domain: 'Psihologie cognitivă și socială',
@@ -397,7 +397,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'contagiune-complexa',
-    term: 'Contagiunea complexă în rețea (Complex contagion)',
+    term: 'Contagiunea complexă în rețea (complex contagion)',
     stratum: 'B',
     authors: 'Damon Centola (2018, 2021); Mark Granovetter (1973)',
     domain: 'Sociologia rețelelor',
@@ -449,15 +449,15 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     id: 'bifurcare-track-a-track-b',
     term: 'Bifurcarea neurocognitivă (Track A reactiv versus Track B deliberativ) și capacitatea negativă',
     stratum: 'B',
-    authors: 'Wilfred R. Bion (1962, 1970); Stephen Porges (2011); Thayer & Lane (2009); Cogniție și Manipulare',
+    authors: 'Wilfred R. Bion (1962, 1970); Stephen Porges (2011); Thayer & Lane (2009); Cogniție și manipulare',
     domain: 'Neurobiologia deciziei și psihanaliză epistemică',
-    definition: 'Opoziția în nodul de criză acută între bucla reactivă dezadaptativă (Track A: amigdală, tunel dopaminergic, Sistem 1) și traseul deliberativ adaptativ (Track B: reglare descendentă dlPFC/vmPFC, tonus vagal, capacitate negativă de a tolera incertitudinea și validare în comunități epistemice deschise).',
+    definition: 'Opoziția în nodul de criză acută între bucla reactivă dezadaptativă (Track A, amigdală, tunel dopaminergic și Sistem 1) și traseul deliberativ adaptativ (Track B, reglare descendentă dlPFC și vmPFC, tonus vagal, capacitate negativă de a tolera incertitudinea și validare în comunități epistemice deschise).',
     monographContext: 'Fundamentează neurobiologic suveranitatea decizională a cetățeanului (Figura 6).',
     polarity: 'synthesis'
   },
   {
     id: 'prebunking-inoculare',
-    term: 'Pregătire psihocognitivă preventivă (Prebunking) și curba uitării a lui Ebbinghaus',
+    term: 'Pregătire psihocognitivă preventivă (prebunking) și curba uitării a lui Ebbinghaus',
     stratum: 'B',
     authors: 'William J. McGuire (1964); Jon Roozenbeek & Sander van der Linden (2019, 2022); Hermann Ebbinghaus (1885/1913)',
     domain: 'Psihologie experimentală și educație cognitivă',
@@ -467,7 +467,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'guvernanta-policentrica-ostrom',
-    term: 'Guvernanța policentrică și autoeficacitatea politică (Self-efficacy)',
+    term: 'Guvernanța policentrică și autoeficacitatea politică (self-efficacy)',
     stratum: 'A',
     authors: 'Vincent & Elinor Ostrom (1990, 2010); Albert Bandura (1997)',
     domain: 'Științe politice și economie instituțională',
@@ -537,7 +537,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'spalare-informationala',
-    term: 'Spălare informațională și ecosistemul Doppelgänger / Matrioșka / Pravda',
+    term: 'Spălare informațională și ecosistemul Doppelgänger, Matrioșka și Pravda',
     stratum: 'A',
     authors: 'Thomas Rid (2020); Pomerantsev & Weiss (2014); rapoartele Viginum și EEAS (2023–2024)',
     domain: 'Securitate cibernetică și analiză OSINT',
@@ -577,7 +577,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'cognitia-protectoare-a-identitatii',
-    term: 'Cogniția protectoare a identității (Identity-protective cognition)',
+    term: 'Cogniția protectoare a identității (identity-protective cognition)',
     stratum: 'B',
     authors: 'Dan M. Kahan (2013, 2017)',
     domain: 'Psihologie politică și știința comunicării',
@@ -597,7 +597,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'functia-transcendenta',
-    term: 'Funcția transcendentă (Medierea simbolică pe axa Ego–Sine)',
+    term: 'Funcția transcendentă (medierea simbolică pe axa Ego–Sine)',
     stratum: 'C',
     authors: 'Carl Gustav Jung (1916/1960); Edward F. Edinger (1972)',
     domain: 'Psihologie analitică',
@@ -617,7 +617,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'capacitate-negativa-bion',
-    term: 'Capacitatea negativă și Grupul de Lucru (Work Group W)',
+    term: 'Capacitatea negativă și grupul de lucru (Work Group W)',
     stratum: 'B',
     authors: 'Wilfred R. Bion (1961, 1962, 1970); John Keats (1817)',
     domain: 'Psihanaliză epistemică și dinamica grupurilor',

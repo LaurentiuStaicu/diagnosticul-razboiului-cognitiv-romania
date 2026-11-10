@@ -311,22 +311,22 @@ export function App() {
       } else if (activeView === 'parcurs' && parcursSubMode === 'patru-acte') {
         const actTitles: Record<1 | 2 | 3 | 4, { title: string; desc: string; alt: string }> = {
           1: {
-            title: 'Actul I (Cadrul macro și rădăcina sistemică) · Diagnosticul războiului cognitiv în România',
+            title: 'Actul I (Cadrul macro și rădăcina sistemică, Diagnosticul războiului cognitiv în România)',
             desc: 'Introducere și Capitolul 1 (Arhitectura cauzală ascendentă pe Straturile A, B și C, barca lui Coleman-Hedström, determinanții Lalonde-Dever și anomalia formelor fără fond).',
             alt: 'Actul I (Arhitectura cauzală pe trei straturi a vulnerabilității societale endogene)'
           },
           2: {
-            title: 'Actul II (Anatomia tensiunii și capturarea buclei OODA) · Diagnosticul războiului cognitiv în România',
+            title: 'Actul II (Anatomia tensiunii și capturarea buclei OODA, Diagnosticul războiului cognitiv în România)',
             desc: 'Capitolele 2 și 3 (Rețeaua sistema, Antilumea putinistă, starea Bobok, dubla falsificare axiologică, controlul reflexiv de rang secund și deturnarea fazei de Orientare din bucla OODA).',
             alt: 'Actul II (Mecanismul cibernetic și semiotic al capturării cognitive în bucla OODA)'
           },
           3: {
-            title: 'Actul III (Dinamica forțelor, Umbra colectivă și bifurcația Track A / Track B) · Diagnosticul războiului cognitiv în România',
+            title: 'Actul III (Dinamica forțelor, Umbra colectivă și bifurcația Track A și Track B, Diagnosticul războiului cognitiv în România)',
             desc: 'Capitolele 4 și 5 (Conversia resurselor din Umbra colectivă, matricea comportamentală a lui Carlo M. Cipolla și bifurcarea neurocognitivă în criză acută).',
             alt: 'Actul III (Bifurcarea procesării neurocognitive sub presiunea crizei acute)'
           },
           4: {
-            title: 'Actul IV (Protocolul secvențial în trei faze și modernitatea organică) · Diagnosticul războiului cognitiv în România',
+            title: 'Actul IV (Protocolul secvențial în trei faze și modernitatea organică, Diagnosticul războiului cognitiv în România)',
             desc: 'Capitolul 6 (Ordinea cauzală obligatorie a reconstrucției rezilienței pe determinanții Lalonde-Dever, guvernanța policentrică Ostrom și individuarea colectivă).',
             alt: 'Actul IV (Protocolul secvențial în trei faze al reconstrucției rezilienței societale)'
           }
@@ -339,20 +339,20 @@ export function App() {
         metaUrl = `${baseUrl}/share/actul-${activeActNumber}.html`;
       } else if (activeView === 'diagrame') {
         const fig = FIGURE_METADATA[labFigureId] || FIGURE_METADATA[1];
-        metaTitle = `${fig.title} · Diagnosticul războiului cognitiv în România`;
+        metaTitle = `${fig.title} (Diagnosticul războiului cognitiv în România)`;
         metaDescription = fig.caption;
         metaImage = `${baseUrl}/og/og-fig-${fig.id}.png`;
         metaImageAlt = `${fig.title} (${fig.subtitle})`;
         metaUrl = `${baseUrl}/share/figura-${fig.id}.html`;
       } else if (activeView === 'tabele') {
-        metaTitle = 'Tabelele de sinteză (1 și 2) și Grupul de control regional · Diagnosticul războiului cognitiv în România';
+        metaTitle = 'Tabelele de sinteză (1 și 2) și grupul de control regional (Diagnosticul războiului cognitiv în România)';
         metaDescription =
           'Sinteza matricială a diagnosticului pe Straturile A, B și C (Tabelul 1), protocolul secvențial Lalonde-Dever în 3 faze (Tabelul 2) și comparația cu grupul de control regional.';
         metaImage = `${baseUrl}/og/og-fig-7.png`;
         metaImageAlt = 'Tabelele de sinteză 1 și 2 și protocolul Lalonde-Dever';
         metaUrl = `${baseUrl}/share/tabele.html`;
       } else if (activeView === 'glosar') {
-        metaTitle = 'Glosar conceptual (50 concepte) și Bibliografie integrală (122 lucrări) · Diagnosticul războiului cognitiv în România';
+        metaTitle = 'Glosar conceptual (50 concepte) și bibliografie integrală (122 lucrări) (Diagnosticul războiului cognitiv în România)';
         metaDescription =
           'Aparatul conceptual interdisciplinar și cele 122 de referințe academice verificate ale monografiei.';
         metaImage = `${baseUrl}/og/og-fig-1.png`;
@@ -714,7 +714,7 @@ export function App() {
                               : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                           }`}
                         >
-                          Text integral + Două registre
+                          Text integral și două registre
                         </button>
                         <button
                           onClick={() => setReadingTab('integral')}
@@ -734,7 +734,7 @@ export function App() {
                               : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                           }`}
                         >
-                          Descompunere (Teoretic / Empiric)
+                          Descompunere pe două registre (teoretic și empiric)
                         </button>
                       </div>
                     </div>
@@ -976,8 +976,8 @@ export function App() {
                                     }`}
                                   >
                                     {dr.systemicOutcome === 'tension'
-                                      ? 'Stratul empiric (Falie structurală / Vulnerabilitate)'
-                                      : 'Stratul empiric (Mecanism de echilibrare / Reziliență)'}
+                                      ? 'Stratul empiric (falie structurală și vulnerabilitate)'
+                                      : 'Stratul empiric (mecanism de echilibrare și reziliență)'}
                                   </div>
                                   <p className="text-xs sm:text-sm text-[#222426] leading-relaxed mt-2">
                                     {dr.empiricalReality}
@@ -997,7 +997,7 @@ export function App() {
                               Textul integral al secțiunii din monografie (Fidelitate textuală completă)
                             </div>
                             <div className="text-[11px] font-mono text-[#6E7376]">
-                              Selectați orice citare între paranteze (Autor, An) pentru fișa bibliografică
+                              Selectați orice citare între paranteze (autor, an) pentru fișa bibliografică
                             </div>
                           </div>
                           <div className="space-y-5 font-serif text-base sm:text-[17px] text-[#222426] leading-[1.8] max-w-[70ch]">

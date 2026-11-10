@@ -95,7 +95,7 @@ const FOUR_ACTS_BLUEPRINT: ActBlueprint[] = [
     title: 'Actul II (Anatomia tensiunii și mecanismul intern pe două registre)',
     subtitle: 'Capitolele 2 și 3 (Antilumea putinistă, dubla falsificare axiologică și capturarea buclei OODA)',
     visualDirective:
-      'Descompunere în oglindă între Stratul Teoretic/Conceptual (sistema, Russkii Antimir, Bobok, controlul reflexiv de ordinul al doilea, semioza binară) și Stratul Practic/Empiric (inversarea valorilor, deturnarea Orientării OODA și comparația cu grupul de control regional).',
+      'Descompunere în oglindă între stratul teoretic și conceptual (sistema, Russkii Antimir, Bobok, controlul reflexiv de ordinul al doilea, semioza binară) și stratul practic și empiric (inversarea valorilor, deturnarea Orientării OODA și comparația cu grupul de control regional).',
     narrativeVoiceover:
       'Operațiunile informaționale ruse nu propun o ideologie coerentă concurentă, ci proiectează în exterior patologia internă a regimului putinist (sistema și Russkii Antimir) pentru a induce starea de Bobok (punctul de descompunere morală în care distincția dintre adevăr și minciună devine irelevantă).',
     theoreticalPillars: [
@@ -153,7 +153,7 @@ const FOUR_ACTS_BLUEPRINT: ActBlueprint[] = [
     visualDirective:
       'Vizualizarea paralelă a buclelor vicioase de amplificare (marcate în roșu-vermilion #F01E1E) și a traiectoriilor adaptative de echilibrare (marcate în galben-ocru #E5B822) prin cele cinci filtre ale inconștientului cultural, matricea lui Cipolla și bifurcația de criză acută.',
     narrativeVoiceover:
-      'Trecerea de la vulnerabilitatea pasivă la adeziunea activă la ideologia putinistă nu se produce direct, ci prin cinci filtre secvențiale de conversie psihodinamică. În momente de criză acută, acest ansamblu împinge grupul social într-o bifurcație decisivă între regresia în Ipotezele de Bază ale lui Bion (Track A) și mobilizarea Grupului de Lucru (Track B).',
+      'Trecerea de la vulnerabilitatea pasivă la adeziunea activă la ideologia putinistă nu se produce direct, ci prin cinci filtre secvențiale de conversie psihodinamică. În momente de criză acută, acest ansamblu împinge grupul social într-o bifurcație decisivă între regresia în ipotezele de bază ale lui Bion (Track A) și mobilizarea grupului de lucru (Track B).',
     theoreticalPillars: [
       {
         stratum: 'C',
@@ -174,21 +174,21 @@ const FOUR_ACTS_BLUEPRINT: ActBlueprint[] = [
         concept: 'Bifurcația neurocognitivă în criză acută (Track A vs. Track B)',
         authors: 'Bion (1961), Arnsten (2009), Luhmann (1979), Putnam (2000)',
         mechanism:
-          'Sub șoc informațional acut, absența încrederii instituționale declanșează Track A (amigdală + baD / baF + colaps epistemic), în timp ce transparența și punțile sociale activează Track B (dlPFC + Work Group W).'
+          'Sub șoc informațional acut, absența încrederii instituționale declanșează Track A (amigdală + baD / baF + colaps epistemic), în timp ce transparența și punțile sociale activează Track B (dlPFC și grupul de lucru W).'
       }
     ],
     empiricalManifestations: [
       {
         polarity: 'tension',
-        label: 'Bucla vicioasă (Track A, Regresie și auto-sabotaj)',
+        label: 'Bucla vicioasă (Track A, regresie și autosabotaj)',
         detail:
           'Șoc acut -> hiperactivare amigdală -> căutarea unui salvator providențial (baD) sau a unui inamic absolut (baF) -> polarizare extremă -> paralizie decizională.'
       },
       {
         polarity: 'synthesis',
-        label: 'Bucla adaptativă (Track B, Reziliență și Grup de Lucru)',
+        label: 'Bucla adaptativă (Track B, reziliență și grup de lucru)',
         detail:
-          'Șoc acut -> comunicare instituțională calmă și verificabilă -> conservarea tonusului prefrontal (dlPFC) -> activarea Grupului de Lucru (W) -> cooperare bazată pe realitate.'
+          'Șoc acut -> comunicare instituțională calmă și verificabilă -> conservarea tonusului prefrontal (dlPFC) -> activarea grupului de lucru (W) -> cooperare bazată pe realitate.'
       },
       {
         polarity: 'synthesis',
@@ -216,21 +216,21 @@ const FOUR_ACTS_BLUEPRINT: ActBlueprint[] = [
         concept: 'Faza I (Stabilizare, decompresie alostatică și deparazitare algoritmică)',
         authors: 'McEwen (1998), Luhmann (1995), Zuboff (2019)',
         mechanism:
-          'Orizont 0–18 luni (prerechizită obligatorie): simplificare administrativă radicală, interzicerea surprizelor fiscale și auditarea algoritmică a amplificării furiei.'
+          'Orizont tactic imediat (0–12 luni, prerechizită obligatorie). Simplificare administrativă radicală, interzicerea surprizelor fiscale și auditarea algoritmică a amplificării furiei.'
       },
       {
         stratum: 'B',
         concept: 'Faza II (Inoculare psihologică, deliberare și punți de capital social)',
         authors: 'McGuire (1964), Roozenbeek și van der Linden (2019, 2022), Putnam (2000), Volkan (2004)',
         mechanism:
-          'Orizont 18–60 luni: prebunking la scară largă împotriva tehnicilor de manipulare, reconstrucția capitalului social de tip bridging și integrarea onestă a traumelor istorice.'
+          'Orizont operațional mediu (1–3 ani). Prebunking la scară largă împotriva tehnicilor de manipulare, reconstrucția capitalului social de tip bridging și integrarea onestă a traumelor istorice.'
       },
       {
         stratum: 'C',
         concept: 'Faza III (Guvernanță policentrică, individuație colectivă și modernitate organică)',
         authors: 'Ostrom (1990, 2010), Edinger (1972), Kalaitzidis (2012), Lotman (1990)',
         mechanism:
-          'Orizont 5–15 ani: subsidiaritate autentică, refacerea axei Ego colectiv–Sine cultural și depășirea istorică a anomaliei „formelor fără fond”.'
+          'Orizont strategic (3–10 ani). Subsidiaritate autentică, refacerea axei Ego colectiv–Sine cultural și depășirea istorică a anomaliei „formelor fără fond”.'
       }
     ],
     empiricalManifestations: [

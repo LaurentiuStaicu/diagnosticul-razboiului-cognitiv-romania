@@ -90,7 +90,7 @@ export const FIGURE_METADATA: Record<
     caption:
       'La întâlnirea stimulului de criză acută în nodul de bifurcație cognitivă, absența reglării executive deviază procesarea pe Track A (sus, marcat cu roșu), unde hiperactivarea amigdaliană, inhibiția cortexului prefrontal dorsolateral și capturarea dopaminergică a atenției produc paralizie decizională, furie și o buclă de autoamplificare reactivă. În contrast, activarea conexiunilor prefrontale și a capacității negative orientează procesarea pe Track B (jos, marcat cu galben-muștar), permițând analiza deliberativă, validarea epistemică și comunitară în regim de mediere ternară și generând reziliență și acțiune suverană.',
     methodologicalNote:
-      'Arhitectura bifurcării procesării cognitive în condiții de criză acută (adaptată după Cogniție și Manipulare) arată modul în care stimulul stresor este direcționat fie pe bucla reactivă dezadaptativă (Track A), dominată de amigdala bazolaterală și de capturarea dopaminergică, fie pe traseul deliberativ adaptativ (Track B), guvernat de cortexul prefrontal dorsolateral și ventromedial.'
+      'Arhitectura bifurcării procesării cognitive în condiții de criză acută (adaptată după Cogniție și manipulare) arată modul în care stimulul stresor este direcționat fie pe bucla reactivă dezadaptativă (Track A), dominată de amigdala bazolaterală și de capturarea dopaminergică, fie pe traseul deliberativ adaptativ (Track B), guvernat de cortexul prefrontal dorsolateral și ventromedial.'
   },
   7: {
     id: 7,
@@ -2351,13 +2351,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig5SelectedQuadrant === 'I' &&
-                  'Cadranul I (+X, +Y, Cooperare inteligentă). Cetățenii, antreprenorii și instituțiile incluzive își urmăresc propriul interes legitim prin muncă, inovație și respectarea legii impersonale, generând simultan valoare adăugată și încredere pentru întreaga comunitate (ordinea socială cu acces deschis, North, Wallis & Weingast, 2009).'}
+                  'Cadranul I (+X, +Y, cooperare inteligentă). Cetățenii, antreprenorii și instituțiile incluzive își urmăresc propriul interes legitim prin muncă, inovație și respectarea legii impersonale, generând simultan valoare adăugată și încredere pentru întreaga comunitate (ordinea socială cu acces deschis, North, Wallis & Weingast, 2009).'}
                 {fig5SelectedQuadrant === 'II' &&
-                  'Cadranul II (-X, +Y, Cetățeanul vulnerabil, Helpless). Indivizii cinstiți care muncesc, plătesc taxe și susțin funcționarea societății (+Y), dar care, din cauza asimetriei informaționale și a precarității serviciilor publice, înregistrează o pierdere netă de bunăstare, sănătate și demnitate (-X).'}
+                  'Cadranul II (-X, +Y, cetățeanul vulnerabil, Helpless). Indivizii cinstiți care muncesc, plătesc taxe și susțin funcționarea societății (+Y), dar care, din cauza asimetriei informaționale și a precarității serviciilor publice, înregistrează o pierdere netă de bunăstare, sănătate și demnitate (-X).'}
                 {fig5SelectedQuadrant === 'IV' &&
-                  'Cadranul IV (+X, -Y, Actorii extractivi, Bandits). Rețelele politico-economice clientelare și birocrațiile parazitare interne (precum și agresorul geopolitic extern) care își însușesc câștiguri substanțiale (+X) prin spolierea bugetelor publice și degradarea instituțiilor (-Y).'}
+                  'Cadranul IV (+X, -Y, actorii extractivi, Bandits). Rețelele politico-economice clientelare și birocrațiile parazitare interne (precum și agresorul geopolitic extern) care își însușesc câștiguri substanțiale (+X) prin spolierea bugetelor publice și degradarea instituțiilor (-Y).'}
                 {fig5SelectedQuadrant === 'III' &&
-                  'Cadranul III (-X, -Y, Autosabotajul colectiv). Crezând că se mută în Cadranul I sau că îi pedepsește exclusiv pe spoliatorii din Cadranul IV, cetățeanul capturat cognitiv traversează bariera instituțională fisurată și se prăbușește vertical în Cadranul III, unde votul punitiv extrem și blocarea alianțelor provoacă daune societății (-Y) și propria sa ruină socioeconomică (-X).'}
+                  'Cadranul III (-X, -Y, autosabotajul colectiv). Crezând că se mută în Cadranul I sau că îi pedepsește exclusiv pe spoliatorii din Cadranul IV, cetățeanul capturat cognitiv traversează bariera instituțională fisurată și se prăbușește vertical în Cadranul III, unde votul punitiv extrem și blocarea alianțelor provoacă daune societății (-Y) și propria sa ruină socioeconomică (-X).'}
               </p>
             </div>
           </div>
@@ -2385,7 +2385,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Track A (Buclă reactivă dezadaptativă, Sistemul 1)
+                Track A (buclă reactivă dezadaptativă, Sistemul 1)
               </button>
               <button
                 onClick={() => {
@@ -2398,7 +2398,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Track B (Traseu deliberativ adaptativ, Sistemul 2)
+                Track B (traseu deliberativ adaptativ, Sistemul 2)
               </button>
             </div>
           </div>
@@ -2540,7 +2540,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-bold fill-[#F01E1E]"
                 >
-                  Track A (Buclă reactivă, Sistemul 1 / Hiperreactivitate subcorticală)
+                  Track A (buclă reactivă, Sistemul 1 și hiperreactivitate subcorticală)
                 </text>
 
                 {/* Step A1 */}
@@ -2714,7 +2714,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-bold fill-[#222426]"
                 >
-                  Track B (Traseu adaptativ, Sistemul 2 / Reglare executivă prefrontală)
+                  Track B (traseu adaptativ, Sistemul 2 și reglare executivă prefrontală)
                 </text>
 
                 {/* Step B1 */}
@@ -2864,7 +2864,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F4F1EA] p-3.5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Sinteză neurocognitivă (Figura 6, adaptată după Cogniție și Manipulare)
+                Sinteză neurocognitivă (Figura 6, adaptată după Cogniție și manipulare)
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig6SelectedStep === 'stimul' &&
@@ -2875,12 +2875,12 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   (fig6ActiveTrack === 'A' &&
                     fig6SelectedStep !== 'stimul' &&
                     fig6SelectedStep !== 'bifurcatie')) &&
-                  'În arhitectura Traseului A (bucla reactivă dezadaptativă), expunerea repetată la stimuli informaționali construiți pe amenințare existențială și indignare morală declanșează o cascadă neurobiologică de urgență în care amigdala bazolaterală și rețeaua de detecție a relevanței preiau comanda exclusivă a aparatului decizional, inhibând funcțional cortexul prefrontal dorsolateral și ventromedial. Subiectul nu mai procesează informația prin analiză semantică și verificare probatorie, ci prin reflexe defensive automate de tip luptă-sau-fugi, amplificate de descărcările fazice de dopamină din nucleul accumbens (Cogniție și Manipulare).'}
+                  'În arhitectura Traseului A (bucla reactivă dezadaptativă), expunerea repetată la stimuli informaționali construiți pe amenințare existențială și indignare morală declanșează o cascadă neurobiologică de urgență în care amigdala bazolaterală și rețeaua de detecție a relevanței preiau comanda exclusivă a aparatului decizional, inhibând funcțional cortexul prefrontal dorsolateral și ventromedial. Subiectul nu mai procesează informația prin analiză semantică și verificare probatorie, ci prin reflexe defensive automate de tip luptă-sau-fugi, amplificate de descărcările fazice de dopamină din nucleul accumbens (Cogniție și manipulare).'}
                 {(fig6SelectedStep === 'trackB' ||
                   (fig6ActiveTrack === 'B' &&
                     fig6SelectedStep !== 'stimul' &&
                     fig6SelectedStep !== 'bifurcatie')) &&
-                  'Traseul B (traseul deliberativ adaptativ) se activează atunci când subiectul dispune de rezerva neurocognitivă și de antrenamentul metacognitiv necesare pentru a suspenda reacția impulsivă imediată și pentru a menține deschis spațiul incertitudinii critice (capacitatea negativă, Bion, 1962, 1970). Prin angajarea cortexului prefrontal dorsolateral în evaluarea probelor și prin reglarea afectelor subcorticale de către cortexul prefrontal ventromedial, stimulul informațional este extras din regimul urgenței emoționale și este supus contextualizării istorice, analizei logice și verificării intersubiective în comunități epistemice deschise (Cogniție și Manipulare).'}
+                  'Traseul B (traseul deliberativ adaptativ) se activează atunci când subiectul dispune de rezerva neurocognitivă și de antrenamentul metacognitiv necesare pentru a suspenda reacția impulsivă imediată și pentru a menține deschis spațiul incertitudinii critice (capacitatea negativă, Bion, 1962, 1970). Prin angajarea cortexului prefrontal dorsolateral în evaluarea probelor și prin reglarea afectelor subcorticale de către cortexul prefrontal ventromedial, stimulul informațional este extras din regimul urgenței emoționale și este supus contextualizării istorice, analizei logice și verificării intersubiective în comunități epistemice deschise (Cogniție și manipulare).'}
               </p>
             </div>
           </div>
@@ -2910,7 +2910,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                       : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
                   }`}
                 >
-                  Faza {ph === 1 ? 'I (Tactic)' : ph === 2 ? 'II (Operațional)' : 'III (Strategic)'}
+                  Faza {ph === 1 ? 'I (orizont tactic)' : ph === 2 ? 'II (orizont operațional)' : 'III (orizont strategic)'}
                 </button>
               ))}
             </div>
@@ -3362,7 +3362,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-bold fill-[#222426]"
                 >
-                  Fundament (Determinanții Lalonde-Dever, Rezervă neurobiologică · Mediu · Stil de viață · Sistem instituțional)
+                  Fundament (determinanții Lalonde-Dever, rezervă neurobiologică, mediu, stil de viață și sistem instituțional)
                 </text>
               </g>
             </svg>

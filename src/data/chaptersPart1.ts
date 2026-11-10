@@ -21,7 +21,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: 'intro-dr-1',
         stratum: 'A',
-        theoreticalConcept: 'Al șaselea domeniu operațional (Spațiul cognitiv)',
+        theoreticalConcept: 'Al șaselea domeniu operațional (spațiul cognitiv)',
         theoreticalAuthor: 'Claverie, Baptiste & du Cluzel (2022); NATO ACT',
         theoreticalMechanism: 'Depășirea persuasiunii informaționale punctuale prin țintirea directă a arhitecturii de procesare a realității și a capacității decizionale sub pragul articolului 5.',
         empiricalReality: 'Subminarea din interior a coeziunii constituționale și a alianțelor euroatlantice ale României fără intervenție militară convențională.',
@@ -327,7 +327,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: '3-1-dr-2',
         stratum: 'B',
-        theoreticalConcept: 'Algebra conștiinței (Primul sistem etic al cooperării versus Al doilea sistem etic al anihilării)',
+        theoreticalConcept: 'Algebra conștiinței (primul sistem etic al cooperării versus al doilea sistem etic al anihilării)',
         theoreticalAuthor: 'Vladimir Lefebvre (1982, 2001)',
         theoreticalMechanism: 'Comutarea de la evaluarea pozitivă a dialogului și a procedurilor legale (Primul sistem etic) la evaluarea agresivității, a arbitrarului și a anihilării oponentului ca virtute supremă (Al doilea sistem etic).',
         empiricalReality: 'Răbdarea instituțională, verificarea probelor și solidaritatea aliată sunt reevaluate ca „slăbiciune” și „trădare”, în timp ce abuzul autoritar este aplaudat ca „demnitate”.',
@@ -360,7 +360,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: '3-2-dr-1',
         stratum: 'B',
-        theoreticalConcept: 'Semioza ternară (Peirce / Lotman) versus Semiotica binară a anihilării (Lotman & Uspenski)',
+        theoreticalConcept: 'Semioza ternară (Peirce și Lotman) versus semiotica binară a anihilării (Lotman și Uspenski)',
         theoreticalAuthor: 'Peirce (1931–1958); Lotman (1990, 1992/2009); Lotman & Uspenski (1985)',
         theoreticalMechanism: 'Prăbușirea spațiului neutru al interpretantului și al deliberării constituționale (sistem ternar) într-o logică apocaliptică fără mediere între mântuire și pierzanie (sistem binar).',
         empiricalReality: 'Reîncadrarea oricărei teme de politică publică (sănătate, energie, fiscalitate, apărare) în dilema existențială „noi, poporul pur” versus „ei, trădătorii care vor să ne anihileze”.',
@@ -369,7 +369,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: '3-2-dr-2',
         stratum: 'B',
-        theoreticalConcept: 'Închiderea cognitivă (seizing / freezing) și cogniția protectoare a identității',
+        theoreticalConcept: 'Închiderea cognitivă (seizing și freezing) și cogniția protectoare a identității',
         theoreticalAuthor: 'Kruglanski & Webster (1996); Kruglanski (2004); Kahan (2013, 2017); Festinger (1957)',
         theoreticalMechanism: 'Sub presiunea uzurii alostatice, aparatul cognitiv captează precipitat o explicație conspirativă simplă (seizing), o îngheață epistemic (freezing) și o fuzionează cu identitatea de grup.',
         empiricalReality: 'Confruntarea agresivă a cetățeanului capturat cu verificări factuale (debunking ostil) este percepută ca un atac la adresa demnității personale, întărind adeziunea la bula radicală.',

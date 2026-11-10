@@ -83,7 +83,7 @@ for (const step of ALL_SUBCHAPTER_STEPS) {
 const ACTS_META = [
   {
     act: 1,
-    title: 'Actul I (Cadrul macro și rădăcina sistemică) · Diagnosticul războiului cognitiv în România',
+    title: 'Actul I (Cadrul macro și rădăcina sistemică, Diagnosticul războiului cognitiv în România)',
     description:
       'Introducere și Capitolul 1 (Arhitectura cauzală ascendentă pe Straturile A, B și C, barca lui Coleman-Hedström, determinanții Lalonde-Dever și anomalia formelor fără fond).',
     imageRelPath: 'og/og-act-1.png',
@@ -91,7 +91,7 @@ const ACTS_META = [
   },
   {
     act: 2,
-    title: 'Actul II (Anatomia tensiunii și capturarea buclei OODA) · Diagnosticul războiului cognitiv în România',
+    title: 'Actul II (Anatomia tensiunii și capturarea buclei OODA, Diagnosticul războiului cognitiv în România)',
     description:
       'Capitolele 2 și 3 (Rețeaua sistema, Antilumea putinistă, starea Bobok, dubla falsificare axiologică, controlul reflexiv de rang secund și deturnarea fazei de Orientare din bucla OODA).',
     imageRelPath: 'og/og-act-2.png',
@@ -99,7 +99,7 @@ const ACTS_META = [
   },
   {
     act: 3,
-    title: 'Actul III (Dinamica forțelor, Umbra colectivă și bifurcația Track A / Track B) · Diagnosticul războiului cognitiv în România',
+    title: 'Actul III (Dinamica forțelor, Umbra colectivă și bifurcația Track A și Track B, Diagnosticul războiului cognitiv în România)',
     description:
       'Capitolele 4 și 5 (Conversia resurselor din Umbra colectivă, matricea comportamentală a lui Carlo M. Cipolla și bifurcarea neurocognitivă în criză acută între Track A reactiv și Track B deliberativ).',
     imageRelPath: 'og/og-act-3.png',
@@ -107,9 +107,9 @@ const ACTS_META = [
   },
   {
     act: 4,
-    title: 'Actul IV (Protocolul secvențial în trei faze și modernitatea organică) · Diagnosticul războiului cognitiv în România',
+    title: 'Actul IV (Protocolul secvențial în trei faze și modernitatea organică, Diagnosticul războiului cognitiv în România)',
     description:
-      'Capitolul 6 (Ordinea cauzală obligatorie a reconstrucției rezilienței pe determinanții Lalonde-Dever: Faza I decompresie alostatică, Faza II prebunking și validare morală, Faza III guvernanță policentrică Ostrom și individuare colectivă).',
+      'Capitolul 6 (Ordinea cauzală obligatorie a reconstrucției rezilienței pe determinanții Lalonde-Dever, Faza I decompresie alostatică, Faza II prebunking și validare morală, Faza III guvernanță policentrică Ostrom și individuare colectivă).',
     imageRelPath: 'og/og-act-4.png',
     imageAlt: 'Actul IV (Protocolul secvențial în trei faze al reconstrucției rezilienței societale)'
   }
@@ -133,7 +133,7 @@ for (const figId of [1, 2, 3, 4, 5, 6, 7]) {
   const html = buildShareHtml({
     slug: `figura-${figId}`,
     targetHash: `figura-${figId}`,
-    title: `${fig.title} · Diagnosticul războiului cognitiv în România`,
+    title: `${fig.title} (Diagnosticul războiului cognitiv în România)`,
     description: fig.caption,
     imageRelPath: `og/og-fig-${figId}.png`,
     imageAlt: `${fig.title} (${fig.subtitle})`
@@ -147,7 +147,7 @@ fs.writeFileSync(
   buildShareHtml({
     slug: 'tabele',
     targetHash: 'tabele',
-    title: 'Tabelele de sinteză (1 și 2) și Grupul de control regional (Estonia, Polonia, Moldova) · Diagnosticul războiului cognitiv în România',
+    title: 'Tabelele de sinteză (1 și 2) și grupul de control regional (Estonia, Polonia, Moldova) (Diagnosticul războiului cognitiv în România)',
     description:
       'Sinteza matricială a diagnosticului pe Straturile A, B și C (Tabelul 1), protocolul secvențial Lalonde-Dever în 3 faze (Tabelul 2) și comparația cu grupul de control regional.',
     imageRelPath: 'og/og-fig-7.png',
@@ -161,7 +161,7 @@ fs.writeFileSync(
   buildShareHtml({
     slug: 'glosar',
     targetHash: 'glosar',
-    title: 'Glosar conceptual (50 concepte) și Bibliografie integrală (122 lucrări) · Diagnosticul războiului cognitiv în România',
+    title: 'Glosar conceptual (50 concepte) și bibliografie integrală (122 lucrări) (Diagnosticul războiului cognitiv în România)',
     description:
       'Aparatul conceptual interdisciplinar (sociologie instituțională, neuroștiințe, semiotică, psihologie analitică) și cele 122 de referințe academice verificate ale monografiei.',
     imageRelPath: 'og/og-fig-1.png',

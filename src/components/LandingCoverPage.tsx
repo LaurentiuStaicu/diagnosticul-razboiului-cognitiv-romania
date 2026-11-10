@@ -44,7 +44,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 Această lucrare demonstrează că vulnerabilitatea cognitivă a societății românești nu reprezintă un simplu deficit de alfabetizare media, ci rezultatul emergent al interacțiunii dintre anomalia istorică a „formelor fără fond” și închiderea operațională a instituțiilor extractive (Stratul A), uzura alostatică cronică și capturarea fazei de Orientare din bucla OODA prin control reflexiv (Stratul B), respectiv activarea filtrelor Umbrei colective și a comportamentului contraproductiv sistemic în criză acută (Stratul C).
               </p>
               <p className="text-[#6E7376]">
-                Explorarea interactivă reunește textul integral al celor șase capitole, descompunerea în oglindă pe două registre (Teoretic și Empiric), modul de prezentare progresivă în patru acte, laboratorul celor șapte diagrame cibernetice și protocolul secvențial de reconstrucție în trei faze.
+                Explorarea interactivă reunește textul integral al celor șase capitole, descompunerea în oglindă pe două registre (teoretic și empiric), modul de prezentare progresivă în patru acte, laboratorul celor șapte diagrame cibernetice și protocolul secvențial de reconstrucție în trei faze.
               </p>
             </div>
 
@@ -356,7 +356,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontWeight="700"
                   fill="#222426"
                 >
-                  Grup de Lucru și Individuație
+                  Grup de lucru și individuare
                 </text>
                 <text
                   x="248"
@@ -425,7 +425,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontSize="11.5"
                   fill="#F6F5EE"
                 >
-                  Faza I (0–18 luni) → Faza II (18–60 luni) → Faza III (5–15 ani, Policentricitate Ostrom)
+                  Faza I (0–12 luni) → Faza II (1–3 ani) → Faza III (3–10 ani, policentricitate Ostrom)
                 </text>
               </svg>
             </div>
