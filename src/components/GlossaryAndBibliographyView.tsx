@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { GLOSSARY_CONCEPTS, BIBLIOGRAPHY_DATA, MASTER_STYLE_PROMPT } from '../data/tablesAndReference';
 import { StratumId } from '../data/types';
 import { Search, Copy, Check } from 'lucide-react';
+import { CitationBox } from './CitationBox';
 
 export const GlossaryAndBibliographyView: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'glossary' | 'bibliography' | 'blueprint'>('glossary');
@@ -219,8 +220,13 @@ export const GlossaryAndBibliographyView: React.FC = () => {
             <span>
               Lucrări afișate ({filteredBibliography.length} din {BIBLIOGRAPHY_DATA.length} lucrări academice individuale verificate în paginile 42–47)
             </span>
-            <span>Ordine alfabetică după autor și an</span>
+            <span>Ordine alfabetică după autor și an (APA 7th Edition)</span>
           </div>
+
+          <div className="p-4 bg-[#F6F5EE]">
+            <CitationBox />
+          </div>
+
           {filteredBibliography.map((item, idx) => (
             <div key={item.id} className="p-4 sm:p-5 hover:bg-[#F4F1EA] transition-colors">
               <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#6E7376] mb-1">
@@ -229,7 +235,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                 </span>
                 <span>{item.domain}</span>
               </div>
-              <p className="font-serif text-sm sm:text-base text-[#222426] leading-relaxed">
+              <p className="font-serif text-sm sm:text-base text-[#222426] leading-relaxed pl-[1.4em] -indent-[1.4em]">
                 {item.fullCitation}
               </p>
             </div>

@@ -103,7 +103,43 @@ export const TablesAndRegionalView: React.FC = () => {
               </div>
             </div>
 
-            <div className="overflow-x-auto">
+            {/* Mobile Stacked Cards Layout (<640px) */}
+            <div className="sm:hidden space-y-4">
+              {TABLE_1_DATA.map((row) => (
+                <div key={row.id} className="bg-[#F6F5EE] border-2 border-[#222426] p-4 space-y-3 text-xs">
+                  <div className="font-serif font-bold text-sm text-[#222426] pb-2 border-b border-[#222426] bg-[#F4F1EA] -mx-4 -mt-4 p-3">
+                    {row.dimensionTitle}
+                  </div>
+                  {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'A') && (
+                    <div className="space-y-1">
+                      <div className="font-mono font-bold text-[11px] text-[#6E7376]">
+                        Stratul A (Instituțional / Istoric / Sociologic):
+                      </div>
+                      <p className="text-[#222426] leading-relaxed">{row.stratumA}</p>
+                    </div>
+                  )}
+                  {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'B') && (
+                    <div className="space-y-1 pt-2 border-t border-[#D0D5D9]">
+                      <div className="font-mono font-bold text-[11px] text-[#6E7376]">
+                        Stratul B (Neurocognitiv / Semiotic / Axiologic):
+                      </div>
+                      <p className="text-[#222426] leading-relaxed">{row.stratumB}</p>
+                    </div>
+                  )}
+                  {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'C') && (
+                    <div className="space-y-1 pt-2 border-t border-[#D0D5D9]">
+                      <div className="font-mono font-bold text-[11px] text-[#6E7376]">
+                        Stratul C (Inconștient cultural / Arhetipal):
+                      </div>
+                      <p className="text-[#222426] leading-relaxed">{row.stratumC}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Table View (>=640px) */}
+            <div className="hidden sm:block overflow-x-auto">
               <table className="w-full min-w-[680px] border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
                 <thead>
                   <tr className="bg-[#F4F1EA] border-b-2 border-[#222426]">
@@ -187,7 +223,43 @@ export const TablesAndRegionalView: React.FC = () => {
               </div>
             </div>
 
-            <div className="overflow-x-auto">
+            {/* Mobile Stacked Cards Layout (<640px) */}
+            <div className="sm:hidden space-y-4">
+              {filteredTable2.map((row) => (
+                <div key={row.id} className="bg-[#F6F5EE] border-2 border-[#222426] p-4 space-y-3 text-xs">
+                  <div className="font-mono font-bold text-xs text-[#222426] pb-2 border-b border-[#222426] bg-[#E5B822]/20 -mx-4 -mt-4 p-3">
+                    {row.phaseCode} ({row.horizon})
+                  </div>
+                  <div className="space-y-1">
+                    <div className="font-mono font-bold text-[11px] text-[#6E7376]">
+                      Biologia umană și rezerva neurocognitivă:
+                    </div>
+                    <p className="text-[#222426] leading-relaxed">{row.humanBiology}</p>
+                  </div>
+                  <div className="space-y-1 pt-2 border-t border-[#D0D5D9]">
+                    <div className="font-mono font-bold text-[11px] text-[#6E7376]">
+                      Mediul digital și sociospațial:
+                    </div>
+                    <p className="text-[#222426] leading-relaxed">{row.digitalAndSociospatial}</p>
+                  </div>
+                  <div className="space-y-1 pt-2 border-t border-[#D0D5D9]">
+                    <div className="font-mono font-bold text-[11px] text-[#6E7376]">
+                      Stil de viață informațional și axiologie:
+                    </div>
+                    <p className="text-[#222426] leading-relaxed">{row.informationalLifestyle}</p>
+                  </div>
+                  <div className="space-y-1 pt-2 border-t border-[#D0D5D9]">
+                    <div className="font-mono font-bold text-[11px] text-[#6E7376]">
+                      Sistem instituțional și constituțional:
+                    </div>
+                    <p className="text-[#222426] leading-relaxed">{row.institutionalSystem}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Table View (>=640px) */}
+            <div className="hidden sm:block overflow-x-auto">
               <table className="w-full min-w-[680px] border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
                 <thead>
                   <tr className="bg-[#F4F1EA] border-b-2 border-[#222426]">
