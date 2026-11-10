@@ -1,0 +1,6 @@
+{
+  "name": "Diagnosticul războiului cognitiv în România (Versiunea 1.0)",
+  "description": "Platformă explicativă și interactivă dedicată arhitecturii instituționale, neurocognitive și culturale a vulnerabilității și rezilienței societale în fața operațiunilor informaționale ruse și a ideologiei putiniste.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
