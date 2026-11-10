@@ -18,12 +18,13 @@
 
 ## Structura aplicației web interactive
 
-1. **Copertă editorială (Landing Page cu un singur buton de acces)**:
-   - Prezintă titlul, subtitlul, sinteza cauzală pe cele trei straturi (Stratul A instituțional, Stratul B neurocognitiv și semiotic, Stratul C inconștientul cultural și dinamica arhetipală), planșa sinoptică vectorială 2D și un singur buton principal (`Deschide pagina interactivă a monografiei`) care deschide platforma de studiu.
+1. **Copertă editorială (Landing Page cu sinteză video și partajare socială)**:
+   - Prezintă titlul, subtitlul, sinteza cauzală pe cele trei straturi (Stratul A instituțional, Stratul B neurocognitiv și semiotic, Stratul C inconștientul cultural și dinamica arhetipală), sinteza audiovizuală realizată pe baza monografiei (YouTube), planșa sinoptică vectorială 2D, butoane de distribuire rapidă (**Facebook**, **X**, **WhatsApp**, **Copiază link**) și butonul principal (`Deschide pagina interactivă a monografiei`).
 2. **Explorare pas cu pas (Cele 19 secțiuni integrale și Prezentarea în 4 Acte)**:
-   - Textul integral al Introducerii și al Capitolelor 1–6 (subcapitolele `1.1`–`6.3`), descompunerea în oglindă pe două registre (*Teoretic / Conceptual* și *Practic / Empiric*), citări academice interactive în text și modul dedicat de prezentare progresivă în 4 acte logice.
+   - Textul integral al Introducerii și al Capitolelor 1–6 (subcapitolele `1.1`–`6.4`), descompunerea în oglindă pe două registre (*Teoretic / Conceptual* și *Practic / Empiric*), 133 de citări academice interactive în text și modul dedicat de prezentare progresivă în 4 acte logice.
 3. **Laboratorul celor 7 diagrame vectoriale 2D (`Figurile 1–7`)**:
    - Reproduceri vectoriale interactive SVG ale tuturor celor 7 modele cibernetice și cauzale din monografie.
 4. **Tabelele de sinteză (`Tabelul 1` și `Tabelul 2`) și Grupul de control regional**:
-   - Matricele complete din Capitolele 5 și 6 și analiza comparativă România — Estonia, Polonia, Republica Moldova.
-5. **Glosar conceptual, Bibliografie integrală (122 lucrări) și Documentul PDF original**.
+   - Matricele complete din Capitolele 5 și 6 și analiza comparativă România (Estonia, Polonia, Republica Moldova).
+5. **Glosar conceptual (49 concepte), Bibliografie integrală (122 lucrări) și Documentul PDF original**.
+

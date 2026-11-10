@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { InteractiveFigures } from './InteractiveFigures';
 import { VideoSynthesisBox } from './VideoSynthesisBox';
-import { ALL_SUBCHAPTER_STEPS, REGIONAL_CONTROL_GROUP } from '../data/tablesAndReference';
-import { ArrowLeft, ArrowRight, Compass, Layers } from 'lucide-react';
+import { ALL_SUBCHAPTER_STEPS } from '../data/tablesAndReference';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface FourActsPresentationProps {
   onSelectStepInReader: (stepNumber: number) => void;
@@ -94,7 +94,7 @@ const FOUR_ACTS_BLUEPRINT: ActBlueprint[] = [
     visualDirective:
       'Descompunere în oglindă între Stratul Teoretic/Conceptual (sistema, Russkii Antimir, Bobok, controlul reflexiv de ordinul al doilea, semioza binară) și Stratul Practic/Empiric (inversarea valorilor, deturnarea Orientării OODA și comparația cu grupul de control regional).',
     narrativeVoiceover:
-      'Operațiunile informaționale ruse nu propun o ideologie coerentă concurentă, ci proiectează în exterior patologia internă a regimului putinist (sistema și Russkii Antimir) pentru a induce starea de Bobok — punctul de descompunere morală în care distincția dintre adevăr și minciună devine irelevantă.',
+      'Operațiunile informaționale ruse nu propun o ideologie coerentă concurentă, ci proiectează în exterior patologia internă a regimului putinist (sistema și Russkii Antimir) pentru a induce starea de Bobok (punctul de descompunere morală în care distincția dintre adevăr și minciună devine irelevantă).',
     theoreticalPillars: [
       {
         stratum: 'A',

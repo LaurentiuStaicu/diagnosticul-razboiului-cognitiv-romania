@@ -32,7 +32,7 @@ function findMatchingBibliographyItems(citationText: string): BibliographyItem[]
     .replace(/^\(|\)$/g, '')
     .toLowerCase();
 
-  // Extract candidate author surnames (words with >= 3 letters that aren't common connectors)
+  // Extract candidate author surnames (words with >= 3 letters, plus 2-letter surnames like 'wu', that aren't common connectors)
   const stopWords = new Set([
     'et',
     'al',
@@ -52,13 +52,18 @@ function findMatchingBibliographyItems(citationText: string): BibliographyItem[]
     'grup',
     'lucru',
     'bază',
-    'ipoteza'
+    'ipoteza',
+    'the',
+    'basic',
+    'laws',
+    'human',
+    'stupidity'
   ]);
 
   const tokens = cleaned
     .split(/[^a-zăâîșțéöüä'-]+/i)
     .map((t) => t.trim())
-    .filter((t) => t.length >= 3 && !stopWords.has(t));
+    .filter((t) => (t.length >= 3 || t === 'wu') && !stopWords.has(t));
 
   if (tokens.length === 0) return [];
 
@@ -84,7 +89,6 @@ export function App() {
   const [selectedAuthorCitation, setSelectedAuthorCitation] = useState<string | null>(null);
   const [labFigureId, setLabFigureId] = useState<number>(1);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
-  const [copiedStepLink, setCopiedStepLink] = useState<boolean>(false);
 
   const applyHashState = useCallback(() => {
     const rawHash = window.location.hash.replace(/^#/, '').trim();
@@ -180,9 +184,10 @@ export function App() {
           .split(',')[0]
           .split('&')[0]
           .split(';')[0]
+          .split('(')[0]
           .trim()
           .toLowerCase();
-        if (!q || q.length < 3) return false;
+        if (!q || (q.length < 3 && q !== 'wu')) return false;
         return (
           step.citedAuthorNames.some((a) => a.toLowerCase().includes(q)) ||
           step.paragraphs.some((p) => p.toLowerCase().includes(q))
@@ -200,15 +205,8 @@ export function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleCopyStepLink = () => {
-    const shareUrl = `${window.location.origin}${window.location.pathname}#pasul-${currentStep.stepNumber}`;
-    navigator.clipboard.writeText(shareUrl);
-    setCopiedStepLink(true);
-    setTimeout(() => setCopiedStepLink(false), 2200);
-  };
-
   /**
-   * Renders a paragraph with interactive parenthetical academic citations (e.g. "(Luhmann, 1995, 2004)")
+   * Renders a paragraph with interactive parenthetical academic citations (e.g. "(Luhmann, 1995, 2004)" or "Coleman (1990)")
    */
   const renderParagraphWithCitations = (paragraph: string) => {
     // Match parenthetical segments containing a 4-digit year (1700-2029)
@@ -217,14 +215,27 @@ export function App() {
 
     return parts.map((part, idx) => {
       if (part.startsWith('(') && part.endsWith(')') && /\b(?:17|18|19|20)\d{2}[a-b]?\b/.test(part)) {
-        const matches = findMatchingBibliographyItems(part);
+        let queryKey = part;
+        let matches = findMatchingBibliographyItems(part);
+
+        // If the parentheses only contain years/editions (e.g. "Niklas Luhmann (1995, 2004)"), look at preceding words
+        if (matches.length === 0 && idx > 0 && part.length < 48) {
+          const prevContext = parts[idx - 1].slice(-75);
+          const contextualMatches = findMatchingBibliographyItems(`${prevContext} ${part}`);
+          if (contextualMatches.length > 0) {
+            matches = contextualMatches;
+            const firstMatchedSurname = contextualMatches[0].authors.split(',')[0].trim();
+            queryKey = `${firstMatchedSurname} ${part}`;
+          }
+        }
+
         if (matches.length > 0) {
-          const isSelected = selectedAuthorCitation === part;
+          const isSelected = selectedAuthorCitation === queryKey;
           return (
             <button
               key={idx}
               type="button"
-              onClick={() => setSelectedAuthorCitation(part)}
+              onClick={() => setSelectedAuthorCitation(queryKey)}
               title="Selectați pentru a deschide fișa bibliografică în panoul lateral"
               className={`inline font-mono text-[13px] px-1 mx-0.5 border-b border-dotted transition-colors cursor-pointer ${
                 isSelected
@@ -366,7 +377,16 @@ export function App() {
         ).map((tab) => (
           <button
             key={tab.id}
-            onClick={() => setActiveView(tab.id)}
+            onClick={() => {
+              setActiveView(tab.id);
+              if (tab.id === 'parcurs') {
+                updateUrlHash(parcursSubMode === 'patru-acte' ? '4-acte' : `pasul-${currentStepNumber}`);
+              } else if (tab.id === 'diagrame') {
+                updateUrlHash(`figura-${labFigureId}`);
+              } else {
+                updateUrlHash(tab.id);
+              }
+            }}
             className={`px-3 py-1.5 text-xs font-medium border whitespace-nowrap shrink-0 cursor-pointer ${
               activeView === tab.id
                 ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
@@ -618,7 +638,7 @@ export function App() {
                       <div className="mb-5 pb-3 border-b border-[#D0D5D9] flex flex-wrap items-center justify-between gap-2">
                         <SocialShareButtons
                           url={`https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/#pasul-${currentStep.stepNumber}`}
-                          title={`${currentStep.title} — Diagnosticul războiului cognitiv în România`}
+                          title={`${currentStep.title} (Diagnosticul războiului cognitiv în România)`}
                           label="Distribuie această secțiune pe"
                         />
                       </div>
@@ -826,7 +846,11 @@ export function App() {
                           </button>
                         ) : (
                           <button
-                            onClick={() => setActiveView('tabele')}
+                            onClick={() => {
+                              setActiveView('tabele');
+                              updateUrlHash('tabele');
+                              window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}
                             className="px-5 py-2.5 text-xs font-semibold border border-[#222426] bg-[#E5B822] hover:bg-[#D9A714] transition-colors cursor-pointer flex items-center justify-center gap-2"
                           >
                             <span>Explorează Tabelele 1 și 2 de sinteză</span>

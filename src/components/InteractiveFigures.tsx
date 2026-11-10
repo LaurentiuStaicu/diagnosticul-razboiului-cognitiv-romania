@@ -696,15 +696,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig1SelectedNode === 'servicii' &&
-                  'Organizarea sistemului instituțional și a serviciilor publice (primul determinant Lalonde-Dever) Atunci când justiția, administrația, educația și sănătatea suferă de un deficit de închidere operațională (Luhmann) și sunt permeabile la rețelele clientelare extractive, cetățeanul percepe regulile formale ca pe un paravan ipocrit.'}
+                  'Organizarea sistemului instituțional și a serviciilor publice (primul determinant Lalonde-Dever). Atunci când justiția, administrația, educația și sănătatea suferă de un deficit de închidere operațională (Luhmann) și sunt permeabile la rețelele clientelare extractive, cetățeanul percepe regulile formale ca pe un paravan ipocrit.'}
                 {fig1SelectedNode === 'mediu' &&
-                  'Mediul socioeconomic și sociospațial (al doilea determinant Lalonde-Dever) Polarizarea severă dintre centrele metropolitane și periferiile dezindustrializate sau rurale, adâncită de emigrația masivă, distruge capitalul social de punte (Putnam) prin familism amoral (Banfield) la un pol și secesiune tacită în servicii private la celălalt pol.'}
+                  'Mediul socioeconomic și sociospațial (al doilea determinant Lalonde-Dever). Polarizarea severă dintre centrele metropolitane și periferiile dezindustrializate sau rurale, adâncită de emigrația masivă, distruge capitalul social de punte (Putnam) prin familism amoral (Banfield) la un pol și secesiune tacită în servicii private la celălalt pol.'}
                 {fig1SelectedNode === 'alostazie' &&
-                  'Uzura alostatică și hiperactivarea axei HPA (McEwen, Sapolsky, Arnsten) Expunerea cronică la insecuritate și umilință birocratică eliberează excesiv cortizol, provocând hipertrofia amigdalei bazolaterale și atrofia dendritică în hipocamp și în cortexul prefrontal dorsolateral (dlPFC).'}
+                  'Uzura alostatică și hiperactivarea axei HPA (McEwen, Sapolsky, Arnsten). Expunerea cronică la insecuritate și umilință birocratică eliberează excesiv cortizol, provocând hipertrofia amigdalei bazolaterale și atrofia dendritică în hipocamp și în cortexul prefrontal dorsolateral (dlPFC).'}
                 {fig1SelectedNode === 'reactiv' &&
-                  'Comutarea de pe Sistemul 2 pe Sistemul 1 (Kahneman) Inhibiția funcțiilor executive prefrontale blochează gândirea lentă, analitică și verificarea surselor, lăsând cetățeanul pradă procesării rapide, euristice și reacțiilor defensive automate.'}
+                  'Comutarea de pe Sistemul 2 pe Sistemul 1 (Kahneman). Inhibiția funcțiilor executive prefrontale blochează gândirea lentă, analitică și verificarea surselor, lăsând cetățeanul pradă procesării rapide, euristice și reacțiilor defensive automate.'}
                 {fig1SelectedNode === 'fatalism' &&
-                  'Expresia în inconștientul cultural (Stratul C) Scăderea tensiunii conștiente (abaissement du niveau mental, Janet și Jung) și blocarea axei Ego–Sine (Edinger) produc oscilația între neputința învățată (Seligman) și inflația naționalistă compensatoare.'}
+                  'Expresia în inconștientul cultural (Stratul C). Scăderea tensiunii conștiente (abaissement du niveau mental, Janet și Jung) și blocarea axei Ego–Sine (Edinger) produc oscilația între neputința învățată (Seligman) și inflația naționalistă compensatoare.'}
                 {fig1SelectedNode === 'vector' &&
                   'Vectorul de război cognitiv extern nu creează din nimic vulnerabilitățile societății-țintă, ci se cuplează parazitar pe fisurile din Straturile A, B și C, oferind explicații conspirative simple, țapi ispășitori vizibili și promisiunea unei revanșe simbolice imediate.'}
               </p>
@@ -1001,9 +1001,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig2Inspect === 'left' &&
                   'Sinteza creștin-seculară europeană unește antropologia patristică a persoanei libere create după chipul divin (Imago Dei, Berdiaev, Stăniloae, Kalaitzidis) cu domnia legii impersonale și autonomia judecății critice (Habermas, Taylor). Rezultatul este o modernitate organică în care tradiția spirituală susține democrația constituțională.'}
                 {fig2Inspect === 'camuflaj' &&
-                  'Dubla falsificare axiologică (disimilarea) Din cauza memoriei traumatice a celor douăsprezece invazii rusești, a răpirii Basarabiei, a Tezaurului și a Gulagului, propaganda rusă nu se poate prezenta deschis în România. Ea proiectează la suprafață un camuflaj etnofiletist (Russkii Mir, condamnat ca erezie la Sinodul de la Constantinopol din 1872) și un fals discurs suveranist pentru a masca nihilismul stării Bobok.'}
+                  'Dubla falsificare axiologică (disimilarea). Din cauza memoriei traumatice a celor douăsprezece invazii rusești, a răpirii Basarabiei, a Tezaurului și a Gulagului, propaganda rusă nu se poate prezenta deschis în România. Ea proiectează la suprafață un camuflaj etnofiletist (Russkii Mir, condamnat ca erezie la Sinodul de la Constantinopol din 1872) și un fals discurs suveranist pentru a masca nihilismul stării Bobok.'}
                 {fig2Inspect === 'right' &&
-                  'Nucleul operativ al Antilumii (Epstein, 2022) și starea Bobok (Dostoievski, 1873) Sub masca apărării tradiției și a suveranității, operațiunea funcționează prin inversiune normativă și cinism transgresiv, urmărind decuplarea României de garanțiile NATO și UE și readucerea statului-țintă într-o zonă gri de bilateralism asimetric.'}
+                  'Nucleul operativ al Antilumii (Epstein, 2022) și starea Bobok (Dostoievski, 1873). Sub masca apărării tradiției și a suveranității, operațiunea funcționează prin inversiune normativă și cinism transgresiv, urmărind decuplarea României de garanțiile NATO și UE și readucerea statului-țintă într-o zonă gri de bilateralism asimetric.'}
               </p>
             </div>
           </div>
@@ -1455,19 +1455,19 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig3SelectedStage === 'observare' &&
-                  'Faza de Observare Platformele sociale optimizează retenția prin manipularea erorii de predicție a recompensei în nucleul accumbens (Schultz, Lembke), în timp ce rețelele Doppelgänger, Matrioșka și Pravda inundă spațiul digital cu date sintetice care induc Model Collapse (Shumailov) și Model Autophagy Disorder (Alemohammad).'}
+                  'Faza de Observare. Platformele sociale optimizează retenția prin manipularea erorii de predicție a recompensei în nucleul accumbens (Schultz, Lembke), în timp ce rețelele Doppelgänger, Matrioșka și Pravda inundă spațiul digital cu date sintetice care induc Model Collapse (Shumailov) și Model Autophagy Disorder (Alemohammad).'}
                 {fig3SelectedStage === 'orientare' &&
-                  'Faza de Orientare (centrul de greutate al buclei lui John Boyd) Matricea interpretativă unde moștenirea culturală, experiența istorică și valorile morale conferă sens datelor observate. Dacă faza de Orientare este compromisă, chiar și faptele reale sunt interpretate printr-o lentilă distorsionată.'}
+                  'Faza de Orientare (centrul de greutate al buclei lui John Boyd). Matricea interpretativă unde moștenirea culturală, experiența istorică și valorile morale conferă sens datelor observate. Dacă faza de Orientare este compromisă, chiar și faptele reale sunt interpretate printr-o lentilă distorsionată.'}
                 {fig3SelectedStage === 'reflexiv' &&
-                  'Controlul reflexiv de rang secund (Lefebvre, 1982, 2001) Nu furnizează doar informații false punctuale, ci modifică algoritmul moral al țintei, comutând-o din primul sistem etic (în care dialogul și compromisul legal sunt virtuți) în al doilea sistem etic (în care cooperarea este văzută ca trădare, iar agresivitatea ca demnitate).'}
+                  'Controlul reflexiv de rang secund (Lefebvre, 1982, 2001). Nu furnizează doar informații false punctuale, ci modifică algoritmul moral al țintei, comutând-o din primul sistem etic (în care dialogul și compromisul legal sunt virtuți) în al doilea sistem etic (în care cooperarea este văzută ca trădare, iar agresivitatea ca demnitate).'}
                 {fig3SelectedStage === 'ternar' &&
-                  'Medierea semiotică ternară (Peirce, Lotman) Existența unui spațiu axiologic neutru și instituționalizat (interpretantul) în care adversarul politic rămâne un concurent legitim, iar ipotezele sunt verificate empiric. În Figura 3, simbolul în formă de T marchează blocarea acestei căi sub efectul controlului reflexiv.'}
+                  'Medierea semiotică ternară (Peirce, Lotman). Existența unui spațiu axiologic neutru și instituționalizat (interpretantul) în care adversarul politic rămâne un concurent legitim, iar ipotezele sunt verificate empiric. În Figura 3, simbolul în formă de T marchează blocarea acestei căi sub efectul controlului reflexiv.'}
                 {fig3SelectedStage === 'binar' &&
-                  'Semiotica binară a anihilării (Lotman & Uspenski, 1985) Distrugerea zonei neutre de mediere și reîncadrarea oricărei teme de politică publică într-o confruntare apocaliptică între poporul pur și trădătorii care vor să ne extermine.'}
+                  'Semiotica binară a anihilării (Lotman & Uspenski, 1985). Distrugerea zonei neutre de mediere și reîncadrarea oricărei teme de politică publică într-o confruntare apocaliptică între poporul pur și trădătorii care vor să ne extermine.'}
                 {fig3SelectedStage === 'decizie' &&
-                  'Faza de Decizie sub capturare Subiectul declanșează captarea precipitată (seizing) și înghețarea epistemică (freezing, Kruglanski), fuzionând poziția binară cu identitatea de grup prin cogniția protectoare a identității (Kahan) și contagiunea complexă artificială (Centola).'}
+                  'Faza de Decizie sub capturare. Subiectul declanșează captarea precipitată (seizing) și înghețarea epistemică (freezing, Kruglanski), fuzionând poziția binară cu identitatea de grup prin cogniția protectoare a identității (Kahan) și contagiunea complexă artificială (Centola).'}
                 {fig3SelectedStage === 'actiune' &&
-                  'Faza de Acțiune Cetățeanul capturat cognitiv acționează din proprie convingere pentru demolarea garanțiilor constituționale și euroatlantice ale propriului stat, fiind convins că își apără astfel suveranitatea.'}
+                  'Faza de Acțiune. Cetățeanul capturat cognitiv acționează din proprie convingere pentru demolarea garanțiilor constituționale și euroatlantice ale propriului stat, fiind convins că își apără astfel suveranitatea.'}
               </p>
             </div>
           </div>
@@ -1908,23 +1908,23 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig4ActiveNode === 'umbra-bruta' &&
-                  'Umbra colectivă (Jung, 1951/1968; Edinger, 1972; von Franz, 1972/1995) Nu conține doar pulsiuni distructive, ci și resurse vitale de energie psihică, instincte legitime de conservare și potențialități de înnoire excluse de Persona instituțională mimetică.'}
+                  'Umbra colectivă (Jung, 1951/1968; Edinger, 1972; von Franz, 1972/1995). Nu conține doar pulsiuni distructive, ci și resurse vitale de energie psihică, instincte legitime de conservare și potențialități de înnoire excluse de Persona instituțională mimetică.'}
                 {fig4ActiveNode === 'memorie' &&
-                  'Memoria istorică defensivă Neîncrederea cetățeanului român în discursurile oficiale pompoase își are rădăcina într-un reflex istoric sănătos de autoconservare, format în secolele de rezistență în fața imperiilor hegemonice.'}
+                  'Memoria istorică defensivă. Neîncrederea cetățeanului român în discursurile oficiale pompoase își are rădăcina într-un reflex istoric sănătos de autoconservare, format în secolele de rezistență în fața imperiilor hegemonice.'}
                 {fig4ActiveNode === 'trickster' &&
-                  'Ambivalența arhetipului Trickster-ului (Jung, 1954/1968; Radin, 1956) În forma sa regresivă se manifestă ca șmecherie cinică și ocolire a legii, dar în dimensiunea sa prospectivă conține agilitate cognitivă, adaptare rapidă și rezistență la îndoctrinarea dogmatică.'}
+                  'Ambivalența arhetipului Trickster-ului (Jung, 1954/1968; Radin, 1956). În forma sa regresivă se manifestă ca șmecherie cinică și ocolire a legii, dar în dimensiunea sa prospectivă conține agilitate cognitivă, adaptare rapidă și rezistență la îndoctrinarea dogmatică.'}
                 {fig4ActiveNode === 'filtru-lege' &&
-                  'Primul filtru (Stratul A) Cadrul instituțional și constituțional stabil, definit prin închiderea operațională a statului de drept (Luhmann, 1995, 2004). Energia adaptativă devine inovație civică doar când cetățeanul constată empiric că legea este dreaptă și impersonală.'}
+                  'Primul filtru (Stratul A). Cadrul instituțional și constituțional stabil, definit prin închiderea operațională a statului de drept (Luhmann, 1995, 2004). Energia adaptativă devine inovație civică doar când cetățeanul constată empiric că legea este dreaptă și impersonală.'}
                 {fig4ActiveNode === 'filtru-istorie' &&
-                  'Al doilea filtru (Stratul B) Discernământul critic și asumarea adevărului istoric, care deconstruiesc proiecțiile paranoide prin separarea tradiției spirituale autentice de falsificările etnofiletiste și totalitare.'}
+                  'Al doilea filtru (Stratul B). Discernământul critic și asumarea adevărului istoric, care deconstruiesc proiecțiile paranoide prin separarea tradiției spirituale autentice de falsificările etnofiletiste și totalitare.'}
                 {fig4ActiveNode === 'filtru-meta' &&
-                  'Al treilea filtru (Stratul B) Vigilența metacognitivă, susținută de reglarea executivă a cortexului prefrontal, care îi permite cetățeanului să își recunoască propriile vulnerabilități afective înainte ca acestea să fie instrumentate prin control reflexiv.'}
+                  'Al treilea filtru (Stratul B). Vigilența metacognitivă, susținută de reglarea executivă a cortexului prefrontal, care îi permite cetățeanului să își recunoască propriile vulnerabilități afective înainte ca acestea să fie instrumentate prin control reflexiv.'}
                 {fig4ActiveNode === 'modernitate' &&
-                  'Modernitate organică și încredere (Sinteza axei Ego–Sine) Funcția transcendentă (Jung, 1916/1960) integrează potențialul din Umbră în conștiința civică, înlocuind conformismul de fațadă cu interiorizarea autentică a normelor.'}
+                  'Modernitate organică și încredere (Sinteza axei Ego–Sine). Funcția transcendentă (Jung, 1916/1960) integrează potențialul din Umbră în conștiința civică, înlocuind conformismul de fațadă cu interiorizarea autentică a normelor.'}
                 {fig4ActiveNode === 'cooperare' &&
-                  'Cooperare instituțională autonomă Refacerea capitalului social de punte (Putnam, 2000) și transformarea naționalismului reactiv în patriotism constituțional responsabil.'}
+                  'Cooperare instituțională autonomă. Refacerea capitalului social de punte (Putnam, 2000) și transformarea naționalismului reactiv în patriotism constituțional responsabil.'}
                 {fig4ActiveNode === 'anomizare' &&
-                  'Traseul inferior fără filtru (Enantiodromie și cinism) Atunci când cele trei filtre lipsesc sau energiile din Umbră sunt reprimate arogant, acestea sunt capturate de vectorii de război cognitiv în revoltă anomizantă și autodistrugere socială.'}
+                  'Traseul inferior fără filtru (Enantiodromie și cinism). Atunci când cele trei filtre lipsesc sau energiile din Umbră sunt reprimate arogant, acestea sunt capturate de vectorii de război cognitiv în revoltă anomizantă și autodistrugere socială.'}
               </p>
             </div>
           </div>
@@ -2342,13 +2342,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig5SelectedQuadrant === 'I' &&
-                  'Cadranul I (+X, +Y, Cooperare inteligentă) Cetățenii, antreprenorii și instituțiile incluzive își urmăresc propriul interes legitim prin muncă, inovație și respectarea legii impersonale, generând simultan valoare adăugată și încredere pentru întreaga comunitate (ordinea socială cu acces deschis, North, Wallis & Weingast, 2009).'}
+                  'Cadranul I (+X, +Y, Cooperare inteligentă). Cetățenii, antreprenorii și instituțiile incluzive își urmăresc propriul interes legitim prin muncă, inovație și respectarea legii impersonale, generând simultan valoare adăugată și încredere pentru întreaga comunitate (ordinea socială cu acces deschis, North, Wallis & Weingast, 2009).'}
                 {fig5SelectedQuadrant === 'II' &&
-                  'Cadranul II (-X, +Y, Cetățeanul vulnerabil, Helpless) Indivizii cinstiți care muncesc, plătesc taxe și susțin funcționarea societății (+Y), dar care, din cauza asimetriei informaționale și a precarității serviciilor publice, înregistrează o pierdere netă de bunăstare, sănătate și demnitate (-X).'}
+                  'Cadranul II (-X, +Y, Cetățeanul vulnerabil, Helpless). Indivizii cinstiți care muncesc, plătesc taxe și susțin funcționarea societății (+Y), dar care, din cauza asimetriei informaționale și a precarității serviciilor publice, înregistrează o pierdere netă de bunăstare, sănătate și demnitate (-X).'}
                 {fig5SelectedQuadrant === 'IV' &&
-                  'Cadranul IV (+X, -Y, Actorii extractivi, Bandits) Rețelele politico-economice clientelare și birocrațiile parazitare interne (precum și agresorul geopolitic extern) care își însușesc câștiguri substanțiale (+X) prin spolierea bugetelor publice și degradarea instituțiilor (-Y).'}
+                  'Cadranul IV (+X, -Y, Actorii extractivi, Bandits). Rețelele politico-economice clientelare și birocrațiile parazitare interne (precum și agresorul geopolitic extern) care își însușesc câștiguri substanțiale (+X) prin spolierea bugetelor publice și degradarea instituțiilor (-Y).'}
                 {fig5SelectedQuadrant === 'III' &&
-                  'Cadranul III (-X, -Y, Autosabotajul colectiv) Crezând că se mută în Cadranul I sau că îi pedepsește exclusiv pe spoliatorii din Cadranul IV, cetățeanul capturat cognitiv traversează bariera instituțională fisurată și se prăbușește vertical în Cadranul III, unde votul punitiv extrem și blocarea alianțelor provoacă daune societății (-Y) și propria sa ruină socioeconomică (-X).'}
+                  'Cadranul III (-X, -Y, Autosabotajul colectiv). Crezând că se mută în Cadranul I sau că îi pedepsește exclusiv pe spoliatorii din Cadranul IV, cetățeanul capturat cognitiv traversează bariera instituțională fisurată și se prăbușește vertical în Cadranul III, unde votul punitiv extrem și blocarea alianțelor provoacă daune societății (-Y) și propria sa ruină socioeconomică (-X).'}
               </p>
             </div>
           </div>
@@ -2859,9 +2859,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig6SelectedStep === 'stimul' &&
-                  'Stimulul de criză acută Un șoc informațional major, o amenințare de securitate iminentă sau o campanie intensă de manipulare algoritmică în prag electoral, construită pe amenințare existențială și indignare morală.'}
+                  'Stimulul de criză acută. Un șoc informațional major, o amenințare de securitate iminentă sau o campanie intensă de manipulare algoritmică în prag electoral, construită pe amenințare existențială și indignare morală.'}
                 {fig6SelectedStep === 'bifurcatie' &&
-                  'Nodul de bifurcație cognitivă Punctul critic în care direcția procesării depinde de disponibilitatea rezervei neurobiologice și de capacitatea subiectului de a interpune o pauză metacognitivă între stimul și reacție.'}
+                  'Nodul de bifurcație cognitivă. Punctul critic în care direcția procesării depinde de disponibilitatea rezervei neurobiologice și de capacitatea subiectului de a interpune o pauză metacognitivă între stimul și reacție.'}
                 {(fig6SelectedStep === 'trackA' ||
                   (fig6ActiveTrack === 'A' &&
                     fig6SelectedStep !== 'stimul' &&
@@ -3364,15 +3364,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig7SelectedNode === 'faza1' &&
-                  'Faza I (Orizont tactic imediat, de la zero la douăsprezece luni) Nicio campanie de educație mediatică nu poate reuși dacă este aplicată direct asupra unei populații aflate în plină uzură alostatică și capturare dopaminergică. Faza I oprește bucla reactivă (Track A) prin debirocratizare transparentă (modelul e-Estonia) și prin aplicarea strictă a DSA și AI Act (audit algoritmic, frâne de viralitate și etichetarea datelor sintetice).'}
+                  'Faza I (Orizont tactic imediat, de la zero la douăsprezece luni). Nicio campanie de educație mediatică nu poate reuși dacă este aplicată direct asupra unei populații aflate în plină uzură alostatică și capturare dopaminergică. Faza I oprește bucla reactivă (Track A) prin debirocratizare transparentă (modelul e-Estonia) și prin aplicarea strictă a DSA și AI Act (audit algoritmic, frâne de viralitate și etichetarea datelor sintetice).'}
                 {fig7SelectedNode === 'faza2' &&
-                  'Faza II (Orizont operațional mediu, de la unu la trei ani) Odată ce cortexul prefrontal își recapătă disponibilitatea funcțională, Faza a II-a reconstruiește faza de Orientare din bucla OODA prin trei piloni (validarea comunitară empatică în infrastructura asociativă de proximitate, pregătirea preventivă prebunking calibrată pe curba uitării a lui Ebbinghaus și reconcilierea filtrului moral creștin-secular).'}
+                  'Faza II (Orizont operațional mediu, de la unu la trei ani). Odată ce cortexul prefrontal își recapătă disponibilitatea funcțională, Faza a II-a reconstruiește faza de Orientare din bucla OODA prin trei piloni (validarea comunitară empatică în infrastructura asociativă de proximitate, pregătirea preventivă prebunking calibrată pe curba uitării a lui Ebbinghaus și reconcilierea filtrului moral creștin-secular).'}
                 {fig7SelectedNode === 'faza3' &&
-                  'Faza III (Orizont strategic, de la trei la zece ani) Elimină cauzele profunde ale formelor fără fond prin închiderea operațională autentică a justiției și administrației (Luhmann), guvernanță policentrică (Ostrom) care redă cetățeanului autoeficacitatea politică (Bandura) și individuare colectivă pe axa Ego–Sine (depășirea incapacității de a ține doliu și a sindromului Puer Aeternus).'}
+                  'Faza III (Orizont strategic, de la trei la zece ani). Elimină cauzele profunde ale formelor fără fond prin închiderea operațională autentică a justiției și administrației (Luhmann), guvernanță policentrică (Ostrom) care redă cetățeanului autoeficacitatea politică (Bandura) și individuare colectivă pe axa Ego–Sine (depășirea incapacității de a ține doliu și a sindromului Puer Aeternus).'}
                 {fig7SelectedNode === 'fronton' &&
-                  'Sinteza modernității organice și a suveranității democratice Formele constituționale și de securitate occidentale încetează să mai fie forme fără fond mimate superficial de o elită extractivă și devin expresia instituțională firească a unui fond cultural și moral autohton regenerat.'}
+                  'Sinteza modernității organice și a suveranității democratice. Formele constituționale și de securitate occidentale încetează să mai fie forme fără fond mimate superficial de o elită extractivă și devin expresia instituțională firească a unui fond cultural și moral autohton regenerat.'}
                 {fig7SelectedNode === 'fundament' &&
-                  'Fundamentul Lalonde-Dever (Lalonde, 1974; Dever, 1976) Demonstrează că reziliența cognitivă a unei națiuni depinde simultan de organizarea sistemului instituțional, de mediul socioeconomic și digital, de stilul de viață asociativ și de rezerva neurobiologică a cetățenilor.'}
+                  'Fundamentul Lalonde-Dever (Lalonde, 1974; Dever, 1976). Demonstrează că reziliența cognitivă a unei națiuni depinde simultan de organizarea sistemului instituțional, de mediul socioeconomic și digital, de stilul de viață asociativ și de rezerva neurobiologică a cetățenilor.'}
               </p>
             </div>
           </div>
@@ -3382,11 +3382,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
       {/* Official Monograph Caption & Methodological Note */}
       <div className="mt-5 pt-4 border-t border-[#D0D5D9] space-y-2">
         <p className="text-xs sm:text-sm font-serif italic text-[#222426] leading-relaxed">
-          <span className="font-bold not-italic">{meta.title} </span>
+          <span className="font-bold not-italic">{meta.title}. </span>
           {meta.caption}
         </p>
         <p className="text-xs font-mono text-[#6E7376] leading-relaxed">
-          Notă metodologică ({meta.chapterRef}) {meta.methodologicalNote}
+          Notă metodologică ({meta.chapterRef}). {meta.methodologicalNote}
         </p>
       </div>
     </div>

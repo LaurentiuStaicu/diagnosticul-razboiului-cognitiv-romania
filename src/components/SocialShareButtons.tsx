@@ -13,7 +13,7 @@ const CANONICAL_BASE_URL =
 
 export const SocialShareButtons: React.FC<SocialShareButtonsProps> = ({
   url,
-  title = 'Diagnosticul războiului cognitiv în România (Versiunea 1.0) — Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale',
+  title = 'Diagnosticul războiului cognitiv în România (Versiunea 1.0, Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale)',
   compact = false,
   label = 'Distribuie'
 }) => {

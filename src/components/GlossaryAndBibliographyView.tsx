@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GLOSSARY_CONCEPTS, BIBLIOGRAPHY_DATA, MASTER_STYLE_PROMPT } from '../data/tablesAndReference';
 import { StratumId } from '../data/types';
-import { Search, Copy, Check, BookOpen, Layers, FileText } from 'lucide-react';
+import { Search, Copy, Check } from 'lucide-react';
 
 export const GlossaryAndBibliographyView: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'glossary' | 'bibliography' | 'blueprint'>('glossary');
