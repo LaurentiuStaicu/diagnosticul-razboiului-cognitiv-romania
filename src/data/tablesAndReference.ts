@@ -42,7 +42,7 @@ export const TABLE_1_DATA: Table1Row[] = [
     stratumA:
       'Instrumentalizarea politică a discursului identitar și religios de către antreprenori populiști autohtoni în convergență cu doctrina revizionistă Russkii Mir; subfinanțarea educației umaniste și civice și absența unui proces instituționalizat de asumare a traumelor totalitare din secolul al XX-lea.',
     stratumB:
-      'Dubla falsificare axiologică și parazitarea semiotică a conservatorismului și a ortodoxiei prin camuflaj discursiv; substituirea sintezei creștin-seculare europene (întemeiată pe Imago Dei și universalismul drepturilor fundamentale) cu inversiunea normativă a Antilumii (Epstein), etnofiletismul și nihilismul cinic al stării Bobok (Dostoievski).',
+      'Dubla falsificare axiologică și parazitarea semiotică a conservatorismului și a ortodoxiei prin camuflaj discursiv; substituirea sintezei creștin–seculare europene (întemeiată pe Imago Dei și universalismul drepturilor fundamentale) cu inversiunea normativă a Antilumii (Epstein), etnofiletismul și nihilismul cinic al stării Bobok (Dostoievski).',
     stratumC:
       'Incapacitatea de a ține doliu pentru complicitățile totalitare (Mitscherlich) și fixarea într-o traumă aleasă de victimă perpetuă (Volkan); reducerea credinței la o religiozitate ritualistă de fațadă și la un conformism confesional exterior, vulnerabil la proiecții paranoide și xenofobe.'
   },
@@ -95,7 +95,7 @@ export const TABLE_2_DATA: Table2Row[] = [
     digitalAndSociospatial:
       'Faza II (Infrastructură comunitară de proximitate). Reconstrucția infrastructurii comunitare și culturale de proximitate în mediul rural, în orașele mici și în comunitățile din diaspora pentru a înlocui izolarea în camere de ecou algoritmice cu spații fizice de interacțiune umană directă; crearea de rețele locale care favorizează contagiunea socială complexă pozitivă (Centola) și refacerea capitalului social de punte (Putnam).',
     informationalLifestyle:
-      'Faza II (Inoculare preventivă și reconciliere morală). Instituționalizarea pregătirii psihocognitive preventive (prebunking, McGuire, Roozenbeek, van der Linden) în școli, universități și programe pentru adulți, axată pe detecția controlului reflexiv de rang secund și a semiozei binare; reconcilierea filtrului moral creștin-secular prin dialog între teologia ortodoxă patristică (Imago Dei, respingerea etnofiletismului Russkii Mir) și etica civică constituțională, consolidând primul sistem etic (Lefebvre).',
+      'Faza II (Inoculare preventivă și reconciliere morală). Instituționalizarea pregătirii psihocognitive preventive (prebunking, McGuire, Roozenbeek, van der Linden) în școli, universități și programe pentru adulți, axată pe detecția controlului reflexiv de rang secund și a semiozei binare; reconcilierea filtrului moral creștin–secular prin dialog între teologia ortodoxă patristică (Imago Dei, respingerea etnofiletismului Russkii Mir) și etica civică constituțională, consolidând primul sistem etic (Lefebvre).',
     institutionalSystem:
       'Faza II (Coordonare interministerială și validare comunitară). Crearea unor mecanisme instituționale permanente de coordonare interministerială și societală pentru apărarea spațiului cognitiv (după modelul apărării cuprinzătoare din Estonia și Polonia); profesionalizarea comunicării strategice și integrarea validării comunitare în politicile publice pentru neutralizarea cogniției protectoare a identității (Kahan).'
   },
@@ -130,7 +130,7 @@ export const REGIONAL_CONTROL_GROUP: RegionalCase[] = [
   {
     id: 'estonia',
     country: 'Estonia (reziliență instituțională și cognitivă integrată)',
-    roleInModel: 'Modelul articulării coerente a celor patru determinanți Lalonde-Dever',
+    roleInModel: 'Modelul articulării coerente a celor patru determinanți Lalonde–Dever',
     exposureProfile: 'Stat în prima linie geografică la granița cu Federația Rusă, cu o minoritate rusofonă semnificativă și țintă a atacurilor cibernetice și informaționale majore încă din 2007.',
     stratumA: 'Tranziție timpurie și radicală către instituții incluzive cu închidere operațională autentică; digitalizare transparentă (e-Estonia) care a eliminat corupția mică și umilința birocratică; educație echitabilă teritorial.',
     stratumB: 'Instituționalizarea pregătirii psihocognitive preventive (prebunking) și a alfabetizării mediatice și digitale de la grădiniță până la adulți, integrate în doctrina apărării cuprinzătoare (Total Defence) și voința de apărare (Kaitsetahe).',
@@ -185,7 +185,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'determinantii-lalonde-dever',
-    term: 'Determinanții sistemici Lalonde-Dever',
+    term: 'Determinanții sistemici Lalonde–Dever',
     stratum: 'A',
     authors: 'Marc Lalonde (1974); G. E. Alan Dever (1976)',
     domain: 'Politici publice și psihosociologie',
@@ -195,7 +195,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'filtrul-axiologic',
-    term: 'Filtrul axiologic și normativ creștin-secular',
+    term: 'Filtrul axiologic și normativ creștin–secular',
     stratum: 'B',
     authors: 'Berdiaev (1937/1996); Stăniloae (1978); Habermas (2006); Taylor (2007)',
     domain: 'Filosofie constituțională și teologie',
@@ -455,7 +455,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'bifurcare-track-a-track-b',
-    term: 'Bifurcarea neurocognitivă (Track A reactiv versus Track B deliberativ) și capacitatea negativă',
+    term: 'Bifurcarea neurocognitivă (Track A reactiv versus Traseul B (Track B) deliberativ) și capacitatea negativă',
     stratum: 'B',
     authors: 'Wilfred R. Bion (1962, 1970); Stephen Porges (2011); Thayer & Lane (2009); Cogniție și manipulare',
     domain: 'Neurobiologia deciziei și psihanaliză epistemică',
@@ -539,7 +539,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'B',
     authors: 'Pantelis Kalaitzidis (2012); Kalaitzidis et al. (2022); Aristotle Papanikolaou (2012); Cyril Hovorun (2018)',
     domain: 'Teologie politică și studiul ideologiilor',
-    definition: 'Subordonarea universalității evanghelice și a demnității persoanei (Imago Dei) față de naționalismul etnic și expansiunea imperială a statului rus, condamnată de Sinodul de la Constantinopol (1872) drept erezie etnofiletistă și denunțată prin Declarația de la Volos (2022).',
+    definition: 'Subordonarea universalității evanghelice și a demnității persoanei (*Imago Dei*) față de naționalismul etnic și expansiunea imperială a statului rus, condamnată de Sinodul de la Constantinopol (1872) drept erezie etnofiletistă și denunțată prin Declarația de la Volos (2022).',
     monographContext: 'Instrumentul principal prin care vectorul moscovit parazitează semiotic religiozitatea ortodoxă și conservatorismul în România (Subcapitolul 2.2).',
     polarity: 'tension'
   },
@@ -590,7 +590,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     authors: 'Aristotel (Etica Nicomahică); Epictet (Manualul); Grigorie de Nyssa; Maxim Mărturisitorul',
     domain: 'Etică clasică, teoria deciziei și teologie patristică',
     definition: 'Capacitatea rațională și morală a subiectului de a suspenda reacția automată impulsivă și de a alege conștient între bine și rău; facultatea deliberativă prin care conștiința își exercită libertatea ontologică în fața stimulilor manipulatori.',
-    monographContext: 'Constituie fundamentul etic și teologic al Traseului deliberativ adaptativ (Track B) din nodul de bifurcație (Figura 6), permițând dezamorsarea capturării cognitive și afirmarea demnității umane (Imago Dei).',
+    monographContext: 'Constituie fundamentul etic și teologic al Traseului deliberativ adaptativ (Track B) din nodul de bifurcație (Figura 6), permițând dezamorsarea capturării cognitive și afirmarea demnității umane (*Imago Dei*).',
     polarity: 'synthesis'
   },
   {
@@ -640,7 +640,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     authors: 'Wilfred R. Bion (1961, 1962, 1970); John Keats (1817)',
     domain: 'Psihanaliză epistemică și dinamica grupurilor',
     definition: 'Aptitudinea aparatului psihic și a unui grup matur (Grupul de Lucru W) de a tolera temporar incertitudinea, frustrarea și ambiguitatea fără a aluneca în explicații paranoide premature sau în Ipotezele de Bază regresive (dependență baD, luptă-fugi baF).',
-    monographContext: 'Condiția decisivă în nodul de bifurcație pentru activarea Traseului deliberativ adaptativ Track B în criză acută (Figura 6).',
+    monographContext: 'Condiția decisivă în nodul de bifurcație pentru activarea Traseului deliberativ adaptativ Traseul B (Track B) în criză acută (Figura 6).',
     polarity: 'synthesis'
   },
   {
@@ -649,7 +649,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'A',
     authors: 'Sinteza operațională din Capitolul 6, Figura 7 și Tabelul 2',
     domain: 'Arhitectură strategică de reziliență societală',
-    definition: 'Ordinea cauzală strictă a reconstrucției rezilienței pe determinanții Lalonde-Dever: Faza I (0–12 luni, decompresie alostatică și igienă algoritmică), Faza II (1–3 ani, validare comunitară, prebunking și filtru moral) și Faza III (3–10 ani, închidere operațională, policentricitate Ostrom și individuare colectivă).',
+    definition: 'Ordinea cauzală strictă a reconstrucției rezilienței pe determinanții Lalonde–Dever: Faza I (0–12 luni, decompresie alostatică și igienă algoritmică), Faza II (1–3 ani, validare comunitară, prebunking și filtru moral) și Faza III (3–10 ani, închidere operațională, policentricitate Ostrom și individuare colectivă).',
     monographContext: 'Demonstrează de ce inversarea ordinii fazelor (de exemplu, educație mediatică fără decompresie alostatică prealabilă) eșuează prin efect de ricoșeu.',
     polarity: 'synthesis'
   },
@@ -889,7 +889,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-2-3',
         title: 'Decizia strategică (Modelul grupului de control regional și parteneriatul axiologic)',
         takeaway:
-          'Comparația cu Estonia, Polonia și Republica Moldova demonstrează că reziliența rezultă din sancționarea fluxurilor ilicite, memoria istorică instituționalizată și apărarea antropologiei patristice (Imago Dei).',
+          'Comparația cu Estonia, Polonia și Republica Moldova demonstrează că reziliența rezultă din sancționarea fluxurilor ilicite, memoria istorică instituționalizată și apărarea antropologiei patristice (*Imago Dei*).',
         implication:
           'Autoritățile trebuie să destructureze rețelele financiare de spălare informațională și să susțină dialogul dintre cultura constituțională și teologia ortodoxă canonică.'
       }
@@ -969,9 +969,9 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
       },
       {
         id: 'exec-5-2',
-        title: 'Vulnerabilitatea sistemică (Nodul de bifurcație neurocognitivă, Track A vs. Track B)',
+        title: 'Vulnerabilitatea sistemică (Nodul de bifurcație neurocognitivă, Traseul A (Track A) vs. Track B)',
         takeaway:
-          'Sub șoc informațional acut, absența reglării prefrontale deviază procesarea pe Track A (bucla reactivă amigdaliană, tunel dopaminergic și contagiune a fricii), blocând Track B (traseul deliberativ adaptativ).',
+          'Sub șoc informațional acut, absența reglării prefrontale deviază procesarea pe Traseul A (Track A) (bucla reactivă amigdaliană, tunel dopaminergic și contagiune a fricii), blocând Traseul B (Track B) (traseul deliberativ adaptativ).',
         implication:
           'Pe Track A, corpul electoral și instituțiile intră în paralizie decizională fără tragerea unui singur foc de armă, îndeplinind obiectivul terminal al războiului cognitiv.'
       },
@@ -979,7 +979,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-5-3',
         title: 'Decizia strategică (Capacitatea negativă a lui Bion și validarea în comunități deschise)',
         takeaway:
-          'Comutarea pe Track B depinde de reglarea descendentă (top-down) exercitată de dlPFC/vmPFC, de tonusul vagal și de capacitatea negativă (Bion) de a tolera incertitudinea fără reacții paranoide premature.',
+          'Comutarea pe Traseul B (Track B) depinde de reglarea descendentă (top-down) exercitată de dlPFC/vmPFC, de tonusul vagal și de capacitatea negativă (Bion) de a tolera incertitudinea fără reacții paranoide premature.',
         implication:
           'Liderii instituționali trebuie să practice o comunicare calmă, predictibilă și verificabilă probatoriu, care să ancoreze cetățenii în regimul Grupului de Lucru (W) și al medierii ternare.'
       }
@@ -991,7 +991,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
     executiveSynthesis: [
       {
         id: 'exec-6-1',
-        title: 'Mecanismul diagnosticat (Secvențialitatea cauzală obligatorie pe modelul Lalonde-Dever)',
+        title: 'Mecanismul diagnosticat (Secvențialitatea cauzală obligatorie pe modelul Lalonde–Dever)',
         takeaway:
           'Protocolul de reconstrucție trebuie executat strict secvențial: Faza I (0–12 luni, decompresie alostatică și igienă digitală), Faza II (1–3 ani, validare comunitară și prebunking) și Faza III (3–10 ani, închidere operațională și policentricitate).',
         implication:
@@ -1009,7 +1009,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-6-3',
         title: 'Decizia strategică (Operaționalizarea instituțională și sinteza modernității organice)',
         takeaway:
-          'Articularea responsabilităților între DNSC, ANCOM, CSAT, CNA, Ministerul Educației, Biserica Ortodoxă Română, universități și administrația locală unește legea impersonală dreaptă cu etica demnității persoanei (Imago Dei).',
+          'Articularea responsabilităților între DNSC, ANCOM, CSAT, CNA, Ministerul Educației, Biserica Ortodoxă Română, universități și administrația locală unește legea impersonală dreaptă cu etica demnității persoanei (*Imago Dei*).',
         implication:
           'Sinteza modernității organice rezolvă definitiv anomalia istorică a „formelor fără fond”, transformând România într-un pilon de suveranitate democratică în NATO și Uniunea Europeană.'
       }
@@ -1038,7 +1038,7 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
     targetObjective:
       'Reconstrucția fazei de Orientare din bucla OODA, comutarea stabilă pe Traseul deliberativ adaptativ (Track B) și neutralizarea dublei falsificări axiologice (Russkii Mir).',
     concreteIntervention:
-      'Auditarea independentă a algoritmilor de recomandare, avertismente timpurii și campanii naționale de inoculare psihocognitivă (prebunking, Roozenbeek & van der Linden) cu rapeluri calibrate pe curba uitării a lui Ebbinghaus; refacerea infrastructurii asociative de proximitate (contagiune complexă pozitivă, Centola) și parteneriat civic-teologic întemeiat pe Imago Dei și discernământ (proairesis).',
+      'Auditarea independentă a algoritmilor de recomandare, avertismente timpurii și campanii naționale de inoculare psihocognitivă (prebunking, Roozenbeek & van der Linden) cu rapeluri calibrate pe curba uitării a lui Ebbinghaus; refacerea infrastructurii asociative de proximitate (contagiune complexă pozitivă, Centola) și parteneriat civic–teologic întemeiat pe Imago Dei și discernământ (proairesis).',
     responsibleActors:
       'ANCOM, CNA (Consiliul Național al Audiovizualului), Comisia Europeană, consorții universitare independente, mass-media de interes public și ierarhia canonică / facultățile de teologie.'
   },

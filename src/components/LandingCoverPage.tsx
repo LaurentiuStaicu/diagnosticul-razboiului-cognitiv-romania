@@ -4,39 +4,43 @@ import { SocialShareButtons } from './SocialShareButtons';
 
 interface LandingCoverPageProps {
   onOpenInteractivePage: () => void;
+  onOpenPdfView?: () => void;
+  onOpenDocumentaryGuide?: () => void;
 }
 
 export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
-  onOpenInteractivePage
+  onOpenInteractivePage,
+  onOpenPdfView,
+  onOpenDocumentaryGuide
 }) => {
   return (
     <div className="min-h-screen bg-[#F6F5EE] text-[#222426] flex flex-col justify-between p-4 sm:p-8 lg:p-12">
       {/* Outer Editorial Monograph Frame */}
       <div className="max-w-[1360px] w-full mx-auto flex-1 border-2 border-[#222426] bg-[#F4F1EA] p-6 sm:p-10 lg:p-14 flex flex-col justify-between">
-        {/* Top Archival Header (Static Typography Only — Zero Buttons) */}
+        {/* Top Archival Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#222426] text-xs font-mono text-[#6E7376]">
-          <span>
-            Monografie științifică integrată · Versiunea 1.0 · Al șaselea domeniu operațional (NATO ACT)
+          <span className="inline-block px-3 py-1 text-[11px] font-mono font-semibold tracking-wider text-[#222426] uppercase bg-[#EBE6DF] border border-[#8C9BA5]">
+            MONOGRAFIE ȘTIINȚIFICĂ • VERSIUNEA 1.0
           </span>
           <span>
             19 secțiuni analitice · 7 diagrame vectoriale · 2 tabele de sinteză · 122 referințe academice
           </span>
         </div>
 
-        {/* Center Split: Monograph Title, Abstract, Single CTA Button + 2D Vector Engraving Cover Plate */}
+        {/* Center Split: Monograph Title, Subtitle, Abstract, 3 Action Buttons + 2D Cover Plate */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center my-8 lg:my-12">
-          {/* Left 7 Columns: Title, Subtitle, Abstract & The Single Button */}
+          {/* Left 7 Columns: Title, Subtitle, Abstract & 3 Action Buttons */}
           <div className="lg:col-span-7 space-y-6">
             <div className="text-xs font-mono text-[#6E7376]">
               Arhitectura cauzală pe trei straturi (Sociologie instituțională · Neuroștiințe și semiotică · Psihologie analitică)
             </div>
 
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-[54px] font-bold text-[#222426] leading-[1.12] headline-balance">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-[52px] font-bold text-[#222426] leading-[1.12] headline-balance">
               Diagnosticul războiului cognitiv în România
             </h1>
 
-            <p className="font-serif text-lg sm:text-xl text-[#2C3539] leading-relaxed headline-balance">
-              Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale în fața operațiunilor informaționale ruse și a ideologiei putiniste (Versiunea 1.0)
+            <p className="font-serif text-base sm:text-lg font-normal text-[#2C3539] leading-relaxed headline-balance">
+              Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale în fața operațiunilor informaționale ruse și a ideologiei putiniste
             </p>
 
             <div className="pt-2 border-t border-[#D0D5D9] space-y-3 text-xs sm:text-sm text-[#222426] leading-relaxed max-w-[65ch]">
@@ -48,17 +52,37 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
               </p>
             </div>
 
-            {/* Primary Action Button + Social Share Bar */}
+            {/* 3 Explicit Action Buttons + Social Share Bar */}
             <div className="pt-4 space-y-4">
-              <div>
+              <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3">
                 <button
                   type="button"
                   onClick={onOpenInteractivePage}
-                  className="w-full sm:w-auto px-4 sm:px-7 py-3.5 sm:py-4 text-xs sm:text-base font-serif font-bold text-[#222426] bg-[#E5B822] border-2 border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer inline-flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3"
+                  className="px-5 py-3 text-xs sm:text-sm font-serif font-bold text-[#222426] bg-[#E5B822] border-2 border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
                 >
-                  <span>Deschide pagina interactivă a monografiei</span>
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+                  <span>Citește Monografia Online</span>
+                  <ArrowRight className="w-4 h-4 shrink-0" />
                 </button>
+
+                {onOpenPdfView && (
+                  <button
+                    type="button"
+                    onClick={onOpenPdfView}
+                    className="px-4 py-3 text-xs sm:text-sm font-serif font-semibold text-[#222426] bg-[#F6F5EE] border border-[#222426] hover:bg-[#EBE6DF] transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                  >
+                    <span>Descarcă Volumul PDF</span>
+                  </button>
+                )}
+
+                {onOpenDocumentaryGuide && (
+                  <button
+                    type="button"
+                    onClick={onOpenDocumentaryGuide}
+                    className="px-4 py-3 text-xs sm:text-sm font-serif font-semibold text-[#222426] bg-[#F6F5EE] border border-[#8C9BA5] hover:border-[#222426] transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                  >
+                    <span>Explorează Ghidul Documentarului</span>
+                  </button>
+                )}
               </div>
 
               <div className="pt-3 border-t border-[#D0D5D9]">

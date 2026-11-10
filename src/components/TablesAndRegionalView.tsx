@@ -107,21 +107,21 @@ export const TablesAndRegionalView: React.FC = () => {
               <table className="w-full min-w-[680px] border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
                 <thead>
                   <tr className="bg-[#F4F1EA] border-b-2 border-[#222426]">
-                    <th className="p-3.5 border-r border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/5">
+                    <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/5">
                       Dimensiunea analitică și domeniul de vulnerabilitate
                     </th>
                     {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'A') && (
-                      <th className="p-3.5 border-r border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
+                      <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
                         Stratul A (Mecanismul instituțional, istoric și sociologic)
                       </th>
                     )}
                     {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'B') && (
-                      <th className="p-3.5 border-r border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
+                      <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
                         Stratul B (Mecanismul neurocognitiv, semiotic și axiologic)
                       </th>
                     )}
                     {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'C') && (
-                      <th className="p-3.5 text-xs font-serif font-bold text-[#222426] w-1/4">
+                      <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
                         Stratul C (Expresia în inconștientul cultural și dinamica arhetipală)
                       </th>
                     )}
@@ -130,21 +130,21 @@ export const TablesAndRegionalView: React.FC = () => {
                 <tbody className="divide-y divide-[#222426]">
                   {TABLE_1_DATA.map((row) => (
                     <tr key={row.id} className="align-top hover:bg-[#F4F1EA]/70 transition-colors">
-                      <td className="p-4 border-r border-[#222426] font-serif font-semibold text-sm text-[#222426] bg-[#F4F1EA]/50">
+                      <td className="p-4 border-b border-[#D0D5D9] font-serif font-semibold text-sm text-[#222426] bg-[#F4F1EA]/50">
                         {row.dimensionTitle}
                       </td>
                       {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'A') && (
-                        <td className="p-4 border-r border-[#222426] text-xs sm:text-sm text-[#222426] leading-relaxed">
+                        <td className="p-4 border-b border-[#D0D5D9] text-xs sm:text-sm text-[#222426] leading-relaxed">
                           {row.stratumA}
                         </td>
                       )}
                       {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'B') && (
-                        <td className="p-4 border-r border-[#222426] text-xs sm:text-sm text-[#222426] leading-relaxed">
+                        <td className="p-4 border-b border-[#D0D5D9] text-xs sm:text-sm text-[#222426] leading-relaxed">
                           {row.stratumB}
                         </td>
                       )}
                       {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'C') && (
-                        <td className="p-4 text-xs sm:text-sm text-[#222426] leading-relaxed">
+                        <td className="p-4 border-b border-[#D0D5D9] text-xs sm:text-sm text-[#222426] leading-relaxed">
                           {row.stratumC}
                         </td>
                       )}
@@ -191,16 +191,16 @@ export const TablesAndRegionalView: React.FC = () => {
               <table className="w-full min-w-[680px] border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
                 <thead>
                   <tr className="bg-[#F4F1EA] border-b-2 border-[#222426]">
-                    <th className="p-3.5 border-r border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
+                    <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
                       Biologia umană și rezerva neurocognitivă
                     </th>
-                    <th className="p-3.5 border-r border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
+                    <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
                       Mediul digital și sociospațial
                     </th>
-                    <th className="p-3.5 border-r border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
+                    <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
                       Stilul de viață informațional, asociativ și filtrul moral
                     </th>
-                    <th className="p-3.5 text-xs font-serif font-bold text-[#222426] w-1/4">
+                    <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
                       Sistemul instituțional, juridic și constituțional
                     </th>
                   </tr>
@@ -208,25 +208,25 @@ export const TablesAndRegionalView: React.FC = () => {
                 <tbody className="divide-y divide-[#222426]">
                   {filteredTable2.map((row) => (
                     <tr key={row.id} className="align-top hover:bg-[#E5B822]/10 transition-colors">
-                      <td className="p-4 border-r border-[#222426] text-xs sm:text-sm text-[#222426] leading-relaxed">
+                      <td className="p-4 border-b border-[#D0D5D9] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#222426] mb-1.5 pb-1 border-b border-[#D0D5D9]">
                           {row.phaseCode} ({row.horizon})
                         </div>
                         {row.humanBiology}
                       </td>
-                      <td className="p-4 border-r border-[#222426] text-xs sm:text-sm text-[#222426] leading-relaxed">
+                      <td className="p-4 border-b border-[#D0D5D9] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#D0D5D9]">
                           Determinant II (Mediu)
                         </div>
                         {row.digitalAndSociospatial}
                       </td>
-                      <td className="p-4 border-r border-[#222426] text-xs sm:text-sm text-[#222426] leading-relaxed">
+                      <td className="p-4 border-b border-[#D0D5D9] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#D0D5D9]">
                           Determinant III (Stil de viață și axiologie)
                         </div>
                         {row.informationalLifestyle}
                       </td>
-                      <td className="p-4 text-xs sm:text-sm text-[#222426] leading-relaxed">
+                      <td className="p-4 border-b border-[#D0D5D9] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#D0D5D9]">
                           Determinant I (Sistem instituțional)
                         </div>
