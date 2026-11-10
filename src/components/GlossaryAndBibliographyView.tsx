@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { GLOSSARY_CONCEPTS, BIBLIOGRAPHY_DATA, MASTER_STYLE_PROMPT } from '../data/tablesAndReference';
 import { StratumId } from '../data/types';
 import { Search, Copy, Check } from 'lucide-react';
-import { CitationBox } from './CitationBox';
 
 export const GlossaryAndBibliographyView: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'glossary' | 'bibliography' | 'blueprint'>('glossary');
@@ -223,9 +222,6 @@ export const GlossaryAndBibliographyView: React.FC = () => {
             <span>Ordine alfabetică după autor și an (APA 7th Edition)</span>
           </div>
 
-          <div className="p-4 bg-[#F6F5EE]">
-            <CitationBox />
-          </div>
 
           {filteredBibliography.map((item, idx) => (
             <div key={item.id} className="p-4 sm:p-5 hover:bg-[#F4F1EA] transition-colors">

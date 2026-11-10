@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { SocialShareButtons } from './SocialShareButtons';
-import { CitationBox } from './CitationBox';
 
 interface LandingCoverPageProps {
   onOpenInteractivePage: () => void;
@@ -413,10 +412,6 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
           </div>
         </div>
 
-        {/* Academic Citation Box (APA 7 & BibTeX) */}
-        <div className="mt-8">
-          <CitationBox />
-        </div>
 
         {/* Bottom Archival Summary Strip (Static Text Metadata — Zero Buttons) */}
         <div className="pt-6 border-t border-[#222426] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-[#6E7376]">
