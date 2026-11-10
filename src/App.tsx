@@ -5,7 +5,7 @@ import {
   BIBLIOGRAPHY_DATA
 } from './data/tablesAndReference';
 import { StratumId, BibliographyItem } from './data/types';
-import { InteractiveFigures } from './components/InteractiveFigures';
+import { InteractiveFigures, FIGURE_METADATA } from './components/InteractiveFigures';
 import { TablesAndRegionalView } from './components/TablesAndRegionalView';
 import { GlossaryAndBibliographyView } from './components/GlossaryAndBibliographyView';
 import { SearchModal, PdfDocumentView } from './components/PdfAndSearchModal';
@@ -82,6 +82,7 @@ export function App() {
   const [activeView, setActiveView] = useState<ActiveNavView>('parcurs');
   const [parcursSubMode, setParcursSubMode] = useState<ParcursSubMode>('subcapitole');
   const [currentStepNumber, setCurrentStepNumber] = useState<number>(1);
+  const [activeActNumber, setActiveActNumber] = useState<1 | 2 | 3 | 4>(1);
   const [selectedActFilter, setSelectedActFilter] = useState<number | 'ALL'>('ALL');
   const [selectedStratumHighlight, setSelectedStratumHighlight] = useState<StratumId | 'ALL'>('ALL');
   const [readingTab, setReadingTab] = useState<'integral' | 'registre' | 'ambele'>('ambele');
@@ -109,6 +110,13 @@ export function App() {
         if (target && target.keyConceptIds.length > 0) {
           setActiveConceptId(target.keyConceptIds[0]);
         }
+      }
+    } else if (rawHash.startsWith('actul-')) {
+      const actNum = parseInt(rawHash.replace('actul-', ''), 10);
+      setActiveView('parcurs');
+      setParcursSubMode('patru-acte');
+      if (actNum === 1 || actNum === 2 || actNum === 3 || actNum === 4) {
+        setActiveActNumber(actNum);
       }
     } else if (rawHash === '4-acte') {
       setActiveView('parcurs');
@@ -162,6 +170,103 @@ export function App() {
   const currentStep =
     ALL_SUBCHAPTER_STEPS.find((s) => s.stepNumber === currentStepNumber) ||
     ALL_SUBCHAPTER_STEPS[0];
+
+  // Dynamically synchronize <head> OpenGraph & Twitter Card meta tags with the active section, act, or figure
+  useEffect(() => {
+    const baseUrl = 'https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania';
+    let metaTitle = 'Diagnosticul războiului cognitiv în România (Versiunea 1.0)';
+    let metaDescription =
+      'Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale în fața operațiunilor informaționale ruse și a ideologiei putiniste.';
+    let metaImage = `${baseUrl}/og-cover.png`;
+    let metaImageAlt =
+      'Diagnosticul războiului cognitiv în România (Arhitectura cauzală pe trei straturi, Stratul A, Stratul B, Stratul C)';
+    let metaUrl = `${baseUrl}/`;
+
+    if (isPortalOpen) {
+      if (activeView === 'parcurs' && parcursSubMode === 'subcapitole') {
+        const figId =
+          currentStep.linkedFigureId ||
+          (currentStep.actNumber === 1
+            ? 1
+            : currentStep.actNumber === 2
+            ? 3
+            : currentStep.actNumber === 3
+            ? 6
+            : 7);
+        const figMeta = FIGURE_METADATA[figId] || FIGURE_METADATA[1];
+        metaTitle = `${currentStep.title} (Diagnosticul războiului cognitiv în România)`;
+        metaDescription = currentStep.summaryThesis;
+        metaImage = `${baseUrl}/og/og-fig-${figId}.png`;
+        metaImageAlt = `${currentStep.title} (${figMeta.title})`;
+        metaUrl = `${baseUrl}/share/pasul-${currentStep.stepNumber}.html`;
+      } else if (activeView === 'parcurs' && parcursSubMode === 'patru-acte') {
+        const actTitles: Record<1 | 2 | 3 | 4, { title: string; desc: string; alt: string }> = {
+          1: {
+            title: 'Actul I (Cadrul macro și rădăcina sistemică) · Diagnosticul războiului cognitiv în România',
+            desc: 'Introducere și Capitolul 1 (Arhitectura cauzală ascendentă pe Straturile A, B și C, barca lui Coleman-Hedström, determinanții Lalonde-Dever și anomalia formelor fără fond).',
+            alt: 'Actul I (Arhitectura cauzală pe trei straturi a vulnerabilității societale endogene)'
+          },
+          2: {
+            title: 'Actul II (Anatomia tensiunii și capturarea buclei OODA) · Diagnosticul războiului cognitiv în România',
+            desc: 'Capitolele 2 și 3 (Rețeaua sistema, Antilumea putinistă, starea Bobok, dubla falsificare axiologică, controlul reflexiv de rang secund și deturnarea fazei de Orientare din bucla OODA).',
+            alt: 'Actul II (Mecanismul cibernetic și semiotic al capturării cognitive în bucla OODA)'
+          },
+          3: {
+            title: 'Actul III (Dinamica forțelor, Umbra colectivă și bifurcația Track A / Track B) · Diagnosticul războiului cognitiv în România',
+            desc: 'Capitolele 4 și 5 (Conversia resurselor din Umbra colectivă, matricea comportamentală a lui Carlo M. Cipolla și bifurcarea neurocognitivă în criză acută).',
+            alt: 'Actul III (Bifurcarea procesării neurocognitive sub presiunea crizei acute)'
+          },
+          4: {
+            title: 'Actul IV (Protocolul secvențial în trei faze și modernitatea organică) · Diagnosticul războiului cognitiv în România',
+            desc: 'Capitolul 6 (Ordinea cauzală obligatorie a reconstrucției rezilienței pe determinanții Lalonde-Dever, guvernanța policentrică Ostrom și individuarea colectivă).',
+            alt: 'Actul IV (Protocolul secvențial în trei faze al reconstrucției rezilienței societale)'
+          }
+        };
+        const info = actTitles[activeActNumber];
+        metaTitle = info.title;
+        metaDescription = info.desc;
+        metaImage = `${baseUrl}/og/og-act-${activeActNumber}.png`;
+        metaImageAlt = info.alt;
+        metaUrl = `${baseUrl}/share/actul-${activeActNumber}.html`;
+      } else if (activeView === 'diagrame') {
+        const fig = FIGURE_METADATA[labFigureId] || FIGURE_METADATA[1];
+        metaTitle = `${fig.title} · Diagnosticul războiului cognitiv în România`;
+        metaDescription = fig.caption;
+        metaImage = `${baseUrl}/og/og-fig-${fig.id}.png`;
+        metaImageAlt = `${fig.title} (${fig.subtitle})`;
+        metaUrl = `${baseUrl}/share/figura-${fig.id}.html`;
+      } else if (activeView === 'tabele') {
+        metaTitle = 'Tabelele de sinteză (1 și 2) și Grupul de control regional · Diagnosticul războiului cognitiv în România';
+        metaDescription =
+          'Sinteza matricială a diagnosticului pe Straturile A, B și C (Tabelul 1), protocolul secvențial Lalonde-Dever în 3 faze (Tabelul 2) și comparația cu grupul de control regional.';
+        metaImage = `${baseUrl}/og/og-fig-7.png`;
+        metaImageAlt = 'Tabelele de sinteză 1 și 2 și protocolul Lalonde-Dever';
+        metaUrl = `${baseUrl}/share/tabele.html`;
+      } else if (activeView === 'glosar') {
+        metaTitle = 'Glosar conceptual (50 concepte) și Bibliografie integrală (122 lucrări) · Diagnosticul războiului cognitiv în România';
+        metaDescription =
+          'Aparatul conceptual interdisciplinar și cele 122 de referințe academice verificate ale monografiei.';
+        metaImage = `${baseUrl}/og/og-fig-1.png`;
+        metaImageAlt = 'Glosar conceptual și bibliografie integrală';
+        metaUrl = `${baseUrl}/share/glosar.html`;
+      }
+    }
+
+    document.title = metaTitle;
+    const setMetaContent = (id: string, value: string) => {
+      const el = document.getElementById(id);
+      if (el) el.setAttribute('content', value);
+    };
+    setMetaContent('meta-og-title', metaTitle);
+    setMetaContent('meta-og-description', metaDescription);
+    setMetaContent('meta-og-url', metaUrl);
+    setMetaContent('meta-og-image', metaImage);
+    setMetaContent('meta-og-image-alt', metaImageAlt);
+    setMetaContent('meta-twitter-title', metaTitle);
+    setMetaContent('meta-twitter-description', metaDescription);
+    setMetaContent('meta-twitter-image', metaImage);
+    setMetaContent('meta-twitter-image-alt', metaImageAlt);
+  }, [isPortalOpen, activeView, parcursSubMode, currentStep, activeActNumber, labFigureId]);
 
   const filteredStepsForRail =
     selectedActFilter === 'ALL'
@@ -425,7 +530,7 @@ export function App() {
                 <button
                   onClick={() => {
                     setParcursSubMode('patru-acte');
-                    updateUrlHash('4-acte');
+                    updateUrlHash(`actul-${activeActNumber}`);
                   }}
                   className={`px-3.5 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
                     parcursSubMode === 'patru-acte'
@@ -440,6 +545,11 @@ export function App() {
 
             {parcursSubMode === 'patru-acte' ? (
               <FourActsPresentation
+                activeActNum={activeActNumber}
+                onSelectAct={(actNum) => {
+                  setActiveActNumber(actNum);
+                  updateUrlHash(`actul-${actNum}`);
+                }}
                 onSelectStepInReader={(stepNum) => {
                   setParcursSubMode('subcapitole');
                   handleStepSelect(stepNum);
@@ -637,7 +747,7 @@ export function App() {
                       {/* Social Share Bar for Current Section */}
                       <div className="mb-5 pb-3 border-b border-[#D0D5D9] flex flex-wrap items-center justify-between gap-2">
                         <SocialShareButtons
-                          url={`https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/#pasul-${currentStep.stepNumber}`}
+                          url={`https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/share/pasul-${currentStep.stepNumber}.html`}
                           title={`${currentStep.title} (Diagnosticul războiului cognitiv în România)`}
                           label="Distribuie această secțiune pe"
                         />

@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { InteractiveFigures } from './InteractiveFigures';
 import { VideoSynthesisBox } from './VideoSynthesisBox';
+import { SocialShareButtons } from './SocialShareButtons';
 import { ALL_SUBCHAPTER_STEPS } from '../data/tablesAndReference';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface FourActsPresentationProps {
+  activeActNum?: 1 | 2 | 3 | 4;
+  onSelectAct?: (actNumber: 1 | 2 | 3 | 4) => void;
   onSelectStepInReader: (stepNumber: number) => void;
 }
 
@@ -258,16 +261,22 @@ const FOUR_ACTS_BLUEPRINT: ActBlueprint[] = [
 ];
 
 export const FourActsPresentation: React.FC<FourActsPresentationProps> = ({
+  activeActNum: controlledActNum,
+  onSelectAct,
   onSelectStepInReader
 }) => {
-  const [activeActNum, setActiveActNum] = useState<1 | 2 | 3 | 4>(1);
+  const [internalActNum, setInternalActNum] = useState<1 | 2 | 3 | 4>(1);
+  const activeActNum = controlledActNum ?? internalActNum;
   const [selectedFigureInAct, setSelectedFigureInAct] = useState<number>(1);
 
   const currentAct =
     FOUR_ACTS_BLUEPRINT.find((a) => a.actNumber === activeActNum) || FOUR_ACTS_BLUEPRINT[0];
 
   const handleSelectAct = (actNum: 1 | 2 | 3 | 4) => {
-    setActiveActNum(actNum);
+    setInternalActNum(actNum);
+    if (onSelectAct) {
+      onSelectAct(actNum);
+    }
     const targetAct = FOUR_ACTS_BLUEPRINT.find((a) => a.actNumber === actNum);
     if (targetAct && targetAct.figures.length > 0) {
       setSelectedFigureInAct(targetAct.figures[0]);
@@ -347,13 +356,22 @@ export const FourActsPresentation: React.FC<FourActsPresentationProps> = ({
         {/* Left 6 Cols: Narrative Voiceover, Dual Register Matrix & Subchapter Anchors */}
         <div className="lg:col-span-6 space-y-6">
           <div className="bg-[#F6F5EE] border-2 border-[#222426] p-6 space-y-5">
-            <div className="border-b border-[#D0D5D9] pb-4">
-              <div className="text-xs font-mono text-[#6E7376] mb-1">
-                {currentAct.subtitle}
+            <div className="border-b border-[#D0D5D9] pb-4 space-y-3">
+              <div>
+                <div className="text-xs font-mono text-[#6E7376] mb-1">
+                  {currentAct.subtitle}
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-[#222426]">
+                  {currentAct.title}
+                </h3>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-[#222426]">
-                {currentAct.title}
-              </h3>
+              <div className="pt-2 border-t border-[#D0D5D9]">
+                <SocialShareButtons
+                  url={`https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/share/actul-${currentAct.actNumber}.html`}
+                  title={`${currentAct.title} (Diagnosticul războiului cognitiv în România)`}
+                  label={`Distribuie Actul ${currentAct.actNumber} pe`}
+                />
+              </div>
             </div>
 
             {/* Visual & Narrative Directives */}

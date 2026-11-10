@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SocialShareButtons } from './SocialShareButtons';
 
 interface InteractiveFiguresProps {
   figureId: number;
@@ -238,6 +239,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           {meta.title}
         </h3>
         <p className="text-xs sm:text-sm text-[#6E7376] mt-1">{meta.subtitle}</p>
+        <div className="mt-3 pt-2.5 border-t border-[#D0D5D9]">
+          <SocialShareButtons
+            url={`https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/share/figura-${meta.id}.html`}
+            title={`${meta.title} (Diagnosticul războiului cognitiv în România)`}
+            label={`Distribuie Figura ${meta.id} pe`}
+            compact={!showSelector}
+          />
+        </div>
       </div>
 
       {/* =====================================================================
