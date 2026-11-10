@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { TABLE_1_DATA, TABLE_2_DATA, REGIONAL_CONTROL_GROUP } from '../data/tablesAndReference';
+import {
+  TABLE_1_DATA,
+  TABLE_2_DATA,
+  OPERATIONAL_PROTOCOL_TABLE,
+  REGIONAL_CONTROL_GROUP
+} from '../data/tablesAndReference';
 import { StratumId } from '../data/types';
 
 export const TablesAndRegionalView: React.FC = () => {
@@ -13,24 +18,29 @@ export const TablesAndRegionalView: React.FC = () => {
       ? TABLE_2_DATA
       : TABLE_2_DATA.filter((row) => row.phaseCode === selectedPhaseFilter);
 
+  const filteredOperationalProtocol =
+    selectedPhaseFilter === 'ALL'
+      ? OPERATIONAL_PROTOCOL_TABLE
+      : OPERATIONAL_PROTOCOL_TABLE.filter((row) => row.phaseCode === selectedPhaseFilter);
+
   return (
     <div className="space-y-8">
       {/* Sub-navigation bar */}
-      <div className="bg-[#F4F1EA] border border-[#222426] p-5">
+      <div className="bg-[#F4F1EA] border border-[#222426] p-4 sm:p-5">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="text-xs font-mono text-[#6E7376] mb-1">
               Sinteze matriciale și analiză comparativă (Capitolele 2, 5 și 6)
             </div>
-            <h2 className="font-serif text-2xl font-bold text-[#222426] headline-balance">
-              Tabelele de sinteză (1 și 2) și grupul de control regional
+            <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#222426] headline-balance">
+              Tabelele de sinteză (1 și 2), matricea instituțională și grupul de control regional
             </h2>
           </div>
 
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setActiveSubView('table1')}
-              className={`px-3.5 py-2 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+              className={`px-3.5 py-2 text-xs font-medium border transition-colors text-left sm:whitespace-nowrap cursor-pointer ${
                 activeSubView === 'table1'
                   ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
                   : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
@@ -40,17 +50,17 @@ export const TablesAndRegionalView: React.FC = () => {
             </button>
             <button
               onClick={() => setActiveSubView('table2')}
-              className={`px-3.5 py-2 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+              className={`px-3.5 py-2 text-xs font-medium border transition-colors text-left sm:whitespace-nowrap cursor-pointer ${
                 activeSubView === 'table2'
                   ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
                   : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
               }`}
             >
-              Tabelul 2 (Protocolul Lalonde-Dever în 3 faze)
+              Tabelul 2 (Protocolul Lalonde-Dever și matricea instituțională)
             </button>
             <button
               onClick={() => setActiveSubView('regional')}
-              className={`px-3.5 py-2 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+              className={`px-3.5 py-2 text-xs font-medium border transition-colors text-left sm:whitespace-nowrap cursor-pointer ${
                 activeSubView === 'regional'
                   ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
                   : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
@@ -65,7 +75,7 @@ export const TablesAndRegionalView: React.FC = () => {
       {/* TABELUL 1 */}
       {activeSubView === 'table1' && (
         <div className="space-y-5">
-          <div className="bg-[#F4F1EA] border border-[#222426] p-5">
+          <div className="bg-[#F4F1EA] border border-[#222426] p-4 sm:p-5">
             <div className="flex flex-wrap items-center justify-between gap-4 mb-4 pb-4 border-b border-[#D0D5D9]">
               <div>
                 <h3 className="font-serif text-lg font-bold text-[#222426]">
@@ -94,7 +104,7 @@ export const TablesAndRegionalView: React.FC = () => {
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
+              <table className="w-full min-w-[680px] border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
                 <thead>
                   <tr className="bg-[#F4F1EA] border-b-2 border-[#222426]">
                     <th className="p-3.5 border-r border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/5">
@@ -147,10 +157,10 @@ export const TablesAndRegionalView: React.FC = () => {
         </div>
       )}
 
-      {/* TABELUL 2 */}
+      {/* TABELUL 2 + MATRICEA DE OPERAȚIONALIZARE INSTITUȚIONALĂ */}
       {activeSubView === 'table2' && (
-        <div className="space-y-5">
-          <div className="bg-[#F4F1EA] border border-[#222426] p-5">
+        <div className="space-y-6">
+          <div className="bg-[#F4F1EA] border border-[#222426] p-4 sm:p-5">
             <div className="flex flex-wrap items-center justify-between gap-4 mb-4 pb-4 border-b border-[#D0D5D9]">
               <div>
                 <h3 className="font-serif text-lg font-bold text-[#222426]">
@@ -178,7 +188,7 @@ export const TablesAndRegionalView: React.FC = () => {
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
+              <table className="w-full min-w-[680px] border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
                 <thead>
                   <tr className="bg-[#F4F1EA] border-b-2 border-[#222426]">
                     <th className="p-3.5 border-r border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
@@ -221,6 +231,62 @@ export const TablesAndRegionalView: React.FC = () => {
                           Determinant I (Sistem instituțional)
                         </div>
                         {row.institutionalSystem}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Matricea de operaționalizare instituțională (România și UE) */}
+          <div className="bg-[#F4F1EA] border-2 border-[#222426] p-4 sm:p-5">
+            <div className="mb-4 pb-3 border-b border-[#222426]">
+              <div className="text-xs font-mono text-[#6E7376] mb-1">
+                Operaționalizare administrativă, juridică și comunitară (Capitolul 6 · România și Uniunea Europeană)
+              </div>
+              <h3 className="font-serif text-lg font-bold text-[#222426]">
+                Matricea responsabilităților instituționale pe cele trei faze secvențiale (DNSC, ANCOM, CSAT, CNA, Ministerul Educației, Biserica Ortodoxă Română)
+              </h3>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[680px] border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
+                <thead>
+                  <tr className="bg-[#222426] text-[#F6F5EE]">
+                    <th className="p-3.5 border-r border-[#6E7376] text-xs font-serif font-bold w-1/6">
+                      Faza și orizontul temporal
+                    </th>
+                    <th className="p-3.5 border-r border-[#6E7376] text-xs font-serif font-bold w-1/5">
+                      Obiectivul strategic și neurocognitiv
+                    </th>
+                    <th className="p-3.5 border-r border-[#6E7376] text-xs font-serif font-bold w-1/3">
+                      Acțiuni tactice, legislative și algoritmice (DSA Art. 34–35 și AI Act)
+                    </th>
+                    <th className="p-3.5 text-xs font-serif font-bold w-1/4">
+                      Instituții responsabile și parteneri societali (România și UE)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#222426]">
+                  {filteredOperationalProtocol.map((row) => (
+                    <tr key={row.id} className="align-top hover:bg-[#E5B822]/15 transition-colors">
+                      <td className="p-4 border-r border-[#222426] bg-[#F4F1EA]">
+                        <div className="font-serif font-bold text-sm text-[#222426]">
+                          {row.phaseTitle}
+                        </div>
+                        <div className="text-xs font-mono text-[#6E7376] mt-1">
+                          {row.horizon}
+                        </div>
+                      </td>
+                      <td className="p-4 border-r border-[#222426] text-xs sm:text-sm text-[#222426] font-medium leading-relaxed">
+                        {row.targetObjective}
+                      </td>
+                      <td className="p-4 border-r border-[#222426] text-xs sm:text-sm text-[#222426] leading-relaxed">
+                        {row.concreteIntervention}
+                      </td>
+                      <td className="p-4 text-xs sm:text-sm text-[#222426] font-mono leading-relaxed bg-[#F4F1EA]/50">
+                        {row.responsibleActors}
                       </td>
                     </tr>
                   ))}

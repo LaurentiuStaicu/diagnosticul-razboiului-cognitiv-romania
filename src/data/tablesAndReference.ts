@@ -1,4 +1,13 @@
-import { Table1Row, Table2Row, RegionalCase, GlossaryConcept, BibliographyItem } from './types';
+import {
+  Table1Row,
+  Table2Row,
+  RegionalCase,
+  GlossaryConcept,
+  BibliographyItem,
+  ChapterExecutiveSummary,
+  InstitutionalProtocolRow,
+  CinematicScene
+} from './types';
 import { CHAPTERS_PART_1 } from './chaptersPart1';
 import { CHAPTERS_PART_2 } from './chaptersPart2';
 
@@ -785,3 +794,347 @@ export const BIBLIOGRAPHY_DATA: BibliographyItem[] = [
 export const MASTER_STYLE_PROMPT = `Creează o experiență video în modul Cinematic urmând o rigoare academică strictă (temperatură 0.3: ton analitic, sobru, calm, clinic, fără speculații sau metafore gratuite). Nu menționa și nu afișa niciun fel de date statistice, procente sau scoruri numerice; explică toate ideile exclusiv ca dinamici structurale și cauzale. Structurează prezentarea progresiv, dublând fiecare concept teoretic cu explicația sa practică/empirică, de la definirea cadrului sistemic și a blocajelor până la sinteza și soluția finală.
 
 Regulă vizuală obligatorie: Folosește exclusiv un stil de ilustrație editorială 2D / gravură vectorială curată și diagrame de sistem pe un fundal alb-crem cald texturat (#F6F5EE). Toate liniile, contururile și textul principal vor fi în negru-cărbune (#222426) și nuanțe de gri-ardezie (#6E7376, #8C9BA5). Folosește strict galben-muștar (#E5B822) ca accent pentru concepte-cheie, sinteză și soluții, și roșu-vermilion (#F01E1E) exclusiv pentru tensiuni, crize sau bucle de blocaj. Interzis să folosești alte culori, efecte 3D sau desene de tip whiteboard.`;
+
+export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
+  {
+    chapterNumber: 0,
+    chapterTitle: 'Introducere (Cadrul doctrinar și arhitectura explicativă pe trei paliere cauzale)',
+    actTitle: 'Actul I (Cadrul macro și rădăcina sistemică)',
+    executiveSynthesis: [
+      {
+        id: 'exec-0-1',
+        title: 'Mecanismul diagnosticat (Al șaselea domeniu operațional)',
+        takeaway:
+          'Războiul cognitiv (NATO ACT) depășește propaganda informațională punctuală, vizând alterarea arhitecturii de procesare a realității și paralizia capacității decizionale sub pragul articolului 5.',
+        implication:
+          'Apărarea națională nu se mai poate limita la securizarea infrastructurii fizice și cibernetice, ci trebuie să protejeze integritatea proceselor cognitive și a încrederii constituționale.'
+      },
+      {
+        id: 'exec-0-2',
+        title: 'Vulnerabilitatea sistemică (Cauzalitatea recursivă A–B–C)',
+        takeaway:
+          'Operațiunile ostile se cuplează simultan pe trei straturi: instituțiile extractive (Stratul A), rezerva neurocognitivă epuizată de stres (Stratul B) și complexele culturale neintegrate (Stratul C).',
+        implication:
+          'Campaniile izolate de comunicare strategică sau fact-checking eșuează inevitabil dacă ignoră cauzele instituționale și neurobiologice ale vulnerabilității.'
+      },
+      {
+        id: 'exec-0-3',
+        title: 'Decizia strategică (Abordarea sistemică integrată)',
+        takeaway:
+          'Reziliența societală impune tratarea sincronizată a determinanților instituționali, informaționali, asociativi și neurobiologici într-o ordine cauzală strictă.',
+        implication:
+          'Instituțiile de securitate și de politici publice trebuie să opereze pe un model unificat care leagă reforma statului de igiena spațiului digital și de coeziunea socială.'
+      }
+    ]
+  },
+  {
+    chapterNumber: 1,
+    chapterTitle: 'Capitolul 1 (Vulnerabilitățile structurale ale societății românești și eroziunea rezilienței endogene)',
+    actTitle: 'Actul I (Cadrul macro și rădăcina sistemică)',
+    executiveSynthesis: [
+      {
+        id: 'exec-1-1',
+        title: 'Mecanismul diagnosticat (Forme fără fond și uzură alostatică)',
+        takeaway:
+          'Deficitul de închidere operațională (Luhmann), instituțiile extractive și polarizarea sociospațială induc uzură alostatică cronică (McEwen), hiperactivând amigdala și inhibând cortexul prefrontal dorsolateral (dlPFC).',
+        implication:
+          'Insecuritatea cotidiană și umilința birocratică epuizează biologic capacitatea cetățeanului de a procesa analitic informația (Sistemul 2) înainte de contactul cu propaganda externă.'
+      },
+      {
+        id: 'exec-1-2',
+        title: 'Vulnerabilitatea sistemică (Familism amoral și hiperconectivitatea diasporei)',
+        takeaway:
+          'Distrugerea capitalului social de punte (Putnam) prin replierea în familism amoral (Banfield), secesiunea păturilor urbane prospere și imersiunea algoritmică a diasporei pe platforme micro-video creează camere de ecou transnaționale.',
+        implication:
+          'Faliile demografice și trauma dezrădăcinării oferă vectorilor de control reflexiv de rang secund (Lefebvre) suprafețe directe de cuplare emoțională și mobilizare antisistem.'
+      },
+      {
+        id: 'exec-1-3',
+        title: 'Decizia strategică (Debirocratizarea și predictibilitatea ca securitate cognitivă)',
+        takeaway:
+          'Reducerea stresului alostatic prin servicii publice echitabile, predictibilitate fiscală și digitalizare transparentă (modelul e-Estonia) este precondiția neurobiologică a oricărei reziliențe.',
+        implication:
+          'Guvernul și administrația publică trebuie să trateze calitatea interacțiunii cetățean–stat drept pilonul primar al apărării în al șaselea domeniu operațional.'
+      }
+    ]
+  },
+  {
+    chapterNumber: 2,
+    chapterTitle: 'Capitolul 2 (Arhitectura ideologiei putiniste și camuflajul discursiv suveranist)',
+    actTitle: 'Actul II (Anatomia tensiunii și mecanismul capturării)',
+    executiveSynthesis: [
+      {
+        id: 'exec-2-1',
+        title: 'Mecanismul diagnosticat (Antilumea, starea Bobok și dubla falsificare)',
+        takeaway:
+          'Regimul cleptocratic rus (sistema) operează prin inversiunea normativă a Antilumii (Epstein) și cinismul transgresiv Bobok (Dostoievski), camuflate la export sub masca apărării tradiției și a suveranității.',
+        implication:
+          'Pentru a ocoli rusofobia istorică a românilor, vectorul ostil parazitează semiotic codurile identitare autohtone prin rețele de spălare informațională (information laundering).'
+      },
+      {
+        id: 'exec-2-2',
+        title: 'Vulnerabilitatea sistemică (Rețele para-ecleziale și contagiune complexă)',
+        takeaway:
+          'Erezia etnofiletistă Russkii Mir și falsul suveranism izolaționist se propagă prin nuclee informale para-ecleziale, canale de Telegram și microinfluenceri, utilizând contagiunea complexă (Centola).',
+        implication:
+          'Religiozitatea ritualistă de fațadă și nemulțumirea față de impostura elitelor locale sunt deturnate prin proiecție paranoidă și identificare cu agresorul împotriva UE și NATO.'
+      },
+      {
+        id: 'exec-2-3',
+        title: 'Decizia strategică (Modelul grupului de control regional și parteneriatul axiologic)',
+        takeaway:
+          'Comparația cu Estonia, Polonia și Republica Moldova demonstrează că reziliența rezultă din sancționarea fluxurilor ilicite, memoria istorică instituționalizată și apărarea antropologiei patristice (Imago Dei).',
+        implication:
+          'Autoritățile trebuie să destructureze rețelele financiare de spălare informațională și să susțină dialogul dintre cultura constituțională și teologia ortodoxă canonică.'
+      }
+    ]
+  },
+  {
+    chapterNumber: 3,
+    chapterTitle: 'Capitolul 3 (Mecanismul capturării cognitive și colonizarea deciziei în al șaselea domeniu operațional)',
+    actTitle: 'Actul II (Anatomia tensiunii și mecanismul capturării)',
+    executiveSynthesis: [
+      {
+        id: 'exec-3-1',
+        title: 'Mecanismul diagnosticat (Colonizarea fazei de Orientare OODA și semioza binară)',
+        takeaway:
+          'Controlul reflexiv de rang secund (Lefebvre) țintește faza de Orientare din bucla OODA (Boyd), comutând cetățeanul din primul sistem etic (cooperare) în al doilea sistem etic (confruntare și logică binară a anihilării, Lotman).',
+        implication:
+          'Odată alterată matricea de Orientare, cetățeanul respinge spontan verificările faptice (seizing și freezing, Kruglanski) pentru a-și proteja identitatea de grup (Kahan).'
+      },
+      {
+        id: 'exec-3-2',
+        title: 'Vulnerabilitatea sistemică (Capturarea dopaminergică și bucla Model Collapse / MAD)',
+        takeaway:
+          'Algoritmii de retenție manipulează eroarea de predicție a recompensei în nucleul accumbens (Schultz, Lembke), în timp ce rețelele Doppelgänger, Matrioșka și Pravda poluează modelele AI și motoarele de căutare cu date sintetice (Shumailov, Alemohammad).',
+        implication:
+          'Se creează o buclă de retroacțiune epistemică om–mașină în care suprimarea latenței prefrontale și contaminarea infrastructurii digitale blochează deliberarea democratică.'
+      },
+      {
+        id: 'exec-3-3',
+        title: 'Decizia strategică (Audit algoritmic DSA și fricțiune deliberată)',
+        takeaway:
+          'Restabilirea latenței temporale pentru Sistemul 2 necesită dezactivarea amplificării algoritmice a indignării morale și etichetarea criptografică a datelor sintetice.',
+        implication:
+          'ANCOM și DNSC, în coordonare cu Comisia Europeană (DSA Art. 34–35 și AI Act), trebuie să impună audituri algoritmice și frâne de viralitate în perioadele de criză.'
+      }
+    ]
+  },
+  {
+    chapterNumber: 4,
+    chapterTitle: 'Capitolul 4 (Cronicizarea polarizării și dinamica autodistrugerii sociale)',
+    actTitle: 'Actul III (Dinamica forțelor, buclele de sistem și bifurcația în criză)',
+    executiveSynthesis: [
+      {
+        id: 'exec-4-1',
+        title: 'Mecanismul diagnosticat (Enantiodromia suveranistă și proiecția Umbrei)',
+        takeaway:
+          'Saturația față de Persona instituțională mimetică declanșează legea enantiodromiei (Heraclit/Jung), răsturnând conformismul prooccidental de fațadă în respingerea radicală a ordinii constituționale.',
+        implication:
+          'Conținuturile neintegrate din Umbra colectivă sunt evacuate prin proiecție paranoidă asupra unui „Persecutor Extern”, mascând responsabilitatea rețelelor extractive interne.'
+      },
+      {
+        id: 'exec-4-2',
+        title: 'Vulnerabilitatea sistemică (Alunecarea în Cadranul III al matricei lui Cipolla)',
+        takeaway:
+          'Sub presiunea actorilor extractivi din Cadranul IV (+X, -Y) și pe fondul barierei instituționale fisurate, cetățeanul vulnerabil din Cadranul II (-X, +Y) este împins de războiul cognitiv în Cadranul III al autosabotajului colectiv (-X, -Y).',
+        implication:
+          'Conform celei de-a Treia Legi a lui Cipolla, Cadranul III (-X, -Y) este mai periculos decât Cadranul IV deoarece sfidează raționalitatea utilitaristă, transformând victima în agentul propriei sale ruine.'
+      },
+      {
+        id: 'exec-4-3',
+        title: 'Decizia strategică (Activarea celor trei filtre de conversie în modernitate organică)',
+        takeaway:
+          'Resursele latente din Umbra colectivă (memoria istorică defensivă și vitalitatea adaptativă a arhetipului Trickster-ului) nu trebuie reprimate arogant, ci convertite prin funcția transcendentă.',
+        implication:
+          'Statul trebuie să activeze cele trei filtre structurale (legea impersonală dreaptă în Stratul A, discernământul critic și vigilența metacognitivă în Stratul B) pentru a readuce societatea în Cadranul I (+X, +Y).'
+      }
+    ]
+  },
+  {
+    chapterNumber: 5,
+    chapterTitle: 'Capitolul 5 (Blocajul decizional în criză și bifurcarea procesării cognitive, Traseul A versus Traseul B)',
+    actTitle: 'Actul III (Dinamica forțelor, buclele de sistem și bifurcația în criză)',
+    executiveSynthesis: [
+      {
+        id: 'exec-5-1',
+        title: 'Mecanismul diagnosticat (Sindromul Puer Aeternus și apărarea maniacală)',
+        takeaway:
+          'În momentele de criză strategică, activarea arhetipului Puer Aeternus (von Franz, Hillman) alimentează așteptarea magică a unui „Salvator” providențial și iluzia neutralității izolaționiste (apărare maniacală, Klein).',
+        implication:
+          'Nostalgia după dependența pasivă de un stat paternalist tutelar (Neumann) paralizează voința politică și capacitatea de descurajare strategică a statului-țintă.'
+      },
+      {
+        id: 'exec-5-2',
+        title: 'Vulnerabilitatea sistemică (Nodul de bifurcație neurocognitivă, Track A vs. Track B)',
+        takeaway:
+          'Sub șoc informațional acut, absența reglării prefrontale deviază procesarea pe Track A (bucla reactivă amigdaliană, tunel dopaminergic și contagiune a fricii), blocând Track B (traseul deliberativ adaptativ).',
+        implication:
+          'Pe Track A, corpul electoral și instituțiile intră în paralizie decizională fără tragerea unui singur foc de armă, îndeplinind obiectivul terminal al războiului cognitiv.'
+      },
+      {
+        id: 'exec-5-3',
+        title: 'Decizia strategică (Capacitatea negativă a lui Bion și validarea în comunități deschise)',
+        takeaway:
+          'Comutarea pe Track B depinde de reglarea descendentă (top-down) exercitată de dlPFC/vmPFC, de tonusul vagal și de capacitatea negativă (Bion) de a tolera incertitudinea fără reacții paranoide premature.',
+        implication:
+          'Liderii instituționali trebuie să practice o comunicare calmă, predictibilă și verificabilă probatoriu, care să ancoreze cetățenii în regimul Grupului de Lucru (W) și al medierii ternare.'
+      }
+    ]
+  },
+  {
+    chapterNumber: 6,
+    chapterTitle: 'Capitolul 6 (Protocolul de reconstrucție a rezilienței cognitive și instituționale)',
+    actTitle: 'Actul IV (Sinteza terminală și protocolul secvențial de reconstrucție)',
+    executiveSynthesis: [
+      {
+        id: 'exec-6-1',
+        title: 'Mecanismul diagnosticat (Secvențialitatea cauzală obligatorie pe modelul Lalonde-Dever)',
+        takeaway:
+          'Protocolul de reconstrucție trebuie executat strict secvențial: Faza I (0–12 luni, decompresie alostatică și igienă digitală), Faza II (1–3 ani, validare comunitară și prebunking) și Faza III (3–10 ani, închidere operațională și policentricitate).',
+        implication:
+          'Inversarea fazelor (lansarea de campanii de educație mediatică peste o populație aflată în uzură alostatică și capturare algoritmică) provoacă efect de ricoșeu și adâncește polarizarea.'
+      },
+      {
+        id: 'exec-6-2',
+        title: 'Vulnerabilitatea sistemică (Erodarea imunității pe curba uitării și hipercentralismul)',
+        takeaway:
+          'Imunitatea cognitivă dobândită prin inoculare punctuală se erodează pe curba uitării a lui Ebbinghaus, iar hipercentralismul birocratic sau fiefurile clientelare mențin neputința învățată.',
+        implication:
+          'Fără consolidare mnezică periodică și fără descentralizare policentrică (Ostrom) care să redea autoeficacitatea politică (Bandura), societatea rămâne vulnerabilă la recidive autoritare.'
+      },
+      {
+        id: 'exec-6-3',
+        title: 'Decizia strategică (Operaționalizarea instituțională și sinteza modernității organice)',
+        takeaway:
+          'Articularea responsabilităților între DNSC, ANCOM, CSAT, CNA, Ministerul Educației, Biserica Ortodoxă Română, universități și administrația locală unește legea impersonală dreaptă cu etica demnității persoanei (Imago Dei).',
+        implication:
+          'Sinteza modernității organice rezolvă definitiv anomalia istorică a „formelor fără fond”, transformând România într-un pilon de suveranitate democratică în NATO și Uniunea Europeană.'
+      }
+    ]
+  }
+];
+
+export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
+  {
+    id: 'op-faza-1',
+    phaseCode: 'Faza I',
+    phaseTitle: 'Decompresia alostatică și fricțiunea algoritmică de urgență',
+    horizon: 'Fereastra tactică imediată (0–48 ore în criză acută / 0–12 luni structural)',
+    targetObjective:
+      'Oprirea buclei reactive dezadaptative (Track A), scăderea hipercortizolemiei bazale pe axa HPA și întreruperea capturării dopaminergice în nucleul accumbens.',
+    concreteIntervention:
+      'Activarea mecanismelor de criză conform Art. 34–35 din Digital Services Act (DSA) și AI Act pentru VLOPs (TikTok, Meta) în vederea impunerii fricțiunii algoritmice temporare (algorithmic cooling down) și dezactivării amplificării indignării morale; destructurarea fermelor de boți (Doppelgänger, Matrioșka, Pravda), etichetarea criptografică a datelor sintetice și debirocratizarea digitală transparentă (modelul e-Estonia).',
+    responsibleActors:
+      'DNSC (Directoratul Național de Securitate Cibernetică), ANCOM (Coordonator al Serviciilor Digitale), celulele de criză din CSAT, MAI și MApN, în coordonare directă cu Comisia Europeană.'
+  },
+  {
+    id: 'op-faza-2',
+    phaseCode: 'Faza II',
+    phaseTitle: 'Imunizarea epistemică (prebunking), validarea comunitară și reconcilierea morală',
+    horizon: 'Orizont operațional mediu (1–3 ani)',
+    targetObjective:
+      'Reconstrucția fazei de Orientare din bucla OODA, comutarea stabilă pe Traseul deliberativ adaptativ (Track B) și neutralizarea dublei falsificări axiologice (Russkii Mir).',
+    concreteIntervention:
+      'Auditarea independentă a algoritmilor de recomandare, avertismente timpurii și campanii naționale de inoculare psihocognitivă (prebunking, Roozenbeek & van der Linden) cu rapeluri calibrate pe curba uitării a lui Ebbinghaus; refacerea infrastructurii asociative de proximitate (contagiune complexă pozitivă, Centola) și parteneriat civic-teologic întemeiat pe Imago Dei și discernământ (proairesis).',
+    responsibleActors:
+      'ANCOM, CNA (Consiliul Național al Audiovizualului), Comisia Europeană, consorții universitare independente, mass-media de interes public și ierarhia canonică / facultățile de teologie.'
+  },
+  {
+    id: 'op-faza-3',
+    phaseCode: 'Faza III',
+    phaseTitle: 'Închiderea operațională a statului de drept, guvernanța policentrică și individuarea colectivă',
+    horizon: 'Orizont strategic (3–10 ani)',
+    targetObjective:
+      'Eliminarea rădăcinii istorice a „formelor fără fond”, consolidarea barierei instituționale în matricea lui Cipolla (atragerea în Cadranul I, +X, +Y) și refacerea axei Ego–Sine colective.',
+    concreteIntervention:
+      'Garantarea închiderii operaționale autentice a justiției și administrației (Luhmann); descentralizare și guvernanță policentrică (Ostrom) pentru redarea autoeficacității politice (Bandura); module curriculare obligatorii de igienă a atenției digitale, gândire critică și asumarea onestă a istoriei totalitarismelor (depășirea incapacității de a ține doliu și a sindromului Puer Aeternus).',
+    responsibleActors:
+      'Ministerul Educației, sistemul judiciar și administrativ, Biserica Ortodoxă Română și cultele recunoscute, mediul universitar, administrația publică locală și societatea civilă.'
+  }
+];
+
+export const NEUROCOGNITIVE_PACING_RULES = [
+  {
+    id: 'pacing-1',
+    title: '1. Izolarea vizuală a fiecărui mecanism cauzal',
+    description:
+      'Fiecare cadru vectorial prezintă un singur raport cauzal dominant înainte de adăugarea stratului următor, prevenind supraîncărcarea memoriei de lucru în cortexul prefrontal dorsolateral (dlPFC).'
+  },
+  {
+    id: 'pacing-2',
+    title: '2. Pauzele alostatice de integrare (1,5–2 secunde)',
+    description:
+      'Între secvențele de tensiune (marcate în roșu-vermilion #F01E1E) și cele de sinteză (marcate în galben-muștar #E5B822) sunt inserate respirații vizuale și cadraje stabile pe fundalul #F6F5EE pentru activarea Sistemului 2 deliberativ.'
+  },
+  {
+    id: 'pacing-3',
+    title: '3. Diferențierea auditivă cromatică (40 Hz sub-bass versus violoncel și pian)',
+    description:
+      'Buclele de capturare și panică (Track A, #F01E1E) sunt însoțite de un puls sub-bass de 40 Hz și zgomot alb granular discret (tensiune amigdaliană), care se dizolvă la comutarea pe Track B (#E5B822) în acorduri acustice calde de violoncel și pian minimalist (reglare vagală și prefrontală).'
+  }
+];
+
+export const ACT_5_CINEMATIC_SCRIPT: CinematicScene[] = [
+  {
+    id: 'act5-scene-1',
+    sceneNumber: 1,
+    title: 'Scena 1 (Colapsul prefrontal și deturnarea atenției)',
+    timecode: '00:00 – 01:15',
+    cameraAndComposition:
+      'Travelling lent de apropiere (push-in) pe o siluetă umană profilată în gravură vectorială 2D pe fundalul alb-crem (#F6F5EE). Rețeaua corticală superioară (dlPFC) se estompează în gri-ardezie (#6E7376), în timp ce nodul subcortical al amigdalei pulsează în roșu-vermilion (#F01E1E), proiectând fascicule vectoriale către un ecran digital vertical.',
+    colorAndSymbols:
+      'Contrast strict între contururile negru-cărbune (#222426), rețeaua prefrontală devitalizată (#8C9BA5) și bucla dopaminergică în roșu-vermilion (#F01E1E) care îngustează câmpul vizual într-un tunel cognitiv.',
+    soundDesign:
+      'Puls sub-bass la 40 Hz combinat cu un freamăt granular de notificări digitale accelerate, sugerând hipervigilența rețelei de detecție a relevanței și suprimarea latenței de reflecție.',
+    voiceoverScript:
+      '„În momentul impactului unei crize acute, un organism social deja epuizat de uzura alostatică nu mai dispune de latența neurobiologică necesară deliberării. Sub asaltul fluxurilor algoritmice construite pe frică și indignare morală, descărcările fazice de dopamină și catecolamine deconectează funcțional cortexul prefrontal dorsolateral. Judecata analitică a Sistemului 2 se stinge, iar comanda aparatului decizional este preluată integral de amigdala bazolaterală și de reflexele automate de supraviețuire.”',
+    dominantAccent: 'red'
+  },
+  {
+    id: 'act5-scene-2',
+    sceneNumber: 2,
+    title: 'Scena 2 (Arhetipul Puer Aeternus și iluzia neutralității izolaționiste)',
+    timecode: '01:15 – 02:15',
+    cameraAndComposition:
+      'Cadru simetric în stil xilogravură arhitecturală: o cupolă de sticlă fragilă și iluzorie înconjoară silueta colectivă, în timp ce la orizont se ridică geometria sumbră a vectorului revizionist extern. Cupola se fisurează de la bază spre vârf.',
+    colorAndSymbols:
+      'Cupola iluzorie trasată în linii punctate (#6E7376) și fisuri în roșu-vermilion (#F01E1E); simbolul pendulului blocat între neputința învățată și așteptarea magică a unui Salvator providențial.',
+    soundDesign:
+      'Rezonanță metalică rece, întreruptă de tăceri suspendate și de vibrația joasă a fisurării sticlei, evocând negarea maniacală a pericolului real.',
+    voiceoverScript:
+      '„În inconștientul cultural, acest blocaj prefrontal activează sindromul Puer Aeternus colectiv: refuzul maturității istorice și al construcției instituționale metodice în favoarea gândirii magice. Capturat de nostalgia după un stat paternalist tutelar, imaginarul vulnerabilizat caută scurtătura miraculoasă a unui Salvator providențial și se refugiază în fantezia unei neutralități izolaționiste. Însă, în proximitatea unui imperiu revizionist, dezarmarea morală și decuplarea de alianțele democratice nu aduc pacea, ci paralizia instituțională a statului-țintă.”',
+    dominantAccent: 'slate'
+  },
+  {
+    id: 'act5-scene-3',
+    sceneNumber: 3,
+    title: 'Scena 3 (Track A, Antilumea și prăbușirea în enantiodromie)',
+    timecode: '02:15 – 03:20',
+    cameraAndComposition:
+      'Panoramare verticală descendentă pe diagrama bifurcației (Figura 6) și pe axa verticală a matricei lui Cipolla (Figura 5). Săgeata groasă în roșu-vermilion (strokeWidth 4) străpunge bariera instituțională fisurată și se închide într-o spirală recursivă în Cadranul III (-X, -Y).',
+    colorAndSymbols:
+      'Dominanță de roșu-vermilion (#F01E1E) pe traseul superior al buclei Track A și în Cadranul III al autosabotajului colectiv; oglinda inversată a Antilumii (Russkii Antimir).',
+    soundDesign:
+      'Crescendo ritmic de zgomot alb filtrat și puls sub-bass, oprindu-se brusc într-o pauză alostatică de 2 secunde de liniște completă înainte de tranziția spre Track B.',
+    voiceoverScript:
+      '„Fără intervenția reglării executive, procesarea se prăbușește pe Traseul A: bucla reactivă dezadaptativă. Prin legea enantiodromiei, respingerea conformismului de fațadă al elitelor extractive se răstoarnă violent în contrariul său absolut: demolarea însăși a ordinii constituționale. Crezând că îi pedepsește pe spoliatorii interni, cetățeanul capturat cognitiv cade vertical în Cadranul III al matricei lui Cipolla, devenind agentul involuntar al propriei sale ruine și al Antilumii.”',
+    dominantAccent: 'red'
+  },
+  {
+    id: 'act5-scene-4',
+    sceneNumber: 4,
+    title: 'Scena 4 (Track B, capacitatea negativă și medierea ternară suverană)',
+    timecode: '03:20 – 04:30',
+    cameraAndComposition:
+      'Comutare luminoasă în nodul de bifurcație: traseul inferior din Figura 6 se deschide larg în galben-muștar (#E5B822), conectând cortexul prefrontal dorsolateral cu o rețea policentrică de noduri comunitare și instituționale care susțin frontonul modernității organice (Figura 7).',
+    colorAndSymbols:
+      'Fluxuri vectoriale stabile în galben-muștar (#E5B822) și contururi ferme în negru-cărbune (#222426) pe fundalul cald (#F6F5EE), ilustrând echilibrul axei Ego–Sine și spațiul medierii semiotice ternare.',
+    soundDesign:
+      'Dizolvarea completă a zgomotului de fond; intrarea unei linii calde de violoncel solo și a unor acorduri rare de pian acustic, inducând calm parasimpatic și claritate cognitivă.',
+    voiceoverScript:
+      '„Dar această traiectorie nu este o fatalitate. În clipa în care decompresia alostatică și capacitatea negativă — puterea de a tolera incertitudinea fără panică — interpun o pauză metacognitivă, cortexul prefrontal preia din nou conducerea și deschide Traseul B. Stimulul este extras din urgența fricii și este verificat în comunități epistemice deschise, în regimul medierii ternare și al legii impersonale drepte. Aici, la întâlnirea dintre adevărul istoric asumat și demnitatea inalienabilă a persoanei, începe reconstrucția rezilienței și sinteza modernității organice.”',
+    dominantAccent: 'gold'
+  }
+];
+

@@ -80,3 +80,40 @@ export interface BibliographyItem {
   fullCitation: string;
   domain: 'Sociologie instituțională' | 'Neuroștiințe și psihobiologie' | 'Cibernetică și semiotică' | 'Psihologie analitică și memorie' | 'Geopolitică și ideologie rusă';
 }
+
+export interface ExecutivePoint {
+  id: string;
+  title: string;
+  takeaway: string;
+  implication: string;
+}
+
+export interface ChapterExecutiveSummary {
+  chapterNumber: number;
+  chapterTitle: string;
+  actTitle: string;
+  executiveSynthesis: ExecutivePoint[];
+}
+
+export interface InstitutionalProtocolRow {
+  id: string;
+  phaseCode: 'Faza I' | 'Faza II' | 'Faza III';
+  phaseTitle: string;
+  horizon: string;
+  targetObjective: string;
+  concreteIntervention: string;
+  responsibleActors: string;
+}
+
+export interface CinematicScene {
+  id: string;
+  sceneNumber: number;
+  title: string;
+  timecode: string;
+  cameraAndComposition: string;
+  colorAndSymbols: string;
+  soundDesign: string;
+  voiceoverScript: string;
+  dominantAccent: 'red' | 'gold' | 'slate';
+}
+

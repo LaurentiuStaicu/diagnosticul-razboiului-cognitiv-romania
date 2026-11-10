@@ -54,10 +54,10 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <button
                   type="button"
                   onClick={onOpenInteractivePage}
-                  className="px-7 py-4 text-sm sm:text-base font-serif font-bold text-[#222426] bg-[#E5B822] border-2 border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer inline-flex items-center gap-3 whitespace-nowrap shrink-0"
+                  className="w-full sm:w-auto px-4 sm:px-7 py-3.5 sm:py-4 text-xs sm:text-base font-serif font-bold text-[#222426] bg-[#E5B822] border-2 border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer inline-flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3"
                 >
                   <span>Deschide pagina interactivă a monografiei</span>
-                  <ArrowRight className="w-5 h-5 shrink-0" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                 </button>
               </div>
 

@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { InteractiveFigures } from './InteractiveFigures';
 import { VideoSynthesisBox } from './VideoSynthesisBox';
 import { SocialShareButtons } from './SocialShareButtons';
-import { ALL_SUBCHAPTER_STEPS } from '../data/tablesAndReference';
+import {
+  ALL_SUBCHAPTER_STEPS,
+  ACT_5_CINEMATIC_SCRIPT,
+  NEUROCOGNITIVE_PACING_RULES
+} from '../data/tablesAndReference';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface FourActsPresentationProps {
@@ -268,6 +272,7 @@ export const FourActsPresentation: React.FC<FourActsPresentationProps> = ({
   const [internalActNum, setInternalActNum] = useState<1 | 2 | 3 | 4>(1);
   const activeActNum = controlledActNum ?? internalActNum;
   const [selectedFigureInAct, setSelectedFigureInAct] = useState<number>(1);
+  const actStageRef = useRef<HTMLDivElement | null>(null);
 
   const currentAct =
     FOUR_ACTS_BLUEPRINT.find((a) => a.actNumber === activeActNum) || FOUR_ACTS_BLUEPRINT[0];
@@ -281,6 +286,11 @@ export const FourActsPresentation: React.FC<FourActsPresentationProps> = ({
     if (targetAct && targetAct.figures.length > 0) {
       setSelectedFigureInAct(targetAct.figures[0]);
     }
+    if (typeof window !== 'undefined' && window.innerWidth < 1024 && actStageRef.current) {
+      setTimeout(() => {
+        actStageRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 40);
+    }
   };
 
   const actSteps = ALL_SUBCHAPTER_STEPS.filter((s) =>
@@ -290,13 +300,13 @@ export const FourActsPresentation: React.FC<FourActsPresentationProps> = ({
   return (
     <div className="space-y-6">
       {/* 4-Act Cinematic Progression Selector */}
-      <div className="bg-[#F4F1EA] border-2 border-[#222426] p-5 sm:p-6">
+      <div className="bg-[#F4F1EA] border-2 border-[#222426] p-4 sm:p-6">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 mb-5 border-b border-[#222426]">
           <div>
             <div className="text-xs font-mono text-[#6E7376] mb-1">
               Arhitectura de prezentare și dinamică vizuală (Secțiunea 3 din Master Blueprint)
             </div>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#222426]">
+            <h2 className="font-serif text-xl sm:text-3xl font-bold text-[#222426]">
               Prezentare progresivă în 4 acte logice (Dezvăluire sistemică)
             </h2>
           </div>
@@ -352,16 +362,20 @@ export const FourActsPresentation: React.FC<FourActsPresentationProps> = ({
       </div>
 
       {/* Active Act Stage */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div
+        ref={actStageRef}
+        id="active-act-stage"
+        className="scroll-mt-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+      >
         {/* Left 6 Cols: Narrative Voiceover, Dual Register Matrix & Subchapter Anchors */}
         <div className="lg:col-span-6 space-y-6">
-          <div className="bg-[#F6F5EE] border-2 border-[#222426] p-6 space-y-5">
+          <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-6 space-y-5">
             <div className="border-b border-[#D0D5D9] pb-4 space-y-3">
               <div>
                 <div className="text-xs font-mono text-[#6E7376] mb-1">
                   {currentAct.subtitle}
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-[#222426]">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#222426]">
                   {currentAct.title}
                 </h3>
               </div>
@@ -524,6 +538,108 @@ export const FourActsPresentation: React.FC<FourActsPresentationProps> = ({
           />
         </div>
       </div>
+
+      {/* ACT V CINEMATIC SCRIPT & NEUROCOGNITIVE PACING DIRECTIVES */}
+      <div className="bg-[#F4F1EA] border-2 border-[#222426] p-4 sm:p-6 space-y-6">
+        <div className="border-b border-[#222426] pb-4">
+          <div className="text-xs font-mono text-[#6E7376] mb-1">
+            Desfășurător regizoral și design sonor neurocognitiv (Extensia dramaturgică a Capitolului 5 · Durată estimată 04:30)
+          </div>
+          <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#222426]">
+            Regia dramaturgică a Actului V (Blocajul decizional în criză, Puer Aeternus și bifurcația sistemică)
+          </h3>
+          <p className="text-xs sm:text-sm text-[#6E7376] mt-1 leading-relaxed">
+            Acest desfășurător regizoral transpune dramaturgic tranziția de la mecanismele Umbrei colective (Capitolul 4) la bifurcația neurocognitivă în criză acută (Capitolul 5, Track A vs. Track B), integrând regulile de ritm neurocognitiv și contrastul acustic dintre frecvențele de panică limbică (40 Hz) și rezonanța instrumentală organică.
+          </p>
+        </div>
+
+        {/* 3 Neurocognitive Pacing Rules */}
+        <div>
+          <div className="text-xs font-mono uppercase tracking-wider text-[#6E7376] mb-2.5">
+            Reguli de ritm neurocognitiv și ancorare somatică (Pacing regizoral)
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {NEUROCOGNITIVE_PACING_RULES.map((rule) => (
+              <div
+                key={rule.id}
+                className="p-4 bg-[#F6F5EE] border border-[#222426] space-y-1.5"
+              >
+                <div className="font-serif text-sm font-bold text-[#222426]">
+                  {rule.title}
+                </div>
+                <p className="text-xs text-[#2C3539] leading-relaxed">
+                  {rule.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 4 Cinematic Scenes of Act V */}
+        <div>
+          <div className="text-xs font-mono uppercase tracking-wider text-[#6E7376] mb-2.5">
+            Desfășurătorul celor 4 scene cinematice (Timecode 00:00 – 04:30)
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            {ACT_5_CINEMATIC_SCRIPT.map((scene) => (
+              <div
+                key={scene.id}
+                className="p-4 sm:p-5 bg-[#F6F5EE] border-2 border-[#222426] space-y-3 flex flex-col justify-between"
+              >
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-[#D0D5D9]">
+                    <span className="font-serif text-base font-bold text-[#222426]">
+                      {scene.title}
+                    </span>
+                    <span className="px-2 py-0.5 text-xs font-mono font-bold bg-[#222426] text-[#E5B822]">
+                      {scene.timecode}
+                    </span>
+                  </div>
+
+                  <div className="space-y-2 text-xs">
+                    <div className="p-2.5 bg-[#F4F1EA] border border-[#D0D5D9]">
+                      <span className="font-mono font-semibold text-[#6E7376] block mb-0.5">
+                        Cameră și compoziție vizuală
+                      </span>
+                      <span className="text-[#222426] leading-relaxed">
+                        {scene.cameraAndComposition}
+                      </span>
+                    </div>
+
+                    <div className="p-2.5 bg-[#F4F1EA] border border-[#D0D5D9]">
+                      <span className="font-mono font-semibold text-[#6E7376] block mb-0.5">
+                        Culoare și simbolistică arhetipală
+                      </span>
+                      <span className="text-[#222426] leading-relaxed">
+                        {scene.colorAndSymbols}
+                      </span>
+                    </div>
+
+                    <div className="p-2.5 bg-[#F4F1EA] border border-[#222426]">
+                      <span className="font-mono font-semibold text-[#222426] block mb-0.5">
+                        Design sonor neurocognitiv
+                      </span>
+                      <span className="text-[#222426] leading-relaxed">
+                        {scene.soundDesign}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-[#222426]">
+                  <div className="text-[11px] font-mono font-semibold text-[#F01E1E] mb-1">
+                    Script narativ (Voiceover)
+                  </div>
+                  <p className="font-serif text-xs sm:text-sm italic text-[#222426] leading-relaxed">
+                    „{scene.voiceoverScript}”
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+

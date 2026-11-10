@@ -60,7 +60,7 @@ export const FIGURE_METADATA: Record<
     id: 4,
     title: 'Figura 4 (Conversia funcțională a resurselor latente din Umbra colectivă)',
     subtitle:
-      'Arhitectura de mediere instituțională și metacognitivă pe axa Ego–Sine (selectați nodurile în diagrama vectorială)',
+      'Arhitectura de mediere instituțională și metacognitivă pe axa Ego–Sine și conversia fluxurilor psihodinamice',
     chapterRef: 'Capitolul 4 (Subcapitolul 4.2)',
     pdfPage: 24,
     caption:
@@ -202,6 +202,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
   const [fig7ActivePhase, setFig7ActivePhase] = useState<1 | 2 | 3>(1);
   const [fig7SelectedNode, setFig7SelectedNode] = useState<string>('faza1');
 
+  // Mobile responsive SVG display mode ('fit' scales cleanly to phone screen; 'pan' enables horizontal zoom)
+  const [mobileSvgMode, setMobileSvgMode] = useState<'fit' | 'pan'>('fit');
+  const svgClass =
+    mobileSvgMode === 'fit'
+      ? 'w-full h-auto select-none'
+      : 'w-full h-auto min-w-[660px] select-none';
+
   return (
     <div className="bg-[#F4F1EA] border border-[#222426] p-5 sm:p-6">
       {showSelector && onSelectFigure && (
@@ -239,13 +246,38 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           {meta.title}
         </h3>
         <p className="text-xs sm:text-sm text-[#6E7376] mt-1">{meta.subtitle}</p>
-        <div className="mt-3 pt-2.5 border-t border-[#D0D5D9]">
+        <div className="mt-3 pt-2.5 border-t border-[#D0D5D9] flex flex-wrap items-center justify-between gap-2">
           <SocialShareButtons
             url={`https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/share/figura-${meta.id}.html`}
             title={`${meta.title} (Diagnosticul războiului cognitiv în România)`}
             label={`Distribuie Figura ${meta.id} pe`}
             compact={!showSelector}
           />
+          <div className="flex md:hidden items-center gap-1 text-[11px] font-mono">
+            <span className="text-[#6E7376] mr-1">Afișare mobilă</span>
+            <button
+              type="button"
+              onClick={() => setMobileSvgMode('fit')}
+              className={`px-2 py-1 border cursor-pointer ${
+                mobileSvgMode === 'fit'
+                  ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
+                  : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
+              }`}
+            >
+              Adaptat la ecran
+            </button>
+            <button
+              type="button"
+              onClick={() => setMobileSvgMode('pan')}
+              className={`px-2 py-1 border cursor-pointer ${
+                mobileSvgMode === 'pan'
+                  ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
+                  : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
+              }`}
+            >
+              Lupă panoramabilă
+            </button>
+          </div>
         </div>
       </div>
 
@@ -285,7 +317,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
               viewBox="0 0 880 510"
-              className="w-full h-auto min-w-[640px] select-none"
+              className={svgClass}
               role="img"
               aria-label={meta.title}
             >
@@ -730,7 +762,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
               viewBox="0 0 820 450"
-              className="w-full h-auto min-w-[600px] select-none"
+              className={svgClass}
               role="img"
               aria-label={meta.title}
             >
@@ -1055,7 +1087,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
               viewBox="0 0 900 410"
-              className="w-full h-auto min-w-[660px] select-none"
+              className={svgClass}
               role="img"
               aria-label={meta.title}
             >
@@ -1519,7 +1551,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
               viewBox="0 0 920 470"
-              className="w-full h-auto min-w-[680px] select-none"
+              className={svgClass}
               role="img"
               aria-label={meta.title}
             >
@@ -1911,7 +1943,23 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </g>
             </svg>
 
-            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F4F1EA] p-3.5">
+            {/* Legend for Order-1 vs Order-2 Psychodynamic Flows */}
+            <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono bg-[#F4F1EA] border border-[#D0D5D9] p-3">
+              <div className="flex items-center gap-2">
+                <span className="inline-block w-6 h-0.5 bg-[#F01E1E] border-b border-dashed border-[#F01E1E] shrink-0" />
+                <span className="text-[#222426]">
+                  Flux de ordinul 1 (fără mediere, regresie în enantiodromie și revoltă anomizantă)
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="inline-block w-6 h-1 bg-[#D9A714] shrink-0" />
+                <span className="text-[#222426]">
+                  Flux de ordinul 2 (procesat prin cele 3 filtre în modernitate organică pe axa Ego–Sine)
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-3 pt-4 border-t border-[#222426] bg-[#F4F1EA] p-3.5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
                 Nod selectat în arhitectura conversiei (Figura 4)
               </div>
@@ -1976,7 +2024,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
               viewBox="0 0 880 540"
-              className="w-full h-auto min-w-[640px] select-none"
+              className={svgClass}
               role="img"
               aria-label={meta.title}
             >
@@ -1991,7 +2039,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 width="740"
                 height="450"
                 fill="none"
-                stroke="#D0D5D9"
+                stroke="#222426"
                 strokeWidth="1.5"
               />
 
@@ -2012,23 +2060,23 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="255"
-                  y="95"
+                  y="92"
                   textAnchor="middle"
-                  className="font-sans text-[15px] font-bold fill-[#222426]"
+                  className="font-sans text-[14.5px] font-bold fill-[#222426]"
                 >
-                  Cetățean vulnerabil (-X, +Y)
+                  Cadranul II (-X, +Y, Cetățean vulnerabil / Naivul)
                 </text>
                 <text
                   x="255"
-                  y="120"
+                  y="117"
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
-                  Pierdere proprie / Beneficiu pentru alții
+                  Pierdere proprie (-X) / Beneficiu societal (+Y)
                 </text>
                 <text
                   x="255"
-                  y="142"
+                  y="139"
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
@@ -2053,23 +2101,23 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="625"
-                  y="95"
+                  y="92"
                   textAnchor="middle"
-                  className="font-sans text-[15px] font-bold fill-[#222426]"
+                  className="font-sans text-[14.5px] font-bold fill-[#222426]"
                 >
-                  Cooperare inteligentă (+X, +Y)
+                  Cadranul I (+X, +Y, Cooperare inteligentă)
                 </text>
                 <text
                   x="625"
-                  y="120"
+                  y="117"
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
-                  Beneficiu propriu / Beneficiu colectiv
+                  Beneficiu propriu (+X) / Beneficiu colectiv (+Y)
                 </text>
                 <text
                   x="625"
-                  y="142"
+                  y="139"
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#222426]"
                 >
@@ -2096,9 +2144,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="255"
                   y="395"
                   textAnchor="middle"
-                  className="font-sans text-[15px] font-bold fill-[#F01E1E]"
+                  className="font-sans text-[14.5px] font-bold fill-[#F01E1E]"
                 >
-                  Autosabotaj colectiv (-X, -Y)
+                  Cadranul III (-X, -Y, Autosabotaj / Prostul)
                 </text>
                 <text
                   x="255"
@@ -2106,7 +2154,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#222426]"
                 >
-                  Pierdere proprie / Distrugere colectivă
+                  Pierdere proprie (-X) / Daună societală (-Y)
                 </text>
                 <text
                   x="255"
@@ -2114,7 +2162,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
-                  Vot punitiv antiinstituțional și anomie
+                  Vot punitiv antiinstituțional și anomie (Legea a III-a)
                 </text>
               </g>
 
@@ -2137,9 +2185,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="625"
                   y="395"
                   textAnchor="middle"
-                  className="font-sans text-[15px] font-bold fill-[#222426]"
+                  className="font-sans text-[14.5px] font-bold fill-[#222426]"
                 >
-                  Actor extractiv (+X, -Y)
+                  Cadranul IV (+X, -Y, Actor extractiv / Banditul)
                 </text>
                 <text
                   x="625"
@@ -2147,7 +2195,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
-                  Beneficiu propriu / Pierdere colectivă
+                  Câștig propriu (+X) / Daună societală (-Y)
                 </text>
                 <text
                   x="625"
@@ -2155,11 +2203,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
-                  Extracție de rentă și război cognitiv
+                  Extracție de rentă și vector de război cognitiv
                 </text>
               </g>
 
-              {/* CARTESIAN AXES (exact match to PDF p. 27) */}
+              {/* CARTESIAN AXES (exact match to PDF p. 27, zero label collision) */}
               {/* Horizontal Axis -X to +X */}
               <line
                 x1="50"
@@ -2183,7 +2231,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* Axis Labels */}
+              {/* Axis Labels with opaque backing so they never collide with barrier badges */}
               <text
                 x="440"
                 y="22"
@@ -2200,18 +2248,22 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               >
                 -Y (Daună societală)
               </text>
+
+              <rect x="74" y="236" width="138" height="22" fill="#F6F5EE" />
               <text
-                x="115"
-                y="258"
-                textAnchor="middle"
+                x="78"
+                y="251"
+                textAnchor="start"
                 className="font-sans text-[12px] font-bold fill-[#222426]"
               >
                 -X (Pierdere proprie)
               </text>
+
+              <rect x="676" y="236" width="130" height="22" fill="#F6F5EE" />
               <text
-                x="760"
-                y="258"
-                textAnchor="middle"
+                x="802"
+                y="251"
+                textAnchor="end"
                 className="font-sans text-[12px] font-bold fill-[#222426]"
               >
                 +X (Câștig propriu)
@@ -2229,7 +2281,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 markerEnd="url(#arrow-dark)"
               />
               <rect
-                x="390"
+                x="446"
                 y="290"
                 width="195"
                 height="26"
@@ -2238,7 +2290,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 strokeWidth="1.5"
               />
               <text
-                x="487"
+                x="543"
                 y="307"
                 textAnchor="middle"
                 className="font-sans text-[11.5px] font-bold fill-[#222426]"
@@ -2246,7 +2298,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 Presiune de spoliere sistemică
               </text>
 
-              {/* Institutional Barrier on Left -X Axis */}
+              {/* Institutional Barrier on Left -X Axis (Repositioned to x=224..424 so zero collision with -X label) */}
               {!fig5BarrierIntact ? (
                 <g>
                   <line
@@ -2259,44 +2311,45 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     strokeDasharray="10 6"
                   />
                   <rect
-                    x="155"
+                    x="224"
                     y="256"
-                    width="195"
+                    width="202"
                     height="26"
-                    fill="#F6F5EE"
+                    rx="3"
+                    fill="#0F172A"
                     stroke="#F01E1E"
-                    strokeWidth="1.5"
+                    strokeWidth="2"
                   />
                   <text
-                    x="252"
+                    x="325"
                     y="273"
                     textAnchor="middle"
-                    className="font-sans text-[11.5px] font-bold fill-[#F01E1E]"
+                    className="font-sans text-[11.5px] font-bold fill-[#F6F5EE]"
                   >
                     Barieră instituțională fisurată
                   </text>
 
                   {/* Vertical Red Vector: Alunecare in autosabotaj (Quadrant II -> Quadrant III) */}
                   <line
-                    x1="210"
+                    x1="158"
                     y1="168"
-                    x2="210"
+                    x2="158"
                     y2="358"
                     stroke="#F01E1E"
-                    strokeWidth="3.5"
+                    strokeWidth="4"
                     markerEnd="url(#arrow-red)"
                   />
                   <rect
-                    x="130"
+                    x="80"
                     y="306"
-                    width="160"
+                    width="158"
                     height="26"
                     fill="#F6F5EE"
                     stroke="#F01E1E"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="210"
+                    x="159"
                     y="323"
                     textAnchor="middle"
                     className="font-sans text-[11.5px] font-bold fill-[#F01E1E]"
@@ -2316,16 +2369,17 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     strokeWidth="6"
                   />
                   <rect
-                    x="145"
+                    x="214"
                     y="256"
-                    width="220"
+                    width="216"
                     height="26"
+                    rx="3"
                     fill="#E5B822"
                     stroke="#222426"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="255"
+                    x="322"
                     y="273"
                     textAnchor="middle"
                     className="font-sans text-[11.5px] font-bold fill-[#222426]"
@@ -2406,7 +2460,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
               viewBox="0 0 920 480"
-              className="w-full h-auto min-w-[680px] select-none"
+              className={svgClass}
               role="img"
               aria-label={meta.title}
             >
@@ -2493,14 +2547,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Bifurcation diagonal arrows from Nod de bifurcatie (x=213) to Track A (y=130) and Track B (y=350) */}
+              {/* Bifurcation diagonal arrows from Nod de bifurcatie (x=213) to Track A (y=130, thicker strokeWidth=4 representing impulsive pull) and Track B (y=350) */}
               <line
                 x1="213"
                 y1="275"
                 x2="290"
                 y2="132"
                 stroke="#F01E1E"
-                strokeWidth={fig6ActiveTrack === 'A' ? '3.5' : '2'}
+                strokeWidth={fig6ActiveTrack === 'A' ? '4.5' : '3'}
                 markerEnd="url(#arrow-red)"
               />
               <line
@@ -2919,7 +2973,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
               viewBox="0 0 920 480"
-              className="w-full h-auto min-w-[680px] select-none"
+              className={svgClass}
               role="img"
               aria-label={meta.title}
             >

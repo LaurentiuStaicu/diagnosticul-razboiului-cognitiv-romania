@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import {
   ALL_SUBCHAPTER_STEPS,
   GLOSSARY_CONCEPTS,
-  BIBLIOGRAPHY_DATA
+  BIBLIOGRAPHY_DATA,
+  CHAPTER_EXECUTIVE_SUMMARIES,
+  OPERATIONAL_PROTOCOL_TABLE
 } from './data/tablesAndReference';
 import { StratumId, BibliographyItem } from './data/types';
 import { InteractiveFigures, FIGURE_METADATA } from './components/InteractiveFigures';
@@ -14,8 +16,13 @@ import { LandingCoverPage } from './components/LandingCoverPage';
 import { VideoSynthesisBox } from './components/VideoSynthesisBox';
 import { SocialShareButtons } from './components/SocialShareButtons';
 import {
+  ContextualTooltip,
+  INLINE_GLOSSARY_PATTERNS
+} from './components/ContextualTooltip';
+import {
   ArrowLeft,
   ArrowRight,
+  ArrowUp,
   Search,
   BookOpen,
   X
@@ -23,6 +30,7 @@ import {
 
 type ActiveNavView = 'parcurs' | 'diagrame' | 'tabele' | 'glosar' | 'pdf';
 type ParcursSubMode = 'subcapitole' | 'patru-acte';
+type AudienceReadingMode = 'academic' | 'executive';
 
 /**
  * Matches a parenthetical string or author label against BIBLIOGRAPHY_DATA
@@ -192,12 +200,51 @@ export function App() {
   const [selectedActFilter, setSelectedActFilter] = useState<number | 'ALL'>('ALL');
   const [selectedStratumHighlight, setSelectedStratumHighlight] = useState<StratumId | 'ALL'>('ALL');
   const [readingTab, setReadingTab] = useState<'integral' | 'registre' | 'ambele'>('ambele');
+  const [audienceMode, setAudienceMode] = useState<AudienceReadingMode>('academic');
   const [activeConceptId, setActiveConceptId] = useState<string>(
     initialHash.activeConceptId ?? 'al-saselea-domeniu'
   );
   const [selectedAuthorCitation, setSelectedAuthorCitation] = useState<string | null>(null);
   const [labFigureId, setLabFigureId] = useState<number>(initialHash.labFigureId ?? 1);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
+
+  // Refs for accurate mobile & desktop scroll positioning
+  const readingStageRef = useRef<HTMLElement | null>(null);
+  const activeStepButtonRef = useRef<HTMLButtonElement | null>(null);
+  const citationDossierRef = useRef<HTMLDivElement | null>(null);
+  const conceptCardRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToElementOnMobile = useCallback((targetRef: React.RefObject<HTMLElement | null>) => {
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      setTimeout(() => {
+        targetRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 60);
+    }
+  }, []);
+
+  const scrollToReadingStage = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    setTimeout(() => {
+      if (readingStageRef.current) {
+        readingStageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 40);
+  }, []);
+
+  // Center the active step button in the horizontal rail whenever currentStepNumber changes
+  useEffect(() => {
+    if (!isPortalOpen || activeView !== 'parcurs' || parcursSubMode !== 'subcapitole') return;
+    const timer = setTimeout(() => {
+      activeStepButtonRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest'
+      });
+    }, 80);
+    return () => clearTimeout(timer);
+  }, [currentStepNumber, isPortalOpen, activeView, parcursSubMode]);
 
   const applyHashState = useCallback(() => {
     const parsed = parseHashState(window.location.hash);
@@ -237,12 +284,20 @@ export function App() {
     }
 
     setIsSearchOpen((prev) => (prev === false ? prev : false));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+    if (parsed.currentStepNumber !== undefined) {
+      scrollToReadingStage();
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [scrollToReadingStage]);
 
   useEffect(() => {
     if (initialHash.isPortalOpen) {
-      window.scrollTo({ top: 0, behavior: 'auto' });
+      if (initialHash.currentStepNumber !== undefined && window.innerWidth < 1024) {
+        scrollToReadingStage();
+      } else {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+      }
     }
     window.addEventListener('hashchange', applyHashState);
     window.addEventListener('popstate', applyHashState);
@@ -250,7 +305,7 @@ export function App() {
       window.removeEventListener('hashchange', applyHashState);
       window.removeEventListener('popstate', applyHashState);
     };
-  }, [applyHashState, initialHash.isPortalOpen]);
+  }, [applyHashState, initialHash.isPortalOpen, initialHash.currentStepNumber, scrollToReadingStage]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -279,6 +334,10 @@ export function App() {
   const currentStep =
     ALL_SUBCHAPTER_STEPS.find((s) => s.stepNumber === currentStepNumber) ||
     ALL_SUBCHAPTER_STEPS[0];
+
+  const currentExecutiveSummary =
+    CHAPTER_EXECUTIVE_SUMMARIES.find((s) => s.chapterNumber === currentStep.chapterNumber) ||
+    CHAPTER_EXECUTIVE_SUMMARIES[0];
 
   // Dynamically synchronize <head> OpenGraph & Twitter Card meta tags with the active section, act, or figure
   useEffect(() => {
@@ -419,18 +478,85 @@ export function App() {
         setActiveConceptId((prev) => (prev === firstConcept ? prev : firstConcept));
       }
       updateUrlHash(`pasul-${stepNum}`);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      scrollToReadingStage();
     },
-    [updateUrlHash]
+    [updateUrlHash, scrollToReadingStage]
+  );
+
+  const handleCitationSelect = useCallback(
+    (citationKey: string) => {
+      setSelectedAuthorCitation(citationKey);
+      scrollToElementOnMobile(citationDossierRef);
+    },
+    [scrollToElementOnMobile]
+  );
+
+  const handleConceptSelect = useCallback(
+    (conceptId: string) => {
+      setActiveConceptId(conceptId);
+      scrollToElementOnMobile(conceptCardRef);
+    },
+    [scrollToElementOnMobile]
   );
 
   /**
+   * Renders a plain text segment with inline ContextualTooltip for key glossary terms
+   * (highlighting at most the first occurrence of each term per paragraph to preserve editorial readability)
+   */
+  const renderTextSegmentWithGlossaryTooltips = (
+    textSegment: string,
+    usedConceptsInParagraph: Set<string>,
+    keyPrefix: string
+  ): React.ReactNode => {
+    for (const entry of INLINE_GLOSSARY_PATTERNS) {
+      if (usedConceptsInParagraph.has(entry.conceptId)) continue;
+      const match = entry.regex.exec(textSegment);
+      if (match && match.index !== undefined) {
+        const conceptObj = GLOSSARY_CONCEPTS.find((c) => c.id === entry.conceptId);
+        if (!conceptObj) continue;
+
+        usedConceptsInParagraph.add(entry.conceptId);
+        const before = textSegment.slice(0, match.index);
+        const matchedText = match[0];
+        const after = textSegment.slice(match.index + matchedText.length);
+
+        return (
+          <React.Fragment key={keyPrefix}>
+            {before
+              ? renderTextSegmentWithGlossaryTooltips(
+                  before,
+                  usedConceptsInParagraph,
+                  `${keyPrefix}-b`
+                )
+              : null}
+            <ContextualTooltip
+              conceptId={conceptObj.id}
+              matchedText={matchedText}
+              onSelectConcept={handleConceptSelect}
+            />
+            {after
+              ? renderTextSegmentWithGlossaryTooltips(
+                  after,
+                  usedConceptsInParagraph,
+                  `${keyPrefix}-a`
+                )
+              : null}
+          </React.Fragment>
+        );
+      }
+    }
+    return textSegment;
+  };
+
+  /**
    * Renders a paragraph with interactive parenthetical academic citations (e.g. "(Luhmann, 1995, 2004)" or "Coleman (1990)")
+   * and inline contextual glossary tooltips for key technical concepts.
    */
   const renderParagraphWithCitations = (paragraph: string) => {
     // Match parenthetical segments containing a 4-digit year (1700-2029)
     const citationRegex = /(\([^()]*\b(?:17|18|19|20)\d{2}[a-b]?\b[^()]*\))/g;
     const parts = paragraph.split(citationRegex);
+    const usedConceptsInParagraph = new Set<string>();
 
     return parts.map((part, idx) => {
       if (part.startsWith('(') && part.endsWith(')') && /\b(?:17|18|19|20)\d{2}[a-b]?\b/.test(part)) {
@@ -454,7 +580,7 @@ export function App() {
             <button
               key={idx}
               type="button"
-              onClick={() => setSelectedAuthorCitation(queryKey)}
+              onClick={() => handleCitationSelect(queryKey)}
               title="Selectați pentru a deschide fișa bibliografică în panoul lateral"
               className={`inline font-mono text-[13px] px-1 mx-0.5 border-b border-dotted transition-colors cursor-pointer ${
                 isSelected
@@ -467,7 +593,15 @@ export function App() {
           );
         }
       }
-      return <React.Fragment key={idx}>{part}</React.Fragment>;
+      return (
+        <React.Fragment key={idx}>
+          {renderTextSegmentWithGlossaryTooltips(
+            part,
+            usedConceptsInParagraph,
+            `seg-${idx}`
+          )}
+        </React.Fragment>
+      );
     });
   };
 
@@ -484,9 +618,9 @@ export function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F6F5EE] text-[#222426]">
-      {/* TOP NAVIGATION BAR (Strict 3-Zone Contract) */}
-      <header className="sticky top-0 z-40 bg-[#F6F5EE]/95 backdrop-blur-sm border-b border-[#222426] px-4 sm:px-8 py-3.5 flex items-center justify-between gap-8">
+    <div className="min-h-screen flex flex-col bg-[#F6F5EE] text-[#222426] overflow-x-clip">
+      {/* TOP NAVIGATION BAR (Strict 3-Zone Contract, responsive on narrow mobile screens) */}
+      <header className="sticky top-0 z-40 bg-[#F6F5EE]/95 backdrop-blur-sm border-b border-[#222426] px-3 sm:px-8 py-3 flex items-center justify-between gap-2 sm:gap-8">
         {/* Zone 1: Brand Wordmark (single text element) */}
         <a
           href="#coperta"
@@ -497,7 +631,7 @@ export function App() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
           title="Revenire la coperta principală (Landing page)"
-          className="font-serif text-base sm:text-lg font-bold tracking-tight text-[#222426] whitespace-nowrap shrink-0"
+          className="font-serif text-sm sm:text-lg font-bold tracking-tight text-[#222426] truncate max-w-[62vw] sm:max-w-none"
         >
           Diagnosticul războiului cognitiv în România
         </a>
@@ -584,16 +718,17 @@ export function App() {
         <div className="flex items-center shrink-0">
           <button
             onClick={() => setIsSearchOpen(true)}
-            className="px-3.5 py-2 text-xs font-semibold text-[#222426] bg-[#E5B822] border border-[#222426] hover:bg-[#D9A714] transition-colors whitespace-nowrap shrink-0 cursor-pointer flex items-center gap-2"
+            className="px-2.5 sm:px-3.5 py-1.5 sm:py-2 text-xs font-semibold text-[#222426] bg-[#E5B822] border border-[#222426] hover:bg-[#D9A714] transition-colors whitespace-nowrap shrink-0 cursor-pointer flex items-center gap-1.5 sm:gap-2"
           >
             <Search className="w-3.5 h-3.5" />
-            <span>Căutare în monografie</span>
+            <span className="hidden sm:inline">Căutare în monografie</span>
+            <span className="sm:hidden">Căutare</span>
           </button>
         </div>
       </header>
 
-      {/* Mobile View Switcher (visible below lg) */}
-      <div className="lg:hidden bg-[#F4F1EA] border-b border-[#222426] px-4 py-2 flex items-center gap-2 overflow-x-auto">
+      {/* Mobile View Switcher (sticky below header on phones & tablets < lg) */}
+      <div className="lg:hidden sticky top-[49px] z-30 bg-[#F4F1EA]/95 backdrop-blur-sm border-b border-[#222426] px-3 py-2 flex items-center gap-1.5 overflow-x-auto">
         {(
           [
             { id: 'parcurs', label: 'Parcurs pas cu pas' },
@@ -620,7 +755,7 @@ export function App() {
               }
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className={`px-3 py-1.5 text-xs font-medium border whitespace-nowrap shrink-0 cursor-pointer ${
+            className={`px-2.5 py-1.5 text-xs font-medium border whitespace-nowrap shrink-0 cursor-pointer ${
               activeView === tab.id
                 ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
                 : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
@@ -632,12 +767,12 @@ export function App() {
       </div>
 
       {/* MAIN WORKSPACE CONTAINER */}
-      <main className="flex-1 max-w-[1440px] w-full mx-auto px-4 sm:px-8 py-6 sm:py-8">
+      <main className="flex-1 max-w-[1440px] w-full mx-auto px-3 sm:px-8 py-5 sm:py-8">
         {/* VIEW 1: PARCURS PAS CU PAS (Main Progressive Disclosure Explorer) */}
         {activeView === 'parcurs' && (
           <div className="space-y-6">
             {/* Mode Switcher Bar between 19-Subchapter Analytical Reader & 4-Act Cinematic Presentation */}
-            <div className="bg-[#F4F1EA] border border-[#222426] px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+            <div className="bg-[#F4F1EA] border border-[#222426] px-3.5 sm:px-4 py-3 flex flex-wrap items-center justify-between gap-3">
               <div className="text-xs font-mono text-[#222426]">
                 Arhitectura de explorare a monografiei (Dezvăluire progresivă)
               </div>
@@ -647,7 +782,7 @@ export function App() {
                     setParcursSubMode('subcapitole');
                     updateUrlHash(`pasul-${currentStepNumber}`);
                   }}
-                  className={`px-3.5 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
+                  className={`px-3 py-1.5 text-xs font-medium border transition-colors text-left cursor-pointer ${
                     parcursSubMode === 'subcapitole'
                       ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-semibold'
                       : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
@@ -660,13 +795,13 @@ export function App() {
                     setParcursSubMode('patru-acte');
                     updateUrlHash(`actul-${activeActNumber}`);
                   }}
-                  className={`px-3.5 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
+                  className={`px-3 py-1.5 text-xs font-medium border transition-colors text-left cursor-pointer ${
                     parcursSubMode === 'patru-acte'
                       ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
                       : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
                   }`}
                 >
-                  Prezentare progresivă în 4 acte (Modul cinematic din Master Blueprint)
+                  Prezentare progresivă în 4 acte (Inclusiv regia Actului V)
                 </button>
               </div>
             </div>
@@ -686,13 +821,13 @@ export function App() {
             ) : (
               <>
                 {/* Editorial Banner & 4-Act Architecture Bar */}
-                <section className="bg-[#F4F1EA] border border-[#222426] p-5 sm:p-6">
+                <section className="bg-[#F4F1EA] border border-[#222426] p-4 sm:p-6">
                   <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-5 border-b border-[#D0D5D9]">
                     <div className="max-w-3xl">
                       <div className="text-xs font-mono text-[#6E7376] mb-1.5">
                         Monografie științifică integrată (Versiunea 1.0 · Al șaselea domeniu operațional NATO ACT)
                       </div>
-                      <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#222426] headline-balance leading-tight">
+                      <h1 className="font-serif text-xl sm:text-3xl lg:text-4xl font-bold text-[#222426] headline-balance leading-tight">
                         Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale
                       </h1>
                       <p className="text-xs sm:text-sm text-[#6E7376] mt-2 leading-relaxed">
@@ -705,10 +840,10 @@ export function App() {
                       <div className="text-xs font-mono text-[#6E7376]">
                         Mod de afișare a conținutului
                       </div>
-                      <div className="flex items-center gap-1.5">
+                      <div className="flex flex-wrap items-center gap-1.5">
                         <button
                           onClick={() => setReadingTab('ambele')}
-                          className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+                          className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
                             readingTab === 'ambele'
                               ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
                               : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
@@ -718,7 +853,7 @@ export function App() {
                         </button>
                         <button
                           onClick={() => setReadingTab('integral')}
-                          className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+                          className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
                             readingTab === 'integral'
                               ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
                               : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
@@ -728,13 +863,13 @@ export function App() {
                         </button>
                         <button
                           onClick={() => setReadingTab('registre')}
-                          className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+                          className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
                             readingTab === 'registre'
                               ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
                               : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                           }`}
                         >
-                          Descompunere pe două registre (teoretic și empiric)
+                          Descompunere pe două registre
                         </button>
                       </div>
                     </div>
@@ -797,7 +932,7 @@ export function App() {
                       <div className="text-xs font-mono text-[#222426]">
                         Parcurs secvențial pas cu pas (Pasul curent {currentStep.stepNumber} din 19, {currentStep.code})
                       </div>
-                      <div className="flex items-center gap-1.5 text-xs font-mono">
+                      <div className="flex flex-wrap items-center gap-1.5 text-xs font-mono">
                         <span className="text-[#6E7376]">Filtru straturi cauzale (A, B, C)</span>
                         {(['ALL', 'A', 'B', 'C'] as const).map((st) => (
                           <button
@@ -815,7 +950,7 @@ export function App() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-1.5 overflow-x-auto pb-2">
+                    <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scroll-smooth">
                       {filteredStepsForRail.map((step) => {
                         const isSelected = step.stepNumber === currentStepNumber;
                         const matchesStratum =
@@ -824,6 +959,7 @@ export function App() {
                         return (
                           <button
                             key={step.id}
+                            ref={isSelected ? activeStepButtonRef : null}
                             onClick={() => handleStepSelect(step.stepNumber)}
                             className={`px-2.5 py-1.5 text-xs font-mono border transition-all whitespace-nowrap shrink-0 cursor-pointer ${
                               isSelected
@@ -844,11 +980,15 @@ export function App() {
 
                 {/* TWO-COLUMN ASYMMETRIC READING & SIMULATION WORKSPACE */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                  {/* LEFT COLUMN (7 Cols): Verbatim Text & Dual Register Decomposition */}
+                  {/* LEFT COLUMN (7 Cols): Verbatim Text, Executive Synthesis & Dual Register Decomposition */}
                   <div className="lg:col-span-7 space-y-6">
-                    <article className="bg-[#F6F5EE] border border-[#222426] p-6 sm:p-8">
+                    <article
+                      id="reading-stage"
+                      ref={readingStageRef}
+                      className="scroll-mt-28 bg-[#F6F5EE] border border-[#222426] p-4 sm:p-8"
+                    >
                       {/* Step Header & Prev/Next Top Controls */}
-                      <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-5 border-b border-[#D0D5D9]">
+                      <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-[#D0D5D9]">
                         <div className="text-xs font-mono text-[#6E7376]">
                           Pasul {currentStep.stepNumber} din 19 · {currentStep.actTitle} · Straturi active ({currentStep.dominantStrata.join(', ')})
                         </div>
@@ -872,6 +1012,37 @@ export function App() {
                         </div>
                       </div>
 
+                      {/* Dual-Audience Reading Mode Toggle: Academic Full Text vs. Executive Synthesis */}
+                      <div className="mb-5 p-3 bg-[#F4F1EA] border border-[#222426] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                        <div className="text-xs font-mono text-[#222426] font-semibold">
+                          Registru de lectură (Comutator dublu pentru cercetători și decidenți)
+                        </div>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          <button
+                            type="button"
+                            onClick={() => setAudienceMode('academic')}
+                            className={`px-3 py-1.5 text-xs font-mono border transition-colors cursor-pointer ${
+                              audienceMode === 'academic'
+                                ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
+                                : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+                            }`}
+                          >
+                            Text integral academic
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setAudienceMode('executive')}
+                            className={`px-3 py-1.5 text-xs font-mono border transition-colors cursor-pointer ${
+                              audienceMode === 'executive'
+                                ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-bold'
+                                : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+                            }`}
+                          >
+                            Sinteză executivă (decidenți)
+                          </button>
+                        </div>
+                      </div>
+
                       {/* Social Share Bar for Current Section */}
                       <div className="mb-5 pb-3 border-b border-[#D0D5D9] flex flex-wrap items-center justify-between gap-2">
                         <SocialShareButtons
@@ -887,7 +1058,7 @@ export function App() {
                           {currentStep.chapterTitle}
                         </div>
                       )}
-                      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#222426] headline-balance leading-snug">
+                      <h2 className="font-serif text-xl sm:text-3xl font-bold text-[#222426] headline-balance leading-snug">
                         {currentStep.title}
                       </h2>
 
@@ -901,10 +1072,102 @@ export function App() {
                         </p>
                       </div>
 
+                      {/* EXECUTIVE SYNTHESIS VIEW (3 Structured Decision Cards + Institutional Protocol Matrix) */}
+                      {audienceMode === 'executive' && (
+                        <div className="mt-6 p-4 sm:p-5 bg-[#F4F1EA] border-2 border-[#222426] space-y-5">
+                          <div className="border-b border-[#222426] pb-3">
+                            <div className="text-xs font-mono font-bold text-[#222426] uppercase tracking-wider">
+                              Sinteză executivă de capitol pentru decidenți instituționali și politici publice
+                            </div>
+                            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#222426] mt-1">
+                              {currentExecutiveSummary.chapterTitle}
+                            </h3>
+                            <p className="text-xs sm:text-sm font-mono text-[#6E7376] mt-1">
+                              {currentExecutiveSummary.actTitle}
+                            </p>
+                          </div>
+
+                          <div className="grid grid-cols-1 gap-3.5">
+                            {currentExecutiveSummary.executiveSynthesis.map((pt, idx) => (
+                              <div
+                                key={pt.id}
+                                className={`p-4 border-2 bg-[#F6F5EE] ${
+                                  idx === 1
+                                    ? 'border-[#F01E1E]'
+                                    : idx === 2
+                                    ? 'border-[#D9A714]'
+                                    : 'border-[#222426]'
+                                }`}
+                              >
+                                <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+                                  <span
+                                    className={`px-2 py-0.5 text-[11px] font-mono font-bold ${
+                                      idx === 1
+                                        ? 'bg-[#F01E1E] text-[#F6F5EE]'
+                                        : idx === 2
+                                        ? 'bg-[#E5B822] text-[#222426]'
+                                        : 'bg-[#222426] text-[#F6F5EE]'
+                                    }`}
+                                  >
+                                    {pt.title}
+                                  </span>
+                                </div>
+                                <p className="font-serif text-sm sm:text-base font-bold text-[#222426] mb-1.5 leading-snug">
+                                  {pt.takeaway}
+                                </p>
+                                <p className="text-xs sm:text-sm text-[#2C3539] leading-relaxed">
+                                  {pt.implication}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* In executive mode, display the Institutional Operationalization Matrix */}
+                          <div className="pt-4 border-t border-[#222426] space-y-3">
+                            <div className="text-xs font-mono font-bold text-[#222426]">
+                              Matricea de operaționalizare instituțională (România și UE: DNSC, ANCOM, CSAT, CNA, Ministerul Educației, Biserica Ortodoxă Română)
+                            </div>
+                            <div className="space-y-2.5">
+                              {OPERATIONAL_PROTOCOL_TABLE.map((row) => (
+                                <div
+                                  key={row.id}
+                                  className="p-3.5 bg-[#F6F5EE] border border-[#222426] text-xs space-y-1.5"
+                                >
+                                  <div className="flex flex-wrap items-center justify-between gap-2 font-mono font-bold text-[#222426] border-b border-[#D0D5D9] pb-1">
+                                    <span>{row.phaseTitle}</span>
+                                    <span className="text-[#6E7376]">{row.horizon}</span>
+                                  </div>
+                                  <div className="font-serif font-semibold text-sm text-[#222426]">
+                                    {row.targetObjective}
+                                  </div>
+                                  <p className="text-[#2C3539] leading-relaxed">
+                                    {row.concreteIntervention}
+                                  </p>
+                                  <div className="pt-1 text-[11px] font-mono text-[#222426]">
+                                    <span className="font-bold">Instituții responsabile: </span>
+                                    {row.responsibleActors}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          <div className="pt-2 flex justify-end">
+                            <button
+                              type="button"
+                              onClick={() => setAudienceMode('academic')}
+                              className="px-3.5 py-2 text-xs font-mono font-semibold bg-[#222426] text-[#F6F5EE] border border-[#222426] hover:bg-[#2C3539] cursor-pointer"
+                            >
+                              Comută la textul integral academic al secțiunii →
+                            </button>
+                          </div>
+                        </div>
+                      )}
+
                       {/* Interactive Concept Anchors */}
                       <div className="mt-5 pt-4 border-t border-[#D0D5D9]">
                         <div className="text-xs font-mono text-[#6E7376] mb-2">
-                          Concepte-cheie în această secțiune (selectați pentru descompunere în panoul lateral)
+                          Concepte-cheie în această secțiune (selectați pentru descompunere în panoul de inspecție)
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {currentStep.keyConceptIds.map((cid) => {
@@ -914,7 +1177,7 @@ export function App() {
                             return (
                               <button
                                 key={cid}
-                                onClick={() => setActiveConceptId(cid)}
+                                onClick={() => handleConceptSelect(cid)}
                                 className={`px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
                                   isSelected
                                     ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
@@ -989,7 +1252,7 @@ export function App() {
                         </div>
                       )}
 
-                      {/* FULL VERBATIM MONOGRAPH TEXT WITH CLICKABLE ACADEMIC CITATIONS */}
+                      {/* FULL VERBATIM MONOGRAPH TEXT WITH CLICKABLE ACADEMIC CITATIONS & GLOSSARY TOOLTIPS */}
                       {(readingTab === 'integral' || readingTab === 'ambele') && (
                         <div className="mt-6 pt-6 border-t border-[#222426]">
                           <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
@@ -997,7 +1260,7 @@ export function App() {
                               Textul integral al secțiunii din monografie (Fidelitate textuală completă)
                             </div>
                             <div className="text-[11px] font-mono text-[#6E7376]">
-                              Selectați orice citare între paranteze (autor, an) pentru fișa bibliografică
+                              Selectați citările (autor, an) sau termenii subliniați pentru explicații contextuale
                             </div>
                           </div>
                           <div className="space-y-5 font-serif text-base sm:text-[17px] text-[#222426] leading-[1.8] max-w-[70ch]">
@@ -1042,7 +1305,7 @@ export function App() {
                               <button
                                 key={idx}
                                 type="button"
-                                onClick={() => setSelectedAuthorCitation(authorLabel)}
+                                onClick={() => handleCitationSelect(authorLabel)}
                                 className={`px-2.5 py-1 text-xs font-mono border transition-colors cursor-pointer ${
                                   isSelected
                                     ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
@@ -1100,22 +1363,28 @@ export function App() {
                   </div>
 
                   {/* RIGHT COLUMN (5 Cols): Video Synthesis Box, Synchronized Interactive Figure, Citation Dossier & Concept Inspector */}
-                  <aside className="lg:col-span-5 space-y-6 lg:sticky lg:top-20">
+                  <aside
+                    id="inspector-panel"
+                    className="lg:col-span-5 space-y-6 lg:sticky lg:top-20"
+                  >
                     {/* Video Synthesis Box (Gemini Notebook Video) */}
                     <VideoSynthesisBox allowCollapse={true} />
 
                     {/* Active Bibliographic Citation Dossier (when an inline citation or author pill is clicked) */}
                     {selectedAuthorCitation && (
-                      <div className="bg-[#F6F5EE] border-2 border-[#222426] p-5 space-y-3">
+                      <div
+                        ref={citationDossierRef}
+                        className="scroll-mt-28 bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-5 space-y-3"
+                      >
                         <div className="flex items-center justify-between gap-2 pb-2 border-b border-[#222426]">
                           <div className="flex items-center gap-1.5 text-xs font-mono font-bold text-[#222426]">
-                            <BookOpen className="w-3.5 h-3.5" />
+                            <BookOpen className="w-3.5 h-3.5 shrink-0" />
                             <span>Dosarul referinței bibliografice ({selectedAuthorCitation})</span>
                           </div>
                           <button
                             type="button"
                             onClick={() => setSelectedAuthorCitation(null)}
-                            className="p-1 border border-[#222426] bg-[#F4F1EA] hover:bg-[#E5B822]/30 cursor-pointer"
+                            className="p-1 border border-[#222426] bg-[#F4F1EA] hover:bg-[#E5B822]/30 cursor-pointer shrink-0"
                             aria-label="Închide dosarul referinței"
                           >
                             <X className="w-3.5 h-3.5 text-[#222426]" />
@@ -1170,12 +1439,27 @@ export function App() {
                             </div>
                           </div>
                         )}
+
+                        {/* Mobile-only quick return button to the reading stage */}
+                        <div className="lg:hidden pt-2 border-t border-[#D0D5D9]">
+                          <button
+                            type="button"
+                            onClick={scrollToReadingStage}
+                            className="w-full px-3 py-1.5 text-xs font-mono bg-[#F4F1EA] border border-[#222426] text-[#222426] flex items-center justify-center gap-1.5 cursor-pointer"
+                          >
+                            <ArrowUp className="w-3.5 h-3.5" />
+                            <span>Înapoi la textul secțiunii</span>
+                          </button>
+                        </div>
                       </div>
                     )}
 
                     {/* Active Concept Card */}
                     {activeGlossaryConcept && (
-                      <div className="bg-[#F4F1EA] border border-[#222426] p-5">
+                      <div
+                        ref={conceptCardRef}
+                        className="scroll-mt-28 bg-[#F4F1EA] border border-[#222426] p-4 sm:p-5"
+                      >
                         <div className="flex items-center justify-between gap-2 text-xs font-mono text-[#6E7376] pb-2 mb-2 border-b border-[#D0D5D9]">
                           <span>Fișă conceptuală sincronizată (Stratul {activeGlossaryConcept.stratum})</span>
                           <span>{activeGlossaryConcept.domain}</span>
@@ -1201,6 +1485,18 @@ export function App() {
                           </span>
                           {activeGlossaryConcept.monographContext}
                         </div>
+
+                        {/* Mobile-only quick return button to the reading stage */}
+                        <div className="lg:hidden mt-3 pt-2.5 border-t border-[#D0D5D9]">
+                          <button
+                            type="button"
+                            onClick={scrollToReadingStage}
+                            className="w-full px-3 py-1.5 text-xs font-mono bg-[#F6F5EE] border border-[#222426] text-[#222426] flex items-center justify-center gap-1.5 cursor-pointer"
+                          >
+                            <ArrowUp className="w-3.5 h-3.5" />
+                            <span>Înapoi la textul secțiunii</span>
+                          </button>
+                        </div>
                       </div>
                     )}
 
@@ -1221,11 +1517,11 @@ export function App() {
         {/* VIEW 2: LABORATORUL CELOR 7 DIAGRAME DE SISTEM */}
         {activeView === 'diagrame' && (
           <div className="space-y-6">
-            <div className="bg-[#F4F1EA] border border-[#222426] p-5">
+            <div className="bg-[#F4F1EA] border border-[#222426] p-4 sm:p-5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
                 Hărți sistemice 2D în stil gravură vectorială (Figurile 1–7 din monografie)
               </div>
-              <h2 className="font-serif text-2xl font-bold text-[#222426]">
+              <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#222426]">
                 Laboratorul diagramelor cauzale din monografie
               </h2>
               <p className="text-xs sm:text-sm text-[#6E7376] mt-1">
@@ -1351,3 +1647,4 @@ export function App() {
 }
 
 export default App;
+
