@@ -739,7 +739,7 @@ export function App() {
                       : `Capitolul ${currentStep.chapterNumber} · ${currentStep.chapterTitle.replace(/^Capitolul\s+[0-9]+:\s*/, '').replace(/^[0-9]+\.\s*/, '')}`}
                   </div>
                   <div className="group relative flex items-start justify-between gap-2">
-                    <h2 className="font-serif text-lg sm:text-2xl font-bold text-[#222426] headline-balance leading-snug">
+                    <h2 className="font-serif text-base sm:text-lg font-bold text-[#222426] headline-balance leading-snug">
                       {currentStep.title}
                     </h2>
                     <button
@@ -780,7 +780,7 @@ export function App() {
                         <div className="text-xs font-mono font-bold text-[#222426] uppercase tracking-wider">
                           Sinteză executivă de capitol pentru decidenți instituționali și politici publice
                         </div>
-                        <h3 className="font-serif text-lg sm:text-xl font-bold text-[#222426] mt-1">
+                        <h3 className="font-serif text-base sm:text-lg font-bold text-[#222426] mt-1">
                           {currentExecutiveSummary.chapterTitle}
                         </h3>
                         <p className="text-xs sm:text-sm font-mono text-[#6E7376] mt-1">
@@ -863,7 +863,7 @@ export function App() {
                       <div className="text-xs font-mono uppercase tracking-wider text-[#6E7376] mb-1">
                         Anatomia tensiunii și descompunerea pe două registre (Master Blueprint)
                       </div>
-                      <h3 className="font-serif text-lg font-bold text-[#222426] mb-4">
+                      <h3 className="font-serif text-base font-bold text-[#222426] mb-4">
                         Stratul teoretic și conceptual în oglindă cu realitatea practică și istorică
                       </h3>
 

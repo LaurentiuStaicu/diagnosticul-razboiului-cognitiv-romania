@@ -807,7 +807,7 @@ Regulă vizuală obligatorie: Folosește exclusiv un stil de ilustrație editori
 export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
   {
     chapterNumber: 0,
-    chapterTitle: 'Introducere: Cadrul doctrinar și arhitectura explicativă pe trei paliere cauzale',
+    chapterTitle: 'Introducere',
     executiveSynthesis: [
       {
         id: 'exec-0-1',
