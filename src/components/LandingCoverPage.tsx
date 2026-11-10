@@ -60,8 +60,36 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
             </div>
           </div>
 
-          {/* Right 5 Columns: 2D Vector Engraving Cover Plate (Non-Interactive Conceptual Map) */}
-          <div className="lg:col-span-5">
+          {/* Right 5 Columns: Video Synthesis Box + 2D Vector Engraving Cover Plate */}
+          <div className="lg:col-span-5 space-y-6">
+            {/* Embedded Documentary Video Box */}
+            <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-5">
+              <div className="text-[11px] font-mono text-[#6E7376] pb-2 mb-2.5 border-b border-[#D0D5D9] flex items-center justify-between">
+                <span>Sinteză video realizată pe baza monografiei</span>
+                <a
+                  href="https://youtu.be/DgeyWNYP80c?si=e4yihOKlropuTaI8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-[#222426]"
+                >
+                  YouTube ↗
+                </a>
+              </div>
+              <div className="relative w-full aspect-video border border-[#222426] bg-[#222426] overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/DgeyWNYP80c?si=e4yihOKlropuTaI8&rel=0"
+                  title="Prezentare video (Diagnosticul războiului cognitiv în România)"
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+              <p className="text-[11px] font-serif italic text-[#6E7376] mt-2 leading-relaxed">
+                Prezentare audiovizuală a arhitecturii instituționale, neurocognitive și culturale a vulnerabilității și rezilienței societale.
+              </p>
+            </div>
+
             <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-6">
               <div className="text-[11px] font-mono text-[#6E7376] pb-2 mb-3 border-b border-[#D0D5D9] flex items-center justify-between">
                 <span>Planșa sinoptică de copertă (Modelul Macro–Micro–Macro)</span>

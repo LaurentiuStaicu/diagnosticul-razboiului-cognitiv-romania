@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { InteractiveFigures } from './InteractiveFigures';
+import { VideoSynthesisBox } from './VideoSynthesisBox';
 import { ALL_SUBCHAPTER_STEPS, REGIONAL_CONTROL_GROUP } from '../data/tablesAndReference';
 import { ArrowLeft, ArrowRight, Compass, Layers } from 'lucide-react';
 
@@ -468,8 +469,10 @@ export const FourActsPresentation: React.FC<FourActsPresentationProps> = ({
           </div>
         </div>
 
-        {/* Right 6 Cols: Interactive Vector SVG Diagrams for the Active Act */}
+        {/* Right 6 Cols: Video Synthesis Box + Interactive Vector SVG Diagrams for the Active Act */}
         <div className="lg:col-span-6 space-y-6 lg:sticky lg:top-20">
+          <VideoSynthesisBox allowCollapse={true} />
+
           {currentAct.figures.length > 1 && (
             <div className="bg-[#F4F1EA] border border-[#222426] p-3.5 flex flex-wrap items-center justify-between gap-2">
               <span className="text-xs font-mono text-[#222426]">

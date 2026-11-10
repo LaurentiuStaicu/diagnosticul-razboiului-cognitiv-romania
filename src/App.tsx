@@ -11,6 +11,7 @@ import { GlossaryAndBibliographyView } from './components/GlossaryAndBibliograph
 import { SearchModal, PdfDocumentView } from './components/PdfAndSearchModal';
 import { FourActsPresentation } from './components/FourActsPresentation';
 import { LandingCoverPage } from './components/LandingCoverPage';
+import { VideoSynthesisBox } from './components/VideoSynthesisBox';
 import {
   ArrowLeft,
   ArrowRight,
@@ -725,8 +726,11 @@ export function App() {
                     </article>
                   </div>
 
-                  {/* RIGHT COLUMN (5 Cols): Synchronized Interactive Figure, Citation Dossier & Concept Inspector */}
+                  {/* RIGHT COLUMN (5 Cols): Video Synthesis Box, Synchronized Interactive Figure, Citation Dossier & Concept Inspector */}
                   <aside className="lg:col-span-5 space-y-6 lg:sticky lg:top-20">
+                    {/* Video Synthesis Box (Gemini Notebook Video) */}
+                    <VideoSynthesisBox allowCollapse={true} />
+
                     {/* Active Bibliographic Citation Dossier (when an inline citation or author pill is clicked) */}
                     {selectedAuthorCitation && (
                       <div className="bg-[#F6F5EE] border-2 border-[#222426] p-5 space-y-3">
