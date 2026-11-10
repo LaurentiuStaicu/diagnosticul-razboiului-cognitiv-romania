@@ -4,14 +4,10 @@ import { SocialShareButtons } from './SocialShareButtons';
 
 interface LandingCoverPageProps {
   onOpenInteractivePage: () => void;
-  onOpenPdfView?: () => void;
-  onOpenDocumentaryGuide?: () => void;
 }
 
 export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
-  onOpenInteractivePage,
-  onOpenPdfView,
-  onOpenDocumentaryGuide
+  onOpenInteractivePage
 }) => {
   return (
     <div className="min-h-screen bg-[#F6F5EE] text-[#222426] flex flex-col justify-between p-4 sm:p-8 lg:p-12">
@@ -52,37 +48,17 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
               </p>
             </div>
 
-            {/* 3 Explicit Action Buttons + Social Share Bar */}
+            {/* Primary Action Button + Social Share Bar */}
             <div className="pt-4 space-y-4">
               <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3">
                 <button
                   type="button"
                   onClick={onOpenInteractivePage}
-                  className="px-5 py-3 text-xs sm:text-sm font-serif font-bold text-[#222426] bg-[#E5B822] border-2 border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                  className="px-6 py-3.5 text-xs sm:text-sm font-serif font-bold text-[#222426] bg-[#E5B822] border-2 border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
                 >
                   <span>Citește Monografia Online</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
                 </button>
-
-                {onOpenPdfView && (
-                  <button
-                    type="button"
-                    onClick={onOpenPdfView}
-                    className="px-4 py-3 text-xs sm:text-sm font-serif font-semibold text-[#222426] bg-[#F6F5EE] border border-[#222426] hover:bg-[#EBE6DF] transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
-                  >
-                    <span>Descarcă Volumul PDF</span>
-                  </button>
-                )}
-
-                {onOpenDocumentaryGuide && (
-                  <button
-                    type="button"
-                    onClick={onOpenDocumentaryGuide}
-                    className="px-4 py-3 text-xs sm:text-sm font-serif font-semibold text-[#222426] bg-[#F6F5EE] border border-[#8C9BA5] hover:border-[#222426] transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
-                  >
-                    <span>Explorează Ghidul Documentarului</span>
-                  </button>
-                )}
               </div>
 
               <div className="pt-3 border-t border-[#D0D5D9]">

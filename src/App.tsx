@@ -10,9 +10,8 @@ import { StratumId, BibliographyItem } from './data/types';
 import { InteractiveFigures, FIGURE_METADATA } from './components/InteractiveFigures';
 import { TablesAndRegionalView } from './components/TablesAndRegionalView';
 import { GlossaryAndBibliographyView } from './components/GlossaryAndBibliographyView';
-import { SearchModal, PdfDocumentView } from './components/PdfAndSearchModal';
+import { SearchModal } from './components/PdfAndSearchModal';
 import { LandingCoverPage } from './components/LandingCoverPage';
-import { DocumentaryGuideView } from './components/DocumentaryGuideView';
 import { SocialShareButtons } from './components/SocialShareButtons';
 import {
   ContextualTooltip,
@@ -24,13 +23,12 @@ import {
   ArrowUp,
   Search,
   BookOpen,
-  Film,
   Minimize2,
   Maximize2,
   X
 } from 'lucide-react';
 
-type ActiveNavView = 'parcurs' | 'diagrame' | 'tabele' | 'glosar' | 'ghid-documentar' | 'pdf';
+type ActiveNavView = 'parcurs' | 'diagrame' | 'tabele' | 'glosar';
 type AudienceReadingMode = 'academic' | 'executive';
 
 /**
@@ -150,14 +148,6 @@ function parseHashState(hashInput: string): ParsedHashTarget {
 
   if (rawHash === 'glosar') {
     return { isPortalOpen: true, activeView: 'glosar' };
-  }
-
-  if (rawHash === 'ghid-documentar' || rawHash === 'ghid') {
-    return { isPortalOpen: true, activeView: 'ghid-documentar' };
-  }
-
-  if (rawHash === 'pdf') {
-    return { isPortalOpen: true, activeView: 'pdf' };
   }
 
   if (rawHash === 'parcurs') {
@@ -423,18 +413,6 @@ export function App() {
           updateUrlHash(`pasul-${currentStepNumber}`);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
-        onOpenPdfView={() => {
-          setIsPortalOpen(true);
-          setActiveView('pdf');
-          updateUrlHash('pdf');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
-        onOpenDocumentaryGuide={() => {
-          setIsPortalOpen(true);
-          setActiveView('ghid-documentar');
-          updateUrlHash('ghid-documentar');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
       />
     );
   }
@@ -516,34 +494,6 @@ export function App() {
           >
             Glosar și bibliografie
           </button>
-          <button
-            onClick={() => {
-              setActiveView('ghid-documentar');
-              updateUrlHash('ghid-documentar');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
-              activeView === 'ghid-documentar'
-                ? 'text-[#222426] font-semibold border-b-2 border-[#222426]'
-                : ''
-            }`}
-          >
-            Ghid documentar
-          </button>
-          <button
-            onClick={() => {
-              setActiveView('pdf');
-              updateUrlHash('pdf');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
-              activeView === 'pdf'
-                ? 'text-[#222426] font-semibold border-b-2 border-[#222426]'
-                : ''
-            }`}
-          >
-            Document PDF
-          </button>
         </nav>
 
         {/* Zone 3: 1 Primary Action */}
@@ -566,9 +516,7 @@ export function App() {
             { id: 'parcurs', label: 'Parcurs pas cu pas' },
             { id: 'diagrame', label: 'Laborator diagrame' },
             { id: 'tabele', label: 'Tabele și sinteză' },
-            { id: 'glosar', label: 'Glosar și bibliografie' },
-            { id: 'ghid-documentar', label: 'Ghid documentar' },
-            { id: 'pdf', label: 'Document PDF' }
+            { id: 'glosar', label: 'Glosar și bibliografie' }
           ] as const
         ).map((tab) => (
           <button
@@ -617,197 +565,37 @@ export function App() {
                   </p>
                 </div>
 
-                {/* Reader Controls */}
-                <div className="flex flex-col sm:flex-row lg:flex-col items-start sm:items-center lg:items-end gap-2 shrink-0">
-                  <div className="text-xs font-mono text-[#6E7376]">
-                    Mod de afișare a conținutului
-                  </div>
-                  <div className="flex flex-wrap items-center gap-1.5">
-                    <button
-                      onClick={() => setIsReaderMode((prev) => !prev)}
-                      className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer flex items-center gap-1 ${
-                        isReaderMode
-                          ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-                          : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
-                      }`}
-                      title="Comută modul de lectură concentrată (ascunde/arată barele laterale)"
-                    >
-                      {isReaderMode ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
-                      <span>{isReaderMode ? 'Afișează panourile' : 'Lectură concentrată'}</span>
-                    </button>
+                {/* Reader Controls: Lectură concentrată + Filtru straturi (A, B, C) */}
+                <div className="flex flex-col items-start lg:items-end gap-3 shrink-0">
+                  <button
+                    onClick={() => setIsReaderMode((prev) => !prev)}
+                    className={`px-3 py-1.5 text-xs font-mono border transition-colors cursor-pointer flex items-center gap-1.5 ${
+                      isReaderMode
+                        ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-bold'
+                        : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+                    }`}
+                    title="Comută modul de lectură concentrată (ascunde/arată barele laterale)"
+                  >
+                    {isReaderMode ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
+                    <span>{isReaderMode ? 'Afișează panourile' : 'Lectură concentrată'}</span>
+                  </button>
 
-                    <button
-                      onClick={() => setReadingTab('ambele')}
-                      className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
-                        readingTab === 'ambele'
-                          ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
-                          : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
-                      }`}
-                    >
-                      Text integral și registre
-                    </button>
-                    <button
-                      onClick={() => setReadingTab('integral')}
-                      className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
-                        readingTab === 'integral'
-                          ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
-                          : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
-                      }`}
-                    >
-                      Doar textul integral
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Selector pe Capitole */}
-              <div className="mt-5">
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <div className="text-xs font-mono font-semibold text-[#222426]">
-                    Navigare pe capitole (Selectați pentru salt la primul subcapitol)
-                  </div>
-                  {selectedChapterFilter !== 'ALL' && (
-                    <button
-                      type="button"
-                      onClick={() => setSelectedChapterFilter('ALL')}
-                      className="text-xs font-mono text-[#6E7376] hover:text-[#222426] underline cursor-pointer"
-                    >
-                      Arată toate subcapitolele (1–19)
-                    </button>
-                  )}
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
-                  {[
-                    {
-                      num: 0,
-                      title: 'Introducere',
-                      sub: 'Cadrul ontologic și metodologic',
-                      stepsLabel: 'Pasul 1 (Introducere)',
-                      firstStep: 1
-                    },
-                    {
-                      num: 1,
-                      title: 'Capitolul 1',
-                      sub: 'Vulnerabilitatea structurală internă',
-                      stepsLabel: 'Subcap. 1.1–1.3 (Pașii 2–4)',
-                      firstStep: 2
-                    },
-                    {
-                      num: 2,
-                      title: 'Capitolul 2',
-                      sub: 'Vectorul rus și falsificarea axiologică',
-                      stepsLabel: 'Subcap. 2.1–2.3 (Pașii 5–7)',
-                      firstStep: 5
-                    },
-                    {
-                      num: 3,
-                      title: 'Capitolul 3',
-                      sub: 'Mecanismul capturării în bucla OODA',
-                      stepsLabel: 'Subcap. 3.1–3.3 (Pașii 8–10)',
-                      firstStep: 8
-                    },
-                    {
-                      num: 4,
-                      title: 'Capitolul 4',
-                      sub: 'Dinamica forțelor și filtrele Umbrei',
-                      stepsLabel: 'Subcap. 4.1–4.3 (Pașii 11–13)',
-                      firstStep: 11
-                    },
-                    {
-                      num: 5,
-                      title: 'Capitolul 5',
-                      sub: 'Matricea Cipolla și bifurcația în criză',
-                      stepsLabel: 'Subcap. 5.1–5.2 (Pașii 14–15)',
-                      firstStep: 14
-                    },
-                    {
-                      num: 6,
-                      title: 'Capitolul 6',
-                      sub: 'Protocolul de reconstrucție în trei faze',
-                      stepsLabel: 'Subcap. 6.1–6.4 (Pașii 16–19)',
-                      firstStep: 16
-                    }
-                  ].map((ch) => {
-                    const isCurrentChapter = currentStep.chapterNumber === ch.num;
-                    const isFilterActive = selectedChapterFilter === ch.num;
-                    return (
-                      <button
-                        key={ch.num}
-                        onClick={() => {
-                          setSelectedChapterFilter(ch.num);
-                          handleStepSelect(ch.firstStep);
-                        }}
-                        className={`p-3 border text-left transition-all cursor-pointer ${
-                          isCurrentChapter || isFilterActive
-                            ? 'border-2 border-[#222426] bg-[#E5B822]/25 shadow-sm'
-                            : 'border-[#8C9BA5] bg-[#F6F5EE] hover:border-[#222426]'
-                        }`}
-                      >
-                        <div className="flex items-center justify-between text-[11px] font-mono text-[#6E7376]">
-                          <span className="font-bold text-[#222426]">{ch.title}</span>
-                          <span>{ch.stepsLabel}</span>
-                        </div>
-                        <div className="font-serif text-xs sm:text-sm font-semibold text-[#222426] mt-1 leading-snug">
-                          {ch.sub}
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Horizontal Rail */}
-              <div className="mt-5 pt-4 border-t border-[#D0D5D9]">
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                  <div className="text-xs font-mono text-[#222426]">
-                    <span className="font-bold">Subcapitole: </span>
-                    <span>Pasul {currentStep.stepNumber} din 19 ({currentStep.code})</span>
-                    {selectedChapterFilter !== 'ALL' && (
-                      <span className="text-[#6E7376] ml-1.5">(filtrat pe Capitolul {selectedChapterFilter})</span>
-                    )}
-                  </div>
                   <div className="flex flex-wrap items-center gap-1.5 text-xs font-mono">
-                    <span className="text-[#6E7376]">Filtru straturi (A, B, C)</span>
+                    <span className="text-[#6E7376] font-medium">Filtru straturi:</span>
                     {(['ALL', 'A', 'B', 'C'] as const).map((st) => (
                       <button
                         key={st}
                         onClick={() => setSelectedStratumHighlight(st)}
-                        className={`px-2 py-0.5 border cursor-pointer whitespace-nowrap shrink-0 ${
+                        className={`px-2.5 py-1 border cursor-pointer whitespace-nowrap shrink-0 transition-colors ${
                           selectedStratumHighlight === st
-                            ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
-                            : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
+                            ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
+                            : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
                         }`}
                       >
                         {st === 'ALL' ? 'Toate' : `Stratul ${st}`}
                       </button>
                     ))}
                   </div>
-                </div>
-
-                <div ref={railContainerRef} className="flex items-center gap-1.5 overflow-x-auto pb-2 scroll-smooth">
-                  {filteredStepsForRail.map((step) => {
-                    const isSelected = step.stepNumber === currentStepNumber;
-                    const matchesStratum =
-                      selectedStratumHighlight === 'ALL' ||
-                      step.dominantStrata.includes(selectedStratumHighlight);
-                    return (
-                      <button
-                        key={step.id}
-                        ref={isSelected ? activeStepButtonRef : null}
-                        onClick={() => handleStepSelect(step.stepNumber)}
-                        className={`px-2.5 py-1.5 text-xs font-mono border transition-all whitespace-nowrap shrink-0 cursor-pointer ${
-                          isSelected
-                            ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
-                            : matchesStratum
-                            ? 'bg-[#F6F5EE] text-[#222426] border-[#222426] hover:bg-[#E5B822]/20'
-                            : 'bg-[#F4F1EA] text-[#8C9BA5] border-[#D0D5D9] opacity-50'
-                        }`}
-                        title={step.title}
-                      >
-                        {step.stepNumber}. {step.code.replace('Subcapitolul ', 'Subcap. ')}
-                      </button>
-                    );
-                  })}
                 </div>
               </div>
             </section>
@@ -1406,20 +1194,6 @@ export function App() {
 
         {/* VIEW 4: GLOSAR, BIBLIOGRAFIE ȘI MASTER BLUEPRINT */}
         {activeView === 'glosar' && <GlossaryAndBibliographyView />}
-
-        {/* VIEW 5: GHID DE REGIE & PRODUCȚIE DOCUMENTAR */}
-        {activeView === 'ghid-documentar' && (
-          <DocumentaryGuideView
-            onOpenMonographReader={() => {
-              setActiveView('parcurs');
-              updateUrlHash(`pasul-${currentStepNumber}`);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-          />
-        )}
-
-        {/* VIEW 6: DOCUMENT PDF ORIGINAL */}
-        {activeView === 'pdf' && <PdfDocumentView />}
       </main>
 
       {/* STICKY BACK TO TOP BUTTON */}
@@ -1473,28 +1247,6 @@ export function App() {
                 className="hover:text-[#222426] transition-colors cursor-pointer"
               >
                 Parcurs pe capitole și subcapitole (19 secțiuni)
-              </button>
-              <span>·</span>
-              <button
-                onClick={() => {
-                  setActiveView('ghid-documentar');
-                  updateUrlHash('ghid-documentar');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="hover:text-[#222426] transition-colors cursor-pointer"
-              >
-                Ghid de regie documentar
-              </button>
-              <span>·</span>
-              <button
-                onClick={() => {
-                  setActiveView('pdf');
-                  updateUrlHash('pdf');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="hover:text-[#222426] transition-colors cursor-pointer"
-              >
-                Document PDF original
               </button>
             </div>
           </div>
