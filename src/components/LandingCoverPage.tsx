@@ -164,9 +164,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="36"
-                  fontFamily="IBM Plex Mono, monospace"
+                  fontFamily="Inter, sans-serif"
                   fontSize="9.5"
-                  fontWeight="600"
+                  fontWeight="700"
                   fill="#6E7376"
                 >
                   STRATUL A (MACRO-INSTITUȚIONAL · CAPITOLELE 1 ȘI 2)
@@ -174,9 +174,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="56"
-                  fontFamily="Source Serif 4, Georgia, serif"
-                  fontSize="13.5"
-                  fontWeight="700"
+                  fontFamily="Inter, sans-serif"
+                  fontSize="13"
+                  fontWeight="800"
                   fill="#222426"
                 >
                   Forme fără fond, închidere operațională (Luhmann) și sistema
@@ -184,7 +184,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="76"
-                  fontFamily="Plus Jakarta Sans, sans-serif"
+                  fontFamily="Inter, sans-serif"
                   fontSize="10.5"
                   fill="#2C3539"
                 >
@@ -224,9 +224,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="160"
-                  fontFamily="IBM Plex Mono, monospace"
+                  fontFamily="Inter, sans-serif"
                   fontSize="9.5"
-                  fontWeight="600"
+                  fontWeight="700"
                   fill="#F01E1E"
                 >
                   STRATUL B (NEUROCOGNITIV ȘI SEMIOTIC · CAPITOLUL 3)
@@ -234,9 +234,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="180"
-                  fontFamily="Source Serif 4, Georgia, serif"
-                  fontSize="13.5"
-                  fontWeight="700"
+                  fontFamily="Inter, sans-serif"
+                  fontSize="13"
+                  fontWeight="800"
                   fill="#222426"
                 >
                   Sarcină alostatică cronică și capturarea Orientării (Bucla OODA)
@@ -244,7 +244,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="200"
-                  fontFamily="Plus Jakarta Sans, sans-serif"
+                  fontFamily="Inter, sans-serif"
                   fontSize="10.5"
                   fill="#2C3539"
                 >
@@ -253,7 +253,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="218"
-                  fontFamily="Plus Jakarta Sans, sans-serif"
+                  fontFamily="Inter, sans-serif"
                   fontSize="10.5"
                   fill="#2C3539"
                 >
@@ -293,9 +293,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="30"
                   y="293"
-                  fontFamily="IBM Plex Mono, monospace"
+                  fontFamily="Inter, sans-serif"
                   fontSize="9"
-                  fontWeight="600"
+                  fontWeight="700"
                   fill="#F01E1E"
                 >
                   STRATUL C · TENSIUNE (TRACK A)
@@ -303,9 +303,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="30"
                   y="312"
-                  fontFamily="Source Serif 4, Georgia, serif"
+                  fontFamily="Inter, sans-serif"
                   fontSize="12.5"
-                  fontWeight="700"
+                  fontWeight="800"
                   fill="#222426"
                 >
                   Filtrele Umbrei și Cipolla
@@ -313,7 +313,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="30"
                   y="330"
-                  fontFamily="Plus Jakarta Sans, sans-serif"
+                  fontFamily="Inter, sans-serif"
                   fontSize="10"
                   fill="#2C3539"
                 >
@@ -322,7 +322,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="30"
                   y="344"
-                  fontFamily="Plus Jakarta Sans, sans-serif"
+                  fontFamily="Inter, sans-serif"
                   fontSize="10"
                   fill="#2C3539"
                 >
@@ -341,9 +341,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="248"
                   y="293"
-                  fontFamily="IBM Plex Mono, monospace"
+                  fontFamily="Inter, sans-serif"
                   fontSize="9"
-                  fontWeight="600"
+                  fontWeight="700"
                   fill="#222426"
                 >
                   STRATUL C · SINTEZĂ (TRACK B)
@@ -351,9 +351,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="248"
                   y="312"
-                  fontFamily="Source Serif 4, Georgia, serif"
+                  fontFamily="Inter, sans-serif"
                   fontSize="12.5"
-                  fontWeight="700"
+                  fontWeight="800"
                   fill="#222426"
                 >
                   Grup de lucru și individuare
@@ -361,7 +361,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="248"
                   y="330"
-                  fontFamily="Plus Jakarta Sans, sans-serif"
+                  fontFamily="Inter, sans-serif"
                   fontSize="10"
                   fill="#2C3539"
                 >
@@ -370,7 +370,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="248"
                   y="344"
-                  fontFamily="Plus Jakarta Sans, sans-serif"
+                  fontFamily="Inter, sans-serif"
                   fontSize="10"
                   fill="#2C3539"
                 >
@@ -410,9 +410,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   x="230"
                   y="405"
                   textAnchor="middle"
-                  fontFamily="IBM Plex Mono, monospace"
+                  fontFamily="Inter, sans-serif"
                   fontSize="9.5"
-                  fontWeight="600"
+                  fontWeight="700"
                   fill="#E5B822"
                 >
                   CAPITOLUL 6 · PROTOCOLUL SECVENȚIAL ÎN TREI FAZE (LALONDE-DEVER)
@@ -421,8 +421,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   x="230"
                   y="420"
                   textAnchor="middle"
-                  fontFamily="Source Serif 4, Georgia, serif"
-                  fontSize="11.5"
+                  fontFamily="Inter, sans-serif"
+                  fontSize="11"
+                  fontWeight="600"
                   fill="#F6F5EE"
                 >
                   Faza I (0–12 luni) → Faza II (1–3 ani) → Faza III (3–10 ani, policentricitate Ostrom)

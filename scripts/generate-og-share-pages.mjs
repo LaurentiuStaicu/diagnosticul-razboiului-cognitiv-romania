@@ -56,7 +56,7 @@ function buildShareHtml({ slug, targetHash, title, description, imageRelPath, im
       window.location.replace(${JSON.stringify(`../#${targetHash}`)});
     </script>
   </head>
-  <body style="background:#F6F5EE;color:#222426;font-family:Georgia,serif;padding:2rem;text-align:center;">
+  <body style="background:#F6F5EE;color:#222426;font-family:Inter,system-ui,-apple-system,sans-serif;padding:2rem;text-align:center;">
     <p>Redirecționare către secțiunea selectată din monografie...</p>
     <p><a href="../#${targetHash}" style="color:#222426;font-weight:bold;">Deschide ${escapeHtml(title)}</a></p>
   </body>
