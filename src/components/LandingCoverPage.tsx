@@ -66,14 +66,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
             <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-5">
               <div className="text-[11px] font-mono text-[#6E7376] pb-2 mb-2.5 border-b border-[#D0D5D9] flex items-center justify-between">
                 <span>Sinteză video realizată pe baza monografiei</span>
-                <a
-                  href="https://youtu.be/DgeyWNYP80c?si=e4yihOKlropuTaI8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-[#222426]"
-                >
-                  YouTube ↗
-                </a>
+                <span>Modul cinematic</span>
               </div>
               <div className="relative w-full aspect-video border border-[#222426] bg-[#222426] overflow-hidden">
                 <iframe
@@ -171,7 +164,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="56"
-                  fontFamily="Newsreader, Georgia, serif"
+                  fontFamily="Source Serif 4, Georgia, serif"
                   fontSize="13.5"
                   fontWeight="700"
                   fill="#222426"
@@ -181,7 +174,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="76"
-                  fontFamily="Public Sans, sans-serif"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="10.5"
                   fill="#2C3539"
                 >
@@ -231,7 +224,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="180"
-                  fontFamily="Newsreader, Georgia, serif"
+                  fontFamily="Source Serif 4, Georgia, serif"
                   fontSize="13.5"
                   fontWeight="700"
                   fill="#222426"
@@ -241,7 +234,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="200"
-                  fontFamily="Public Sans, sans-serif"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="10.5"
                   fill="#2C3539"
                 >
@@ -250,7 +243,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="32"
                   y="218"
-                  fontFamily="Public Sans, sans-serif"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="10.5"
                   fill="#2C3539"
                 >
@@ -300,7 +293,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="30"
                   y="312"
-                  fontFamily="Newsreader, Georgia, serif"
+                  fontFamily="Source Serif 4, Georgia, serif"
                   fontSize="12.5"
                   fontWeight="700"
                   fill="#222426"
@@ -310,7 +303,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="30"
                   y="330"
-                  fontFamily="Public Sans, sans-serif"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="10"
                   fill="#2C3539"
                 >
@@ -319,7 +312,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="30"
                   y="344"
-                  fontFamily="Public Sans, sans-serif"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="10"
                   fill="#2C3539"
                 >
@@ -348,7 +341,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="248"
                   y="312"
-                  fontFamily="Newsreader, Georgia, serif"
+                  fontFamily="Source Serif 4, Georgia, serif"
                   fontSize="12.5"
                   fontWeight="700"
                   fill="#222426"
@@ -358,7 +351,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="248"
                   y="330"
-                  fontFamily="Public Sans, sans-serif"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="10"
                   fill="#2C3539"
                 >
@@ -367,7 +360,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <text
                   x="248"
                   y="344"
-                  fontFamily="Public Sans, sans-serif"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="10"
                   fill="#2C3539"
                 >
@@ -418,7 +411,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   x="230"
                   y="420"
                   textAnchor="middle"
-                  fontFamily="Newsreader, Georgia, serif"
+                  fontFamily="Source Serif 4, Georgia, serif"
                   fontSize="11.5"
                   fill="#F6F5EE"
                 >

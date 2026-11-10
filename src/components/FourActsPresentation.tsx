@@ -177,13 +177,13 @@ const FOUR_ACTS_BLUEPRINT: ActBlueprint[] = [
     empiricalManifestations: [
       {
         polarity: 'tension',
-        label: 'Bucla vicioasă (Track A — Regresie și auto-sabotaj)',
+        label: 'Bucla vicioasă (Track A, Regresie și auto-sabotaj)',
         detail:
           'Șoc acut -> hiperactivare amigdală -> căutarea unui salvator providențial (baD) sau a unui inamic absolut (baF) -> polarizare extremă -> paralizie decizională.'
       },
       {
         polarity: 'synthesis',
-        label: 'Bucla adaptativă (Track B — Reziliență și Grup de Lucru)',
+        label: 'Bucla adaptativă (Track B, Reziliență și Grup de Lucru)',
         detail:
           'Șoc acut -> comunicare instituțională calmă și verificabilă -> conservarea tonusului prefrontal (dlPFC) -> activarea Grupului de Lucru (W) -> cooperare bazată pe realitate.'
       },

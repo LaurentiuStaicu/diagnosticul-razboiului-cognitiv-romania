@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   ALL_SUBCHAPTER_STEPS,
   GLOSSARY_CONCEPTS,
@@ -17,7 +17,9 @@ import {
   ArrowRight,
   Search,
   BookOpen,
-  X
+  X,
+  Link2,
+  Check
 } from 'lucide-react';
 
 type ActiveNavView = 'parcurs' | 'diagrame' | 'tabele' | 'glosar' | 'pdf';
@@ -83,6 +85,76 @@ export function App() {
   const [selectedAuthorCitation, setSelectedAuthorCitation] = useState<string | null>(null);
   const [labFigureId, setLabFigureId] = useState<number>(1);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
+  const [copiedStepLink, setCopiedStepLink] = useState<boolean>(false);
+
+  const applyHashState = useCallback(() => {
+    const rawHash = window.location.hash.replace(/^#/, '').trim();
+    if (!rawHash || rawHash === 'coperta' || rawHash === 'top') {
+      setIsPortalOpen(false);
+      return;
+    }
+
+    setIsPortalOpen(true);
+
+    if (rawHash.startsWith('pasul-')) {
+      const num = parseInt(rawHash.replace('pasul-', ''), 10);
+      if (!isNaN(num) && num >= 1 && num <= ALL_SUBCHAPTER_STEPS.length) {
+        setActiveView('parcurs');
+        setParcursSubMode('subcapitole');
+        setCurrentStepNumber(num);
+        const target = ALL_SUBCHAPTER_STEPS.find((s) => s.stepNumber === num);
+        if (target && target.keyConceptIds.length > 0) {
+          setActiveConceptId(target.keyConceptIds[0]);
+        }
+      }
+    } else if (rawHash === '4-acte') {
+      setActiveView('parcurs');
+      setParcursSubMode('patru-acte');
+    } else if (rawHash.startsWith('figura-')) {
+      const figNum = parseInt(rawHash.replace('figura-', ''), 10);
+      setActiveView('diagrame');
+      if (!isNaN(figNum) && figNum >= 1 && figNum <= 7) {
+        setLabFigureId(figNum);
+      }
+    } else if (rawHash === 'diagrame') {
+      setActiveView('diagrame');
+    } else if (rawHash === 'tabele') {
+      setActiveView('tabele');
+    } else if (rawHash === 'glosar') {
+      setActiveView('glosar');
+    } else if (rawHash === 'pdf') {
+      setActiveView('pdf');
+    } else if (rawHash === 'parcurs') {
+      setActiveView('parcurs');
+      setParcursSubMode('subcapitole');
+    }
+  }, []);
+
+  useEffect(() => {
+    applyHashState();
+    window.addEventListener('hashchange', applyHashState);
+    return () => window.removeEventListener('hashchange', applyHashState);
+  }, [applyHashState]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setIsPortalOpen(true);
+        setIsSearchOpen((prev) => !prev);
+      } else if (e.key === 'Escape') {
+        setIsSearchOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  const updateUrlHash = (hash: string) => {
+    if (window.location.hash !== `#${hash}`) {
+      window.history.pushState(null, '', hash ? `#${hash}` : window.location.pathname);
+    }
+  };
 
   const currentStep =
     ALL_SUBCHAPTER_STEPS.find((s) => s.stepNumber === currentStepNumber) ||
@@ -125,7 +197,15 @@ export function App() {
     if (target && target.keyConceptIds.length > 0) {
       setActiveConceptId(target.keyConceptIds[0]);
     }
+    updateUrlHash(`pasul-${stepNum}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleCopyStepLink = () => {
+    const shareUrl = `${window.location.origin}${window.location.pathname}#pasul-${currentStep.stepNumber}`;
+    navigator.clipboard.writeText(shareUrl);
+    setCopiedStepLink(true);
+    setTimeout(() => setCopiedStepLink(false), 2200);
   };
 
   /**
@@ -167,6 +247,7 @@ export function App() {
       <LandingCoverPage
         onOpenInteractivePage={() => {
           setIsPortalOpen(true);
+          updateUrlHash(`pasul-${currentStepNumber}`);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
       />
@@ -179,10 +260,11 @@ export function App() {
       <header className="sticky top-0 z-40 bg-[#F6F5EE]/95 backdrop-blur-sm border-b border-[#222426] px-4 sm:px-8 py-3.5 flex items-center justify-between gap-8">
         {/* Zone 1: Brand Wordmark (single text element) */}
         <a
-          href="#top"
+          href="#coperta"
           onClick={(e) => {
             e.preventDefault();
             setIsPortalOpen(false);
+            updateUrlHash('');
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
           title="Revenire la coperta principală (Landing page)"
@@ -194,7 +276,10 @@ export function App() {
         {/* Zone 2: 5 concise single-line text navigation links */}
         <nav className="hidden lg:flex items-center gap-6 text-xs sm:text-sm font-medium text-[#6E7376]">
           <button
-            onClick={() => setActiveView('parcurs')}
+            onClick={() => {
+              setActiveView('parcurs');
+              updateUrlHash(parcursSubMode === 'patru-acte' ? '4-acte' : `pasul-${currentStepNumber}`);
+            }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
               activeView === 'parcurs'
                 ? 'text-[#222426] font-semibold border-b-2 border-[#222426]'
@@ -204,7 +289,10 @@ export function App() {
             Parcurs pas cu pas
           </button>
           <button
-            onClick={() => setActiveView('diagrame')}
+            onClick={() => {
+              setActiveView('diagrame');
+              updateUrlHash(`figura-${labFigureId}`);
+            }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
               activeView === 'diagrame'
                 ? 'text-[#222426] font-semibold border-b-2 border-[#222426]'
@@ -214,7 +302,10 @@ export function App() {
             Laborator diagrame
           </button>
           <button
-            onClick={() => setActiveView('tabele')}
+            onClick={() => {
+              setActiveView('tabele');
+              updateUrlHash('tabele');
+            }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
               activeView === 'tabele'
                 ? 'text-[#222426] font-semibold border-b-2 border-[#222426]'
@@ -224,7 +315,10 @@ export function App() {
             Tabele și sinteză
           </button>
           <button
-            onClick={() => setActiveView('glosar')}
+            onClick={() => {
+              setActiveView('glosar');
+              updateUrlHash('glosar');
+            }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
               activeView === 'glosar'
                 ? 'text-[#222426] font-semibold border-b-2 border-[#222426]'
@@ -234,7 +328,10 @@ export function App() {
             Glosar și bibliografie
           </button>
           <button
-            onClick={() => setActiveView('pdf')}
+            onClick={() => {
+              setActiveView('pdf');
+              updateUrlHash('pdf');
+            }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
               activeView === 'pdf'
                 ? 'text-[#222426] font-semibold border-b-2 border-[#222426]'
@@ -294,7 +391,10 @@ export function App() {
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 <button
-                  onClick={() => setParcursSubMode('subcapitole')}
+                  onClick={() => {
+                    setParcursSubMode('subcapitole');
+                    updateUrlHash(`pasul-${currentStepNumber}`);
+                  }}
                   className={`px-3.5 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
                     parcursSubMode === 'subcapitole'
                       ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-semibold'
@@ -304,7 +404,10 @@ export function App() {
                   Lectură analitică pas cu pas (Cele 19 secțiuni integrale)
                 </button>
                 <button
-                  onClick={() => setParcursSubMode('patru-acte')}
+                  onClick={() => {
+                    setParcursSubMode('patru-acte');
+                    updateUrlHash('4-acte');
+                  }}
                   className={`px-3.5 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
                     parcursSubMode === 'patru-acte'
                       ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
@@ -492,7 +595,25 @@ export function App() {
                         <div className="text-xs font-mono text-[#6E7376]">
                           Pasul {currentStep.stepNumber} din 19 · {currentStep.actTitle} · Straturi active ({currentStep.dominantStrata.join(', ')})
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={handleCopyStepLink}
+                            title="Copiază link direct către această secțiune pentru distribuire"
+                            className="px-2.5 py-1 text-xs font-mono border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822]/25 transition-colors cursor-pointer flex items-center gap-1 whitespace-nowrap shrink-0"
+                          >
+                            {copiedStepLink ? (
+                              <>
+                                <Check className="w-3.5 h-3.5 text-[#222426]" />
+                                <span>Link copiat</span>
+                              </>
+                            ) : (
+                              <>
+                                <Link2 className="w-3.5 h-3.5 text-[#6E7376]" />
+                                <span>Distribuie secțiunea</span>
+                              </>
+                            )}
+                          </button>
                           <button
                             disabled={currentStepNumber <= 1}
                             onClick={() => handleStepSelect(currentStepNumber - 1)}
@@ -862,7 +983,10 @@ export function App() {
 
             <InteractiveFigures
               figureId={labFigureId}
-              onSelectFigure={(id) => setLabFigureId(id)}
+              onSelectFigure={(id) => {
+                setLabFigureId(id);
+                updateUrlHash(`figura-${id}`);
+              }}
               showSelector={true}
             />
           </div>
@@ -894,6 +1018,7 @@ export function App() {
             <button
               onClick={() => {
                 setIsPortalOpen(false);
+                updateUrlHash('');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="hover:text-[#222426] transition-colors cursor-pointer"
@@ -905,6 +1030,7 @@ export function App() {
               onClick={() => {
                 setActiveView('parcurs');
                 setParcursSubMode('subcapitole');
+                updateUrlHash(`pasul-${currentStepNumber}`);
               }}
               className="hover:text-[#222426] transition-colors cursor-pointer"
             >
@@ -915,6 +1041,7 @@ export function App() {
               onClick={() => {
                 setActiveView('parcurs');
                 setParcursSubMode('patru-acte');
+                updateUrlHash('4-acte');
               }}
               className="hover:text-[#222426] transition-colors cursor-pointer"
             >
@@ -922,14 +1049,20 @@ export function App() {
             </button>
             <span>·</span>
             <button
-              onClick={() => setActiveView('diagrame')}
+              onClick={() => {
+                setActiveView('diagrame');
+                updateUrlHash(`figura-${labFigureId}`);
+              }}
               className="hover:text-[#222426] transition-colors cursor-pointer"
             >
               Cele 7 figuri vectoriale
             </button>
             <span>·</span>
             <button
-              onClick={() => setActiveView('pdf')}
+              onClick={() => {
+                setActiveView('pdf');
+                updateUrlHash('pdf');
+              }}
               className="hover:text-[#222426] transition-colors cursor-pointer"
             >
               Document PDF original
