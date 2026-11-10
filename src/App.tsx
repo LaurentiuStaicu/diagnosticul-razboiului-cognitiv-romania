@@ -77,75 +77,180 @@ function findMatchingBibliographyItems(citationText: string): BibliographyItem[]
   });
 }
 
+interface ParsedHashTarget {
+  isPortalOpen: boolean;
+  activeView?: ActiveNavView;
+  parcursSubMode?: ParcursSubMode;
+  currentStepNumber?: number;
+  activeActNumber?: 1 | 2 | 3 | 4;
+  activeConceptId?: string;
+  labFigureId?: number;
+}
+
+function parseHashState(hashInput: string): ParsedHashTarget {
+  const rawHash = hashInput.replace(/^#/, '').trim();
+  if (!rawHash || rawHash === 'coperta' || rawHash === 'top') {
+    return { isPortalOpen: false };
+  }
+
+  if (rawHash.startsWith('pasul-')) {
+    const num = parseInt(rawHash.replace('pasul-', ''), 10);
+    if (!isNaN(num) && num >= 1 && num <= ALL_SUBCHAPTER_STEPS.length) {
+      const target = ALL_SUBCHAPTER_STEPS.find((s) => s.stepNumber === num);
+      return {
+        isPortalOpen: true,
+        activeView: 'parcurs',
+        parcursSubMode: 'subcapitole',
+        currentStepNumber: num,
+        activeConceptId:
+          target && target.keyConceptIds.length > 0 ? target.keyConceptIds[0] : undefined
+      };
+    }
+    return { isPortalOpen: false };
+  }
+
+  if (rawHash.startsWith('actul-')) {
+    const actNum = parseInt(rawHash.replace('actul-', ''), 10);
+    if (actNum === 1 || actNum === 2 || actNum === 3 || actNum === 4) {
+      return {
+        isPortalOpen: true,
+        activeView: 'parcurs',
+        parcursSubMode: 'patru-acte',
+        activeActNumber: actNum
+      };
+    }
+    return {
+      isPortalOpen: true,
+      activeView: 'parcurs',
+      parcursSubMode: 'patru-acte',
+      activeActNumber: 1
+    };
+  }
+
+  if (rawHash === '4-acte') {
+    return {
+      isPortalOpen: true,
+      activeView: 'parcurs',
+      parcursSubMode: 'patru-acte'
+    };
+  }
+
+  if (rawHash.startsWith('figura-')) {
+    const figNum = parseInt(rawHash.replace('figura-', ''), 10);
+    return {
+      isPortalOpen: true,
+      activeView: 'diagrame',
+      labFigureId: !isNaN(figNum) && figNum >= 1 && figNum <= 7 ? figNum : 1
+    };
+  }
+
+  if (rawHash === 'diagrame') {
+    return { isPortalOpen: true, activeView: 'diagrame' };
+  }
+
+  if (rawHash === 'tabele') {
+    return { isPortalOpen: true, activeView: 'tabele' };
+  }
+
+  if (rawHash === 'glosar') {
+    return { isPortalOpen: true, activeView: 'glosar' };
+  }
+
+  if (rawHash === 'pdf') {
+    return { isPortalOpen: true, activeView: 'pdf' };
+  }
+
+  if (rawHash === 'parcurs') {
+    return {
+      isPortalOpen: true,
+      activeView: 'parcurs',
+      parcursSubMode: 'subcapitole'
+    };
+  }
+
+  return { isPortalOpen: false };
+}
+
 export function App() {
-  const [isPortalOpen, setIsPortalOpen] = useState<boolean>(false);
-  const [activeView, setActiveView] = useState<ActiveNavView>('parcurs');
-  const [parcursSubMode, setParcursSubMode] = useState<ParcursSubMode>('subcapitole');
-  const [currentStepNumber, setCurrentStepNumber] = useState<number>(1);
-  const [activeActNumber, setActiveActNumber] = useState<1 | 2 | 3 | 4>(1);
+  const [initialHash] = useState<ParsedHashTarget>(() =>
+    parseHashState(typeof window !== 'undefined' ? window.location.hash : '')
+  );
+
+  const [isPortalOpen, setIsPortalOpen] = useState<boolean>(initialHash.isPortalOpen);
+  const [activeView, setActiveView] = useState<ActiveNavView>(
+    initialHash.activeView ?? 'parcurs'
+  );
+  const [parcursSubMode, setParcursSubMode] = useState<ParcursSubMode>(
+    initialHash.parcursSubMode ?? 'subcapitole'
+  );
+  const [currentStepNumber, setCurrentStepNumber] = useState<number>(
+    initialHash.currentStepNumber ?? 1
+  );
+  const [activeActNumber, setActiveActNumber] = useState<1 | 2 | 3 | 4>(
+    initialHash.activeActNumber ?? 1
+  );
   const [selectedActFilter, setSelectedActFilter] = useState<number | 'ALL'>('ALL');
   const [selectedStratumHighlight, setSelectedStratumHighlight] = useState<StratumId | 'ALL'>('ALL');
   const [readingTab, setReadingTab] = useState<'integral' | 'registre' | 'ambele'>('ambele');
-  const [activeConceptId, setActiveConceptId] = useState<string>('al-saselea-domeniu');
+  const [activeConceptId, setActiveConceptId] = useState<string>(
+    initialHash.activeConceptId ?? 'al-saselea-domeniu'
+  );
   const [selectedAuthorCitation, setSelectedAuthorCitation] = useState<string | null>(null);
-  const [labFigureId, setLabFigureId] = useState<number>(1);
+  const [labFigureId, setLabFigureId] = useState<number>(initialHash.labFigureId ?? 1);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
 
   const applyHashState = useCallback(() => {
-    const rawHash = window.location.hash.replace(/^#/, '').trim();
-    if (!rawHash || rawHash === 'coperta' || rawHash === 'top') {
-      setIsPortalOpen(false);
+    const parsed = parseHashState(window.location.hash);
+
+    setIsPortalOpen((prev) => (prev === parsed.isPortalOpen ? prev : parsed.isPortalOpen));
+
+    if (!parsed.isPortalOpen) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
 
-    setIsPortalOpen(true);
-
-    if (rawHash.startsWith('pasul-')) {
-      const num = parseInt(rawHash.replace('pasul-', ''), 10);
-      if (!isNaN(num) && num >= 1 && num <= ALL_SUBCHAPTER_STEPS.length) {
-        setActiveView('parcurs');
-        setParcursSubMode('subcapitole');
-        setCurrentStepNumber(num);
-        const target = ALL_SUBCHAPTER_STEPS.find((s) => s.stepNumber === num);
-        if (target && target.keyConceptIds.length > 0) {
-          setActiveConceptId(target.keyConceptIds[0]);
-        }
-      }
-    } else if (rawHash.startsWith('actul-')) {
-      const actNum = parseInt(rawHash.replace('actul-', ''), 10);
-      setActiveView('parcurs');
-      setParcursSubMode('patru-acte');
-      if (actNum === 1 || actNum === 2 || actNum === 3 || actNum === 4) {
-        setActiveActNumber(actNum);
-      }
-    } else if (rawHash === '4-acte') {
-      setActiveView('parcurs');
-      setParcursSubMode('patru-acte');
-    } else if (rawHash.startsWith('figura-')) {
-      const figNum = parseInt(rawHash.replace('figura-', ''), 10);
-      setActiveView('diagrame');
-      if (!isNaN(figNum) && figNum >= 1 && figNum <= 7) {
-        setLabFigureId(figNum);
-      }
-    } else if (rawHash === 'diagrame') {
-      setActiveView('diagrame');
-    } else if (rawHash === 'tabele') {
-      setActiveView('tabele');
-    } else if (rawHash === 'glosar') {
-      setActiveView('glosar');
-    } else if (rawHash === 'pdf') {
-      setActiveView('pdf');
-    } else if (rawHash === 'parcurs') {
-      setActiveView('parcurs');
-      setParcursSubMode('subcapitole');
+    if (parsed.activeView !== undefined) {
+      const nextView = parsed.activeView;
+      setActiveView((prev) => (prev === nextView ? prev : nextView));
     }
+    if (parsed.parcursSubMode !== undefined) {
+      const nextSubMode = parsed.parcursSubMode;
+      setParcursSubMode((prev) => (prev === nextSubMode ? prev : nextSubMode));
+    }
+    if (parsed.currentStepNumber !== undefined) {
+      const nextStep = parsed.currentStepNumber;
+      setCurrentStepNumber((prev) => (prev === nextStep ? prev : nextStep));
+      setSelectedActFilter((prev) => (prev === 'ALL' ? prev : 'ALL'));
+      setSelectedAuthorCitation((prev) => (prev === null ? prev : null));
+    }
+    if (parsed.activeConceptId !== undefined) {
+      const nextConcept = parsed.activeConceptId;
+      setActiveConceptId((prev) => (prev === nextConcept ? prev : nextConcept));
+    }
+    if (parsed.activeActNumber !== undefined) {
+      const nextAct = parsed.activeActNumber;
+      setActiveActNumber((prev) => (prev === nextAct ? prev : nextAct));
+    }
+    if (parsed.labFigureId !== undefined) {
+      const nextFig = parsed.labFigureId;
+      setLabFigureId((prev) => (prev === nextFig ? prev : nextFig));
+    }
+
+    setIsSearchOpen((prev) => (prev === false ? prev : false));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   useEffect(() => {
-    applyHashState();
+    if (initialHash.isPortalOpen) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
     window.addEventListener('hashchange', applyHashState);
-    return () => window.removeEventListener('hashchange', applyHashState);
-  }, [applyHashState]);
+    window.addEventListener('popstate', applyHashState);
+    return () => {
+      window.removeEventListener('hashchange', applyHashState);
+      window.removeEventListener('popstate', applyHashState);
+    };
+  }, [applyHashState, initialHash.isPortalOpen]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -161,11 +266,15 @@ export function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const updateUrlHash = (hash: string) => {
-    if (window.location.hash !== `#${hash}`) {
-      window.history.pushState(null, '', hash ? `#${hash}` : window.location.pathname);
+  const updateUrlHash = useCallback((hash: string) => {
+    const normalized = hash.replace(/^#/, '').trim();
+    const targetHash = normalized ? `#${normalized}` : '';
+    const currentHash = window.location.hash === '#' ? '' : window.location.hash;
+    if (currentHash !== targetHash) {
+      const nextUrl = `${window.location.pathname}${window.location.search}${targetHash}`;
+      window.history.pushState(null, '', nextUrl);
     }
-  };
+  }, []);
 
   const currentStep =
     ALL_SUBCHAPTER_STEPS.find((s) => s.stepNumber === currentStepNumber) ||
@@ -300,15 +409,20 @@ export function App() {
       })
     : [];
 
-  const handleStepSelect = (stepNum: number) => {
-    const target = ALL_SUBCHAPTER_STEPS.find((s) => s.stepNumber === stepNum);
-    setCurrentStepNumber(stepNum);
-    if (target && target.keyConceptIds.length > 0) {
-      setActiveConceptId(target.keyConceptIds[0]);
-    }
-    updateUrlHash(`pasul-${stepNum}`);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const handleStepSelect = useCallback(
+    (stepNum: number) => {
+      const target = ALL_SUBCHAPTER_STEPS.find((s) => s.stepNumber === stepNum);
+      setCurrentStepNumber((prev) => (prev === stepNum ? prev : stepNum));
+      setSelectedAuthorCitation((prev) => (prev === null ? prev : null));
+      if (target && target.keyConceptIds.length > 0) {
+        const firstConcept = target.keyConceptIds[0];
+        setActiveConceptId((prev) => (prev === firstConcept ? prev : firstConcept));
+      }
+      updateUrlHash(`pasul-${stepNum}`);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    },
+    [updateUrlHash]
+  );
 
   /**
    * Renders a paragraph with interactive parenthetical academic citations (e.g. "(Luhmann, 1995, 2004)" or "Coleman (1990)")
@@ -393,7 +507,12 @@ export function App() {
           <button
             onClick={() => {
               setActiveView('parcurs');
-              updateUrlHash(parcursSubMode === 'patru-acte' ? '4-acte' : `pasul-${currentStepNumber}`);
+              updateUrlHash(
+                parcursSubMode === 'patru-acte'
+                  ? `actul-${activeActNumber}`
+                  : `pasul-${currentStepNumber}`
+              );
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
               activeView === 'parcurs'
@@ -407,6 +526,7 @@ export function App() {
             onClick={() => {
               setActiveView('diagrame');
               updateUrlHash(`figura-${labFigureId}`);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
               activeView === 'diagrame'
@@ -420,6 +540,7 @@ export function App() {
             onClick={() => {
               setActiveView('tabele');
               updateUrlHash('tabele');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
               activeView === 'tabele'
@@ -433,6 +554,7 @@ export function App() {
             onClick={() => {
               setActiveView('glosar');
               updateUrlHash('glosar');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
               activeView === 'glosar'
@@ -446,6 +568,7 @@ export function App() {
             onClick={() => {
               setActiveView('pdf');
               updateUrlHash('pdf');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className={`hover:text-[#222426] transition-colors whitespace-nowrap shrink-0 cursor-pointer pb-0.5 ${
               activeView === 'pdf'
@@ -485,12 +608,17 @@ export function App() {
             onClick={() => {
               setActiveView(tab.id);
               if (tab.id === 'parcurs') {
-                updateUrlHash(parcursSubMode === 'patru-acte' ? '4-acte' : `pasul-${currentStepNumber}`);
+                updateUrlHash(
+                  parcursSubMode === 'patru-acte'
+                    ? `actul-${activeActNumber}`
+                    : `pasul-${currentStepNumber}`
+                );
               } else if (tab.id === 'diagrame') {
                 updateUrlHash(`figura-${labFigureId}`);
               } else {
                 updateUrlHash(tab.id);
               }
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className={`px-3 py-1.5 text-xs font-medium border whitespace-nowrap shrink-0 cursor-pointer ${
               activeView === tab.id
@@ -1163,6 +1291,7 @@ export function App() {
                   setActiveView('parcurs');
                   setParcursSubMode('subcapitole');
                   updateUrlHash(`pasul-${currentStepNumber}`);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="hover:text-[#222426] transition-colors cursor-pointer"
               >
@@ -1173,7 +1302,8 @@ export function App() {
                 onClick={() => {
                   setActiveView('parcurs');
                   setParcursSubMode('patru-acte');
-                  updateUrlHash('4-acte');
+                  updateUrlHash(`actul-${activeActNumber}`);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="hover:text-[#222426] transition-colors cursor-pointer"
               >
@@ -1184,6 +1314,7 @@ export function App() {
                 onClick={() => {
                   setActiveView('diagrame');
                   updateUrlHash(`figura-${labFigureId}`);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="hover:text-[#222426] transition-colors cursor-pointer"
               >
@@ -1194,6 +1325,7 @@ export function App() {
                 onClick={() => {
                   setActiveView('pdf');
                   updateUrlHash('pdf');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="hover:text-[#222426] transition-colors cursor-pointer"
               >
