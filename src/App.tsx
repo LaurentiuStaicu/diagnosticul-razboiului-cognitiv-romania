@@ -739,7 +739,7 @@ export function App() {
                       : `Capitolul ${currentStep.chapterNumber} · ${currentStep.chapterTitle.replace(/^Capitolul\s+[0-9]+:\s*/, '').replace(/^[0-9]+\.\s*/, '')}`}
                   </div>
                   <div className="group relative flex items-start justify-between gap-2">
-                    <h2 className="font-serif text-xl sm:text-3xl font-bold text-[#222426] headline-balance leading-snug">
+                    <h2 className="font-serif text-lg sm:text-2xl font-bold text-[#222426] headline-balance leading-snug">
                       {currentStep.title}
                     </h2>
                     <button
@@ -758,7 +758,7 @@ export function App() {
                     </button>
                   </div>
                   {currentStep.subtitle && (
-                    <p className="font-serif text-base sm:text-lg font-normal text-[#2C3539] mt-2 leading-relaxed">
+                    <p className="font-serif text-sm sm:text-base font-normal text-[#2C3539] mt-2 leading-relaxed">
                       {currentStep.subtitle}
                     </p>
                   )}

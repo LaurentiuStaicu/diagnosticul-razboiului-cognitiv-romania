@@ -32,11 +32,11 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
               Arhitectura cauzală pe trei straturi (Sociologie instituțională · Neuroștiințe și semiotică · Psihologie analitică)
             </div>
 
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-[52px] font-bold text-[#222426] leading-[1.12] headline-balance">
+            <h1 className="font-serif text-2xl sm:text-4xl lg:text-[42px] font-bold text-[#222426] leading-[1.12] headline-balance">
               Diagnosticul războiului cognitiv în România
             </h1>
 
-            <p className="font-serif text-base sm:text-lg font-normal text-[#2C3539] leading-relaxed headline-balance">
+            <p className="font-serif text-sm sm:text-base font-normal text-[#2C3539] leading-relaxed headline-balance">
               Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale în fața operațiunilor informaționale ruse și a ideologiei putiniste
             </p>
 
