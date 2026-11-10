@@ -12,14 +12,13 @@ import { SearchModal, PdfDocumentView } from './components/PdfAndSearchModal';
 import { FourActsPresentation } from './components/FourActsPresentation';
 import { LandingCoverPage } from './components/LandingCoverPage';
 import { VideoSynthesisBox } from './components/VideoSynthesisBox';
+import { SocialShareButtons } from './components/SocialShareButtons';
 import {
   ArrowLeft,
   ArrowRight,
   Search,
   BookOpen,
-  X,
-  Link2,
-  Check
+  X
 } from 'lucide-react';
 
 type ActiveNavView = 'parcurs' | 'diagrame' | 'tabele' | 'glosar' | 'pdf';
@@ -597,24 +596,6 @@ export function App() {
                         </div>
                         <div className="flex flex-wrap items-center gap-2">
                           <button
-                            type="button"
-                            onClick={handleCopyStepLink}
-                            title="Copiază link direct către această secțiune pentru distribuire"
-                            className="px-2.5 py-1 text-xs font-mono border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822]/25 transition-colors cursor-pointer flex items-center gap-1 whitespace-nowrap shrink-0"
-                          >
-                            {copiedStepLink ? (
-                              <>
-                                <Check className="w-3.5 h-3.5 text-[#222426]" />
-                                <span>Link copiat</span>
-                              </>
-                            ) : (
-                              <>
-                                <Link2 className="w-3.5 h-3.5 text-[#6E7376]" />
-                                <span>Distribuie secțiunea</span>
-                              </>
-                            )}
-                          </button>
-                          <button
                             disabled={currentStepNumber <= 1}
                             onClick={() => handleStepSelect(currentStepNumber - 1)}
                             className="px-2.5 py-1 text-xs font-mono border border-[#222426] bg-[#F4F1EA] hover:bg-[#E5B822]/20 disabled:opacity-40 disabled:pointer-events-none cursor-pointer flex items-center gap-1 whitespace-nowrap shrink-0"
@@ -631,6 +612,15 @@ export function App() {
                             <ArrowRight className="w-3.5 h-3.5" />
                           </button>
                         </div>
+                      </div>
+
+                      {/* Social Share Bar for Current Section */}
+                      <div className="mb-5 pb-3 border-b border-[#D0D5D9] flex flex-wrap items-center justify-between gap-2">
+                        <SocialShareButtons
+                          url={`https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/#pasul-${currentStep.stepNumber}`}
+                          title={`${currentStep.title} — Diagnosticul războiului cognitiv în România`}
+                          label="Distribuie această secțiune pe"
+                        />
                       </div>
 
                       {/* Chapter Kicker & Subchapter Title */}
@@ -1004,69 +994,78 @@ export function App() {
 
       {/* CLEAN EDITORIAL FOOTER */}
       <footer className="mt-12 border-t border-[#222426] bg-[#F4F1EA] px-4 sm:px-8 py-6">
-        <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#6E7376]">
-          <div>
-            <span className="font-serif font-bold text-[#222426]">
-              Diagnosticul războiului cognitiv în România (Versiunea 1.0)
-            </span>
-            <span> · </span>
-            <span>
-              Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale
-            </span>
+        <div className="max-w-[1440px] mx-auto space-y-4">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-[#D0D5D9]">
+            <div className="text-xs text-[#6E7376]">
+              <span className="font-serif font-bold text-[#222426]">
+                Diagnosticul războiului cognitiv în România (Versiunea 1.0)
+              </span>
+              <span> · </span>
+              <span>
+                Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale
+              </span>
+            </div>
+            <SocialShareButtons
+              url="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/"
+              label="Distribuie platforma pe"
+            />
           </div>
-          <div className="flex flex-wrap items-center gap-4">
-            <button
-              onClick={() => {
-                setIsPortalOpen(false);
-                updateUrlHash('');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="hover:text-[#222426] transition-colors cursor-pointer"
-            >
-              Copertă (Landing page)
-            </button>
-            <span>·</span>
-            <button
-              onClick={() => {
-                setActiveView('parcurs');
-                setParcursSubMode('subcapitole');
-                updateUrlHash(`pasul-${currentStepNumber}`);
-              }}
-              className="hover:text-[#222426] transition-colors cursor-pointer"
-            >
-              Parcurs pas cu pas (19 secțiuni)
-            </button>
-            <span>·</span>
-            <button
-              onClick={() => {
-                setActiveView('parcurs');
-                setParcursSubMode('patru-acte');
-                updateUrlHash('4-acte');
-              }}
-              className="hover:text-[#222426] transition-colors cursor-pointer"
-            >
-              Prezentare în 4 acte
-            </button>
-            <span>·</span>
-            <button
-              onClick={() => {
-                setActiveView('diagrame');
-                updateUrlHash(`figura-${labFigureId}`);
-              }}
-              className="hover:text-[#222426] transition-colors cursor-pointer"
-            >
-              Cele 7 figuri vectoriale
-            </button>
-            <span>·</span>
-            <button
-              onClick={() => {
-                setActiveView('pdf');
-                updateUrlHash('pdf');
-              }}
-              className="hover:text-[#222426] transition-colors cursor-pointer"
-            >
-              Document PDF original
-            </button>
+
+          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-[#6E7376]">
+            <div className="flex flex-wrap items-center gap-4">
+              <button
+                onClick={() => {
+                  setIsPortalOpen(false);
+                  updateUrlHash('');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="hover:text-[#222426] transition-colors cursor-pointer"
+              >
+                Copertă (Landing page)
+              </button>
+              <span>·</span>
+              <button
+                onClick={() => {
+                  setActiveView('parcurs');
+                  setParcursSubMode('subcapitole');
+                  updateUrlHash(`pasul-${currentStepNumber}`);
+                }}
+                className="hover:text-[#222426] transition-colors cursor-pointer"
+              >
+                Parcurs pas cu pas (19 secțiuni)
+              </button>
+              <span>·</span>
+              <button
+                onClick={() => {
+                  setActiveView('parcurs');
+                  setParcursSubMode('patru-acte');
+                  updateUrlHash('4-acte');
+                }}
+                className="hover:text-[#222426] transition-colors cursor-pointer"
+              >
+                Prezentare în 4 acte
+              </button>
+              <span>·</span>
+              <button
+                onClick={() => {
+                  setActiveView('diagrame');
+                  updateUrlHash(`figura-${labFigureId}`);
+                }}
+                className="hover:text-[#222426] transition-colors cursor-pointer"
+              >
+                Cele 7 figuri vectoriale
+              </button>
+              <span>·</span>
+              <button
+                onClick={() => {
+                  setActiveView('pdf');
+                  updateUrlHash('pdf');
+                }}
+                className="hover:text-[#222426] transition-colors cursor-pointer"
+              >
+                Document PDF original
+              </button>
+            </div>
           </div>
         </div>
       </footer>

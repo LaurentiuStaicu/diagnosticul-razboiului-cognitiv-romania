@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { SocialShareButtons } from './SocialShareButtons';
 
 interface LandingCoverPageProps {
   onOpenInteractivePage: () => void;
@@ -47,16 +48,25 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
               </p>
             </div>
 
-            {/* THE SINGLE BUTTON ON THE LANDING PAGE */}
-            <div className="pt-4">
-              <button
-                type="button"
-                onClick={onOpenInteractivePage}
-                className="px-7 py-4 text-sm sm:text-base font-serif font-bold text-[#222426] bg-[#E5B822] border-2 border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer inline-flex items-center gap-3 whitespace-nowrap shrink-0"
-              >
-                <span>Deschide pagina interactivă a monografiei</span>
-                <ArrowRight className="w-5 h-5 shrink-0" />
-              </button>
+            {/* Primary Action Button + Social Share Bar */}
+            <div className="pt-4 space-y-4">
+              <div>
+                <button
+                  type="button"
+                  onClick={onOpenInteractivePage}
+                  className="px-7 py-4 text-sm sm:text-base font-serif font-bold text-[#222426] bg-[#E5B822] border-2 border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer inline-flex items-center gap-3 whitespace-nowrap shrink-0"
+                >
+                  <span>Deschide pagina interactivă a monografiei</span>
+                  <ArrowRight className="w-5 h-5 shrink-0" />
+                </button>
+              </div>
+
+              <div className="pt-3 border-t border-[#D0D5D9]">
+                <SocialShareButtons
+                  url="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/"
+                  label="Distribuie monografia pe"
+                />
+              </div>
             </div>
           </div>
 
