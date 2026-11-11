@@ -209,7 +209,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'A',
     authors: 'Niklas Luhmann, 1995, 2004',
     domain: 'Teoria sistemelor sociale',
-    definition: 'Proprietatea subsistemelor unei societăți moderne — justiția, administrația, știința și educația — de a opera exclusiv după propriile coduri normative interne, precum distincția legal/ilegal sau adevărat/fals, refuzând imixtiunea politică de clan sau tranzacționarea influenței.',
+    definition: 'Proprietatea subsistemelor unei societăți moderne — justiția, administrația, știința și educația — de a funcționa exclusiv după propriile coduri normative interne, precum distincția legal/ilegal sau adevărat/fals, refuzând imixtiunea politică de clan sau tranzacționarea influenței.',
     monographContext: 'Deficitul istoric de închidere operațională a menținut România într-o ordine socială cu acces limitat; consolidarea ei este ținta Fazei a III-a a protocolului.',
     polarity: 'synthesis'
   },
@@ -265,21 +265,21 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'uzura-alostatica',
-    term: 'Uzura alostatică cronică',
+    term: 'Alostazia și sarcina / uzura alostatică cronică',
     stratum: 'B',
-    authors: 'Bruce S. McEwen, 1998 · Robert M. Sapolsky, 2004, 2017',
+    authors: 'Peter Sterling și Joseph Eyer, 1988 · Bruce S. McEwen și Eliot Stellar, 1993 · Bruce S. McEwen, 1998 · Robert M. Sapolsky, 2004, 2017',
     domain: 'Neurobiologia stresului',
-    definition: 'Costul fiziologic cumulativ și deteriorarea tisulară și neurală suferite de organism în urma suprasolicitării cronice a sistemelor neuroendocrine de adaptare la stres, pe fondul insecurității socioeconomice, al impredictibilității și al umilinței birocratice.',
+    definition: 'Costul fiziologic cumulativ și deteriorarea tisulară și neurală (sarcina sau uzura alostatică, McEwen & Stellar, 1993; McEwen, 1998) suferite de organism atunci când reglarea adaptativă dinamică a alostaziei (stabilitatea prin schimbare, Sterling & Eyer, 1988) este suprasolicitată cronic de insecuritatea socioeconomică, impredictibilitate și umilința birocratică.',
     monographContext: 'Epuizează rezerva neurocognitivă a cetățeanului înainte de contactul cu propaganda digitală; reducerea ei este obiectivul primar din Faza I.',
     polarity: 'tension'
   },
   {
     id: 'axa-hpa-dlpf',
-    term: 'Hiperactivarea axei HPA, amigdala bazolaterală și inhibiția prefrontală',
+    term: 'Hiperactivarea axei HPA, triada rețelelor cerebrale și inhibiția prefrontală',
     stratum: 'B',
-    authors: 'Amy F. T. Arnsten, 2009 · Robert M. Sapolsky, 2004, 2017 · Daniel Kahneman, 2011',
+    authors: 'Amy F. T. Arnsten, 2009 · Vinod Menon, 2011 · Robert M. Sapolsky, 2004, 2017 · Daniel Kahneman, 2011',
     domain: 'Neuroștiințe cognitive',
-    definition: 'Excesul cronic de cortizol pe axa hipotalamo-hipofizo-suprarenaliană provoacă hipertrofia dendritică în amigdala bazolaterală — centrul fricii și al agresivității defensive — și atrofia sinaptică în hipocamp și în cortexul prefrontal dorsolateral și ventromedial.',
+    definition: 'Excesul cronic de cortizol pe axa hipotalamo-hipofizo-suprarenaliană provoacă hipertrofia dendritică în amigdala bazolaterală și hiperactivarea rețelei de saliență (Salience Network), antrenând decuplarea rețelei executive centrale (Central Executive Network, Menon, 2011) și inhibiția sinaptică în hipocamp și în cortexul prefrontal dorsolateral (dlPFC) și ventromedial (vmPFC).',
     monographContext: 'Blochează Sistemul 2 deliberativ și comută creierul cetățeanului pe dominația exclusivă a Sistemului 1 reactiv.',
     polarity: 'tension'
   },
@@ -319,7 +319,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'B',
     authors: 'Mihail Epstein, 2022, 2023',
     domain: 'Filosofia culturii și semiotică politică',
-    definition: 'Sistem ideologic conceptualizat de Mihail Epstein ca Russkii Antimir, care nu propune un proiect civilizațional pozitiv, ci operează prin răsturnarea sistematică a semnificației fiecărui concept politic, juridic și moral: agresiunea este numită apărare a păcii, iar ocupația este numită suveranitate.',
+    definition: 'Sistem ideologic conceptualizat de Mihail Epstein ca Russkii Antimir, care nu propune un proiect civilizațional pozitiv, ci funcționează prin răsturnarea sistematică a semnificației fiecărui concept politic, juridic și moral: agresiunea este numită apărare a păcii, iar ocupația este numită suveranitate.',
     monographContext: 'Nucleul operativ real al ideologiei putiniste, mascat la export prin camuflaj tradiționalist și suveranist în Figura 2.',
     polarity: 'tension'
   },
@@ -385,11 +385,11 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'capturare-dopaminergica',
-    term: 'Capturarea dopaminergică mezolimbică și subreglarea receptorilor D2',
+    term: 'Capturarea dopaminergică mezolimbică și desensibilizarea receptorilor D2',
     stratum: 'B',
     authors: 'Wolfram Schultz, 1998, 2016 · Anna Lembke, 2021',
     domain: 'Neurobiologia adicției și a atenției',
-    definition: 'Manipularea erorii de predicție a recompensei în nucleul accumbens prin derulare infinită și stimuli șocanți sau inflamatori, concepuți pentru a stârni indignarea morală, care induce subreglarea receptorilor D2, sevraj informațional și suprimarea latenței temporale necesare activării cortexului prefrontal.',
+    definition: 'Exploatarea mecanismului neurochimic al erorii de predicție a recompensei (reward prediction error) în nucleul accumbens prin administrarea de recompense variabile intermitente, derulare infinită și stimuli inflamatori care stârnesc indignarea morală, inducând desensibilizarea și reducerea densității receptorilor dopaminergici postsinaptici D2 (downregulation), sevraj informațional și suprimarea latenței temporale necesare activării cortexului prefrontal.',
     monographContext: 'Menține utilizatorul digital într-o stare de hipnoză reactivă și vulnerabilitate la sugestie.',
     polarity: 'tension'
   },
@@ -475,11 +475,11 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'guvernanta-policentrica-ostrom',
-    term: 'Guvernanța policentrică și autoeficacitatea politică',
+    term: 'Guvernanța policentrică, acțiunea politică autonomă și autoeficacitatea percepută',
     stratum: 'A',
     authors: 'Vincent și Elinor Ostrom, 1990, 2010 · Albert Bandura, 1997',
     domain: 'Științe politice și economie instituțională',
-    definition: 'Sistem instituțional în care centre multiple de decizie autonome — local, regional, național și european — cooperează și se echilibrează sub un cadru constituțional comun, redând cetățeanului sentimentul capacității de acțiune politică eficientă și autonomă.',
+    definition: 'Sistem instituțional în care centre multiple de decizie autonome — local, regional, național și european — cooperează și se echilibrează sub un cadru constituțional comun, redându-i cetățeanului capacitatea de acțiune politică autonomă (political agency) și sentimentul autoeficacității percepute (self-efficacy, Bandura, 1997).',
     monographContext: 'Depășește în Faza a III-a atât hipercentralismul birocratic, cât și fiefurile baronilor locali.',
     polarity: 'synthesis'
   },
@@ -650,7 +650,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     authors: 'Sinteza operațională din Capitolul 6, Figura 7 și Tabelul 2',
     domain: 'Arhitectură strategică de reziliență societală',
     definition: 'Ordinea cauzală strictă a reconstrucției rezilienței pe determinanții Lalonde–Dever: Faza I de decompresie alostatică și igienă algoritmică (0–12 luni), Faza II de validare comunitară, pregătire preventivă și filtru moral (1–3 ani) și Faza III de închidere operațională, policentricitate și individuare colectivă (3–10 ani).',
-    monographContext: 'Demonstrează de ce inversarea ordinii fazelor — de exemplu, educația mediatică fără decompresie alostatică prealabilă — eșuează prin efect de ricoșeu.',
+    monographContext: 'Demonstrează de ce inversarea ordinii fazelor — de exemplu, educația mediatică fără decompresie alostatică prealabilă — eșuează prin efectul de bumerang (întărirea paradoxală a convingerii — backfire effect).',
     polarity: 'synthesis'
   },
   {
@@ -712,6 +712,7 @@ export const BIBLIOGRAPHY_DATA: BibliographyItem[] = [
   { id: 'bib-34', authors: 'Friston, K.', year: '2010', title: 'The free-energy principle: A unified brain theory?', publication: 'Nature Reviews Neuroscience, 11(2), 127–138', fullCitation: 'Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127–138.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-35', authors: 'Galeotti, M.', year: '2019', title: "The Vory: Russia's super mafia", publication: 'Yale University Press', fullCitation: "Galeotti, M. (2019). The Vory: Russia's super mafia. Yale University Press.", domain: 'Geopolitică și ideologie rusă' },
   { id: 'bib-36', authors: 'Giles, K.', year: '2019', title: 'Moscow rules: What drives Russia to confront the West', publication: 'Brookings Institution Press / Chatham House', fullCitation: 'Giles, K. (2019). Moscow rules: What drives Russia to confront the West. Brookings Institution Press / Chatham House.', domain: 'Geopolitică și ideologie rusă' },
+  { id: 'bib-36b', authors: 'Girard, R.', year: '1982', title: 'Le Bouc émissaire', publication: 'Grasset', fullCitation: 'Girard, R. (1982). Le Bouc émissaire. Grasset.', domain: 'Psihologie analitică și memorie' },
   { id: 'bib-37', authors: 'Granovetter, M. S.', year: '1973', title: 'The strength of weak ties', publication: 'American Journal of Sociology, 78(6), 1360–1380', fullCitation: 'Granovetter, M. S. (1973). The strength of weak ties. American Journal of Sociology, 78(6), 1360–1380.', domain: 'Sociologie instituțională' },
   { id: 'bib-38', authors: 'Habermas, J.', year: '2006', title: 'Religion in the public sphere', publication: 'European Journal of Philosophy, 14(1), 1–25', fullCitation: 'Habermas, J. (2006). Religion in the public sphere. European Journal of Philosophy, 14(1), 1–25.', domain: 'Sociologie instituțională' },
   { id: 'bib-39', authors: 'Hedström, P.', year: '2005', title: 'Dissecting the social: On the principles of analytical sociology', publication: 'Cambridge University Press', fullCitation: 'Hedström, P. (2005). Dissecting the social: On the principles of analytical sociology. Cambridge University Press.', domain: 'Sociologie instituțională' },
@@ -747,8 +748,10 @@ export const BIBLIOGRAPHY_DATA: BibliographyItem[] = [
   { id: 'bib-63a', authors: 'Luhmann, N.', year: '1995', title: 'Social systems', publication: 'Stanford University Press', fullCitation: 'Luhmann, N. (1995). Social systems (Trad. J. Bednarz Jr. & D. Baecker). Stanford University Press.', domain: 'Sociologie instituțională' },
   { id: 'bib-63b', authors: 'Luhmann, N.', year: '2004', title: 'Law as a social system', publication: 'Oxford University Press', fullCitation: 'Luhmann, N. (2004). Law as a social system (Trad. K. A. Ziegert). Oxford University Press.', domain: 'Sociologie instituțională' },
   { id: 'bib-64', authors: 'Maiorescu, T.', year: '1868/1984', title: 'În contra direcției de astăzi în cultura română', publication: 'Editura Minerva (Convorbiri literare, 1868)', fullCitation: 'Maiorescu, T. (1984). În contra direcției de astăzi în cultura română. În Critice (Vol. 1, pp. 147–156). Editura Minerva. (Studiul original publicat în Convorbiri literare în 1868).', domain: 'Sociologie instituțională' },
+  { id: 'bib-64b', authors: 'McEwen, B. S., & Stellar, E.', year: '1993', title: 'Stress and the individual: Mechanisms leading to disease', publication: 'Archives of Internal Medicine, 153(18), 2093–2101', fullCitation: 'McEwen, B. S., & Stellar, E. (1993). Stress and the individual: Mechanisms leading to disease. Archives of Internal Medicine, 153(18), 2093–2101.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-65', authors: 'McEwen, B. S.', year: '1998', title: 'Protective and damaging effects of stress mediators', publication: 'New England Journal of Medicine, 338(3), 171–179', fullCitation: 'McEwen, B. S. (1998). Protective and damaging effects of stress mediators. New England Journal of Medicine, 338(3), 171–179.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-66', authors: 'McGuire, W. J.', year: '1964', title: 'Inducing resistance to persuasion: Some contemporary approaches', publication: 'Advances in experimental social psychology (Vol. 1, pp. 191–229)', fullCitation: 'McGuire, W. J. (1964). Inducing resistance to persuasion: Some contemporary approaches. In L. Berkowitz (Ed.), Advances in experimental social psychology (Vol. 1, pp. 191–229). Academic Press.', domain: 'Neuroștiințe și psihobiologie' },
+  { id: 'bib-66b', authors: 'Menon, V.', year: '2011', title: 'Large-scale brain networks and psychopathology: A unifying triple network model', publication: 'Trends in Cognitive Sciences, 15(10), 483–506', fullCitation: 'Menon, V. (2011). Large-scale brain networks and psychopathology: A unifying triple network model. Trends in Cognitive Sciences, 15(10), 483–506.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-67', authors: 'Merton, R. K.', year: '1938', title: 'Social structure and anomie', publication: 'American Sociological Review, 3(5), 672–682', fullCitation: 'Merton, R. K. (1938). Social structure and anomie. American Sociological Review, 3(5), 672–682.', domain: 'Sociologie instituțională' },
   { id: 'bib-68', authors: 'Mitscherlich, A., & Mitscherlich, M.', year: '1967/1975', title: 'The inability to mourn: Principles of collective behavior (Die Unfähigkeit zu trauern)', publication: 'Grove Press', fullCitation: 'Mitscherlich, A., & Mitscherlich, M. (1975). The inability to mourn: Principles of collective behavior (Trad. B. R. Placzek). Grove Press. (Lucrarea originală Die Unfähigkeit zu trauern publicată în 1967).', domain: 'Psihologie analitică și memorie' },
   { id: 'bib-69', authors: 'Neumann, E.', year: '1949/1954', title: 'The origins and history of consciousness', publication: 'Pantheon Books / Bollingen Series', fullCitation: 'Neumann, E. (1954). The origins and history of consciousness (Trad. R. F. C. Hull). Pantheon Books / Bollingen Series. (Lucrarea originală publicată în 1949).', domain: 'Psihologie analitică și memorie' },
@@ -765,6 +768,7 @@ export const BIBLIOGRAPHY_DATA: BibliographyItem[] = [
   { id: 'bib-78', authors: 'Putnam, R. D.', year: '2000', title: 'Bowling alone: The collapse and revival of American community', publication: 'Simon & Schuster', fullCitation: 'Putnam, R. D. (2000). Bowling alone: The collapse and revival of American community. Simon & Schuster.', domain: 'Sociologie instituțională' },
   { id: 'bib-79', authors: 'Radin, P.', year: '1956', title: 'The trickster: A study in American Indian mythology (Cu comentarii de K. Kerényi și C. G. Jung)', publication: 'Routledge & Kegan Paul', fullCitation: 'Radin, P. (1956). The trickster: A study in American Indian mythology (Cu comentarii de K. Kerényi și C. G. Jung). Routledge & Kegan Paul.', domain: 'Psihologie analitică și memorie' },
   { id: 'bib-80', authors: 'Rădulescu-Motru, C.', year: '1904/1996', title: 'Cultura română și politicianismul', publication: 'Editura Scrisul Românesc', fullCitation: 'Rădulescu-Motru, C. (1996). Cultura română și politicianismul. Editura Scrisul Românesc. (Lucrarea originală publicată în 1904).', domain: 'Sociologie instituțională' },
+  { id: 'bib-80b', authors: 'Rid, T.', year: '2020', title: 'Active measures: The secret history of disinformation and political warfare', publication: 'Farrar, Straus and Giroux', fullCitation: 'Rid, T. (2020). Active measures: The secret history of disinformation and political warfare. Farrar, Straus and Giroux.', domain: 'Cibernetică și semiotică' },
   { id: 'bib-81a', authors: 'Roozenbeek, J., & van der Linden, S.', year: '2019', title: 'Fake news game confers psychological resistance against online misinformation', publication: 'Palgrave Communications, 5(1), 65', fullCitation: 'Roozenbeek, J., & van der Linden, S. (2019). Fake news game confers psychological resistance against online misinformation. Palgrave Communications, 5(1), 65.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-81b', authors: 'Roozenbeek, J., van der Linden, S., Goldberg, B., Rathje, S., & Lewandowsky, S.', year: '2022', title: 'Psychological inoculation improves resilience against misinformation on social media', publication: 'Science Advances, 8(34), eabo6254', fullCitation: 'Roozenbeek, J., van der Linden, S., Goldberg, B., Rathje, S., & Lewandowsky, S. (2022). Psychological inoculation improves resilience against misinformation on social media. Science Advances, 8(34), eabo6254.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-82', authors: 'Sandu, D.', year: '2010', title: 'Lumile sociale ale migrației românești în străinătate', publication: 'Editura Polirom', fullCitation: 'Sandu, D. (2010). Lumile sociale ale migrației românești în străinătate. Editura Polirom.', domain: 'Sociologie instituțională' },
@@ -781,6 +785,7 @@ export const BIBLIOGRAPHY_DATA: BibliographyItem[] = [
   { id: 'bib-91', authors: 'Soloviov, V.', year: '1900/1994', title: 'Povestire despre Antihrist (Trei conversații despre război, progres și sfârșitul istoriei universale)', publication: 'Editura Institutul European', fullCitation: 'Soloviov, V. (1994). Povestire despre Antihrist (În Trei conversații despre război, progres și sfârșitul istoriei universale). Editura Institutul European. (Lucrarea originală publicată în 1900).', domain: 'Geopolitică și ideologie rusă' },
   { id: 'bib-92', authors: 'Stahl, H. H.', year: '1980', title: 'Traditional Romanian village communities: The transition from the communal to the capitalist mode of production in the Danube region', publication: 'Cambridge University Press', fullCitation: 'Stahl, H. H. (1980). Traditional Romanian village communities: The transition from the communal to the capitalist mode of production in the Danube region (Trad. D. Chirot & H. C. R. Chirot). Cambridge University Press.', domain: 'Sociologie instituțională' },
   { id: 'bib-93', authors: 'Stăniloae, D.', year: '1978', title: 'Teologia dogmatică ortodoxă (Vol. 1–3)', publication: 'Editura Institutului Biblic și de Misiune al Bisericii Ortodoxe Române', fullCitation: 'Stăniloae, D. (1978). Teologia dogmatică ortodoxă (Vol. 1–3). Editura Institutului Biblic și de Misiune al Bisericii Ortodoxe Române.', domain: 'Psihologie analitică și memorie' },
+  { id: 'bib-93b', authors: 'Sterling, P., & Eyer, J.', year: '1988', title: 'Allostasis: A new paradigm to explain arousal pathology', publication: 'Handbook of life stress, cognition and health (pp. 629–649), John Wiley & Sons', fullCitation: 'Sterling, P., & Eyer, J. (1988). Allostasis: A new paradigm to explain arousal pathology. In S. Fisher & J. Reason (Eds.), Handbook of life stress, cognition and health (pp. 629–649). John Wiley & Sons.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-94', authors: 'Sunstein, C. R.', year: '2017', title: '#Republic: Divided democracy in the age of social media', publication: 'Princeton University Press', fullCitation: 'Sunstein, C. R. (2017). #Republic: Divided democracy in the age of social media. Princeton University Press.', domain: 'Cibernetică și semiotică' },
   { id: 'bib-95', authors: 'Taylor, C.', year: '2007', title: 'A secular age', publication: 'Belknap Press of Harvard University Press', fullCitation: 'Taylor, C. (2007). A secular age. Belknap Press of Harvard University Press.', domain: 'Sociologie instituțională' },
   { id: 'bib-96', authors: 'Thayer, J. F., & Lane, R. D.', year: '2009', title: 'Claude Bernard and the heart–brain connection: Further elaboration of a model of neurovisceral integration', publication: 'Neuroscience & Biobehavioral Reviews, 33(2), 81–88', fullCitation: 'Thayer, J. F., & Lane, R. D. (2009). Claude Bernard and the heart–brain connection: Further elaboration of a model of neurovisceral integration. Neuroscience & Biobehavioral Reviews, 33(2), 81–88.', domain: 'Neuroștiințe și psihobiologie' },
@@ -831,7 +836,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         takeaway:
           'Reziliența societală impune tratarea sincronizată a determinanților instituționali, informaționali, asociativi și neurobiologici într-o ordine cauzală strictă.',
         implication:
-          'Instituțiile de securitate și de politici publice trebuie să opereze pe un model unificat care leagă reforma statului de igiena spațiului digital și de coeziunea socială.'
+          'Instituțiile de securitate și de politici publice trebuie să acționeze coordonat după un model unificat care leagă reforma statului de igiena spațiului digital și de coeziunea socială.'
       }
     ]
   },
@@ -873,7 +878,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-2-1',
         title: 'Mecanismul diagnosticat: Antilumea, starea Bobok și dubla falsificare',
         takeaway:
-          'Regimul cleptocratic rus operează prin inversiunea normativă a Antilumii și cinismul transgresiv al stării Bobok, camuflate la export sub masca apărării tradiției și a suveranității.',
+          'Regimul cleptocratic rus funcționează prin inversiunea normativă a Antilumii și cinismul transgresiv al stării Bobok, camuflate la export sub masca apărării tradiției și a suveranității.',
         implication:
           'Pentru a ocoli rusofobia istorică a românilor, vectorul ostil parazitează semiotic codurile identitare autohtone prin rețele de reciclare și disimulare a sursei informaționale.'
       },
@@ -911,7 +916,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-3-2',
         title: 'Vulnerabilitatea sistemică: Capturarea dopaminergică și poluarea cu date sintetice',
         takeaway:
-          'Algoritmii de retenție manipulează eroarea de predicție a recompensei în nucleul accumbens, în timp ce rețelele Doppelgänger, Matrioșka și Pravda poluează modelele AI și motoarele de căutare cu date sintetice.',
+          'Algoritmii de retenție exploatează mecanismul neurochimic al erorii de predicție a recompensei în nucleul accumbens prin recompense variabile intermitente, în timp ce rețelele Doppelgänger, Matrioșka și Pravda poluează modelele AI și motoarele de căutare cu date sintetice.',
         implication:
           'Se creează o buclă de retroacțiune epistemică om–mașină în care suprimarea latenței prefrontale și contaminarea infrastructurii digitale blochează deliberarea democratică.'
       },
@@ -995,7 +1000,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         takeaway:
           'Protocolul de reconstrucție trebuie executat strict secvențial: Faza I de decompresie alostatică și igienă digitală (0–12 luni), Faza II de validare comunitară și pregătire preventivă (1–3 ani) și Faza III de închidere operațională și policentricitate (3–10 ani).',
         implication:
-          'Inversarea fazelor — lansarea de campanii de educație mediatică peste o populație aflată în uzură alostatică și capturare algoritmică — provoacă efect de ricoșeu și adâncește polarizarea.'
+          'Inversarea fazelor — lansarea de campanii de educație mediatică peste o populație aflată în uzură alostatică și capturare algoritmică — provoacă efectul de bumerang (întărirea paradoxală a convingerii — backfire effect) și adâncește polarizarea.'
       },
       {
         id: 'exec-6-2',
@@ -1003,7 +1008,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         takeaway:
           'Reziliența cognitivă dobândită printr-o singură sesiune de pregătire preventivă se erodează pe curba uitării a lui Ebbinghaus, iar hipercentralismul birocratic sau fiefurile clientelare mențin neputința învățată.',
         implication:
-          'Fără consolidare mnezică periodică și fără descentralizare policentrică menită să redea autoeficacitatea politică, societatea rămâne vulnerabilă la recidive autoritare.'
+          'Fără consolidare mnezică periodică și fără descentralizare policentrică menită să redea capacitatea de acțiune politică autonomă și autoeficacitatea percepută, societatea rămâne vulnerabilă la recidive autoritare.'
       },
       {
         id: 'exec-6-3',
@@ -1026,9 +1031,9 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
     targetObjective:
       'Oprirea buclei reactive dezadaptative a Traseului A, scăderea hipercortizolemiei bazale pe axa HPA și întreruperea capturării dopaminergice în nucleul accumbens.',
     concreteIntervention:
-      'Activarea mecanismelor de criză conform articolelor 34–35 din Digital Services Act și AI Act pentru marile platforme online, în vederea introducerii unor pași tehnici de încetinire a viralității și de reflecție și a dezactivării amplificării indignării morale; destructurarea fermelor de boți din rețelele Doppelgänger, Matrioșka și Pravda, etichetarea criptografică a datelor sintetice și debirocratizarea digitală transparentă după modelul e-Estonia.',
+      'Aplicarea Regulamentului (UE) 2022/2065 (DSA) în baza Legii nr. 50/2024 și a AI Act pentru marile platforme online (VLOPs), prin activarea mecanismelor de evaluare și atenuare a riscurilor sistemice (art. 34–35 din DSA), acordarea accesului la datele platformelor pentru „cercetătorii agreați” (vetted researchers, conform art. 40 din DSA) și certificarea notificatorilor de încredere (trusted flaggers); introducerea unor pași tehnici de încetinire a viralității și a dezactivării amplificării indignării morale; destructurarea fermelor de boți din rețelele Doppelgänger, Matrioșka și Pravda, etichetarea criptografică a datelor sintetice și debirocratizarea digitală transparentă după modelul e-Estonia.',
     responsibleActors:
-      'Directoratul Național de Securitate Cibernetică, ANCOM în calitate de Coordonator al Serviciilor Digitale, celulele de criză din CSAT, MAI și MApN, în coordonare directă cu Comisia Europeană.'
+      'ANCOM în calitate de Coordonator al Serviciilor Digitale (DSC, desemnat prin Legea nr. 50/2024), Directoratul Național de Securitate Cibernetică (DNSC), celulele de criză din CSAT, MAI și MApN, în coordonare directă cu Comisia Europeană și European Digital Media Observatory (EDMO / hub-ul regional BROD).'
   },
   {
     id: 'op-faza-2',
@@ -1038,9 +1043,9 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
     targetObjective:
       'Reconstrucția fazei de Orientare din bucla OODA, comutarea stabilă pe Traseul deliberativ adaptativ B și neutralizarea dublei falsificări axiologice a doctrinei Russkii Mir.',
     concreteIntervention:
-      'Auditarea independentă a algoritmilor de recomandare, avertismente timpurii și campanii naționale de pregătire psihocognitivă preventivă cu sesiuni periodice de consolidare mnezică calibrate pe curba uitării a lui Ebbinghaus; refacerea infrastructurii asociative de proximitate pentru contagiune complexă pozitivă și parteneriat civic–teologic întemeiat pe principiul Imago Dei și discernământul moral.',
+      'Auditarea independentă a algoritmilor de recomandare de către cercetătorii agreați (art. 40 din DSA) și sesizarea timpurie a manipulării prin notificatorii de încredere certificați; campanii naționale de pregătire psihocognitivă preventivă cu sesiuni periodice de consolidare mnezică calibrate pe curba uitării a lui Ebbinghaus; refacerea infrastructurii asociative de proximitate pentru contagiune complexă pozitivă și parteneriat civic–teologic întemeiat pe principiul Imago Dei și discernământul moral.',
     responsibleActors:
-      'ANCOM, Consiliul Național al Audiovizualului, Comisia Europeană, consorții universitare independente, mass-media de interes public și ierarhia canonică alături de facultățile de teologie.'
+      'ANCOM (DSC), Consiliul Național al Audiovizualului (CNA), DNSC, Comisia Europeană, hub-ul regional EDMO/BROD, cercetătorii agreați și notificatorii de încredere certificați, mass-media de interes public și ierarhia canonică alături de facultățile de teologie.'
   },
   {
     id: 'op-faza-3',
@@ -1050,7 +1055,7 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
     targetObjective:
       'Eliminarea rădăcinii istorice a „formelor fără fond”, consolidarea barierei instituționale în matricea lui Cipolla pentru atragerea în Cadranul I al cooperării inteligente și refacerea axei Ego–Sine colective.',
     concreteIntervention:
-      'Garantarea închiderii operaționale autentice a justiției și administrației; descentralizare și guvernanță policentrică pentru redarea autoeficacității politice; module curriculare obligatorii de igienă a atenției digitale, gândire critică și asumarea onestă a istoriei totalitarismelor pentru depășirea incapacității de a ține doliu și a sindromului Puer Aeternus.',
+      'Garantarea închiderii operaționale autentice a justiției și administrației; descentralizare și guvernanță policentrică pentru redarea capacității de acțiune politică autonomă și a autoeficacității percepute; module curriculare obligatorii de igienă a atenției digitale, gândire critică și asumarea onestă a istoriei totalitarismelor pentru depășirea incapacității de a ține doliu și a sindromului Puer Aeternus.',
     responsibleActors:
       'Ministerul Educației, sistemul judiciar și administrativ, Biserica Ortodoxă Română și cultele recunoscute, mediul universitar, administrația publică locală și societatea civilă.'
   }
