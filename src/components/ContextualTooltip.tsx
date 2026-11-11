@@ -132,95 +132,95 @@ export interface GlossaryPatternRule {
 export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   {
     conceptId: 'uzura-alostatica',
-    regex: /\b(uzur(?:ă|ii|a)\s+alostatic(?:ă|e))\b/i
+    regex: /(?<!\p{L})(uzur(?:ă|ii|a)\s+alostatic(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'inchidere-operationala',
-    regex: /\b(închider(?:e|ea|ii)\s+operațional(?:ă|e))\b/i
+    regex: /(?<!\p{L})(închider(?:e|ea|ii|i)\s+operațional(?:ă|e|i))(?!\p{L})/iu
   },
   {
     conceptId: 'control-reflexiv-rang-secund',
-    regex: /\b(control(?:ul|ului)?\s+reflexiv\s+de\s+rang\s+secund)\b/i
+    regex: /(?<!\p{L})(control(?:ul|ului)?\s+reflexiv\s+de\s+rang\s+secund)(?!\p{L})/iu
   },
   {
     conceptId: 'enantiodromie',
-    regex: /\b(enantiodromi(?:e|a|ei))\b/i
+    regex: /(?<!\p{L})(enantiodromi(?:e|a|ei))(?!\p{L})/iu
   },
   {
     conceptId: 'contagiune-complexa',
-    regex: /\b(contagiun(?:e|ea|ii)\s+(?:social(?:ă|e)\s+)?complex(?:ă|e))\b/i
+    regex: /(?<!\p{L})(contagiun(?:e|ea|ii)\s+(?:social(?:ă|e)\s+)?complex(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'puer-aeternus',
-    regex: /\b(Puer\s+Aeternus)\b/
+    regex: /(?<!\p{L})(Puer\s+Aeternus)(?!\p{L})/u
   },
   {
     conceptId: 'filtrul-axiologic',
-    regex: /\b(Imago\s+Dei)\b/
+    regex: /(?<!\p{L})(Imago\s+Dei)(?!\p{L})/u
   },
   {
     conceptId: 'familism-amoral',
-    regex: /\b(familism(?:ul|ului)?\s+amoral)\b/i
+    regex: /(?<!\p{L})(familism(?:ul|ului)?\s+amoral)(?!\p{L})/iu
   },
   {
     conceptId: 'capacitate-negativa-bion',
-    regex: /\b(capacitat(?:e|ea|ății)\s+negativ(?:ă|e))\b/i
+    regex: /(?<!\p{L})(capacit(?:ate|atea|ății|ăți)\s+negativ(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'mediere-ternara-vs-binara',
-    regex: /\b(semiotic(?:ă|a|ii)\s+binar(?:ă|e)\s+a\s+anihilării|medier(?:e|ea|ii)\s+(?:semiotic(?:ă|e)\s+)?ternar(?:ă|e))\b/i
+    regex: /(?<!\p{L})(semiotic(?:ă|a|ii)\s+binar(?:ă|e)\s+a\s+anihilării|medier(?:e|ea|ii)\s+(?:semiotic(?:ă|e)\s+)?ternar(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'forme-fara-fond',
-    regex: /\b(formelor\s+fără\s+fond|forme\s+fără\s+fond)\b/i
+    regex: /(?<!\p{L})(formelor\s+fără\s+fond|forme\s+fără\s+fond)(?!\p{L})/iu
   },
   {
     conceptId: 'antilumea-epstein',
-    regex: /\b(Russkii\s+Antimir|Antilumi(?:i|e)|Antilumea)\b/
+    regex: /(?<!\p{L})(Russkii\s+Antimir|Antilumi(?:i|e)|Antilumea)(?!\p{L})/u
   },
   {
     conceptId: 'starea-bobok',
-    regex: /\b(stării\s+Bobok|starea\s+Bobok)\b/
+    regex: /(?<!\p{L})(stării\s+Bobok|starea\s+Bobok)(?!\p{L})/u
   },
   {
     conceptId: 'model-collapse-mad',
-    regex: /\b(Model\s+Collapse|Model\s+Autophagy\s+Disorder)\b/
+    regex: /(?<!\p{L})(Model\s+Collapse|Model\s+Autophagy\s+Disorder)(?!\p{L})/u
   },
   {
     conceptId: 'prebunking-inoculare',
-    regex: /\b(prebunking)\b/i
+    regex: /(?<!\p{L})(prebunking)(?!\p{L})/iu
   },
   {
     conceptId: 'guvernanta-policentrica-ostrom',
-    regex: /\b(guvernanț(?:ă|a|ei)\s+policentric(?:ă|e))\b/i
+    regex: /(?<!\p{L})(guvernanț(?:ă|a|ei|e)\s+policentric(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'proairesis',
-    regex: /\b(proairesis)\b/i
+    regex: /(?<!\p{L})(proairesis)(?!\p{L})/iu
   },
   {
     conceptId: 'matricea-cipolla',
-    regex: /\b(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+a\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla)\b/i
+    regex: /(?<!\p{L})(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+a\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla)(?!\p{L})/iu
   },
   {
     conceptId: 'abaissement-du-niveau-mental',
-    regex: /\b(abaissement\s+du\s+niveau\s+mental)\b/i
+    regex: /(?<!\p{L})(abaissement\s+du\s+niveau\s+mental)(?!\p{L})/iu
   },
   {
     conceptId: 'russkii-mir-etnofiletism',
-    regex: /\b(Russkii\s+Mir|etnofiletism(?:ul|ului)?)\b/i
+    regex: /(?<!\p{L})(Russkii\s+Mir|etnofiletism(?:ul|ului)?)(?!\p{L})/iu
   },
   {
     conceptId: 'dubla-falsificare-axiologica',
-    regex: /\b(dubl(?:ă|a|ei)\s+falsific(?:are|ări)\s+axiologic(?:ă|e))\b/i
+    regex: /(?<!\p{L})(dubl(?:ă|a|ei)\s+falsific(?:are|ări)\s+axiologic(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'bucla-ooda',
-    regex: /\b(bucl(?:a|ei)\s+(?:decizional(?:ă|e)\s+)?OODA)\b/i
+    regex: /(?<!\p{L})(bucl(?:a|ei)\s+(?:decizional(?:ă|e)\s+)?OODA)(?!\p{L})/iu
   },
   {
     conceptId: 'sistema',
-    regex: /\b(rețea(?:ua|lei)\s+sistema|sistema)\b/i
+    regex: /(?<!\p{L})(rețea(?:ua|lei)\s+sistema|sistema)(?!\p{L})/iu
   }
 ];
 

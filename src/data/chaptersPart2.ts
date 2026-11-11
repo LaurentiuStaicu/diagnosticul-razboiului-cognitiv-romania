@@ -360,7 +360,7 @@ export const CHAPTERS_PART_2: SubchapterStep[] = [
         systemicOutcome: 'synthesis'
       }
     ],
-    keyConceptIds: ['modernitate-organica', 'protocolul-secvential-trei-faze', 'al-saselea-domeniu'],
+    keyConceptIds: ['modernitate-organica', 'inchidere-operationala', 'protocolul-secvential-trei-faze', 'al-saselea-domeniu'],
     citedAuthorNames: ['Maiorescu (1868/1984)']
   }
 ];

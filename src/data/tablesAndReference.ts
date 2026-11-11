@@ -209,8 +209,8 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'A',
     authors: 'Niklas Luhmann, 1995, 2004',
     domain: 'Teoria sistemelor sociale',
-    definition: 'Proprietatea subsistemelor unei societăți moderne — justiția, administrația, știința și educația — de a funcționa exclusiv după propriile coduri normative interne, precum distincția legal/ilegal sau adevărat/fals, refuzând imixtiunea politică de clan sau tranzacționarea influenței.',
-    monographContext: 'Deficitul istoric de închidere operațională a menținut România într-o ordine socială cu acces limitat; consolidarea ei este ținta Fazei a III-a a protocolului.',
+    definition: 'Proprietatea fundamentală a subsistemelor unei societăți moderne (justiția, administrația publică, educația, sănătatea, știința) de a funcționa autonom, ghidate exclusiv de propriile criterii normative interne (legal/ilegal, merit/incompetență, adevărat/fals), refuzând imixtiunea arbitrară a politicului de clan sau tranzacționarea informală a influenței.',
+    monographContext: 'Deficitul cronic de închidere operațională din România a menținut instituțiile formale permeabile la capturarea extractivă a rentei; garantarea acestei autonomii (prin meritocrație, eliminarea interimatelor politice și digitalizare) reprezintă cheia rezilienței societale în Faza a III-a a protocolului.',
     polarity: 'synthesis'
   },
   {

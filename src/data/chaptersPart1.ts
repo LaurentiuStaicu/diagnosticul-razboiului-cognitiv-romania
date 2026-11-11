@@ -115,7 +115,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
         systemicOutcome: 'tension'
       }
     ],
-    keyConceptIds: ['forme-fara-fond', 'institutii-extractive', 'persona-si-umbra', 'axa-ego-sine', 'trauma-aleasa'],
+    keyConceptIds: ['forme-fara-fond', 'institutii-extractive', 'inchidere-operationala', 'persona-si-umbra', 'axa-ego-sine', 'trauma-aleasa'],
     citedAuthorNames: ['Maiorescu (1868/1984)', 'Dobrogeanu-Gherea (1910)', 'Rădulescu-Motru (1904/1996)', 'Zeletin (1925/1991)', 'Lovinescu (1924–1925/1997)', 'Stahl (1980)', 'Acemoglu & Robinson (2012)', 'North, Wallis & Weingast (2009)', 'Henderson (1984)', 'Singer & Kimbles (2004)', 'Kligman & Verdery (2011)', 'Mitscherlich & Mitscherlich (1967/1975)', 'Volkan (1997, 2004)', 'Edinger (1972)', 'Seligman (1975)']
   },
   {
