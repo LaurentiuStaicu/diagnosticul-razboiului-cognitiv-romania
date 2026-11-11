@@ -137,7 +137,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'determinantii-lalonde-dever',
-    regex: /(?<!\p{L})(determinanț(?:ii|ilor)\s+(?:sistemici\s+)?Lalonde[–-]Dever|determinanț(?:ii|ilor)\s+sănătății\s+publice\s+\(și\s+mintale\))(?!\p{L})/iu
+    regex: /(?<!\p{L})(determinanț(?:ii|ilor)\s+(?:sistemici\s+)?Lalonde[–-]Dever|determinanț(?:ii|ilor)\s+sănătății\s+publice(?:\s+\(și\s+mintale\)|\s+și\s+mintale))(?!\p{L})/iu
   },
   {
     conceptId: 'inchidere-operationala',
