@@ -103,7 +103,7 @@ export const DocumentaryGuideView: React.FC<DocumentaryGuideViewProps> = ({
       code: 'ACTUL IV',
       title: 'Protocolul secvențial și reconstrucția',
       timeframe: 'Minutul 37:30 – 50:00',
-      focus: 'Reconstrucție societală (Protocolul Lalonde-Dever & Modernitate organică)',
+      focus: 'Reconstrucție societală (Protocolul Lalonde–Dever & Modernitate organică)',
       visualDirection:
         'Tranziție de la tonuri rece-monocrome la lumină naturală caldă, peisaje instituționale deschise, spații educaționale moderne și laboratoare de cercetare.',
       audioDesign:

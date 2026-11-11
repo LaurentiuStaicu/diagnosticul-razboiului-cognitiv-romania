@@ -81,7 +81,7 @@ export const TABLE_2_DATA: Table2Row[] = [
     digitalAndSociospatial:
       'Aplicarea Regulamentului DSA (Legea nr. 50/2024) și a AI Act prin cuplarea Ordinelor de eliminare a conținutului ilegal (art. 9 DSA / art. 7 Legea 50/2024) cu Ordinele de furnizare a informațiilor financiare și a identității plătitorilor (art. 10 DSA) transmise către VLOPs prin ANCOM; standardizarea probatorie a detecției de către DNSC și hub-ul regional EDMO/BROD în format STIX și maparea pe matricea DISARM; introducerea frânelor de viralitate, etichetarea criptografică a datelor sintetice și investiții de urgență în serviciile de bază din enclavele de excluziune socială.',
     informationalLifestyle:
-      'Campanii publice de conștientizare a igienei digitale și a mecanismelor de capturare a atenției; înlocuirea comunicării oficiale arogante sau alarmiste cu o comunicare strategică de decompresie alostatică bazată pe principiile CDC CERC (Crisis and Emergency Risk Communication), menită să dezamorseze hipervigilența rețelei de saliență și să oprească bucla reactivă dezadaptativă a Traseului A.',
+      'Campanii publice de conștientizare a igienei digitale și a mecanismelor de capturare a atenției; înlocuirea comunicării oficiale arogante sau alarmiste cu o comunicare strategică de decompresie alostatică bazată pe principiile CDC CERC (Crisis and Emergency Risk Communication), menită să dezamorseze hipervigilența rețelei de detecție a relevanței (Salience Network – SN) și să oprească bucla reactivă dezadaptativă a Traseului A.',
     institutionalSystem:
       'Simplificarea administrativă și digitalizarea transparentă după modelul e-Estonia; verificarea codului unic al mandatarului financiar (CMF) și blocarea publicității politice nemarcate sau finanțate din țări terțe prin AEP și BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025, Regulamentul TTPA 2024/900 art. 13, 15, 17); înghețarea operativă în timp real a tranzacțiilor suspecte și a conversiilor cripto off-ramp prin ONPCSB, BNR și ASF în temeiul art. 33–34 din Legea nr. 129/2019 (blocare de drept 24h și suspendare 48–72h, interogarea registrului BARIS conform Legii nr. 86/2025, aplicarea O.U.G. nr. 10/2025 / MiCA 2023/1114 și TFR 2023/1113 – Travel Rule, urmate de sesizarea PICCJ pentru sechestru asigurător).'
   },
@@ -277,10 +277,10 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     id: 'axa-hpa-dlpf',
     term: 'Hiperactivarea axei HPA, triada rețelelor cerebrale și inhibiția prefrontală',
     stratum: 'B',
-    authors: 'Amy F. T. Arnsten, 2009 · Vinod Menon, 2011 · Robert M. Sapolsky, 2004, 2017 · Daniel Kahneman, 2011',
+    authors: 'Amy F. T. Arnsten, 2009 · Vinod Menon, 2011 · Robert M. Sapolsky, 2004, 2017 · Daniel Kahneman, 2011 · Keith E. Stanovich, 2009',
     domain: 'Neuroștiințe cognitive',
-    definition: 'Excesul cronic de cortizol pe axa hipotalamo-hipofizo-suprarenaliană provoacă hipertrofia dendritică în amigdala bazolaterală și hiperactivarea rețelei de saliență (Salience Network), antrenând decuplarea rețelei executive centrale (Central Executive Network, Menon, 2011) și inhibiția sinaptică în hipocamp și în cortexul prefrontal dorsolateral (dlPFC) și ventromedial (vmPFC).',
-    monographContext: 'Blochează Sistemul 2 deliberativ și comută creierul cetățeanului pe dominația exclusivă a Sistemului 1 reactiv.',
+    definition: 'Excesul cronic de cortizol pe axa hipotalamo-hipofizo-suprarenaliană provoacă hipertrofia dendritică în amigdala bazolaterală și hiperactivarea rețelei de detecție a relevanței (Salience Network – SN), antrenând decuplarea rețelei executive centrale (Central Executive Network, Menon, 2011) și inhibiția sinaptică în hipocamp și în cortexul prefrontal dorsolateral (dlPFC) și ventromedial (vmPFC).',
+    monographContext: 'Blochează Sistemul 2 deliberativ, favorizează disraționalitatea (Stanovich, 2009) și comută creierul cetățeanului pe dominația exclusivă a Sistemului 1 reactiv.',
     polarity: 'tension'
   },
   {
@@ -289,17 +289,17 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'C',
     authors: 'Pierre Janet · Carl Gustav Jung, 1934',
     domain: 'Psihologie dinamică și analitică',
-    definition: 'Diminuarea tonusului integrativ al Eului conștient sub presiunea oboselii cronice și a afectelor negative, care coboară pragul cenzurii metacognitive și permite complexelor autonome din inconștient să invadeze conștiința.',
+    definition: 'Diminuarea tonusului integrativ al Eului conștient sub presiunea oboselii cronice și a afectelor negative, care coboară pragul controlului inhibitor și al filtrajului metacognitiv și permite complexelor autonome din inconștient să invadeze conștiința.',
     monographContext: 'Corespondentul psihodinamic din Stratul C al inhibiției prefrontale produse de uzura alostatică în Stratul B.',
     polarity: 'tension'
   },
   {
     id: 'sistema',
-    term: 'Rețeaua sistema, siloviki și kompromat',
+    term: 'Rețeaua sistema, siloviki, kompromat și modelul celor „patru Rusii”',
     stratum: 'A',
-    authors: 'Alena Ledeneva, 2013 · Karen Dawisha, 2014 · Mark Galeotti, 2019',
+    authors: 'Alena Ledeneva, 2013 · Natalia Zubarevich, 2011 · Karen Dawisha, 2014 · Mark Galeotti, 2019',
     domain: 'Economia politică a regimului rus',
-    definition: 'Mecanism informal și opac de guvernare cleptocratică în care instituțiile formale sunt subordonate loialității personale față de Kremlin, menținută prin rente energetice și șantaj sistematic cu materiale compromițătoare.',
+    definition: 'Mecanism informal și opac de guvernare cleptocratică în care instituțiile formale sunt subordonate loialității personale față de Kremlin, menținută prin rente energetice, șantaj cu materiale compromițătoare și exploatarea precarității periferiilor interne din modelul celor „patru Rusii” (Zubarevich, 2011) prin keynesianism militar (deathonomics).',
     monographContext: 'Democrațiile funcționale din vecinătate amenință existențial legitimitatea internă a rețelei sistema, motivând războiul cognitiv rus.',
     polarity: 'tension'
   },
@@ -732,6 +732,7 @@ export const BIBLIOGRAPHY_DATA: BibliographyItem[] = [
   { id: 'bib-52a', authors: 'Kalaitzidis, P.', year: '2012', title: 'Orthodoxy and political theology', publication: 'World Council of Churches Publications', fullCitation: 'Kalaitzidis, P. (2012). Orthodoxy and political theology. World Council of Churches Publications.', domain: 'Geopolitică și ideologie rusă' },
   { id: 'bib-52b', authors: 'Kalaitzidis, P., Hovorun, C., Papanikolaou, A., & Gallaher, B.', year: '2022', title: 'A declaration on the „Russian World” (Russkii Mir) teaching', publication: 'Volos Academy for Theological Studies / Fordham University Orthodox Christian Studies Center', fullCitation: 'Kalaitzidis, P., Hovorun, C., Papanikolaou, A., & Gallaher, B. (2022). A declaration on the „Russian World” (Russkii Mir) teaching. Volos Academy for Theological Studies / Fordham University Orthodox Christian Studies Center.', domain: 'Geopolitică și ideologie rusă' },
   { id: 'bib-53', authors: 'Klein, M.', year: '1946/1975', title: 'Notes on some schizoid mechanisms', publication: 'The Hogarth Press', fullCitation: 'Klein, M. (1975). Notes on some schizoid mechanisms. In Envy and gratitude and other works 1946–1963 (pp. 1–24). The Hogarth Press. (Lucrarea originală publicată în 1946).', domain: 'Psihologie analitică și memorie' },
+  { id: 'bib-53b', authors: 'Kligman, G., & Verdery, K.', year: '2011', title: 'Peasants under siege: The collectivization of Romanian agriculture, 1949–1962', publication: 'Princeton University Press', fullCitation: 'Kligman, G., & Verdery, K. (2011). Peasants under siege: The collectivization of Romanian agriculture, 1949–1962. Princeton University Press.', domain: 'Sociologie instituțională' },
   { id: 'bib-54a', authors: 'Kruglanski, A. W.', year: '2004', title: 'The psychology of closed mindedness', publication: 'Psychology Press', fullCitation: 'Kruglanski, A. W. (2004). The psychology of closed mindedness. Psychology Press.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-54b', authors: 'Kruglanski, A. W., & Webster, D. M.', year: '1996', title: 'Motivated closing of the mind: „Seizing” and „freezing”', publication: 'Psychological Review, 103(2), 263–283', fullCitation: 'Kruglanski, A. W., & Webster, D. M. (1996). Motivated closing of the mind: „Seizing” and „freezing”. Psychological Review, 103(2), 263–283.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-55', authors: 'Kunda, Z.', year: '1990', title: 'The case for motivated reasoning', publication: 'Psychological Bulletin, 108(3), 480–498', fullCitation: 'Kunda, Z. (1990). The case for motivated reasoning. Psychological Bulletin, 108(3), 480–498.', domain: 'Neuroștiințe și psihobiologie' },
@@ -785,6 +786,7 @@ export const BIBLIOGRAPHY_DATA: BibliographyItem[] = [
   { id: 'bib-91', authors: 'Soloviov, V.', year: '1900/1994', title: 'Povestire despre Antihrist (Trei conversații despre război, progres și sfârșitul istoriei universale)', publication: 'Editura Institutul European', fullCitation: 'Soloviov, V. (1994). Povestire despre Antihrist (În Trei conversații despre război, progres și sfârșitul istoriei universale). Editura Institutul European. (Lucrarea originală publicată în 1900).', domain: 'Geopolitică și ideologie rusă' },
   { id: 'bib-92', authors: 'Stahl, H. H.', year: '1980', title: 'Traditional Romanian village communities: The transition from the communal to the capitalist mode of production in the Danube region', publication: 'Cambridge University Press', fullCitation: 'Stahl, H. H. (1980). Traditional Romanian village communities: The transition from the communal to the capitalist mode of production in the Danube region (Trad. D. Chirot & H. C. R. Chirot). Cambridge University Press.', domain: 'Sociologie instituțională' },
   { id: 'bib-93', authors: 'Stăniloae, D.', year: '1978', title: 'Teologia dogmatică ortodoxă (Vol. 1–3)', publication: 'Editura Institutului Biblic și de Misiune al Bisericii Ortodoxe Române', fullCitation: 'Stăniloae, D. (1978). Teologia dogmatică ortodoxă (Vol. 1–3). Editura Institutului Biblic și de Misiune al Bisericii Ortodoxe Române.', domain: 'Psihologie analitică și memorie' },
+  { id: 'bib-93a', authors: 'Stanovich, K. E.', year: '2009', title: 'What intelligence tests miss: The psychology of rational thought', publication: 'Yale University Press', fullCitation: 'Stanovich, K. E. (2009). What intelligence tests miss: The psychology of rational thought. Yale University Press.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-93b', authors: 'Sterling, P., & Eyer, J.', year: '1988', title: 'Allostasis: A new paradigm to explain arousal pathology', publication: 'Handbook of life stress, cognition and health (pp. 629–649), John Wiley & Sons', fullCitation: 'Sterling, P., & Eyer, J. (1988). Allostasis: A new paradigm to explain arousal pathology. In S. Fisher & J. Reason (Eds.), Handbook of life stress, cognition and health (pp. 629–649). John Wiley & Sons.', domain: 'Neuroștiințe și psihobiologie' },
   { id: 'bib-94', authors: 'Sunstein, C. R.', year: '2017', title: '#Republic: Divided democracy in the age of social media', publication: 'Princeton University Press', fullCitation: 'Sunstein, C. R. (2017). #Republic: Divided democracy in the age of social media. Princeton University Press.', domain: 'Cibernetică și semiotică' },
   { id: 'bib-95', authors: 'Taylor, C.', year: '2007', title: 'A secular age', publication: 'Belknap Press of Harvard University Press', fullCitation: 'Taylor, C. (2007). A secular age. Belknap Press of Harvard University Press.', domain: 'Sociologie instituțională' },
@@ -802,6 +804,7 @@ export const BIBLIOGRAPHY_DATA: BibliographyItem[] = [
   { id: 'bib-104', authors: 'Wallerstein, I.', year: '1974', title: 'The modern world-system I: Capitalist agriculture and the origins of the European world-economy in the sixteenth century', publication: 'Academic Press', fullCitation: 'Wallerstein, I. (1974). The modern world-system I: Capitalist agriculture and the origins of the European world-economy in the sixteenth century. Academic Press.', domain: 'Sociologie instituțională' },
   { id: 'bib-105', authors: 'Wu, T.', year: '2016', title: 'The attention merchants: The epic scramble to get inside our heads', publication: 'Alfred A. Knopf', fullCitation: 'Wu, T. (2016). The attention merchants: The epic scramble to get inside our heads. Alfred A. Knopf.', domain: 'Cibernetică și semiotică' },
   { id: 'bib-106', authors: 'Zeletin, Ș.', year: '1925/1991', title: 'Burghezia română: Originea și rolul ei istoric', publication: 'Editura Humanitas', fullCitation: 'Zeletin, Ș. (1991). Burghezia română: Originea și rolul ei istoric. Editura Humanitas. (Lucrarea originală publicată în 1925).', domain: 'Sociologie instituțională' },
+  { id: 'bib-106b', authors: 'Zubarevich, N.', year: '2011', title: 'Four Russias: Rethinking the post-Soviet map', publication: 'Russian Politics & Law, 50(4), 7–18', fullCitation: 'Zubarevich, N. (2011). Four Russias: Rethinking the post-Soviet map. Russian Politics & Law, 50(4), 7–18.', domain: 'Geopolitică și ideologie rusă' },
   { id: 'bib-107', authors: 'Zuboff, S.', year: '2019', title: 'The age of surveillance capitalism: The fight for a human future at the new frontier of power', publication: 'PublicAffairs', fullCitation: 'Zuboff, S. (2019). The age of surveillance capitalism: The fight for a human future at the new frontier of power. PublicAffairs.', domain: 'Cibernetică și semiotică' }
 ];
 

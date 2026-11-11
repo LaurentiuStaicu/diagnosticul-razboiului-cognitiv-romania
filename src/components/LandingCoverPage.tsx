@@ -339,7 +339,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontSize="10"
                   fill="#222426"
                 >
-                  Enantiodromie, ipoteze de bază Bion
+                  Enantiodromie, ipotezele de bază ale lui Bion
                 </text>
                 <text
                   x="30"
@@ -471,7 +471,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
             <div className="font-mono font-semibold text-[#222426]">
               Stratul A · Capitolele 0–1
             </div>
-            <div>Cadrul macro, diagrama lui Coleman–Hedström și rădăcina instituțională</div>
+            <div>Cadrul macro, arhitectura Macro–Micro–Macro (Coleman–Hedström) și rădăcina instituțională</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">
@@ -489,7 +489,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
             <div className="font-mono font-semibold text-[#222426]">
               Reconstrucție · Capitolul 6
             </div>
-            <div>Protocolul secvențial Lalonde–Dever, policentricitate, capital social de punte (bridging, Putnam) și modernitate organică</div>
+            <div>Protocolul secvențial Lalonde–Dever, policentricitate, capital social de punte și modernitate organică</div>
           </div>
         </div>
       </div>

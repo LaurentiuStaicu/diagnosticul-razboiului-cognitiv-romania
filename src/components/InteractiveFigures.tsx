@@ -23,13 +23,13 @@ export const FIGURE_METADATA: Record<
     id: 1,
     title: 'Figura 1. Arhitectura cauzală pe trei straturi a vulnerabilității societale endogene',
     subtitle:
-      'Articularea modelului Macro–Micro–Macro al lui Coleman și Hedström cu determinanții sistemici Lalonde-Dever',
+      'Articularea modelului Macro–Micro–Macro al lui Coleman și Hedström cu determinanții sistemici Lalonde–Dever',
     chapterRef: 'Capitolul 1 · Subcapitolul 1.3',
     pdfPage: 8,
     caption:
       'Deficitele structurale din Stratul A — deficitul de servicii publice, închiderea operațională incompletă a instituțiilor și mediul socioeconomic precar — induc în Stratul B o stare cronică de stres alostatic și hipervigilență amigdaliană, care inhibă deliberarea prefrontală și împinge cetățenii spre comportamente reactive de supraviețuire. Aceste mecanisme neurocognitive se sedimentează în Stratul C sub forma fatalismului defensiv, a neputinței învățate și a neîncrederii cronice în ordinea constituțională, oferind vectorului de război cognitiv suprafețe directe de cuplare și amplificare.',
     methodologicalNote:
-      'Modelul cauzal Macro–Micro–Macro (Coleman, 1990; Hedström & Swedberg, 1998) articulează determinanții instituționali și sociospațiali din Stratul A cu mecanismele de uzură alostatică din Stratul B și cu structurile defensive ale inconștientului cultural din Stratul C.'
+      'Modelul cauzal Macro–Micro–Macro (Coleman, 1990; Hedström, 2005) articulează determinanții instituționali și sociospațiali din Stratul A cu mecanismele de uzură alostatică din Stratul B și cu structurile defensive ale inconștientului cultural din Stratul C.'
   },
   2: {
     id: 2,
@@ -96,11 +96,11 @@ export const FIGURE_METADATA: Record<
     id: 7,
     title: 'Figura 7. Protocolul secvențial în trei faze al reconstrucției rezilienței societale',
     subtitle:
-      'Ordinea obligatorie a intervențiilor pe determinanții Lalonde-Dever și palierele Straturilor A, B și C',
+      'Ordinea obligatorie a intervențiilor pe determinanții Lalonde–Dever și palierele Straturilor A, B și C',
     chapterRef: 'Capitolul 6 · Subcapitolele 6.1–6.4',
     pdfPage: 39,
     caption:
-      'Diagrama evidențiază ordinea cauzală obligatorie a intervențiilor fundamentate pe determinanții modelului Lalonde-Dever: Faza I, dedicată decompresiei alostatice și reglementării ecosistemului digital, creează condițiile neurobiologice pentru Faza a II-a, axată pe pregătirea psihocognitivă preventivă prin prebunking, consolidarea mnezică Ebbinghaus și reconcilierea filtrului moral creștin-secular. Aceasta susține la rândul ei Faza a III-a, care vizează închiderea operațională a statului de drept, guvernanța policentrică și individuarea colectivă, culminând în arhitectura suveranității democratice și a modernității organice.',
+      'Diagrama evidențiază ordinea cauzală obligatorie a intervențiilor fundamentate pe determinanții modelului Lalonde–Dever: Faza I, dedicată decompresiei alostatice și reglementării ecosistemului digital, creează condițiile neurobiologice pentru Faza a II-a, axată pe pregătirea psihocognitivă preventivă prin prebunking, consolidarea mnezică Ebbinghaus și reconcilierea filtrului moral creștin-secular. Aceasta susține la rândul ei Faza a III-a, care vizează închiderea operațională a statului de drept, guvernanța policentrică și individuarea colectivă, culminând în arhitectura suveranității democratice și a modernității organice.',
     methodologicalNote:
       'Arhitectura secvențială a reconstrucției rezilienței cognitive și instituționale demonstrează de ce intervențiile educaționale din Faza II și reformele structurale din Faza III depind cauzal de realizarea prealabilă a Fazei I, constând în decompresia alostatică a populației și reglementarea ecosistemului digital.'
   }
@@ -903,11 +903,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig1SelectedNode === 'servicii' &&
-                  'Stratul A: Organizarea sistemului instituțional și a serviciilor publice (primul determinant Lalonde-Dever). Atunci când justiția, administrația, educația și sănătatea suferă de un deficit de închidere operațională (Luhmann) și sunt permeabile la rețelele clientelare extractive, cetățeanul percepe regulile formale ca pe un paravan ipocrit.'}
+                  'Stratul A: Organizarea sistemului instituțional și a serviciilor publice (primul determinant Lalonde–Dever). Atunci când justiția, administrația, educația și sănătatea suferă de un deficit de închidere operațională (Luhmann) și sunt permeabile la rețelele clientelare extractive, cetățeanul percepe regulile formale ca pe un paravan ipocrit.'}
                 {fig1SelectedNode === 'mediu' &&
-                  'Stratul A: Mediul socioeconomic și sociospațial (al doilea determinant Lalonde-Dever). Polarizarea severă dintre centrele metropolitane și periferiile dezindustrializate sau rurale, adâncită de emigrația masivă, distruge capitalul social de punte (bridging, Putnam) prin familism amoral (Banfield) la un pol și secesiune tacită în servicii private la celălalt pol.'}
+                  'Stratul A: Mediul socioeconomic și sociospațial (al doilea determinant Lalonde–Dever). Polarizarea severă dintre centrele metropolitane și periferiile dezindustrializate sau rurale, adâncită de emigrația masivă, distruge capitalul social de punte (bridging, Putnam) prin familism amoral (Banfield) la un pol și secesiune tacită în servicii private la celălalt pol.'}
                 {fig1SelectedNode === 'alostazie' &&
-                  'Stratul B: Alostazia (Sterling & Eyer, 1988), sarcina / uzura alostatică (McEwen & Stellar, 1993; McEwen, 1998) și modelul triadei rețelelor cerebrale (Menon, 2011; Sapolsky, Arnsten). Expunerea cronică la insecuritate și umilință birocratică eliberează excesiv cortizol, provocând hipertrofia amigdalei bazolaterale, hiperactivarea rețelei de saliență (SN) și decuplarea rețelei executive centrale (CEN) ancorate în cortexul prefrontal dorsolateral (dlPFC).'}
+                  'Stratul B: Alostazia (Sterling & Eyer, 1988), sarcina / uzura alostatică (McEwen & Stellar, 1993; McEwen, 1998) și modelul triadei rețelelor cerebrale (Menon, 2011; Sapolsky, Arnsten). Expunerea cronică la insecuritate și umilință birocratică eliberează excesiv cortizol, provocând hipertrofia amigdalei bazolaterale, hiperactivarea rețelei de detecție a relevanței (Salience Network – SN) și decuplarea rețelei executive centrale (CEN) ancorate în cortexul prefrontal dorsolateral (dlPFC).'}
                 {fig1SelectedNode === 'reactiv' &&
                   'Stratul B: Comutarea de pe Sistemul 2 pe Sistemul 1 (Kahneman). Inhibiția funcțiilor executive prefrontale blochează gândirea lentă, analitică și verificarea surselor, lăsând cetățeanul pradă procesării rapide, euristice și reacțiilor defensive automate.'}
                 {fig1SelectedNode === 'persona' &&
@@ -2773,9 +2773,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig5SelectedQuadrant === 'I' &&
                   'Cadranul I (+X, +Y, cooperare inteligentă). Cetățenii, antreprenorii și instituțiile incluzive își urmăresc propriul interes legitim prin muncă, inovație și respectarea legii impersonale, generând simultan valoare adăugată și încredere pentru întreaga comunitate (ordinea socială cu acces deschis, North, Wallis & Weingast, 2009).'}
                 {fig5SelectedQuadrant === 'II' &&
-                  'Cadranul II (-X, +Y, cetățenii vulnerabili / naivii, Helpless). Indivizii cinstiți care muncesc, plătesc taxe și susțin funcționarea societății (+Y), dar care, din cauza asimetriei informaționale și a precarității serviciilor publice, înregistrează o pierdere netă de bunăstare, sănătate și demnitate (-X).'}
+                  'Cadranul II (-X, +Y, cetățenii vulnerabili / naivii, helpless). Indivizii cinstiți care muncesc, plătesc taxe și susțin funcționarea societății (+Y), dar care, din cauza asimetriei informaționale și a precarității serviciilor publice, înregistrează o pierdere netă de bunăstare, sănătate și demnitate (-X).'}
                 {fig5SelectedQuadrant === 'IV' &&
-                  'Cadranul IV (+X, -Y, elitele extractive / banditismul, Bandits). Rețelele politico-economice clientelare și birocrațiile parazitare interne (precum și agresorul geopolitic extern) care își însușesc câștiguri substanțiale (+X) prin spolierea bugetelor publice și degradarea instituțiilor (-Y).'}
+                  'Cadranul IV (+X, -Y, elitele extractive / banditismul, bandits). Rețelele politico-economice clientelare și birocrațiile parazitare interne (precum și agresorul geopolitic extern) care își însușesc câștiguri substanțiale (+X) prin spolierea bugetelor publice și degradarea instituțiilor (-Y).'}
                 {fig5SelectedQuadrant === 'III' &&
                   'Cadranul III (-X, -Y, autosabotajul social / iraționalitatea autodistructivă). Crezând că se mută în Cadranul I sau că îi pedepsește exclusiv pe spoliatorii din Cadranul IV, cetățeanul vulnerabil, blocat de T-bar pe traseul cooperării, este împins de vectorul descendent masiv în Cadranul III, unde votul punitiv extrem distruge bunul public (-Y) și propria securitate socioeconomică (-X).'}
               </p>
@@ -3639,15 +3639,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'bifurcatie' &&
                   'Nodul unic de bifurcație (stresul material acut și policriza). Reprezintă punctul de incidență al șocului cognitiv și socioeconomic. În absența unei pauze metacognitive și a rezervei neurobiologice, presiunea crizei împinge procesarea în mod automat spre reacția defensivă din Track A.'}
                 {fig6SelectedStep === 'anxietate' &&
-                  'Anxietatea cronică și hiperreactivitatea (Track A). Starea de alertă prelungită activează circuitele subcorticale amigdaliene și rețeaua de saliență (Menon, 2011), inducând inhibarea sinaptică catecolaminergică și decuplarea funcțională a cortexului prefrontal dorsolateral (dlPFC) și ventromedial (vmPFC), ceea ce blochează capacitatea de analiză critică și declanșează reflexe reactive automate de apărare.'}
+                  'Anxietatea cronică și hiperreactivitatea (Track A). Starea de alertă prelungită activează circuitele subcorticale amigdaliene și rețeaua de detecție a relevanței (Salience Network – SN, Menon, 2011), inducând inhibarea sinaptică catecolaminergică și decuplarea funcțională a cortexului prefrontal dorsolateral (dlPFC) și ventromedial (vmPFC), ceea ce blochează capacitatea de analiză critică și declanșează reflexe reactive automate de apărare.'}
                 {fig6SelectedStep === 'nfcc' &&
-                  'Nevoia de închidere cognitivă (NFCC, Need for Cognitive Closure). Sub presiunea anxietății, individul manifestă o intoleranță acută la ambiguitate (Seizing) și o urgență extremă de a adopta concluzii categorice, rapide și simplificatoare (Freezing), refuzând orice nuanță sau complexitate.'}
+                  'Nevoia de închidere cognitivă (NFCC, Need for Cognitive Closure). Sub presiunea anxietății, individul manifestă o intoleranță acută la ambiguitate (seizing) și o urgență extremă de a adopta concluzii categorice, rapide și simplificatoare (freezing), refuzând orice nuanță sau complexitate.'}
                 {fig6SelectedStep === 'persona' &&
                   'Persona mimetică (Track A). Conformismul formal de fațadă și copierea modelelor externe neintegrate („forme fără fond”). Individul adoptă discursuri și aparențe gata fabricate pentru a simula apartenența și a reduce disonanța, fără o asimilare critică reală.'}
                 {fig6SelectedStep === 'umbra' &&
                   'Umbra colectivă (Track A). Conținuturile psihosociale refulate, frustrarea istorică și resentimentul acumulat. Între Persona mimetică și Umbra colectivă se instalează o tensiune compensatorie permanentă: cu cât conformismul de fațadă este mai rigid, cu atât umbra proiectează agresivitate și ostilitate antiinstituțională.'}
                 {fig6SelectedStep === 'bucla_algoritmica' &&
-                  'Bucla de feedback algoritmic și închiderea fizică (R). Resentimentul umbrei este capturat de algoritmii de optimizare a atenției și de operatorii de război cognitiv, amplificând polarizarea. Săgeata buclei se întoarce fizic la Anxietate cronică ca reacție pozitivă (Reinforcing Loop - R), autoamplificând criza.'}
+                  'Bucla de feedback algoritmic și închiderea fizică (R). Resentimentul umbrei este capturat de algoritmii de optimizare a atenției și de operatorii de război cognitiv, amplificând polarizarea. Săgeata buclei se întoarce fizic la Anxietate cronică ca reacție pozitivă (buclă de autoamplificare – R), autoamplificând criza.'}
                 {fig6SelectedStep === 'b1' &&
                   '1. Acceptarea incertitudinii (Track B). Punctul de intrare în procesarea adaptativă constă în capacitatea negativă (Bion) — rezistența la impulsul de a închide prematur cogniția (rezistență la NFCC) și acceptarea calmă a stării de necunoscut fără panică.'}
                 {fig6SelectedStep === 'b2' &&
@@ -4154,7 +4154,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* BOTTOM FOUNDATION: Determinanții Lalonde-Dever */}
+              {/* BOTTOM FOUNDATION: Determinanții Lalonde–Dever */}
               <g
                 onClick={() => setFig7SelectedNode('fundament')}
                 className="cursor-pointer"
@@ -4198,7 +4198,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig7SelectedNode === 'fronton' &&
                   'Sinteza modernității organice și a suveranității democratice. Formele constituționale și de securitate occidentale încetează să mai fie „forme fără fond” mimate superficial de o elită extractivă și devin expresia instituțională firească a unui fond cultural și moral autohton regenerat.'}
                 {fig7SelectedNode === 'fundament' &&
-                  'Fundamentul Lalonde-Dever (Lalonde, 1974; Dever, 1976). Demonstrează că reziliența cognitivă a unei națiuni depinde simultan de organizarea sistemului instituțional, de mediul socioeconomic și digital, de stilul de viață asociativ și de rezerva neurobiologică a cetățenilor.'}
+                  'Fundamentul Lalonde–Dever (Lalonde, 1974; Dever, 1976). Demonstrează că reziliența cognitivă a unei națiuni depinde simultan de organizarea sistemului instituțional, de mediul socioeconomic și digital, de stilul de viață asociativ și de rezerva neurobiologică a cetățenilor.'}
               </p>
             </div>
           </div>

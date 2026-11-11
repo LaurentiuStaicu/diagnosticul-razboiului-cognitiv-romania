@@ -197,5 +197,30 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   {
     conceptId: 'proairesis',
     regex: /\b(proairesis)\b/i
+  },
+  {
+    conceptId: 'matricea-cipolla',
+    regex: /\b(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+a\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla)\b/i
+  },
+  {
+    conceptId: 'abaissement-du-niveau-mental',
+    regex: /\b(abaissement\s+du\s+niveau\s+mental)\b/i
+  },
+  {
+    conceptId: 'russkii-mir-etnofiletism',
+    regex: /\b(Russkii\s+Mir|etnofiletism(?:ul|ului)?)\b/i
+  },
+  {
+    conceptId: 'dubla-falsificare-axiologica',
+    regex: /\b(dubl(?:ă|a|ei)\s+falsific(?:are|ări)\s+axiologic(?:ă|e))\b/i
+  },
+  {
+    conceptId: 'bucla-ooda',
+    regex: /\b(bucl(?:a|ei)\s+(?:decizional(?:ă|e)\s+)?OODA)\b/i
+  },
+  {
+    conceptId: 'sistema',
+    regex: /\b(rețea(?:ua|lei)\s+sistema|sistema)\b/i
   }
 ];
+
