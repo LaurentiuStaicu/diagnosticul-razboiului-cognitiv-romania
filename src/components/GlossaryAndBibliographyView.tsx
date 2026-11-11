@@ -82,7 +82,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                   : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
               }`}
             >
-              Bibliografie integrală · {BIBLIOGRAPHY_DATA.length} lucrări, paginile 42–47
+              Bibliografie integrală · {BIBLIOGRAPHY_DATA.length} lucrări
             </button>
             <button
               onClick={() => setActiveTab('blueprint')}
@@ -176,10 +176,10 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                     }`}
                   >
                     {concept.polarity === 'tension'
-                      ? 'Mecanism de vulnerabilitate / tensiune'
+                      ? 'Vulnerabilitate și tensiune'
                       : concept.polarity === 'synthesis'
-                      ? 'Mecanism de reziliență / sinteză'
-                      : 'Cadru analitic structural'}
+                      ? 'Reziliență și sinteză'
+                      : 'Cadru analitic'}
                   </span>
                 </div>
 
@@ -217,7 +217,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
         <div className="bg-[#F6F5EE] border border-[#222426] divide-y divide-[#8C9BA5]">
           <div className="p-3.5 bg-[#F6F5EE] text-xs font-mono text-[#6E7376] flex flex-wrap items-center justify-between gap-2">
             <span>
-              Lucrări afișate: {filteredBibliography.length} din {BIBLIOGRAPHY_DATA.length} lucrări academice verificate în paginile 42–47
+              {filteredBibliography.length} din {BIBLIOGRAPHY_DATA.length} lucrări academice
             </span>
             <span>Ordine alfabetică după autor și an · APA 7th Edition</span>
           </div>

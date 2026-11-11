@@ -643,7 +643,6 @@ export function App() {
                   </button>
 
                   <div className="flex flex-wrap items-center gap-1.5 text-xs font-mono">
-                    <span className="text-[#6E7376] font-medium">Filtru straturi:</span>
                     {(['ALL', 'A', 'B', 'C'] as const).map((st) => (
                       <button
                         key={st}
@@ -654,7 +653,7 @@ export function App() {
                             : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
                         }`}
                       >
-                        {st === 'ALL' ? 'Toate' : `Stratul ${st}`}
+                        {st === 'ALL' ? 'Toate straturile' : `Stratul ${st}`}
                       </button>
                     ))}
                   </div>
@@ -756,7 +755,7 @@ export function App() {
                   {/* Dual-Audience Reading Mode Toggle */}
                   <div className="mb-5 p-3 bg-[#F6F5EE] border border-[#222426] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
                     <div className="text-xs font-mono text-[#222426] font-semibold">
-                      Registru de lectură · Cercetare academică și sinteză executivă
+                      Mod de lectură
                     </div>
                     <div className="flex flex-wrap items-center gap-1.5">
                       <button
@@ -880,7 +879,7 @@ export function App() {
                   {/* Interactive Concept Anchors */}
                   <div className="mt-5 pt-4 border-t border-[#8C9BA5]">
                     <div className="text-xs font-mono text-[#6E7376] mb-2">
-                      Concepte-cheie în această secțiune · Selectați un termen pentru fișa detaliată
+                      Concepte-cheie în această secțiune
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {currentStep.keyConceptIds.map((cid) => {
@@ -941,13 +940,8 @@ export function App() {
                             >
                               {/* Left: Theoretical Register */}
                               <div className="p-4 border-b md:border-b-0 md:border-r border-[#222426]">
-                                <div className="text-xs font-mono text-[#6E7376] mb-1 flex items-center justify-between gap-2">
+                                <div className="text-xs font-mono text-[#6E7376] mb-1">
                                   <span>Registrul teoretic · Stratul {dr.stratum}</span>
-                                  {isStratumMatch && (
-                                    <span className="px-1.5 py-0.5 text-[10px] font-mono font-bold bg-[#E5B822] text-[#222426] border border-[#222426]">
-                                      STRATUL {dr.stratum} ACTIV
-                                    </span>
-                                  )}
                                 </div>
                                 <div className="font-serif text-sm font-bold text-[#222426]">
                                   {dr.theoreticalConcept}
@@ -993,12 +987,9 @@ export function App() {
                   {/* FULL VERBATIM MONOGRAPH TEXT (62-65ch Measure + Full-Width Inline Figures) */}
                   {(readingTab === 'integral' || readingTab === 'ambele') && (
                     <div className="mt-6 pt-6 border-t border-[#222426]">
-                      <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                      <div className="mb-4">
                         <div className="text-xs font-mono uppercase tracking-wider text-[#6E7376]">
                           Textul integral al secțiunii din monografie
-                        </div>
-                        <div className="text-[11px] font-mono text-[#6E7376]">
-                          Selectați citările bibliografice și termenii subliniați pentru explicații contextuale
                         </div>
                       </div>
                       <div className="space-y-5 font-serif text-[17px] sm:text-[18px] text-[#222426] leading-[1.65]">
@@ -1257,7 +1248,7 @@ export function App() {
                     >
                       <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-[#6E7376] pb-2 mb-2 border-b border-[#8C9BA5]">
                         <span className="font-bold text-[#222426]">
-                          Fișă detaliată · Stratul {activeGlossaryConcept.stratum}
+                          Stratul {activeGlossaryConcept.stratum}
                         </span>
                         <span aria-hidden="true">·</span>
                         <span>{activeGlossaryConcept.domain}</span>

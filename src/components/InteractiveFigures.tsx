@@ -29,7 +29,7 @@ export const FIGURE_METADATA: Record<
     caption:
       'Deficitele structurale din Stratul A — deficitul de servicii publice, închiderea operațională incompletă a instituțiilor și mediul socioeconomic precar — induc în Stratul B o stare cronică de stres alostatic și hipervigilență amigdaliană, care inhibă deliberarea prefrontală și împinge cetățenii spre comportamente reactive de supraviețuire. Aceste mecanisme neurocognitive se sedimentează în Stratul C sub forma fatalismului defensiv, a neputinței învățate și a neîncrederii cronice în ordinea constituțională, oferind vectorului de război cognitiv suprafețe directe de cuplare și amplificare.',
     methodologicalNote:
-      'Selectați direct în diagrama vectorială SVG orice nod structural sau comutați starea sistemului pentru a urmări propagarea cauzală între instituții în Stratul A, neurobiologie în Stratul B și inconștientul cultural în Stratul C.'
+      'Modelul cauzal Macro–Micro–Macro (Coleman, 1990; Hedström & Swedberg, 1998) articulează determinanții instituționali și sociospațiali din Stratul A cu mecanismele de uzură alostatică din Stratul B și cu structurile defensive ale inconștientului cultural din Stratul C.'
   },
   2: {
     id: 2,
@@ -41,7 +41,7 @@ export const FIGURE_METADATA: Record<
     caption:
       'În jumătatea stângă este reprezentată sinteza creștin-seculară europeană, în care principiul demnității umane inalienabile, întemeiat pe conceptul de Imago Dei și pe universalismul drepturilor fundamentale, susține filtrul moral și constituțional al statului de drept, generând modernitate organică și libertate responsabilă. În jumătatea dreaptă este ilustrată operațiunea de disimulare a ideologiei revizioniste a Antilumii (Epstein, 2022), care proiectează la suprafață un camuflaj tradiționalist ortodox și suveranist pentru a ocoli aversiunea istorică a populației-țintă față de Rusia, mascând nucleul operativ real bazat pe inversiune normativă și cinism transgresiv, a cărui finalitate strategică este subordonarea imperială și anomizarea societății vizate.',
     methodologicalNote:
-      'Faceți click pe nodurile din diagrama vectorială SVG pentru a compara sinteza creștin-seculară cu mecanismul de camuflaj discursiv și inversiune normativă.'
+      'Modelul semiotic comparativ evidențiază contrastul dintre antropologia persoanei libere din sinteza creștin-seculară europeană și operațiunea de disimulare axiologică prin care ideologia Antilumii maschează inversiunea normativă sub un camuflaj tradiționalist.'
   },
   3: {
     id: 3,
@@ -54,7 +54,7 @@ export const FIGURE_METADATA: Record<
     caption:
       'Fluxul informațional brut din faza de Observare, amplificat algoritmic prin capturarea circuitelor dopaminergice, intră în faza de Orientare, unde modelele mentale și culturale ale subiectului sunt țintite de controlul reflexiv de rang secund. Această intervenție compromite filtrul axiologic al primului sistem etic, blochează calea medierii ternare și a discernământului rațional prefrontal și deviază procesarea pe traseul celui de-al doilea sistem etic și al logicii binare a anihilării. Rezultatul este o fază de Decizie dominată de selecția emoțională indusă, închiderea cognitivă și procesarea defensivă motivată de protejarea identității de grup, care se traduce în faza de Acțiune prin polarizare socială acută și conflict antiinstituțional.',
     methodologicalNote:
-      'Comutați între intervenția controlului reflexiv de rang secund și starea de mediere ternară intactă sau faceți click pe etapele OODA în diagrama SVG.'
+      'Modelul cibernetic integrează bucla decizională OODA (Boyd, 1987/2018) cu teoria controlului reflexiv (Lefebvre, 1982, 2001) și cu semiotica ternară (Peirce, 1931–1958; Lotman, 1990), demonstrând cum capturarea fazei de Orientare suprimă compromisul democratic.'
   },
   4: {
     id: 4,
@@ -213,9 +213,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
     <div className="bg-[#F6F5EE] border border-[#222426] p-5 sm:p-6">
       {showSelector && onSelectFigure && (
         <div className="mb-6 pb-4 border-b border-[#8C9BA5]">
-          <div className="text-xs font-mono text-[#6E7376] mb-2">
-            Selectați diagrama vectorială de sistem (Figurile 1–7 din monografie)
-          </div>
           <div className="flex flex-wrap gap-1.5">
             {[1, 2, 3, 4, 5, 6, 7].map((id) => (
               <button
@@ -227,7 +224,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
                 }`}
               >
-                Figura {id} (p. {FIGURE_METADATA[id].pdfPage})
+                Figura {id}
               </button>
             ))}
           </div>
@@ -237,10 +234,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
       {/* Header */}
       <div className="mb-5 pb-4 border-b border-[#8C9BA5]">
         <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#6E7376] mb-1">
-          <span>
-            {meta.chapterRef} · Pagina {meta.pdfPage} în PDF
-          </span>
-          <span>Diagramă conceptuală vectorială 2D (SVG interactiv)</span>
+          <span>{meta.chapterRef}</span>
         </div>
         <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#222426] headline-balance">
           {meta.title}
@@ -291,7 +285,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
         <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
-              Regimul sistemic simulat pe Straturile A, B și C
+              Regim sistemic pe Straturile A, B și C
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
@@ -347,7 +341,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
-                Stratul A (Determinanți structurali și instituționali)
+                Stratul A · Determinanți structurali și instituționali
               </text>
 
               {/* Node A1: Deficit de servicii publice */}
@@ -474,7 +468,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
-                Stratul B (Mecanisme neurocognitive și cibernetice)
+                Stratul B · Mecanisme neurocognitive și cibernetice
               </text>
 
               {/* Node B1: Romb / Diamond (Stres alostatic / Amigdală) */}
@@ -503,7 +497,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
-                  {fig1Mode === 'vulnerable' ? 'Sistemul 1 (amigdală)' : 'Latență prefrontală'}
+                  {fig1Mode === 'vulnerable' ? 'Sistemul 1 amigdalian' : 'Latență prefrontală'}
                 </text>
               </g>
 
@@ -553,7 +547,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-mono text-[9.5px] font-semibold fill-[#6E7376]"
               >
-                Buclă cibernetică (R)
+                Buclă cibernetică
               </text>
 
               {/* Node B2: Romb / Diamond (Inhibitie dlPFC / Deficit discernamant) */}
@@ -623,7 +617,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
-                Stratul C (Arhitectură psihoculturală și inconștient)
+                Stratul C · Arhitectură psihoculturală și inconștient
               </text>
 
               {/* Node C1: Elipsă Persona mimetică */}
@@ -655,7 +649,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
-                  (forme fără fond)
+                  „forme fără fond”
                 </text>
               </g>
 
@@ -708,7 +702,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
-                  {fig1Mode === 'vulnerable' ? '(neputință învățată)' : '(asumare critică)'}
+                  {fig1Mode === 'vulnerable' ? 'neputință învățată' : 'asumare critică'}
                 </text>
               </g>
 
@@ -734,8 +728,8 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   className="font-sans text-[11.5px] font-bold fill-[#222426]"
                 >
                   {fig1Mode === 'resilient'
-                    ? 'Filtrul moral creștin-secular (integru)'
-                    : 'Filtrul moral creștin-secular (scurtcircuitat)'}
+                    ? 'Filtru moral creștin-secular integru'
+                    : 'Filtru moral creștin-secular scurtcircuitat'}
                 </text>
               </g>
 
@@ -899,7 +893,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-mono text-[10px] font-bold fill-[#222426]"
                   >
-                    Închidere operațională activă
+                    Închidere operațională
                   </text>
                 </g>
               )}
@@ -907,9 +901,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
             {/* Node inspection detail */}
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
-              <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Mecanism cauzal selectat în Figura 1 (click pe casetele din diagramă)
-              </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig1SelectedNode === 'servicii' &&
                   'Stratul A: Organizarea sistemului instituțional și a serviciilor publice (primul determinant Lalonde-Dever). Atunci când justiția, administrația, educația și sănătatea suferă de un deficit de închidere operațională (Luhmann) și sunt permeabile la rețelele clientelare extractive, cetățeanul percepe regulile formale ca pe un paravan ipocrit.'}
@@ -1134,11 +1125,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-bold fill-[#222426]"
                 >
-                  Înveliș: Camuflaj tradiționalist și suveranist
+                  Camuflaj tradiționalist și suveranist
                 </text>
               </g>
 
-              {/* Inner Core Box: Nucleu: Inversiune normativă și cinism */}
+              {/* Inner Core Box: Inversiune normativă și cinism */}
               <g onClick={() => setFig2Inspect('right')} className="cursor-pointer">
                 <rect
                   x="490"
@@ -1155,7 +1146,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-semibold fill-[#222426]"
                 >
-                  Nucleu: Inversiune normativă
+                  Inversiune normativă
                 </text>
                 <text
                   x="615"
@@ -1208,11 +1199,8 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </svg>
 
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
-              <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
-                <span className="text-xs font-mono text-[#6E7376]">
-                  Explicație semiotică și axiologică (Figura 2)
-                </span>
-                <div className="flex items-center gap-1.5">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <div className="flex flex-wrap items-center gap-1.5">
                   {(
                     [
                       { id: 'left', label: 'Sinteza creștin-seculară' },
@@ -1254,7 +1242,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
         <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
-              Starea fazei de Orientare (Schwerpunkt) în bucla decizională OODA
+              Faza de Orientare în bucla decizională OODA
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
@@ -1266,7 +1254,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Control reflexiv activ (Compresie binară)
+                Compresie binară prin control reflexiv
               </button>
               <button
                 type="button"
@@ -1277,7 +1265,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Mediere ternară intactă (Compromis democratic)
+                Compromis democratic și mediere ternară
               </button>
             </div>
           </div>
@@ -1346,7 +1334,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  (concurent legitim)
+                  concurent legitim
                 </text>
               </g>
 
@@ -1371,7 +1359,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-sans text-[11px] font-bold tracking-wider fill-[#6E7376]"
               >
-                BUCLA CIBERNETICĂ OODA (BOYD)
+                BUCLA CIBERNETICĂ OODA · BOYD
               </text>
 
               {/* TOP BOX: Control reflexiv de rang secund */}
@@ -1500,7 +1488,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  (flux date)
+                  flux de date
                 </text>
               </g>
 
@@ -1544,7 +1532,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  (modele mentale)
+                  modele mentale
                 </text>
               </g>
 
@@ -1598,7 +1586,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
                 >
-                  {fig3ReflexiveActive ? '(emoțională)' : '(deliberativă)'}
+                  {fig3ReflexiveActive ? 'emoțională' : 'deliberativă'}
                 </text>
               </g>
 
@@ -1652,7 +1640,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
                 >
-                  (comportament)
+                  comportament
                 </text>
               </g>
 
@@ -1747,7 +1735,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  (puritate morală)
+                  puritate morală
                 </text>
               </g>
 
@@ -1796,15 +1784,12 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  (țapi ispășitori)
+                  țapi ispășitori
                 </text>
               </g>
             </svg>
 
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
-              <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Etapă selectată în arhitectura OODA și controlul reflexiv (Figura 3)
-              </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig3SelectedStage === 'primul-sistem' &&
                   'Primul sistem etic (Lefebvre, 1982, 2001). Cadrul axiologic al democrației constituționale în care compromisul legal și dialogul sunt privite ca virtuți cardinale, iar adversarul politic rămâne un concurent legitim în interiorul statului de drept.'}
@@ -1833,7 +1818,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
         <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
-              Starea filtrelor structurale de conversie (Straturile A și B)
+              Traseu psihodinamic
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
@@ -1845,7 +1830,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Filtre active (Conversie în modernitate organică)
+                Conversie în modernitate organică
               </button>
               <button
                 type="button"
@@ -1856,7 +1841,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Fără filtru (Alunecare în enantiodromie și cinism)
+                Alunecare în enantiodromie și cinism
               </button>
             </div>
           </div>
@@ -1872,14 +1857,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               <rect x="0" y="0" width="920" height="470" fill="#F6F5EE" />
               <rect x="0" y="0" width="920" height="470" fill="url(#stipple-bg)" />
 
-              {/* 3 Column Headers (exact match to PDF p. 24) */}
+              {/* 3 Column Headers */}
               <text
                 x="145"
                 y="34"
                 textAnchor="middle"
                 className="font-sans text-[12px] font-bold tracking-wider fill-[#6E7376]"
               >
-                STRATUL C (UMBRĂ COLECTIVĂ)
+                STRATUL C · UMBRA COLECTIVĂ
               </text>
               <text
                 x="455"
@@ -1887,7 +1872,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-sans text-[12px] font-bold tracking-wider fill-[#6E7376]"
               >
-                FILTRE DE CONVERSIE (A ȘI B)
+                FILTRE DE CONVERSIE · STRATURILE A ȘI B
               </text>
               <text
                 x="765"
@@ -2103,7 +2088,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  Filtru (Lege impersonală dreaptă)
+                  Lege impersonală dreaptă
                 </text>
                 <text
                   x="455"
@@ -2111,7 +2096,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
-                  Închidere operațională (Luhmann)
+                  Închidere operațională a statului de drept
                 </text>
               </g>
 
@@ -2132,7 +2117,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-bold fill-[#222426]"
                 >
-                  Filtru (Discernământ critic)
+                  Discernământ critic
                 </text>
                 <text
                   x="455"
@@ -2259,7 +2244,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-sans text-[11.5px] font-bold fill-[#F01E1E]"
               >
-                Fără filtru (Enantiodromie și cinism)
+                Alunecare în enantiodromie și cinism
               </text>
 
               <g onClick={() => setFig4ActiveNode('anomizare')} className="cursor-pointer">
@@ -2284,26 +2269,23 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </g>
             </svg>
 
-            {/* Legend for Order-1 vs Order-2 Psychodynamic Flows */}
+            {/* Legend for Psychodynamic Flows */}
             <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono bg-[#F6F5EE] border border-[#8C9BA5] p-3">
               <div className="flex items-center gap-2">
                 <span className="inline-block w-6 h-0.5 bg-[#F01E1E] border-b border-dashed border-[#F01E1E] shrink-0" />
                 <span className="text-[#222426]">
-                  Flux de ordinul 1 (fără mediere, regresie în enantiodromie și revoltă anomizantă)
+                  Regresie în enantiodromie și revoltă anomizantă
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="inline-block w-6 h-1 bg-[#E5B822] shrink-0" />
                 <span className="text-[#222426]">
-                  Flux de ordinul 2 (procesat prin cele 3 filtre în modernitate organică pe axa Ego–Sine)
+                  Conversie în modernitate organică pe axa Ego–Sine
                 </span>
               </div>
             </div>
 
             <div className="mt-3 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
-              <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Nod selectat în arhitectura conversiei (Figura 4)
-              </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig4ActiveNode === 'umbra-bruta' &&
                   'Umbra colectivă (Jung, 1951/1968; Edinger, 1972; von Franz, 1972/1995). Nu conține doar pulsiuni distructive, ci și resurse vitale de energie psihică, instincte legitime de conservare și potențialități de înnoire excluse de Persona instituțională mimetică.'}
@@ -2336,7 +2318,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
         <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
-              Starea barierei instituționale și juridice dintre Cadranul II și Cadranul III
+              Traiectorie în matricea lui Cipolla
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
@@ -2348,7 +2330,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Barieră instituțională fisurată (Blocaj și prăbușire în Cadranul III)
+                Prăbușire în autosabotaj colectiv · Cadranul III
               </button>
               <button
                 type="button"
@@ -2359,7 +2341,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Barieră consolidată în Faza III (Tranziție în Cadranul I)
+                Tranziție spre cooperare inteligentă · Cadranul I
               </button>
             </div>
           </div>
@@ -2407,7 +2389,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#6E7376]"
                 >
-                  Cadranul II: Cetățeni vulnerabili / Naivi (-X, +Y)
+                  Cadranul II · Cetățeni vulnerabili
                 </text>
                 <text
                   x="255"
@@ -2415,7 +2397,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
-                  Pierdere proprie (-X) / Beneficiu societal (+Y)
+                  Pierdere proprie · Beneficiu societal
                 </text>
                 <text
                   x="255"
@@ -2448,7 +2430,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#222426]"
                 >
-                  Cadranul I: Cooperare inteligentă (+X, +Y)
+                  Cadranul I · Cooperare inteligentă
                 </text>
                 <text
                   x="625"
@@ -2456,7 +2438,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#222426]"
                 >
-                  Beneficiu propriu (+X) / Beneficiu colectiv (+Y)
+                  Beneficiu propriu · Beneficiu colectiv
                 </text>
                 <text
                   x="625"
@@ -2489,7 +2471,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#F01E1E]"
                 >
-                  Cadranul III: Autosabotaj social (-X, -Y)
+                  Cadranul III · Autosabotaj colectiv
                 </text>
                 <text
                   x="255"
@@ -2505,7 +2487,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11.5px] fill-[#6E7376]"
                 >
-                  Pierdere proprie (-X) / Daună societală (-Y)
+                  Pierdere proprie · Daună societală
                 </text>
               </g>
 
@@ -2530,7 +2512,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#222426]"
                 >
-                  Cadranul IV: Elite extractive / Banditism (+X, -Y)
+                  Cadranul IV · Elite extractive
                 </text>
                 <text
                   x="625"
@@ -2538,7 +2520,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
-                  Câștig propriu (+X) / Daună societală (-Y)
+                  Câștig propriu · Daună societală
                 </text>
                 <text
                   x="625"
@@ -2582,7 +2564,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
-                +Y (Beneficiu societal)
+                +Y · Beneficiu societal
               </text>
 
               <rect x="375" y="515" width="130" height="22" fill="#F6F5EE" />
@@ -2592,7 +2574,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
-                -Y (Daună societală)
+                -Y · Daună societală
               </text>
 
               <rect x="74" y="236" width="138" height="22" fill="#F6F5EE" />
@@ -2602,7 +2584,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="start"
                 className="font-sans text-[12px] font-bold fill-[#222426]"
               >
-                -X (Pierdere proprie)
+                -X · Pierdere proprie
               </text>
 
               <rect x="676" y="236" width="130" height="22" fill="#F6F5EE" />
@@ -2612,7 +2594,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="end"
                 className="font-sans text-[12px] font-bold fill-[#222426]"
               >
-                +X (Câștig propriu)
+                +X · Câștig propriu
               </text>
 
               {/* Diagonal Dashed Vector: Presiune de spoliere sistemică din (+X, -Y) spre (-X, +Y) */}
@@ -2680,7 +2662,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[10px] font-bold fill-[#F01E1E]"
                   >
-                    Tranziție blocată (T-bar)
+                    Tranziție blocată
                   </text>
 
                   {/* DINAMICA 2: Vectorul descendent masiv în #F01E1E */}
@@ -2708,7 +2690,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[11px] font-bold fill-[#F01E1E]"
                   >
-                    Alunecare în autosabotaj (-X, -Y)
+                    Alunecare în autosabotaj colectiv
                   </text>
                 </g>
               ) : (
@@ -2766,30 +2748,27 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     markerEnd="url(#arrow-gold)"
                   />
                   <rect
-                    x="320"
+                    x="306"
                     y="148"
-                    width="155"
+                    width="184"
                     height="22"
                     fill="#F6F5EE"
                     stroke="#222426"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="397"
+                    x="398"
                     y="163"
                     textAnchor="middle"
                     className="font-sans text-[10.5px] font-bold fill-[#222426]"
                   >
-                    Tranziție spre cooperare (+X, +Y)
+                    Tranziție spre cooperare inteligentă
                   </text>
                 </g>
               )}
             </svg>
 
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
-              <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Cadran selectat în matricea lui Carlo M. Cipolla (Figura 5)
-              </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig5SelectedQuadrant === 'I' &&
                   'Cadranul I (+X, +Y, cooperare inteligentă). Cetățenii, antreprenorii și instituțiile incluzive își urmăresc propriul interes legitim prin muncă, inovație și respectarea legii impersonale, generând simultan valoare adăugată și încredere pentru întreaga comunitate (ordinea socială cu acces deschis, North, Wallis & Weingast, 2009).'}
@@ -2812,7 +2791,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
         <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
-              Selectați ramura activă de procesare cognitivă în criză
+              Procesare cognitivă în criză
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
@@ -2827,7 +2806,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Track A (procesare defensivă și buclă de autoamplificare R)
+                Track A · Procesare defensivă și autoamplificare
               </button>
               <button
                 type="button"
@@ -2841,7 +2820,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Track B (procesare adaptativă și creație suverană)
+                Track B · Procesare adaptativă și creație suverană
               </button>
             </div>
           </div>
@@ -2971,7 +2950,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#F01E1E]"
                 >
-                  Track A (procesare defensivă și reactivă)
+                  Track A · Procesare defensivă și reactivă
                 </text>
 
                 {/* A1: Anxietate cronică */}
@@ -3041,7 +3020,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[11.5px] font-bold fill-[#222426]"
                   >
-                    Nevoia de închidere cognitivă (NFCC)
+                    Nevoia de închidere cognitivă
                   </text>
                   <text
                     x="230"
@@ -3094,7 +3073,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[10px] fill-[#6E7376]"
                   >
-                    Conformism formal și aparență („forme fără fond”)
+                    Conformism formal și „forme fără fond”
                   </text>
                 </g>
 
@@ -3237,7 +3216,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#F01E1E]"
                 >
-                  (R)
+                  R
                 </text>
                 <rect
                   x="6"
@@ -3298,7 +3277,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-sans text-[8.5px] fill-[#6E7376]"
               >
-                (integrare Trickster)
+                integrare Trickster
               </text>
 
               {/* ============================================================
@@ -3322,7 +3301,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
-                  Track B (procesare adaptativă și deliberativă)
+                  Track B · Procesare adaptativă și deliberativă
                 </text>
 
                 {/* B1: Acceptarea incertitudinii */}
@@ -3408,7 +3387,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[9.5px] fill-[#6E7376]"
                   >
-                    Reglare executivă prefrontală (dlPFC)
+                    Reglare executivă prefrontală
                   </text>
                 </g>
 
@@ -3461,7 +3440,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-medium fill-[#222426]"
                   >
-                    Integrarea ingeniozității adaptative (Trickster)
+                    Integrarea ingeniozității adaptative Trickster
                   </text>
                 </g>
 
@@ -3615,7 +3594,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
-                  Axa Ego–Sine (integritate profundă)
+                  Axa Ego–Sine · Integritate profundă
                 </text>
 
                 {/* Buclă de consolidare a rezilienței */}
@@ -3656,9 +3635,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </svg>
 
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
-              <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Sinteză de sistem: Modelul comparativ al procesării în criză (Figura 6)
-              </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig6SelectedStep === 'bifurcatie' &&
                   'Nodul unic de bifurcație (stresul material acut și policriza). Reprezintă punctul de incidență al șocului cognitiv și socioeconomic. În absența unei pauze metacognitive și a rezervei neurobiologice, presiunea crizei împinge procesarea în mod automat spre reacția defensivă din Track A.'}
@@ -3701,7 +3677,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
         <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
-              Inspectați fazele ordonate cauzal pe determinanții Lalonde-Dever
+              Fazele reconstrucției rezilienței
             </span>
             <div className="flex flex-wrap items-center gap-2">
               {([1, 2, 3] as const).map((ph) => (
@@ -3717,7 +3693,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                       : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                   }`}
                 >
-                  Faza {ph === 1 ? 'I (orizont tactic)' : ph === 2 ? 'II (orizont operațional)' : 'III (orizont strategic)'}
+                  {ph === 1
+                    ? 'Faza I · Decompresie și igienă digitală'
+                    : ph === 2
+                      ? 'Faza II · Prebunking și validare morală'
+                      : 'Faza III · Stat de drept și individuare'}
                 </button>
               ))}
             </div>
@@ -3763,7 +3743,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
-                  Închidere operațională a statului de drept · Discernământ critic (Track B) · Axa Ego–Sine consolidată
+                  Închidere operațională a statului de drept · Discernământ critic · Axa Ego–Sine consolidată
                 </text>
               </g>
 
@@ -3847,7 +3827,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  Faza I (Decompresie și
+                  Faza I · Decompresie și
                 </text>
                 <text
                   x="168"
@@ -3855,7 +3835,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  igienă digitală)
+                  igienă digitală
                 </text>
                 <text
                   x="168"
@@ -3863,7 +3843,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  Orizont tactic (stabilizare)
+                  Orizont tactic · 0–12 luni
                 </text>
 
                 {/* Sub-box 1.1 */}
@@ -3959,7 +3939,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  Faza II (Prebunking și
+                  Faza II · Prebunking și
                 </text>
                 <text
                   x="460"
@@ -3967,7 +3947,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  validare morală)
+                  validare morală
                 </text>
                 <text
                   x="460"
@@ -3975,7 +3955,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  Orizont operațional (mediere)
+                  Orizont operațional · 1–3 ani
                 </text>
 
                 {/* Sub-box 2.1 */}
@@ -3994,7 +3974,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11.5px] font-bold fill-[#222426]"
                 >
-                  Consolidare mnezică (Ebbinghaus)
+                  Consolidare mnezică Ebbinghaus
                 </text>
                 <text
                   x="460"
@@ -4071,7 +4051,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  Faza III (Stat de drept și
+                  Faza III · Stat de drept și
                 </text>
                 <text
                   x="752"
@@ -4079,7 +4059,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  individuare)
+                  individuare
                 </text>
                 <text
                   x="752"
@@ -4087,7 +4067,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  Orizont strategic (consolidare)
+                  Orizont strategic · 3–10 ani
                 </text>
 
                 {/* Sub-box 3.1 */}
@@ -4208,18 +4188,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </svg>
 
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
-              <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Explicația secvențialității cauzale (Figura 7)
-              </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig7SelectedNode === 'faza1' &&
-                  'Faza I (Orizont tactic imediat, de la zero la douăsprezece luni). Nicio campanie de educație mediatică nu poate reuși dacă este aplicată direct asupra unei populații aflate în plină uzură alostatică și capturare dopaminergică. Faza I oprește bucla reactivă (Track A) prin debirocratizare transparentă (modelul e-Estonia) și prin aplicarea strictă a DSA și AI Act (audit algoritmic, frâne de viralitate și etichetarea datelor sintetice).'}
+                  'Faza I · Orizont tactic imediat, 0–12 luni. Nicio campanie de educație mediatică nu poate reuși dacă este aplicată direct asupra unei populații aflate în plină uzură alostatică și capturare dopaminergică. Faza I oprește bucla reactivă din Track A prin debirocratizare transparentă, după modelul e-Estonia, și prin aplicarea strictă a DSA și AI Act: audit algoritmic, frâne de viralitate și etichetarea datelor sintetice.'}
                 {fig7SelectedNode === 'faza2' &&
-                  'Faza II (Orizont operațional mediu, de la unu la trei ani). Odată ce cortexul prefrontal își recapătă disponibilitatea funcțională, Faza a II-a reconstruiește faza de Orientare din bucla OODA prin trei piloni (validarea comunitară empatică în infrastructura asociativă de proximitate, pregătirea preventivă prebunking calibrată pe curba uitării a lui Ebbinghaus și reconcilierea filtrului moral creștin-secular).'}
+                  'Faza II · Orizont operațional mediu, 1–3 ani. Odată ce cortexul prefrontal își recapătă disponibilitatea funcțională, Faza a II-a reconstruiește faza de Orientare din bucla OODA prin trei piloni: validarea comunitară empatică în infrastructura asociativă de proximitate, pregătirea preventivă prebunking calibrată pe curba uitării a lui Ebbinghaus și reconcilierea filtrului moral creștin-secular.'}
                 {fig7SelectedNode === 'faza3' &&
-                  'Faza III (Orizont strategic, de la trei la zece ani). Elimină cauzele profunde ale formelor fără fond prin închiderea operațională autentică a justiției și administrației (Luhmann), guvernanță policentrică (Ostrom) care redă cetățeanului autoeficacitatea politică (Bandura) și individuare colectivă pe axa Ego–Sine (depășirea incapacității de a ține doliu și a sindromului Puer Aeternus).'}
+                  'Faza III · Orizont strategic, 3–10 ani. Elimină cauzele profunde ale „formelor fără fond” prin închiderea operațională autentică a justiției și administrației (Luhmann), guvernanță policentrică (Ostrom) care redă cetățeanului autoeficacitatea politică (Bandura) și individuare colectivă pe axa Ego–Sine, depășind incapacitatea de a ține doliu și sindromul Puer Aeternus.'}
                 {fig7SelectedNode === 'fronton' &&
-                  'Sinteza modernității organice și a suveranității democratice. Formele constituționale și de securitate occidentale încetează să mai fie forme fără fond mimate superficial de o elită extractivă și devin expresia instituțională firească a unui fond cultural și moral autohton regenerat.'}
+                  'Sinteza modernității organice și a suveranității democratice. Formele constituționale și de securitate occidentale încetează să mai fie „forme fără fond” mimate superficial de o elită extractivă și devin expresia instituțională firească a unui fond cultural și moral autohton regenerat.'}
                 {fig7SelectedNode === 'fundament' &&
                   'Fundamentul Lalonde-Dever (Lalonde, 1974; Dever, 1976). Demonstrează că reziliența cognitivă a unei națiuni depinde simultan de organizarea sistemului instituțional, de mediul socioeconomic și digital, de stilul de viață asociativ și de rezerva neurobiologică a cetățenilor.'}
               </p>
@@ -4235,7 +4212,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           {meta.caption}
         </p>
         <p className="text-xs font-mono text-[#6E7376] leading-relaxed">
-          Notă metodologică ({meta.chapterRef}). {meta.methodologicalNote}
+          Notă metodologică · {meta.chapterRef}. {meta.methodologicalNote}
         </p>
       </div>
     </div>

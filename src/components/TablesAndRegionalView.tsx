@@ -82,11 +82,10 @@ export const TablesAndRegionalView: React.FC = () => {
                   Tabelul 1. Sinteza arhitecturii cauzale ascendente a diagnosticului instituțional, neurocognitiv și cultural
                 </h3>
                 <p className="text-xs text-[#6E7376] mt-1">
-                  Articularea celor cinci dimensiuni majore de vulnerabilitate societală pe Straturile A, B și C · Paginile 31–34 din monografie.
+                  Articularea celor cinci dimensiuni majore de vulnerabilitate societală pe Straturile A, B și C.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-1.5">
-                <span className="text-xs font-mono text-[#6E7376] mr-1">Evidențiere strat</span>
                 {(['ALL', 'A', 'B', 'C'] as const).map((stratum) => (
                   <button
                     key={stratum}
@@ -97,7 +96,7 @@ export const TablesAndRegionalView: React.FC = () => {
                         : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                     }`}
                   >
-                    {stratum === 'ALL' ? 'Toate straturile · A, B, C' : `Stratul ${stratum}`}
+                    {stratum === 'ALL' ? 'Toate straturile' : `Stratul ${stratum}`}
                   </button>
                 ))}
               </div>
@@ -203,7 +202,7 @@ export const TablesAndRegionalView: React.FC = () => {
                   Tabelul 2. Protocolul secvențial de reconstrucție a rezilienței cognitive și instituționale structurat pe determinanții modelului Lalonde-Dever
                 </h3>
                 <p className="text-xs text-[#6E7376] mt-1">
-                  Ordinea cauzală obligatorie a intervențiilor pe cele trei faze și cei patru determinanți sistemici · Paginile 39–42 din monografie.
+                  Ordinea cauzală obligatorie a intervențiilor pe cele trei faze și cei patru determinanți sistemici.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-1.5">
@@ -217,7 +216,7 @@ export const TablesAndRegionalView: React.FC = () => {
                         : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                     }`}
                   >
-                    {phase === 'ALL' ? 'Toate cele 3 faze' : phase}
+                    {phase === 'ALL' ? 'Toate fazele' : phase}
                   </button>
                 ))}
               </div>
