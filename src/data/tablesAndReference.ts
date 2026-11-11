@@ -75,15 +75,15 @@ export const TABLE_2_DATA: Table2Row[] = [
     id: 't2-faza-1',
     phaseCode: 'Faza I',
     phaseSubtitle: 'Decompresia alostatică și igiena informațională',
-    horizon: 'Orizont tactic imediat: 0–12 luni',
+    horizon: 'Orizont tactic imediat: 0–72 ore în criză acută · 0–12 luni structural',
     humanBiology:
       'Reducerea uzurii alostatice (McEwen) și a hiperactivării cronice a axei HPA prin scăderea insecurității materiale și birocratice; protejarea somnului și a atenției copiilor și adulților prin limitarea expunerii la fluxurile adictive de stimuli care provoacă capturarea circuitelor dopaminergice în nucleul accumbens; restabilirea latenței temporale necesare pentru deblocarea cortexului prefrontal dorsolateral.',
     digitalAndSociospatial:
-      'Aplicarea strictă a regulamentelor europene Digital Services Act și AI Act prin auditarea algoritmilor de recomandare, dezactivarea amplificării automate a indignării morale și introducerea frânelor de viralitate; destructurarea fermelor de boți și etichetarea criptografică a datelor sintetice pentru a preveni degradarea modelelor generative; investiții de urgență în serviciile de bază din enclavele de excluziune socială.',
+      'Aplicarea Regulamentului DSA (Legea nr. 50/2024) și a AI Act prin cuplarea Ordinelor de eliminare a conținutului ilegal (art. 9 DSA / art. 7 Legea 50/2024) cu Ordinele de furnizare a informațiilor financiare și a identității plătitorilor (art. 10 DSA) transmise către VLOPs prin ANCOM; standardizarea probatorie a detecției de către DNSC și hub-ul regional EDMO/BROD în format STIX și maparea pe matricea DISARM; introducerea frânelor de viralitate, etichetarea criptografică a datelor sintetice și investiții de urgență în serviciile de bază din enclavele de excluziune socială.',
     informationalLifestyle:
-      'Campanii publice de conștientizare a igienei digitale și a mecanismelor de capturare a atenției; înlocuirea comunicării oficiale arogante sau alarmiste cu o comunicare instituțională calmă, predictibilă și empatică, menită să dezamorseze hipervigilența rețelei de detecție a relevanței și să oprească bucla reactivă dezadaptativă a Traseului A.',
+      'Campanii publice de conștientizare a igienei digitale și a mecanismelor de capturare a atenției; înlocuirea comunicării oficiale arogante sau alarmiste cu o comunicare strategică de decompresie alostatică bazată pe principiile CDC CERC (Crisis and Emergency Risk Communication), menită să dezamorseze hipervigilența rețelei de saliență și să oprească bucla reactivă dezadaptativă a Traseului A.',
     institutionalSystem:
-      'Simplificarea administrativă și digitalizarea transparentă a interacțiunii dintre cetățean și stat, după modelul eston, pentru eliminarea umilinței birocratice și a corupției mici; oprirea modificărilor fiscale și legislative imprevizibile; blocarea fluxurilor financiare ilicite care alimentează rețelele de reciclare și disimulare a sursei informaționale și rețelele de microinfluenceri coordonați netransparent.'
+      'Simplificarea administrativă și digitalizarea transparentă după modelul e-Estonia; verificarea codului unic al mandatarului financiar (CMF) și blocarea publicității politice nemarcate sau finanțate din țări terțe prin AEP și BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025, Regulamentul TTPA 2024/900 art. 13, 15, 17); înghețarea operativă în timp real a tranzacțiilor suspecte și a conversiilor cripto off-ramp prin ONPCSB, BNR și ASF în temeiul art. 33–34 din Legea nr. 129/2019 (blocare de drept 24h și suspendare 48–72h, interogarea registrului BARIS conform Legii nr. 86/2025, aplicarea O.U.G. nr. 10/2025 / MiCA 2023/1114 și TFR 2023/1113 – Travel Rule, urmate de sesizarea PICCJ pentru sechestru asigurător).'
   },
   {
     id: 't2-faza-2',
@@ -107,11 +107,11 @@ export const TABLE_2_DATA: Table2Row[] = [
     humanBiology:
       'Stabilizarea pe termen lung a rezervei neurobiologice și a echilibrului psihofiziologic al populației printr-un mediu social predictibil și meritocratic; menținerea tonusului integrativ al conștiinței civice și prevenirea scăderii tensiunii conștiente în fața șocurilor geopolitice viitoare.',
     digitalAndSociospatial:
-      'Reducerea structurală a faliilor de dezvoltare sociospațială dintre centrele metropolitane și periferiile interne prin infrastructură, educație echitabilă și politici de coeziune teritorială; integrarea organică a diasporei românești în rețelele economice, științifice și civice ale țării, inversând tendința de declin demografic și dezrădăcinare.',
+      'Reducerea structurală a faliilor sociospațiale dintre centrele metropolitane și periferiile interne; reconstrucția capitalului social de punte (bridging, Putnam) în mediul rural și depășirea familismului amoral (Banfield) prin reforma guvernanței cooperativelor agricole (Legea nr. 566/2004, art. 16 și art. 76: director executiv recrutat competitiv, interdicția rudelor sau afinilor până la gradul al III-lea ai administratorului, filtre de integritate contractuală și protejarea rambursărilor de TVA); integrarea diasporei în rețelele economice și civice ale țării.',
     informationalLifestyle:
       'Asumarea critică și onestă a istoriei naționale în educație și în cultura publică, depășind incapacitatea de a ține doliu și trauma aleasă; conversia funcțională a resurselor latente din Umbra colectivă și a arhetipului Trickster-ului în agilitate cognitivă și inovație; maturizarea conștiinței civice dincolo de sindromul Puer Aeternus și realizarea individuării colective pe axa Ego–Sine.',
     institutionalSystem:
-      'Închiderea operațională autentică a justiției și a administrației publice și tranziția completă la o ordine socială cu acces deschis și la instituții incluzive; implementarea guvernanței policentrice (Ostrom) și a subsidiarității locale; consolidarea barierei instituționale pentru menținerea societății în Cadranul I al cooperării inteligente din matricea lui Cipolla și afirmarea suveranității democratice în NATO și UE.'
+      'Închiderea operațională autentică a justiției și a administrației publice (eliminarea numirilor temporare discreționare din art. 509–510 O.U.G. nr. 57/2019 și profesionalizarea guvernanței corporative O.U.G. nr. 109/2011 / AMEPIP); reforma de arhitectură a alegerii (Thaler & Sunstein) a art. 182 și art. 281 din Codul de procedură fiscală (Legea nr. 207/2015) prin „penalizarea în oglindă a statului” (virarea din oficiu, prin Trezoreria Statului, în același ordin de plată IBAN, a dobânzilor și penalităților pentru întârzierea rambursării TVA conform art. 169 CPF, a concediilor medicale FNUASS conform art. 40 O.U.G. nr. 158/2005 sau a facturilor din e-Factura conform Legii nr. 72/2013, eliminând blocajele din O.G. nr. 22/2002 și RIL nr. 24/2025, alături de răspunderea solidară a funcționarilor conform art. 281 CPF, art. 499–500 Codul administrativ și Decizia CCR nr. 694/2015); mecanism dublu de audit periodic independent: auditul bienal al performanței realizat de Curtea de Conturi (art. 2 lit. b și art. 28 alin. 2 Legea nr. 94/1992 asupra creditelor de angajament din Legea nr. 500/2002) și auditul științific și civic al „cercetătorilor agreați” (art. 40 DSA / EDMO / grilele DigComp, KAVI și Serious Games).'
   }
 ];
 
@@ -826,7 +826,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-0-2',
         title: 'Vulnerabilitatea sistemică: Cauzalitatea recursivă pe trei straturi',
         takeaway:
-          'Operațiunile ostile se cuplează simultan pe trei paliere: instituțiile extractive în Stratul A, rezerva neurocognitivă epuizată de stres în Stratul B și complexele culturale neintegrate în Stratul C.',
+          'Operațiunile ostile se grefează simultan pe falii și vulnerabilități preexistente din trei paliere: instituțiile extractive în Stratul A, rezerva neurocognitivă epuizată de stres în Stratul B și complexele culturale neintegrate în Stratul C.',
         implication:
           'Campaniile izolate de comunicare strategică sau verificare a faptelor eșuează inevitabil dacă ignoră cauzele instituționale și neurobiologice ale vulnerabilității.'
       },
@@ -1026,14 +1026,14 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
   {
     id: 'op-faza-1',
     phaseCode: 'Faza I',
-    phaseTitle: 'Decompresia alostatică și încetinirea tehnică a viralității',
-    horizon: 'Fereastra tactică imediată: 0–48 ore în criză acută · 0–12 luni structural',
+    phaseTitle: 'Decompresia alostatică, interdicția financiară Follow the Money și încetinirea tehnică a viralității',
+    horizon: 'Fereastra tactică imediată: 0–72 ore în criză acută · 0–12 luni structural',
     targetObjective:
-      'Oprirea buclei reactive dezadaptative a Traseului A, scăderea hipercortizolemiei bazale pe axa HPA și întreruperea capturării dopaminergice în nucleul accumbens.',
+      'Oprirea buclei reactive dezadaptative a Traseului A, scăderea hipercortizolemiei bazale pe axa HPA, întreruperea capturării dopaminergice în nucleul accumbens și blocarea fluxurilor financiare și criptografice ale operațiunilor informaționale.',
     concreteIntervention:
-      'Aplicarea Regulamentului (UE) 2022/2065 (DSA) în baza Legii nr. 50/2024 și a AI Act pentru marile platforme online (VLOPs), prin activarea mecanismelor de evaluare și atenuare a riscurilor sistemice (art. 34–35 din DSA), acordarea accesului la datele platformelor pentru „cercetătorii agreați” (vetted researchers, conform art. 40 din DSA) și certificarea notificatorilor de încredere (trusted flaggers); introducerea unor pași tehnici de încetinire a viralității și a dezactivării amplificării indignării morale; destructurarea fermelor de boți din rețelele Doppelgänger, Matrioșka și Pravda, etichetarea criptografică a datelor sintetice și debirocratizarea digitală transparentă după modelul e-Estonia.',
+      'Cuplarea sistematică a Ordinelor de eliminare a conținutului ilegal (art. 9 din DSA / art. 7 din Legea nr. 50/2024) cu Ordinele obligatorii de furnizare a informațiilor financiare și a identității plătitorilor (art. 10 din DSA) transmise către VLOPs prin punctul unic de contact ANCOM; verificarea codului unic al mandatarului financiar (CMF) și blocarea publicității politice nemarcate sau finanțate din țări terțe prin AEP și BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025 și Regulamentul UE 2024/900 TTPA, art. 13, 15 și 17); înghețarea operativă în timp real a tranzacțiilor suspecte și blocarea conversiilor cripto off-ramp prin ONPCSB, BNR și ASF în temeiul art. 33 și art. 34 din Legea nr. 129/2019 (blocare de drept 24h și suspendare ONPCSB 48–72h, interogarea automată a registrului BARIS conform Legii nr. 86/2025, aplicarea O.U.G. nr. 10/2025 / Regulamentului MiCA 2023/1114 și a Regulamentului TFR 2023/1113 – Travel Rule, urmate de sesizarea PICCJ pentru sechestru asigurător); standardizarea probatorie a detecției de către DNSC și hub-ul regional EDMO/BROD în format STIX și maparea pe matricea DISARM; comunicare strategică de decompresie alostatică bazată pe principiile CDC CERC și debirocratizare digitală după modelul e-Estonia.',
     responsibleActors:
-      'ANCOM în calitate de Coordonator al Serviciilor Digitale (DSC, desemnat prin Legea nr. 50/2024), Directoratul Național de Securitate Cibernetică (DNSC), celulele de criză din CSAT, MAI și MApN, în coordonare directă cu Comisia Europeană și European Digital Media Observatory (EDMO / hub-ul regional BROD).'
+      'ANCOM în calitate de Coordonator al Serviciilor Digitale (DSC, Legea nr. 50/2024), DNSC, AEP și BEC, ONPCSB, BNR, ASF și PICCJ, celulele de criză din CSAT, MAI și MApN, în coordonare directă cu Comisia Europeană și European Digital Media Observatory (EDMO / hub-ul regional BROD).'
   },
   {
     id: 'op-faza-2',
@@ -1050,14 +1050,14 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
   {
     id: 'op-faza-3',
     phaseCode: 'Faza III',
-    phaseTitle: 'Închiderea operațională a statului de drept, guvernanța policentrică și individuarea colectivă',
+    phaseTitle: 'Închiderea operațională a statului de drept, isonomia fiscală, guvernanța policentrică și auditul dublu',
     horizon: 'Orizont strategic: 3–10 ani',
     targetObjective:
-      'Eliminarea rădăcinii istorice a „formelor fără fond”, consolidarea barierei instituționale în matricea lui Cipolla pentru atragerea în Cadranul I al cooperării inteligente și refacerea axei Ego–Sine colective.',
+      'Eliminarea rădăcinii istorice a „formelor fără fond”, consolidarea barierei instituționale în matricea lui Cipolla prin arhitectura alegerii (Thaler & Sunstein) pentru atragerea în Cadranul I al cooperării inteligente și susținerea instituțională a patriotismului constituțional matur.',
     concreteIntervention:
-      'Garantarea închiderii operaționale autentice a justiției și administrației; descentralizare și guvernanță policentrică pentru redarea capacității de acțiune politică autonomă și a autoeficacității percepute; module curriculare obligatorii de igienă a atenției digitale, gândire critică și asumarea onestă a istoriei totalitarismelor pentru depășirea incapacității de a ține doliu și a sindromului Puer Aeternus.',
+      'Eliminarea numirilor temporare discreționare în funcțiile publice (art. 509–510 din Codul administrativ – O.U.G. nr. 57/2019); reforma de lege ferenda a art. 182 și art. 281 din Legea nr. 207/2015 privind Codul de procedură fiscală („penalizarea în oglindă a statului” și isonomia fiscală): calculul și virarea automată, din oficiu, prin Trezoreria Statului, în același ordin de plată IBAN, a dobânzilor și penalităților în oglindă pentru întârzierea rambursării TVA (art. 169 CPF), a decontării concediilor medicale din FNUASS (art. 40 O.U.G. nr. 158/2005) sau a facturilor din e-Factura (Legea nr. 72/2013), înlăturând asimetria din O.G. nr. 22/2002 și Decizia ÎCCJ RIL nr. 24/2025, alături de răspunderea solidară a funcționarilor (art. 281 CPF, art. 499–500 Codul administrativ și Decizia CCR nr. 694/2015); reforma guvernanței cooperativelor agricole (Legea nr. 566/2004, art. 16 și art. 76: director executiv recrutat competitiv, interdicția rudelor și afinilor până la gradul al III-lea ai administratorului, filtre de integritate și protejarea rambursărilor de TVA) pentru reconstrucția capitalului social de punte (bridging, Putnam); mecanism dublu de audit periodic independent: Auditul public extern al performanței realizat bienal de Curtea de Conturi a României (art. 2 lit. b și art. 28 alin. 2 din Legea nr. 94/1992) asupra creditelor de angajament multianuale (Legea nr. 500/2002) și Auditul științific și civic independent realizat de consorțiile universitare acreditate ca „cercetători agreați” (art. 40 DSA / EDMO / grilele DigComp, KAVI și simulările Serious Games).',
     responsibleActors:
-      'Ministerul Educației, sistemul judiciar și administrativ, Biserica Ortodoxă Română și cultele recunoscute, mediul universitar, administrația publică locală și societatea civilă.'
+      'Parlamentul României, Ministerul Finanțelor și Trezoreria Statului, Curtea de Conturi a României, sistemul judiciar și administrativ, Ministerul Educației, consorțiile universitare acreditate (cercetători agreați conform art. 40 DSA / EDMO), cooperativele agricole și administrația publică locală.'
   }
 ];
 
