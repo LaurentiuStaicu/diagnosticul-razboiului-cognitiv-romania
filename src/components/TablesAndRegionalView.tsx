@@ -30,10 +30,10 @@ export const TablesAndRegionalView: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="text-xs font-mono text-[#6E7376] mb-1">
-              Sinteze matriciale și analiză comparativă (Capitolele 2, 5 și 6)
+              Sinteze matriciale și analiză comparativă · Capitolele 2, 5 și 6
             </div>
             <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#222426] headline-balance">
-              Tabelele de sinteză (1 și 2), matricea instituțională și grupul de control regional
+              Tabelele de sinteză 1 și 2, matricea instituțională și grupul de control regional
             </h2>
           </div>
 
@@ -46,7 +46,7 @@ export const TablesAndRegionalView: React.FC = () => {
                   : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
               }`}
             >
-              Tabelul 1 (Sinteza diagnosticului pe 3 straturi)
+              Tabelul 1 · Sinteza diagnosticului pe 3 straturi
             </button>
             <button
               onClick={() => setActiveSubView('table2')}
@@ -56,7 +56,7 @@ export const TablesAndRegionalView: React.FC = () => {
                   : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
               }`}
             >
-              Tabelul 2 (Protocolul Lalonde-Dever și matricea instituțională)
+              Tabelul 2 · Protocolul Lalonde-Dever și matricea instituțională
             </button>
             <button
               onClick={() => setActiveSubView('regional')}
@@ -66,7 +66,7 @@ export const TablesAndRegionalView: React.FC = () => {
                   : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
               }`}
             >
-              Grupul de control regional (Estonia, Polonia, Moldova)
+              Grupul de control regional · Estonia, Polonia, Moldova
             </button>
           </div>
         </div>
@@ -79,10 +79,10 @@ export const TablesAndRegionalView: React.FC = () => {
             <div className="flex flex-wrap items-center justify-between gap-4 mb-4 pb-4 border-b border-[#8C9BA5]">
               <div>
                 <h3 className="font-serif text-lg font-bold text-[#222426]">
-                  Tabelul 1 (Sinteza arhitecturii cauzale ascendente a diagnosticului instituțional, neurocognitiv și cultural)
+                  Tabelul 1. Sinteza arhitecturii cauzale ascendente a diagnosticului instituțional, neurocognitiv și cultural
                 </h3>
                 <p className="text-xs text-[#6E7376] mt-1">
-                  Articularea celor cinci dimensiuni majore de vulnerabilitate societală pe Straturile A, B și C (paginile 31–34 din monografie).
+                  Articularea celor cinci dimensiuni majore de vulnerabilitate societală pe Straturile A, B și C · Paginile 31–34 din monografie.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-1.5">
@@ -97,7 +97,7 @@ export const TablesAndRegionalView: React.FC = () => {
                         : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                     }`}
                   >
-                    {stratum === 'ALL' ? 'Toate straturile (A, B, C)' : `Stratul ${stratum}`}
+                    {stratum === 'ALL' ? 'Toate straturile · A, B, C' : `Stratul ${stratum}`}
                   </button>
                 ))}
               </div>
@@ -113,7 +113,7 @@ export const TablesAndRegionalView: React.FC = () => {
                   {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'A') && (
                     <div className="space-y-1">
                       <div className="font-mono font-bold text-[11px] text-[#6E7376]">
-                        Stratul A (Instituțional / Istoric / Sociologic):
+                        Stratul A · Instituțional, istoric și sociologic:
                       </div>
                       <p className="text-[#222426] leading-relaxed">{row.stratumA}</p>
                     </div>
@@ -121,7 +121,7 @@ export const TablesAndRegionalView: React.FC = () => {
                   {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'B') && (
                     <div className="space-y-1 pt-2 border-t border-[#8C9BA5]">
                       <div className="font-mono font-bold text-[11px] text-[#6E7376]">
-                        Stratul B (Neurocognitiv / Semiotic / Axiologic):
+                        Stratul B · Neurocognitiv, semiotic și axiologic:
                       </div>
                       <p className="text-[#222426] leading-relaxed">{row.stratumB}</p>
                     </div>
@@ -129,7 +129,7 @@ export const TablesAndRegionalView: React.FC = () => {
                   {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'C') && (
                     <div className="space-y-1 pt-2 border-t border-[#8C9BA5]">
                       <div className="font-mono font-bold text-[11px] text-[#6E7376]">
-                        Stratul C (Inconștient cultural / Arhetipal):
+                        Stratul C · Inconștient cultural și arhetipal:
                       </div>
                       <p className="text-[#222426] leading-relaxed">{row.stratumC}</p>
                     </div>
@@ -148,17 +148,17 @@ export const TablesAndRegionalView: React.FC = () => {
                     </th>
                     {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'A') && (
                       <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
-                        Stratul A (Mecanismul instituțional, istoric și sociologic)
+                        Stratul A · Mecanismul instituțional, istoric și sociologic
                       </th>
                     )}
                     {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'B') && (
                       <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
-                        Stratul B (Mecanismul neurocognitiv, semiotic și axiologic)
+                        Stratul B · Mecanismul neurocognitiv, semiotic și axiologic
                       </th>
                     )}
                     {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'C') && (
                       <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
-                        Stratul C (Expresia în inconștientul cultural și dinamica arhetipală)
+                        Stratul C · Expresia în inconștientul cultural și dinamica arhetipală
                       </th>
                     )}
                   </tr>
@@ -200,10 +200,10 @@ export const TablesAndRegionalView: React.FC = () => {
             <div className="flex flex-wrap items-center justify-between gap-4 mb-4 pb-4 border-b border-[#8C9BA5]">
               <div>
                 <h3 className="font-serif text-lg font-bold text-[#222426]">
-                  Tabelul 2 (Protocolul secvențial de reconstrucție a rezilienței cognitive și instituționale structurat pe determinanții modelului Lalonde-Dever)
+                  Tabelul 2. Protocolul secvențial de reconstrucție a rezilienței cognitive și instituționale structurat pe determinanții modelului Lalonde-Dever
                 </h3>
                 <p className="text-xs text-[#6E7376] mt-1">
-                  Ordinea cauzală obligatorie a intervențiilor pe cele trei faze și cei patru determinanți sistemici (paginile 39–42 din monografie).
+                  Ordinea cauzală obligatorie a intervențiilor pe cele trei faze și cei patru determinanți sistemici · Paginile 39–42 din monografie.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-1.5">
@@ -228,7 +228,7 @@ export const TablesAndRegionalView: React.FC = () => {
               {filteredTable2.map((row) => (
                 <div key={row.id} className="bg-[#F6F5EE] border-2 border-[#222426] p-4 space-y-3 text-xs">
                   <div className="font-mono font-bold text-xs text-[#222426] pb-2 border-b border-[#222426] bg-[#E5B822]/25 -mx-4 -mt-4 p-3">
-                    {row.phaseCode} ({row.horizon})
+                    {row.phaseCode} · {row.horizon}
                   </div>
                   <div className="space-y-1">
                     <div className="font-mono font-bold text-[11px] text-[#6E7376]">
@@ -282,25 +282,25 @@ export const TablesAndRegionalView: React.FC = () => {
                     <tr key={row.id} className="align-top hover:bg-[#E5B822]/10 transition-colors">
                       <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#222426] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          {row.phaseCode} ({row.horizon})
+                          {row.phaseCode} · {row.horizon}
                         </div>
                         {row.humanBiology}
                       </td>
                       <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          Determinant II (Mediu)
+                          Determinant II · Mediu
                         </div>
                         {row.digitalAndSociospatial}
                       </td>
                       <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          Determinant III (Stil de viață și axiologie)
+                          Determinant III · Stil de viață și axiologie
                         </div>
                         {row.informationalLifestyle}
                       </td>
                       <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          Determinant I (Sistem instituțional)
+                          Determinant I · Sistem instituțional
                         </div>
                         {row.institutionalSystem}
                       </td>
@@ -315,10 +315,10 @@ export const TablesAndRegionalView: React.FC = () => {
           <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-5">
             <div className="mb-4 pb-3 border-b border-[#222426]">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Operaționalizare administrativă, juridică și comunitară (Capitolul 6 · România și Uniunea Europeană)
+                Operaționalizare administrativă, juridică și comunitară · Capitolul 6 · România și Uniunea Europeană
               </div>
               <h3 className="font-serif text-lg font-bold text-[#222426]">
-                Matricea responsabilităților instituționale pe cele trei faze secvențiale (DNSC, ANCOM, CSAT, CNA, Ministerul Educației, Biserica Ortodoxă Română)
+                Matricea responsabilităților instituționale pe cele trei faze secvențiale: DNSC, ANCOM, CSAT, CNA, Ministerul Educației și Biserica Ortodoxă Română
               </h3>
             </div>
 
@@ -333,10 +333,10 @@ export const TablesAndRegionalView: React.FC = () => {
                       Obiectivul strategic și neurocognitiv
                     </th>
                     <th className="p-3.5 border-r border-[#6E7376] text-xs font-serif font-bold w-1/3">
-                      Acțiuni tactice, legislative și algoritmice (DSA Art. 34–35 și AI Act)
+                      Acțiuni tactice, legislative și algoritmice · DSA Art. 34–35 și AI Act
                     </th>
                     <th className="p-3.5 text-xs font-serif font-bold w-1/4">
-                      Instituții responsabile și parteneri societali (România și UE)
+                      Instituții responsabile și parteneri societali · România și UE
                     </th>
                   </tr>
                 </thead>
@@ -374,10 +374,10 @@ export const TablesAndRegionalView: React.FC = () => {
         <div className="space-y-6">
           <div className="bg-[#F6F5EE] border border-[#222426] p-5">
             <h3 className="font-serif text-lg font-bold text-[#222426]">
-              Comparația sistematică a României cu grupul de control regional (Subcapitolul 2.3)
+              Comparația sistematică a României cu grupul de control regional · Subcapitolul 2.3
             </h3>
             <p className="text-xs sm:text-sm text-[#6E7376] mt-1 leading-relaxed">
-              Analiza comparativă cu trei state expuse aceluiași vector de război cognitiv rus (Estonia, Polonia și Republica Moldova) permite izolarea variabilelor cauzale interne și demonstrează că vulnerabilitatea României nu decurge dintr-o fatalitate culturală, ci din ordinea instituțională semiconformată.
+              Analiza comparativă cu trei state expuse aceluiași vector de război cognitiv rus — Estonia, Polonia și Republica Moldova — permite izolarea variabilelor cauzale interne și demonstrează că vulnerabilitatea României nu decurge dintr-o fatalitate culturală, ci din ordinea instituțională semiconformată.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
@@ -433,21 +433,21 @@ export const TablesAndRegionalView: React.FC = () => {
 
                     <div className="p-3 bg-[#F6F5EE] border border-[#8C9BA5]">
                       <div className="font-mono text-xs font-semibold text-[#222426] mb-1">
-                        Stratul A (Arhitectura instituțională și serviciile publice)
+                        Stratul A · Arhitectura instituțională și serviciile publice
                       </div>
                       <p className="text-[#222426] leading-relaxed">{country.stratumA}</p>
                     </div>
 
                     <div className="p-3 bg-[#F6F5EE] border border-[#8C9BA5]">
                       <div className="font-mono text-xs font-semibold text-[#222426] mb-1">
-                        Stratul B (Pregătirea neurocognitivă și apărarea informațională)
+                        Stratul B · Pregătirea neurocognitivă și apărarea informațională
                       </div>
                       <p className="text-[#222426] leading-relaxed">{country.stratumB}</p>
                     </div>
 
                     <div className="p-3 bg-[#F6F5EE] border border-[#8C9BA5]">
                       <div className="font-mono text-xs font-semibold text-[#222426] mb-1">
-                        Stratul C (Inconștientul cultural și axa Ego–Sine)
+                        Stratul C · Inconștientul cultural și axa Ego–Sine
                       </div>
                       <p className="text-[#222426] leading-relaxed">{country.stratumC}</p>
                     </div>

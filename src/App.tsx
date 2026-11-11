@@ -756,7 +756,7 @@ export function App() {
                   {/* Dual-Audience Reading Mode Toggle */}
                   <div className="mb-5 p-3 bg-[#F6F5EE] border border-[#222426] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
                     <div className="text-xs font-mono text-[#222426] font-semibold">
-                      Registru de lectură (Comutator dublu pentru cercetători și decidenți)
+                      Registru de lectură · Cercetare academică și sinteză executivă
                     </div>
                     <div className="flex flex-wrap items-center gap-1.5">
                       <button
@@ -779,7 +779,7 @@ export function App() {
                             : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
                         }`}
                       >
-                        Sinteză executivă (decidenți)
+                        Sinteză executivă
                       </button>
                     </div>
                   </div>
@@ -831,7 +831,7 @@ export function App() {
                           {currentExecutiveSummary.chapterTitle}
                         </h3>
                         <p className="text-xs sm:text-sm font-mono text-[#6E7376] mt-1">
-                          Decupaj metodologic · {currentStep.code} (Pasul {currentStep.stepNumber} din 19)
+                          Decupaj metodologic · {currentStep.code} · Pasul {currentStep.stepNumber} din 19
                         </p>
                       </div>
 
@@ -880,7 +880,7 @@ export function App() {
                   {/* Interactive Concept Anchors */}
                   <div className="mt-5 pt-4 border-t border-[#8C9BA5]">
                     <div className="text-xs font-mono text-[#6E7376] mb-2">
-                      Concepte-cheie în această secțiune (selectați pentru descompunere în panoul lateral)
+                      Concepte-cheie în această secțiune · Selectați un termen pentru fișa detaliată
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {currentStep.keyConceptIds.map((cid) => {
@@ -916,7 +916,7 @@ export function App() {
                   {(readingTab === 'registre' || readingTab === 'ambele') && (
                     <div className="mt-6 pt-6 border-t border-[#222426]">
                       <div className="text-xs font-mono uppercase tracking-wider text-[#6E7376] mb-1">
-                        Anatomia tensiunii și descompunerea pe două registre (Master Blueprint)
+                        Anatomia tensiunii și descompunerea pe două registre
                       </div>
                       <h3 className="font-serif text-base font-bold text-[#222426] mb-4">
                         Stratul teoretic și conceptual în oglindă cu realitatea practică și istorică
@@ -941,8 +941,8 @@ export function App() {
                             >
                               {/* Left: Theoretical Register */}
                               <div className="p-4 border-b md:border-b-0 md:border-r border-[#222426]">
-                                <div className="text-xs font-mono text-[#6E7376] mb-1 flex items-center justify-between">
-                                  <span>Stratul teoretic și conceptual (Stratul {dr.stratum})</span>
+                                <div className="text-xs font-mono text-[#6E7376] mb-1 flex items-center justify-between gap-2">
+                                  <span>Registrul teoretic · Stratul {dr.stratum}</span>
                                   {isStratumMatch && (
                                     <span className="px-1.5 py-0.5 text-[10px] font-mono font-bold bg-[#E5B822] text-[#222426] border border-[#222426]">
                                       STRATUL {dr.stratum} ACTIV
@@ -976,8 +976,8 @@ export function App() {
                                   }`}
                                 >
                                   {dr.systemicOutcome === 'tension'
-                                    ? 'Stratul empiric (falie structurală și vulnerabilitate)'
-                                    : 'Stratul empiric (mecanism de echilibrare și reziliență)'}
+                                    ? 'Realitatea empirică · Vulnerabilitate structurală'
+                                    : 'Realitatea empirică · Mecanism de reziliență'}
                                 </div>
                                 <p className="text-xs sm:text-sm text-[#222426] leading-relaxed mt-2">
                                   {dr.empiricalReality}
@@ -995,10 +995,10 @@ export function App() {
                     <div className="mt-6 pt-6 border-t border-[#222426]">
                       <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
                         <div className="text-xs font-mono uppercase tracking-wider text-[#6E7376]">
-                          Textul integral al secțiunii din monografie (Fidelitate textuală completă)
+                          Textul integral al secțiunii din monografie
                         </div>
                         <div className="text-[11px] font-mono text-[#6E7376]">
-                          Selectați citările (autor, an) și termenii subliniați pentru explicații contextuale
+                          Selectați citările bibliografice și termenii subliniați pentru explicații contextuale
                         </div>
                       </div>
                       <div className="space-y-5 font-serif text-[17px] sm:text-[18px] text-[#222426] leading-[1.65]">
@@ -1106,7 +1106,7 @@ export function App() {
                       >
                         <ArrowLeft className="w-4 h-4 shrink-0" />
                         <span className="truncate">
-                          Pasul {currentStepNumber - 1} ({ALL_SUBCHAPTER_STEPS[currentStepNumber - 2].code})
+                          Pasul {currentStepNumber - 1} · {ALL_SUBCHAPTER_STEPS[currentStepNumber - 2].code}
                         </span>
                       </button>
                     ) : (
@@ -1119,7 +1119,7 @@ export function App() {
                         className="px-5 py-2.5 text-xs font-semibold border border-[#222426] bg-[#E5B822] hover:bg-[#E5B822]/85 transition-colors cursor-pointer flex items-center justify-center gap-2"
                       >
                         <span className="truncate">
-                          Pasul următor ({ALL_SUBCHAPTER_STEPS[currentStepNumber].code})
+                          Pasul următor · {ALL_SUBCHAPTER_STEPS[currentStepNumber].code}
                         </span>
                         <ArrowRight className="w-4 h-4 shrink-0" />
                       </button>
@@ -1175,16 +1175,17 @@ export function App() {
                                 : 'border border-[#8C9BA5] hover:border-[#222426]'
                           } ${isStratumDimmed ? 'opacity-40' : ''}`}
                         >
-                          <div className="flex items-center justify-between text-[11px] font-mono text-[#6E7376]">
+                          <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-[#6E7376] pb-1 mb-1 border-b border-[#8C9BA5]/60">
                             <span
                               className={
                                 isStratumMatch
                                   ? 'px-1.5 py-0.5 bg-[#E5B822] text-[#222426] border border-[#222426] font-bold'
-                                  : ''
+                                  : 'font-bold text-[#222426]'
                               }
                             >
                               Stratul {conceptObj.stratum}
                             </span>
+                            <span aria-hidden="true">·</span>
                             <span>{conceptObj.domain}</span>
                           </div>
                           <div className="font-serif font-bold text-xs sm:text-sm text-[#222426]">
@@ -1210,7 +1211,7 @@ export function App() {
                       <div className="flex items-center justify-between gap-2 pb-2 border-b border-[#222426]">
                         <div className="flex items-center gap-1.5 text-xs font-mono font-bold text-[#222426]">
                           <BookOpen className="w-3.5 h-3.5 shrink-0" />
-                          <span>Referință ({selectedAuthorCitation})</span>
+                          <span>Referință: {selectedAuthorCitation}</span>
                         </div>
                         <button
                           type="button"
@@ -1254,8 +1255,11 @@ export function App() {
                       ref={conceptCardRef}
                       className="scroll-mt-28 bg-[#F6F5EE] border border-[#222426] p-4"
                     >
-                      <div className="flex items-center justify-between gap-2 text-[11px] font-mono text-[#6E7376] pb-2 mb-2 border-b border-[#8C9BA5]">
-                        <span>Fișă detaliată (Stratul {activeGlossaryConcept.stratum})</span>
+                      <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-[#6E7376] pb-2 mb-2 border-b border-[#8C9BA5]">
+                        <span className="font-bold text-[#222426]">
+                          Fișă detaliată · Stratul {activeGlossaryConcept.stratum}
+                        </span>
+                        <span aria-hidden="true">·</span>
                         <span>{activeGlossaryConcept.domain}</span>
                       </div>
                       <h3 className="font-serif text-base font-bold text-[#222426]">
@@ -1285,10 +1289,11 @@ export function App() {
                   {/* Compact Quick-Reference Figure Card in Right Sidebar */}
                   {currentStep.linkedFigureId && (
                     <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 space-y-2.5">
-                      <div className="flex items-center justify-between text-[11px] font-mono text-[#6E7376] border-b border-[#8C9BA5] pb-1.5">
+                      <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-[#6E7376] border-b border-[#8C9BA5] pb-1.5">
                         <span className="font-bold text-[#222426]">
-                          DIAGRAMĂ ASOCIATĂ (FIGURA {currentStep.linkedFigureId})
+                          DIAGRAMĂ ASOCIATĂ · FIGURA {currentStep.linkedFigureId}
                         </span>
+                        <span aria-hidden="true">·</span>
                         <span>{FIGURE_METADATA[currentStep.linkedFigureId]?.chapterRef}</span>
                       </div>
                       <div className="font-serif text-xs sm:text-sm font-bold text-[#222426] leading-snug">
@@ -1323,7 +1328,7 @@ export function App() {
           <div className="space-y-6">
             <div className="bg-[#F6F5EE] border border-[#222426] p-4 sm:p-5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Hărți sistemice 2D în stil gravură vectorială (Figurile 1–7 din monografie)
+                Hărți sistemice 2D în stil gravură vectorială · Figurile 1–7 din monografie
               </div>
               <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#222426]">
                 Laboratorul diagramelor cauzale din monografie
@@ -1367,7 +1372,7 @@ export function App() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-[#8C9BA5]">
             <div className="text-xs text-[#6E7376]">
               <span className="font-serif font-bold text-[#222426]">
-                Diagnosticul războiului cognitiv în România (Versiunea 1.0)
+                Diagnosticul războiului cognitiv în România · Versiunea 1.0
               </span>
               <span> · </span>
               <span>
@@ -1390,7 +1395,7 @@ export function App() {
                 }}
                 className="hover:text-[#222426] transition-colors cursor-pointer"
               >
-                Copertă (Landing page)
+                Coperta monografiei
               </button>
               <span>·</span>
               <button
@@ -1401,7 +1406,7 @@ export function App() {
                 }}
                 className="hover:text-[#222426] transition-colors cursor-pointer"
               >
-                Parcurs pe capitole și subcapitole (19 secțiuni)
+                Parcurs pe capitole și subcapitole · 19 secțiuni
               </button>
             </div>
           </div>

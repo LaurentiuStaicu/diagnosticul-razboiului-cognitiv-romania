@@ -11,17 +11,17 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
     subtitle: 'Cadrul doctrinar și arhitectura explicativă pe trei paliere cauzale',
     dominantStrata: ['A', 'B', 'C'],
     linkedFigureId: 1,
-    summaryThesis: 'Războiul cognitiv operează în al șaselea domeniu operațional definit de NATO, vizând alterarea arhitecturii de procesare a realității, erodarea încrederii în instituțiile democratice și paralizia capacității decizionale prin trei straturi cauzale interdependente (Stratul A instituțional, Stratul B neurocognitiv și semiotic, Stratul C inconștient cultural și arhetipal).',
+    summaryThesis: 'Războiul cognitiv operează în al șaselea domeniu operațional definit de NATO, vizând alterarea arhitecturii de procesare a realității, erodarea încrederii în instituțiile democratice și paralizia capacității decizionale prin trei straturi cauzale interdependente: Stratul A instituțional, Stratul B neurocognitiv și semiotic și Stratul C inconștient cultural și arhetipal.',
     paragraphs: [
-      'Această monografie elaborează un diagnostic integrat al vulnerabilităților structurale și al potențialului de reziliență din societatea românească în fața operațiunilor informaționale și de război cognitiv derulate de Federația Rusă. În doctrina aliată contemporană dezvoltată de Comandamentul Suprem Aliat pentru Transformare (NATO Allied Command Transformation), spațiul cognitiv este definit drept al șaselea domeniu operațional, alături de cel terestru, maritim, aerian, cosmic și cibernetic (Claverie, Baptiste & du Cluzel, 2022; du Cluzel, 2020). Spre deosebire de războiul informațional clasic, care vizează controlul fluxurilor de date și persuasiunea punctuală, războiul cognitiv urmărește alterarea arhitecturii de procesare a realității, erodarea încrederii în instituțiile democratice, compromiterea discernământului etic și paralizia capacității decizionale a unei națiuni fără a declanșa pragul articolului 5 al Tratatului Atlanticului de Nord. Analiza prezentă renunță la orice metaforă externă domeniilor științifice investigate și operează exclusiv cu repertoriul teoretic și conceptual natural al sociologiei instituționale, neuroștiințelor cognitive, ciberneticii sociale, semioticii culturii și psihologiei analitice postjungiene.',
-      'Arhitectura explicativă a lucrării este construită pe trei paliere cauzale interdependente, articulate într-o dinamică ascendentă și recursivă. Stratul A (nivelul instituțional, istoric și sociologic) examinează tensiunea istorică dintre cadrele constituționale occidentale importate și practicile patrimoniale extractive, faliile demografice și sociospațiale, precum și deficitul de închidere operațională a subsistemelor statului. Stratul B (nivelul neurocognitiv, semiotic și axiologic) investighează impactul insecurității cronice asupra axei neuroendocrine a stresului, inhibiția funcțiilor executive prefrontale, capturarea adictivă a circuitelor dopaminergice prin arhitectura algoritmică a platformelor digitale, deturnarea fazei de orientare din bucla decizională OODA prin control reflexiv de rang secund și regresia de la medierea semiotică ternară la logica binară a anihilării. Stratul C (nivelul inconștientului cultural și al dinamicii arhetipale) analizează scindarea dintre Persona instituțională mimetică și Umbra colectivă, activarea complexelor culturale defensive, blocarea axei Ego–Sine, proiecția paranoidă și enantiodromia suveranistă, fundamentând în final un protocol secvențial în trei faze pentru reconstrucția rezilienței cognitive și instituționale și pentru atingerea unei modernități organice.'
+      'Această monografie elaborează un diagnostic integrat al vulnerabilităților structurale și al potențialului de reziliență din societatea românească în fața operațiunilor informaționale și de război cognitiv derulate de Federația Rusă. În doctrina aliată contemporană dezvoltată de Comandamentul Suprem Aliat pentru Transformare al NATO, spațiul cognitiv este definit drept al șaselea domeniu operațional, alături de cel terestru, maritim, aerian, cosmic și cibernetic (Claverie, Baptiste & du Cluzel, 2022; du Cluzel, 2020). Spre deosebire de războiul informațional clasic, care vizează controlul fluxurilor de date și persuasiunea punctuală, războiul cognitiv urmărește alterarea arhitecturii de procesare a realității, erodarea încrederii în instituțiile democratice, compromiterea discernământului etic și paralizia capacității decizionale a unei națiuni fără a declanșa pragul articolului 5 al Tratatului Atlanticului de Nord. Analiza prezentă renunță la orice metaforă externă domeniilor științifice investigate și operează exclusiv cu repertoriul teoretic și conceptual natural al sociologiei instituționale, neuroștiințelor cognitive, ciberneticii sociale, semioticii culturii și psihologiei analitice postjungiene.',
+      'Arhitectura explicativă a lucrării este construită pe trei paliere cauzale interdependente, articulate într-o dinamică ascendentă și recursivă. Stratul A — nivelul instituțional, istoric și sociologic — examinează tensiunea istorică dintre cadrele constituționale occidentale importate și practicile patrimoniale extractive, faliile demografice și sociospațiale, precum și deficitul de închidere operațională a subsistemelor statului. Stratul B — nivelul neurocognitiv, semiotic și axiologic — investighează impactul insecurității cronice asupra axei neuroendocrine a stresului, inhibiția funcțiilor executive prefrontale, capturarea adictivă a circuitelor dopaminergice prin arhitectura algoritmică a platformelor digitale, deturnarea fazei de orientare din bucla decizională OODA prin control reflexiv de rang secund și regresia de la medierea semiotică ternară la logica binară a anihilării. Stratul C — nivelul inconștientului cultural și al dinamicii arhetipale — analizează scindarea dintre Persona instituțională mimetică și Umbra colectivă, activarea complexelor culturale defensive, blocarea axei Ego–Sine, proiecția paranoidă și enantiodromia suveranistă, fundamentând în final un protocol secvențial în trei faze pentru reconstrucția rezilienței cognitive și instituționale și pentru atingerea unei modernități organice.'
     ],
     dualRegister: [
       {
         id: 'intro-dr-1',
         stratum: 'A',
-        theoreticalConcept: 'Al șaselea domeniu operațional (spațiul cognitiv)',
-        theoreticalAuthor: 'Claverie, Baptiste & du Cluzel (2022); NATO ACT',
+        theoreticalConcept: 'Al șaselea domeniu operațional: spațiul cognitiv',
+        theoreticalAuthor: 'Claverie, Baptiste și du Cluzel, 2022 · NATO ACT',
         theoreticalMechanism: 'Depășirea persuasiunii informaționale punctuale prin țintirea directă a arhitecturii de procesare a realității și a capacității decizionale sub pragul articolului 5.',
         empiricalReality: 'Subminarea din interior a coeziunii constituționale și a alianțelor euroatlantice ale României fără intervenție militară convențională.',
         systemicOutcome: 'tension'
@@ -29,9 +29,9 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: 'intro-dr-2',
         stratum: 'B',
-        theoreticalConcept: 'Cauzalitatea ascendentă și recursivă pe trei straturi (A, B, C)',
-        theoreticalAuthor: 'Sinteză multidisciplinară (Sociologie, Neuroștiințe, Semiotică, Psihologie analitică)',
-        theoreticalMechanism: 'Interacțiunea continuă dintre instituțiile statului (Stratul A), rezerva neuroendocrină și procesarea semiotică (Stratul B) și complexele inconștientului cultural (Stratul C).',
+        theoreticalConcept: 'Cauzalitatea ascendentă și recursivă pe trei straturi: A, B și C',
+        theoreticalAuthor: 'Sinteză multidisciplinară · Sociologie, Neuroștiințe, Semiotică și Psihologie analitică',
+        theoreticalMechanism: 'Interacțiunea continuă dintre instituțiile statului în Stratul A, rezerva neuroendocrină și procesarea semiotică în Stratul B și complexele inconștientului cultural în Stratul C.',
         empiricalReality: 'Vulnerabilitatea publicului român nu provine dintr-o simplă lipsă de informare, ci din cuplarea propagandei externe pe uzura neurobiologică și pe traumele istorice neasumate.',
         systemicOutcome: 'synthesis'
       }
@@ -60,8 +60,8 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
         id: '1-1-dr-1',
         stratum: 'A',
         theoreticalConcept: 'Arhitectura cauzală Macro–Micro–Macro și determinanții Lalonde–Dever',
-        theoreticalAuthor: 'Coleman (1990); Hedström (2005); Lalonde (1974); Dever (1976)',
-        theoreticalMechanism: 'Mecanismele situaționale (Macro–Micro) traduc calitatea instituțiilor și a mediului socioeconomic în stări psihofiziologice individuale (Micro), care apoi se agregă prin mecanisme transformaționale (Micro–Macro) în comportamente colective.',
+        theoreticalAuthor: 'Coleman, 1990 · Hedström, 2005 · Lalonde, 1974 · Dever, 1976',
+        theoreticalMechanism: 'Mecanismele situaționale Macro–Micro traduc calitatea instituțiilor și a mediului socioeconomic în stări psihofiziologice individuale la nivel Micro, care apoi se agregă prin mecanisme transformaționale Micro–Macro în comportamente colective.',
         empiricalReality: 'Impredictibilitatea administrativă, inechitatea serviciilor publice și dereglarea spațiului digital din România epuizează rezerva neurocognitivă a cetățenilor înainte ca propaganda externă să intervină.',
         systemicOutcome: 'tension'
       },
@@ -69,8 +69,8 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
         id: '1-1-dr-2',
         stratum: 'B',
         theoreticalConcept: 'Filtrul axiologic creștin–secular și închiderea operațională',
-        theoreticalAuthor: 'Berdiaev (1937/1996); Stăniloae (1978); Habermas (2006); Luhmann (1995, 2004)',
-        theoreticalMechanism: 'Sinteza dintre Imago Dei și domnia legii impersonale garantează închiderea operațională a subsistemelor statului (Stratul A), primul sistem etic al cooperării (Stratul B) și coerența axei Ego–Sine (Stratul C).',
+        theoreticalAuthor: 'Berdiaev, 1937 · Stăniloae, 1978 · Habermas, 2006 · Luhmann, 1995, 2004',
+        theoreticalMechanism: 'Sinteza dintre principiul Imago Dei și domnia legii impersonale garantează închiderea operațională a subsistemelor statului în Stratul A, primul sistem etic al cooperării în Stratul B și coerența axei Ego–Sine în Stratul C.',
         empiricalReality: 'Atunci când acest filtru este erodat de corupție și precaritate, cetățeanul nu mai poate distinge între critica legitimă a clasei politice și demolarea ordinii constituționale.',
         systemicOutcome: 'synthesis'
       }
@@ -100,7 +100,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
         id: '1-2-dr-1',
         stratum: 'A',
         theoreticalConcept: 'Forme fără fond, instituții extractive și ordine socială cu acces limitat',
-        theoreticalAuthor: 'Maiorescu (1868); Acemoglu & Robinson (2012); North, Wallis & Weingast (2009)',
+        theoreticalAuthor: 'Maiorescu, 1868 · Acemoglu și Robinson, 2012 · North, Wallis și Weingast, 2009',
         theoreticalMechanism: 'Suprapunerea formelor constituționale liberale peste rețele clientelare care blochează închiderea operațională și instrumentalizează legea pentru extracția rentei.',
         empiricalReality: 'Cetățeanul român percepe limbajul oficial prooccidental al elitei politice ca pe un paravan ipocrit pentru protejarea privilegiilor de clan.',
         systemicOutcome: 'tension'
@@ -109,9 +109,9 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
         id: '1-2-dr-2',
         stratum: 'C',
         theoreticalConcept: 'Scindarea Persona–Umbră, incapacitatea de a ține doliu și blocarea axei Ego–Sine',
-        theoreticalAuthor: 'Henderson (1984); Singer & Kimbles (2004); Mitscherlich (1967); Volkan (1997); Edinger (1972)',
-        theoreticalMechanism: 'Refularea traumelor totalitare și a strategiilor informale („descurcăreala”) în Umbra colectivă rupe axa Ego–Sine, generând oscilația între deflație (neputință învățată) și inflație naționalistă.',
-        empiricalReality: 'Alternanța în discursul public între fatalismul autodevalorizant („suntem o colonie”) și mitologiile compensatorii protocroniste și mesianice.',
+        theoreticalAuthor: 'Henderson, 1984 · Singer și Kimbles, 2004 · Mitscherlich, 1967 · Volkan, 1997 · Edinger, 1972',
+        theoreticalMechanism: 'Refularea traumelor totalitare și a strategiilor informale de supraviețuire în Umbra colectivă rupe axa Ego–Sine, generând oscilația între deflație prin neputință învățată și inflație naționalistă.',
+        empiricalReality: 'Alternanța în discursul public între fatalismul autodevalorizant și mitologiile compensatorii protocroniste și mesianice.',
         systemicOutcome: 'tension'
       }
     ],
@@ -124,10 +124,10 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
     chapterNumber: 1,
     chapterTitle: 'Capitolul 1: Vulnerabilitățile structurale ale societății românești și eroziunea rezilienței endogene',
     code: 'Subcapitolul 1.3',
-    title: '1.3. Faliile demografice, uzura alostatică și vulnerabilizarea neurocognitivă a populației (Figura 1)',
+    title: '1.3. Faliile demografice, uzura alostatică și vulnerabilizarea neurocognitivă a populației',
     dominantStrata: ['A', 'B', 'C'],
     linkedFigureId: 1,
-    summaryThesis: 'Polarizarea dintre România metropolitană și cea periferică, emigrația masivă și insecuritatea cronică induc uzură alostatică și hiperactivarea axei HPA, provocând hipertrofia amigdalei, inhibiția cortexului prefrontal dorsolateral (dlPFC), blocarea Sistemului 2 deliberativ și scăderea tensiunii conștiente (abaissement du niveau mental).',
+    summaryThesis: 'Polarizarea dintre România metropolitană și cea periferică, emigrația masivă și insecuritatea cronică induc uzură alostatică și hiperactivarea axei HPA, provocând hipertrofia amigdalei, inhibiția cortexului prefrontal dorsolateral, blocarea Sistemului 2 deliberativ și scăderea tensiunii conștiente.',
     paragraphs: [
       'În România contemporană, complexele culturale istorice sunt reactivate și întreținute zilnic de faliile socioeconomice și demografice produse de modelul de dezvoltare postcomunist. Aplicând teoria clivajelor structurale a lui Stein Rokkan și Seymour Martin Lipset (1967) la geografia socială a României (Sandu, 2010; Bădescu, Comșa, Gheorghiță, Stănuș & Tufiș, 2010), se observă o polarizare severă între două Românii care coexistă în cadre temporale și economice aproape incomensurabile. Prima este România câștigătorilor tranziției, concentrată în marile aglomerări metropolitane (București, Cluj-Napoca, Timișoara, Iași, Brașov, Sibiu, Oradea), conectată la fluxurile de capital euroatlantice, la sectoarele tehnologice și de servicii cu valoare adăugată ridicată și la stilurile de viață cosmopolite. A doua este România periferiilor interne, alcătuită din orașele mici și mijlocii monoindustriale afectate de dezindustrializarea haotică a anilor 1990 și din zonele rurale îmbătrânite, caracterizate prin subocupare cronică, infrastructură educațională și sanitară precară și dependență de ajutoare sociale sau de remitențe.',
       'Această falie teritorială a fost adâncită de un declin demografic sever și de o emigrație masivă a forței de muncă active către statele Europei Occidentale, unul dintre cele mai ample procese de mobilitate transnațională pe timp de pace din istoria recentă a continentului (Sandu, 2010). Deși a funcționat pe termen scurt ca o supapă de decompresie economică, emigrația masivă a generat costuri psihosociale profunde: destrămarea structurilor familiale tradiționale, trauma copiilor rămași în grija bunicilor sau a rudelor, depopularea comunităților locale și acumularea unor frustrări identitare acute în rândul milioanelor de cetățeni români din diaspora, care s-au confruntat frecvent în țările de destinație cu munca precară, dezrădăcinarea culturală și percepția unui statut de cetățeni europeni de rang secund. În același timp, în interiorul granițelor naționale, abandonul instituțional al zonelor defavorizate a consolidat enclave de excluziune socială severă și anomie (Durkheim, 1897/2005; Merton, 1938), spații în care absența oportunităților legitime de mobilitate socială ascendentă golește de conținut promisiunile constituționale ale egalității de șanse.',
@@ -142,7 +142,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
         id: '1-3-dr-1',
         stratum: 'A',
         theoreticalConcept: 'Clivaje sociospațiale, familism amoral și distrugerea capitalului social de punte',
-        theoreticalAuthor: 'Lipset & Rokkan (1967); Sandu (2010); Banfield (1958); Putnam (2000)',
+        theoreticalAuthor: 'Lipset și Rokkan, 1967 · Sandu, 2010 · Banfield, 1958 · Putnam, 2000',
         theoreticalMechanism: 'Erodarea simetrică a coeziunii sociale prin replierea în familism amoral la periferie și secesiunea tacită în servicii private a păturilor urbane prospere.',
         empiricalReality: 'Coexistența incomensurabilă dintre marile centre metropolitane cosmopolite și orașele mici monoindustriale sau zonele rurale depopulate, dublată de trauma dezrădăcinării în diaspora.',
         systemicOutcome: 'tension'
@@ -150,10 +150,10 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: '1-3-dr-2',
         stratum: 'B',
-        theoreticalConcept: 'Uzura alostatică, hiperactivarea axei HPA și inhibiția cortexului prefrontal (dlPFC)',
-        theoreticalAuthor: 'McEwen (1998); Sapolsky (2004, 2017); Arnsten (2009); Kahneman (2011); Janet / Jung (1934)',
-        theoreticalMechanism: 'Hipercortizolemia cronică hipertrofiază amigdala bazolaterală și atrofiază spinii sinaptici din hipocamp și dlPFC, blocând Sistemul 2 deliberativ și inducând abaissement du niveau mental.',
-        empiricalReality: 'Cetățeanul epuizat de insecuritate și umilință birocratică intră în spațiul informațional pe modul reactiv de supraviețuire (Sistemul 1), devenind vulnerabil la explicații conspirative simple și țapi ispășitori.',
+        theoreticalConcept: 'Uzura alostatică, hiperactivarea axei HPA și inhibiția cortexului prefrontal',
+        theoreticalAuthor: 'McEwen, 1998 · Sapolsky, 2004, 2017 · Arnsten, 2009 · Kahneman, 2011 · Janet și Jung, 1934',
+        theoreticalMechanism: 'Hipercortizolemia cronică hipertrofiază amigdala bazolaterală și atrofiază spinii sinaptici din hipocamp și cortexul prefrontal dorsolateral, blocând Sistemul 2 deliberativ și inducând scăderea tensiunii conștiente.',
+        empiricalReality: 'Cetățeanul epuizat de insecuritate și umilință birocratică intră în spațiul informațional pe modul reactiv de supraviețuire al Sistemului 1, devenind vulnerabil la explicații conspirative simple și țapi ispășitori.',
         systemicOutcome: 'tension'
       }
     ],
@@ -182,7 +182,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
         id: '2-1-dr-1',
         stratum: 'A',
         theoreticalConcept: 'Guvernanța informală sistema și conservarea ordinii cleptocratice',
-        theoreticalAuthor: 'Ledeneva (2013); Dawisha (2014); Snyder (2018); Giles (2019)',
+        theoreticalAuthor: 'Ledeneva, 2013 · Dawisha, 2014 · Snyder, 2018 · Giles, 2019',
         theoreticalMechanism: 'Subordonarea instituțiilor formale prin loialitate personală, rente energetice și kompromat; democrațiile funcționale din vecinătate devin o amenințare existențială pentru legitimitatea internă a Kremlinului.',
         empiricalReality: 'Războiul cognitiv împotriva României, Republicii Moldova și Ucrainei urmărește discreditarea modelului democratic european pentru a proteja supraviețuirea rețelei sistema de la Moscova.',
         systemicOutcome: 'tension'
@@ -190,9 +190,9 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: '2-1-dr-2',
         stratum: 'B',
-        theoreticalConcept: 'Inversiunea normativă a Antilumii (Russkii Antimir) și nihilismul stării Bobok',
-        theoreticalAuthor: 'Epstein (2022, 2023); Dostoievski (1873); Thom (2018); Pomerantsev (2014, 2019)',
-        theoreticalMechanism: 'Răsturnarea sistematică a sensului conceptelor morale și juridice (agresiunea numită pace, ocupația numită suveranitate) combinată cu relativismul epistemic absolut („toți sunt la fel de corupți”).',
+        theoreticalConcept: 'Inversiunea normativă a Antilumii și nihilismul stării Bobok',
+        theoreticalAuthor: 'Epstein, 2022, 2023 · Dostoievski, 1873 · Thom, 2018 · Pomerantsev, 2014, 2019',
+        theoreticalMechanism: 'Răsturnarea sistematică a sensului conceptelor morale și juridice — agresiunea numită pace, ocupația numită suveranitate — combinată cu relativismul epistemic absolut.',
         empiricalReality: 'Instilarea în publicul român a cinismului radical față de dreptul internațional, drepturile omului și instituțiile democratice, justificând legea celui mai tare.',
         systemicOutcome: 'tension'
       }
@@ -206,10 +206,10 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
     chapterNumber: 2,
     chapterTitle: 'Capitolul 2: Arhitectura ideologiei putiniste și camuflajul discursiv suveranist',
     code: 'Subcapitolul 2.2',
-    title: '2.2. Dubla falsificare axiologică și parazitarea semiotică a conservatorismului și a ortodoxiei (Figura 2)',
+    title: '2.2. Dubla falsificare axiologică și parazitarea semiotică a conservatorismului și a ortodoxiei',
     dominantStrata: ['B', 'C'],
     linkedFigureId: 2,
-    summaryThesis: 'Pentru a ocoli aversiunea istorică a românilor față de expansionismul moscovit (cele 12 invazii, răpirea Basarabiei, Tezaurul, Gulagul), operațiunile ruse recurg la o dublă falsificare axiologică (substituirea ortodoxiei hristocentrice cu etnofiletismul militarist Russkii Mir și falsificarea suveranității ca dezarmare strategică).',
+    summaryThesis: 'Pentru a ocoli aversiunea istorică a românilor față de expansionismul moscovit — cele douăsprezece invazii, răpirea Basarabiei, sechestrarea Tezaurului și deportările în Gulag —, operațiunile ruse recurg la o dublă falsificare axiologică: substituirea ortodoxiei hristocentrice cu etnofiletismul militarist Russkii Mir și falsificarea suveranității ca dezarmare strategică.',
     paragraphs: [
       'Aplicarea directă și transparentă a acestei ideologii revizioniste în România se lovește însă de un obstacol major: reziliența structurală și normativă ancorată în memoria istorică traumatică a ocupației imperiale ruse și aversiunea istorică profundă a societății românești față de expansionismul Moscovei. Această memorie colectivă, transmisă în familii și în cultura istorică națională, păstrează vie amintirea celor douăsprezece invazii și ocupații militare țariste și sovietice începând cu secolul al XVIII-lea, a răpirii Basarabiei în 1812 și în 1878, a sechestrării Tezaurului României la Moscova în 1916–1917, a ultimatumului sovietic din iunie 1940, a deportărilor în Gulag și a terorii staliniste din anii 1945–1964. Din cauza acestei aversiuni istorice consolidate, orice operațiune informațională care ar promova deschis subordonarea României față de Federația Rusă sau superioritatea modelului politic moscovit este respinsă spontan de marea majoritate a populației.',
       'Pentru a ocoli această reziliență istorică, arhitecții războiului cognitiv rus recurg la camuflaj discursiv, disimulare ideologică și parazitare semiotică a codurilor identitare autohtone (naționalismul și ortodoxia), care se cuplează direct pe vulnerabilitățile psihosociale și pe complexele culturale preexistente din societatea românească. Din punct de vedere semiotic și axiologic, această operațiune se bazează pe o dublă falsificare axiologică: falsificarea tradiției creștine ortodoxe și a conservatorismului, pe de o parte, și falsificarea conceptului de suveranitate națională și a modernității constituționale occidentale, pe de altă parte.',
@@ -222,9 +222,9 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: '2-2-dr-1',
         stratum: 'B',
-        theoreticalConcept: 'Teologia persoanei (*Imago Dei*) versus erezia etnofiletistă (Russkii Mir)',
-        theoreticalAuthor: 'Soloviov (1900); Berdiaev (1937); Stăniloae (1978); Kalaitzidis et al. (2022); Hovorun (2018)',
-        theoreticalMechanism: 'Condamnarea sinodală a etnofiletismului (Constantinopol, 1872) distinge radical universalitatea Evangheliei de instrumentalizarea religiei ca ideologie militaristă de stat.',
+        theoreticalConcept: 'Teologia persoanei — Imago Dei — versus erezia etnofiletistă Russkii Mir',
+        theoreticalAuthor: 'Soloviov, 1900 · Berdiaev, 1937 · Stăniloae, 1978 · Kalaitzidis et al., 2022 · Hovorun, 2018',
+        theoreticalMechanism: 'Condamnarea sinodală a etnofiletismului la Constantinopol în 1872 distinge radical universalitatea Evangheliei de instrumentalizarea religiei ca ideologie militaristă de stat.',
         empiricalReality: 'Parazitarea religiozității ritualiste de fațadă din România prin fuzionarea misticismului interbelic cu mitologia protocronistă ceaușistă pentru a masca nihilismul moscovit.',
         systemicOutcome: 'tension'
       },
@@ -247,10 +247,10 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
     chapterNumber: 2,
     chapterTitle: 'Capitolul 2: Arhitectura ideologiei putiniste și camuflajul discursiv suveranist',
     code: 'Subcapitolul 2.3',
-    title: '2.3. Ecosistemul local de amplificare, convergența cu complexele culturale autohtone și comparația cu grupul de control regional (Estonia, Polonia, Republica Moldova)',
+    title: '2.3. Ecosistemul local de amplificare, convergența cu complexele culturale autohtone și comparația cu grupul de control regional: Estonia, Polonia și Republica Moldova',
     dominantStrata: ['A', 'B', 'C'],
     linkedFigureId: 2,
-    summaryThesis: 'Plasarea și reciclarea prin intermediari a narațiunilor (information laundering) operează pe trei paliere și deturnează furia legitimă a cetățeanului prin proiecție paranoidă și identificare cu agresorul; comparația cu Estonia, Polonia și Republica Moldova demonstrează că vulnerabilitatea României decurge din tolerarea rețelelor extractive și absența unei strategii cognitive și instituționale integrate.',
+    summaryThesis: 'Plasarea și reciclarea prin intermediari a narațiunilor operează pe trei paliere și deturnează furia legitimă a cetățeanului prin proiecție paranoidă și identificare cu agresorul; comparația cu Estonia, Polonia și Republica Moldova demonstrează că vulnerabilitatea României decurge din tolerarea rețelelor extractive și absența unei strategii cognitive și instituționale integrate.',
     paragraphs: [
       'Penetrarea persuasivă a acestei duble falsificări axiologice în sfera publică românească nu se realizează prin canalele diplomatice sau mediatice oficiale ale Moscovei, ci printr-un ecosistem descentralizat și policentric de amplificare informațională. Arhitectura acestui ecosistem funcționează pe trei paliere de intermediere, reciclare și disimulare a sursei informaționale (information laundering). Primul palier este cel al laboratoarelor ideologice și al platformelor strategice ale Kremlinului (precum rețelele RT, Sputnik, Fondul Culturii Strategice, Katehon sau agregatoarele din rețeaua Pravda), care elaborează cadrajele narative primare: iminența colapsului european, trădarea elitelor naționale în favoarea „globaliștilor”, ineficiența NATO și superioritatea multipolarității autoritare. Al doilea palier este constituit din intermediari ideologici și actori politici oportuniști autohtoni din spectrul populismului radical, al naționalismului extrem și al unor nuclee paraecleziale sau pseudoacademice, care preiau aceste teme, le elimină orice referință explicită la Federația Rusă și le traduc în limbajul frustrărilor interne românești (invocând teme precum „suveranitatea resurselor”, „apărarea familiei și a credinței strămoșești”, „pacea cu orice preț” sau revizionismul istoric interbelic și ceaușist). Al treilea palier este reprezentat de infrastructura de distribuție digitală: rețele coordonate de conturi false sau automatizate, ferme de boți, grupuri închise pe Telegram și Facebook, canale de YouTube și rețele de microinfluenceri coordonați netransparent pe TikTok, care împachetează mesajele în conținut emoțional scurt, aparent spontan și apolitic, adaptat microsegmentelor demografice vizate.',
       'Eficacitatea acestui ecosistem decurge din convergența dintre propaganda externă și complexele culturale interne din Stratul C. Atunci când cetățeanul român afectat de uzură alostatică, de disprețul birocratic al unor instituții extractive și de scindarea dintre promisiunile integrării europene și realitatea propriei precarități întâlnește narativul suveranist camuflat, acesta îi oferă o explicație aparent eliberatoare pentru suferința sa. În loc să confrunte cauzele structurale reale ale subdezvoltării (corupția rețelelor clientelare interne, deficitul de închidere operațională a justiției și a administrației, lipsa investițiilor în educație și sănătate), narativul revizionist operează o deturnare psihodinamică clasică, bazată pe proiecția paranoidă și pe identificarea cu agresorul (Ferenczi, 1933/1949; Freud, 1936/1993). Furiei legitime a cetățeanului împotriva imposturii clasei politice interne (care a confiscat discursul prooccidental ca pe o simplă Personă instituțională mimetică pentru a-și proteja privilegiile extractive) i se oferă o țintă falsă: însuși principiul democrației constituționale liberale, solidaritatea europeană și apărarea colectivă euroatlantică, în timp ce victimele agresiunii militare ruse (precum Ucraina) sunt transformate în victime-surogat asupra cărora este descărcat resentimentul acumulat.',
@@ -263,18 +263,18 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: '2-3-dr-1',
         stratum: 'C',
-        theoreticalConcept: 'Reciclarea și disimularea sursei informaționale (information laundering) și identificarea cu agresorul',
-        theoreticalAuthor: 'Ferenczi (1933/1949); Anna Freud (1936/1993)',
-        theoreticalMechanism: 'Trecerea narațiunilor prin trei paliere (laboratoare ruse -> actori politici oportuniști și promotori locali ai radicalismului -> microinfluenceri și boți) și deturnarea furiei anti-elită spre victime-surogat.',
+        theoreticalConcept: 'Reciclarea și disimularea sursei informaționale și identificarea cu agresorul',
+        theoreticalAuthor: 'Ferenczi, 1933/1949 · Anna Freud, 1936/1993',
+        theoreticalMechanism: 'Trecerea narațiunilor prin trei paliere — laboratoare ruse, actori politici oportuniști locali și rețele de microinfluenceri și boți — și deturnarea furiei anti-elită spre victime-surogat.',
         empiricalReality: 'Cetățeanul român nemulțumit de corupția internă ajunge să atace însăși democrația constituțională și victimele agresiunii ruse, crezând că se revoltă împotriva imposturii locale.',
         systemicOutcome: 'tension'
       },
       {
         id: '2-3-dr-2',
         stratum: 'A',
-        theoreticalConcept: 'Analiza comparativă a rezilienței în grupul de control regional (Estonia, Polonia, Republica Moldova)',
+        theoreticalConcept: 'Analiza comparativă a rezilienței în grupul de control regional: Estonia, Polonia și Republica Moldova',
         theoreticalAuthor: 'Modelul comparativ al determinanților instituționali și culturali',
-        theoreticalMechanism: 'Izolarea variabilelor cauzale: e-guvernarea și apărarea cuprinzătoare (Estonia), instituționalizarea memoriei istorice (Polonia) și sancționarea fermă a fluxurilor ilicite (Republica Moldova).',
+        theoreticalMechanism: 'Izolarea variabilelor cauzale: e-guvernarea și apărarea cuprinzătoare în Estonia, instituționalizarea memoriei istorice în Polonia și sancționarea fermă a fluxurilor ilicite în Republica Moldova.',
         empiricalReality: 'Vulnerabilitatea României provine din ordinea instituțională semiconformată a elitelor autohtone, nu din lipsa resurselor sau a garanțiilor de securitate.',
         systemicOutcome: 'synthesis'
       }
@@ -288,10 +288,10 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
     chapterNumber: 3,
     chapterTitle: 'Capitolul 3: Mecanismul capturării cognitive și colonizarea deciziei în al șaselea domeniu operațional',
     code: 'Subcapitolul 3.1',
-    title: '3.1. Deturnarea fazei de orientare din bucla OODA și compromiterea filtrului moral prin control reflexiv de rang secund (Figura 3)',
+    title: '3.1. Deturnarea fazei de orientare din bucla OODA și compromiterea filtrului moral prin control reflexiv de rang secund',
     dominantStrata: ['B'],
     linkedFigureId: 3,
-    summaryThesis: 'Războiul cognitiv nu se limitează la știri false în faza de Observare, ci țintește centrul de greutate al buclei OODA (faza de Orientare, Boyd) prin control reflexiv de rang secund (Lefebvre), comutând cetățeanul din primul sistem etic (cooperare procedurală) în al doilea sistem etic (confruntare și anihilare).',
+    summaryThesis: 'Războiul cognitiv nu se limitează la știri false în faza de Observare, ci țintește centrul de greutate al buclei OODA — faza de Orientare analizată de Boyd — prin control reflexiv de rang secund în sensul lui Lefebvre, comutând cetățeanul din primul sistem etic al cooperării procedurale în al doilea sistem etic al confruntării și anihilării.',
     paragraphs: [
       'În doctrina războiului cognitiv, trecerea de la vulnerabilitățile structurale ale societății-țintă (Capitolul 1) și de la arhitectura ideologică a agresorului (Capitolul 2) la capturarea efectivă a proceselor de decizie individuale și colective se realizează prin articularea ciberneticii decizionale a lui John Boyd cu teoria matematică a controlului reflexiv elaborată de Vladimir Lefebvre. Modelul buclei decizionale OODA (Observare–Orientare–Decizie–Acțiune), dezvoltat de strategul militar John Boyd (Osinga, 2007), descrie adaptarea oricărui agent (individ, organizație sau stat) la un mediu competitiv ca pe un ciclu cibernetic continuu în patru etape. Agentul colectează mai întâi date brute și semnale din mediu (Observare), filtrează și interpretează aceste date prin prisma modelelor sale mentale (Orientare), selectează o ipoteză de răspuns (Decizie) și o transpune în comportament practic (Acțiune), reluând apoi ciclul prin observarea efectelor produse.',
       'În arhitectura lui Boyd, faza de Orientare constituie centrul de greutate (Schwerpunkt) al întregului proces decizional. Orientarea nu este o simplă etapă tehnică de prelucrare a datelor, ci matricea interpretativă complexă formată din moștenirea culturală și tradițiile grupului, experiențele istorice anterioare, predispozițiile psihobiologice, valorile morale și capacitatea de analiză și sinteză prin care subiectul conferă sens realității observate și decide ce reprezintă o amenințare și ce reprezintă o oportunitate. Dacă un adversar încearcă doar să manipuleze faza de Observare prin lansarea unor știri false punctuale (fake news), efectul este limitat și temporar, deoarece o fază de Orientare intactă, dotată cu un filtru axiologic și epistemic funcțional, va detecta rapid contradicțiile empirice și va respinge informația falsă. Obiectivul strategic al războiului cognitiv este, prin urmare, mult mai profund: el vizează penetrarea și reconfigurarea fazei de Orientare însăși, astfel încât cetățeanul și instituțiile statului-țintă să interpreteze orice informație viitoare (chiar și faptele reale și verificabile) printr-o lentilă distorsionată, proiectată de adversar.',
@@ -303,8 +303,8 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: '3-1-dr-1',
         stratum: 'B',
-        theoreticalConcept: 'Faza de Orientare (Schwerpunkt) din bucla OODA și controlul reflexiv de rang secund',
-        theoreticalAuthor: 'Boyd / Osinga (2007); Lefebvre (1982, 2001); Thomas (2004)',
+        theoreticalConcept: 'Faza de Orientare ca centru de greutate în bucla OODA și controlul reflexiv de rang secund',
+        theoreticalAuthor: 'Boyd și Osinga, 2007 · Lefebvre, 1982, 2001 · Thomas, 2004',
         theoreticalMechanism: 'Reconfigurarea matricei axiologice și epistemice din faza de Orientare astfel încât subiectul să deducă voluntar și aparent autonom decizii autodistructive.',
         empiricalReality: 'Cetățeanul capturat cognitiv interpretează chiar și faptele reale și verificabile printr-o lentilă distorsionată, votând pentru decuplarea României de garanțiile de securitate.',
         systemicOutcome: 'tension'
@@ -312,9 +312,9 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: '3-1-dr-2',
         stratum: 'B',
-        theoreticalConcept: 'Algebra conștiinței (primul sistem etic al cooperării versus al doilea sistem etic al anihilării)',
-        theoreticalAuthor: 'Vladimir Lefebvre (1982, 2001)',
-        theoreticalMechanism: 'Comutarea de la evaluarea pozitivă a dialogului și a procedurilor legale (primul sistem etic) la evaluarea agresivității, a arbitrarului și a anihilării oponentului ca virtute supremă (al doilea sistem etic).',
+        theoreticalConcept: 'Algebra conștiinței: primul sistem etic al cooperării versus al doilea sistem etic al anihilării',
+        theoreticalAuthor: 'Vladimir Lefebvre, 1982, 2001',
+        theoreticalMechanism: 'Comutarea de la evaluarea pozitivă a dialogului și a procedurilor legale din primul sistem etic la evaluarea agresivității, a arbitrarului și a anihilării oponentului ca virtute supremă în al doilea sistem etic.',
         empiricalReality: 'Răbdarea instituțională, verificarea probelor și solidaritatea aliată sunt reevaluate ca „slăbiciune” și „trădare”, în timp ce abuzul autoritar este aplaudat ca „demnitate”.',
         systemicOutcome: 'tension'
       }
@@ -331,7 +331,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
     title: '3.2. Regresia la semiotica binară a anihilării, închiderea cognitivă și procesarea defensivă motivată de protejarea identității de grup',
     dominantStrata: ['B'],
     linkedFigureId: 3,
-    summaryThesis: 'Pe plan semiotic, capturarea cognitivă distruge interpretantul triadic (Peirce) și medierea ternară europeană (Lotman), impunând o semiotică binară a anihilării consolidată psihologic prin adoptarea precipitată și necritică a unei explicații simpliste și înghețarea epistemică (seizing/freezing, Kruglanski) și prin procesarea defensivă motivată de protejarea identității de grup (Kahan).',
+    summaryThesis: 'Pe plan semiotic, capturarea cognitivă distruge interpretantul triadic definit de Peirce și medierea ternară europeană analizată de Lotman, impunând o semiotică binară a anihilării consolidată psihologic prin adoptarea precipitată a unei explicații simpliste, înghețarea epistemică descrisă de Kruglanski și procesarea defensivă motivată de protejarea identității de grup analizată de Kahan.',
     paragraphs: [
       'Pe plan semiotic și psihosocial, comutarea fazei de Orientare în al doilea sistem etic se manifestă prin distrugerea capacității de mediere simbolică și prin regresia discursului public la o logică arhaică a excluderii absolute. Acest proces poate fi explicat riguros prin articularea semioticii triadice a lui Charles Sanders Peirce (1931–1958) cu tipologia culturilor binare și ternare elaborată de Iuri Lotman (1990, 1992/2009) în cadrul Școlii Semiotice de la Tartu-Moscova. În arhitectura semiotică a lui Peirce, procesul de semnificare (semioza) nu este o relație mecanică diadică între un stimul și o reacție, ci o relație ireductibil ternară între trei termeni: semnul (reprezentamen), obiectul la care acesta se referă și interpretantul. Interpretantul reprezintă spațiul mental și intersubiectiv al deliberării raționale, al regulilor de verificare empirică și al convențiilor normative împărtășite, care îi permite unei comunități să traducă un semn într-un înțeles mai dezvoltat, să compare ipoteze alternative și să mențină distanța critică dintre reprezentarea discursivă și realitatea obiectivă.',
       'În Cultura și explozia, Iuri Lotman (1992/2009) a demonstrat că sistemele culturale și politice se împart, în funcție de modul în care își structurează spațiul axiologic, în sisteme ternare și sisteme binare. Culturile europene occidentale, modelate de dreptul roman și de teologia scolastică și modernă a existenței unui spațiu intermediar (ilustrat simbolic de apariția conceptului de Purgatoriu în Evul Mediu occidental, analizat de Jacques Le Goff), au dezvoltat structuri semiotice ternare. Într-un sistem ternar, între polul binelui absolut și cel al răului absolut există o vastă zonă neutră, seculară și instituționalizată (spațiul dreptului civil, al pieței reglementate, al cercetării științifice și al competiției politice parlamentare), în care adversarul politic nu este un dușman ontologic ce trebuie exterminat, ci un concurent legitim care, chiar și atunci când pierde alegerile, își păstrează toate drepturile cetățenești și rolul în sistem. Dimpotrivă, tradiția culturală și politică rusă s-a structurat istoric, conform diagnosticului lui Iuri Lotman și Boris Uspenski (1985), pe o logică dualistă radicală, fără zonă axiologică neutră: o semiotică binară a anihilării, în care între mântuire și pierzanie, între ortodoxie și erezie, între puterea autocratică și haos nu există niciun spațiu legitim de mediere, iar orice schimbare politică este concepută ca o explozie apocaliptică menită să șteargă complet de pe fața pământului lumea veche și pe reprezentanții ei.',
@@ -343,19 +343,19 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       {
         id: '3-2-dr-1',
         stratum: 'B',
-        theoreticalConcept: 'Semioza ternară (Peirce și Lotman) versus semiotica binară a anihilării (Lotman și Uspenski)',
-        theoreticalAuthor: 'Peirce (1931–1958); Lotman (1990, 1992/2009); Lotman & Uspenski (1985)',
-        theoreticalMechanism: 'Prăbușirea spațiului neutru al interpretantului și al deliberării constituționale (sistem ternar) într-o logică apocaliptică fără mediere între mântuire și pierzanie (sistem binar).',
-        empiricalReality: 'Reîncadrarea oricărei teme de politică publică (sănătate, energie, fiscalitate, apărare) în dilema existențială „noi, poporul pur” versus „ei, trădătorii care vor să ne anihileze”.',
+        theoreticalConcept: 'Semioza ternară versus semiotica binară a anihilării',
+        theoreticalAuthor: 'Peirce, 1931–1958 · Lotman, 1990, 1992/2009 · Lotman & Uspenski, 1985',
+        theoreticalMechanism: 'Prăbușirea spațiului neutru al interpretantului și al deliberării constituționale dintr-un sistem ternar într-o logică apocaliptică fără mediere între mântuire și pierzanie.',
+        empiricalReality: 'Reîncadrarea oricărei teme de politică publică — sănătate, energie, fiscalitate, apărare — în dilema existențială „noi, poporul pur” versus „ei, trădătorii care vor să ne anihileze”.',
         systemicOutcome: 'tension'
       },
       {
         id: '3-2-dr-2',
         stratum: 'B',
-        theoreticalConcept: 'Închiderea cognitivă (seizing și freezing) și procesarea defensivă motivată de protejarea identității de grup',
-        theoreticalAuthor: 'Kruglanski & Webster (1996); Kruglanski (2004); Kahan (2013, 2017); Festinger (1957)',
-        theoreticalMechanism: 'Sub presiunea uzurii alostatice, aparatul cognitiv adoptă precipitat și necritic o explicație conspirativă simplă (seizing), o îngheață epistemic (freezing) și o fuzionează cu identitatea de grup.',
-        empiricalReality: 'Confruntarea agresivă a cetățeanului capturat cu verificări factuale (debunking ostil) este percepută ca un atac la adresa demnității personale, întărind adeziunea la bula radicală.',
+        theoreticalConcept: 'Închiderea cognitivă și procesarea defensivă motivată de protejarea identității de grup',
+        theoreticalAuthor: 'Kruglanski & Webster, 1996 · Kruglanski, 2004 · Kahan, 2013, 2017 · Festinger, 1957',
+        theoreticalMechanism: 'Sub presiunea uzurii alostatice, aparatul cognitiv adoptă precipitat și necritic o explicație conspirativă simplă, o îngheață epistemic și o fuzionează cu identitatea de grup.',
+        empiricalReality: 'Confruntarea agresivă a cetățeanului capturat cu verificări factuale ostile este percepută ca un atac la adresa demnității personale, întărind adeziunea la bula radicală.',
         systemicOutcome: 'tension'
       }
     ],
@@ -368,10 +368,10 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
     chapterNumber: 3,
     chapterTitle: 'Capitolul 3: Mecanismul capturării cognitive și colonizarea deciziei în al șaselea domeniu operațional',
     code: 'Subcapitolul 3.3',
-    title: '3.3. Arhitectura algoritmică a captării atenției, degradarea modelelor generative pe date sintetice și încapsularea în bule informaționale închise (Figura 3)',
+    title: '3.3. Arhitectura algoritmică a captării atenției, degradarea modelelor generative pe date sintetice și încapsularea în bule informaționale închise',
     dominantStrata: ['A', 'B', 'C'],
     linkedFigureId: 3,
-    summaryThesis: 'Platformele digitale optimizează retenția prin manipularea erorii de predicție a recompensei dopaminergice în nucleul accumbens (Schultz, Lembke), suprimând latența cortexului prefrontal, în timp ce inundația de date sintetice (Doppelgänger, Matrioșka, Pravda) induce Model Collapse (Shumailov) și Model Autophagy Disorder (Alemohammad) și fabrică artificial contagiunea complexă în rețea (Centola).',
+    summaryThesis: 'Platformele digitale optimizează retenția prin manipularea erorii de predicție a recompensei dopaminergice în nucleul accumbens, suprimând latența cortexului prefrontal, în timp ce inundația de date sintetice prin rețelele Doppelgänger, Matrioșka și Pravda induce degradarea recursivă a modelelor generative și fabrică artificial contagiunea complexă în rețea.',
     paragraphs: [
       'Deturnarea fazei de Orientare și regresia la semiotica binară nu ar fi putut atinge viteza și scara actuală de penetrare societală fără infrastructura sociotehnică a economiei atenției și a capitalismului de supraveghere (Zuboff, 2019; Wu, 2016). Platformele sociale dominante (TikTok, Facebook, Instagram, YouTube, X și rețelele de mesagerie precum Telegram) nu sunt canale neutre de transmisie a informației, ci medii algoritmice optimizate comercial pentru maximizarea timpului de retenție a utilizatorului și a frecvenței interacțiunilor. Cercetările neuroștiințifice și computaționale asupra difuzării informației în rețelele digitale (Brady, Wills, Jost, Tucker & Van Bavel, 2017; Vosoughi, Roy & Aral, 2018) au stabilit că algoritmii de recomandare bazați pe învățare profundă descoperă rapid o regulă neurobiologică invariabilă: conținutul care combină indignarea morală cu frica și dezgustul față de un grup rival generează o rată de angajament și de distribuire virală incomparabil mai mare decât informația analitică, echilibrată și verificată.',
       'La nivel neurobiologic, în Stratul B, această arhitectură algoritmică operează prin capturarea adictivă a circuitelor dopaminergice mezolimbice care leagă aria tegmentală ventrală de striatul ventral și de cortexul prefrontal (Schultz, 1998, 2016; Lembke, 2021). Mecanismul central al acestei capturări este manipularea erorii de predicție a recompensei în nucleul accumbens: un semnal neurochimic fazic prin care neuronii dopaminergici nu codifică plăcerea în sine, ci discrepanța dintre o recompensă anticipată și apariția neașteptată a unui stimul informațional nou, intens sau șocant. Designul platformelor bazat pe derularea infinită (infinite scroll), pe fluxul de clipuri video ultrascurte cu redare automată și pe recompense variabile intermitente (modelul condiționării operante al lui B. F. Skinner aplicat notificărilor și validării sociale) declanșează descărcări fazice repetate de dopamină în nucleul accumbens la fiecare stimul senzaționalist, conspirativ sau conflictual.',
@@ -379,24 +379,24 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       'În ultimii ani, această vulnerabilizare neurocognitivă a utilizatorului uman a fost agravată exponențial de două fenomene tehnice specifice inteligenței artificiale generative, exploatate strategic de operatorii de război cognitiv: degradarea modelelor generative (Model Collapse) și tulburarea de autofagie a modelelor generative (Model Autophagy Disorder, abreviat MAD). Primul fenomen, demonstrat matematic de Ilia Shumailov și colaboratorii săi (2024), arată că modelele statistice și modelele lingvistice mari antrenate recursiv pe date sintetice produse de generațiile anterioare de modele pierd progresiv informația din cozile distribuției de probabilitate, îngustându-și varianța și convergând spre rezultate generate (outputs) distorsionate, repetitive și rupte de distribuția reală a datelor umane. Al doilea fenomen, formulat în informatica teoretică de Sina Alemohammad și colaboratorii săi (2024), descrie bucla de degradare a calității și preciziei modelelor generative de imagini și text atunci când acestea consumă în mod repetitiv date sintetice fără o infuzie constantă de date reale autentice.',
       'Operațiunile informaționale ruse de ultimă generație (precum rețelele Doppelgänger, Matrioșka și infrastructura automatizată Pravda) utilizează modele lingvistice mari și generatoare de conținut audiovizual sintetic pentru a inunda internetul de limbă română și europeană cu milioane de articole clonate, comentarii automate și clipuri video sintetice. Această inundație de date sintetice instituie o buclă de retroacțiune epistemică om–mașină (human–machine epistemic feedback loop), în care degradarea tehnică a modelelor și încapsularea psihosociologică a cetățeanului se potențează reciproc. În plan strict tehnic, saturarea spațiului digital cu texte generate de boți — optimizate deliberat pentru indexarea de către programele de explorare web, prin manipularea deliberată a datelor de antrenare a modelelor lingvistice (LLM grooming) — poluează corpusurile de antrenare și de interogare (Retrieval-Augmented Generation) ale motoarelor de căutare și ale asistenților de inteligență artificială, inducând Model Collapse și Model Autophagy Disorder în infrastructura epistemică digitală. În plan uman și psihosociologic, atunci când cetățeanul interoghează motoarele de căutare sau navighează în fluxurile algoritmice astfel contaminate, el primește răspunsuri care validează cadrajele revizioniste și le redistribuie în discursul public organic, furnizând la rândul său noi date umane distorsionate care hrănesc recursiv atât modelele algoritmice, cât și captivitatea în bule informaționale închise (camere de ecou) și deteriorarea hărții mentale predictive a realității (Pariser, 2011; Sunstein, 2017; Friston, 2010).',
       'Mecanismul prin care această încapsulare algoritmică se transformă în mobilizare politică și schimbare de norme sociale este explicat de teoria contagiunii sociale și afective în rețea dezvoltată de Damon Centola (2018, 2021). Centola a demonstrat o distincție fundamentală în sociologia rețelelor: în timp ce contagiunea simplă (cum ar fi transmiterea unei știri banale) se propagă rapid prin „legături slabe” (weak ties, Granovetter, 1973) care unesc noduri îndepărtate, adoptarea unor credințe ideologice radicale, a unor norme sociale noi sau a unor comportamente politice costisitoare și riscante necesită o contagiune complexă (complex contagion). Un cetățean nu își abandonează normele democratice și nu aderă la un curent radical doar pentru că a văzut un singur mesaj izolat; el are nevoie de confirmări multiple, redundante și convergente provenite din mai multe surse pe care le percepe ca făcând parte din vecinătatea sa socială imediată (wide bridges). Prin desfășurarea coordonată a roiurilor de boți, a conturilor false cu identități locale credibile și a microinfluencerilor pe TikTok, Facebook și Telegram, operatorii de război cognitiv fabrică artificial condițiile contagiunii complexe: cetățeanul încapsulat în bula sa algoritmică întâlnește aceeași temă revizionistă sau conspirativă repetată simultan de zeci de „vecini digitali” aparent independenți, ceea ce îi declanșează iluzia unui consens social majoritar și îi neutralizează ultimele rezerve critice, finalizând astfel colonizarea deciziei în al șaselea domeniu operațional.',
-      'Figura 3. Mecanismul cibernetic și semiotic al capturării cognitive în al șaselea domeniu operațional (integrând bucla decizională OODA a lui John Boyd, teoria controlului reflexiv a lui Vladimir Lefebvre și semiotica culturii a lui Iuri Lotman și Charles Sanders Peirce). Fluxul informațional brut din faza de Observare, amplificat algoritmic prin capturarea circuitelor dopaminergice, intră în faza de Orientare, unde modelele mentale și culturale ale subiectului sunt țintite de controlul reflexiv de rang secund. Această intervenție compromite filtrul axiologic al primului sistem etic, blochează calea medierii ternare și a discernământului rațional prefrontal și deviază procesarea pe traseul celui de-al doilea sistem etic și al logicii binare a anihilării. Rezultatul este o fază de Decizie dominată de selecția emoțională indusă, închiderea cognitivă și procesarea defensivă motivată de protejarea identității de grup, care se traduce în faza de Acțiune prin polarizare socială acută și conflict antiinstituțional.'
+      'Figura 3. Mecanismul cibernetic și semiotic al capturării cognitive în al șaselea domeniu operațional, integrând bucla decizională OODA a lui John Boyd, teoria controlului reflexiv a lui Vladimir Lefebvre și semiotica culturii a lui Iuri Lotman și Charles Sanders Peirce. Fluxul informațional brut din faza de Observare, amplificat algoritmic prin capturarea circuitelor dopaminergice, intră în faza de Orientare, unde modelele mentale și culturale ale subiectului sunt țintite de controlul reflexiv de rang secund. Această intervenție compromite filtrul axiologic al primului sistem etic, blochează calea medierii ternare și a discernământului rațional prefrontal și deviază procesarea pe traseul celui de-al doilea sistem etic și al logicii binare a anihilării. Rezultatul este o fază de Decizie dominată de selecția emoțională indusă, închiderea cognitivă și procesarea defensivă motivată de protejarea identității de grup, care se traduce în faza de Acțiune prin polarizare socială acută și conflict antiinstituțional.'
     ],
     dualRegister: [
       {
         id: '3-3-dr-1',
         stratum: 'B',
         theoreticalConcept: 'Eroarea de predicție a recompensei dopaminergice și subreglarea receptorilor D2',
-        theoreticalAuthor: 'Schultz (1998, 2016); Lembke (2021); Brady et al. (2017); Vosoughi, Roy & Aral (2018)',
-        theoreticalMechanism: 'Fluxul de clipuri ultrascurte și indignarea morală declanșează descărcări fazice de dopamină în nucleul accumbens, suprimând latența temporală necesară activării cortexului prefrontal (dlPFC).',
-        empiricalReality: 'Stare de sevraj informațional, deficit de atenție și hipnoză reactivă în rândul utilizatorilor captivi în derularea infinită (infinite scroll) pe TikTok, Facebook și Telegram.',
+        theoreticalAuthor: 'Schultz, 1998, 2016 · Lembke, 2021 · Brady et al., 2017 · Vosoughi, Roy & Aral, 2018',
+        theoreticalMechanism: 'Fluxul de clipuri ultrascurte și indignarea morală declanșează descărcări fazice de dopamină în nucleul accumbens, suprimând latența temporală necesară activării cortexului prefrontal dorsolateral.',
+        empiricalReality: 'Stare de sevraj informațional, deficit de atenție și hipnoză reactivă în rândul utilizatorilor captivi în derularea infinită pe TikTok, Facebook și Telegram.',
         systemicOutcome: 'tension'
       },
       {
         id: '3-3-dr-2',
         stratum: 'A',
-        theoreticalConcept: 'Model Collapse, Model Autophagy Disorder (MAD) și contagiunea complexă artificială',
-        theoreticalAuthor: 'Shumailov et al. (2024); Alemohammad et al. (2024); Centola (2018, 2021)',
-        theoreticalMechanism: 'Poluarea corpusurilor AI/RAG cu date sintetice (în plan tehnic) și simularea confirmărilor redundante din vecinătatea socială prin roiuri de boți (în plan psihosociologic).',
+        theoreticalConcept: 'Degradarea modelelor generative — Model Collapse și MAD — și contagiunea complexă artificială',
+        theoreticalAuthor: 'Shumailov et al., 2024 · Alemohammad et al., 2024 · Centola, 2018, 2021',
+        theoreticalMechanism: 'Poluarea corpusurilor AI și RAG cu date sintetice în plan tehnic și simularea confirmărilor redundante din vecinătatea socială prin roiuri de boți în plan psihosociologic.',
         empiricalReality: 'Rețelele Doppelgänger, Matrioșka și Pravda creează iluzia unui consens social majoritar în jurul narativelor revizioniste, neutralizând rezervele critice ale cetățeanului.',
         systemicOutcome: 'tension'
       }

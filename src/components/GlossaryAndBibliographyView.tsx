@@ -82,7 +82,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                   : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
               }`}
             >
-              Bibliografie integrală ({BIBLIOGRAPHY_DATA.length} lucrări, paginile 42–47)
+              Bibliografie integrală · {BIBLIOGRAPHY_DATA.length} lucrări, paginile 42–47
             </button>
             <button
               onClick={() => setActiveTab('blueprint')}
@@ -92,7 +92,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                   : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
               }`}
             >
-              Șablon de identitate vizuală (Master Blueprint)
+              Șablon de identitate vizuală
             </button>
           </div>
         </div>
@@ -107,8 +107,8 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={
                   activeTab === 'glossary'
-                    ? 'Căutați un concept (ex. închidere operațională, alostazie, OODA, Bobok, Edinger)...'
-                    : 'Căutați un autor, an sau titlu în bibliografie (ex. Luhmann, Sapolsky, Lefebvre, Lotman)...'
+                    ? 'Căutați un concept: închidere operațională, alostazie, OODA, Bobok, Edinger...'
+                    : 'Căutați un autor, an sau titlu în bibliografie: Luhmann, Sapolsky, Lefebvre, Lotman...'
                 }
                 className="w-full pl-9 pr-4 py-2 text-xs sm:text-sm bg-[#F6F5EE] border border-[#222426] text-[#222426] placeholder:text-[#6E7376] focus:outline-none focus:ring-2 focus:ring-[#E5B822]"
               />
@@ -187,7 +187,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                   {concept.term}
                 </h3>
                 <div className="text-xs font-mono text-[#6E7376] mt-1 mb-3">
-                  Referințe teoretice ({concept.authors})
+                  Referințe teoretice: {concept.authors}
                 </div>
 
                 <p className="text-xs sm:text-sm text-[#222426] leading-relaxed mb-3">
@@ -215,11 +215,11 @@ export const GlossaryAndBibliographyView: React.FC = () => {
       {/* BIBLIOGRAFIE INTEGRALĂ */}
       {activeTab === 'bibliography' && (
         <div className="bg-[#F6F5EE] border border-[#222426] divide-y divide-[#8C9BA5]">
-          <div className="p-3.5 bg-[#F6F5EE] text-xs font-mono text-[#6E7376] flex items-center justify-between">
+          <div className="p-3.5 bg-[#F6F5EE] text-xs font-mono text-[#6E7376] flex flex-wrap items-center justify-between gap-2">
             <span>
-              Lucrări afișate ({filteredBibliography.length} din {BIBLIOGRAPHY_DATA.length} lucrări academice individuale verificate în paginile 42–47)
+              Lucrări afișate: {filteredBibliography.length} din {BIBLIOGRAPHY_DATA.length} lucrări academice verificate în paginile 42–47
             </span>
-            <span>Ordine alfabetică după autor și an (APA 7th Edition)</span>
+            <span>Ordine alfabetică după autor și an · APA 7th Edition</span>
           </div>
 
           {filteredBibliography.map((item, idx) => (
@@ -247,19 +247,19 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                 Directive de sistem, paletă cromatică și dinamică narativă
               </div>
               <h3 className="font-serif text-xl font-bold text-[#222426]">
-                Șablon universal de identitate vizuală și prezentare (Master Blueprint)
+                Șablon universal de identitate vizuală și prezentare
               </h3>
             </div>
 
             {/* Color Palette Swatches */}
             <div>
               <h4 className="font-serif text-base font-bold text-[#222426] mb-3">
-                Paleta cromatică obligatorie (Diagramă conceptuală 2D și gravură vectorială)
+                Paleta cromatică obligatorie · Diagramă conceptuală 2D și gravură vectorială
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
                 <div className="border border-[#222426] p-3 bg-[#F6F5EE]">
                   <div className="h-10 bg-[#F6F5EE] border border-[#222426] mb-2" />
-                  <div className="text-xs font-bold text-[#222426]">Fundal principal (Canvas)</div>
+                  <div className="text-xs font-bold text-[#222426]">Fundal principal · Canvas</div>
                   <div className="text-[11px] font-mono text-[#6E7376]">#F6F5EE</div>
                   <div className="text-[11px] text-[#222426] mt-1">
                     Alb-crem cald cu textură editorială.
@@ -309,10 +309,10 @@ export const GlossaryAndBibliographyView: React.FC = () => {
               <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
                 <div>
                   <div className="text-xs font-mono text-[#6E7376]">
-                    Prompt scurt gata de copiat în câmpul „Customize” din Gemini Notebook (modul cinematic)
+                    Prompt scurt gata de copiat pentru generarea planșelor vizuale
                   </div>
                   <h4 className="font-serif text-base font-bold text-[#222426]">
-                    Instrucțiune de generare (șablonul de stil din Master Blueprint)
+                    Instrucțiune de generare · Șablonul de stil al monografiei
                   </h4>
                 </div>
                 <button

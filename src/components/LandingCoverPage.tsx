@@ -28,7 +28,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
           {/* Left 7 Columns: Title, Subtitle, Abstract & Action Button */}
           <div className="lg:col-span-7 space-y-6">
             <div className="text-xs font-mono text-[#6E7376]">
-              Arhitectura cauzală pe trei straturi (Sociologie instituțională · Neuroștiințe și semiotică · Psihologie analitică)
+              Arhitectura cauzală pe trei straturi: Sociologie instituțională · Neuroștiințe și semiotică · Psihologie analitică
             </div>
 
             <h1 className="font-serif text-2xl sm:text-4xl lg:text-[42px] font-bold text-[#222426] leading-[1.12] headline-balance">
@@ -41,10 +41,10 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
 
             <div className="pt-2 border-t border-[#8C9BA5] space-y-3 text-xs sm:text-sm text-[#222426] leading-relaxed max-w-[65ch]">
               <p>
-                Această lucrare demonstrează că vulnerabilitatea cognitivă a societății românești nu reprezintă un simplu deficit de alfabetizare media, ci rezultatul emergent al interacțiunii dintre anomalia istorică a „formelor fără fond” și închiderea operațională a instituțiilor extractive (Stratul A), uzura alostatică cronică și capturarea fazei de Orientare din bucla OODA prin control reflexiv (Stratul B), respectiv proiecția Umbrei colective, enantiodromia și alunecarea în autosabotaj colectiv (-X, -Y) în criză acută (Stratul C).
+                Această lucrare demonstrează că vulnerabilitatea cognitivă a societății românești nu reprezintă un simplu deficit de alfabetizare media, ci rezultatul emergent al interacțiunii dintre trei paliere cauzale: anomalia istorică a „formelor fără fond” și închiderea operațională a instituțiilor extractive în Stratul A; uzura alostatică cronică și capturarea fazei de Orientare din bucla OODA prin control reflexiv în Stratul B; respectiv proiecția Umbrei colective, enantiodromia și alunecarea în autosabotaj colectiv în condiții de criză acută în Stratul C.
               </p>
               <p className="text-[#6E7376]">
-                Explorarea interactivă reunește textul integral al celor șase capitole, sinteza executivă pentru decidenți, descompunerea în oglindă pe două registre (teoretic și empiric), laboratorul celor șapte diagrame cibernetice și protocolul secvențial de reconstrucție în trei faze.
+                Explorarea interactivă reunește textul integral al celor șase capitole, sinteza executivă pentru decidenți, descompunerea în oglindă pe două registre — teoretic și empiric —, laboratorul celor șapte diagrame cibernetice și protocolul secvențial de reconstrucție în trei faze.
               </p>
             </div>
 
@@ -74,7 +74,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-6">
               <div className="text-[11px] font-mono text-[#6E7376] pb-2 mb-3 border-b border-[#8C9BA5] flex items-center justify-between">
-                <span>Planșa sinoptică de copertă (Modelul Macro–Micro–Macro)</span>
+                <span>Planșa sinoptică de copertă · Modelul Macro–Micro–Macro</span>
                 <span>Fig. I–VII</span>
               </div>
 
@@ -149,7 +149,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontWeight="700"
                   fill="#6E7376"
                 >
-                  STRATUL A (MACRO-INSTITUȚIONAL · CAPITOLELE 1–2)
+                  STRATUL A · MACRO-INSTITUȚIONAL · CAPITOLELE 1–2
                 </text>
                 <text
                   x="30"
@@ -168,7 +168,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontSize="10.5"
                   fill="#222426"
                 >
-                  Instituții extractive („forme fără fond”) vs. statul de drept (Luhmann)
+                  Instituții extractive și „forme fără fond” vs. statul de drept
                 </text>
                 <text
                   x="30"
@@ -177,7 +177,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontSize="10.5"
                   fill="#6E7376"
                 >
-                  Vectorul revizionist al Antilumii (Epstein) și starea Bobok (Dostoievski)
+                  Vectorul revizionist al Antilumii și nihilismul stării Bobok
                 </text>
 
                 {/* Downward Causal Arrows from Stratum A to Stratum B */}
@@ -218,7 +218,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontWeight="700"
                   fill="#F01E1E"
                 >
-                  STRATUL B (NEUROCOGNITIV ȘI CIBERNETIC · CAPITOLUL 3)
+                  STRATUL B · NEUROCOGNITIV ȘI CIBERNETIC · CAPITOLUL 3
                 </text>
                 <text
                   x="30"
@@ -237,7 +237,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontSize="10.5"
                   fill="#222426"
                 >
-                  Inhibare dlPFC, hiperactivare amigdaliană și închidere cognitivă (NFCC)
+                  Inhibare prefrontală, hiperactivare amigdaliană și închidere cognitivă
                 </text>
                 <text
                   x="30"
@@ -246,7 +246,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontSize="10.5"
                   fill="#6E7376"
                 >
-                  Control reflexiv de rang secund (Lefebvre) vs. mediere semiotică ternară
+                  Control reflexiv de rang secund vs. mediere semiotică ternară
                 </text>
 
                 {/* Arrows from Stratum B through Moral Filter to Stratum C */}
@@ -297,7 +297,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontWeight="800"
                   fill="#222426"
                 >
-                  Filtrul moral creștin-secular (Imago Dei și discernământ)
+                  Filtrul moral creștin-secular · Imago Dei și discernământ
                 </text>
 
                 {/* Lower Frame: Stratum C Split (Track A vs Track B) */}
@@ -319,7 +319,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontWeight="700"
                   fill="#F01E1E"
                 >
-                  STRATUL C · TENSIUNE (TRACK A)
+                  STRATUL C · TENSIUNE · TRASEUL A
                 </text>
                 <text
                   x="30"
@@ -338,7 +338,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontSize="10"
                   fill="#222426"
                 >
-                  Enantiodromie, ipoteze de bază (Bion)
+                  Enantiodromie, ipoteze de bază Bion
                 </text>
                 <text
                   x="30"
@@ -347,7 +347,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontSize="10"
                   fill="#6E7376"
                 >
-                  și autosabotaj colectiv (-X, -Y)
+                  și autosabotaj colectiv în Cadranul III
                 </text>
 
                 <rect
@@ -369,7 +369,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontWeight="700"
                   fill="#222426"
                 >
-                  STRATUL C · SINTEZĂ (TRACK B)
+                  STRATUL C · SINTEZĂ · TRASEUL B
                 </text>
                 <text
                   x="250"
@@ -388,7 +388,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontSize="10"
                   fill="#222426"
                 >
-                  Refacerea axei Ego–Sine (Edinger)
+                  Refacerea axei Ego–Sine
                 </text>
                 <text
                   x="250"
@@ -397,7 +397,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontSize="10"
                   fill="#222426"
                 >
-                  și cooperare inteligentă (+X, +Y)
+                  și cooperare inteligentă în Cadranul I
                 </text>
 
                 {/* Convergence into Bottom Protocol Banner (Chapter 6) */}
@@ -446,7 +446,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontWeight="700"
                   fill="#E5B822"
                 >
-                  CAPITOLUL 6 · PROTOCOLUL SECVENȚIAL ÎN TREI FAZE (LALONDE–DEVER)
+                  CAPITOLUL 6 · PROTOCOLUL SECVENȚIAL ÎN TREI FAZE · LALONDE–DEVER
                 </text>
                 <text
                   x="230"
@@ -457,7 +457,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   fontWeight="600"
                   fill="#F6F5EE"
                 >
-                  Faza I (0–12 luni) → Faza II (1–3 ani) → Faza III (3–10 ani, policentricitate Ostrom)
+                  Faza I: 0–12 luni → Faza II: 1–3 ani → Faza III: 3–10 ani, guvernanță policentrică
                 </text>
               </svg>
             </div>
@@ -468,27 +468,27 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
         <div className="pt-6 border-t border-[#222426] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-[#6E7376]">
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Stratul A (Capitolele 0–1)
+              Stratul A · Capitolele 0–1
             </div>
-            <div>Cadrul macro, barca lui Coleman-Hedström și rădăcina instituțională</div>
+            <div>Cadrul macro, diagrama lui Coleman–Hedström și rădăcina instituțională</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Stratul B (Capitolele 2–3)
+              Stratul B · Capitolele 2–3
             </div>
             <div>Antilumea putinistă, dubla falsificare axiologică și bucla OODA</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Stratul C (Capitolele 4–5)
+              Stratul C · Capitolele 4–5
             </div>
             <div>Proiecția Umbrei colective și enantiodromia, matricea lui Cipolla și bifurcația Track A/B</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Reconstrucție (Capitolul 6)
+              Reconstrucție · Capitolul 6
             </div>
-            <div>Protocolul secvențial Lalonde-Dever, policentricitate și modernitate organică</div>
+            <div>Protocolul secvențial Lalonde–Dever, policentricitate și modernitate organică</div>
           </div>
         </div>
       </div>

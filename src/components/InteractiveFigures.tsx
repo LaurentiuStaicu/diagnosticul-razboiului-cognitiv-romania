@@ -21,35 +21,35 @@ export const FIGURE_METADATA: Record<
 > = {
   1: {
     id: 1,
-    title: 'Figura 1 (Arhitectura cauzală pe trei straturi a vulnerabilității societale endogene)',
+    title: 'Figura 1. Arhitectura cauzală pe trei straturi a vulnerabilității societale endogene',
     subtitle:
-      'Articularea modelului Macro–Micro–Macro (Coleman și Hedström) cu determinanții sistemici Lalonde-Dever',
-    chapterRef: 'Capitolul 1 (Subcapitolul 1.3)',
+      'Articularea modelului Macro–Micro–Macro al lui Coleman și Hedström cu determinanții sistemici Lalonde-Dever',
+    chapterRef: 'Capitolul 1 · Subcapitolul 1.3',
     pdfPage: 8,
     caption:
-      'Deficitele structurale din Stratul A (deficitul de servicii publice, închiderea operațională incompletă a instituțiilor și mediul socioeconomic precar) induc în Stratul B o stare cronică de stres alostatic și hipervigilență amigdaliană, care inhibă deliberarea prefrontală și împinge cetățenii spre comportamente reactive de supraviețuire. Aceste mecanisme neurocognitive se sedimentează în Stratul C sub forma fatalismului defensiv, a neputinței învățate și a neîncrederii cronice în ordinea constituțională, oferind vectorului de război cognitiv suprafețe directe de cuplare și amplificare.',
+      'Deficitele structurale din Stratul A — deficitul de servicii publice, închiderea operațională incompletă a instituțiilor și mediul socioeconomic precar — induc în Stratul B o stare cronică de stres alostatic și hipervigilență amigdaliană, care inhibă deliberarea prefrontală și împinge cetățenii spre comportamente reactive de supraviețuire. Aceste mecanisme neurocognitive se sedimentează în Stratul C sub forma fatalismului defensiv, a neputinței învățate și a neîncrederii cronice în ordinea constituțională, oferind vectorului de război cognitiv suprafețe directe de cuplare și amplificare.',
     methodologicalNote:
-      'Selectați direct în diagrama vectorială SVG orice nod structural sau comutați starea sistemului pentru a urmări propagarea cauzală între instituții (Stratul A), neurobiologie (Stratul B) și inconștientul cultural (Stratul C).'
+      'Selectați direct în diagrama vectorială SVG orice nod structural sau comutați starea sistemului pentru a urmări propagarea cauzală între instituții în Stratul A, neurobiologie în Stratul B și inconștientul cultural în Stratul C.'
   },
   2: {
     id: 2,
-    title: 'Figura 2 (Mecanismul dublei falsificări axiologice și al parazitării semiotice)',
+    title: 'Figura 2. Mecanismul dublei falsificări axiologice și al parazitării semiotice',
     subtitle:
       'Opoziția structurală dintre sinteza creștin-seculară europeană și ideologia revizionistă a Antilumii',
-    chapterRef: 'Capitolul 2 (Subcapitolul 2.2)',
+    chapterRef: 'Capitolul 2 · Subcapitolul 2.2',
     pdfPage: 12,
     caption:
-      'În jumătatea stângă este reprezentată sinteza creștin-seculară europeană, în care principiul demnității umane inalienabile (Imago Dei și universalismul drepturilor fundamentale) susține filtrul moral și constituțional al statului de drept, generând modernitate organică și libertate responsabilă. În jumătatea dreaptă este ilustrată operațiunea de disimulare a ideologiei revizioniste a Antilumii (Epstein, 2022), care proiectează la suprafață un camuflaj tradiționalist ortodox și suveranist pentru a ocoli aversiunea istorică a populației-țintă față de Rusia, mascând nucleul operativ real bazat pe inversiune normativă și cinism transgresiv, a cărui finalitate strategică este subordonarea imperială și anomizarea societății vizate.',
+      'În jumătatea stângă este reprezentată sinteza creștin-seculară europeană, în care principiul demnității umane inalienabile, întemeiat pe conceptul de Imago Dei și pe universalismul drepturilor fundamentale, susține filtrul moral și constituțional al statului de drept, generând modernitate organică și libertate responsabilă. În jumătatea dreaptă este ilustrată operațiunea de disimulare a ideologiei revizioniste a Antilumii (Epstein, 2022), care proiectează la suprafață un camuflaj tradiționalist ortodox și suveranist pentru a ocoli aversiunea istorică a populației-țintă față de Rusia, mascând nucleul operativ real bazat pe inversiune normativă și cinism transgresiv, a cărui finalitate strategică este subordonarea imperială și anomizarea societății vizate.',
     methodologicalNote:
       'Faceți click pe nodurile din diagrama vectorială SVG pentru a compara sinteza creștin-seculară cu mecanismul de camuflaj discursiv și inversiune normativă.'
   },
   3: {
     id: 3,
     title:
-      'Figura 3 (Mecanismul cibernetic și semiotic al capturării cognitive în al șaselea domeniu operațional)',
+      'Figura 3. Mecanismul cibernetic și semiotic al capturării cognitive în al șaselea domeniu operațional',
     subtitle:
-      'Integrarea buclei decizionale OODA (Boyd), a controlului reflexiv (Lefebvre) și a semioticii culturii (Lotman și Peirce)',
-    chapterRef: 'Capitolul 3 (Subcapitolele 3.1–3.3)',
+      'Integrarea buclei decizionale OODA a lui Boyd, a controlului reflexiv al lui Lefebvre și a semioticii culturii a lui Lotman și Peirce',
+    chapterRef: 'Capitolul 3 · Subcapitolele 3.1–3.3',
     pdfPage: 20,
     caption:
       'Fluxul informațional brut din faza de Observare, amplificat algoritmic prin capturarea circuitelor dopaminergice, intră în faza de Orientare, unde modelele mentale și culturale ale subiectului sunt țintite de controlul reflexiv de rang secund. Această intervenție compromite filtrul axiologic al primului sistem etic, blochează calea medierii ternare și a discernământului rațional prefrontal și deviază procesarea pe traseul celui de-al doilea sistem etic și al logicii binare a anihilării. Rezultatul este o fază de Decizie dominată de selecția emoțională indusă, închiderea cognitivă și procesarea defensivă motivată de protejarea identității de grup, care se traduce în faza de Acțiune prin polarizare socială acută și conflict antiinstituțional.',
@@ -58,22 +58,22 @@ export const FIGURE_METADATA: Record<
   },
   4: {
     id: 4,
-    title: 'Figura 4 (Conversia funcțională a resurselor latente din Umbra colectivă)',
+    title: 'Figura 4. Conversia funcțională a resurselor latente din Umbra colectivă',
     subtitle:
       'Arhitectura de mediere instituțională și metacognitivă pe axa Ego–Sine și conversia fluxurilor psihodinamice',
-    chapterRef: 'Capitolul 4 (Subcapitolul 4.2)',
+    chapterRef: 'Capitolul 4 · Subcapitolul 4.2',
     pdfPage: 24,
     caption:
-      'În stânga sunt reprezentate energiile psihodinamice refulate în Stratul C (memoria istorică defensivă și vitalitatea adaptativă necanalizată asociată arhetipului Trickster-ului). În absența medierii, aceste resurse alunecă pe traseul inferior (marcat cu roșu) în enantiodromie, cinism și revoltă anomizantă. Atunci când sunt procesate prin cele trei filtre centrale din Straturile A și B (cadrul legii impersonale drepte cu închidere operațională, discernământul critic și vigilența metacognitivă prefrontală), ele sunt convertite pe axa Ego–Sine în modernitate organică, încredere și cooperare instituțională autonomă.',
+      'În stânga sunt reprezentate energiile psihodinamice refulate în Stratul C: memoria istorică defensivă și vitalitatea adaptativă necanalizată asociată arhetipului Trickster-ului. În absența medierii, aceste resurse alunecă pe traseul inferior, marcat cu roșu, în enantiodromie, cinism și revoltă anomizantă. Atunci când sunt procesate prin cele trei filtre centrale din Straturile A și B — cadrul legii impersonale drepte cu închidere operațională, discernământul critic și vigilența metacognitivă prefrontală — ele sunt convertite pe axa Ego–Sine în modernitate organică, încredere și cooperare instituțională autonomă.',
     methodologicalNote:
-      'Diagrama ilustrează condițiile structurale prin care resursele refulate în Umbra colectivă (memoria istorică defensivă și vitalitatea adaptativă a arhetipului Trickster-ului) încetează să alimenteze revolta anomizantă și sunt convertite în modernitate organică.'
+      'Diagrama ilustrează condițiile structurale prin care resursele refulate în Umbra colectivă, respectiv memoria istorică defensivă și vitalitatea adaptativă a arhetipului Trickster-ului, încetează să alimenteze revolta anomizantă și sunt convertite în modernitate organică.'
   },
   5: {
     id: 5,
-    title: 'Figura 5 (Matricea comportamentală a lui Carlo M. Cipolla în războiul cognitiv)',
+    title: 'Figura 5. Matricea comportamentală a lui Carlo M. Cipolla în războiul cognitiv',
     subtitle:
       'Dinamica spolierii sistemice (+X, -Y), a vulnerabilizării (-X, +Y) și a autosabotajului colectiv (-X, -Y)',
-    chapterRef: 'Capitolul 4 (Subcapitolul 4.3)',
+    chapterRef: 'Capitolul 4 · Subcapitolul 4.3',
     pdfPage: 27,
     caption:
       'Presiunea de spoliere sistemică exercitată de actorii extractivi din Cadranul IV (+X, -Y) asupra cetățeanului vulnerabil din Cadranul II (-X, +Y), pe fondul unei bariere instituționale fisurate, creează condițiile de uzură alostatică și resentiment. Intervenția vectorului de război cognitiv deturnează această frustrare legitimă, împingându-l pe cetățeanul vulnerabil vertical în jos, în Cadranul III al autosabotajului colectiv (-X, -Y), unde acțiunile sale antiinstituționale distrug simultan bunul public și propria sa securitate socioeconomică, subminând spațiul cooperării inteligente din Cadranul I (+X, +Y).',
@@ -82,27 +82,27 @@ export const FIGURE_METADATA: Record<
   },
   6: {
     id: 6,
-    title: 'Figura 6 (Modelul comparativ al procesării cognitive în criză acută: Track A vs. Track B)',
+    title: 'Figura 6. Modelul comparativ al procesării cognitive în criză acută: Track A vs. Track B',
     subtitle:
-      'Divergența dintre bucla reactivă defensivă (Track A) și traseul deliberativ adaptativ (Track B)',
-    chapterRef: 'Capitolul 5 (Subcapitolul 5.2)',
+      'Divergența dintre bucla reactivă defensivă Track A și traseul deliberativ adaptativ Track B',
+    chapterRef: 'Capitolul 5 · Subcapitolul 5.2',
     pdfPage: 30,
     caption:
-      'Nodul unic de bifurcație superior (stresul acut și policriza) desprinde divergent procesarea defensivă (Track A, stânga) de procesarea adaptativă (Track B, dreapta). În Track A, anxietatea cronică și nevoia de închidere cognitivă (NFCC, intoleranță la ambiguitate și urgență decizională) activează persona mimetică și generează o tensiune compensatorie cu umbra colectivă, închisă fizic într-o buclă de autoamplificare algoritmică (R). În Track B, procesarea parcurge strict etapele cognitive adaptative (acceptarea incertitudinii, reactivarea Sistemului 2, toleranța disonanței cu recuperarea ingeniozității Trickster, discernământ critic și creație suverană), conectată ontologic la bază cu axa Ego–Sine.',
+      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea defensivă Track A, în stânga, de procesarea adaptativă Track B, în dreapta. În Track A, anxietatea cronică și nevoia de închidere cognitivă — caracterizată prin intoleranță la ambiguitate și urgență decizională — activează persona mimetică și generează o tensiune compensatorie cu umbra colectivă, închisă într-o buclă de autoamplificare algoritmică. În Track B, procesarea parcurge etapele cognitive adaptative: acceptarea incertitudinii, reactivarea Sistemului 2, toleranța disonanței cu recuperarea ingeniozității arhetipului Trickster, discernământul critic și creația suverană, conectată la bază cu axa Ego–Sine.',
     methodologicalNote:
-      'Modelul sistemic al procesării cognitive în criză (adaptat după Kruglanski, Kahneman și psihologia analitică) evidențiază bifurcarea dintre bucla reactivă de autoamplificare (R) și traseul deliberativ adaptativ de integrare suverană pe axa Ego–Sine.'
+      'Modelul sistemic al procesării cognitive în criză, fundamentat pe lucrările lui Kruglanski, Kahneman și pe psihologia analitică, evidențiază bifurcarea dintre bucla reactivă de autoamplificare și traseul deliberativ adaptativ de integrare suverană pe axa Ego–Sine.'
   },
   7: {
     id: 7,
-    title: 'Figura 7 (Protocolul secvențial în trei faze al reconstrucției rezilienței societale)',
+    title: 'Figura 7. Protocolul secvențial în trei faze al reconstrucției rezilienței societale',
     subtitle:
       'Ordinea obligatorie a intervențiilor pe determinanții Lalonde-Dever și palierele Straturilor A, B și C',
-    chapterRef: 'Capitolul 6 (Subcapitolele 6.1–6.4)',
+    chapterRef: 'Capitolul 6 · Subcapitolele 6.1–6.4',
     pdfPage: 39,
     caption:
-      'Diagrama evidențiază ordinea cauzală obligatorie a intervențiilor fundamentate pe determinanții modelului Lalonde-Dever: Faza I (decompresia alostatică și reglementarea ecosistemului digital) creează condițiile neurobiologice pentru Faza a II-a (pregătirea psihocognitivă preventivă prebunking, consolidarea mnezică Ebbinghaus și reconcilierea filtrului moral creștin-secular), care susține la rândul ei Faza a III-a (închiderea operațională a statului de drept, guvernanța policentrică și individuarea colectivă), culminând în arhitectura suveranității democratice și a modernității organice.',
+      'Diagrama evidențiază ordinea cauzală obligatorie a intervențiilor fundamentate pe determinanții modelului Lalonde-Dever: Faza I, dedicată decompresiei alostatice și reglementării ecosistemului digital, creează condițiile neurobiologice pentru Faza a II-a, axată pe pregătirea psihocognitivă preventivă prin prebunking, consolidarea mnezică Ebbinghaus și reconcilierea filtrului moral creștin-secular. Aceasta susține la rândul ei Faza a III-a, care vizează închiderea operațională a statului de drept, guvernanța policentrică și individuarea colectivă, culminând în arhitectura suveranității democratice și a modernității organice.',
     methodologicalNote:
-      'Arhitectura secvențială a reconstrucției rezilienței cognitive și instituționale demonstrează de ce intervențiile educaționale din Faza II și reformele structurale din Faza III depind cauzal de realizarea prealabilă a Fazei I (decompresia alostatică a populației și reglementarea ecosistemului digital), culminând în sinteza modernității organice și a suveranității democratice.'
+      'Arhitectura secvențială a reconstrucției rezilienței cognitive și instituționale demonstrează de ce intervențiile educaționale din Faza II și reformele structurale din Faza III depind cauzal de realizarea prealabilă a Fazei I, constând în decompresia alostatică a populației și reglementarea ecosistemului digital.'
   }
 };
 
