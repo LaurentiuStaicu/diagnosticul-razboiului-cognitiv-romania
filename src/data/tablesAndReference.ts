@@ -179,7 +179,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'A',
     authors: 'James S. Coleman, 1990 · Peter Hedström, 2005',
     domain: 'Sociologie analitică',
-    definition: 'Model explicativ care articulează trei segmente cauzale concatenate: mecanismele situaționale de tranziție de la nivel macro la nivel micro, mecanismele individuale de formare a acțiunii și mecanismele transformaționale de agregare colectivă.',
+    definition: 'Model explicativ din sociologia analitică (cunoscut drept „barca lui Coleman”) care articulează trei mecanisme cauzale înlănțuite: mecanismele situaționale de tranziție de la nivel macro la nivel micro, mecanismele individuale de formare a acțiunii (nivelul micro) și mecanismele transformaționale de agregare colectivă (tranziția micro–macro). Operaționalizat în această monografie, modelul arată cum configurația instituțională din Stratul A condiționează procesarea neurocognitivă din Stratul B și se agregă algoritmic în polarizare sau reziliență în Stratul C.',
     monographContext: 'Explică științific cum deficitele instituționale din Stratul A modelează procesarea neurocognitivă în Stratul B și se agregă algoritmic în polarizare și autosabotaj colectiv.',
     polarity: 'neutral'
   },
@@ -259,7 +259,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'A',
     authors: 'Edward C. Banfield, 1958 · Robert D. Putnam, 2000',
     domain: 'Sociologie politică',
-    definition: 'Replierea defensivă în care normele morale se aplică exclusiv în cercul familiei biologice și al clanului, privind sfera publică drept ostilă, în opoziție cu capitalul social de punte (bridging, Putnam) bazat pe încrederea generalizată între grupuri sociale diferite.',
+    definition: 'Concept sociologic formulat de Edward C. Banfield (1958) pentru a desemna replierea defensivă în care normele de cooperare și bună-credință se aplică exclusiv în cercul restrâns al familiei biologice și al clanului, sfera publică fiind tratată drept ostilă și extractivă — în opoziție cu capitalul social de punte (bridging social capital, Putnam, 2000), bazat pe încrederea generalizată între grupuri sociale diferite. În acest context, conceptul explică fragmentarea celulară a societății românești între supraviețuirea de clan în periferii și secesiunea tacită în servicii private a păturilor urbane.',
     monographContext: 'Erodează coeziunea societală românească simultan cu secesiunea tacită în servicii private a păturilor urbane prospere.',
     polarity: 'tension'
   },
@@ -269,7 +269,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'B',
     authors: 'Peter Sterling și Joseph Eyer, 1988 · Bruce S. McEwen și Eliot Stellar, 1993 · Bruce S. McEwen, 1998 · Robert M. Sapolsky, 2004, 2017',
     domain: 'Neurobiologia stresului',
-    definition: 'Costul fiziologic cumulativ și deteriorarea tisulară și neurală (sarcina sau uzura alostatică, McEwen & Stellar, 1993; McEwen, 1998) suferite de organism atunci când reglarea adaptativă dinamică a alostaziei (stabilitatea prin schimbare, Sterling & Eyer, 1988) este suprasolicitată cronic de insecuritatea socioeconomică, impredictibilitate și umilința birocratică.',
+    definition: 'Cadrul neurobiologic care distinge între alostazie — menținerea stabilității fiziologice prin schimbare adaptativă (Sterling & Eyer, 1988) — și sarcina sau uzura alostatică (allostatic load, McEwen & Stellar, 1993; McEwen, 1998), definită drept costul fiziologic cumulativ și deteriorarea tisulară și neurală produse de suprasolicitarea cronică a axei de răspuns la stres. Operaționalizat în această analiză, conceptul arată cum insecuritatea socioeconomică, impredictibilitatea legislativă și umilința birocratică din Stratul A epuizează rezerva neurocognitivă a cetățenilor înainte de intervenția propagandei externe.',
     monographContext: 'Epuizează rezerva neurocognitivă a cetățeanului înainte de contactul cu propaganda digitală; reducerea ei este obiectivul primar din Faza I.',
     polarity: 'tension'
   },
@@ -279,7 +279,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'B',
     authors: 'Amy F. T. Arnsten, 2009 · Vinod Menon, 2011 · Robert M. Sapolsky, 2004, 2017 · Daniel Kahneman, 2011 · Keith E. Stanovich, 2009',
     domain: 'Neuroștiințe cognitive',
-    definition: 'Excesul cronic de cortizol pe axa hipotalamo-hipofizo-suprarenaliană provoacă hipertrofia dendritică în amigdala bazolaterală și hiperactivarea rețelei de detecție a relevanței (Salience Network – SN), antrenând decuplarea rețelei executive centrale (Central Executive Network, Menon, 2011) și inhibiția sinaptică în hipocamp și în cortexul prefrontal dorsolateral (dlPFC) și ventromedial (vmPFC).',
+    definition: 'Mecanism neuroendocrin și de rețea cerebrală prin care excesul cronic de cortizol pe axa hipotalamo-hipofizo-suprarenaliană (axa HPA) provoacă hipertrofia dendritică în amigdala bazolaterală și hiperactivarea rețelei de detecție a relevanței (Salience Network – SN), antrenând decuplarea rețelei executive centrale (Central Executive Network – CEN, Menon, 2011) și inhibiția sinaptică în hipocamp și în cortexul prefrontal dorsolateral (dlPFC) și ventromedial (vmPFC).',
     monographContext: 'Blochează Sistemul 2 deliberativ, favorizează disraționalitatea (Stanovich, 2009) și comută creierul cetățeanului pe dominația exclusivă a Sistemului 1 reactiv.',
     polarity: 'tension'
   },
@@ -289,7 +289,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'C',
     authors: 'Pierre Janet · Carl Gustav Jung, 1934',
     domain: 'Psihologie dinamică și analitică',
-    definition: 'Diminuarea tonusului integrativ al Eului conștient sub presiunea oboselii cronice și a afectelor negative, care coboară pragul controlului inhibitor și al filtrajului metacognitiv și permite complexelor autonome din inconștient să invadeze conștiința.',
+    definition: 'Concept psihodinamic introdus de Pierre Janet și dezvoltat în psihologia analitică de Carl Gustav Jung (1934) pentru a desemna diminuarea tonusului integrativ al Eului conștient sub presiunea oboselii cronice și a afectelor negative, care coboară pragul controlului inhibitor și al filtrajului metacognitiv și permite complexelor autonome din inconștient să invadeze conștiința.',
     monographContext: 'Corespondentul psihodinamic din Stratul C al inhibiției prefrontale produse de uzura alostatică în Stratul B.',
     polarity: 'tension'
   },
@@ -299,7 +299,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'A',
     authors: 'Alena Ledeneva, 2013 · Natalia Zubarevich, 2011 · Karen Dawisha, 2014 · Mark Galeotti, 2019',
     domain: 'Economia politică a regimului rus',
-    definition: 'Mecanism informal și opac de guvernare cleptocratică în care instituțiile formale sunt subordonate loialității personale față de Kremlin, menținută prin rente energetice, șantaj cu materiale compromițătoare și exploatarea precarității periferiilor interne din modelul celor „patru Rusii” (Zubarevich, 2011) prin keynesianism militar (deathonomics).',
+    definition: 'Mecanism informal și opac de guvernare cleptocratică (Ledeneva, 2013) în care instituțiile constituționale formale sunt subordonate rețelelor din structurile de forță și informații (siloviki), loialitatea fiind menținută prin distribuirea discreționară a rentelor, șantaj instituționalizat cu materiale compromițătoare (kompromat) și exploatarea precarității periferiilor interne din modelul celor „patru Rusii” (Zubarevich, 2011) prin keynesianismul militar al economiei morții (deathonomics).',
     monographContext: 'Democrațiile funcționale din vecinătate amenință existențial legitimitatea internă a rețelei sistema, motivând războiul cognitiv rus.',
     polarity: 'tension'
   },
@@ -347,7 +347,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     id: 'bucla-ooda',
     term: 'Bucla decizională OODA și faza de Orientare',
     stratum: 'B',
-    authors: 'John Boyd · Frans P. B. Osinga, 2007',
+    authors: 'John Boyd, 1987 · Frans P. B. Osinga, 2007',
     domain: 'Cibernetică decizională și teorie strategică',
     definition: 'Ciclul adaptativ continuu alcătuit din Observare, Orientare, Decizie și Acțiune, în care faza de Orientare — formată din moștenirea culturală, experiența istorică și valorile morale — reprezintă centrul de greutate al întregului proces decizional.',
     monographContext: 'Războiul cognitiv nu vizează doar faza de Observare prin știri false punctuale, ci penetrarea și reconfigurarea fazei de Orientare însăși, conform Figurii 3.',
@@ -375,11 +375,11 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'inchidere-cognitiva-seizing-freezing',
-    term: 'Nevoia de închidere cognitivă și procesarea defensivă a identității',
+    term: 'Nevoia de închidere cognitivă (seizing și freezing) și procesarea defensivă',
     stratum: 'B',
-    authors: 'Arie W. Kruglanski, 2004 · Dan M. Kahan, 2013, 2017',
+    authors: 'Arie W. Kruglanski și Donna M. Webster, 1996 · Arie W. Kruglanski, 2004 · Dan M. Kahan, 2013, 2017',
     domain: 'Psihologie cognitivă și socială',
-    definition: 'Adoptarea precipitată și necritică a unei explicații conspirative simple sub presiunea stresului, urmată de înghețarea epistemică și fuzionarea credinței cu identitatea și statutul emoțional în interiorul grupului de apartenență.',
+    definition: 'Mecanism psihocognitiv declanșat de stres și ambiguitate acută, desfășurat în două secvențe: capturarea precipitată și necritică a primei explicații disponibile care promite ordine și certitudine (seizing), urmată de înghețarea epistemică și impermeabilitatea la contraargumente (freezing), prin fuzionarea credinței cu identitatea și statutul emoțional în grupul de apartenență (Identity-Protective Cognition, Kahan, 2013).',
     monographContext: 'Explică de ce confruntarea agresivă întărește defensiva amigdaliană și de ce Faza a II-a trebuie să înceapă cu validarea comunitară.',
     polarity: 'tension'
   },
@@ -419,7 +419,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'C',
     authors: 'Heraclit · Carl Gustav Jung, 1921',
     domain: 'Psihologie analitică',
-    definition: 'Proces psihodinamic prin care orice atitudine extremă, rigidă și unilaterală a conștiinței se răstoarnă inevitabil, la atingerea unui prag de saturație, în contrariul său absolut și autonom.',
+    definition: 'Principiu formulat de Heraclit și teoretizat în psihologia analitică de Carl Gustav Jung (1921), potrivit căruia orice atitudine extremă, rigidă și unilaterală a conștiinței se răstoarnă inevitabil, la atingerea unui prag critic de saturație, în contrariul său psihodinamic autonom. Operaționalizat în această analiză, conceptul explică pendularea colectivă de la mimetismul prooccidental de fațadă (Persona instituțională) la respingerea radicală a modernității constituționale.',
     monographContext: 'Explică pendularea violentă de la mimetismul prooccidental de fațadă la respingerea radicală a modernității constituționale.',
     polarity: 'tension'
   },
@@ -457,19 +457,19 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     id: 'bifurcare-track-a-track-b',
     term: 'Bifurcarea neurocognitivă în criză: Traseul A reactiv versus Traseul B deliberativ',
     stratum: 'B',
-    authors: 'Wilfred R. Bion, 1962, 1970 · Stephen Porges, 2011 · Thayer și Lane, 2009',
+    authors: 'Wilfred R. Bion, 1962, 1970 · Stephen W. Porges, 2011 · Julian F. Thayer și Richard D. Lane, 2009',
     domain: 'Neurobiologia deciziei și psihanaliză epistemică',
-    definition: 'Opoziția în nodul de criză acută între bucla reactivă dezadaptativă a Traseului A — dominată de amigdală, tunel dopaminergic și Sistemul 1 — și Traseul deliberativ adaptativ B, susținut de reglarea prefrontală descendentă, tonusul vagal, capacitatea negativă de a tolera incertitudinea și validarea în comunități epistemice deschise.',
+    definition: 'Model decizional care descrie opoziția, în nodul de criză acută, între bucla reactivă dezadaptativă a Traseului A — dominată de hiperactivarea amigdaliană, tunelul dopaminergic și Sistemul 1 — și Traseul deliberativ adaptativ B, susținut de integrarea neuroviscerală (Thayer & Lane, 2009), reglarea vagală (Porges, 2011), inhibiția prefrontală descendentă, capacitatea negativă de a tolera incertitudinea (Bion, 1970) și validarea în comunități epistemice deschise.',
     monographContext: 'Fundamentează neurobiologic suveranitatea decizională a cetățeanului ilustrată în Figura 6.',
     polarity: 'synthesis'
   },
   {
     id: 'prebunking-inoculare',
-    term: 'Pregătirea psihocognitivă preventivă și curba uitării a lui Ebbinghaus',
+    term: 'Pregătirea psihocognitivă preventivă (prebunking) și teoria inoculării',
     stratum: 'B',
     authors: 'William J. McGuire, 1964 · Jon Roozenbeek și Sander van der Linden, 2019, 2022 · Hermann Ebbinghaus, 1885',
     domain: 'Psihologie experimentală și educație cognitivă',
-    definition: 'Pregătirea psihocognitivă preventivă a populației prin expunerea explicată la tiparele formale de manipulare, însoțită de sesiuni periodice de consolidare mnezică calibrate pe curba uitării pentru transferul discernământului în memoria procedurală de lungă durată.',
+    definition: 'Mecanism de imunizare cognitivă preventivă fundamentat pe teoria inoculării psihologice (McGuire, 1964) și operaționalizat digital drept prebunking (Roozenbeek & van der Linden, 2019, 2022), prin care populația este expusă anticipat și explicat la tiparele formale de manipulare, însoțit de sesiuni periodice de consolidare mnezică calibrate pe curba uitării (Ebbinghaus, 1885) pentru transferul discernământului în memoria procedurală de lungă durată.',
     monographContext: 'Al doilea pilon al Fazei a II-a din protocolul de reconstrucție a rezilienței.',
     polarity: 'synthesis'
   },
@@ -479,17 +479,17 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'A',
     authors: 'Vincent și Elinor Ostrom, 1990, 2010 · Albert Bandura, 1997',
     domain: 'Științe politice și economie instituțională',
-    definition: 'Sistem instituțional în care centre multiple de decizie autonome — local, regional, național și european — cooperează și se echilibrează sub un cadru constituțional comun, redându-i cetățeanului capacitatea de acțiune politică autonomă (political agency) și sentimentul autoeficacității percepute (self-efficacy, Bandura, 1997).',
+    definition: 'Sistem instituțional în care centre multiple de decizie autonome — local, regional, național și european — cooperează și se echilibrează reciproc sub un cadru constituțional comun (Ostrom, 1990, 2010), redându-i cetățeanului capacitatea de acțiune politică autonomă (political agency) și sentimentul autoeficacității percepute (self-efficacy, Bandura, 1997).',
     monographContext: 'Depășește în Faza a III-a atât hipercentralismul birocratic, cât și fiefurile baronilor locali.',
     polarity: 'synthesis'
   },
   {
     id: 'modernitate-organica',
-    term: 'Individuarea colectivă și sinteza modernității organice',
+    term: 'Sinteza modernității organice și suveranitatea democratică',
     stratum: 'C',
-    authors: 'Titu Maiorescu, 1868 · Carl Gustav Jung, 1928 · Edward F. Edinger, 1972',
+    authors: 'Titu Maiorescu, 1868 · Eugen Lovinescu, 1924–1925 · Ștefan Zeletin, 1925 · Jürgen Habermas, 1992',
     domain: 'Filosofie socială și sinteză strategică',
-    definition: 'Starea de maturitate istorică și instituțională în care formele constituționale și de securitate occidentale devin expresia firească a unui fond cultural și moral autohton regenerat, unind legea impersonală dreaptă cu etica demnității persoanei umane.',
+    definition: 'Starea de maturitate istorică și instituțională în care formele constituționale, juridice și de securitate occidentale încetează să mai fie împrumuturi mimetice de suprafață și devin expresia firească a unui fond cultural, asociativ și moral autohton regenerat, unind domnia legii impersonale (patriotismul constituțional, Habermas, 1992) cu etica demnității persoanei umane.',
     monographContext: 'Rezoluția finală a monografiei și fundamentul suveranității democratice a României în secolul al XXI-lea, sintetizată în Figura 7.',
     polarity: 'synthesis'
   },
@@ -647,10 +647,10 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     id: 'protocolul-secvential-trei-faze',
     term: 'Protocolul secvențial obligatoriu în trei faze',
     stratum: 'A',
-    authors: 'Sinteza operațională din Capitolul 6, Figura 7 și Tabelul 2',
+    authors: 'Marc Lalonde, 1974 · G. E. Alan Dever, 1976 · Bruce S. McEwen, 1998 · Brendan Nyhan și Jason Reifler, 2010',
     domain: 'Arhitectură strategică de reziliență societală',
-    definition: 'Ordinea cauzală strictă a reconstrucției rezilienței pe determinanții Lalonde–Dever: Faza I de decompresie alostatică și igienă algoritmică (0–12 luni), Faza II de validare comunitară, pregătire preventivă și filtru moral (1–3 ani) și Faza III de închidere operațională, policentricitate și individuare colectivă (3–10 ani).',
-    monographContext: 'Demonstrează de ce inversarea ordinii fazelor — de exemplu, educația mediatică fără decompresie alostatică prealabilă — eșuează prin efectul de bumerang (întărirea paradoxală a convingerii — backfire effect).',
+    definition: 'Ordinea cauzală strictă a reconstrucției rezilienței pe determinanții sistemici Lalonde–Dever: Faza I de decompresie alostatică și igienă algoritmică (0–12 luni), Faza II de validare comunitară, pregătire preventivă și filtru moral (1–3 ani) și Faza III de închidere operațională, policentricitate și individuare colectivă (3–10 ani).',
+    monographContext: 'Demonstrează de ce inversarea ordinii fazelor — lansarea de campanii de educație mediatică fără decompresie alostatică prealabilă — eșuează prin efectul de bumerang și întărirea paradoxală a convingerii (backfire effect, Nyhan & Reifler, 2010).',
     polarity: 'synthesis'
   },
   {
