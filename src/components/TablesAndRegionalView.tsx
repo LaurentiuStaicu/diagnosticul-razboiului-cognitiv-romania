@@ -56,7 +56,7 @@ export const TablesAndRegionalView: React.FC = () => {
                   : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
               }`}
             >
-              Tabelul 2 · Protocolul Lalonde-Dever și matricea instituțională
+              Tabelul 2 · Protocolul Lalonde–Dever și matricea instituțională
             </button>
             <button
               onClick={() => setActiveSubView('regional')}
@@ -199,7 +199,7 @@ export const TablesAndRegionalView: React.FC = () => {
             <div className="flex flex-wrap items-center justify-between gap-4 mb-4 pb-4 border-b border-[#8C9BA5]">
               <div>
                 <h3 className="font-serif text-lg font-bold text-[#222426]">
-                  Tabelul 2. Protocolul secvențial de reconstrucție a rezilienței cognitive și instituționale structurat pe determinanții modelului Lalonde-Dever
+                  Tabelul 2. Protocolul secvențial de reconstrucție a rezilienței cognitive și instituționale structurat pe determinanții modelului Lalonde–Dever
                 </h3>
                 <p className="text-xs text-[#6E7376] mt-1">
                   Ordinea cauzală obligatorie a intervențiilor pe cele trei faze și cei patru determinanți sistemici.
