@@ -712,10 +712,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <rect
-                  x="195"
+                  x="150"
                   y="480"
-                  width="285"
+                  width="375"
                   height="30"
+                  rx="3"
                   fill={fig1Mode === 'resilient' ? '#E5B822' : '#F6F5EE'}
                   stroke={fig1Mode === 'resilient' ? '#222426' : '#6E7376'}
                   strokeWidth={fig1Mode === 'resilient' ? '2.5' : '1.5'}
@@ -725,7 +726,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="337"
                   y="500"
                   textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   {fig1Mode === 'resilient'
                     ? 'Filtru moral creștin-secular integru'
@@ -1405,12 +1406,12 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 strokeDasharray={fig3ReflexiveActive ? undefined : '5 4'}
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
               />
-              <rect x="375" y="136" width="170" height="22" fill="#F6F5EE" />
+              <rect x="350" y="136" width="220" height="22" rx="2" fill="#F6F5EE" />
               <text
                 x="460"
                 y="151"
                 textAnchor="middle"
-                className="font-sans text-[11px] font-bold fill-[#F01E1E]"
+                className="font-sans text-[10.5px] font-bold fill-[#F01E1E]"
               >
                 Injecție de control reflexiv
               </text>
@@ -1746,12 +1747,12 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 stroke="#F01E1E"
                 strokeWidth="4"
               />
-              <rect x="805" y="188" width="135" height="20" fill="#F6F5EE" stroke="#F01E1E" strokeWidth="1.5" />
+              <rect x="792" y="188" width="160" height="20" rx="2" fill="#F6F5EE" stroke="#F01E1E" strokeWidth="1.5" />
               <text
                 x="872"
                 y="202"
                 textAnchor="middle"
-                className="font-mono text-[9.5px] font-bold fill-[#F01E1E]"
+                className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
               >
                 Zid de fractură identitară
               </text>
@@ -2056,15 +2057,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="145"
                   y="297"
                   textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  Vitalitate adaptativă necanalizată
+                  Vitalitate adaptativă
                 </text>
                 <text
                   x="145"
                   y="318"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
                   Ambivalența arhetipului Trickster
                 </text>
@@ -2094,9 +2095,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="455"
                   y="110"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  Închidere operațională a statului de drept
+                  Închiderea statului de drept
                 </text>
               </g>
 
@@ -2174,17 +2175,17 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="764"
                   y="138"
                   textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  Modernitate organică și încredere
+                  Modernitate organică
                 </text>
                 <text
                   x="764"
                   y="159"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  Interiorizarea autentică a normei
+                  Interiorizarea normei și încredere
                 </text>
               </g>
 
@@ -2215,17 +2216,17 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="764"
                   y="266"
                   textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  Cooperare instituțională autonomă
+                  Cooperare instituțională
                 </text>
                 <text
                   x="764"
                   y="287"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  Capital social de punte și reziliență
+                  Capital social de punte și autonomie
                 </text>
               </g>
 
@@ -3026,9 +3027,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     x="230"
                     y="268"
                     textAnchor="middle"
-                    className="font-sans text-[10px] fill-[#6E7376]"
+                    className="font-sans text-[9.5px] fill-[#6E7376]"
                   >
-                    Intoleranță la ambiguitate și urgență decizională
+                    Intoleranță la ambiguitate și urgență
                   </text>
                 </g>
 
@@ -3142,9 +3143,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     x="230"
                     y="432"
                     textAnchor="middle"
-                    className="font-sans text-[10px] fill-[#6E7376]"
+                    className="font-sans text-[9.5px] fill-[#6E7376]"
                   >
-                    Resentiment refulat și defensă antiinstituțională
+                    Resentiment refulat și defensă civică
                   </text>
                 </g>
 
@@ -3438,9 +3439,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     x="690"
                     y="316"
                     textAnchor="middle"
-                    className="font-sans text-[9.5px] font-medium fill-[#222426]"
+                    className="font-sans text-[9px] font-medium fill-[#222426]"
                   >
-                    Integrarea ingeniozității adaptative Trickster
+                    Integrarea ingeniozității Trickster
                   </text>
                 </g>
 
@@ -3491,9 +3492,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     x="690"
                     y="382"
                     textAnchor="middle"
-                    className="font-sans text-[9.5px] fill-[#6E7376]"
+                    className="font-sans text-[9px] fill-[#6E7376]"
                   >
-                    Mediere semiotică ternară și verificare probatorie
+                    Mediere semiotică și verificare critică
                   </text>
                 </g>
 
@@ -3895,9 +3896,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="168"
                   y="330"
                   textAnchor="middle"
-                  className="font-sans text-[10.5px] fill-[#6E7376]"
+                  className="font-sans text-[10px] fill-[#6E7376]"
                 >
-                  Audit algoritmic și frâne de viralitate
+                  Audit algoritmic și frâne de difuzare
                 </text>
               </g>
 

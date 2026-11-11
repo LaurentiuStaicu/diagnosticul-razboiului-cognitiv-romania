@@ -235,7 +235,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   x="30"
                   y="195"
                   fontFamily="Inter, sans-serif"
-                  fontSize="10.5"
+                  fontSize="10"
                   fill="#222426"
                 >
                   Inhibare prefrontală, hiperactivare amigdaliană și închidere cognitivă
@@ -244,7 +244,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   x="30"
                   y="213"
                   fontFamily="Inter, sans-serif"
-                  fontSize="10.5"
+                  fontSize="10"
                   fill="#6E7376"
                 >
                   Control reflexiv de rang secund vs. mediere semiotică ternară
@@ -294,8 +294,8 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   y="266"
                   textAnchor="middle"
                   fontFamily="Inter, sans-serif"
-                  fontSize="10"
-                  fontWeight="800"
+                  fontSize="9.5"
+                  fontWeight="700"
                   fill="#222426"
                 >
                   Filtrul moral creștin-secular · Imago Dei și discernământ
@@ -324,7 +324,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 </text>
                 <text
                   x="30"
-                  y="338"
+                  y="337"
                   fontFamily="Inter, sans-serif"
                   fontSize="12"
                   fontWeight="800"
@@ -334,21 +334,21 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 </text>
                 <text
                   x="30"
-                  y="356"
+                  y="355"
                   fontFamily="Inter, sans-serif"
-                  fontSize="10"
+                  fontSize="9.5"
                   fill="#222426"
                 >
-                  Enantiodromie, ipotezele de bază ale lui Bion
+                  Enantiodromie și ipoteze de bază
                 </text>
                 <text
                   x="30"
-                  y="372"
+                  y="371"
                   fontFamily="Inter, sans-serif"
-                  fontSize="10"
+                  fontSize="9.5"
                   fill="#6E7376"
                 >
-                  și autosabotaj colectiv în Cadranul III
+                  Autosabotaj în Cadranul III
                 </text>
 
                 <rect
@@ -374,7 +374,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 </text>
                 <text
                   x="250"
-                  y="338"
+                  y="337"
                   fontFamily="Inter, sans-serif"
                   fontSize="12"
                   fontWeight="800"
@@ -384,21 +384,21 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 </text>
                 <text
                   x="250"
-                  y="356"
+                  y="355"
                   fontFamily="Inter, sans-serif"
-                  fontSize="10"
+                  fontSize="9.5"
                   fill="#222426"
                 >
                   Refacerea axei Ego–Sine
                 </text>
                 <text
                   x="250"
-                  y="372"
+                  y="371"
                   fontFamily="Inter, sans-serif"
-                  fontSize="10"
+                  fontSize="9.5"
                   fill="#222426"
                 >
-                  și cooperare inteligentă în Cadranul I
+                  Cooperare în Cadranul I
                 </text>
 
                 {/* Convergence into Bottom Protocol Banner (Chapter 6) */}
@@ -443,7 +443,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   y="437"
                   textAnchor="middle"
                   fontFamily="Inter, sans-serif"
-                  fontSize="9.5"
+                  fontSize="9"
                   fontWeight="700"
                   fill="#E5B822"
                 >
@@ -454,11 +454,11 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   y="453"
                   textAnchor="middle"
                   fontFamily="Inter, sans-serif"
-                  fontSize="10.5"
+                  fontSize="9.5"
                   fontWeight="600"
                   fill="#F6F5EE"
                 >
-                  Faza I: 0–12 luni → Faza II: 1–3 ani → Faza III: 3–10 ani, guvernanță policentrică
+                  Faza I (0–12 luni) → Faza II (1–3 ani) → Faza III (3–10 ani, guvernanță)
                 </text>
               </svg>
             </div>
