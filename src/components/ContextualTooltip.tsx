@@ -58,10 +58,10 @@ export const ContextualTooltip: React.FC<ContextualTooltipProps> = ({
           e.stopPropagation();
           setIsOpen((prev) => !prev);
         }}
-        className={`inline font-serif border-b-2 border-dotted transition-colors cursor-pointer px-0.5 rounded-none ${
+        className={`inline font-serif border-b border-dotted border-[#222426] transition-colors cursor-pointer rounded-none ${
           isOpen
-            ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-            : 'border-[#222426] bg-[#E5B822]/20 text-[#222426] hover:bg-[#E5B822]/40'
+            ? 'bg-[#E5B822] text-[#222426] font-semibold'
+            : 'bg-transparent text-[#222426] hover:bg-[#E5B822]/20'
         }`}
         title={`Definiție contextuală (${concept.term})`}
       >

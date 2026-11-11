@@ -444,10 +444,10 @@ export function App() {
           key={`cite-${matchIndex}`}
           type="button"
           onClick={() => handleCitationSelect(innerCitation)}
-          className={`inline-flex items-center px-1 py-0.2 font-mono text-xs sm:text-sm border transition-colors cursor-pointer mx-0.5 ${
+          className={`inline font-serif text-inherit p-0 m-0 bg-transparent border-0 text-left transition-colors cursor-pointer ${
             isSelected
-              ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
-              : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+              ? 'font-bold underline decoration-[#222426]'
+              : 'hover:underline text-[#222426]'
           }`}
           title="Verifică fișa referinței bibliografice în panoul lateral"
         >
