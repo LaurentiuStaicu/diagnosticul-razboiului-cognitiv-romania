@@ -905,9 +905,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig1SelectedNode === 'servicii' &&
                   'Stratul A: Organizarea sistemului instituțional și a serviciilor publice (primul determinant Lalonde-Dever). Atunci când justiția, administrația, educația și sănătatea suferă de un deficit de închidere operațională (Luhmann) și sunt permeabile la rețelele clientelare extractive, cetățeanul percepe regulile formale ca pe un paravan ipocrit.'}
                 {fig1SelectedNode === 'mediu' &&
-                  'Stratul A: Mediul socioeconomic și sociospațial (al doilea determinant Lalonde-Dever). Polarizarea severă dintre centrele metropolitane și periferiile dezindustrializate sau rurale, adâncită de emigrația masivă, distruge capitalul social de punte (Putnam) prin familism amoral (Banfield) la un pol și secesiune tacită în servicii private la celălalt pol.'}
+                  'Stratul A: Mediul socioeconomic și sociospațial (al doilea determinant Lalonde-Dever). Polarizarea severă dintre centrele metropolitane și periferiile dezindustrializate sau rurale, adâncită de emigrația masivă, distruge capitalul social de punte (bridging, Putnam) prin familism amoral (Banfield) la un pol și secesiune tacită în servicii private la celălalt pol.'}
                 {fig1SelectedNode === 'alostazie' &&
-                  'Stratul B: Uzura alostatică și hiperactivarea axei HPA (McEwen, Sapolsky, Arnsten). Expunerea cronică la insecuritate și umilință birocratică eliberează excesiv cortizol, provocând hipertrofia amigdalei bazolaterale și atrofia dendritică în hipocamp și în cortexul prefrontal dorsolateral (dlPFC).'}
+                  'Stratul B: Alostazia (Sterling & Eyer, 1988), sarcina / uzura alostatică (McEwen & Stellar, 1993; McEwen, 1998) și modelul triadei rețelelor cerebrale (Menon, 2011; Sapolsky, Arnsten). Expunerea cronică la insecuritate și umilință birocratică eliberează excesiv cortizol, provocând hipertrofia amigdalei bazolaterale, hiperactivarea rețelei de saliență (SN) și decuplarea rețelei executive centrale (CEN) ancorate în cortexul prefrontal dorsolateral (dlPFC).'}
                 {fig1SelectedNode === 'reactiv' &&
                   'Stratul B: Comutarea de pe Sistemul 2 pe Sistemul 1 (Kahneman). Inhibiția funcțiilor executive prefrontale blochează gândirea lentă, analitică și verificarea surselor, lăsând cetățeanul pradă procesării rapide, euristice și reacțiilor defensive automate.'}
                 {fig1SelectedNode === 'persona' &&
@@ -2302,7 +2302,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig4ActiveNode === 'modernitate' &&
                   'Modernitate organică și încredere (Sinteza axei Ego–Sine). Funcția transcendentă (Jung, 1916/1960) integrează potențialul din Umbră în conștiința civică, înlocuind conformismul de fațadă cu interiorizarea autentică a normelor.'}
                 {fig4ActiveNode === 'cooperare' &&
-                  'Cooperare instituțională autonomă. Refacerea capitalului social de punte (Putnam, 2000) și transformarea naționalismului reactiv în patriotism constituțional responsabil.'}
+                  'Cooperare instituțională autonomă. Refacerea capitalului social de punte (bridging, Putnam, 2000) și transformarea naționalismului reactiv în patriotism constituțional responsabil.'}
                 {fig4ActiveNode === 'anomizare' &&
                   'Traseul inferior fără filtru (Enantiodromie și cinism). Atunci când cele trei filtre lipsesc sau energiile din Umbră sunt reprimate arogant, acestea sunt capturate de vectorii de război cognitiv în revoltă anomizantă și autodistrugere socială.'}
               </p>
@@ -3639,7 +3639,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'bifurcatie' &&
                   'Nodul unic de bifurcație (stresul material acut și policriza). Reprezintă punctul de incidență al șocului cognitiv și socioeconomic. În absența unei pauze metacognitive și a rezervei neurobiologice, presiunea crizei împinge procesarea în mod automat spre reacția defensivă din Track A.'}
                 {fig6SelectedStep === 'anxietate' &&
-                  'Anxietatea cronică și hiperreactivitatea (Track A). Starea de alertă prelungită activează circuitele subcorticale amigdaliene și inhibă cortexul prefrontal dorsolateral (dlPFC), blocând capacitatea de analiză critică și declanșând reflexe reactive automate de apărare.'}
+                  'Anxietatea cronică și hiperreactivitatea (Track A). Starea de alertă prelungită activează circuitele subcorticale amigdaliene și rețeaua de saliență (Menon, 2011), inducând inhibarea sinaptică catecolaminergică și decuplarea funcțională a cortexului prefrontal dorsolateral (dlPFC) și ventromedial (vmPFC), ceea ce blochează capacitatea de analiză critică și declanșează reflexe reactive automate de apărare.'}
                 {fig6SelectedStep === 'nfcc' &&
                   'Nevoia de închidere cognitivă (NFCC, Need for Cognitive Closure). Sub presiunea anxietății, individul manifestă o intoleranță acută la ambiguitate (Seizing) și o urgență extremă de a adopta concluzii categorice, rapide și simplificatoare (Freezing), refuzând orice nuanță sau complexitate.'}
                 {fig6SelectedStep === 'persona' &&
@@ -3655,7 +3655,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'b3' &&
                   '3. Toleranța disonanței și integrarea ingeniozității Trickster (Track B). Individul tolerează contradicțiile inerente realității și recuperează creativ conținuturile umbrei colective — ingeniozitatea adaptativă, adaptabilitatea și umorul subversiv (figura arhetipală a Trickster-ului) transformate din resentiment destructiv în resursă de supraviețuire și inovație.'}
                 {fig6SelectedStep === 'b4' &&
-                  '4. Discernământ critic (Track B). Mediere semiotică ternară (semn–obiect–interpretant) care deconstruiește falsul narativ și verifică probele empirice, realizând o filtrare etică și morală conform valorilor democratice și umane.'}
+                  '4. Discernământ critic (Track B). Mediere semiotică ternară (semn–obiect–interpretant) care deconstruiește narațiunea falsă și verifică probele empirice, realizând o filtrare etică și morală conform valorilor democratice și umane.'}
                 {fig6SelectedStep === 'b5' &&
                   '5. Creație suverană și Axa Ego–Sine (Track B). Punctul culminant al procesării adaptative: acțiune civică responsabilă, autonomie decizională și coerență profundă pe axa Ego–Sine, producând reziliență sistemică autentică.'}
                 {(fig6SelectedStep === 'trackA' ||
@@ -4190,11 +4190,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig7SelectedNode === 'faza1' &&
-                  'Faza I · Orizont tactic imediat, 0–12 luni. Nicio campanie de educație mediatică nu poate reuși dacă este aplicată direct asupra unei populații aflate în plină uzură alostatică și capturare dopaminergică. Faza I oprește bucla reactivă din Track A prin debirocratizare transparentă, după modelul e-Estonia, și prin aplicarea strictă a DSA și AI Act: audit algoritmic, frâne de viralitate și etichetarea datelor sintetice.'}
+                  'Faza I · Orizont tactic imediat, 0–12 luni. Nicio campanie de educație mediatică nu poate reuși dacă este aplicată direct asupra unei populații aflate în plină uzură alostatică și capturare dopaminergică. Faza I oprește bucla reactivă din Track A prin debirocratizare transparentă, după modelul e-Estonia, și prin aplicarea strictă a Regulamentului DSA în baza Legii nr. 50/2024 (ANCOM ca DSC, acces la date pentru „cercetătorii agreați” conform art. 40 din DSA, notificatori de încredere în cooperare cu EDMO/BROD și DNSC) și a AI Act: audit algoritmic, frâne de viralitate și etichetarea datelor sintetice.'}
                 {fig7SelectedNode === 'faza2' &&
                   'Faza II · Orizont operațional mediu, 1–3 ani. Odată ce cortexul prefrontal își recapătă disponibilitatea funcțională, Faza a II-a reconstruiește faza de Orientare din bucla OODA prin trei piloni: validarea comunitară empatică în infrastructura asociativă de proximitate, pregătirea preventivă prebunking calibrată pe curba uitării a lui Ebbinghaus și reconcilierea filtrului moral creștin-secular.'}
                 {fig7SelectedNode === 'faza3' &&
-                  'Faza III · Orizont strategic, 3–10 ani. Elimină cauzele profunde ale „formelor fără fond” prin închiderea operațională autentică a justiției și administrației (Luhmann), guvernanță policentrică (Ostrom) care redă cetățeanului autoeficacitatea politică (Bandura) și individuare colectivă pe axa Ego–Sine, depășind incapacitatea de a ține doliu și sindromul Puer Aeternus.'}
+                  'Faza III · Orizont strategic, 3–10 ani. Elimină cauzele profunde ale „formelor fără fond” prin închiderea operațională autentică a justiției și administrației (Luhmann), guvernanță policentrică (Ostrom) care îi redă cetățeanului capacitatea de acțiune politică autonomă (political agency) și sentimentul autoeficacității percepute (self-efficacy, Bandura, 1997), precum și individuare colectivă pe axa Ego–Sine, depășind incapacitatea de a ține doliu și sindromul Puer Aeternus.'}
                 {fig7SelectedNode === 'fronton' &&
                   'Sinteza modernității organice și a suveranității democratice. Formele constituționale și de securitate occidentale încetează să mai fie „forme fără fond” mimate superficial de o elită extractivă și devin expresia instituțională firească a unui fond cultural și moral autohton regenerat.'}
                 {fig7SelectedNode === 'fundament' &&

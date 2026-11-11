@@ -108,7 +108,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                 placeholder={
                   activeTab === 'glossary'
                     ? 'Căutați un concept: închidere operațională, alostazie, OODA, Bobok, Edinger...'
-                    : 'Căutați un autor, an sau titlu în bibliografie: Luhmann, Sapolsky, Lefebvre, Lotman...'
+                    : 'Căutați un autor, an sau titlu în bibliografie: Luhmann, Sterling, Menon, Sapolsky, Lefebvre, Lotman...'
                 }
                 className="w-full pl-9 pr-4 py-2 text-xs sm:text-sm bg-[#F6F5EE] border border-[#222426] text-[#222426] placeholder:text-[#6E7376] focus:outline-none focus:ring-2 focus:ring-[#E5B822]"
               />

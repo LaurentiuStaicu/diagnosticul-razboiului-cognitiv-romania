@@ -42,7 +42,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
 
             <div className="pt-2 border-t border-[#8C9BA5] space-y-3 text-xs sm:text-sm text-[#222426] leading-relaxed max-w-[65ch]">
               <p>
-                Această lucrare demonstrează că vulnerabilitatea cognitivă a societății românești nu reprezintă un simplu deficit de alfabetizare media, ci rezultatul emergent al interacțiunii dintre trei paliere cauzale: anomalia istorică a „formelor fără fond”, deficitul cronic de închidere operațională și persistența instituțiilor extractive în Stratul A; uzura alostatică cronică și capturarea fazei de Orientare din bucla OODA prin control reflexiv în Stratul B; respectiv proiecția Umbrei colective, enantiodromia și alunecarea în autosabotaj colectiv în condiții de criză acută în Stratul C.
+                Această lucrare demonstrează că vulnerabilitatea cognitivă a societății românești nu reprezintă un simplu deficit de alfabetizare media, ci rezultatul emergent al interacțiunii dintre trei paliere cauzale: anomalia istorică a „formelor fără fond”, deficitul cronic de închidere operațională și persistența instituțiilor extractive (Stratul A); uzura alostatică cronică și capturarea fazei de Orientare din bucla OODA prin control reflexiv (Stratul B); respectiv proiecția Umbrei colective, enantiodromia și alunecarea în autosabotaj colectiv în condiții de criză acută (Stratul C).
               </p>
               <p className="text-[#6E7376]">
                 Explorarea interactivă reunește textul integral al celor șase capitole, sinteza executivă pentru decidenți, descompunerea în oglindă pe două registre — teoretic și empiric —, laboratorul celor șapte diagrame cibernetice și protocolul secvențial de reconstrucție în trei faze.
@@ -489,7 +489,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
             <div className="font-mono font-semibold text-[#222426]">
               Reconstrucție · Capitolul 6
             </div>
-            <div>Protocolul secvențial Lalonde–Dever, policentricitate și modernitate organică</div>
+            <div>Protocolul secvențial Lalonde–Dever, policentricitate, capital social de punte (bridging, Putnam) și modernitate organică</div>
           </div>
         </div>
       </div>

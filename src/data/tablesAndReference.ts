@@ -93,7 +93,7 @@ export const TABLE_2_DATA: Table2Row[] = [
     humanBiology:
       'Antrenarea reglării descendente a amigdalei bazolaterale de către cortexul prefrontal ventromedial și dorsolateral; cultivarea capacității negative (Bion) și a toleranței la incertitudine pentru comutarea stabilă a procesării informației din nodul de bifurcație pe Traseul deliberativ adaptativ B; sesiuni periodice de consolidare mnezică calibrate pe curba uitării a lui Hermann Ebbinghaus.',
     digitalAndSociospatial:
-      'Reconstrucția infrastructurii comunitare și culturale de proximitate în mediul rural, în orașele mici și în comunitățile din diaspora pentru a înlocui izolarea în bule informaționale închise cu spații fizice de interacțiune umană directă; crearea de rețele locale care favorizează contagiunea socială complexă pozitivă (Centola) și refacerea capitalului social de punte (Putnam).',
+      'Reconstrucția infrastructurii comunitare și culturale de proximitate în mediul rural, în orașele mici și în comunitățile din diaspora pentru a înlocui izolarea în bule informaționale închise cu spații fizice de interacțiune umană directă; crearea de rețele locale care favorizează contagiunea socială complexă pozitivă (Centola) și refacerea capitalului social de punte (bridging, Putnam).',
     informationalLifestyle:
       'Instituționalizarea pregătirii psihocognitive preventive în școli, universități și programe pentru adulți, axată pe detecția controlului reflexiv de rang secund și a semiozei binare; reconcilierea filtrului moral creștin–secular prin dialog între teologia ortodoxă patristică a demnității persoanei și etica civică constituțională, consolidând primul sistem etic al cooperării.',
     institutionalSystem:
@@ -259,7 +259,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'A',
     authors: 'Edward C. Banfield, 1958 · Robert D. Putnam, 2000',
     domain: 'Sociologie politică',
-    definition: 'Replierea defensivă în care normele morale se aplică exclusiv în cercul familiei biologice și al clanului, privind sfera publică drept ostilă, în opoziție cu capitalul social de punte bazat pe încrederea generalizată între grupuri sociale diferite.',
+    definition: 'Replierea defensivă în care normele morale se aplică exclusiv în cercul familiei biologice și al clanului, privind sfera publică drept ostilă, în opoziție cu capitalul social de punte (bridging, Putnam) bazat pe încrederea generalizată între grupuri sociale diferite.',
     monographContext: 'Erodează coeziunea societală românească simultan cu secesiunea tacită în servicii private a păturilor urbane prospere.',
     polarity: 'tension'
   },
