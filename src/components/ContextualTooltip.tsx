@@ -61,7 +61,7 @@ export const ContextualTooltip: React.FC<ContextualTooltipProps> = ({
         className={`inline font-serif border-b-2 border-dotted transition-colors cursor-pointer px-0.5 rounded-none ${
           isOpen
             ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-            : 'border-[#D9A714] bg-[#E5B822]/15 text-[#222426] hover:bg-[#E5B822]/35'
+            : 'border-[#222426] bg-[#E5B822]/20 text-[#222426] hover:bg-[#E5B822]/40'
         }`}
         title={`Definiție contextuală (${concept.term})`}
       >
@@ -72,7 +72,7 @@ export const ContextualTooltip: React.FC<ContextualTooltipProps> = ({
         <span
           role="dialog"
           aria-label={concept.term}
-          className="fixed bottom-4 left-3 right-3 z-50 sm:absolute sm:bottom-full sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:mb-2 sm:w-[340px] bg-[#222426] text-[#F6F5EE] border-2 border-[#E5B822] p-4 shadow-xl text-left font-sans normal-case block"
+          className="fixed bottom-4 left-3 right-3 z-50 sm:absolute sm:bottom-full sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:mb-2 sm:w-[340px] bg-[#222426] text-[#F6F5EE] border-2 border-[#E5B822] p-4 text-left font-sans normal-case block"
         >
           <span className="flex items-center justify-between gap-2 pb-2 mb-2 border-b border-[#6E7376]">
             <span className="text-[11px] font-mono font-bold text-[#E5B822]">
@@ -97,7 +97,7 @@ export const ContextualTooltip: React.FC<ContextualTooltipProps> = ({
           <span className="text-[11px] font-mono text-[#8C9BA5] block mt-0.5 mb-2">
             {concept.authors}
           </span>
-          <span className="text-xs text-[#F4F1EA] leading-relaxed block mb-3">
+          <span className="text-xs text-[#F6F5EE] leading-relaxed block mb-3">
             {concept.definition}
           </span>
 
@@ -109,7 +109,7 @@ export const ContextualTooltip: React.FC<ContextualTooltipProps> = ({
                 onSelectConcept(concept.id);
                 setIsOpen(false);
               }}
-              className="w-full px-3 py-1.5 text-[11px] font-mono font-semibold bg-[#E5B822] text-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer flex items-center justify-between gap-2"
+              className="w-full px-3 py-1.5 text-[11px] font-mono font-semibold bg-[#E5B822] text-[#222426] hover:bg-[#E5B822]/85 transition-colors cursor-pointer flex items-center justify-between gap-2"
             >
               <span className="flex items-center gap-1.5">
                 <BookOpen className="w-3 h-3 shrink-0" />

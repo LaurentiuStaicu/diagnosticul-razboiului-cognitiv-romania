@@ -39,7 +39,7 @@ export const FIGURE_METADATA: Record<
     chapterRef: 'Capitolul 2 (Subcapitolul 2.2)',
     pdfPage: 12,
     caption:
-      'În jumătatea stângă este reprezentată sinteza creștin-seculară europeană, în care principiul demnității umane inalienabile (Imago Dei și universalismul drepturilor fundamentale) susține filtrul moral și constituțional al statului de drept, generând modernitate organică și libertate responsabilă. În jumătatea dreaptă este ilustrată operațiunea de disimilare a ideologiei revizioniste a Antilumii (Epstein, 2022), care proiectează la suprafață un camuflaj tradiționalist ortodox și suveranist pentru a ocoli aversiunea istorică a populației-țintă față de Rusia, mascând nucleul operativ real bazat pe inversiune normativă și cinism transgresiv, a cărui finalitate strategică este subordonarea imperială și anomizarea societății vizate.',
+      'În jumătatea stângă este reprezentată sinteza creștin-seculară europeană, în care principiul demnității umane inalienabile (Imago Dei și universalismul drepturilor fundamentale) susține filtrul moral și constituțional al statului de drept, generând modernitate organică și libertate responsabilă. În jumătatea dreaptă este ilustrată operațiunea de disimulare a ideologiei revizioniste a Antilumii (Epstein, 2022), care proiectează la suprafață un camuflaj tradiționalist ortodox și suveranist pentru a ocoli aversiunea istorică a populației-țintă față de Rusia, mascând nucleul operativ real bazat pe inversiune normativă și cinism transgresiv, a cărui finalitate strategică este subordonarea imperială și anomizarea societății vizate.',
     methodologicalNote:
       'Faceți click pe nodurile din diagrama vectorială SVG pentru a compara sinteza creștin-seculară cu mecanismul de camuflaj discursiv și inversiune normativă.'
   },
@@ -52,7 +52,7 @@ export const FIGURE_METADATA: Record<
     chapterRef: 'Capitolul 3 (Subcapitolele 3.1–3.3)',
     pdfPage: 20,
     caption:
-      'Fluxul informațional brut din faza de Observare, amplificat algoritmic prin capturarea circuitelor dopaminergice, intră în faza de Orientare, unde modelele mentale și culturale ale subiectului sunt țintite de controlul reflexiv de rang secund. Această intervenție compromite filtrul axiologic al primului sistem etic, blochează calea medierii ternare și a discernământului rațional prefrontal și deviază procesarea pe traseul celui de-al doilea sistem etic și al logicii binare a anihilării. Rezultatul este o fază de Decizie dominată de selecția emoțională indusă, închiderea cognitivă și cogniția protectoare a identității, care se traduce în faza de Acțiune prin polarizare socială acută și conflict antiinstituțional.',
+      'Fluxul informațional brut din faza de Observare, amplificat algoritmic prin capturarea circuitelor dopaminergice, intră în faza de Orientare, unde modelele mentale și culturale ale subiectului sunt țintite de controlul reflexiv de rang secund. Această intervenție compromite filtrul axiologic al primului sistem etic, blochează calea medierii ternare și a discernământului rațional prefrontal și deviază procesarea pe traseul celui de-al doilea sistem etic și al logicii binare a anihilării. Rezultatul este o fază de Decizie dominată de selecția emoțională indusă, închiderea cognitivă și procesarea defensivă motivată de protejarea identității de grup, care se traduce în faza de Acțiune prin polarizare socială acută și conflict antiinstituțional.',
     methodologicalNote:
       'Comutați între intervenția controlului reflexiv de rang secund și starea de mediere ternară intactă sau faceți click pe etapele OODA în diagrama SVG.'
   },
@@ -72,11 +72,11 @@ export const FIGURE_METADATA: Record<
     id: 5,
     title: 'Figura 5 (Matricea comportamentală a lui Carlo M. Cipolla în războiul cognitiv)',
     subtitle:
-      'Dinamica spolierea sistemică (+X, -Y) → vulnerabilizare (-X, +Y) → autosabotaj colectiv (-X, -Y)',
+      'Dinamica spolierii sistemice (+X, -Y), a vulnerabilizării (-X, +Y) și a autosabotajului colectiv (-X, -Y)',
     chapterRef: 'Capitolul 4 (Subcapitolul 4.3)',
     pdfPage: 27,
     caption:
-      'Presiunea de spoliere sistemică exercitată de actorii extractivi din Cadranul IV (+X, -Y) asupra cetățeanului vulnerabil din Cadranul II (-X, +Y), pe fondul unei barierei instituționale fisurate, creează condițiile de uzură alostatică și resentiment. Intervenția vectorului de război cognitiv deturnează această frustrare legitimă, împingându-l pe cetățeanul vulnerabil vertical în jos, în Cadranul III al autosabotajului colectiv (-X, -Y), unde acțiunile sale antiinstituționale distrug simultan bunul public și propria sa securitate socioeconomică, subminând spațiul cooperării inteligente din Cadranul I (+X, +Y).',
+      'Presiunea de spoliere sistemică exercitată de actorii extractivi din Cadranul IV (+X, -Y) asupra cetățeanului vulnerabil din Cadranul II (-X, +Y), pe fondul unei bariere instituționale fisurate, creează condițiile de uzură alostatică și resentiment. Intervenția vectorului de război cognitiv deturnează această frustrare legitimă, împingându-l pe cetățeanul vulnerabil vertical în jos, în Cadranul III al autosabotajului colectiv (-X, -Y), unde acțiunile sale antiinstituționale distrug simultan bunul public și propria sa securitate socioeconomică, subminând spațiul cooperării inteligente din Cadranul I (+X, +Y).',
     methodologicalNote:
       'Adaptarea matricei bidimensionale a lui Carlo M. Cipolla (1976/2011) evidențiază mecanismul prin care presiunea de spoliere sistemică exercitată de actorii extractivi (+X, -Y) și fisurarea barierei instituționale împing cetățeanul vulnerabil (-X, +Y), sub impulsul capturării cognitive externe, în cadranul comportamentului autodistructiv și al autosabotajului colectiv (-X, -Y).'
   },
@@ -139,7 +139,7 @@ const SharedSvgDefs: React.FC = () => (
       markerHeight="6.5"
       orient="auto-start-reverse"
     >
-      <path d="M 0 1.5 L 8.5 5 L 0 8.5 z" fill="#E5B822" />
+      <path d="M 0 1.5 L 8.5 5 L 0 8.5 z" fill="#E5B822" stroke="#222426" strokeWidth="0.8" />
     </marker>
     <marker
       id="arrow-red"
@@ -246,7 +246,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           {meta.title}
         </h3>
         <p className="text-xs sm:text-sm text-[#6E7376] mt-1">{meta.subtitle}</p>
-        <div className="mt-3 pt-2.5 border-t border-[#D0D5D9] flex flex-wrap items-center justify-between gap-2">
+        <div className="mt-3 pt-2.5 border-t border-[#8C9BA5] flex flex-wrap items-center justify-between gap-2">
           <SocialShareButtons
             url={`https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/share/figura-${meta.id}.html`}
             title={`${meta.title} (Diagnosticul războiului cognitiv în România)`}
@@ -384,6 +384,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </g>
 
               {/* Horizontal arrow A1 -> A2 */}
+              {fig1Mode === 'resilient' && (
+                <line
+                  x1="295"
+                  y1="90"
+                  x2="370"
+                  y2="90"
+                  stroke="#222426"
+                  strokeWidth="4.5"
+                />
+              )}
               <line
                 x1="295"
                 y1="90"
@@ -498,6 +508,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </g>
 
               {/* Forward arrow B1 -> B2 */}
+              {fig1Mode === 'resilient' && (
+                <line
+                  x1="265"
+                  y1="250"
+                  x2="400"
+                  y2="250"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
+              )}
               <line
                 x1="265"
                 y1="250"
@@ -509,6 +529,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               />
 
               {/* Cybernetic Feedback Arc B2 -> B1 (returning back) */}
+              {fig1Mode === 'resilient' && (
+                <path
+                  d="M 435,285 C 385,312 285,312 235,285"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="3.5"
+                  strokeDasharray="4 3"
+                />
+              )}
               <path
                 d="M 435,285 C 385,312 285,312 235,285"
                 fill="none"
@@ -710,10 +739,39 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* In vulnerable mode: Scurtcircuitarea filtrului moral de catre vectorul rosu */}
+              {/* Săgeată punctată ascendentă de retroacțiune pe flancul stâng (Stratul C -> Stratul B -> Stratul A) */}
+              <line
+                x1="48"
+                y1="435"
+                x2="48"
+                y2="92"
+                stroke="#6E7376"
+                strokeWidth="2"
+                strokeDasharray="4 3"
+                markerEnd="url(#arrow-slate)"
+              />
+              <rect
+                x="42"
+                y="334"
+                width="132"
+                height="18"
+                fill="#F6F5EE"
+                stroke="#6E7376"
+                strokeWidth="1"
+              />
+              <text
+                x="108"
+                y="346"
+                textAnchor="middle"
+                className="font-mono text-[9.5px] font-bold fill-[#222426]"
+              >
+                Recursivitate C → B → A
+              </text>
+
+              {/* In vulnerable mode: Scurtcircuitarea filtrului moral de catre vectorul rosu (rutare ortogonală) */}
               {fig1Mode === 'vulnerable' && (
                 <path
-                  d="M 675,435 L 485,495"
+                  d="M 675,435 L 675,495 L 485,495"
                   fill="none"
                   stroke="#F01E1E"
                   strokeWidth="3"
@@ -810,6 +868,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               {/* Resilient Shield Bar when in resilient mode */}
               {fig1Mode === 'resilient' && (
                 <g>
+                  <line
+                    x1="648"
+                    y1="45"
+                    x2="648"
+                    y2="505"
+                    stroke="#222426"
+                    strokeWidth="8"
+                  />
                   <line
                     x1="648"
                     y1="45"
@@ -959,6 +1025,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y1="180"
                   x2="205"
                   y2="222"
+                  stroke="#222426"
+                  strokeWidth="5"
+                />
+                <line
+                  x1="205"
+                  y1="180"
+                  x2="205"
+                  y2="222"
                   stroke="#E5B822"
                   strokeWidth="3.5"
                   markerEnd="url(#arrow-gold)"
@@ -993,6 +1067,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
 
                 {/* Arrow L2 -> L3 */}
+                <line
+                  x1="205"
+                  y1="298"
+                  x2="205"
+                  y2="340"
+                  stroke="#222426"
+                  strokeWidth="5"
+                />
                 <line
                   x1="205"
                   y1="298"
@@ -1033,52 +1115,53 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </g>
 
               {/* RIGHT COLUMN NODES (Disimulare & Inversiune normativă) */}
-              {/* Outer Camouflage Box (slate gray #8C9BA5) */}
+              {/* Outer Camouflage Box (slate gray #8C9BA5) wrapping the Inner Core Box */}
               <g onClick={() => setFig2Inspect('camuflaj')} className="cursor-pointer">
                 <rect
-                  x="475"
-                  y="112"
-                  width="280"
-                  height="80"
+                  x="470"
+                  y="110"
+                  width="290"
+                  height="140"
                   fill="#8C9BA5"
-                  fillOpacity="0.25"
+                  fillOpacity="0.22"
                   stroke="#6E7376"
                   strokeWidth="2"
+                  strokeDasharray="5 3"
                 />
                 <text
                   x="615"
-                  y="142"
+                  y="134"
                   textAnchor="middle"
-                  className="font-sans text-[14px] font-medium fill-[#222426]"
+                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
                 >
-                  Camuflaj tradiționalist ortodox
+                  Înveliș: Camuflaj tradiționalist și suveranist
                 </text>
               </g>
 
-              {/* Inner Core Box: Inversiune normativă și cinism */}
+              {/* Inner Core Box: Nucleu: Inversiune normativă și cinism */}
               <g onClick={() => setFig2Inspect('right')} className="cursor-pointer">
                 <rect
                   x="490"
-                  y="160"
+                  y="152"
                   width="250"
-                  height="68"
+                  height="76"
                   fill="#F6F5EE"
                   stroke="#F01E1E"
                   strokeWidth="2.5"
                 />
                 <text
                   x="615"
-                  y="190"
+                  y="182"
                   textAnchor="middle"
-                  className="font-sans text-[15px] font-semibold fill-[#222426]"
+                  className="font-sans text-[14.5px] font-semibold fill-[#222426]"
                 >
-                  Inversiune normativă
+                  Nucleu: Inversiune normativă
                 </text>
                 <text
                   x="615"
-                  y="211"
+                  y="204"
                   textAnchor="middle"
-                  className="font-sans text-[15px] font-semibold fill-[#222426]"
+                  className="font-sans text-[14.5px] font-semibold fill-[#222426]"
                 >
                   și cinism
                 </text>
@@ -1155,7 +1238,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig2Inspect === 'left' &&
                   'Sinteza creștin-seculară europeană unește antropologia patristică a persoanei libere create după chipul divin (Imago Dei, Berdiaev, Stăniloae, Kalaitzidis) cu domnia legii impersonale și autonomia judecății critice (Habermas, Taylor). Rezultatul este o modernitate organică în care tradiția spirituală susține democrația constituțională.'}
                 {fig2Inspect === 'camuflaj' &&
-                  'Dubla falsificare axiologică (disimilarea). Din cauza memoriei traumatice a celor douăsprezece invazii rusești, a răpirii Basarabiei, a Tezaurului și a Gulagului, propaganda rusă nu se poate prezenta deschis în România. Ea proiectează la suprafață un camuflaj etnofiletist (Russkii Mir, condamnat ca erezie la Sinodul de la Constantinopol din 1872) și un fals discurs suveranist pentru a masca nihilismul stării Bobok.'}
+                  'Dubla falsificare axiologică (disimularea). Din cauza memoriei traumatice a celor douăsprezece invazii rusești, a răpirii Basarabiei, a Tezaurului și a Gulagului, propaganda rusă nu se poate prezenta deschis în România. Ea proiectează la suprafață un camuflaj etnofiletist (Russkii Mir, condamnat ca erezie la Sinodul de la Constantinopol din 1872) și un fals discurs suveranist pentru a masca nihilismul stării Bobok.'}
                 {fig2Inspect === 'right' &&
                   'Nucleul operativ al Antilumii (Epstein, 2022) și starea Bobok (Dostoievski, 1873). Sub masca apărării tradiției și a suveranității, operațiunea funcționează prin inversiune normativă și cinism transgresiv, urmărind decuplarea României de garanțiile NATO și UE și readucerea statului-țintă într-o zonă gri de bilateralism asimetric.'}
               </p>
@@ -1344,6 +1427,50 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 Injecție de control reflexiv
               </text>
 
+              {/* Săgeată dinspre triunghiul stâng („Primul sistem etic”) către nodul „Orientare” */}
+              {!fig3ReflexiveActive ? (
+                <g>
+                  <line
+                    x1="215"
+                    y1="215"
+                    x2="395"
+                    y2="215"
+                    stroke="#222426"
+                    strokeWidth="4"
+                  />
+                  <line
+                    x1="215"
+                    y1="215"
+                    x2="395"
+                    y2="215"
+                    stroke="#E5B822"
+                    strokeWidth="2.5"
+                    markerEnd="url(#arrow-gold)"
+                  />
+                </g>
+              ) : (
+                <g>
+                  <line
+                    x1="215"
+                    y1="215"
+                    x2="395"
+                    y2="215"
+                    stroke="#F01E1E"
+                    strokeWidth="2"
+                    strokeDasharray="4 3"
+                  />
+                  {/* T-bar roșu de blocare a primului sistem etic */}
+                  <line
+                    x1="230"
+                    y1="203"
+                    x2="230"
+                    y2="227"
+                    stroke="#F01E1E"
+                    strokeWidth="4"
+                  />
+                </g>
+              )}
+
               {/* OODA 1: Observare */}
               <g
                 onClick={() => setFig3SelectedStage('observare')}
@@ -1422,6 +1549,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </g>
 
               {/* Arrow Orientare -> Decizie */}
+              {!fig3ReflexiveActive && (
+                <line
+                  x1="520"
+                  y1="226"
+                  x2="552"
+                  y2="226"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
+              )}
               <line
                 x1="520"
                 y1="226"
@@ -1466,6 +1603,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </g>
 
               {/* Arrow Decizie -> Actiune */}
+              {!fig3ReflexiveActive && (
+                <line
+                  x1="655"
+                  y1="226"
+                  x2="677"
+                  y2="226"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
+              )}
               <line
                 x1="655"
                 y1="226"
@@ -1668,7 +1815,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig3SelectedStage === 'reflexiv' &&
                   'Controlul reflexiv de rang secund (Lefebvre). Nu livrează simple știri false, ci transferă o matrice de decizie în mintea țintei, determinând-o să aleagă singură opțiunea dorită de agresor crezând că acționează suveran.'}
                 {fig3SelectedStage === 'decizie' &&
-                  'Faza de Decizie sub capturare reflexivă. Inhibarea deliberării prefrontale produce captarea precipitată (seizing) și înghețarea epistemică (freezing, Kruglanski), refuzând dovezile contrare.'}
+                  'Faza de Decizie sub capturare reflexivă. Inhibarea deliberării prefrontale produce adoptarea precipitată și necritică a unei explicații simpliste (seizing) și înghețarea epistemică (freezing, Kruglanski), refuzând dovezile contrare.'}
                 {fig3SelectedStage === 'actiune' &&
                   'Faza de Acțiune. Traducerea deciziei în comportamente polarizante, boicot instituțional sau conflict social anti-sistem, alimentând bucla cibernetică de reacție.'}
                 {fig3SelectedStage === 'binar' &&
@@ -1792,10 +1939,24 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               <path
                 d="M 565 96 C 600 96, 610 140, 634 142"
                 fill="none"
+                stroke="#222426"
+                strokeWidth="4.5"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
+              />
+              <path
+                d="M 565 96 C 600 96, 610 140, 634 142"
+                fill="none"
                 stroke="#E5B822"
                 strokeWidth="3"
                 opacity={fig4FiltersActive ? '1' : '0.35'}
                 markerEnd="url(#arrow-gold)"
+              />
+              <path
+                d="M 565 200 C 600 200, 610 155, 634 152"
+                fill="none"
+                stroke="#222426"
+                strokeWidth="4.5"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
               />
               <path
                 d="M 565 200 C 600 200, 610 155, 634 152"
@@ -1808,10 +1969,24 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               <path
                 d="M 565 200 C 600 200, 610 265, 634 268"
                 fill="none"
+                stroke="#222426"
+                strokeWidth="4.5"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
+              />
+              <path
+                d="M 565 200 C 600 200, 610 265, 634 268"
+                fill="none"
                 stroke="#E5B822"
                 strokeWidth="3"
                 opacity={fig4FiltersActive ? '1' : '0.35'}
                 markerEnd="url(#arrow-gold)"
+              />
+              <path
+                d="M 565 304 C 600 304, 610 280, 634 278"
+                fill="none"
+                stroke="#222426"
+                strokeWidth="4.5"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
               />
               <path
                 d="M 565 304 C 600 304, 610 280, 634 278"
@@ -2005,10 +2180,10 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="108"
                   width="245"
                   height="74"
-                  fill={fig4ActiveNode === 'modernitate' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig4ActiveNode === 'modernitate' ? '0.28' : '1'}
-                  stroke="#E5B822"
-                  strokeWidth="3"
+                  fill="#E5B822"
+                  fillOpacity={fig4ActiveNode === 'modernitate' ? '0.38' : '0.2'}
+                  stroke="#222426"
+                  strokeWidth="2.5"
                 />
                 <text
                   x="764"
@@ -2046,10 +2221,10 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="236"
                   width="245"
                   height="74"
-                  fill={fig4ActiveNode === 'cooperare' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig4ActiveNode === 'cooperare' ? '0.28' : '1'}
-                  stroke="#E5B822"
-                  strokeWidth="3"
+                  fill="#E5B822"
+                  fillOpacity={fig4ActiveNode === 'cooperare' ? '0.38' : '0.2'}
+                  stroke="#222426"
+                  strokeWidth="2.5"
                 />
                 <text
                   x="764"
@@ -2141,7 +2316,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig4ActiveNode === 'filtru-istorie' &&
                   'Al doilea filtru (Stratul B). Discernământul critic și asumarea adevărului istoric, care deconstruiesc proiecțiile paranoide prin separarea tradiției spirituale autentice de falsificările etnofiletiste și totalitare.'}
                 {fig4ActiveNode === 'filtru-meta' &&
-                  'Al treilea filtru (Stratul B). Vigilența metacognitivă, susținută de reglarea executivă a cortexului prefrontal, care îi permite cetățeanului să își recunoască propriile vulnerabilități afective înainte ca acestea să fie instrumentate prin control reflexiv.'}
+                  'Al treilea filtru (Stratul B). Vigilența metacognitivă, susținută de reglarea executivă a cortexului prefrontal, care îi permite cetățeanului să își recunoască propriile vulnerabilități afective înainte ca acestea să fie instrumentalizate prin control reflexiv.'}
                 {fig4ActiveNode === 'modernitate' &&
                   'Modernitate organică și încredere (Sinteza axei Ego–Sine). Funcția transcendentă (Jung, 1916/1960) integrează potențialul din Umbră în conștiința civică, înlocuind conformismul de fațadă cu interiorizarea autentică a normelor.'}
                 {fig4ActiveNode === 'cooperare' &&
@@ -2544,6 +2719,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y1="276"
                     x2="435"
                     y2="276"
+                    stroke="#222426"
+                    strokeWidth="7"
+                  />
+                  <line
+                    x1="75"
+                    y1="276"
+                    x2="435"
+                    y2="276"
                     stroke="#E5B822"
                     strokeWidth="5"
                   />
@@ -2565,6 +2748,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   >
                     Barieră instituțională consolidată
                   </text>
+                  <line
+                    x1="265"
+                    y1="165"
+                    x2="520"
+                    y2="165"
+                    stroke="#222426"
+                    strokeWidth="5.5"
+                  />
                   <line
                     x1="265"
                     y1="165"
@@ -2728,6 +2919,12 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </text>
 
               {/* Spre Track B (dreapta) */}
+              <path
+                d="M 560 80 C 610 96, 670 106, 690 120"
+                fill="none"
+                stroke="#222426"
+                strokeWidth="4.5"
+              />
               <path
                 d="M 560 80 C 610 96, 670 106, 690 120"
                 fill="none"
@@ -3168,6 +3365,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y1="202"
                   x2="690"
                   y2="218"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
+                <line
+                  x1="690"
+                  y1="202"
+                  x2="690"
+                  y2="218"
                   stroke="#E5B822"
                   strokeWidth="2.5"
                   markerEnd="url(#arrow-gold)"
@@ -3208,6 +3413,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </g>
 
                 {/* Săgeată B2 -> B3 */}
+                <line
+                  x1="690"
+                  y1="264"
+                  x2="690"
+                  y2="280"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
                 <line
                   x1="690"
                   y1="264"
@@ -3258,6 +3471,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y1="330"
                   x2="690"
                   y2="346"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
+                <line
+                  x1="690"
+                  y1="330"
+                  x2="690"
+                  y2="346"
                   stroke="#E5B822"
                   strokeWidth="2.5"
                   markerEnd="url(#arrow-gold)"
@@ -3298,6 +3519,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </g>
 
                 {/* Săgeată B4 -> B5 */}
+                <line
+                  x1="690"
+                  y1="392"
+                  x2="690"
+                  y2="408"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
                 <line
                   x1="690"
                   y1="392"
@@ -3470,7 +3699,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
          ===================================================================== */}
       {figureId === 7 && (
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#D0D5D9]">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
               Inspectați fazele ordonate cauzal pe determinanții Lalonde-Dever
             </span>
@@ -3515,9 +3744,10 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="22"
                   width="830"
                   height="64"
-                  fill="#F6F5EE"
-                  stroke="#E5B822"
-                  strokeWidth="3"
+                  fill="#E5B822"
+                  fillOpacity="0.22"
+                  stroke="#222426"
+                  strokeWidth="2.5"
                 />
                 <text
                   x="460"
@@ -3543,6 +3773,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 y1="130"
                 x2="168"
                 y2="92"
+                stroke="#222426"
+                strokeWidth="4"
+              />
+              <line
+                x1="168"
+                y1="130"
+                x2="168"
+                y2="92"
                 stroke="#E5B822"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-gold)"
@@ -3552,9 +3790,25 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 y1="130"
                 x2="460"
                 y2="92"
+                stroke="#222426"
+                strokeWidth="4"
+              />
+              <line
+                x1="460"
+                y1="130"
+                x2="460"
+                y2="92"
                 stroke="#E5B822"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-gold)"
+              />
+              <line
+                x1="752"
+                y1="130"
+                x2="752"
+                y2="92"
+                stroke="#222426"
+                strokeWidth="4"
               />
               <line
                 x1="752"
@@ -3936,11 +4190,19 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="460"
-                  y="422"
+                  y="412"
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-bold fill-[#222426]"
                 >
-                  Fundament (determinanții Lalonde-Dever, rezervă neurobiologică, mediu, stil de viață și sistem instituțional)
+                  Fundamentul sistemic Lalonde–Dever
+                </text>
+                <text
+                  x="460"
+                  y="431"
+                  textAnchor="middle"
+                  className="font-sans text-[11px] fill-[#6E7376]"
+                >
+                  Rezervă neurobiologică · Mediu digital și sociospațial · Stil de viață · Sistem instituțional
                 </text>
               </g>
             </svg>
@@ -3967,7 +4229,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
       )}
 
       {/* Official Monograph Caption & Methodological Note */}
-      <div className="mt-5 pt-4 border-t border-[#D0D5D9] space-y-2">
+      <div className="mt-5 pt-4 border-t border-[#8C9BA5] space-y-2">
         <p className="text-xs sm:text-sm font-serif italic text-[#222426] leading-relaxed">
           <span className="font-bold not-italic">{meta.title}. </span>
           {meta.caption}

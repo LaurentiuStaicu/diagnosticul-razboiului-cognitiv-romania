@@ -52,7 +52,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header & Sub-nav */}
-      <div className="bg-[#F4F1EA] border border-[#222426] p-5">
+      <div className="bg-[#F6F5EE] border border-[#222426] p-5">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="text-xs font-mono text-[#6E7376] mb-1">
@@ -98,7 +98,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
         </div>
 
         {activeTab !== 'blueprint' && (
-          <div className="mt-5 pt-4 border-t border-[#D0D5D9] flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
+          <div className="mt-5 pt-4 border-t border-[#8C9BA5] flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
             <div className="relative flex-1">
               <Search className="w-4 h-4 text-[#6E7376] absolute left-3 top-1/2 -translate-y-1/2" />
               <input
@@ -162,7 +162,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
               className="bg-[#F6F5EE] border border-[#222426] p-5 flex flex-col justify-between"
             >
               <div>
-                <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#6E7376] pb-2 mb-3 border-b border-[#D0D5D9]">
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#6E7376] pb-2 mb-3 border-b border-[#8C9BA5]">
                   <span>
                     Stratul {concept.stratum} · {concept.domain}
                   </span>
@@ -171,7 +171,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                       concept.polarity === 'tension'
                         ? 'text-[#F01E1E]'
                         : concept.polarity === 'synthesis'
-                        ? 'text-[#D9A714]'
+                        ? 'text-[#222426] bg-[#E5B822]/25 px-2 py-0.5 border border-[#222426]'
                         : 'text-[#222426]'
                     }`}
                   >
@@ -198,8 +198,8 @@ export const GlossaryAndBibliographyView: React.FC = () => {
               <div
                 className={`p-3 border text-xs leading-relaxed ${
                   concept.polarity === 'tension'
-                    ? 'border-[#F01E1E]/60 bg-[#F01E1E]/5 text-[#222426]'
-                    : 'border-[#D9A714] bg-[#E5B822]/15 text-[#222426]'
+                    ? 'border-[#F01E1E] bg-[#F01E1E]/5 text-[#222426]'
+                    : 'border-[#222426] bg-[#E5B822]/20 text-[#222426]'
                 }`}
               >
                 <span className="font-mono font-semibold block mb-0.5">
@@ -214,17 +214,16 @@ export const GlossaryAndBibliographyView: React.FC = () => {
 
       {/* BIBLIOGRAFIE INTEGRALĂ */}
       {activeTab === 'bibliography' && (
-        <div className="bg-[#F6F5EE] border border-[#222426] divide-y divide-[#D0D5D9]">
-          <div className="p-3.5 bg-[#F4F1EA] text-xs font-mono text-[#6E7376] flex items-center justify-between">
+        <div className="bg-[#F6F5EE] border border-[#222426] divide-y divide-[#8C9BA5]">
+          <div className="p-3.5 bg-[#F6F5EE] text-xs font-mono text-[#6E7376] flex items-center justify-between">
             <span>
               Lucrări afișate ({filteredBibliography.length} din {BIBLIOGRAPHY_DATA.length} lucrări academice individuale verificate în paginile 42–47)
             </span>
             <span>Ordine alfabetică după autor și an (APA 7th Edition)</span>
           </div>
 
-
           {filteredBibliography.map((item, idx) => (
-            <div key={item.id} className="p-4 sm:p-5 hover:bg-[#F4F1EA] transition-colors">
+            <div key={item.id} className="p-4 sm:p-5 hover:bg-[#E5B822]/10 transition-colors">
               <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#6E7376] mb-1">
                 <span>
                   [{idx + 1}] {item.authors} ({item.year})
@@ -261,36 +260,36 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                 <div className="border border-[#222426] p-3 bg-[#F6F5EE]">
                   <div className="h-10 bg-[#F6F5EE] border border-[#222426] mb-2" />
                   <div className="text-xs font-bold text-[#222426]">Fundal principal (Canvas)</div>
-                  <div className="text-[11px] font-mono text-[#6E7376]">#F6F5EE / #F4F1EA</div>
+                  <div className="text-[11px] font-mono text-[#6E7376]">#F6F5EE</div>
                   <div className="text-[11px] text-[#222426] mt-1">
-                    Alb-crem cald / pergament deschis cu textură editorială.
+                    Alb-crem cald cu textură editorială.
                   </div>
                 </div>
 
                 <div className="border border-[#222426] p-3 bg-[#F6F5EE]">
                   <div className="h-10 bg-[#222426] border border-[#222426] mb-2" />
                   <div className="text-xs font-bold text-[#222426]">Structură și tipografie</div>
-                  <div className="text-[11px] font-mono text-[#6E7376]">#222426 / #2C3539</div>
+                  <div className="text-[11px] font-mono text-[#6E7376]">#222426</div>
                   <div className="text-[11px] text-[#222426] mt-1">
-                    Negru-cărbune și gri-antracit închis, linii vectoriale curate.
+                    Negru-cărbune, contururi primare și linii vectoriale curate.
                   </div>
                 </div>
 
                 <div className="border border-[#222426] p-3 bg-[#F6F5EE]">
                   <div className="h-10 bg-[#6E7376] border border-[#222426] mb-2" />
                   <div className="text-xs font-bold text-[#222426]">Context și tranziții</div>
-                  <div className="text-[11px] font-mono text-[#6E7376]">#6E7376 / #8C9BA5 / #D0D5D9</div>
+                  <div className="text-[11px] font-mono text-[#6E7376]">#6E7376 / #8C9BA5</div>
                   <div className="text-[11px] text-[#222426] mt-1">
-                    Gri mediu și gri-ardezie pentru straturi de context.
+                    Gri-ardezie pentru axe, delimitări de straturi și contururi secundare.
                   </div>
                 </div>
 
                 <div className="border border-[#222426] p-3 bg-[#F6F5EE]">
                   <div className="h-10 bg-[#E5B822] border border-[#222426] mb-2" />
                   <div className="text-xs font-bold text-[#222426]">Claritate și sinteză</div>
-                  <div className="text-[11px] font-mono text-[#6E7376]">#E5B822 / #D9A714</div>
+                  <div className="text-[11px] font-mono text-[#6E7376]">#E5B822</div>
                   <div className="text-[11px] text-[#222426] mt-1">
-                    Galben-muștar / auriu-ocru pentru direcții adaptative și soluții.
+                    Galben-muștar (conturat cu #222426) pentru filtre morale, Track B și soluții.
                   </div>
                 </div>
 
@@ -299,14 +298,14 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                   <div className="text-xs font-bold text-[#222426]">Tensiune și blocaj</div>
                   <div className="text-[11px] font-mono text-[#6E7376]">#F01E1E</div>
                   <div className="text-[11px] text-[#222426] mt-1">
-                    Roșu-vermilion strict pentru puncte de presiune și bucle vicioase.
+                    Roșu-vermilion strict pentru puncte de presiune, Track A și bucle de blocaj.
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Prompt Box */}
-            <div className="bg-[#F4F1EA] border-2 border-[#222426] p-5">
+            <div className="bg-[#F6F5EE] border-2 border-[#222426] p-5">
               <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
                 <div>
                   <div className="text-xs font-mono text-[#6E7376]">
@@ -318,7 +317,7 @@ export const GlossaryAndBibliographyView: React.FC = () => {
                 </div>
                 <button
                   onClick={handleCopyPrompt}
-                  className="flex items-center gap-2 px-4 py-2 text-xs font-semibold bg-[#E5B822] text-[#222426] border border-[#222426] hover:bg-[#D9A714] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                  className="flex items-center gap-2 px-4 py-2 text-xs font-semibold bg-[#E5B822] text-[#222426] border border-[#222426] hover:bg-[#E5B822]/85 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
                 >
                   {copiedPrompt ? (
                     <>

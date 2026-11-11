@@ -132,8 +132,8 @@ export const DocumentaryGuideView: React.FC<DocumentaryGuideViewProps> = ({
   return (
     <div className="space-y-8">
       {/* Editorial Banner */}
-      <div className="bg-[#F4F1EA] border-2 border-[#222426] p-6 sm:p-8">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-[#D0D5D9]">
+      <div className="bg-[#F6F5EE] border-2 border-[#222426] p-6 sm:p-8">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-[#8C9BA5]">
           <div className="max-w-3xl space-y-3">
             <div className="flex items-center gap-2 text-xs font-mono text-[#6E7376]">
               <Film className="w-4 h-4 text-[#222426]" />
@@ -142,7 +142,7 @@ export const DocumentaryGuideView: React.FC<DocumentaryGuideViewProps> = ({
             <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#222426] leading-tight">
               Ghidul de Regie & Producție Documentar „Diagnosticul războiului cognitiv”
             </h1>
-            <p className="text-xs sm:text-sm text-[#2C3539] leading-relaxed max-w-[70ch]">
+            <p className="text-xs sm:text-sm text-[#222426] leading-relaxed max-w-[70ch]">
               Acest livrabil tehnic secundar este decuplat de textul monografiei academice. El oferă specificațiile regizorale, indicațiile de sonorizare acustică și secvențierea cadrelor cinematografice pentru adaptarea audiovizuală a cercetării.
             </p>
           </div>
@@ -150,7 +150,7 @@ export const DocumentaryGuideView: React.FC<DocumentaryGuideViewProps> = ({
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
             <button
               onClick={onOpenMonographReader}
-              className="px-4 py-2.5 text-xs font-serif font-bold text-[#222426] bg-[#E5B822] border border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer flex items-center justify-center gap-2"
+              className="px-4 py-2.5 text-xs font-serif font-bold text-[#222426] bg-[#E5B822] border border-[#222426] hover:bg-[#E5B822]/85 transition-colors cursor-pointer flex items-center justify-center gap-2"
             >
               <BookOpen className="w-4 h-4" />
               <span>Revin la Monografia Academică</span>
@@ -170,7 +170,7 @@ export const DocumentaryGuideView: React.FC<DocumentaryGuideViewProps> = ({
                 onClick={() => setActiveActTab(act.actNumber)}
                 className={`p-3.5 border text-left transition-all cursor-pointer ${
                   activeActTab === act.actNumber
-                    ? 'border-2 border-[#222426] bg-[#E5B822]/25 shadow-sm'
+                    ? 'border-2 border-[#222426] bg-[#E5B822]/25'
                     : 'border-[#8C9BA5] bg-[#F6F5EE] hover:border-[#222426]'
                 }`}
               >
@@ -209,22 +209,22 @@ export const DocumentaryGuideView: React.FC<DocumentaryGuideViewProps> = ({
 
               {/* Technical Specifications Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div className="p-4 bg-[#F4F1EA] border border-[#222426] space-y-2">
+                <div className="p-4 bg-[#F6F5EE] border border-[#222426] space-y-2">
                   <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#222426]">
                     <Clapperboard className="w-4 h-4 text-[#F01E1E]" />
                     <span>Direcție Vizuală & Imagine</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#2C3539] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                     {currentAct.visualDirection}
                   </p>
                 </div>
 
-                <div className="p-4 bg-[#F4F1EA] border border-[#222426] space-y-2">
+                <div className="p-4 bg-[#F6F5EE] border border-[#222426] space-y-2">
                   <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#222426]">
-                    <Volume2 className="w-4 h-4 text-[#D9A714]" />
+                    <Volume2 className="w-4 h-4 text-[#222426]" />
                     <span>Design Sonor & Design Acustic</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#2C3539] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                     {currentAct.audioDesign}
                   </p>
                 </div>
@@ -239,9 +239,9 @@ export const DocumentaryGuideView: React.FC<DocumentaryGuideViewProps> = ({
                 {currentAct.keyScenes.map((scene) => (
                   <div
                     key={scene.sceneNumber}
-                    className="p-4 sm:p-5 bg-[#F4F1EA] border border-[#222426] space-y-3"
+                    className="p-4 sm:p-5 bg-[#F6F5EE] border border-[#222426] space-y-3"
                   >
-                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#D0D5D9] pb-2">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#8C9BA5] pb-2">
                       <span className="text-xs font-mono font-bold text-[#222426]">
                         Secvența {scene.sceneNumber}
                       </span>
@@ -252,12 +252,12 @@ export const DocumentaryGuideView: React.FC<DocumentaryGuideViewProps> = ({
 
                     <div className="space-y-2">
                       <div className="text-[11px] font-mono text-[#6E7376]">Text narațiune:</div>
-                      <p className="font-serif text-sm sm:text-base italic text-[#222426] leading-relaxed bg-[#F6F5EE] p-3 border border-[#D0D5D9]">
+                      <p className="font-serif text-sm sm:text-base italic text-[#222426] leading-relaxed bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
                         „{scene.narration}”
                       </p>
                     </div>
 
-                    <div className="text-xs font-mono text-[#2C3539] pt-1">
+                    <div className="text-xs font-mono text-[#222426] pt-1">
                       <span className="font-bold">Notă de regie: </span>
                       {scene.scriptNote}
                     </div>
@@ -267,13 +267,13 @@ export const DocumentaryGuideView: React.FC<DocumentaryGuideViewProps> = ({
             </div>
 
             {/* Bottom Link back to Monograph */}
-            <div className="p-4 bg-[#F4F1EA] border border-[#222426] flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="text-xs text-[#2C3539]">
+            <div className="p-4 bg-[#F6F5EE] border border-[#222426] flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-xs text-[#222426]">
                 Doriți să aprofundați fundamentul teoretic și demonstrativ al acestei secvențe?
               </div>
               <button
                 onClick={onOpenMonographReader}
-                className="px-4 py-2 text-xs font-serif font-bold text-[#222426] bg-[#E5B822] border border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer flex items-center gap-2 whitespace-nowrap"
+                className="px-4 py-2 text-xs font-serif font-bold text-[#222426] bg-[#E5B822] border border-[#222426] hover:bg-[#E5B822]/85 transition-colors cursor-pointer flex items-center gap-2 whitespace-nowrap"
               >
                 <span>Deschide Monografia Academică</span>
                 <ArrowRight className="w-4 h-4" />

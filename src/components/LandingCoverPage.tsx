@@ -12,10 +12,10 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
   return (
     <div className="min-h-screen bg-[#F6F5EE] text-[#222426] flex flex-col justify-between p-4 sm:p-8 lg:p-12">
       {/* Outer Editorial Monograph Frame */}
-      <div className="max-w-[1360px] w-full mx-auto flex-1 border-2 border-[#222426] bg-[#F4F1EA] p-6 sm:p-10 lg:p-14 flex flex-col justify-between">
+      <div className="max-w-[1360px] w-full mx-auto flex-1 border-2 border-[#222426] bg-[#F6F5EE] p-6 sm:p-10 lg:p-14 flex flex-col justify-between">
         {/* Top Archival Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#222426] text-xs font-mono text-[#6E7376]">
-          <span className="inline-block px-3 py-1 text-[11px] font-mono font-semibold tracking-wider text-[#222426] uppercase bg-[#EBE6DF] border border-[#8C9BA5]">
+          <span className="inline-block px-3 py-1 text-[11px] font-mono font-semibold tracking-wider text-[#222426] uppercase bg-[#F6F5EE] border border-[#222426]">
             MONOGRAFIE ȘTIINȚIFICĂ • VERSIUNEA 1.0
           </span>
           <span>
@@ -23,9 +23,9 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
           </span>
         </div>
 
-        {/* Center Split: Monograph Title, Subtitle, Abstract, 3 Action Buttons + 2D Cover Plate */}
+        {/* Center Split: Monograph Title, Subtitle, Abstract, Action Button + 2D Cover Plate */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center my-8 lg:my-12">
-          {/* Left 7 Columns: Title, Subtitle, Abstract & 3 Action Buttons */}
+          {/* Left 7 Columns: Title, Subtitle, Abstract & Action Button */}
           <div className="lg:col-span-7 space-y-6">
             <div className="text-xs font-mono text-[#6E7376]">
               Arhitectura cauzală pe trei straturi (Sociologie instituțională · Neuroștiințe și semiotică · Psihologie analitică)
@@ -35,13 +35,13 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
               Diagnosticul războiului cognitiv în România
             </h1>
 
-            <p className="font-serif text-sm sm:text-base font-normal text-[#2C3539] leading-relaxed headline-balance">
+            <p className="font-serif text-sm sm:text-base font-normal text-[#222426] leading-relaxed headline-balance">
               Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale în fața operațiunilor informaționale ruse și a ideologiei putiniste
             </p>
 
-            <div className="pt-2 border-t border-[#D0D5D9] space-y-3 text-xs sm:text-sm text-[#222426] leading-relaxed max-w-[65ch]">
+            <div className="pt-2 border-t border-[#8C9BA5] space-y-3 text-xs sm:text-sm text-[#222426] leading-relaxed max-w-[65ch]">
               <p>
-                Această lucrare demonstrează că vulnerabilitatea cognitivă a societății românești nu reprezintă un simplu deficit de alfabetizare media, ci rezultatul emergent al interacțiunii dintre anomalia istorică a „formelor fără fond” și închiderea operațională a instituțiilor extractive (Stratul A), uzura alostatică cronică și capturarea fazei de Orientare din bucla OODA prin control reflexiv (Stratul B), respectiv activarea filtrelor Umbrei colective și a comportamentului contraproductiv sistemic în criză acută (Stratul C).
+                Această lucrare demonstrează că vulnerabilitatea cognitivă a societății românești nu reprezintă un simplu deficit de alfabetizare media, ci rezultatul emergent al interacțiunii dintre anomalia istorică a „formelor fără fond” și închiderea operațională a instituțiilor extractive (Stratul A), uzura alostatică cronică și capturarea fazei de Orientare din bucla OODA prin control reflexiv (Stratul B), respectiv proiecția Umbrei colective, enantiodromia și alunecarea în autosabotaj colectiv (-X, -Y) în criză acută (Stratul C).
               </p>
               <p className="text-[#6E7376]">
                 Explorarea interactivă reunește textul integral al celor șase capitole, sinteza executivă pentru decidenți, descompunerea în oglindă pe două registre (teoretic și empiric), laboratorul celor șapte diagrame cibernetice și protocolul secvențial de reconstrucție în trei faze.
@@ -54,14 +54,14 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 <button
                   type="button"
                   onClick={onOpenInteractivePage}
-                  className="px-6 py-3.5 text-xs sm:text-sm font-serif font-bold text-[#222426] bg-[#E5B822] border-2 border-[#222426] hover:bg-[#D9A714] transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                  className="px-6 py-3.5 text-xs sm:text-sm font-serif font-bold text-[#222426] bg-[#E5B822] border-2 border-[#222426] hover:bg-[#E5B822]/85 transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
                 >
-                  <span>Citește Monografia Online</span>
+                  <span>Citește monografia online</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
                 </button>
               </div>
 
-              <div className="pt-3 border-t border-[#D0D5D9]">
+              <div className="pt-3 border-t border-[#8C9BA5]">
                 <SocialShareButtons
                   url="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/"
                   label="Distribuie monografia pe"
@@ -73,13 +73,13 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
           {/* Right 5 Columns: 2D Vector Engraving Cover Plate */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-6">
-              <div className="text-[11px] font-mono text-[#6E7376] pb-2 mb-3 border-b border-[#D0D5D9] flex items-center justify-between">
+              <div className="text-[11px] font-mono text-[#6E7376] pb-2 mb-3 border-b border-[#8C9BA5] flex items-center justify-between">
                 <span>Planșa sinoptică de copertă (Modelul Macro–Micro–Macro)</span>
                 <span>Fig. I–VII</span>
               </div>
 
               <svg
-                viewBox="0 0 460 440"
+                viewBox="0 0 460 476"
                 className="w-full h-auto block"
                 role="img"
                 aria-label="Harta conceptuală a arhitecturii pe trei straturi din monografie"
@@ -120,71 +120,81 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                     viewBox="0 0 10 10"
                     refX="8"
                     refY="5"
-                    markerWidth="6"
-                    markerHeight="6"
+                    markerWidth="6.5"
+                    markerHeight="6.5"
                     orient="auto-start-reverse"
                   >
-                    <path d="M 0 1 L 9 5 L 0 9 z" fill="#D9A714" />
+                    <path d="M 0 1 L 9 5 L 0 9 z" fill="#E5B822" stroke="#222426" strokeWidth="0.8" />
                   </marker>
                 </defs>
 
-                <rect x="0" y="0" width="460" height="440" fill="url(#cover-grid)" />
+                <rect x="0" y="0" width="460" height="476" fill="#F6F5EE" />
+                <rect x="0" y="0" width="460" height="476" fill="url(#cover-grid)" />
 
                 {/* Top Macro Frame: Stratum A */}
                 <rect
-                  x="20"
-                  y="16"
-                  width="420"
-                  height="86"
-                  fill="#F4F1EA"
+                  x="18"
+                  y="14"
+                  width="424"
+                  height="94"
+                  fill="#F6F5EE"
                   stroke="#222426"
-                  strokeWidth="1.75"
+                  strokeWidth="2"
                 />
                 <text
-                  x="32"
-                  y="36"
+                  x="30"
+                  y="34"
                   fontFamily="Inter, sans-serif"
                   fontSize="9.5"
                   fontWeight="700"
                   fill="#6E7376"
                 >
-                  STRATUL A (MACRO-INSTITUȚIONAL · CAPITOLELE 1 ȘI 2)
+                  STRATUL A (MACRO-INSTITUȚIONAL · CAPITOLELE 1–2)
                 </text>
                 <text
-                  x="32"
-                  y="56"
+                  x="30"
+                  y="55"
                   fontFamily="Inter, sans-serif"
                   fontSize="13"
                   fontWeight="800"
                   fill="#222426"
                 >
-                  Forme fără fond, închidere operațională (Luhmann) și sistema
+                  Cadrul constituțional și închiderea operațională
                 </text>
                 <text
-                  x="32"
-                  y="76"
+                  x="30"
+                  y="75"
                   fontFamily="Inter, sans-serif"
                   fontSize="10.5"
-                  fill="#2C3539"
+                  fill="#222426"
                 >
-                  Instituții extractive (Acemoglu și Robinson) + Vectorul Russkii Antimir / Bobok
+                  Instituții extractive („forme fără fond”) vs. statul de drept (Luhmann)
+                </text>
+                <text
+                  x="30"
+                  y="93"
+                  fontFamily="Inter, sans-serif"
+                  fontSize="10.5"
+                  fill="#6E7376"
+                >
+                  Vectorul revizionist al Antilumii (Epstein) și starea Bobok (Dostoievski)
                 </text>
 
                 {/* Downward Causal Arrows from Stratum A to Stratum B */}
                 <line
-                  x1="145"
-                  y1="102"
-                  x2="145"
-                  y2="136"
-                  stroke="#F01E1E"
+                  x1="150"
+                  y1="108"
+                  x2="150"
+                  y2="130"
+                  stroke="#222426"
                   strokeWidth="1.75"
-                  markerEnd="url(#cover-arrow-red)"
+                  markerEnd="url(#cover-arrow-dark)"
                 />
                 <line
-                  x1="315"
-                  y1="102"
-                  x2="315"
-                  y2="136"
+                  x1="310"
+                  y1="108"
+                  x2="310"
+                  y2="130"
                   stroke="#222426"
                   strokeWidth="1.75"
                   markerEnd="url(#cover-arrow-dark)"
@@ -192,86 +202,118 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
 
                 {/* Middle Micro/Meso Frame: Stratum B */}
                 <rect
-                  x="20"
-                  y="140"
-                  width="420"
+                  x="18"
+                  y="134"
+                  width="424"
                   height="96"
-                  fill="#F4F1EA"
-                  stroke="#F01E1E"
-                  strokeWidth="1.75"
-                />
-                <text
-                  x="32"
-                  y="160"
-                  fontFamily="Inter, sans-serif"
-                  fontSize="9.5"
-                  fontWeight="700"
-                  fill="#F01E1E"
-                >
-                  STRATUL B (NEUROCOGNITIV ȘI SEMIOTIC · CAPITOLUL 3)
-                </text>
-                <text
-                  x="32"
-                  y="180"
-                  fontFamily="Inter, sans-serif"
-                  fontSize="13"
-                  fontWeight="800"
-                  fill="#222426"
-                >
-                  Sarcină alostatică cronică și capturarea Orientării (Bucla OODA)
-                </text>
-                <text
-                  x="32"
-                  y="200"
-                  fontFamily="Inter, sans-serif"
-                  fontSize="10.5"
-                  fill="#2C3539"
-                >
-                  Inhibare dlPFC + Hiperactivare amigdală (McEwen, Sapolsky, Arnsten)
-                </text>
-                <text
-                  x="32"
-                  y="218"
-                  fontFamily="Inter, sans-serif"
-                  fontSize="10.5"
-                  fill="#2C3539"
-                >
-                  Control reflexiv (Lefebvre), semioză binară (Lotman) și dublă falsificare axiologică
-                </text>
-
-                {/* Arrows from Stratum B to Stratum C */}
-                <line
-                  x1="145"
-                  y1="236"
-                  x2="145"
-                  y2="270"
-                  stroke="#F01E1E"
-                  strokeWidth="1.75"
-                  markerEnd="url(#cover-arrow-red)"
-                />
-                <line
-                  x1="315"
-                  y1="236"
-                  x2="315"
-                  y2="270"
-                  stroke="#D9A714"
-                  strokeWidth="1.75"
-                  markerEnd="url(#cover-arrow-gold)"
-                />
-
-                {/* Lower Frame: Stratum C Split (Vicious Loop vs Adaptive Synthesis) */}
-                <rect
-                  x="20"
-                  y="274"
-                  width="202"
-                  height="82"
                   fill="#F6F5EE"
                   stroke="#F01E1E"
                   strokeWidth="1.75"
                 />
                 <text
                   x="30"
-                  y="293"
+                  y="154"
+                  fontFamily="Inter, sans-serif"
+                  fontSize="9.5"
+                  fontWeight="700"
+                  fill="#F01E1E"
+                >
+                  STRATUL B (NEUROCOGNITIV ȘI CIBERNETIC · CAPITOLUL 3)
+                </text>
+                <text
+                  x="30"
+                  y="175"
+                  fontFamily="Inter, sans-serif"
+                  fontSize="13"
+                  fontWeight="800"
+                  fill="#222426"
+                >
+                  Uzura alostatică cronică și capturarea buclei OODA
+                </text>
+                <text
+                  x="30"
+                  y="195"
+                  fontFamily="Inter, sans-serif"
+                  fontSize="10.5"
+                  fill="#222426"
+                >
+                  Inhibare dlPFC, hiperactivare amigdaliană și închidere cognitivă (NFCC)
+                </text>
+                <text
+                  x="30"
+                  y="213"
+                  fontFamily="Inter, sans-serif"
+                  fontSize="10.5"
+                  fill="#6E7376"
+                >
+                  Control reflexiv de rang secund (Lefebvre) vs. mediere semiotică ternară
+                </text>
+
+                {/* Arrows from Stratum B through Moral Filter to Stratum C */}
+                <line
+                  x1="120"
+                  y1="230"
+                  x2="120"
+                  y2="294"
+                  stroke="#F01E1E"
+                  strokeWidth="1.75"
+                  markerEnd="url(#cover-arrow-red)"
+                />
+                <line
+                  x1="340"
+                  y1="230"
+                  x2="340"
+                  y2="294"
+                  stroke="#222426"
+                  strokeWidth="3.25"
+                />
+                <line
+                  x1="340"
+                  y1="230"
+                  x2="340"
+                  y2="294"
+                  stroke="#E5B822"
+                  strokeWidth="1.75"
+                  markerEnd="url(#cover-arrow-gold)"
+                />
+
+                {/* Explicit Moral Filter Bar between Stratum B and Stratum C */}
+                <rect
+                  x="48"
+                  y="248"
+                  width="364"
+                  height="28"
+                  rx="14"
+                  fill="#E5B822"
+                  stroke="#222426"
+                  strokeWidth="1.5"
+                />
+                <text
+                  x="230"
+                  y="266"
+                  textAnchor="middle"
+                  fontFamily="Inter, sans-serif"
+                  fontSize="10"
+                  fontWeight="800"
+                  fill="#222426"
+                >
+                  Filtrul moral creștin-secular (Imago Dei și discernământ)
+                </text>
+
+                {/* Lower Frame: Stratum C Split (Track A vs Track B) */}
+                <rect
+                  x="18"
+                  y="298"
+                  width="204"
+                  height="92"
+                  rx="12"
+                  fill="#F6F5EE"
+                  stroke="#F01E1E"
+                  strokeWidth="1.75"
+                />
+                <text
+                  x="30"
+                  y="318"
                   fontFamily="Inter, sans-serif"
                   fontSize="9"
                   fontWeight="700"
@@ -281,45 +323,47 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                 </text>
                 <text
                   x="30"
-                  y="312"
+                  y="338"
                   fontFamily="Inter, sans-serif"
-                  fontSize="12.5"
+                  fontSize="12"
                   fontWeight="800"
                   fill="#222426"
                 >
-                  Filtrele Umbrei și Cipolla
+                  Proiecția Umbrei și Cipolla
                 </text>
                 <text
                   x="30"
-                  y="330"
+                  y="356"
                   fontFamily="Inter, sans-serif"
                   fontSize="10"
-                  fill="#2C3539"
+                  fill="#222426"
                 >
-                  Ipotezele lui Bion (baD / baF) și
+                  Enantiodromie, ipoteze de bază (Bion)
                 </text>
                 <text
                   x="30"
-                  y="344"
+                  y="372"
                   fontFamily="Inter, sans-serif"
                   fontSize="10"
-                  fill="#2C3539"
+                  fill="#6E7376"
                 >
-                  conversia în cadranul Neghiob
+                  și autosabotaj colectiv (-X, -Y)
                 </text>
 
                 <rect
                   x="238"
-                  y="274"
-                  width="202"
-                  height="82"
-                  fill="#F4F1EA"
-                  stroke="#D9A714"
+                  y="298"
+                  width="204"
+                  height="92"
+                  rx="12"
+                  fill="#E5B822"
+                  fillOpacity="0.18"
+                  stroke="#222426"
                   strokeWidth="1.75"
                 />
                 <text
-                  x="248"
-                  y="293"
+                  x="250"
+                  y="318"
                   fontFamily="Inter, sans-serif"
                   fontSize="9"
                   fontWeight="700"
@@ -328,80 +372,88 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   STRATUL C · SINTEZĂ (TRACK B)
                 </text>
                 <text
-                  x="248"
-                  y="312"
+                  x="250"
+                  y="338"
                   fontFamily="Inter, sans-serif"
-                  fontSize="12.5"
+                  fontSize="12"
                   fontWeight="800"
                   fill="#222426"
                 >
                   Grup de lucru și individuare
                 </text>
                 <text
-                  x="248"
-                  y="330"
+                  x="250"
+                  y="356"
                   fontFamily="Inter, sans-serif"
                   fontSize="10"
-                  fill="#2C3539"
+                  fill="#222426"
                 >
                   Refacerea axei Ego–Sine (Edinger)
                 </text>
                 <text
-                  x="248"
-                  y="344"
+                  x="250"
+                  y="372"
                   fontFamily="Inter, sans-serif"
                   fontSize="10"
-                  fill="#2C3539"
+                  fill="#222426"
                 >
-                  și capital social bridging (Putnam)
+                  și cooperare inteligentă (+X, +Y)
                 </text>
 
                 {/* Convergence into Bottom Protocol Banner (Chapter 6) */}
                 <line
-                  x1="121"
-                  y1="356"
+                  x1="120"
+                  y1="390"
                   x2="180"
-                  y2="384"
+                  y2="416"
                   stroke="#222426"
                   strokeWidth="1.5"
                   markerEnd="url(#cover-arrow-dark)"
                 />
                 <line
-                  x1="339"
-                  y1="356"
+                  x1="340"
+                  y1="390"
                   x2="280"
-                  y2="384"
-                  stroke="#D9A714"
+                  y2="416"
+                  stroke="#222426"
+                  strokeWidth="3.25"
+                />
+                <line
+                  x1="340"
+                  y1="390"
+                  x2="280"
+                  y2="416"
+                  stroke="#E5B822"
                   strokeWidth="1.75"
                   markerEnd="url(#cover-arrow-gold)"
                 />
 
                 <rect
-                  x="20"
-                  y="388"
-                  width="420"
-                  height="40"
+                  x="18"
+                  y="420"
+                  width="424"
+                  height="42"
                   fill="#222426"
                   stroke="#222426"
                   strokeWidth="1.5"
                 />
                 <text
                   x="230"
-                  y="405"
+                  y="437"
                   textAnchor="middle"
                   fontFamily="Inter, sans-serif"
                   fontSize="9.5"
                   fontWeight="700"
                   fill="#E5B822"
                 >
-                  CAPITOLUL 6 · PROTOCOLUL SECVENȚIAL ÎN TREI FAZE (LALONDE-DEVER)
+                  CAPITOLUL 6 · PROTOCOLUL SECVENȚIAL ÎN TREI FAZE (LALONDE–DEVER)
                 </text>
                 <text
                   x="230"
-                  y="420"
+                  y="453"
                   textAnchor="middle"
                   fontFamily="Inter, sans-serif"
-                  fontSize="11"
+                  fontSize="10.5"
                   fontWeight="600"
                   fill="#F6F5EE"
                 >
@@ -411,7 +463,6 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
             </div>
           </div>
         </div>
-
 
         {/* Bottom Archival Summary Strip (Static Text Metadata — Zero Buttons) */}
         <div className="pt-6 border-t border-[#222426] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-[#6E7376]">
@@ -431,7 +482,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
             <div className="font-mono font-semibold text-[#222426]">
               Stratul C (Capitolele 4–5)
             </div>
-            <div>Filtrele Umbrei colective, matricea lui Cipolla și bifurcația Track A/B</div>
+            <div>Proiecția Umbrei colective și enantiodromia, matricea lui Cipolla și bifurcația Track A/B</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">

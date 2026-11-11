@@ -20,14 +20,14 @@ html {
 
 :root {
   --canvas-primary: #F6F5EE;
-  --canvas-secondary: #F4F1EA;
+  --canvas-secondary: #F6F5EE;
   --ink-primary: #222426;
-  --ink-secondary: #2C3539;
+  --ink-secondary: #222426;
   --slate-dark: #6E7376;
   --slate-mid: #8C9BA5;
-  --slate-light: #D0D5D9;
+  --slate-light: #8C9BA5;
   --accent-synthesis: #E5B822;
-  --accent-synthesis-deep: #D9A714;
+  --accent-synthesis-deep: #E5B822;
   --accent-tension: #F01E1E;
 }
 
@@ -40,8 +40,8 @@ body {
 }
 
 .stipple-surface {
-  background-color: #F4F1EA;
-  background-image: radial-gradient(rgba(44, 53, 57, 0.07) 1px, transparent 0);
+  background-color: #F6F5EE;
+  background-image: radial-gradient(rgba(34, 36, 38, 0.07) 1px, transparent 0);
   background-size: 12px 12px;
 }
 

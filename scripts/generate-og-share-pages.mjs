@@ -115,10 +115,10 @@ const CHAPTERS_META = [
     num: 4,
     slug: 'capitolul-4',
     targetHash: 'capitolul-4',
-    title: 'Capitolul 4 (Complexele culturale, mecanismele de apărare psihodinamică și cele cinci filtre de conversie)',
-    description: 'Dinamica forțelor și conversia resurselor latente din Umbra colectivă prin intermediul filtrelor psihologice.',
+    title: 'Capitolul 4 (Polarizarea socială, proiecția Umbrei colective și vulnerabilitatea la manipulare)',
+    description: 'Mecanismele de apărare de grup, enantiodromia, conversia funcțională a resurselor latente din Umbră și matricea comportamentală a lui Cipolla.',
     imageRelPath: 'og/og-fig-4.png',
-    imageAlt: 'Capitolul 4 (Filtrele Umbrei colective și arhetipul Trickster-ului)'
+    imageAlt: 'Capitolul 4 (Conversia funcțională a resurselor latente din Umbra colectivă)'
   },
   {
     num: 5,

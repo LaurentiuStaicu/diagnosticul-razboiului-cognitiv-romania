@@ -352,6 +352,76 @@ export function App() {
 
   const renderParagraphWithCitations = (paragraphText: string) => {
     const citationRegex = /\(([^)]+?\b(?:19\d{2}|20\d{2})[a-z]?\b[^)]*)\)/g;
+    const matchedConceptsInParagraph = new Set<string>();
+
+    const applyGlossaryTooltips = (
+      textSegment: string,
+      keyPrefix: string
+    ): React.ReactNode[] => {
+      const nodes: React.ReactNode[] = [];
+      let remaining = textSegment;
+      let segmentCounter = 0;
+
+      while (remaining.length > 0) {
+        let earliestMatch: {
+          index: number;
+          length: number;
+          matchedText: string;
+          conceptId: string;
+        } | null = null;
+
+        for (const rule of INLINE_GLOSSARY_PATTERNS) {
+          if (matchedConceptsInParagraph.has(rule.conceptId)) continue;
+          const m = rule.regex.exec(remaining);
+          if (m && m.index !== undefined) {
+            if (
+              earliestMatch === null ||
+              m.index < earliestMatch.index ||
+              (m.index === earliestMatch.index && m[0].length > earliestMatch.length)
+            ) {
+              earliestMatch = {
+                index: m.index,
+                length: m[0].length,
+                matchedText: m[0],
+                conceptId: rule.conceptId
+              };
+            }
+          }
+        }
+
+        if (!earliestMatch) {
+          nodes.push(
+            <React.Fragment key={`${keyPrefix}-plain-${segmentCounter}`}>
+              {remaining}
+            </React.Fragment>
+          );
+          break;
+        }
+
+        if (earliestMatch.index > 0) {
+          nodes.push(
+            <React.Fragment key={`${keyPrefix}-pre-${segmentCounter}`}>
+              {remaining.slice(0, earliestMatch.index)}
+            </React.Fragment>
+          );
+        }
+
+        matchedConceptsInParagraph.add(earliestMatch.conceptId);
+        nodes.push(
+          <ContextualTooltip
+            key={`${keyPrefix}-tt-${earliestMatch.conceptId}-${segmentCounter}`}
+            conceptId={earliestMatch.conceptId}
+            matchedText={earliestMatch.matchedText}
+            onSelectConcept={handleConceptSelect}
+          />
+        );
+
+        remaining = remaining.slice(earliestMatch.index + earliestMatch.length);
+        segmentCounter += 1;
+      }
+
+      return nodes;
+    };
 
     const parts: React.ReactNode[] = [];
     let lastIndex = 0;
@@ -364,11 +434,7 @@ export function App() {
 
       if (matchIndex > lastIndex) {
         const textChunk = paragraphText.substring(lastIndex, matchIndex);
-        parts.push(
-          <React.Fragment key={`text-${lastIndex}`}>
-            {textChunk}
-          </React.Fragment>
-        );
+        parts.push(...applyGlossaryTooltips(textChunk, `chunk-${lastIndex}`));
       }
 
       const isSelected = selectedAuthorCitation === innerCitation;
@@ -381,7 +447,7 @@ export function App() {
           className={`inline-flex items-center px-1 py-0.2 font-mono text-xs sm:text-sm border transition-colors cursor-pointer mx-0.5 ${
             isSelected
               ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
-              : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+              : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
           }`}
           title="Verifică fișa referinței bibliografice în panoul lateral"
         >
@@ -394,11 +460,7 @@ export function App() {
 
     if (lastIndex < paragraphText.length) {
       const remainingText = paragraphText.substring(lastIndex);
-      parts.push(
-        <React.Fragment key={`text-end`}>
-          {remainingText}
-        </React.Fragment>
-      );
+      parts.push(...applyGlossaryTooltips(remainingText, 'chunk-end'));
     }
 
     return parts;
@@ -500,7 +562,7 @@ export function App() {
         <div className="flex items-center shrink-0">
           <button
             onClick={() => setIsSearchOpen(true)}
-            className="px-2.5 sm:px-3.5 py-1.5 sm:py-2 text-xs font-semibold text-[#222426] bg-[#E5B822] border border-[#222426] hover:bg-[#D9A714] transition-colors whitespace-nowrap shrink-0 cursor-pointer flex items-center gap-1.5 sm:gap-2"
+            className="px-2.5 sm:px-3.5 py-1.5 sm:py-2 text-xs font-semibold text-[#222426] bg-[#E5B822] border border-[#222426] hover:bg-[#E5B822]/85 transition-colors whitespace-nowrap shrink-0 cursor-pointer flex items-center gap-1.5 sm:gap-2"
           >
             <Search className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Căutare în monografie</span>
@@ -510,7 +572,7 @@ export function App() {
       </header>
 
       {/* Mobile View Switcher */}
-      <div className="lg:hidden sticky top-[49px] z-30 bg-[#F4F1EA]/95 backdrop-blur-sm border-b border-[#222426] px-3 py-2 flex items-center gap-1.5 overflow-x-auto">
+      <div className="lg:hidden sticky top-[49px] z-30 bg-[#F6F5EE]/95 backdrop-blur-sm border-b border-[#222426] px-3 py-2 flex items-center gap-1.5 overflow-x-auto">
         {(
           [
             { id: 'parcurs', label: 'Parcurs pas cu pas' },
@@ -549,18 +611,18 @@ export function App() {
         {activeView === 'parcurs' && (
           <div className="space-y-6">
             {/* Editorial Header Section */}
-            <section className="bg-[#F4F1EA] border border-[#222426] p-4 sm:p-6">
-              <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-5 border-b border-[#D0D5D9]">
+            <section className="bg-[#F6F5EE] border border-[#222426] p-4 sm:p-6">
+              <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-5 border-b border-[#8C9BA5]">
                 <div className="max-w-3xl">
                   <div className="text-xs font-mono text-[#6E7376] mb-1.5">
-                    <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono font-semibold tracking-wider text-[#222426] uppercase bg-[#EBE6DF] border border-[#8C9BA5]">
+                    <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono font-semibold tracking-wider text-[#222426] uppercase bg-[#F6F5EE] border border-[#222426]">
                       MONOGRAFIE ȘTIINȚIFICĂ • VERSIUNEA 1.0
                     </span>
                   </div>
                   <h1 className="font-serif text-xl sm:text-3xl lg:text-4xl font-bold text-[#222426] headline-balance leading-tight mt-1">
                     Diagnosticul războiului cognitiv în România
                   </h1>
-                  <p className="text-xs sm:text-sm font-normal text-[#2C3539] mt-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm font-normal text-[#222426] mt-2 leading-relaxed">
                     Arhitectura instituțională, neurocognitivă și culturală a vulnerabilității și rezilienței societale în fața operațiunilor informaționale ruse și a ideologiei putiniste
                   </p>
                 </div>
@@ -588,7 +650,7 @@ export function App() {
                         onClick={() => setSelectedStratumHighlight(st)}
                         className={`px-2.5 py-1 border cursor-pointer whitespace-nowrap shrink-0 transition-colors ${
                           selectedStratumHighlight === st
-                            ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
+                            ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-bold'
                             : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
                         }`}
                       >
@@ -605,24 +667,24 @@ export function App() {
               {/* LEFT COLUMN: Sticky Table of Contents (TOC) - 3 cols */}
               {!isReaderMode && (
                 <aside className="hidden lg:block lg:col-span-3 space-y-4 lg:sticky lg:top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-1">
-                  <div className="bg-[#F4F1EA] border border-[#222426] p-4 space-y-3">
-                    <div className="flex items-center justify-between text-xs font-mono font-bold text-[#222426] border-b border-[#D0D5D9] pb-2">
-                      <span className="uppercase tracking-wider">Cuprins Monografie</span>
-                      <span>19 Secțiuni</span>
+                  <div className="bg-[#F6F5EE] border border-[#222426] p-4 space-y-3">
+                    <div className="flex items-center justify-between text-xs font-mono font-bold text-[#222426] border-b border-[#8C9BA5] pb-2">
+                      <span className="uppercase tracking-wider">Cuprinsul monografiei</span>
+                      <span>19 secțiuni</span>
                     </div>
 
                     <div className="space-y-3 text-xs font-mono">
                       {[
                         { chapNum: 0, title: 'Introducere', steps: [1] },
                         { chapNum: 1, title: 'Capitolul 1: Vulnerabilități', steps: [2, 3, 4] },
-                        { chapNum: 2, title: 'Capitolul 2: Ideologia Putinistă', steps: [5, 6, 7] },
+                        { chapNum: 2, title: 'Capitolul 2: Ideologia putinistă', steps: [5, 6, 7] },
                         { chapNum: 3, title: 'Capitolul 3: Capturarea OODA', steps: [8, 9, 10] },
-                        { chapNum: 4, title: 'Capitolul 4: Filtrele Umbrei', steps: [11, 12, 13] },
+                        { chapNum: 4, title: 'Capitolul 4: Polarizare și Umbra colectivă', steps: [11, 12, 13] },
                         { chapNum: 5, title: 'Capitolul 5: Matricea Cipolla', steps: [14, 15] },
                         { chapNum: 6, title: 'Capitolul 6: Reconstrucție', steps: [16, 17, 18, 19] }
                       ].map((group) => (
                         <div key={group.chapNum} className="space-y-1">
-                          <div className="text-[11px] font-bold text-[#222426] pt-1 border-t border-[#D0D5D9]/60">
+                          <div className="text-[11px] font-bold text-[#222426] pt-1 border-t border-[#8C9BA5]/60">
                             {group.title}
                           </div>
                           <div className="pl-1.5 space-y-0.5">
@@ -637,7 +699,7 @@ export function App() {
                                   className={`w-full text-left px-2 py-1 text-[11px] border transition-colors cursor-pointer block truncate ${
                                     isActive
                                       ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
-                                      : 'bg-[#F6F5EE] text-[#2C3539] border-transparent hover:border-[#8C9BA5]'
+                                      : 'bg-[#F6F5EE] text-[#222426] border-transparent hover:border-[#8C9BA5]'
                                   }`}
                                   title={stObj.title}
                                 >
@@ -653,11 +715,11 @@ export function App() {
                 </aside>
               )}
 
-              {/* CENTER COLUMN: Main Reading Stage (Line Measure 62-65ch) */}
+              {/* CENTER COLUMN: Main Reading Stage */}
               <div
                 className={
                   isReaderMode
-                    ? 'lg:col-span-12 max-w-[65ch] mx-auto space-y-6'
+                    ? 'lg:col-span-12 max-w-[88ch] mx-auto space-y-6'
                     : 'lg:col-span-6 space-y-6'
                 }
               >
@@ -667,7 +729,7 @@ export function App() {
                   className="scroll-mt-28 bg-[#F6F5EE] border border-[#222426] p-4 sm:p-8"
                 >
                   {/* Step Header & Navigation */}
-                  <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-[#D0D5D9]">
+                  <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-[#8C9BA5]">
                     <div className="text-xs font-mono text-[#6E7376]">
                       Pasul {currentStep.stepNumber} din 19 · {currentStep.chapterTitle}
                     </div>
@@ -675,7 +737,7 @@ export function App() {
                       <button
                         disabled={currentStepNumber <= 1}
                         onClick={() => handleStepSelect(currentStepNumber - 1)}
-                        className="px-2.5 py-1 text-xs font-mono border border-[#222426] bg-[#F4F1EA] hover:bg-[#E5B822]/20 disabled:opacity-40 disabled:pointer-events-none cursor-pointer flex items-center gap-1 whitespace-nowrap shrink-0"
+                        className="px-2.5 py-1 text-xs font-mono border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822]/20 disabled:opacity-40 disabled:pointer-events-none cursor-pointer flex items-center gap-1 whitespace-nowrap shrink-0"
                       >
                         <ArrowLeft className="w-3.5 h-3.5" />
                         <span>Pasul anterior</span>
@@ -683,7 +745,7 @@ export function App() {
                       <button
                         disabled={currentStepNumber >= ALL_SUBCHAPTER_STEPS.length}
                         onClick={() => handleStepSelect(currentStepNumber + 1)}
-                        className="px-2.5 py-1 text-xs font-mono border border-[#222426] bg-[#E5B822] hover:bg-[#D9A714] disabled:opacity-40 disabled:pointer-events-none cursor-pointer flex items-center gap-1 font-semibold whitespace-nowrap shrink-0"
+                        className="px-2.5 py-1 text-xs font-mono border border-[#222426] bg-[#E5B822] hover:bg-[#E5B822]/85 disabled:opacity-40 disabled:pointer-events-none cursor-pointer flex items-center gap-1 font-semibold whitespace-nowrap shrink-0"
                       >
                         <span>Pasul următor</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -692,7 +754,7 @@ export function App() {
                   </div>
 
                   {/* Dual-Audience Reading Mode Toggle */}
-                  <div className="mb-5 p-3 bg-[#F4F1EA] border border-[#222426] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                  <div className="mb-5 p-3 bg-[#F6F5EE] border border-[#222426] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
                     <div className="text-xs font-mono text-[#222426] font-semibold">
                       Registru de lectură (Comutator dublu pentru cercetători și decidenți)
                     </div>
@@ -723,7 +785,7 @@ export function App() {
                   </div>
 
                   {/* Social Share Bar for Current Section */}
-                  <div className="mb-5 pb-3 border-b border-[#D0D5D9] flex flex-wrap items-center justify-between gap-2">
+                  <div className="mb-5 pb-3 border-b border-[#8C9BA5] flex flex-wrap items-center justify-between gap-2">
                     <SocialShareButtons
                       url={`https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/share/pasul-${currentStep.stepNumber}.html`}
                       title={`${currentStep.title} (Diagnosticul războiului cognitiv în România)`}
@@ -743,13 +805,13 @@ export function App() {
                     </h2>
                   </div>
                   {currentStep.subtitle && (
-                    <p className="font-serif text-sm sm:text-base font-normal text-[#2C3539] mt-2 leading-relaxed">
+                    <p className="font-serif text-sm sm:text-base font-normal text-[#222426] mt-2 leading-relaxed">
                       {currentStep.subtitle}
                     </p>
                   )}
 
                   {/* Systemic Thesis Box */}
-                  <div className="mt-5 p-4 bg-[#F4F1EA] border border-[#222426]">
+                  <div className="mt-5 p-4 bg-[#F6F5EE] border border-[#222426]">
                     <div className="text-xs font-mono font-semibold text-[#222426] mb-1">
                       Sinteză cauzală și teză structurală
                     </div>
@@ -760,7 +822,7 @@ export function App() {
 
                   {/* EXECUTIVE SYNTHESIS VIEW */}
                   {audienceMode === 'executive' && (
-                    <div className="mt-6 p-4 sm:p-5 bg-[#F4F1EA] border-2 border-[#222426] space-y-5">
+                    <div className="mt-6 p-4 sm:p-5 bg-[#F6F5EE] border-2 border-[#222426] space-y-5">
                       <div className="border-b border-[#222426] pb-3">
                         <div className="text-xs font-mono font-bold text-[#222426] uppercase tracking-wider">
                           Sinteză executivă de capitol pentru decidenți instituționali și politici publice
@@ -779,7 +841,7 @@ export function App() {
                             key={pt.id}
                             className="p-3.5 bg-[#F6F5EE] border border-[#222426] space-y-1.5"
                           >
-                            <div className="flex items-center justify-between gap-2 border-b border-[#D0D5D9] pb-1">
+                            <div className="flex items-center justify-between gap-2 border-b border-[#8C9BA5] pb-1">
                               <span className="text-xs font-mono font-bold text-[#222426]">
                                 Directiva {idx + 1}
                               </span>
@@ -787,7 +849,7 @@ export function App() {
                                 className={`text-[11px] font-mono px-2 py-0.5 border ${
                                   idx === 0
                                     ? 'bg-[#F01E1E]/10 text-[#F01E1E] border-[#F01E1E]'
-                                    : 'bg-[#E5B822]/20 text-[#222426] border-[#D9A714]'
+                                    : 'bg-[#E5B822]/25 text-[#222426] border-[#222426]'
                                 }`}
                               >
                                 {pt.title}
@@ -796,7 +858,7 @@ export function App() {
                             <p className="font-serif text-sm sm:text-base font-bold text-[#222426] mb-1.5 leading-snug">
                               {pt.takeaway}
                             </p>
-                            <p className="text-xs sm:text-sm text-[#2C3539] leading-relaxed">
+                            <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                               {pt.implication}
                             </p>
                           </div>
@@ -807,7 +869,7 @@ export function App() {
                         <button
                           type="button"
                           onClick={() => handleAudienceModeChange('academic')}
-                          className="px-3.5 py-2 text-xs font-mono font-semibold bg-[#222426] text-[#F6F5EE] border border-[#222426] hover:bg-[#2C3539] cursor-pointer"
+                          className="px-3.5 py-2 text-xs font-mono font-semibold bg-[#222426] text-[#F6F5EE] border border-[#222426] hover:bg-[#6E7376] cursor-pointer"
                         >
                           Comută la textul integral academic al secțiunii →
                         </button>
@@ -816,7 +878,7 @@ export function App() {
                   )}
 
                   {/* Interactive Concept Anchors */}
-                  <div className="mt-5 pt-4 border-t border-[#D0D5D9]">
+                  <div className="mt-5 pt-4 border-t border-[#8C9BA5]">
                     <div className="text-xs font-mono text-[#6E7376] mb-2">
                       Concepte-cheie în această secțiune (selectați pentru descompunere în panoul lateral)
                     </div>
@@ -825,15 +887,23 @@ export function App() {
                         const conceptObj = GLOSSARY_CONCEPTS.find((c) => c.id === cid);
                         if (!conceptObj) return null;
                         const isSelected = activeConceptId === cid;
+                        const isStratumMatch =
+                          selectedStratumHighlight !== 'ALL' &&
+                          conceptObj.stratum === selectedStratumHighlight;
+                        const isStratumDimmed =
+                          selectedStratumHighlight !== 'ALL' &&
+                          conceptObj.stratum !== selectedStratumHighlight;
                         return (
                           <button
                             key={cid}
                             onClick={() => handleConceptSelect(cid)}
-                            className={`px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
+                            className={`px-3 py-1.5 text-xs font-medium border transition-all cursor-pointer ${
                               isSelected
                                 ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-                                : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
-                            }`}
+                                : isStratumMatch
+                                  ? 'bg-[#E5B822]/25 text-[#222426] border-2 border-[#E5B822] ring-2 ring-[#E5B822]/40 font-semibold'
+                                  : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+                            } ${isStratumDimmed ? 'opacity-40' : ''}`}
                           >
                             {conceptObj.term}
                           </button>
@@ -853,57 +923,74 @@ export function App() {
                       </h3>
 
                       <div className="space-y-4">
-                        {currentStep.dualRegister.map((dr) => (
-                          <div
-                            key={dr.id}
-                            className="grid grid-cols-1 md:grid-cols-2 border border-[#222426] bg-[#F4F1EA]"
-                          >
-                            {/* Left: Theoretical Register */}
-                            <div className="p-4 border-b md:border-b-0 md:border-r border-[#222426]">
-                              <div className="text-xs font-mono text-[#6E7376] mb-1">
-                                Stratul teoretic și conceptual (Stratul {dr.stratum})
-                              </div>
-                              <div className="font-serif text-sm font-bold text-[#222426]">
-                                {dr.theoreticalConcept}
-                              </div>
-                              <div className="text-xs font-mono text-[#6E7376] mt-0.5 mb-2">
-                                {dr.theoreticalAuthor}
-                              </div>
-                              <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
-                                {dr.theoreticalMechanism}
-                              </p>
-                            </div>
-
-                            {/* Right: Empirical Reality */}
+                        {currentStep.dualRegister.map((dr) => {
+                          const isStratumMatch =
+                            selectedStratumHighlight !== 'ALL' &&
+                            dr.stratum === selectedStratumHighlight;
+                          const isStratumDimmed =
+                            selectedStratumHighlight !== 'ALL' &&
+                            dr.stratum !== selectedStratumHighlight;
+                          return (
                             <div
-                              className={`p-4 ${
-                                dr.systemicOutcome === 'tension'
-                                  ? 'bg-[#F01E1E]/5'
-                                  : 'bg-[#E5B822]/15'
-                              }`}
+                              key={dr.id}
+                              className={`grid grid-cols-1 md:grid-cols-2 bg-[#F6F5EE] transition-all ${
+                                isStratumMatch
+                                  ? 'border-2 border-[#E5B822] ring-2 ring-[#E5B822]/40'
+                                  : 'border border-[#222426]'
+                              } ${isStratumDimmed ? 'opacity-40' : ''}`}
                             >
+                              {/* Left: Theoretical Register */}
+                              <div className="p-4 border-b md:border-b-0 md:border-r border-[#222426]">
+                                <div className="text-xs font-mono text-[#6E7376] mb-1 flex items-center justify-between">
+                                  <span>Stratul teoretic și conceptual (Stratul {dr.stratum})</span>
+                                  {isStratumMatch && (
+                                    <span className="px-1.5 py-0.5 text-[10px] font-mono font-bold bg-[#E5B822] text-[#222426] border border-[#222426]">
+                                      STRATUL {dr.stratum} ACTIV
+                                    </span>
+                                  )}
+                                </div>
+                                <div className="font-serif text-sm font-bold text-[#222426]">
+                                  {dr.theoreticalConcept}
+                                </div>
+                                <div className="text-xs font-mono text-[#6E7376] mt-0.5 mb-2">
+                                  {dr.theoreticalAuthor}
+                                </div>
+                                <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
+                                  {dr.theoreticalMechanism}
+                                </p>
+                              </div>
+
+                              {/* Right: Empirical Reality */}
                               <div
-                                className={`text-xs font-mono font-semibold mb-1 ${
+                                className={`p-4 ${
                                   dr.systemicOutcome === 'tension'
-                                    ? 'text-[#F01E1E]'
-                                    : 'text-[#222426]'
+                                    ? 'bg-[#F01E1E]/5'
+                                    : 'bg-[#E5B822]/15'
                                 }`}
                               >
-                                {dr.systemicOutcome === 'tension'
-                                  ? 'Stratul empiric (falie structurală și vulnerabilitate)'
-                                  : 'Stratul empiric (mecanism de echilibrare și reziliență)'}
+                                <div
+                                  className={`text-xs font-mono font-semibold mb-1 ${
+                                    dr.systemicOutcome === 'tension'
+                                      ? 'text-[#F01E1E]'
+                                      : 'text-[#222426]'
+                                  }`}
+                                >
+                                  {dr.systemicOutcome === 'tension'
+                                    ? 'Stratul empiric (falie structurală și vulnerabilitate)'
+                                    : 'Stratul empiric (mecanism de echilibrare și reziliență)'}
+                                </div>
+                                <p className="text-xs sm:text-sm text-[#222426] leading-relaxed mt-2">
+                                  {dr.empiricalReality}
+                                </p>
                               </div>
-                              <p className="text-xs sm:text-sm text-[#222426] leading-relaxed mt-2">
-                                {dr.empiricalReality}
-                              </p>
                             </div>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     </div>
                   )}
 
-                  {/* FULL VERBATIM MONOGRAPH TEXT (62-65ch Measure) */}
+                  {/* FULL VERBATIM MONOGRAPH TEXT (62-65ch Measure + Full-Width Inline Figures) */}
                   {(readingTab === 'integral' || readingTab === 'ambele') && (
                     <div className="mt-6 pt-6 border-t border-[#222426]">
                       <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
@@ -911,17 +998,30 @@ export function App() {
                           Textul integral al secțiunii din monografie (Fidelitate textuală completă)
                         </div>
                         <div className="text-[11px] font-mono text-[#6E7376]">
-                          Selectați citările (autor, an) pentru verificarea în bibliografie
+                          Selectați citările (autor, an) și termenii subliniați pentru explicații contextuale
                         </div>
                       </div>
-                      <div className="space-y-5 font-serif text-[17px] sm:text-[18px] text-[#222426] leading-[1.65] max-w-[65ch]">
+                      <div className="space-y-5 font-serif text-[17px] sm:text-[18px] text-[#222426] leading-[1.65]">
                         {currentStep.paragraphs.map((paragraph, index) => {
                           const isFigureCaption = paragraph.startsWith('Figura ');
+                          if (isFigureCaption && currentStep.linkedFigureId) {
+                            return (
+                              <div
+                                key={`inline-figure-${currentStep.linkedFigureId}-${index}`}
+                                className="my-6 font-sans w-full"
+                              >
+                                <InteractiveFigures
+                                  figureId={currentStep.linkedFigureId}
+                                  showSelector={false}
+                                />
+                              </div>
+                            );
+                          }
                           if (isFigureCaption) {
                             return (
                               <div
                                 key={index}
-                                className="p-4 bg-[#F4F1EA] border border-[#222426] text-xs sm:text-sm italic text-[#2C3539] leading-relaxed my-4"
+                                className="p-4 bg-[#F6F5EE] border border-[#222426] text-xs sm:text-sm italic text-[#222426] leading-relaxed my-4 max-w-[65ch]"
                               >
                                 {paragraph}
                               </div>
@@ -930,24 +1030,38 @@ export function App() {
                           return (
                             <p
                               key={index}
-                              className={
+                              className={`max-w-[65ch] ${
                                 index === 0
                                   ? 'first-letter:text-4xl first-letter:font-serif first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[#222426]'
                                   : ''
-                              }
+                              }`}
                             >
                               {renderParagraphWithCitations(paragraph)}
                             </p>
                           );
                         })}
+
+                        {/* Render full-width figure at the end of section if linkedFigureId is set and no paragraph started with 'Figura ' */}
+                        {currentStep.linkedFigureId &&
+                          !currentStep.paragraphs.some((p) => p.startsWith('Figura ')) && (
+                            <div
+                              key={`inline-figure-end-${currentStep.linkedFigureId}`}
+                              className="my-6 font-sans w-full"
+                            >
+                              <InteractiveFigures
+                                figureId={currentStep.linkedFigureId}
+                                showSelector={false}
+                              />
+                            </div>
+                          )}
                       </div>
 
                       {/* Midpoint Summary Callout at Dense Steps */}
                       {[1, 4, 7, 10, 13, 15, 19].includes(currentStep.stepNumber) && (
-                        <div className="mt-8 p-4.5 bg-[#F4F1EA] border-2 border-[#222426] space-y-2">
+                        <div className="mt-8 p-4.5 bg-[#F6F5EE] border-2 border-[#222426] space-y-2 max-w-[65ch]">
                           <div className="text-xs font-mono font-bold text-[#222426] uppercase tracking-wider flex items-center gap-2">
                             <span className="w-2 h-2 bg-[#E5B822] border border-[#222426] inline-block" />
-                            <span>Punct de control & Sinteză intermediară (Midpoint Summary)</span>
+                            <span>Punct de control și sinteză intermediară</span>
                           </div>
                           <p className="text-xs sm:text-sm font-serif text-[#222426] leading-relaxed italic">
                             {currentStep.summaryThesis}
@@ -958,7 +1072,7 @@ export function App() {
                   )}
 
                   {/* Cited Authors Pills */}
-                  <div className="mt-8 pt-4 border-t border-[#D0D5D9]">
+                  <div className="mt-8 pt-4 border-t border-[#8C9BA5]">
                     <div className="text-xs font-mono font-semibold text-[#222426] mb-2">
                       Autori și lucrări de referință citate în această secțiune
                     </div>
@@ -973,7 +1087,7 @@ export function App() {
                             className={`px-2.5 py-1 text-xs font-mono border transition-colors cursor-pointer ${
                               isSelected
                                 ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
-                                : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+                                : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
                             }`}
                           >
                             {authorLabel}
@@ -988,7 +1102,7 @@ export function App() {
                     {currentStepNumber > 1 ? (
                       <button
                         onClick={() => handleStepSelect(currentStepNumber - 1)}
-                        className="px-4 py-2.5 text-xs font-medium border border-[#222426] bg-[#F4F1EA] hover:bg-[#E5B822]/20 transition-colors cursor-pointer flex items-center gap-2"
+                        className="px-4 py-2.5 text-xs font-medium border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822]/20 transition-colors cursor-pointer flex items-center gap-2"
                       >
                         <ArrowLeft className="w-4 h-4 shrink-0" />
                         <span className="truncate">
@@ -1002,7 +1116,7 @@ export function App() {
                     {currentStepNumber < ALL_SUBCHAPTER_STEPS.length ? (
                       <button
                         onClick={() => handleStepSelect(currentStepNumber + 1)}
-                        className="px-5 py-2.5 text-xs font-semibold border border-[#222426] bg-[#E5B822] hover:bg-[#D9A714] transition-colors cursor-pointer flex items-center justify-center gap-2"
+                        className="px-5 py-2.5 text-xs font-semibold border border-[#222426] bg-[#E5B822] hover:bg-[#E5B822]/85 transition-colors cursor-pointer flex items-center justify-center gap-2"
                       >
                         <span className="truncate">
                           Pasul următor ({ALL_SUBCHAPTER_STEPS[currentStepNumber].code})
@@ -1016,7 +1130,7 @@ export function App() {
                           updateUrlHash('tabele');
                           window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}
-                        className="px-5 py-2.5 text-xs font-semibold border border-[#222426] bg-[#E5B822] hover:bg-[#D9A714] transition-colors cursor-pointer flex items-center justify-center gap-2"
+                        className="px-5 py-2.5 text-xs font-semibold border border-[#222426] bg-[#E5B822] hover:bg-[#E5B822]/85 transition-colors cursor-pointer flex items-center justify-center gap-2"
                       >
                         <span>Explorează Tabelele 1 și 2 de sinteză</span>
                         <ArrowRight className="w-4 h-4 shrink-0" />
@@ -1034,27 +1148,43 @@ export function App() {
                 >
                   {/* Sidenote Cards for Current Step Key Terms */}
                   <div className="space-y-3">
-                    <div className="text-xs font-mono font-bold text-[#222426] border-b border-[#D0D5D9] pb-1.5 uppercase tracking-wider flex items-center justify-between">
-                      <span>Note marginale (Sidenotes)</span>
-                      <span>{currentStep.keyConceptIds.length} Termeni</span>
+                    <div className="text-xs font-mono font-bold text-[#222426] border-b border-[#8C9BA5] pb-1.5 uppercase tracking-wider flex items-center justify-between">
+                      <span>Note marginale</span>
+                      <span>{currentStep.keyConceptIds.length} termeni</span>
                     </div>
 
                     {currentStep.keyConceptIds.map((cid) => {
                       const conceptObj = GLOSSARY_CONCEPTS.find((c) => c.id === cid);
                       if (!conceptObj) return null;
                       const isSelected = activeConceptId === cid;
+                      const isStratumMatch =
+                        selectedStratumHighlight !== 'ALL' &&
+                        conceptObj.stratum === selectedStratumHighlight;
+                      const isStratumDimmed =
+                        selectedStratumHighlight !== 'ALL' &&
+                        conceptObj.stratum !== selectedStratumHighlight;
                       return (
                         <div
                           key={cid}
                           onClick={() => handleConceptSelect(cid)}
-                          className={`p-3 bg-[#F4F1EA] border transition-all cursor-pointer space-y-1 ${
-                            isSelected
-                              ? 'border-2 border-[#222426] shadow-sm'
-                              : 'border-[#8C9BA5] hover:border-[#222426]'
-                          }`}
+                          className={`p-3 bg-[#F6F5EE] transition-all cursor-pointer space-y-1 ${
+                            isStratumMatch
+                              ? 'border-2 border-[#E5B822] ring-2 ring-[#E5B822]/40'
+                              : isSelected
+                                ? 'border-2 border-[#222426]'
+                                : 'border border-[#8C9BA5] hover:border-[#222426]'
+                          } ${isStratumDimmed ? 'opacity-40' : ''}`}
                         >
                           <div className="flex items-center justify-between text-[11px] font-mono text-[#6E7376]">
-                            <span>Stratul {conceptObj.stratum}</span>
+                            <span
+                              className={
+                                isStratumMatch
+                                  ? 'px-1.5 py-0.5 bg-[#E5B822] text-[#222426] border border-[#222426] font-bold'
+                                  : ''
+                              }
+                            >
+                              Stratul {conceptObj.stratum}
+                            </span>
                             <span>{conceptObj.domain}</span>
                           </div>
                           <div className="font-serif font-bold text-xs sm:text-sm text-[#222426]">
@@ -1063,7 +1193,7 @@ export function App() {
                           <div className="text-[11px] font-mono text-[#6E7376]">
                             {conceptObj.authors}
                           </div>
-                          <p className="text-xs text-[#2C3539] leading-relaxed line-clamp-3">
+                          <p className="text-xs text-[#222426] leading-relaxed line-clamp-3">
                             {conceptObj.definition}
                           </p>
                         </div>
@@ -1085,7 +1215,7 @@ export function App() {
                         <button
                           type="button"
                           onClick={() => setSelectedAuthorCitation(null)}
-                          className="p-1 border border-[#222426] bg-[#F4F1EA] hover:bg-[#E5B822]/30 cursor-pointer shrink-0"
+                          className="p-1 border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822]/30 cursor-pointer shrink-0"
                           aria-label="Închide referința"
                         >
                           <X className="w-3.5 h-3.5 text-[#222426]" />
@@ -1097,7 +1227,7 @@ export function App() {
                           {matchedBibliographyForInspector.map((bib) => (
                             <div
                               key={bib.id}
-                              className="p-3 bg-[#F4F1EA] border border-[#222426] text-xs"
+                              className="p-3 bg-[#F6F5EE] border border-[#222426] text-xs"
                             >
                               <div className="flex items-center justify-between font-mono text-[11px] text-[#6E7376] mb-1">
                                 <span>
@@ -1122,9 +1252,9 @@ export function App() {
                   {activeGlossaryConcept && (
                     <div
                       ref={conceptCardRef}
-                      className="scroll-mt-28 bg-[#F4F1EA] border border-[#222426] p-4"
+                      className="scroll-mt-28 bg-[#F6F5EE] border border-[#222426] p-4"
                     >
-                      <div className="flex items-center justify-between gap-2 text-[11px] font-mono text-[#6E7376] pb-2 mb-2 border-b border-[#D0D5D9]">
+                      <div className="flex items-center justify-between gap-2 text-[11px] font-mono text-[#6E7376] pb-2 mb-2 border-b border-[#8C9BA5]">
                         <span>Fișă detaliată (Stratul {activeGlossaryConcept.stratum})</span>
                         <span>{activeGlossaryConcept.domain}</span>
                       </div>
@@ -1141,7 +1271,7 @@ export function App() {
                         className={`p-3 border text-xs leading-relaxed ${
                           activeGlossaryConcept.polarity === 'tension'
                             ? 'border-[#F01E1E] bg-[#F01E1E]/5 text-[#222426]'
-                            : 'border-[#D9A714] bg-[#E5B822]/20 text-[#222426]'
+                            : 'border-[#222426] bg-[#E5B822]/25 text-[#222426]'
                         }`}
                       >
                         <span className="font-mono font-semibold block mb-0.5">
@@ -1152,12 +1282,35 @@ export function App() {
                     </div>
                   )}
 
-                  {/* Synchronized Figure Launcher */}
+                  {/* Compact Quick-Reference Figure Card in Right Sidebar */}
                   {currentStep.linkedFigureId && (
-                    <InteractiveFigures
-                      figureId={currentStep.linkedFigureId}
-                      showSelector={false}
-                    />
+                    <div className="bg-[#F6F5EE] border-2 border-[#222426] p-4 space-y-2.5">
+                      <div className="flex items-center justify-between text-[11px] font-mono text-[#6E7376] border-b border-[#8C9BA5] pb-1.5">
+                        <span className="font-bold text-[#222426]">
+                          DIAGRAMĂ ASOCIATĂ (FIGURA {currentStep.linkedFigureId})
+                        </span>
+                        <span>{FIGURE_METADATA[currentStep.linkedFigureId]?.chapterRef}</span>
+                      </div>
+                      <div className="font-serif text-xs sm:text-sm font-bold text-[#222426] leading-snug">
+                        {FIGURE_METADATA[currentStep.linkedFigureId]?.title}
+                      </div>
+                      <p className="text-[11px] text-[#6E7376] leading-relaxed">
+                        Diagrama interactivă este afișată pe întreaga lățime a coloanei centrale de lectură. Pentru inspecție extinsă și compararea celor 7 planșe, deschideți Laboratorul de diagrame.
+                      </p>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const figId = currentStep.linkedFigureId!;
+                          setLabFigureId(figId);
+                          setActiveView('diagrame');
+                          updateUrlHash(`figura-${figId}`);
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="w-full px-3 py-2 text-xs font-mono font-bold text-[#222426] bg-[#E5B822] border border-[#222426] hover:bg-[#E5B822]/85 transition-colors cursor-pointer flex items-center justify-center gap-1.5"
+                      >
+                        <span>Vezi Figura {currentStep.linkedFigureId} în Laboratorul de diagrame →</span>
+                      </button>
+                    </div>
                   )}
                 </aside>
               )}
@@ -1168,7 +1321,7 @@ export function App() {
         {/* VIEW 2: LABORATORUL CELOR 7 DIAGRAME DE SISTEM */}
         {activeView === 'diagrame' && (
           <div className="space-y-6">
-            <div className="bg-[#F4F1EA] border border-[#222426] p-4 sm:p-5">
+            <div className="bg-[#F6F5EE] border border-[#222426] p-4 sm:p-5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
                 Hărți sistemice 2D în stil gravură vectorială (Figurile 1–7 din monografie)
               </div>
@@ -1176,7 +1329,7 @@ export function App() {
                 Laboratorul diagramelor cauzale din monografie
               </h2>
               <p className="text-xs sm:text-sm text-[#6E7376] mt-1">
-                Interacționați cu toate cele șapte diagrame vectoriale ale lucrării pentru a inspecta propagarea stresului alostatic, dubla falsificare axiologică, deturnarea buclei OODA, filtrele Umbrei colective, matricea lui Cipolla, bifurcația Track A / Track B și protocolul în trei faze.
+                Interacționați cu toate cele șapte diagrame vectoriale ale lucrării pentru a inspecta propagarea stresului alostatic, dubla falsificare axiologică, deturnarea buclei OODA, proiecția Umbrei colective și enantiodromia, matricea lui Cipolla, bifurcația Track A / Track B și protocolul în trei faze.
               </p>
             </div>
 
@@ -1201,7 +1354,7 @@ export function App() {
       {/* STICKY BACK TO TOP BUTTON */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-6 right-6 z-40 p-3 bg-[#222426] text-[#F6F5EE] border border-[#222426] shadow-lg hover:bg-[#34383C] cursor-pointer flex items-center gap-1.5 text-xs font-mono"
+        className="fixed bottom-6 right-6 z-40 p-3 bg-[#222426] text-[#F6F5EE] border border-[#222426] hover:bg-[#6E7376] cursor-pointer flex items-center gap-1.5 text-xs font-mono"
         title="Înapoi la începutul paginii"
       >
         <ArrowUp className="w-4 h-4" />
@@ -1209,9 +1362,9 @@ export function App() {
       </button>
 
       {/* CLEAN EDITORIAL FOOTER */}
-      <footer className="mt-12 border-t border-[#222426] bg-[#F4F1EA] px-4 sm:px-8 py-6">
+      <footer className="mt-12 border-t border-[#222426] bg-[#F6F5EE] px-4 sm:px-8 py-6">
         <div className="max-w-[1440px] mx-auto space-y-4">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-[#D0D5D9]">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-[#8C9BA5]">
             <div className="text-xs text-[#6E7376]">
               <span className="font-serif font-bold text-[#222426]">
                 Diagnosticul războiului cognitiv în România (Versiunea 1.0)
