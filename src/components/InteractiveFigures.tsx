@@ -82,15 +82,15 @@ export const FIGURE_METADATA: Record<
   },
   6: {
     id: 6,
-    title: 'Figura 6 (Bifurcarea procesării neurocognitive sub presiunea crizei acute)',
+    title: 'Figura 6 (Modelul comparativ al procesării cognitive în criză acută: Track A vs. Track B)',
     subtitle:
-      'Opoziția funcțională dintre bucla reactivă dezadaptativă (Track A) și traseul deliberativ adaptativ (Track B)',
+      'Divergența dintre bucla reactivă defensivă (Track A) și traseul deliberativ adaptativ (Track B)',
     chapterRef: 'Capitolul 5 (Subcapitolul 5.2)',
     pdfPage: 30,
     caption:
-      'La întâlnirea stimulului de criză acută în nodul de bifurcație cognitivă, absența reglării executive deviază procesarea pe Track A (sus, marcat cu roșu), unde hiperactivarea amigdaliană, inhibiția cortexului prefrontal dorsolateral și capturarea dopaminergică a atenției produc paralizie decizională, furie și o buclă de autoamplificare reactivă. În contrast, activarea conexiunilor prefrontale și a capacității negative orientează procesarea pe Track B (jos, marcat cu galben-muștar), permițând analiza deliberativă, validarea epistemică și comunitară în regim de mediere ternară și generând reziliență și acțiune suverană.',
+      'Nodul unic de bifurcație superior (stresul acut și policriza) desprinde divergent procesarea defensivă (Track A, stânga) de procesarea adaptativă (Track B, dreapta). În Track A, anxietatea cronică și nevoia de închidere cognitivă (NFCC, intoleranță la ambiguitate și urgență decizională) activează persona mimetică și generează o tensiune compensatorie cu umbra colectivă, închisă fizic într-o buclă de autoamplificare algoritmică (R). În Track B, procesarea parcurge strict etapele cognitive adaptative (acceptarea incertitudinii, reactivarea Sistemului 2, toleranța disonanței cu recuperarea ingeniozității Trickster, discernământ critic și creație suverană), conectată ontologic la bază cu axa Ego–Sine.',
     methodologicalNote:
-      'Arhitectura bifurcării procesării cognitive în condiții de criză acută (adaptată după Cogniție și manipulare) arată modul în care stimulul stresor este direcționat fie pe bucla reactivă dezadaptativă (Track A), dominată de amigdala bazolaterală și de capturarea dopaminergică, fie pe traseul deliberativ adaptativ (Track B), guvernat de cortexul prefrontal dorsolateral și ventromedial.'
+      'Modelul sistemic al procesării cognitive în criză (adaptat după Kruglanski, Kahneman și psihologia analitică) evidențiază bifurcarea dintre bucla reactivă de autoamplificare (R) și traseul deliberativ adaptativ de integrare suverană pe axa Ego–Sine.'
   },
   7: {
     id: 7,
@@ -139,7 +139,7 @@ const SharedSvgDefs: React.FC = () => (
       markerHeight="6.5"
       orient="auto-start-reverse"
     >
-      <path d="M 0 1.5 L 8.5 5 L 0 8.5 z" fill="#D9A714" />
+      <path d="M 0 1.5 L 8.5 5 L 0 8.5 z" fill="#E5B822" />
     </marker>
     <marker
       id="arrow-red"
@@ -210,9 +210,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
       : 'w-full h-auto min-w-[660px] select-none';
 
   return (
-    <div className="bg-[#F4F1EA] border border-[#222426] p-5 sm:p-6">
+    <div className="bg-[#F6F5EE] border border-[#222426] p-5 sm:p-6">
       {showSelector && onSelectFigure && (
-        <div className="mb-6 pb-4 border-b border-[#D0D5D9]">
+        <div className="mb-6 pb-4 border-b border-[#8C9BA5]">
           <div className="text-xs font-mono text-[#6E7376] mb-2">
             Selectați diagrama vectorială de sistem (Figurile 1–7 din monografie)
           </div>
@@ -235,7 +235,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
       )}
 
       {/* Header */}
-      <div className="mb-5 pb-4 border-b border-[#D0D5D9]">
+      <div className="mb-5 pb-4 border-b border-[#8C9BA5]">
         <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#6E7376] mb-1">
           <span>
             {meta.chapterRef} · Pagina {meta.pdfPage} în PDF
@@ -284,29 +284,34 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
       {/* =====================================================================
           FIGURA 1: Arhitectura cauzală pe trei straturi (Pagina 8)
          ===================================================================== */}
+      {/* =====================================================================
+          FIGURA 1: Arhitectura cauzală pe trei straturi (Pagina 8)
+         ===================================================================== */}
       {figureId === 1 && (
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#D0D5D9]">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
               Regimul sistemic simulat pe Straturile A, B și C
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
+                type="button"
                 onClick={() => setFig1Mode('vulnerable')}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   fig1Mode === 'vulnerable'
                     ? 'bg-[#F01E1E] text-[#F6F5EE] border-[#F01E1E]'
-                    : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
                 Vulnerabilitate endogenă și cuplare ostilă
               </button>
               <button
+                type="button"
                 onClick={() => setFig1Mode('resilient')}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   fig1Mode === 'resilient'
                     ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-                    : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
                 Filtru axiologic și închidere operațională
@@ -316,33 +321,33 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 880 510"
+              viewBox="0 0 900 540"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="880" height="510" fill="#F6F5EE" />
-              <rect x="0" y="0" width="880" height="510" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="900" height="540" fill="#F6F5EE" />
+              <rect x="0" y="0" width="900" height="540" fill="url(#stipple-bg)" />
 
-              {/* STRATUL A CONTAINER */}
+              {/* STRATUL A CONTAINER: Casete rectangulare cu contur ferm (#222426) */}
               <rect
                 x="35"
-                y="32"
-                width="575"
-                height="118"
-                fill="#F4F1EA"
-                stroke="#D9A714"
+                y="28"
+                width="605"
+                height="125"
+                fill="#F6F5EE"
+                stroke="#222426"
                 strokeWidth="2.5"
               />
-              <rect x="200" y="18" width="245" height="24" fill="#F6F5EE" />
+              <rect x="175" y="16" width="325" height="24" fill="#F6F5EE" stroke="#6E7376" strokeWidth="1" />
               <text
-                x="322"
-                y="34"
+                x="337"
+                y="32"
                 textAnchor="middle"
-                className="font-sans text-[13px] font-bold fill-[#222426]"
+                className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
-                Stratul A (Arhitectură instituțională)
+                Stratul A (Determinanți structurali și instituționali)
               </text>
 
               {/* Node A1: Deficit de servicii publice */}
@@ -351,41 +356,41 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <rect
-                  x="65"
-                  y="56"
-                  width="215"
-                  height="68"
+                  x="55"
+                  y="52"
+                  width="240"
+                  height="76"
                   fill={fig1SelectedNode === 'servicii' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig1SelectedNode === 'servicii' ? '0.3' : '1'}
                   stroke="#222426"
-                  strokeWidth={fig1SelectedNode === 'servicii' ? '3' : '2'}
+                  strokeWidth="2"
                 />
                 <text
-                  x="172"
-                  y="85"
+                  x="175"
+                  y="83"
                   textAnchor="middle"
                   className="font-sans text-[13px] font-semibold fill-[#222426]"
                 >
-                  {fig1Mode === 'vulnerable' ? 'Deficit de' : 'Servicii publice'}
+                  {fig1Mode === 'vulnerable' ? 'Deficit de servicii publice' : 'Servicii publice integre'}
                 </text>
                 <text
-                  x="172"
+                  x="175"
                   y="104"
                   textAnchor="middle"
-                  className="font-sans text-[13px] font-semibold fill-[#222426]"
+                  className="font-sans text-[12px] fill-[#6E7376]"
                 >
-                  {fig1Mode === 'vulnerable' ? 'servicii publice' : 'și închidere operațională'}
+                  {fig1Mode === 'vulnerable' ? 'și închidere operațională' : 'închidere operațională fermă'}
                 </text>
               </g>
 
               {/* Horizontal arrow A1 -> A2 */}
               <line
-                x1="280"
+                x1="295"
                 y1="90"
-                x2="358"
+                x2="370"
                 y2="90"
-                stroke={fig1Mode === 'vulnerable' ? '#F01E1E' : '#D9A714'}
-                strokeWidth="3.5"
+                stroke={fig1Mode === 'vulnerable' ? '#F01E1E' : '#E5B822'}
+                strokeWidth="3"
                 markerEnd={fig1Mode === 'vulnerable' ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
 
@@ -395,224 +400,327 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <rect
-                  x="368"
-                  y="56"
-                  width="215"
-                  height="68"
+                  x="378"
+                  y="52"
+                  width="240"
+                  height="76"
                   fill={fig1SelectedNode === 'mediu' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig1SelectedNode === 'mediu' ? '0.3' : '1'}
                   stroke="#222426"
-                  strokeWidth={fig1SelectedNode === 'mediu' ? '3' : '2'}
+                  strokeWidth="2"
                 />
                 <text
-                  x="475"
-                  y="85"
+                  x="498"
+                  y="83"
                   textAnchor="middle"
                   className="font-sans text-[13px] font-semibold fill-[#222426]"
                 >
-                  {fig1Mode === 'vulnerable' ? 'Mediu socioeconomic' : 'Coeziune sociospațială'}
+                  {fig1Mode === 'vulnerable' ? 'Mediu socioeconomic precar' : 'Coeziune sociospațială'}
                 </text>
                 <text
-                  x="475"
+                  x="498"
                   y="104"
                   textAnchor="middle"
-                  className="font-sans text-[13px] font-semibold fill-[#222426]"
+                  className="font-sans text-[12px] fill-[#6E7376]"
                 >
-                  {fig1Mode === 'vulnerable' ? 'precar' : 'și predictibilitate'}
+                  {fig1Mode === 'vulnerable' ? 'disparități și polarizare' : 'capital social și echilibru'}
                 </text>
               </g>
 
-              {/* Vertical arrows Stratul A -> Stratul B */}
+              {/* Vertical downward arrows from Stratul A to Stratul B */}
               <line
-                x1="172"
-                y1="124"
-                x2="172"
-                y2="188"
+                x1="175"
+                y1="128"
+                x2="175"
+                y2="190"
                 stroke="#222426"
-                strokeWidth="3.5"
+                strokeWidth="2.5"
                 markerEnd="url(#arrow-dark)"
               />
               <line
-                x1="475"
-                y1="124"
-                x2="475"
-                y2="188"
+                x1="498"
+                y1="128"
+                x2="498"
+                y2="190"
                 stroke="#222426"
-                strokeWidth="3.5"
+                strokeWidth="2.5"
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* STRATUL B CONTAINER */}
+              {/* STRATUL B CONTAINER: Noduri romboidale/circulare și bucle cibernetice de feedback */}
               <rect
                 x="35"
-                y="196"
-                width="575"
-                height="118"
-                fill="#F4F1EA"
-                stroke="#D9A714"
+                y="194"
+                width="605"
+                height="138"
+                fill="#F6F5EE"
+                stroke="#222426"
                 strokeWidth="2.5"
               />
-              <rect x="200" y="182" width="245" height="24" fill="#F6F5EE" />
+              <rect x="175" y="182" width="325" height="24" fill="#F6F5EE" stroke="#6E7376" strokeWidth="1" />
               <text
-                x="322"
+                x="337"
                 y="198"
                 textAnchor="middle"
-                className="font-sans text-[13px] font-bold fill-[#222426]"
+                className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
-                Stratul B (Procesare neurocognitivă)
+                Stratul B (Mecanisme neurocognitive și cibernetice)
               </text>
 
-              {/* Node B1: Stres alostatic si hipervigilenta */}
+              {/* Node B1: Romb / Diamond (Stres alostatic / Amigdală) */}
               <g
                 onClick={() => setFig1SelectedNode('alostazie')}
                 className="cursor-pointer"
               >
-                <rect
-                  x="65"
-                  y="220"
-                  width="215"
-                  height="68"
+                <polygon
+                  points="175,212 265,260 175,308 85,260"
                   fill={fig1SelectedNode === 'alostazie' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig1SelectedNode === 'alostazie' ? '0.3' : '1'}
+                  fillOpacity={fig1SelectedNode === 'alostazie' ? '0.35' : '1'}
                   stroke="#222426"
-                  strokeWidth={fig1SelectedNode === 'alostazie' ? '3' : '2'}
+                  strokeWidth="2.5"
                 />
                 <text
-                  x="172"
-                  y="249"
+                  x="175"
+                  y="254"
                   textAnchor="middle"
-                  className="font-sans text-[13px] font-semibold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  {fig1Mode === 'vulnerable' ? 'Stres alostatic și' : 'Rezervă neurobiologică'}
+                  {fig1Mode === 'vulnerable' ? 'Stres alostatic' : 'Reglare executivă'}
                 </text>
                 <text
-                  x="172"
-                  y="268"
+                  x="175"
+                  y="272"
                   textAnchor="middle"
-                  className="font-sans text-[13px] font-semibold fill-[#222426]"
+                  className="font-sans text-[11px] fill-[#6E7376]"
                 >
-                  {fig1Mode === 'vulnerable' ? 'hipervigilență' : 'și reglare prefrontală'}
+                  {fig1Mode === 'vulnerable' ? 'Sistemul 1 (amigdală)' : 'Latență prefrontală'}
                 </text>
               </g>
 
-              {/* Horizontal arrow B1 -> B2 */}
+              {/* Forward arrow B1 -> B2 */}
               <line
-                x1="280"
-                y1="254"
-                x2="358"
-                y2="254"
-                stroke={fig1Mode === 'vulnerable' ? '#F01E1E' : '#D9A714'}
-                strokeWidth="3.5"
+                x1="265"
+                y1="250"
+                x2="400"
+                y2="250"
+                stroke={fig1Mode === 'vulnerable' ? '#F01E1E' : '#E5B822'}
+                strokeWidth="2.5"
                 markerEnd={fig1Mode === 'vulnerable' ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
 
-              {/* Node B2: Comportamente reactive de supravietuire */}
+              {/* Cybernetic Feedback Arc B2 -> B1 (returning back) */}
+              <path
+                d="M 435,285 C 385,312 285,312 235,285"
+                fill="none"
+                stroke={fig1Mode === 'vulnerable' ? '#F01E1E' : '#E5B822'}
+                strokeWidth="2"
+                strokeDasharray="4 3"
+                markerEnd={fig1Mode === 'vulnerable' ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
+              />
+              <rect x="272" y="292" width="130" height="18" fill="#F6F5EE" />
+              <text
+                x="337"
+                y="305"
+                textAnchor="middle"
+                className="font-mono text-[9.5px] font-semibold fill-[#6E7376]"
+              >
+                Buclă cibernetică (R)
+              </text>
+
+              {/* Node B2: Romb / Diamond (Inhibitie dlPFC / Deficit discernamant) */}
               <g
                 onClick={() => setFig1SelectedNode('reactiv')}
                 className="cursor-pointer"
               >
-                <rect
-                  x="368"
-                  y="220"
-                  width="215"
-                  height="68"
+                <polygon
+                  points="498,212 588,260 498,308 408,260"
                   fill={fig1SelectedNode === 'reactiv' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig1SelectedNode === 'reactiv' ? '0.3' : '1'}
+                  fillOpacity={fig1SelectedNode === 'reactiv' ? '0.35' : '1'}
                   stroke="#222426"
-                  strokeWidth={fig1SelectedNode === 'reactiv' ? '3' : '2'}
+                  strokeWidth="2.5"
                 />
                 <text
-                  x="475"
-                  y="249"
+                  x="498"
+                  y="254"
                   textAnchor="middle"
-                  className="font-sans text-[13px] font-semibold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  {fig1Mode === 'vulnerable' ? 'Comportamente' : 'Deliberare rațională'}
+                  {fig1Mode === 'vulnerable' ? 'Inhibiție dlPFC' : 'Sistemul 2 activ'}
                 </text>
                 <text
-                  x="475"
-                  y="268"
+                  x="498"
+                  y="272"
                   textAnchor="middle"
-                  className="font-sans text-[13px] font-semibold fill-[#222426]"
+                  className="font-sans text-[11px] fill-[#6E7376]"
                 >
-                  {fig1Mode === 'vulnerable'
-                    ? 'reactive de supraviețuire'
-                    : 'și mediere ternară'}
+                  {fig1Mode === 'vulnerable' ? 'Deficit discernământ' : 'Mediere rațională'}
                 </text>
               </g>
 
-              {/* Vertical arrows Stratul B -> Stratul C */}
+              {/* Vertical downward arrows from Stratul B to Stratul C */}
               <line
-                x1="172"
-                y1="288"
-                x2="172"
-                y2="352"
+                x1="175"
+                y1="308"
+                x2="175"
+                y2="375"
                 stroke="#222426"
-                strokeWidth="3.5"
+                strokeWidth="2.5"
                 markerEnd="url(#arrow-dark)"
               />
               <line
-                x1="475"
-                y1="288"
-                x2="475"
-                y2="352"
+                x1="498"
+                y1="308"
+                x2="498"
+                y2="375"
                 stroke="#222426"
-                strokeWidth="3.5"
+                strokeWidth="2.5"
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* STRATUL C CONTAINER */}
+              {/* STRATUL C CONTAINER: Elipse, axa Ego–Sine și filtrul moral creștin-secular */}
               <rect
                 x="35"
-                y="360"
-                width="575"
-                height="118"
-                fill="#F4F1EA"
-                stroke="#D9A714"
+                y="375"
+                width="605"
+                height="145"
+                fill="#F6F5EE"
+                stroke="#222426"
                 strokeWidth="2.5"
               />
-              <rect x="210" y="346" width="225" height="24" fill="#F6F5EE" />
+              <rect x="175" y="363" width="325" height="24" fill="#F6F5EE" stroke="#6E7376" strokeWidth="1" />
               <text
-                x="322"
-                y="362"
+                x="337"
+                y="379"
                 textAnchor="middle"
-                className="font-sans text-[13px] font-bold fill-[#222426]"
+                className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
-                Stratul C (Inconștient cultural)
+                Stratul C (Arhitectură psihoculturală și inconștient)
               </text>
 
-              {/* Node C1: Fatalism si neincredere cronica */}
+              {/* Node C1: Elipsă Persona mimetică */}
+              <g
+                onClick={() => setFig1SelectedNode('persona')}
+                className="cursor-pointer"
+              >
+                <ellipse
+                  cx="175"
+                  cy="435"
+                  rx="95"
+                  ry="38"
+                  fill={fig1SelectedNode === 'persona' ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig1SelectedNode === 'persona' ? '0.3' : '1'}
+                  stroke="#222426"
+                  strokeWidth="2.5"
+                />
+                <text
+                  x="175"
+                  y="430"
+                  textAnchor="middle"
+                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                >
+                  Persona mimetică
+                </text>
+                <text
+                  x="175"
+                  y="448"
+                  textAnchor="middle"
+                  className="font-sans text-[11px] fill-[#6E7376]"
+                >
+                  (forme fără fond)
+                </text>
+              </g>
+
+              {/* Axa de simetrie psihoculturală: Axa Ego–Sine */}
+              <line
+                x1="270"
+                y1="435"
+                x2="403"
+                y2="435"
+                stroke="#6E7376"
+                strokeWidth="2"
+                strokeDasharray="4 3"
+              />
+              <rect x="297" y="426" width="78" height="18" fill="#F6F5EE" />
+              <text
+                x="336"
+                y="439"
+                textAnchor="middle"
+                className="font-mono text-[10px] font-bold fill-[#6E7376]"
+              >
+                Axa Ego–Sine
+              </text>
+
+              {/* Node C2: Elipsă Umbra colectivă */}
               <g
                 onClick={() => setFig1SelectedNode('fatalism')}
                 className="cursor-pointer"
               >
-                <rect
-                  x="220"
-                  y="384"
-                  width="215"
-                  height="68"
+                <ellipse
+                  cx="498"
+                  cy="435"
+                  rx="95"
+                  ry="38"
                   fill={fig1SelectedNode === 'fatalism' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig1SelectedNode === 'fatalism' ? '0.3' : '1'}
                   stroke="#222426"
-                  strokeWidth={fig1SelectedNode === 'fatalism' ? '3' : '2'}
+                  strokeWidth="2.5"
                 />
                 <text
-                  x="327"
-                  y="413"
+                  x="498"
+                  y="430"
                   textAnchor="middle"
-                  className="font-sans text-[13px] font-semibold fill-[#222426]"
+                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
                 >
-                  {fig1Mode === 'vulnerable' ? 'Fatalism și' : 'Coerență pe axa'}
+                  {fig1Mode === 'vulnerable' ? 'Umbra colectivă' : 'Integrare psihodinamică'}
                 </text>
                 <text
-                  x="327"
-                  y="432"
+                  x="498"
+                  y="448"
                   textAnchor="middle"
-                  className="font-sans text-[13px] font-semibold fill-[#222426]"
+                  className="font-sans text-[11px] fill-[#6E7376]"
                 >
-                  {fig1Mode === 'vulnerable' ? 'neîncredere cronică' : 'Ego–Sine și încredere'}
+                  {fig1Mode === 'vulnerable' ? '(neputință învățată)' : '(asumare critică)'}
                 </text>
               </g>
+
+              {/* FILTRUL VALORILOR MORALE CREȘTINE ȘI SECULARE: Reprezentat EXPLICIT în arhitectură */}
+              <g
+                onClick={() => setFig1SelectedNode('filtru-moral')}
+                className="cursor-pointer"
+              >
+                <rect
+                  x="195"
+                  y="480"
+                  width="285"
+                  height="30"
+                  fill={fig1Mode === 'resilient' ? '#E5B822' : '#F6F5EE'}
+                  stroke={fig1Mode === 'resilient' ? '#222426' : '#6E7376'}
+                  strokeWidth={fig1Mode === 'resilient' ? '2.5' : '1.5'}
+                  strokeDasharray={fig1Mode === 'vulnerable' ? '4 3' : undefined}
+                />
+                <text
+                  x="337"
+                  y="500"
+                  textAnchor="middle"
+                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
+                >
+                  {fig1Mode === 'resilient'
+                    ? 'Filtrul moral creștin-secular (integru)'
+                    : 'Filtrul moral creștin-secular (scurtcircuitat)'}
+                </text>
+              </g>
+
+              {/* In vulnerable mode: Scurtcircuitarea filtrului moral de catre vectorul rosu */}
+              {fig1Mode === 'vulnerable' && (
+                <path
+                  d="M 675,435 L 485,495"
+                  fill="none"
+                  stroke="#F01E1E"
+                  strokeWidth="3"
+                  strokeDasharray="6 3"
+                  markerEnd="url(#arrow-red)"
+                />
+              )}
 
               {/* RIGHT SIDE: VECTOR DE RAZBOI COGNITIV & COUPLING SPINE */}
               <g
@@ -620,80 +728,81 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <rect
-                  x="695"
-                  y="214"
-                  width="155"
-                  height="80"
+                  x="715"
+                  y="225"
+                  width="160"
+                  height="78"
                   fill={fig1SelectedNode === 'vector' ? '#F01E1E' : '#F6F5EE'}
                   fillOpacity={fig1SelectedNode === 'vector' ? '0.14' : '1'}
                   stroke="#F01E1E"
                   strokeWidth="3"
                 />
                 <text
-                  x="772"
-                  y="249"
+                  x="795"
+                  y="257"
                   textAnchor="middle"
-                  className="font-sans text-[14px] font-bold fill-[#F01E1E]"
+                  className="font-sans text-[13.5px] font-bold fill-[#F01E1E]"
                 >
                   Vector de
                 </text>
                 <text
-                  x="772"
-                  y="269"
+                  x="795"
+                  y="278"
                   textAnchor="middle"
-                  className="font-sans text-[14px] font-bold fill-[#F01E1E]"
+                  className="font-sans text-[13.5px] font-bold fill-[#F01E1E]"
                 >
                   război cognitiv
                 </text>
               </g>
 
-              {/* Vertical red collector spine at x=660 */}
+              {/* Vertical red collector spine at x=675 */}
               <line
-                x1="695"
-                y1="254"
-                x2="660"
-                y2="254"
+                x1="715"
+                y1="264"
+                x2="675"
+                y2="264"
                 stroke="#F01E1E"
-                strokeWidth="3.5"
+                strokeWidth="3"
                 strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
               />
               <line
-                x1="660"
+                x1="675"
                 y1="90"
-                x2="660"
-                y2="418"
+                x2="675"
+                y2="435"
                 stroke="#F01E1E"
-                strokeWidth="3.5"
+                strokeWidth="3"
                 strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
               />
+
               {/* 3 Horizontal coupling arrows into Strata A, B, C */}
               <line
-                x1="660"
+                x1="675"
                 y1="90"
-                x2="594"
+                x2="618"
                 y2="90"
                 stroke="#F01E1E"
-                strokeWidth="3.5"
+                strokeWidth="3"
                 strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
                 markerEnd="url(#arrow-red)"
               />
               <line
-                x1="660"
-                y1="254"
-                x2="594"
-                y2="254"
+                x1="675"
+                y1="250"
+                x2="592"
+                y2="250"
                 stroke="#F01E1E"
-                strokeWidth="3.5"
+                strokeWidth="3"
                 strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
                 markerEnd="url(#arrow-red)"
               />
               <line
-                x1="660"
-                y1="418"
-                x2="446"
-                y2="418"
+                x1="675"
+                y1="435"
+                x2="593"
+                y2="435"
                 stroke="#F01E1E"
-                strokeWidth="3.5"
+                strokeWidth="3"
                 strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
                 markerEnd="url(#arrow-red)"
               />
@@ -702,50 +811,54 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               {fig1Mode === 'resilient' && (
                 <g>
                   <line
-                    x1="622"
-                    y1="50"
-                    x2="622"
-                    y2="455"
-                    stroke="#D9A714"
+                    x1="648"
+                    y1="45"
+                    x2="648"
+                    y2="505"
+                    stroke="#E5B822"
                     strokeWidth="6"
                   />
                   <rect
-                    x="595"
-                    y="462"
-                    width="150"
+                    x="620"
+                    y="512"
+                    width="155"
                     height="24"
                     fill="#E5B822"
                     stroke="#222426"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="670"
-                    y="478"
+                    x="697"
+                    y="528"
                     textAnchor="middle"
                     className="font-mono text-[10px] font-bold fill-[#222426]"
                   >
-                    Filtru axiologic activ
+                    Închidere operațională activă
                   </text>
                 </g>
               )}
             </svg>
 
             {/* Node inspection detail */}
-            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F4F1EA] p-3.5">
+            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
                 Mecanism cauzal selectat în Figura 1 (click pe casetele din diagramă)
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig1SelectedNode === 'servicii' &&
-                  'Organizarea sistemului instituțional și a serviciilor publice (primul determinant Lalonde-Dever). Atunci când justiția, administrația, educația și sănătatea suferă de un deficit de închidere operațională (Luhmann) și sunt permeabile la rețelele clientelare extractive, cetățeanul percepe regulile formale ca pe un paravan ipocrit.'}
+                  'Stratul A: Organizarea sistemului instituțional și a serviciilor publice (primul determinant Lalonde-Dever). Atunci când justiția, administrația, educația și sănătatea suferă de un deficit de închidere operațională (Luhmann) și sunt permeabile la rețelele clientelare extractive, cetățeanul percepe regulile formale ca pe un paravan ipocrit.'}
                 {fig1SelectedNode === 'mediu' &&
-                  'Mediul socioeconomic și sociospațial (al doilea determinant Lalonde-Dever). Polarizarea severă dintre centrele metropolitane și periferiile dezindustrializate sau rurale, adâncită de emigrația masivă, distruge capitalul social de punte (Putnam) prin familism amoral (Banfield) la un pol și secesiune tacită în servicii private la celălalt pol.'}
+                  'Stratul A: Mediul socioeconomic și sociospațial (al doilea determinant Lalonde-Dever). Polarizarea severă dintre centrele metropolitane și periferiile dezindustrializate sau rurale, adâncită de emigrația masivă, distruge capitalul social de punte (Putnam) prin familism amoral (Banfield) la un pol și secesiune tacită în servicii private la celălalt pol.'}
                 {fig1SelectedNode === 'alostazie' &&
-                  'Uzura alostatică și hiperactivarea axei HPA (McEwen, Sapolsky, Arnsten). Expunerea cronică la insecuritate și umilință birocratică eliberează excesiv cortizol, provocând hipertrofia amigdalei bazolaterale și atrofia dendritică în hipocamp și în cortexul prefrontal dorsolateral (dlPFC).'}
+                  'Stratul B: Uzura alostatică și hiperactivarea axei HPA (McEwen, Sapolsky, Arnsten). Expunerea cronică la insecuritate și umilință birocratică eliberează excesiv cortizol, provocând hipertrofia amigdalei bazolaterale și atrofia dendritică în hipocamp și în cortexul prefrontal dorsolateral (dlPFC).'}
                 {fig1SelectedNode === 'reactiv' &&
-                  'Comutarea de pe Sistemul 2 pe Sistemul 1 (Kahneman). Inhibiția funcțiilor executive prefrontale blochează gândirea lentă, analitică și verificarea surselor, lăsând cetățeanul pradă procesării rapide, euristice și reacțiilor defensive automate.'}
+                  'Stratul B: Comutarea de pe Sistemul 2 pe Sistemul 1 (Kahneman). Inhibiția funcțiilor executive prefrontale blochează gândirea lentă, analitică și verificarea surselor, lăsând cetățeanul pradă procesării rapide, euristice și reacțiilor defensive automate.'}
+                {fig1SelectedNode === 'persona' &&
+                  'Stratul C: Persona instituțională mimetică („forme fără fond”, Maiorescu). Copierea formală a instituțiilor occidentale fără asimilarea conținutului lor normativ creează o fațadă birocratică vulnerabilă, deconectată de nevoile reale ale cetățenilor.'}
                 {fig1SelectedNode === 'fatalism' &&
-                  'Expresia în inconștientul cultural (Stratul C). Scăderea tensiunii conștiente (abaissement du niveau mental, Janet și Jung) și blocarea axei Ego–Sine (Edinger) produc oscilația între neputința învățată (Seligman) și inflația naționalistă compensatoare.'}
+                  'Stratul C: Expresia în inconștientul cultural (Stratul C). Scăderea tensiunii conștiente (abaissement du niveau mental, Janet și Jung) și blocarea axei Ego–Sine (Edinger) produc oscilația între neputința învățată (Seligman) și inflația defensivă compensatoare.'}
+                {fig1SelectedNode === 'filtru-moral' &&
+                  'Stratul C: Filtrul valorilor morale creștine și seculare. În stare integră, antropologia patristică a demnității umane (Imago Dei) reconciliată cu universalismul secular protejează conștiința civică. În condiții de război cognitiv, vectorul ostil scurtcircuitează acest filtru prin instrumentalizarea etnofiletistă și inversiunea normativă.'}
                 {fig1SelectedNode === 'vector' &&
                   'Vectorul de război cognitiv extern nu creează din nimic vulnerabilitățile societății-țintă, ci se cuplează parazitar pe fisurile din Straturile A, B și C, oferind explicații conspirative simple, țapi ispășitori vizibili și promisiunea unei revanșe simbolice imediate.'}
               </p>
@@ -770,9 +883,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               <rect x="0" y="0" width="820" height="450" fill="#F6F5EE" />
               <rect x="0" y="0" width="820" height="450" fill="url(#stipple-bg)" />
 
-              {/* Central Vertical Divider & Top Header Line (exact match to PDF p. 12) */}
-              <line x1="410" y1="15" x2="410" y2="435" stroke="#D0D5D9" strokeWidth="2" />
-              <line x1="20" y1="82" x2="800" y2="82" stroke="#D0D5D9" strokeWidth="1.5" />
+              {/* Central Vertical Divider & Top Header Line */}
+              <line x1="410" y1="15" x2="410" y2="435" stroke="#8C9BA5" strokeWidth="2" />
+              <line x1="20" y1="82" x2="800" y2="82" stroke="#8C9BA5" strokeWidth="1.5" />
 
               {/* Left Column Header */}
               <text
@@ -819,15 +932,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   width="260"
                   height="68"
                   fill={fig2Inspect === 'left' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig2Inspect === 'left' ? '0.2' : '1'}
-                  stroke="#D9A714"
+                  fillOpacity={fig2Inspect === 'left' ? '0.35' : '1'}
+                  stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
                   x="205"
                   y="142"
                   textAnchor="middle"
-                  className="font-sans text-[15px] fill-[#222426]"
+                  className="font-sans text-[15px] font-semibold fill-[#222426]"
                 >
                   Demnitate umană
                 </text>
@@ -835,7 +948,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="205"
                   y="163"
                   textAnchor="middle"
-                  className="font-sans text-[15px] fill-[#222426]"
+                  className="font-sans text-[15px] font-semibold fill-[#222426]"
                 >
                   inalienabilă
                 </text>
@@ -846,7 +959,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y1="180"
                   x2="205"
                   y2="222"
-                  stroke="#D9A714"
+                  stroke="#E5B822"
                   strokeWidth="3.5"
                   markerEnd="url(#arrow-gold)"
                 />
@@ -858,15 +971,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   width="260"
                   height="68"
                   fill={fig2Inspect === 'left' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig2Inspect === 'left' ? '0.2' : '1'}
-                  stroke="#D9A714"
+                  fillOpacity={fig2Inspect === 'left' ? '0.35' : '1'}
+                  stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
                   x="205"
                   y="260"
                   textAnchor="middle"
-                  className="font-sans text-[15px] fill-[#222426]"
+                  className="font-sans text-[15px] font-semibold fill-[#222426]"
                 >
                   Filtru moral și
                 </text>
@@ -874,7 +987,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="205"
                   y="281"
                   textAnchor="middle"
-                  className="font-sans text-[15px] fill-[#222426]"
+                  className="font-sans text-[15px] font-semibold fill-[#222426]"
                 >
                   constituțional
                 </text>
@@ -885,7 +998,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y1="298"
                   x2="205"
                   y2="340"
-                  stroke="#D9A714"
+                  stroke="#E5B822"
                   strokeWidth="3.5"
                   markerEnd="url(#arrow-gold)"
                 />
@@ -897,15 +1010,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   width="260"
                   height="68"
                   fill={fig2Inspect === 'left' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig2Inspect === 'left' ? '0.3' : '1'}
-                  stroke="#D9A714"
+                  fillOpacity={fig2Inspect === 'left' ? '0.35' : '1'}
+                  stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
                   x="205"
                   y="378"
                   textAnchor="middle"
-                  className="font-sans text-[15px] fill-[#222426]"
+                  className="font-sans text-[15px] font-semibold fill-[#222426]"
                 >
                   Modernitate organică
                 </text>
@@ -913,14 +1026,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="205"
                   y="399"
                   textAnchor="middle"
-                  className="font-sans text-[15px] fill-[#222426]"
+                  className="font-sans text-[15px] font-semibold fill-[#222426]"
                 >
                   și libertate
                 </text>
               </g>
 
-              {/* RIGHT COLUMN NODES (Disimulation & Normative Inversion) */}
-              {/* Outer Camouflage Box (slate gray #8C9BA5 / #D0D5D9, exact match to PDF p. 12) */}
+              {/* RIGHT COLUMN NODES (Disimulare & Inversiune normativă) */}
+              {/* Outer Camouflage Box (slate gray #8C9BA5) */}
               <g onClick={() => setFig2Inspect('camuflaj')} className="cursor-pointer">
                 <rect
                   x="475"
@@ -928,7 +1041,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   width="280"
                   height="80"
                   fill="#8C9BA5"
-                  fillOpacity="0.38"
+                  fillOpacity="0.25"
                   stroke="#6E7376"
                   strokeWidth="2"
                 />
@@ -942,7 +1055,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Inner Core Box: Inversiune normativa si cinism (overlapping below camouflage) */}
+              {/* Inner Core Box: Inversiune normativă și cinism */}
               <g onClick={() => setFig2Inspect('right')} className="cursor-pointer">
                 <rect
                   x="490"
@@ -957,7 +1070,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="615"
                   y="190"
                   textAnchor="middle"
-                  className="font-sans text-[15px] fill-[#222426]"
+                  className="font-sans text-[15px] font-semibold fill-[#222426]"
                 >
                   Inversiune normativă
                 </text>
@@ -965,12 +1078,12 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="615"
                   y="211"
                   textAnchor="middle"
-                  className="font-sans text-[15px] fill-[#222426]"
+                  className="font-sans text-[15px] font-semibold fill-[#222426]"
                 >
                   și cinism
                 </text>
 
-                {/* Red arrow down to Subordonare imperiala si anomie */}
+                {/* Red arrow down to Subordonare imperială și anomie */}
                 <line
                   x1="615"
                   y1="228"
@@ -996,7 +1109,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="615"
                   y="378"
                   textAnchor="middle"
-                  className="font-sans text-[15px] fill-[#222426]"
+                  className="font-sans text-[15px] font-semibold fill-[#222426]"
                 >
                   Subordonare imperială
                 </text>
@@ -1004,14 +1117,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="615"
                   y="399"
                   textAnchor="middle"
-                  className="font-sans text-[15px] fill-[#222426]"
+                  className="font-sans text-[15px] font-semibold fill-[#222426]"
                 >
                   și anomie
                 </text>
               </g>
             </svg>
 
-            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F4F1EA] p-3.5">
+            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
                 <span className="text-xs font-mono text-[#6E7376]">
                   Explicație semiotică și axiologică (Figura 2)
@@ -1056,44 +1169,127 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
          ===================================================================== */}
       {figureId === 3 && (
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#D0D5D9]">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
               Starea fazei de Orientare (Schwerpunkt) în bucla decizională OODA
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
+                type="button"
                 onClick={() => setFig3ReflexiveActive(true)}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   fig3ReflexiveActive
                     ? 'bg-[#F01E1E] text-[#F6F5EE] border-[#F01E1E]'
-                    : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Control reflexiv de rang secund activ (Capturare)
+                Control reflexiv activ (Compresie binară)
               </button>
               <button
+                type="button"
                 onClick={() => setFig3ReflexiveActive(false)}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   !fig3ReflexiveActive
                     ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-                    : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Mediere semiotică ternară deblocată (Reziliență)
+                Mediere ternară intactă (Compromis democratic)
               </button>
             </div>
           </div>
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 900 410"
+              viewBox="0 0 960 430"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="900" height="410" fill="#F6F5EE" />
-              <rect x="0" y="0" width="900" height="410" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="960" height="430" fill="#F6F5EE" />
+              <rect x="0" y="0" width="960" height="430" fill="url(#stipple-bg)" />
+
+              {/* ============================================================
+                  ZONA STÂNGA: Triunghiul echilibrat în #E5B822
+                  (Primul sistem etic / Spațiul compromisului democratic)
+                 ============================================================ */}
+              <g
+                onClick={() => setFig3SelectedStage('primul-sistem')}
+                className="cursor-pointer"
+              >
+                <text
+                  x="122"
+                  y="42"
+                  textAnchor="middle"
+                  className="font-sans text-[11px] font-bold tracking-wider fill-[#6E7376]"
+                >
+                  PRIMUL SISTEM ETIC
+                </text>
+                <polygon
+                  points="122,65 30,250 215,250"
+                  fill="#E5B822"
+                  fillOpacity={fig3SelectedStage === 'primul-sistem' ? '0.4' : '0.22'}
+                  stroke="#222426"
+                  strokeWidth="2.5"
+                />
+                <text
+                  x="122"
+                  y="145"
+                  textAnchor="middle"
+                  className="font-sans text-[13px] font-bold fill-[#222426]"
+                >
+                  Primul sistem etic
+                </text>
+                <text
+                  x="122"
+                  y="166"
+                  textAnchor="middle"
+                  className="font-sans text-[11.5px] font-semibold fill-[#222426]"
+                >
+                  Compromis democratic
+                </text>
+                <text
+                  x="122"
+                  y="185"
+                  textAnchor="middle"
+                  className="font-sans text-[11px] fill-[#6E7376]"
+                >
+                  și mediere ternară
+                </text>
+                <text
+                  x="122"
+                  y="204"
+                  textAnchor="middle"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
+                >
+                  (concurent legitim)
+                </text>
+              </g>
+
+              {/* Dotted border line separating Left and Center zones */}
+              <line
+                x1="230"
+                y1="30"
+                x2="230"
+                y2="380"
+                stroke="#8C9BA5"
+                strokeWidth="1.5"
+                strokeDasharray="4 3"
+              />
+
+              {/* ============================================================
+                  ZONA CENTRU: Bucla cibernetică OODA în 4 pași
+                  cu injecția de control reflexiv străpungând Orientarea
+                 ============================================================ */}
+              <text
+                x="510"
+                y="42"
+                textAnchor="middle"
+                className="font-sans text-[11px] font-bold tracking-wider fill-[#6E7376]"
+              >
+                BUCLA CIBERNETICĂ OODA (BOYD)
+              </text>
 
               {/* TOP BOX: Control reflexiv de rang secund */}
               <g
@@ -1101,414 +1297,382 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <rect
-                  x="212"
-                  y="24"
-                  width="146"
-                  height="64"
-                  fill={fig3ReflexiveActive ? '#F6F5EE' : '#F4F1EA'}
+                  x="375"
+                  y="55"
+                  width="170"
+                  height="56"
+                  fill={fig3ReflexiveActive ? '#F6F5EE' : '#F6F5EE'}
                   stroke={fig3ReflexiveActive ? '#F01E1E' : '#8C9BA5'}
-                  strokeWidth="2.5"
+                  strokeWidth={fig3ReflexiveActive ? '2.5' : '1.5'}
                 />
                 <text
-                  x="285"
-                  y="51"
+                  x="460"
+                  y="78"
                   textAnchor="middle"
-                  className="font-sans text-[13px] font-bold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Control reflexiv
                 </text>
                 <text
-                  x="285"
-                  y="70"
+                  x="460"
+                  y="96"
                   textAnchor="middle"
-                  className="font-sans text-[13px] font-bold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   de rang secund
                 </text>
               </g>
 
-              {/* Thick vertical red arrow from Control reflexiv down into Orientare */}
+              {/* PIERCING VERMILION VECTOR: Injecție de control reflexiv străpungând Orientarea */}
               <line
-                x1="285"
-                y1="88"
-                x2="285"
-                y2="165"
+                x1="460"
+                y1="111"
+                x2="460"
+                y2="188"
                 stroke={fig3ReflexiveActive ? '#F01E1E' : '#8C9BA5'}
-                strokeWidth={fig3ReflexiveActive ? '6' : '2.5'}
+                strokeWidth={fig3ReflexiveActive ? '4' : '2'}
                 strokeDasharray={fig3ReflexiveActive ? undefined : '5 4'}
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
               />
+              <rect x="375" y="136" width="170" height="22" fill="#F6F5EE" />
+              <text
+                x="460"
+                y="151"
+                textAnchor="middle"
+                className="font-sans text-[11px] font-bold fill-[#F01E1E]"
+              >
+                Injecție de control reflexiv
+              </text>
 
-              {/* NODE 1: Observare */}
+              {/* OODA 1: Observare */}
               <g
                 onClick={() => setFig3SelectedStage('observare')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="32"
-                  y="175"
-                  width="128"
-                  height="74"
+                  x="245"
+                  y="190"
+                  width="100"
+                  height="72"
                   fill={fig3SelectedStage === 'observare' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig3SelectedStage === 'observare' ? '0.25' : '1'}
+                  fillOpacity={fig3SelectedStage === 'observare' ? '0.35' : '1'}
                   stroke="#222426"
                   strokeWidth="2"
                 />
                 <text
-                  x="96"
-                  y="198"
+                  x="295"
+                  y="218"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Observare
                 </text>
                 <text
-                  x="96"
-                  y="214"
+                  x="295"
+                  y="236"
                   textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  (Flux
-                </text>
-                <text
-                  x="96"
-                  y="229"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
-                >
-                  informațional
-                </text>
-                <text
-                  x="96"
-                  y="243"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
-                >
-                  brut)
+                  (flux date)
                 </text>
               </g>
 
               {/* Arrow Observare -> Orientare */}
               <line
-                x1="160"
-                y1="212"
-                x2="210"
-                y2="212"
+                x1="345"
+                y1="226"
+                x2="392"
+                y2="226"
                 stroke="#222426"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* NODE 2: Orientare */}
+              {/* OODA 2: Orientare (străpunsă de vectorul roșu de sus) */}
               <g
                 onClick={() => setFig3SelectedStage('orientare')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="220"
-                  y="175"
-                  width="130"
-                  height="74"
+                  x="400"
+                  y="190"
+                  width="120"
+                  height="72"
                   fill={fig3SelectedStage === 'orientare' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig3SelectedStage === 'orientare' ? '0.25' : '1'}
-                  stroke="#222426"
+                  fillOpacity={fig3SelectedStage === 'orientare' ? '0.35' : '1'}
+                  stroke={fig3ReflexiveActive ? '#F01E1E' : '#222426'}
                   strokeWidth="2.5"
                 />
                 <text
-                  x="285"
-                  y="201"
+                  x="460"
+                  y="218"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Orientare
                 </text>
                 <text
-                  x="285"
-                  y="218"
+                  x="460"
+                  y="236"
                   textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
-                  (Modele mentale
-                </text>
-                <text
-                  x="285"
-                  y="235"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
-                >
-                  culturale)
+                  (modele mentale)
                 </text>
               </g>
 
-              {/* UPPER BRANCH: Mediere ternara (with T-bar block `┤` as in PDF page 20) */}
-              <polyline
-                points="350,196 382,196 382,146 410,146"
-                fill="none"
-                stroke="#D9A714"
-                strokeWidth="2.5"
-              />
-              <g
-                onClick={() => setFig3SelectedStage('ternar')}
-                className="cursor-pointer"
-              >
-                <rect
-                  x="410"
-                  y="112"
-                  width="135"
-                  height="68"
-                  fill={!fig3ReflexiveActive ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={!fig3ReflexiveActive ? '0.25' : '1'}
-                  stroke="#222426"
-                  strokeWidth="2"
-                />
-                <text
-                  x="477"
-                  y="136"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] font-semibold fill-[#222426]"
-                >
-                  Mediere ternară
-                </text>
-                <text
-                  x="477"
-                  y="153"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
-                >
-                  (Discernământ
-                </text>
-                <text
-                  x="477"
-                  y="169"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
-                >
-                  rațional)
-                </text>
-              </g>
-
-              {/* T-Block symbol `┤` in gold (exact match to PDF p. 20) */}
-              {fig3ReflexiveActive ? (
-                <g>
-                  <line
-                    x1="545"
-                    y1="146"
-                    x2="592"
-                    y2="146"
-                    stroke="#D9A714"
-                    strokeWidth="6"
-                  />
-                  <line
-                    x1="592"
-                    y1="120"
-                    x2="592"
-                    y2="172"
-                    stroke="#D9A714"
-                    strokeWidth="6"
-                  />
-                </g>
-              ) : (
-                <polyline
-                  points="545,146 655,146 655,232"
-                  fill="none"
-                  stroke="#D9A714"
-                  strokeWidth="3.5"
-                  markerEnd="url(#arrow-gold)"
-                />
-              )}
-
-              {/* LOWER BRANCH: Logica binara a anihilarii -> Decizie -> Actiune */}
-              <polyline
-                points="350,228 382,228 382,276 402,276"
-                fill="none"
-                stroke="#F01E1E"
-                strokeWidth="3"
-                markerEnd="url(#arrow-red)"
-              />
-
-              {/* Box: Logica binara a anihilarii */}
-              <g
-                onClick={() => setFig3SelectedStage('binar')}
-                className="cursor-pointer"
-              >
-                <rect
-                  x="410"
-                  y="242"
-                  width="135"
-                  height="68"
-                  fill={fig3SelectedStage === 'binar' ? '#F01E1E' : '#F6F5EE'}
-                  fillOpacity={fig3SelectedStage === 'binar' ? '0.12' : '1'}
-                  stroke="#F01E1E"
-                  strokeWidth="2.5"
-                />
-                <text
-                  x="477"
-                  y="272"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] font-semibold fill-[#222426]"
-                >
-                  Logică binară
-                </text>
-                <text
-                  x="477"
-                  y="290"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
-                >
-                  a anihilării
-                </text>
-              </g>
-
-              {/* Red arrow Logica binara -> Decizie */}
+              {/* Arrow Orientare -> Decizie */}
               <line
-                x1="545"
-                y1="276"
-                x2="584"
-                y2="276"
-                stroke="#F01E1E"
-                strokeWidth="3"
-                markerEnd="url(#arrow-red)"
+                x1="520"
+                y1="226"
+                x2="552"
+                y2="226"
+                stroke={fig3ReflexiveActive ? '#F01E1E' : '#E5B822'}
+                strokeWidth="2.5"
+                markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
 
-              {/* Box: Decizie */}
+              {/* OODA 3: Decizie */}
               <g
                 onClick={() => setFig3SelectedStage('decizie')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="592"
-                  y="242"
-                  width="128"
-                  height="68"
-                  fill={fig3SelectedStage === 'decizie' ? '#F01E1E' : '#F6F5EE'}
-                  fillOpacity={fig3SelectedStage === 'decizie' ? '0.12' : '1'}
-                  stroke={fig3ReflexiveActive ? '#F01E1E' : '#D9A714'}
-                  strokeWidth="2.5"
+                  x="560"
+                  y="190"
+                  width="95"
+                  height="72"
+                  fill={fig3SelectedStage === 'decizie' ? (fig3ReflexiveActive ? '#F01E1E' : '#E5B822') : '#F6F5EE'}
+                  fillOpacity={fig3SelectedStage === 'decizie' ? '0.2' : '1'}
+                  stroke={fig3ReflexiveActive ? '#F01E1E' : '#222426'}
+                  strokeWidth="2"
                 />
                 <text
-                  x="656"
-                  y="265"
+                  x="607"
+                  y="218"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Decizie
                 </text>
                 <text
-                  x="656"
-                  y="281"
+                  x="607"
+                  y="236"
                   textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
+                  className="font-sans text-[10px] fill-[#6E7376]"
                 >
-                  {fig3ReflexiveActive ? '(Selecție' : '(Judecată'}
-                </text>
-                <text
-                  x="656"
-                  y="295"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
-                >
-                  {fig3ReflexiveActive ? 'emoțională' : 'critică'}
-                </text>
-                <text
-                  x="656"
-                  y="307"
-                  textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#222426]"
-                >
-                  {fig3ReflexiveActive ? 'indusă)' : 'autonomă)'}
+                  {fig3ReflexiveActive ? '(emoțională)' : '(deliberativă)'}
                 </text>
               </g>
 
-              {/* Red arrow Decizie -> Actiune */}
+              {/* Arrow Decizie -> Actiune */}
               <line
-                x1="720"
-                y1="276"
-                x2="758"
-                y2="276"
-                stroke={fig3ReflexiveActive ? '#F01E1E' : '#D9A714'}
-                strokeWidth="3"
+                x1="655"
+                y1="226"
+                x2="677"
+                y2="226"
+                stroke={fig3ReflexiveActive ? '#F01E1E' : '#E5B822'}
+                strokeWidth="2.5"
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
 
-              {/* Box: Actiune */}
+              {/* OODA 4: Actiune */}
               <g
                 onClick={() => setFig3SelectedStage('actiune')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="766"
-                  y="242"
-                  width="115"
-                  height="68"
-                  fill={fig3SelectedStage === 'actiune' ? '#F01E1E' : '#F6F5EE'}
-                  fillOpacity={fig3SelectedStage === 'actiune' ? '0.12' : '1'}
-                  stroke={fig3ReflexiveActive ? '#F01E1E' : '#D9A714'}
-                  strokeWidth="2.5"
+                  x="685"
+                  y="190"
+                  width="85"
+                  height="72"
+                  fill={fig3SelectedStage === 'actiune' ? (fig3ReflexiveActive ? '#F01E1E' : '#E5B822') : '#F6F5EE'}
+                  fillOpacity={fig3SelectedStage === 'actiune' ? '0.2' : '1'}
+                  stroke={fig3ReflexiveActive ? '#F01E1E' : '#222426'}
+                  strokeWidth="2"
                 />
                 <text
-                  x="823"
-                  y="266"
+                  x="727"
+                  y="218"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Acțiune
                 </text>
                 <text
-                  x="823"
-                  y="283"
+                  x="727"
+                  y="236"
                   textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
+                  className="font-sans text-[10px] fill-[#6E7376]"
                 >
-                  {fig3ReflexiveActive ? '(Polarizare și' : '(Cooperare și'}
-                </text>
-                <text
-                  x="823"
-                  y="299"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
-                >
-                  {fig3ReflexiveActive ? 'conflict)' : 'reziliență)'}
+                  (comportament)
                 </text>
               </g>
 
-              {/* Bottom Cybernetic Feedback Loop (from Actiune back to Orientare and Observare, exact match to PDF p. 20) */}
+              {/* Cybernetic Feedback Loop: beneath from Actiune returning to Orientare and Observare */}
               <polyline
-                points="823,310 823,365 96,365 96,256"
+                points="727,262 727,330 295,330 295,264"
                 fill="none"
                 stroke="#8C9BA5"
                 strokeWidth="1.5"
                 markerEnd="url(#arrow-slate)"
               />
               <line
-                x1="285"
-                y1="365"
-                x2="285"
-                y2="256"
+                x1="460"
+                y1="330"
+                x2="460"
+                y2="264"
                 stroke="#8C9BA5"
                 strokeWidth="1.5"
                 markerEnd="url(#arrow-slate)"
               />
+              <rect x="420" y="320" width="165" height="20" fill="#F6F5EE" />
+              <text
+                x="502"
+                y="334"
+                textAnchor="middle"
+                className="font-mono text-[9.5px] font-semibold fill-[#6E7376]"
+              >
+                Buclă cibernetică de feedback
+              </text>
+
+              {/* Arrow connecting Actiune to Right Zone (Binary Wall) */}
+              <line
+                x1="770"
+                y1="226"
+                x2="795"
+                y2="200"
+                stroke={fig3ReflexiveActive ? '#F01E1E' : '#8C9BA5'}
+                strokeWidth="2.5"
+                strokeDasharray={fig3ReflexiveActive ? undefined : '4 3'}
+                markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
+              />
+
+              {/* Dotted border line separating Center and Right zones */}
+              <line
+                x1="785"
+                y1="30"
+                x2="785"
+                y2="380"
+                stroke="#8C9BA5"
+                strokeWidth="1.5"
+                strokeDasharray="4 3"
+              />
+
+              {/* ============================================================
+                  ZONA DREAPTA: Compresia în sistemul binar fracturat
+                  (Noi / Victime vs. Ei / Dușmani), separate de zidul de fractură
+                 ============================================================ */}
+              <text
+                x="875"
+                y="42"
+                textAnchor="middle"
+                className="font-sans text-[11px] font-bold tracking-wider fill-[#F01E1E]"
+              >
+                AL DOILEA SISTEM ETIC
+              </text>
+
+              {/* Binary Node Top: Noi / Victime */}
+              <g
+                onClick={() => setFig3SelectedStage('binar')}
+                className="cursor-pointer"
+              >
+                <rect
+                  x="800"
+                  y="110"
+                  width="145"
+                  height="60"
+                  fill="#F6F5EE"
+                  stroke="#F01E1E"
+                  strokeWidth="2"
+                />
+                <text
+                  x="872"
+                  y="135"
+                  textAnchor="middle"
+                  className="font-sans text-[12px] font-bold fill-[#F01E1E]"
+                >
+                  Noi / Victime
+                </text>
+                <text
+                  x="872"
+                  y="153"
+                  textAnchor="middle"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
+                >
+                  (puritate morală)
+                </text>
+              </g>
+
+              {/* Fractured Wall in Vermilion Red (#F01E1E) */}
+              <path
+                d="M 795,198 L 825,190 L 855,204 L 885,192 L 915,206 L 950,198"
+                fill="none"
+                stroke="#F01E1E"
+                strokeWidth="4"
+              />
+              <rect x="805" y="188" width="135" height="20" fill="#F6F5EE" stroke="#F01E1E" strokeWidth="1.5" />
+              <text
+                x="872"
+                y="202"
+                textAnchor="middle"
+                className="font-mono text-[9.5px] font-bold fill-[#F01E1E]"
+              >
+                Zid de fractură identitară
+              </text>
+
+              {/* Binary Node Bottom: Ei / Dușmani */}
+              <g
+                onClick={() => setFig3SelectedStage('binar')}
+                className="cursor-pointer"
+              >
+                <rect
+                  x="800"
+                  y="226"
+                  width="145"
+                  height="60"
+                  fill="#F6F5EE"
+                  stroke="#F01E1E"
+                  strokeWidth="2"
+                />
+                <text
+                  x="872"
+                  y="251"
+                  textAnchor="middle"
+                  className="font-sans text-[12px] font-bold fill-[#F01E1E]"
+                >
+                  Ei / Dușmani
+                </text>
+                <text
+                  x="872"
+                  y="269"
+                  textAnchor="middle"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
+                >
+                  (țapi ispășitori)
+                </text>
+              </g>
             </svg>
 
-            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F4F1EA] p-3.5">
+            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Etapă selectată în bucla OODA (Figura 3)
+                Etapă selectată în arhitectura OODA și controlul reflexiv (Figura 3)
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
+                {fig3SelectedStage === 'primul-sistem' &&
+                  'Primul sistem etic (Lefebvre, 1982, 2001). Cadrul axiologic al democrației constituționale în care compromisul legal și dialogul sunt privite ca virtuți cardinale, iar adversarul politic rămâne un concurent legitim în interiorul statului de drept.'}
                 {fig3SelectedStage === 'observare' &&
-                  'Faza de Observare. Platformele sociale optimizează retenția prin manipularea erorii de predicție a recompensei în nucleul accumbens (Schultz, Lembke), în timp ce rețelele Doppelgänger, Matrioșka și Pravda inundă spațiul digital cu date sintetice care induc Model Collapse (Shumailov) și Model Autophagy Disorder (Alemohammad).'}
+                  'Faza de Observare. Fluxul informațional brut este capturat algoritmic prin optimizarea retenției pe platformele digitale, inundat de dezinformare și conținut sintetic menit să provoace reacții afective primare.'}
                 {fig3SelectedStage === 'orientare' &&
-                  'Faza de Orientare (centrul de greutate al buclei lui John Boyd). Matricea interpretativă unde moștenirea culturală, experiența istorică și valorile morale conferă sens datelor observate. Dacă faza de Orientare este compromisă, chiar și faptele reale sunt interpretate printr-o lentilă distorsionată.'}
+                  'Faza de Orientare (Schwerpunkt-ul lui John Boyd). Matricea interpretativă unde experiența istorică, valorile morale și modelele mentale conferă semnificație datelor brute. Este ținta principală a injecției de control reflexiv.'}
                 {fig3SelectedStage === 'reflexiv' &&
-                  'Controlul reflexiv de rang secund (Lefebvre, 1982, 2001). Nu furnizează doar informații false punctuale, ci modifică algoritmul moral al țintei, comutând-o din primul sistem etic (în care dialogul și compromisul legal sunt virtuți) în al doilea sistem etic (în care cooperarea este văzută ca trădare, iar agresivitatea ca demnitate).'}
-                {fig3SelectedStage === 'ternar' &&
-                  'Medierea semiotică ternară (Peirce, Lotman). Existența unui spațiu axiologic neutru și instituționalizat (interpretantul) în care adversarul politic rămâne un concurent legitim, iar ipotezele sunt verificate empiric. În Figura 3, simbolul în formă de T marchează blocarea acestei căi sub efectul controlului reflexiv.'}
-                {fig3SelectedStage === 'binar' &&
-                  'Semiotica binară a anihilării (Lotman & Uspenski, 1985). Distrugerea zonei neutre de mediere și reîncadrarea oricărei teme de politică publică într-o confruntare apocaliptică între poporul pur și trădătorii care vor să ne extermine.'}
+                  'Controlul reflexiv de rang secund (Lefebvre). Nu livrează simple știri false, ci transferă o matrice de decizie în mintea țintei, determinând-o să aleagă singură opțiunea dorită de agresor crezând că acționează suveran.'}
                 {fig3SelectedStage === 'decizie' &&
-                  'Faza de Decizie sub capturare. Subiectul declanșează captarea precipitată (seizing) și înghețarea epistemică (freezing, Kruglanski), fuzionând poziția binară cu identitatea de grup prin cogniția protectoare a identității (Kahan) și contagiunea complexă artificială (Centola).'}
+                  'Faza de Decizie sub capturare reflexivă. Inhibarea deliberării prefrontale produce captarea precipitată (seizing) și înghețarea epistemică (freezing, Kruglanski), refuzând dovezile contrare.'}
                 {fig3SelectedStage === 'actiune' &&
-                  'Faza de Acțiune. Cetățeanul capturat cognitiv acționează din proprie convingere pentru demolarea garanțiilor constituționale și euroatlantice ale propriului stat, fiind convins că își apără astfel suveranitatea.'}
+                  'Faza de Acțiune. Traducerea deciziei în comportamente polarizante, boicot instituțional sau conflict social anti-sistem, alimentând bucla cibernetică de reacție.'}
+                {fig3SelectedStage === 'binar' &&
+                  'Compresia în sistemul binar fracturat (al doilea sistem etic). Prăbușirea nuanțelor și a spațiului de mediere într-o dihotomie maniheică între poporul pur (victime) și trădători (dușmani ce trebuie anihilați).'}
               </p>
             </div>
           </div>
@@ -1520,27 +1684,29 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
          ===================================================================== */}
       {figureId === 4 && (
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#D0D5D9]">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
               Starea filtrelor structurale de conversie (Straturile A și B)
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
+                type="button"
                 onClick={() => setFig4FiltersActive(true)}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   fig4FiltersActive
                     ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-                    : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
                 Filtre active (Conversie în modernitate organică)
               </button>
               <button
+                type="button"
                 onClick={() => setFig4FiltersActive(false)}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   !fig4FiltersActive
                     ? 'bg-[#F01E1E] text-[#F6F5EE] border-[#F01E1E]'
-                    : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
                 Fără filtru (Alunecare în enantiodromie și cinism)
@@ -1944,7 +2110,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </svg>
 
             {/* Legend for Order-1 vs Order-2 Psychodynamic Flows */}
-            <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono bg-[#F4F1EA] border border-[#D0D5D9] p-3">
+            <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono bg-[#F6F5EE] border border-[#8C9BA5] p-3">
               <div className="flex items-center gap-2">
                 <span className="inline-block w-6 h-0.5 bg-[#F01E1E] border-b border-dashed border-[#F01E1E] shrink-0" />
                 <span className="text-[#222426]">
@@ -1952,14 +2118,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="inline-block w-6 h-1 bg-[#D9A714] shrink-0" />
+                <span className="inline-block w-6 h-1 bg-[#E5B822] shrink-0" />
                 <span className="text-[#222426]">
                   Flux de ordinul 2 (procesat prin cele 3 filtre în modernitate organică pe axa Ego–Sine)
                 </span>
               </div>
             </div>
 
-            <div className="mt-3 pt-4 border-t border-[#222426] bg-[#F4F1EA] p-3.5">
+            <div className="mt-3 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
                 Nod selectat în arhitectura conversiei (Figura 4)
               </div>
@@ -1993,30 +2159,32 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
          ===================================================================== */}
       {figureId === 5 && (
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#D0D5D9]">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
               Starea barierei instituționale și juridice dintre Cadranul II și Cadranul III
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
+                type="button"
                 onClick={() => setFig5BarrierIntact(false)}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   !fig5BarrierIntact
                     ? 'bg-[#F01E1E] text-[#F6F5EE] border-[#F01E1E]'
-                    : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Barieră instituțională fisurată (Alunecare în Cadranul III)
+                Barieră instituțională fisurată (Blocaj și prăbușire în Cadranul III)
               </button>
               <button
+                type="button"
                 onClick={() => setFig5BarrierIntact(true)}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   fig5BarrierIntact
                     ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-                    : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Barieră consolidată în Faza III (Atracție în Cadranul I)
+                Barieră consolidată în Faza III (Tranziție în Cadranul I)
               </button>
             </div>
           </div>
@@ -2043,7 +2211,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 strokeWidth="1.5"
               />
 
-              {/* QUADRANT II (Top-Left): Cetatean vulnerabil (-X, +Y) */}
+              {/* CADRANUL II (Top-Left): Cetățeni vulnerabili / Naivi (-X, +Y) */}
               <g
                 onClick={() => setFig5SelectedQuadrant('II')}
                 className="cursor-pointer"
@@ -2054,17 +2222,17 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   width="370"
                   height="225"
                   fill={fig5SelectedQuadrant === 'II' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig5SelectedQuadrant === 'II' ? '0.16' : '0.6'}
-                  stroke="#D0D5D9"
+                  fillOpacity={fig5SelectedQuadrant === 'II' ? '0.18' : '0.6'}
+                  stroke="#8C9BA5"
                   strokeWidth="1"
                 />
                 <text
                   x="255"
                   y="92"
                   textAnchor="middle"
-                  className="font-sans text-[14.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[14.5px] font-bold fill-[#6E7376]"
                 >
-                  Cadranul II (-X, +Y, Cetățean vulnerabil / Naivul)
+                  Cadranul II: Cetățeni vulnerabili / Naivi (-X, +Y)
                 </text>
                 <text
                   x="255"
@@ -2084,7 +2252,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* QUADRANT I (Top-Right): Cooperare inteligenta (+X, +Y) */}
+              {/* CADRANUL I (Top-Right): Cooperare inteligentă (+X, +Y) */}
               <g
                 onClick={() => setFig5SelectedQuadrant('I')}
                 className="cursor-pointer"
@@ -2094,10 +2262,10 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="45"
                   width="370"
                   height="225"
-                  fill={fig5SelectedQuadrant === 'I' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig5SelectedQuadrant === 'I' ? '0.25' : '0.6'}
-                  stroke="#D0D5D9"
-                  strokeWidth="1"
+                  fill="#E5B822"
+                  fillOpacity={fig5SelectedQuadrant === 'I' ? '0.3' : '0.12'}
+                  stroke="#222426"
+                  strokeWidth="1.5"
                 />
                 <text
                   x="625"
@@ -2105,13 +2273,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#222426]"
                 >
-                  Cadranul I (+X, +Y, Cooperare inteligentă)
+                  Cadranul I: Cooperare inteligentă (+X, +Y)
                 </text>
                 <text
                   x="625"
                   y="117"
                   textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#6E7376]"
+                  className="font-sans text-[12px] fill-[#222426]"
                 >
                   Beneficiu propriu (+X) / Beneficiu colectiv (+Y)
                 </text>
@@ -2119,13 +2287,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="625"
                   y="139"
                   textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
+                  className="font-sans text-[12px] fill-[#6E7376]"
                 >
                   Modernitate organică și stat de drept
                 </text>
               </g>
 
-              {/* QUADRANT III (Bottom-Left): Autosabotaj colectiv (-X, -Y) */}
+              {/* CADRANUL III (Bottom-Left): Autosabotaj social / Iraționalitate autodistructivă (-X, -Y) */}
               <g
                 onClick={() => setFig5SelectedQuadrant('III')}
                 className="cursor-pointer"
@@ -2135,10 +2303,10 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="270"
                   width="370"
                   height="225"
-                  fill={fig5SelectedQuadrant === 'III' ? '#F01E1E' : '#F6F5EE'}
-                  fillOpacity={fig5SelectedQuadrant === 'III' ? '0.1' : '0.6'}
-                  stroke="#D0D5D9"
-                  strokeWidth="1"
+                  fill="#F01E1E"
+                  fillOpacity={fig5SelectedQuadrant === 'III' ? '0.18' : '0.08'}
+                  stroke="#F01E1E"
+                  strokeWidth="1.5"
                 />
                 <text
                   x="255"
@@ -2146,27 +2314,27 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#F01E1E]"
                 >
-                  Cadranul III (-X, -Y, Autosabotaj / Prostul)
+                  Cadranul III: Autosabotaj social (-X, -Y)
                 </text>
                 <text
                   x="255"
-                  y="420"
+                  y="418"
                   textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#222426]"
+                  className="font-sans text-[12px] font-semibold fill-[#F01E1E]"
+                >
+                  Iraționalitate autodistructivă
+                </text>
+                <text
+                  x="255"
+                  y="440"
+                  textAnchor="middle"
+                  className="font-sans text-[11.5px] fill-[#6E7376]"
                 >
                   Pierdere proprie (-X) / Daună societală (-Y)
                 </text>
-                <text
-                  x="255"
-                  y="442"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#6E7376]"
-                >
-                  Vot punitiv antiinstituțional și anomie (Legea a III-a)
-                </text>
               </g>
 
-              {/* QUADRANT IV (Bottom-Right): Actor extractiv (+X, -Y) */}
+              {/* CADRANUL IV (Bottom-Right): Elite extractive / Banditism (+X, -Y) */}
               <g
                 onClick={() => setFig5SelectedQuadrant('IV')}
                 className="cursor-pointer"
@@ -2177,8 +2345,8 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   width="370"
                   height="225"
                   fill={fig5SelectedQuadrant === 'IV' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig5SelectedQuadrant === 'IV' ? '0.16' : '0.6'}
-                  stroke="#D0D5D9"
+                  fillOpacity={fig5SelectedQuadrant === 'IV' ? '0.18' : '0.6'}
+                  stroke="#222426"
                   strokeWidth="1"
                 />
                 <text
@@ -2187,11 +2355,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#222426]"
                 >
-                  Cadranul IV (+X, -Y, Actor extractiv / Banditul)
+                  Cadranul IV: Elite extractive / Banditism (+X, -Y)
                 </text>
                 <text
                   x="625"
-                  y="420"
+                  y="418"
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
@@ -2199,15 +2367,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="625"
-                  y="442"
+                  y="440"
                   textAnchor="middle"
-                  className="font-sans text-[12px] fill-[#6E7376]"
+                  className="font-sans text-[11.5px] fill-[#6E7376]"
                 >
                   Extracție de rentă și vector de război cognitiv
                 </text>
               </g>
 
-              {/* CARTESIAN AXES (exact match to PDF p. 27, zero label collision) */}
+              {/* CARTESIAN AXES (#222426) */}
               {/* Horizontal Axis -X to +X */}
               <line
                 x1="50"
@@ -2231,18 +2399,21 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* Axis Labels with opaque backing so they never collide with barrier badges */}
+              {/* Axis Labels */}
+              <rect x="365" y="10" width="150" height="24" fill="#F6F5EE" />
               <text
                 x="440"
-                y="22"
+                y="26"
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
                 +Y (Beneficiu societal)
               </text>
+
+              <rect x="375" y="515" width="130" height="22" fill="#F6F5EE" />
               <text
                 x="440"
-                y="526"
+                y="530"
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
@@ -2269,7 +2440,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 +X (Câștig propriu)
               </text>
 
-              {/* Diagonal Dashed Vector: Presiune de spoliere sistemica (Quadrant IV -> Quadrant II) */}
+              {/* Diagonal Dashed Vector: Presiune de spoliere sistemică din (+X, -Y) spre (-X, +Y) */}
               <line
                 x1="570"
                 y1="365"
@@ -2298,75 +2469,83 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 Presiune de spoliere sistemică
               </text>
 
-              {/* Institutional Barrier on Left -X Axis (Repositioned to x=224..424 so zero collision with -X label) */}
+              {/* DINAMICA 1: Traiectoria orizontală de la (-X, +Y) spre (+X, +Y) */}
               {!fig5BarrierIntact ? (
                 <g>
+                  {/* Traiectorie orizontală blocată de T-bar în #F01E1E */}
                   <line
-                    x1="75"
-                    y1="278"
-                    x2="435"
-                    y2="278"
+                    x1="265"
+                    y1="165"
+                    x2="425"
+                    y2="165"
                     stroke="#F01E1E"
                     strokeWidth="3.5"
-                    strokeDasharray="10 6"
                   />
-                  <rect
-                    x="224"
-                    y="256"
-                    width="202"
-                    height="26"
-                    rx="3"
-                    fill="#0F172A"
-                    stroke="#F01E1E"
-                    strokeWidth="2"
-                  />
-                  <text
-                    x="325"
-                    y="273"
-                    textAnchor="middle"
-                    className="font-sans text-[11.5px] font-bold fill-[#F6F5EE]"
-                  >
-                    Barieră instituțională fisurată
-                  </text>
-
-                  {/* Vertical Red Vector: Alunecare in autosabotaj (Quadrant II -> Quadrant III) */}
+                  {/* T-BAR TRANSVERSAL în #F01E1E */}
                   <line
-                    x1="158"
-                    y1="168"
-                    x2="158"
-                    y2="358"
+                    x1="425"
+                    y1="135"
+                    x2="425"
+                    y2="195"
                     stroke="#F01E1E"
-                    strokeWidth="4"
-                    markerEnd="url(#arrow-red)"
+                    strokeWidth="7"
                   />
                   <rect
-                    x="80"
-                    y="306"
-                    width="158"
-                    height="26"
+                    x="270"
+                    y="142"
+                    width="145"
+                    height="20"
                     fill="#F6F5EE"
                     stroke="#F01E1E"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="159"
-                    y="323"
+                    x="342"
+                    y="156"
                     textAnchor="middle"
-                    className="font-sans text-[11.5px] font-bold fill-[#F01E1E]"
+                    className="font-sans text-[10px] font-bold fill-[#F01E1E]"
                   >
-                    Alunecare în autosabotaj
+                    Tranziție blocată (T-bar)
+                  </text>
+
+                  {/* DINAMICA 2: Vectorul descendent masiv în #F01E1E */}
+                  <line
+                    x1="185"
+                    y1="165"
+                    x2="185"
+                    y2="365"
+                    stroke="#F01E1E"
+                    strokeWidth="5"
+                    markerEnd="url(#arrow-red)"
+                  />
+                  <rect
+                    x="90"
+                    y="255"
+                    width="190"
+                    height="28"
+                    fill="#F6F5EE"
+                    stroke="#F01E1E"
+                    strokeWidth="1.5"
+                  />
+                  <text
+                    x="185"
+                    y="273"
+                    textAnchor="middle"
+                    className="font-sans text-[11px] font-bold fill-[#F01E1E]"
+                  >
+                    Alunecare în autosabotaj (-X, -Y)
                   </text>
                 </g>
               ) : (
                 <g>
-                  {/* Intact Gold Barrier & Horizontal Transition to Quadrant I */}
+                  {/* Barieră consolidată și tranziție orizontală deblocată în #E5B822 */}
                   <line
                     x1="75"
                     y1="276"
                     x2="435"
                     y2="276"
-                    stroke="#D9A714"
-                    strokeWidth="6"
+                    stroke="#E5B822"
+                    strokeWidth="5"
                   />
                   <rect
                     x="214"
@@ -2387,19 +2566,36 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     Barieră instituțională consolidată
                   </text>
                   <line
-                    x1="335"
-                    y1="115"
-                    x2="505"
-                    y2="115"
-                    stroke="#D9A714"
+                    x1="265"
+                    y1="165"
+                    x2="520"
+                    y2="165"
+                    stroke="#E5B822"
                     strokeWidth="4"
                     markerEnd="url(#arrow-gold)"
                   />
+                  <rect
+                    x="320"
+                    y="148"
+                    width="155"
+                    height="22"
+                    fill="#F6F5EE"
+                    stroke="#222426"
+                    strokeWidth="1.5"
+                  />
+                  <text
+                    x="397"
+                    y="163"
+                    textAnchor="middle"
+                    className="font-sans text-[10.5px] font-bold fill-[#222426]"
+                  >
+                    Tranziție spre cooperare (+X, +Y)
+                  </text>
                 </g>
               )}
             </svg>
 
-            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F4F1EA] p-3.5">
+            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
                 Cadran selectat în matricea lui Carlo M. Cipolla (Figura 5)
               </div>
@@ -2407,11 +2603,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig5SelectedQuadrant === 'I' &&
                   'Cadranul I (+X, +Y, cooperare inteligentă). Cetățenii, antreprenorii și instituțiile incluzive își urmăresc propriul interes legitim prin muncă, inovație și respectarea legii impersonale, generând simultan valoare adăugată și încredere pentru întreaga comunitate (ordinea socială cu acces deschis, North, Wallis & Weingast, 2009).'}
                 {fig5SelectedQuadrant === 'II' &&
-                  'Cadranul II (-X, +Y, cetățeanul vulnerabil, Helpless). Indivizii cinstiți care muncesc, plătesc taxe și susțin funcționarea societății (+Y), dar care, din cauza asimetriei informaționale și a precarității serviciilor publice, înregistrează o pierdere netă de bunăstare, sănătate și demnitate (-X).'}
+                  'Cadranul II (-X, +Y, cetățenii vulnerabili / naivii, Helpless). Indivizii cinstiți care muncesc, plătesc taxe și susțin funcționarea societății (+Y), dar care, din cauza asimetriei informaționale și a precarității serviciilor publice, înregistrează o pierdere netă de bunăstare, sănătate și demnitate (-X).'}
                 {fig5SelectedQuadrant === 'IV' &&
-                  'Cadranul IV (+X, -Y, actorii extractivi, Bandits). Rețelele politico-economice clientelare și birocrațiile parazitare interne (precum și agresorul geopolitic extern) care își însușesc câștiguri substanțiale (+X) prin spolierea bugetelor publice și degradarea instituțiilor (-Y).'}
+                  'Cadranul IV (+X, -Y, elitele extractive / banditismul, Bandits). Rețelele politico-economice clientelare și birocrațiile parazitare interne (precum și agresorul geopolitic extern) care își însușesc câștiguri substanțiale (+X) prin spolierea bugetelor publice și degradarea instituțiilor (-Y).'}
                 {fig5SelectedQuadrant === 'III' &&
-                  'Cadranul III (-X, -Y, autosabotajul colectiv). Crezând că se mută în Cadranul I sau că îi pedepsește exclusiv pe spoliatorii din Cadranul IV, cetățeanul capturat cognitiv traversează bariera instituțională fisurată și se prăbușește vertical în Cadranul III, unde votul punitiv extrem și blocarea alianțelor provoacă daune societății (-Y) și propria sa ruină socioeconomică (-X).'}
+                  'Cadranul III (-X, -Y, autosabotajul social / iraționalitatea autodistructivă). Crezând că se mută în Cadranul I sau că îi pedepsește exclusiv pe spoliatorii din Cadranul IV, cetățeanul vulnerabil, blocat de T-bar pe traseul cooperării, este împins de vectorul descendent masiv în Cadranul III, unde votul punitiv extrem distruge bunul public (-Y) și propria securitate socioeconomică (-X).'}
               </p>
             </div>
           </div>
@@ -2419,16 +2615,17 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
       )}
 
       {/* =====================================================================
-          FIGURA 6: Bifurcarea procesării neurocognitive în criză acută (Pagina 30)
+          FIGURA 6: Modelul comparativ al procesării cognitive în criză (Track A vs. Track B)
          ===================================================================== */}
       {figureId === 6 && (
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#D0D5D9]">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
-              Direcția de procesare în nodul de bifurcație cognitivă
+              Selectați ramura activă de procesare cognitivă în criză
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
+                type="button"
                 onClick={() => {
                   setFig6ActiveTrack('A');
                   setFig6SelectedStep('trackA');
@@ -2436,12 +2633,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   fig6ActiveTrack === 'A'
                     ? 'bg-[#F01E1E] text-[#F6F5EE] border-[#F01E1E]'
-                    : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Track A (buclă reactivă dezadaptativă, Sistemul 1)
+                Track A (procesare defensivă și buclă de autoamplificare R)
               </button>
               <button
+                type="button"
                 onClick={() => {
                   setFig6ActiveTrack('B');
                   setFig6SelectedStep('trackB');
@@ -2449,80 +2647,35 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   fig6ActiveTrack === 'B'
                     ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-                    : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Track B (traseu deliberativ adaptativ, Sistemul 2)
+                Track B (procesare adaptativă și creație suverană)
               </button>
             </div>
           </div>
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 920 480"
+              viewBox="0 0 920 620"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="920" height="480" fill="#F6F5EE" />
-              <rect x="0" y="0" width="920" height="480" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="920" height="620" fill="#F6F5EE" />
+              <rect x="0" y="0" width="920" height="620" fill="url(#stipple-bg)" />
 
-              {/* LEFT INPUT NODES */}
-              {/* 1. Stimul de criza acuta */}
-              <g
-                onClick={() => setFig6SelectedStep('stimul')}
-                className="cursor-pointer"
-              >
-                <rect
-                  x="28"
-                  y="112"
-                  width="185"
-                  height="64"
-                  rx="4"
-                  fill="#F6F5EE"
-                  stroke="#F01E1E"
-                  strokeWidth="2.5"
-                />
-                <text
-                  x="120"
-                  y="140"
-                  textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
-                >
-                  Stimul de criză acută
-                </text>
-                <text
-                  x="120"
-                  y="160"
-                  textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
-                >
-                  Șoc informațional și stres
-                </text>
-              </g>
-
-              {/* Vertical arrow Stimul -> Nod de bifurcatie */}
-              <line
-                x1="120"
-                y1="176"
-                x2="120"
-                y2="246"
-                stroke="#222426"
-                strokeWidth="2.5"
-                markerEnd="url(#arrow-dark)"
-              />
-
-              {/* 2. Nod de bifurcatie cognitiva */}
+              {/* NOD UNIC DE BIFURCAȚIE CENTRAL SUPERIOR */}
               <g
                 onClick={() => setFig6SelectedStep('bifurcatie')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="28"
-                  y="254"
-                  width="185"
-                  height="64"
+                  x="300"
+                  y="18"
+                  width="320"
+                  height="62"
                   rx="4"
                   fill={fig6SelectedStep === 'bifurcatie' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig6SelectedStep === 'bifurcatie' ? '0.25' : '1'}
@@ -2530,411 +2683,782 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2.5"
                 />
                 <text
-                  x="120"
-                  y="282"
+                  x="460"
+                  y="43"
                   textAnchor="middle"
-                  className="font-sans text-[12px] font-bold fill-[#222426]"
+                  className="font-sans text-[13px] font-bold fill-[#222426]"
                 >
-                  Nod de bifurcație cognitivă
+                  Nod unic de bifurcație cognitivă
                 </text>
                 <text
-                  x="120"
-                  y="302"
+                  x="460"
+                  y="63"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
-                  Prag amigdalian / prefrontal
+                  Stres material acut și policriză
                 </text>
               </g>
 
-              {/* Bifurcation diagonal arrows from Nod de bifurcatie (x=213) to Track A (y=130, thicker strokeWidth=4 representing impulsive pull) and Track B (y=350, initial strokeWidth=2) */}
-              <line
-                x1="213"
-                y1="275"
-                x2="290"
-                y2="132"
+              {/* SĂGEȚI DIVERGENTE DE BIFURCAȚIE */}
+              {/* Spre Track A (stânga) */}
+              <path
+                d="M 360 80 C 310 96, 250 106, 230 120"
+                fill="none"
                 stroke="#F01E1E"
-                strokeWidth={fig6ActiveTrack === 'A' ? '4.5' : '4'}
+                strokeWidth="3.5"
                 markerEnd="url(#arrow-red)"
               />
-              <line
-                x1="213"
-                y1="298"
-                x2="290"
-                y2="348"
+              <rect
+                x="200"
+                y="86"
+                width="155"
+                height="20"
+                fill="#F6F5EE"
+                stroke="#F01E1E"
+                strokeWidth="1"
+              />
+              <text
+                x="277"
+                y="100"
+                textAnchor="middle"
+                className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
+              >
+                Track A: Procesare defensivă
+              </text>
+
+              {/* Spre Track B (dreapta) */}
+              <path
+                d="M 560 80 C 610 96, 670 106, 690 120"
+                fill="none"
                 stroke="#E5B822"
-                strokeWidth="2"
+                strokeWidth="3"
                 markerEnd="url(#arrow-gold)"
               />
+              <rect
+                x="565"
+                y="86"
+                width="155"
+                height="20"
+                fill="#F6F5EE"
+                stroke="#222426"
+                strokeWidth="1"
+              />
+              <text
+                x="642"
+                y="100"
+                textAnchor="middle"
+                className="font-sans text-[9.5px] font-bold fill-[#222426]"
+              >
+                Track B: Procesare adaptativă
+              </text>
 
               {/* ============================================================
-                  UPPER CONTAINER: TRACK A (Bucla reactiva, Sistemul 1)
+                  TRACK A: PROCESARE DEFENSIVĂ (Stânga)
                  ============================================================ */}
-              <g
-                onClick={() => {
-                  setFig6ActiveTrack('A');
-                  setFig6SelectedStep('trackA');
-                }}
-                className="cursor-pointer"
-              >
-                {/* Header bar */}
+              <g>
+                {/* Header bar Track A */}
                 <rect
-                  x="295"
-                  y="26"
-                  width="595"
-                  height="32"
+                  x="85"
+                  y="126"
+                  width="290"
+                  height="26"
                   fill="#F01E1E"
-                  fillOpacity="0.08"
+                  fillOpacity="0.1"
                   stroke="#F01E1E"
-                  strokeWidth="2"
+                  strokeWidth="1.5"
                 />
                 <text
-                  x="592"
-                  y="47"
+                  x="230"
+                  y="143"
                   textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#F01E1E]"
+                  className="font-sans text-[11px] font-bold fill-[#F01E1E]"
                 >
-                  Track A (buclă reactivă, Sistemul 1 și hiperreactivitate subcorticală)
+                  Track A (procesare defensivă și reactivă)
                 </text>
 
-                {/* Step A1 */}
-                <rect
-                  x="295"
-                  y="78"
-                  width="175"
-                  height="76"
-                  fill="#F6F5EE"
-                  stroke="#F01E1E"
-                  strokeWidth="2"
-                />
-                <text
-                  x="382"
-                  y="104"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
+                {/* A1: Anxietate cronică */}
+                <g
+                  onClick={() => setFig6SelectedStep('anxietate')}
+                  className="cursor-pointer"
                 >
-                  Hiperactivare amigdaliană
-                </text>
-                <text
-                  x="382"
-                  y="120"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
-                >
-                  și frică
-                </text>
-                <text
-                  x="382"
-                  y="140"
-                  textAnchor="middle"
-                  className="font-sans text-[10.5px] fill-[#6E7376]"
-                >
-                  Inhibiție prefrontală (dlPFC)
-                </text>
+                  <rect
+                    x="85"
+                    y="158"
+                    width="290"
+                    height="50"
+                    rx="3"
+                    fill={fig6SelectedStep === 'anxietate' ? '#F01E1E' : '#F6F5EE'}
+                    fillOpacity={fig6SelectedStep === 'anxietate' ? '0.12' : '1'}
+                    stroke="#F01E1E"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="230"
+                    y="178"
+                    textAnchor="middle"
+                    className="font-sans text-[11.5px] font-bold fill-[#222426]"
+                  >
+                    Anxietate cronică
+                  </text>
+                  <text
+                    x="230"
+                    y="196"
+                    textAnchor="middle"
+                    className="font-sans text-[10px] fill-[#6E7376]"
+                  >
+                    Hiperreactivitate și inhibiție prefrontală
+                  </text>
+                </g>
 
+                {/* Săgeată A1 -> A2 */}
                 <line
-                  x1="470"
-                  y1="116"
-                  x2="498"
-                  y2="116"
+                  x1="230"
+                  y1="208"
+                  x2="230"
+                  y2="228"
                   stroke="#F01E1E"
-                  strokeWidth="4"
+                  strokeWidth="2.5"
                   markerEnd="url(#arrow-red)"
                 />
 
-                {/* Step A2 */}
-                <rect
-                  x="505"
-                  y="78"
-                  width="175"
-                  height="76"
-                  fill="#F6F5EE"
-                  stroke="#F01E1E"
-                  strokeWidth="2"
-                />
-                <text
-                  x="592"
-                  y="104"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
+                {/* A2: Nevoia de închidere cognitivă (NFCC) - strict intoleranța la ambiguitate și urgența */}
+                <g
+                  onClick={() => setFig6SelectedStep('nfcc')}
+                  className="cursor-pointer"
                 >
-                  Capturare dopaminergică
-                </text>
-                <text
-                  x="592"
-                  y="120"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
-                >
-                  a atenției
-                </text>
-                <text
-                  x="592"
-                  y="140"
-                  textAnchor="middle"
-                  className="font-sans text-[10.5px] fill-[#6E7376]"
-                >
-                  Adicție de stimuli extremi
-                </text>
+                  <rect
+                    x="85"
+                    y="230"
+                    width="290"
+                    height="50"
+                    rx="3"
+                    fill={fig6SelectedStep === 'nfcc' ? '#F01E1E' : '#F6F5EE'}
+                    fillOpacity={fig6SelectedStep === 'nfcc' ? '0.12' : '1'}
+                    stroke="#F01E1E"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="230"
+                    y="250"
+                    textAnchor="middle"
+                    className="font-sans text-[11.5px] font-bold fill-[#222426]"
+                  >
+                    Nevoia de închidere cognitivă (NFCC)
+                  </text>
+                  <text
+                    x="230"
+                    y="268"
+                    textAnchor="middle"
+                    className="font-sans text-[10px] fill-[#6E7376]"
+                  >
+                    Intoleranță la ambiguitate și urgență decizională
+                  </text>
+                </g>
 
+                {/* Săgeată A2 -> A3 */}
                 <line
-                  x1="680"
-                  y1="116"
-                  x2="708"
-                  y2="116"
+                  x1="230"
+                  y1="280"
+                  x2="230"
+                  y2="300"
                   stroke="#F01E1E"
-                  strokeWidth="4"
+                  strokeWidth="2.5"
                   markerEnd="url(#arrow-red)"
                 />
 
-                {/* Step A3 */}
-                <rect
-                  x="715"
-                  y="78"
-                  width="175"
-                  height="76"
-                  fill="#F6F5EE"
+                {/* A3: Persona mimetică - conformism formal, copiere modele externe, aparență */}
+                <g
+                  onClick={() => setFig6SelectedStep('persona')}
+                  className="cursor-pointer"
+                >
+                  <rect
+                    x="85"
+                    y="302"
+                    width="290"
+                    height="50"
+                    rx="3"
+                    fill={fig6SelectedStep === 'persona' ? '#F01E1E' : '#F6F5EE'}
+                    fillOpacity={fig6SelectedStep === 'persona' ? '0.12' : '1'}
+                    stroke="#F01E1E"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="230"
+                    y="322"
+                    textAnchor="middle"
+                    className="font-sans text-[11.5px] font-bold fill-[#222426]"
+                  >
+                    Persona mimetică
+                  </text>
+                  <text
+                    x="230"
+                    y="340"
+                    textAnchor="middle"
+                    className="font-sans text-[10px] fill-[#6E7376]"
+                  >
+                    Conformism formal și aparență („forme fără fond”)
+                  </text>
+                </g>
+
+                {/* Vector bidirecțional Persona mimetică <-> Umbra colectivă */}
+                <line
+                  x1="210"
+                  y1="352"
+                  x2="210"
+                  y2="390"
                   stroke="#F01E1E"
                   strokeWidth="2"
+                  markerEnd="url(#arrow-red)"
+                />
+                <line
+                  x1="250"
+                  y1="392"
+                  x2="250"
+                  y2="354"
+                  stroke="#F01E1E"
+                  strokeWidth="2"
+                  markerEnd="url(#arrow-red)"
+                />
+                <rect
+                  x="150"
+                  y="363"
+                  width="160"
+                  height="18"
+                  fill="#F6F5EE"
+                  stroke="#F01E1E"
+                  strokeWidth="1"
                 />
                 <text
-                  x="802"
-                  y="104"
+                  x="230"
+                  y="376"
                   textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#F01E1E]"
+                  className="font-sans text-[9px] font-bold fill-[#F01E1E]"
                 >
-                  Paralizie decizională
-                </text>
-                <text
-                  x="802"
-                  y="120"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#F01E1E]"
-                >
-                  și furie
-                </text>
-                <text
-                  x="802"
-                  y="140"
-                  textAnchor="middle"
-                  className="font-sans text-[10.5px] fill-[#6E7376]"
-                >
-                  Blocaj instituțional
+                  Tensiune și compensare
                 </text>
 
-                {/* Track A Red Dashed Feedback Loop (exact match to PDF p. 30) */}
+                {/* A4: Umbra colectivă */}
+                <g
+                  onClick={() => setFig6SelectedStep('umbra')}
+                  className="cursor-pointer"
+                >
+                  <rect
+                    x="85"
+                    y="394"
+                    width="290"
+                    height="50"
+                    rx="3"
+                    fill={fig6SelectedStep === 'umbra' ? '#F01E1E' : '#F6F5EE'}
+                    fillOpacity={fig6SelectedStep === 'umbra' ? '0.15' : '1'}
+                    stroke="#F01E1E"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="230"
+                    y="414"
+                    textAnchor="middle"
+                    className="font-sans text-[11.5px] font-bold fill-[#F01E1E]"
+                  >
+                    Umbra colectivă
+                  </text>
+                  <text
+                    x="230"
+                    y="432"
+                    textAnchor="middle"
+                    className="font-sans text-[10px] fill-[#6E7376]"
+                  >
+                    Resentiment refulat și defensă antiinstituțională
+                  </text>
+                </g>
+
+                {/* Săgeată A4 -> A5 */}
+                <line
+                  x1="230"
+                  y1="444"
+                  x2="230"
+                  y2="466"
+                  stroke="#F01E1E"
+                  strokeWidth="2.5"
+                  markerEnd="url(#arrow-red)"
+                />
+
+                {/* A5: Buclă de feedback algoritmic */}
+                <g
+                  onClick={() => setFig6SelectedStep('bucla_algoritmica')}
+                  className="cursor-pointer"
+                >
+                  <rect
+                    x="85"
+                    y="468"
+                    width="290"
+                    height="50"
+                    rx="3"
+                    fill={fig6SelectedStep === 'bucla_algoritmica' ? '#F01E1E' : '#F6F5EE'}
+                    fillOpacity={fig6SelectedStep === 'bucla_algoritmica' ? '0.15' : '1'}
+                    stroke="#F01E1E"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="230"
+                    y="488"
+                    textAnchor="middle"
+                    className="font-sans text-[11.5px] font-bold fill-[#F01E1E]"
+                  >
+                    Buclă de feedback algoritmic
+                  </text>
+                  <text
+                    x="230"
+                    y="506"
+                    textAnchor="middle"
+                    className="font-sans text-[10px] fill-[#6E7376]"
+                  >
+                    Amplificare virală și polarizare emoțională
+                  </text>
+                </g>
+
+                {/* ÎNCHIDEREA FIZICĂ A BUCLEI ALGORITMICE (R) ÎNAPOI LA ANXIETATE CRONICĂ */}
                 <polyline
-                  points="802,154 802,198 382,198 382,162"
+                  points="85,493 36,493 36,183 83,183"
                   fill="none"
                   stroke="#F01E1E"
-                  strokeWidth="2"
-                  strokeDasharray="5 4"
+                  strokeWidth="2.5"
+                  strokeDasharray="5 3"
                   markerEnd="url(#arrow-red)"
                 />
+                <circle
+                  cx="36"
+                  cy="338"
+                  r="14"
+                  fill="#F6F5EE"
+                  stroke="#F01E1E"
+                  strokeWidth="2"
+                />
                 <text
-                  x="592"
-                  y="191"
+                  x="36"
+                  y="343"
                   textAnchor="middle"
-                  className="font-sans text-[11px] font-semibold fill-[#F01E1E]"
+                  className="font-sans text-[11px] font-bold fill-[#F01E1E]"
                 >
-                  Buclă de autoamplificare reactivă și contagiune a fricii
+                  (R)
+                </text>
+                <rect
+                  x="6"
+                  y="360"
+                  width="60"
+                  height="26"
+                  fill="#F6F5EE"
+                  stroke="#F01E1E"
+                  strokeWidth="1"
+                />
+                <text
+                  x="36"
+                  y="371"
+                  textAnchor="middle"
+                  className="font-sans text-[8px] font-bold fill-[#F01E1E]"
+                >
+                  Reacție
+                </text>
+                <text
+                  x="36"
+                  y="381"
+                  textAnchor="middle"
+                  className="font-sans text-[8px] font-bold fill-[#F01E1E]"
+                >
+                  pozitivă
                 </text>
               </g>
 
-              {/* ============================================================
-                  LOWER CONTAINER: TRACK B (Traseu adaptativ, Sistemul 2)
-                 ============================================================ */}
-              <g
-                onClick={() => {
-                  setFig6ActiveTrack('B');
-                  setFig6SelectedStep('trackB');
-                }}
-                className="cursor-pointer"
+              {/* RECUPERAREA SELECTIVĂ A INGENIOZITĂȚII (TRICKSTER) */}
+              <path
+                d="M 375 419 C 430 419, 475 306, 543 306"
+                fill="none"
+                stroke="#6E7376"
+                strokeWidth="2"
+                strokeDasharray="4 4"
+                markerEnd="url(#arrow-slate)"
+              />
+              <rect
+                x="400"
+                y="348"
+                width="130"
+                height="30"
+                fill="#F6F5EE"
+                stroke="#6E7376"
+                strokeWidth="1"
+              />
+              <text
+                x="465"
+                y="361"
+                textAnchor="middle"
+                className="font-sans text-[8.5px] font-bold fill-[#222426]"
               >
-                {/* Header bar */}
+                Recuperare ingeniozitate
+              </text>
+              <text
+                x="465"
+                y="372"
+                textAnchor="middle"
+                className="font-sans text-[8.5px] fill-[#6E7376]"
+              >
+                (integrare Trickster)
+              </text>
+
+              {/* ============================================================
+                  TRACK B: PROCESARE ADAPTATIVĂ (Dreapta)
+                 ============================================================ */}
+              <g>
+                {/* Header bar Track B */}
                 <rect
-                  x="295"
-                  y="244"
-                  width="595"
-                  height="32"
+                  x="545"
+                  y="126"
+                  width="290"
+                  height="26"
                   fill="#E5B822"
-                  fillOpacity="0.18"
+                  fillOpacity="0.2"
+                  stroke="#222426"
+                  strokeWidth="1.5"
+                />
+                <text
+                  x="690"
+                  y="143"
+                  textAnchor="middle"
+                  className="font-sans text-[11px] font-bold fill-[#222426]"
+                >
+                  Track B (procesare adaptativă și deliberativă)
+                </text>
+
+                {/* B1: Acceptarea incertitudinii */}
+                <g
+                  onClick={() => setFig6SelectedStep('b1')}
+                  className="cursor-pointer"
+                >
+                  <rect
+                    x="545"
+                    y="158"
+                    width="290"
+                    height="44"
+                    rx="3"
+                    fill={fig6SelectedStep === 'b1' ? '#E5B822' : '#F6F5EE'}
+                    fillOpacity={fig6SelectedStep === 'b1' ? '0.25' : '1'}
+                    stroke="#222426"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="690"
+                    y="176"
+                    textAnchor="middle"
+                    className="font-sans text-[11px] font-bold fill-[#222426]"
+                  >
+                    1. Acceptarea incertitudinii
+                  </text>
+                  <text
+                    x="690"
+                    y="192"
+                    textAnchor="middle"
+                    className="font-sans text-[9.5px] fill-[#6E7376]"
+                  >
+                    Capacitate negativă și suspendarea urgenței
+                  </text>
+                </g>
+
+                {/* Săgeată B1 -> B2 */}
+                <line
+                  x1="690"
+                  y1="202"
+                  x2="690"
+                  y2="218"
+                  stroke="#E5B822"
+                  strokeWidth="2.5"
+                  markerEnd="url(#arrow-gold)"
+                />
+
+                {/* B2: Reactivarea Sistemului 2 */}
+                <g
+                  onClick={() => setFig6SelectedStep('b2')}
+                  className="cursor-pointer"
+                >
+                  <rect
+                    x="545"
+                    y="220"
+                    width="290"
+                    height="44"
+                    rx="3"
+                    fill={fig6SelectedStep === 'b2' ? '#E5B822' : '#F6F5EE'}
+                    fillOpacity={fig6SelectedStep === 'b2' ? '0.25' : '1'}
+                    stroke="#222426"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="690"
+                    y="238"
+                    textAnchor="middle"
+                    className="font-sans text-[11px] font-bold fill-[#222426]"
+                  >
+                    2. Reactivarea Sistemului 2
+                  </text>
+                  <text
+                    x="690"
+                    y="254"
+                    textAnchor="middle"
+                    className="font-sans text-[9.5px] fill-[#6E7376]"
+                  >
+                    Reglare executivă prefrontală (dlPFC)
+                  </text>
+                </g>
+
+                {/* Săgeată B2 -> B3 */}
+                <line
+                  x1="690"
+                  y1="264"
+                  x2="690"
+                  y2="280"
+                  stroke="#E5B822"
+                  strokeWidth="2.5"
+                  markerEnd="url(#arrow-gold)"
+                />
+
+                {/* B3: Toleranța disonanței */}
+                <g
+                  onClick={() => setFig6SelectedStep('b3')}
+                  className="cursor-pointer"
+                >
+                  <rect
+                    x="545"
+                    y="282"
+                    width="290"
+                    height="48"
+                    rx="3"
+                    fill={fig6SelectedStep === 'b3' ? '#E5B822' : '#F6F5EE'}
+                    fillOpacity={fig6SelectedStep === 'b3' ? '0.25' : '1'}
+                    stroke="#222426"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="690"
+                    y="300"
+                    textAnchor="middle"
+                    className="font-sans text-[11px] font-bold fill-[#222426]"
+                  >
+                    3. Toleranța disonanței
+                  </text>
+                  <text
+                    x="690"
+                    y="316"
+                    textAnchor="middle"
+                    className="font-sans text-[9.5px] font-medium fill-[#222426]"
+                  >
+                    Integrarea ingeniozității adaptative (Trickster)
+                  </text>
+                </g>
+
+                {/* Săgeată B3 -> B4 */}
+                <line
+                  x1="690"
+                  y1="330"
+                  x2="690"
+                  y2="346"
+                  stroke="#E5B822"
+                  strokeWidth="2.5"
+                  markerEnd="url(#arrow-gold)"
+                />
+
+                {/* B4: Discernământ critic */}
+                <g
+                  onClick={() => setFig6SelectedStep('b4')}
+                  className="cursor-pointer"
+                >
+                  <rect
+                    x="545"
+                    y="348"
+                    width="290"
+                    height="44"
+                    rx="3"
+                    fill={fig6SelectedStep === 'b4' ? '#E5B822' : '#F6F5EE'}
+                    fillOpacity={fig6SelectedStep === 'b4' ? '0.25' : '1'}
+                    stroke="#222426"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="690"
+                    y="366"
+                    textAnchor="middle"
+                    className="font-sans text-[11px] font-bold fill-[#222426]"
+                  >
+                    4. Discernământ critic
+                  </text>
+                  <text
+                    x="690"
+                    y="382"
+                    textAnchor="middle"
+                    className="font-sans text-[9.5px] fill-[#6E7376]"
+                  >
+                    Mediere semiotică ternară și verificare probatorie
+                  </text>
+                </g>
+
+                {/* Săgeată B4 -> B5 */}
+                <line
+                  x1="690"
+                  y1="392"
+                  x2="690"
+                  y2="408"
+                  stroke="#E5B822"
+                  strokeWidth="2.5"
+                  markerEnd="url(#arrow-gold)"
+                />
+
+                {/* B5: Creație suverană */}
+                <g
+                  onClick={() => setFig6SelectedStep('b5')}
+                  className="cursor-pointer"
+                >
+                  <rect
+                    x="545"
+                    y="410"
+                    width="290"
+                    height="48"
+                    rx="3"
+                    fill="#E5B822"
+                    stroke="#222426"
+                    strokeWidth="2.5"
+                  />
+                  <text
+                    x="690"
+                    y="430"
+                    textAnchor="middle"
+                    className="font-sans text-[12px] font-bold fill-[#222426]"
+                  >
+                    5. Creație suverană
+                  </text>
+                  <text
+                    x="690"
+                    y="447"
+                    textAnchor="middle"
+                    className="font-sans text-[10px] font-medium fill-[#222426]"
+                  >
+                    Acțiune civică, reziliență și autonomie
+                  </text>
+                </g>
+
+                {/* Linie punctată spre Axa Ego-Sine la bază */}
+                <line
+                  x1="690"
+                  y1="458"
+                  x2="690"
+                  y2="520"
+                  stroke="#222426"
+                  strokeWidth="2"
+                  strokeDasharray="4 4"
+                  markerEnd="url(#arrow-dark)"
+                />
+                <rect
+                  x="635"
+                  y="478"
+                  width="110"
+                  height="18"
+                  fill="#F6F5EE"
+                  stroke="#8C9BA5"
+                  strokeWidth="1"
+                />
+                <text
+                  x="690"
+                  y="491"
+                  textAnchor="middle"
+                  className="font-sans text-[8.5px] font-bold fill-[#6E7376]"
+                >
+                  Aliniere ontologică
+                </text>
+
+                {/* Baza: Axa Ego–Sine */}
+                <ellipse
+                  cx="690"
+                  cy="546"
+                  rx="145"
+                  ry="24"
+                  fill="#F6F5EE"
                   stroke="#222426"
                   strokeWidth="2"
                 />
                 <text
-                  x="592"
-                  y="265"
+                  x="690"
+                  y="550"
                   textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
-                  Track B (traseu adaptativ, Sistemul 2 și reglare executivă prefrontală)
+                  Axa Ego–Sine (integritate profundă)
                 </text>
 
-                {/* Step B1 */}
-                <rect
-                  x="295"
-                  y="296"
-                  width="175"
-                  height="76"
-                  fill="#F6F5EE"
-                  stroke="#E5B822"
-                  strokeWidth="2.5"
-                />
-                <text
-                  x="382"
-                  y="322"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
-                >
-                  Activare prefrontală
-                </text>
-                <text
-                  x="382"
-                  y="338"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
-                >
-                  și analiză
-                </text>
-                <text
-                  x="382"
-                  y="358"
-                  textAnchor="middle"
-                  className="font-sans text-[10.5px] fill-[#6E7376]"
-                >
-                  Capacitate negativă și calm
-                </text>
-
-                <line
-                  x1="470"
-                  y1="334"
-                  x2="498"
-                  y2="334"
-                  stroke="#E5B822"
-                  strokeWidth="3.5"
-                  markerEnd="url(#arrow-gold)"
-                />
-
-                {/* Step B2 */}
-                <rect
-                  x="505"
-                  y="296"
-                  width="175"
-                  height="76"
-                  fill="#F6F5EE"
-                  stroke="#E5B822"
-                  strokeWidth="2.5"
-                />
-                <text
-                  x="592"
-                  y="322"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
-                >
-                  Validare epistemică
-                </text>
-                <text
-                  x="592"
-                  y="338"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
-                >
-                  și comunitară
-                </text>
-                <text
-                  x="592"
-                  y="358"
-                  textAnchor="middle"
-                  className="font-sans text-[10.5px] fill-[#6E7376]"
-                >
-                  Mediere semiotică ternară
-                </text>
-
-                <line
-                  x1="680"
-                  y1="334"
-                  x2="708"
-                  y2="334"
-                  stroke="#E5B822"
-                  strokeWidth="3.5"
-                  markerEnd="url(#arrow-gold)"
-                />
-
-                {/* Step B3 */}
-                <rect
-                  x="715"
-                  y="296"
-                  width="175"
-                  height="76"
-                  fill="#F6F5EE"
-                  stroke="#E5B822"
-                  strokeWidth="2.5"
-                />
-                <text
-                  x="802"
-                  y="322"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
-                >
-                  Reziliență și acțiune
-                </text>
-                <text
-                  x="802"
-                  y="338"
-                  textAnchor="middle"
-                  className="font-sans text-[11.5px] font-bold fill-[#222426]"
-                >
-                  suverană
-                </text>
-                <text
-                  x="802"
-                  y="358"
-                  textAnchor="middle"
-                  className="font-sans text-[10.5px] fill-[#6E7376]"
-                >
-                  Coerență pe axa Ego–Sine
-                </text>
-
-                {/* Track B Dashed Consolidation Loop (exact match to PDF p. 30) */}
+                {/* Buclă de consolidare a rezilienței */}
                 <polyline
-                  points="802,372 802,418 382,418 382,380"
+                  points="835,434 870,434 870,178 837,178"
                   fill="none"
                   stroke="#6E7376"
-                  strokeWidth="2"
-                  strokeDasharray="5 4"
+                  strokeWidth="1.8"
+                  strokeDasharray="4 4"
                   markerEnd="url(#arrow-slate)"
                 />
+                <rect
+                  x="830"
+                  y="290"
+                  width="80"
+                  height="32"
+                  fill="#F6F5EE"
+                  stroke="#6E7376"
+                  strokeWidth="1"
+                />
                 <text
-                  x="592"
-                  y="411"
+                  x="870"
+                  y="303"
                   textAnchor="middle"
-                  className="font-sans text-[11px] font-semibold fill-[#222426]"
+                  className="font-sans text-[8px] font-bold fill-[#6E7376]"
                 >
-                  Consolidare mnezică a rezilienței și creșterea rezervei neurocognitive
+                  Consolidare
+                </text>
+                <text
+                  x="870"
+                  y="314"
+                  textAnchor="middle"
+                  className="font-sans text-[8px] fill-[#6E7376]"
+                >
+                  reziliență
                 </text>
               </g>
             </svg>
 
-            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F4F1EA] p-3.5">
+            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
-                Sinteză neurocognitivă (Figura 6, adaptată după Cogniție și manipulare)
+                Sinteză de sistem: Modelul comparativ al procesării în criză (Figura 6)
               </div>
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
-                {fig6SelectedStep === 'stimul' &&
-                  'Stimulul de criză acută. Un șoc informațional major, o amenințare de securitate iminentă sau o campanie intensă de manipulare algoritmică în prag electoral, construită pe amenințare existențială și indignare morală.'}
                 {fig6SelectedStep === 'bifurcatie' &&
-                  'Nodul de bifurcație cognitivă. Punctul critic în care direcția procesării depinde de disponibilitatea rezervei neurobiologice și de capacitatea subiectului de a interpune o pauză metacognitivă între stimul și reacție.'}
+                  'Nodul unic de bifurcație (stresul material acut și policriza). Reprezintă punctul de incidență al șocului cognitiv și socioeconomic. În absența unei pauze metacognitive și a rezervei neurobiologice, presiunea crizei împinge procesarea în mod automat spre reacția defensivă din Track A.'}
+                {fig6SelectedStep === 'anxietate' &&
+                  'Anxietatea cronică și hiperreactivitatea (Track A). Starea de alertă prelungită activează circuitele subcorticale amigdaliene și inhibă cortexul prefrontal dorsolateral (dlPFC), blocând capacitatea de analiză critică și declanșând reflexe reactive automate de apărare.'}
+                {fig6SelectedStep === 'nfcc' &&
+                  'Nevoia de închidere cognitivă (NFCC, Need for Cognitive Closure). Sub presiunea anxietății, individul manifestă o intoleranță acută la ambiguitate (Seizing) și o urgență extremă de a adopta concluzii categorice, rapide și simplificatoare (Freezing), refuzând orice nuanță sau complexitate.'}
+                {fig6SelectedStep === 'persona' &&
+                  'Persona mimetică (Track A). Conformismul formal de fațadă și copierea modelelor externe neintegrate („forme fără fond”). Individul adoptă discursuri și aparențe gata fabricate pentru a simula apartenența și a reduce disonanța, fără o asimilare critică reală.'}
+                {fig6SelectedStep === 'umbra' &&
+                  'Umbra colectivă (Track A). Conținuturile psihosociale refulate, frustrarea istorică și resentimentul acumulat. Între Persona mimetică și Umbra colectivă se instalează o tensiune compensatorie permanentă: cu cât conformismul de fațadă este mai rigid, cu atât umbra proiectează agresivitate și ostilitate antiinstituțională.'}
+                {fig6SelectedStep === 'bucla_algoritmica' &&
+                  'Bucla de feedback algoritmic și închiderea fizică (R). Resentimentul umbrei este capturat de algoritmii de optimizare a atenției și de operatorii de război cognitiv, amplificând polarizarea. Săgeata buclei se întoarce fizic la Anxietate cronică ca reacție pozitivă (Reinforcing Loop - R), autoamplificând criza.'}
+                {fig6SelectedStep === 'b1' &&
+                  '1. Acceptarea incertitudinii (Track B). Punctul de intrare în procesarea adaptativă constă în capacitatea negativă (Bion) — rezistența la impulsul de a închide prematur cogniția (rezistență la NFCC) și acceptarea calmă a stării de necunoscut fără panică.'}
+                {fig6SelectedStep === 'b2' &&
+                  '2. Reactivarea Sistemului 2 (Track B). Reglarea executivă a rețelei prefrontale (dlPFC și vmPFC), care reia controlul asupra impulsurilor amigdaliene, permițând analiza logică, contextualizarea istorică și decuplarea de stimulii virali extremi.'}
+                {fig6SelectedStep === 'b3' &&
+                  '3. Toleranța disonanței și integrarea ingeniozității Trickster (Track B). Individul tolerează contradicțiile inerente realității și recuperează creativ conținuturile umbrei colective — ingeniozitatea adaptativă, adaptabilitatea și umorul subversiv (figura arhetipală a Trickster-ului) transformate din resentiment destructiv în resursă de supraviețuire și inovație.'}
+                {fig6SelectedStep === 'b4' &&
+                  '4. Discernământ critic (Track B). Mediere semiotică ternară (semn–obiect–interpretant) care deconstruiește falsul narativ și verifică probele empirice, realizând o filtrare etică și morală conform valorilor democratice și umane.'}
+                {fig6SelectedStep === 'b5' &&
+                  '5. Creație suverană și Axa Ego–Sine (Track B). Punctul culminant al procesării adaptative: acțiune civică responsabilă, autonomie decizională și coerență profundă pe axa Ego–Sine, producând reziliență sistemică autentică.'}
                 {(fig6SelectedStep === 'trackA' ||
-                  (fig6ActiveTrack === 'A' &&
-                    fig6SelectedStep !== 'stimul' &&
-                    fig6SelectedStep !== 'bifurcatie')) &&
-                  'În arhitectura Traseului A (bucla reactivă dezadaptativă), expunerea repetată la stimuli informaționali construiți pe amenințare existențială și indignare morală declanșează o cascadă neurobiologică de urgență în care amigdala bazolaterală și rețeaua de detecție a relevanței preiau comanda exclusivă a aparatului decizional, inhibând funcțional cortexul prefrontal dorsolateral și ventromedial. Subiectul nu mai procesează informația prin analiză semantică și verificare probatorie, ci prin reflexe defensive automate de tip luptă-sau-fugi, amplificate de descărcările fazice de dopamină din nucleul accumbens (Cogniție și manipulare).'}
+                  (!fig6SelectedStep && fig6ActiveTrack === 'A')) &&
+                  'Track A (procesare defensivă): o traiectorie închisă într-o buclă de autoamplificare (R), guvernată de anxietate, intoleranță la ambiguitate (NFCC), conformism mimetic și resentiment al umbrei colective, exploatată de platformele digitale.'}
                 {(fig6SelectedStep === 'trackB' ||
-                  (fig6ActiveTrack === 'B' &&
-                    fig6SelectedStep !== 'stimul' &&
-                    fig6SelectedStep !== 'bifurcatie')) &&
-                  'Traseul B (traseul deliberativ adaptativ) se activează atunci când subiectul dispune de rezerva neurocognitivă și de antrenamentul metacognitiv necesare pentru a suspenda reacția impulsivă imediată și pentru a menține deschis spațiul incertitudinii critice (capacitatea negativă, Bion, 1962, 1970). Prin angajarea cortexului prefrontal dorsolateral în evaluarea probelor și prin reglarea afectelor subcorticale de către cortexul prefrontal ventromedial, stimulul informațional este extras din regimul urgenței emoționale și este supus contextualizării istorice, analizei logice și verificării intersubiective în comunități epistemice deschise (Cogniție și manipulare).'}
+                  (!fig6SelectedStep && fig6ActiveTrack === 'B')) &&
+                  'Track B (procesare adaptativă): o succesiune deliberată de transformări cognitive și psihosociale, de la suspendarea reacției impulsive până la creația suverană conectată pe axa Ego–Sine.'}
               </p>
             </div>
           </div>
@@ -2961,7 +3485,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                     fig7ActivePhase === ph
                       ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
-                      : 'bg-[#F4F1EA] text-[#222426] border-[#8C9BA5]'
+                      : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                   }`}
                 >
                   Faza {ph === 1 ? 'I (orizont tactic)' : ph === 2 ? 'II (orizont operațional)' : 'III (orizont strategic)'}
@@ -3421,7 +3945,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </g>
             </svg>
 
-            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F4F1EA] p-3.5">
+            <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <div className="text-xs font-mono text-[#6E7376] mb-1">
                 Explicația secvențialității cauzale (Figura 7)
               </div>

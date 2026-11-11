@@ -193,7 +193,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
         theoreticalConcept: 'Inversiunea normativă a Antilumii (Russkii Antimir) și nihilismul stării Bobok',
         theoreticalAuthor: 'Epstein (2022, 2023); Dostoievski (1873); Thom (2018); Pomerantsev (2014, 2019)',
         theoreticalMechanism: 'Răsturnarea sistematică a sensului conceptelor morale și juridice (agresiunea numită pace, ocupația numită suveranitate) combinată cu relativismul epistemic absolut („toți sunt la fel de corupți”).',
-        empiricalReality: 'Inocularea în publicul român a cinismului radical față de dreptul internațional, drepturile omului și instituțiile democratice, justificând legea celui mai tare.',
+        empiricalReality: 'Instilarea în publicul român a cinismului radical față de dreptul internațional, drepturile omului și instituțiile democratice, justificând legea celui mai tare.',
         systemicOutcome: 'tension'
       }
     ],

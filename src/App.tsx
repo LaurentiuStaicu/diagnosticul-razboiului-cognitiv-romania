@@ -218,7 +218,6 @@ export function App() {
   );
   const [selectedAuthorCitation, setSelectedAuthorCitation] = useState<string | null>(null);
   const [labFigureId, setLabFigureId] = useState<number>(initialHash.labFigureId ?? 1);
-  const [isAnchorCopied, setIsAnchorCopied] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
 
   const readingStageRef = useRef<HTMLDivElement>(null);
@@ -732,30 +731,16 @@ export function App() {
                     />
                   </div>
 
-                  {/* Chapter Kicker & Subchapter Title with Copyable Anchor Link */}
+                  {/* Chapter Kicker & Subchapter Title */}
                   <div className="text-xs font-mono font-semibold text-[#6E7376] mb-1.5">
                     {currentStep.chapterNumber === 0
                       ? currentStep.chapterTitle
                       : `Capitolul ${currentStep.chapterNumber} · ${currentStep.chapterTitle.replace(/^Capitolul\s+[0-9]+:\s*/, '').replace(/^[0-9]+\.\s*/, '')}`}
                   </div>
-                  <div className="group relative flex items-start justify-between gap-2">
+                  <div>
                     <h2 className="font-serif text-base sm:text-lg font-bold text-[#222426] headline-balance leading-snug">
                       {currentStep.title}
                     </h2>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        const anchorUrl = `https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/#pasul-${currentStep.stepNumber}`;
-                        navigator.clipboard.writeText(anchorUrl);
-                        setIsAnchorCopied(true);
-                        setTimeout(() => setIsAnchorCopied(false), 2000);
-                      }}
-                      className="opacity-70 group-hover:opacity-100 px-2 py-1 text-xs font-mono border border-[#8C9BA5] bg-[#F4F1EA] hover:border-[#222426] hover:bg-[#E5B822] transition-all cursor-pointer shrink-0 flex items-center gap-1"
-                      title="Copiază linkul direct către această secțiune"
-                    >
-                      <span className="font-bold text-[#222426]">#</span>
-                      <span>{isAnchorCopied ? 'Copiat!' : 'Anchor'}</span>
-                    </button>
                   </div>
                   {currentStep.subtitle && (
                     <p className="font-serif text-sm sm:text-base font-normal text-[#2C3539] mt-2 leading-relaxed">

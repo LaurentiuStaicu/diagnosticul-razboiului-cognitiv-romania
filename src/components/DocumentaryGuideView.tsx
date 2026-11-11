@@ -55,7 +55,7 @@ export const DocumentaryGuideView: React.FC<DocumentaryGuideViewProps> = ({
           sceneNumber: '2.1',
           heading: 'Rețeaua Sistema și starea Bobok (Dostoiévski & Thom)',
           narration:
-            'Operațiunea rusească de război cognitiv nu urmărește convingerea rațională, ci infectarea semiotică a spațiului discursiv și transgresiunea cinică a tuturor normelor.',
+            'Operațiunea rusească de război cognitiv nu urmărește convingerea rațională, ci parazitarea semiotică a spațiului discursiv și transgresiunea cinică a tuturor normelor.',
           scriptNote:
             'Suprapunere de texturi din rețelele sociale, comentarii conspirative, simboluri ortodoxe parazitate și secvențe din discursurile revizioniste.'
         },
