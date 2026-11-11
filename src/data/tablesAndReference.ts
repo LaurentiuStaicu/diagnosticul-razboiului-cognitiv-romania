@@ -189,7 +189,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'A',
     authors: 'Marc Lalonde, 1974 · G. E. Alan Dever, 1976',
     domain: 'Politici publice și psihosociologie',
-    definition: 'Model sistemic (fundamentat pe modelul determinanților sănătății publice și mintale elaborat de Lalonde și Dever) care ne ajută să stabilim în acest context că reziliența și echilibrul mintal al unei populații depind de interacțiunea continuă a patru factori: organizarea sistemului instituțional și a serviciilor publice, mediul socioeconomic și informațional, stilul de viață informațional și asociativ și rezerva neurobiologică.',
+    definition: 'Model analitic fundamentat pe cadrul clasic al determinanților sănătății publice elaborat de Marc Lalonde (1974) și rafinat epidemiologic de G. E. Alan Dever (1976), potrivit căruia starea unei populații este guvernată de patru câmpuri structurale: biologia umană, mediul, stilul de viață și organizarea sistemului de servicii. Operaționalizat în arhitectura acestei monografii, modelul ne ajută să stabilim în acest context că reziliența și echilibrul mintal al unei populații depind de interacțiunea continuă a patru factori: organizarea sistemului instituțional și a serviciilor publice, mediul socioeconomic și informațional, stilul de viață informațional și asociativ și rezerva neurobiologică.',
     monographContext: 'Fundamentează atât diagnosticul vulnerabilității endogene din Capitolul 1, cât și ordinea cauzală obligatorie a protocolului de reconstrucție în trei faze din Capitolul 6 și Tabelul 2.',
     polarity: 'synthesis'
   },

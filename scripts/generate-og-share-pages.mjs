@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { ALL_SUBCHAPTER_STEPS } from '../src/data/tablesAndReference.ts';
+import { ALL_SUBCHAPTER_STEPS, GLOSSARY_CONCEPTS, BIBLIOGRAPHY_DATA } from '../src/data/tablesAndReference.ts';
 import { FIGURE_METADATA } from '../src/components/InteractiveFigures.tsx';
 
 const BASE_URL = 'https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania';
@@ -186,9 +186,9 @@ fs.writeFileSync(
   buildShareHtml({
     slug: 'glosar',
     targetHash: 'glosar',
-    title: 'Glosar conceptual (50 concepte) și bibliografie integrală (122 lucrări) (Diagnosticul războiului cognitiv în România)',
+    title: `Glosar conceptual (${GLOSSARY_CONCEPTS.length} concepte) și bibliografie integrală (${BIBLIOGRAPHY_DATA.length} lucrări) (Diagnosticul războiului cognitiv în România)`,
     description:
-      'Aparatul conceptual interdisciplinar (sociologie instituțională, neuroștiințe, semiotică, psihologie analitică) și cele 122 de referințe academice verificate ale monografiei.',
+      `Aparatul conceptual interdisciplinar (sociologie instituțională, neuroștiințe, semiotică, psihologie analitică) și cele ${BIBLIOGRAPHY_DATA.length} de referințe academice verificate ale monografiei.`,
     imageRelPath: 'og/og-fig-1.png',
     imageAlt: 'Glosar conceptual și bibliografie integrală'
   }),
