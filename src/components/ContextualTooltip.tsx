@@ -132,6 +132,10 @@ export interface GlossaryPatternRule {
 export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   // Stratul A: Instituțional & Sociologic
   {
+    conceptId: 'stratul-a',
+    regex: /(?<!\p{L})(Stratul\s+A(?:\s*[:–-]\s*Arhitectura\s+instituțională)?|Stratului\s+A)(?!\p{L})/u
+  },
+  {
     conceptId: 'macro-micro-macro',
     regex: /(?<!\p{L})(Macro[–-]Micro[–-]Macro|bărc(?:ii|a)\s+lui\s+Coleman|barc(?:a|ii)\s+lui\s+Coleman)(?!\p{L})/iu
   },
@@ -141,7 +145,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'inchidere-operationala',
-    regex: /(?<!\p{L})(închider(?:e|ea|ii|i)\s+operațional(?:ă|e|i))(?!\p{L})/iu
+    regex: /(?<!\p{L})(închider(?:e|ea|ii|i)\s+operațional(?:ă|e|i)|autonomi(?:e|a|ei)\s+funcțional(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'forme-fara-fond',
@@ -153,7 +157,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'familism-amoral',
-    regex: /(?<!\p{L})(familism(?:ul|ului)?\s+amoral)(?!\p{L})/iu
+    regex: /(?<!\p{L})(familism(?:ul|ului)?\s+amoral|capital(?:ul|ului)?\s+social\s+de\s+punte)(?!\p{L})/iu
   },
   {
     conceptId: 'guvernanta-policentrica-ostrom',
@@ -169,7 +173,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'spalare-informationala',
-    regex: /(?<!\p{L})(Doppelgänger|spălăr(?:e|ea|ii)\s+informațional(?:ă|e)|reciclăr(?:e|ea|ii)\s+informațional(?:ă|e))(?!\p{L})/iu
+    regex: /(?<!\p{L})(Doppelgänger|information\s+laundering|spălăr(?:e|ea|ii)\s+informațional(?:ă|e)|reciclăr(?:e|ea|ii)\s+(?:și\s+disimulăr(?:e|ea|ii)\s+)?informațional(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'sistema',
@@ -178,12 +182,16 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
 
   // Stratul B: Neurocognitiv, Cibernetic & Semiotic
   {
+    conceptId: 'stratul-b',
+    regex: /(?<!\p{L})(Stratul\s+B(?:\s*[:–-]\s*Procesarea\s+neurocognitivă)?|Stratului\s+B)(?!\p{L})/u
+  },
+  {
     conceptId: 'al-saselea-domeniu',
     regex: /(?<!\p{L})(al\s+șaselea\s+domeniu(?:\s+operațional)?|spați(?:ul|ului)\s+cognitiv)(?!\p{L})/iu
   },
   {
     conceptId: 'uzura-alostatica',
-    regex: /(?<!\p{L})(uzur(?:ă|ii|a)\s+alostatic(?:ă|e))(?!\p{L})/iu
+    regex: /(?<!\p{L})((?:uzur|sarcin)(?:ă|ii|a)\s+alostatic(?:ă|e)|alostazi(?:e|a|ei))(?!\p{L})/iu
   },
   {
     conceptId: 'axa-hpa-dlpf',
@@ -195,7 +203,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'control-reflexiv-rang-secund',
-    regex: /(?<!\p{L})(control(?:ul|ului)?\s+reflexiv\s+de\s+rang\s+secund)(?!\p{L})/iu
+    regex: /(?<!\p{L})(control(?:ul|ului)?\s+reflexiv(?:\s+de\s+rang\s+secund)?)(?!\p{L})/iu
   },
   {
     conceptId: 'inchidere-cognitiva-seizing-freezing',
@@ -207,7 +215,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'sistemele-etice-lefebvre',
-    regex: /(?<!\p{L})(prim(?:ul|ului)\s+sistem\s+etic|al\s+doilea\s+sistem\s+etic)(?!\p{L})/iu
+    regex: /(?<!\p{L})(prim(?:ul|ului)\s+sistem\s+etic|al\s+doilea\s+sistem\s+etic|sistemel(?:e|or)\s+etice\s+(?:ale\s+lui\s+)?Lefebvre|algebr(?:a|ei)\s+moral(?:ă|e)\s+a\s+lui\s+Lefebvre)(?!\p{L})/iu
   },
   {
     conceptId: 'mediere-ternara-vs-binara',
@@ -235,7 +243,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'cognitia-protectoare-a-identitatii',
-    regex: /(?<!\p{L})(cogniți(?:a|ei)\s+protectoar(?:e|ii)\s+a\s+identității|Identity[–-]Protective\s+Cognition)(?!\p{L})/iu
+    regex: /(?<!\p{L})(cogniți(?:a|ei)\s+protectoar(?:e|ii)\s+a\s+identității|procesar(?:e|ea|ii)\s+defensiv(?:ă|e)\s+motivat(?:ă|e)\s+de\s+protejarea\s+identității|Identity[–-]Protective\s+Cognition)(?!\p{L})/iu
   },
   {
     conceptId: 'bifurcare-track-a-track-b',
@@ -243,11 +251,11 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'prebunking-inoculare',
-    regex: /(?<!\p{L})(prebunking)(?!\p{L})/iu
+    regex: /(?<!\p{L})(prebunking|pregătir(?:ea|e|ii)\s+psihocognitiv(?:ă|e)\s+preventiv(?:ă|e)|teori(?:a|ei)\s+inoculării|inocular(?:e|ea|ii)\s+psihologic(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'curba-uitarii-ebbinghaus',
-    regex: /(?<!\p{L})(curb(?:a|ei)\s+uitării(?:\s+a\s+lui\s+Ebbinghaus)?|curb(?:a|ei)\s+lui\s+Ebbinghaus|consolidar(?:e|ea|ii)\s+mnezic(?:ă|e)\s+Ebbinghaus)(?!\p{L})/iu
+    regex: /(?<!\p{L})(curb(?:a|ei)\s+uitării(?:\s+a\s+lui\s+Ebbinghaus)?|curb(?:a|ei)\s+lui\s+Ebbinghaus|consolidar(?:e|ea|ii)\s+mnezic(?:ă|e)(?:\s+(?:spațiat(?:ă|e)|Ebbinghaus))?)(?!\p{L})/iu
   },
   {
     conceptId: 'contagiune-complexa',
@@ -255,21 +263,25 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'model-collapse-mad',
-    regex: /(?<!\p{L})(Model\s+Collapse|Model\s+Autophagy\s+Disorder)(?!\p{L})/u
+    regex: /(?<!\p{L})(Model\s+Collapse|Model\s+Autophagy\s+Disorder|colaps(?:ul|ului)?\s+modelelor\s+generative|autofagi(?:a|ei)\s+modelelor\s+generative)(?!\p{L})/iu
   },
   {
     conceptId: 'abaissement-du-niveau-mental',
-    regex: /(?<!\p{L})(abaissement\s+du\s+niveau\s+mental)(?!\p{L})/iu
+    regex: /(?<!\p{L})(abaissement\s+du\s+niveau\s+mental|scăder(?:e|ea|ii)\s+tensiunii\s+conștiente)(?!\p{L})/iu
   },
   {
     conceptId: 'matricea-cipolla',
-    regex: /(?<!\p{L})(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+a\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla)(?!\p{L})/iu
+    regex: /(?<!\p{L})(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+)?(?:a\s+|ale\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla|matricea\s+lui\s+Cipolla)(?!\p{L})/iu
   },
 
   // Stratul C: Psihodinamic, Arhetipal & Axiologic
   {
+    conceptId: 'stratul-c',
+    regex: /(?<!\p{L})(Stratul\s+C(?:\s*[:–-]\s*Inconștientul\s+cultural)?|Stratului\s+C)(?!\p{L})/u
+  },
+  {
     conceptId: 'filtrul-axiologic',
-    regex: /(?<!\p{L})(Imago\s+Dei)(?!\p{L})/u
+    regex: /(?<!\p{L})(filtr(?:ul|ului)?\s+(?:moral\s+)?(?:creștin[–-]secular|axiologic(?:\s+și\s+normativ)?)|Imago\s+Dei)(?!\p{L})/iu
   },
   {
     conceptId: 'axa-ego-sine',
