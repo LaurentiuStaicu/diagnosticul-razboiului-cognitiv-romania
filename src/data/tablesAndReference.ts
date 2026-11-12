@@ -51,11 +51,11 @@ export const TABLE_1_DATA: Table1Row[] = [
     dimensionNumber: 4,
     dimensionTitle: '4. Ecologia informațională și dinamica decizională în bucla OODA',
     stratumA:
-      'Dereglementarea pieței atenției digitale și proliferarea rețelelor de reciclare și disimulare a sursei informaționale (information laundering: ferme de boți, rețele de microinfluenceri coordonați netransparent, canale criptate); poluarea ecosistemului digital cu date sintetice care induc Model Collapse (Shumailov) și Model Autophagy Disorder (Alemohammad) în modelele generative de inteligență artificială.',
+      'Dereglementarea pieței atenției digitale și proliferarea rețelelor de reciclare și disimulare a sursei informaționale prin intermediari (information laundering: ferme de boți, rețele de microinfluenceri coordonați netransparent, canale criptate); poluarea ecosistemului digital cu date sintetice care induc Model Collapse (Shumailov) și Model Autophagy Disorder (Alemohammad) în modelele generative de inteligență artificială.',
     stratumB:
-      'Deturnarea fazei de Orientare din bucla OODA (Boyd) prin control reflexiv de rang secund și comutarea în al doilea sistem etic al confruntării (Lefebvre); regresia de la medierea ternară la semiotica binară a anihilării (Lotman); capturarea adictivă a circuitelor dopaminergice în nucleul accumbens (eroarea de predicție a recompensei) și contagiunea complexă în bule informaționale închise (camere de ecou, Centola).',
+      'Deturnarea fazei de Orientare din bucla OODA (Boyd) prin control reflexiv de rang secund și comutarea în al doilea sistem etic al confruntării (Lefebvre); regresia de la medierea ternară la semiotica binară a anihilării (Lotman); capturarea adictivă a circuitelor dopaminergice în nucleul accumbens (eroarea de predicție a recompensei) și contagiunea complexă în bule informaționale închise (Centola).',
     stratumC:
-      'Captivitatea psihologică în bule identitare închise, omogenizarea cognitivă și deteriorarea hărții mentale predictive a realității; activarea autonomă a complexelor culturale defensive (Singer & Kimbles) și identificarea cu agresorul geopolitic sub masca apărării suveranității.'
+      'Captivitatea psihologică în bule identitare închise, omogenizarea cognitivă și deteriorarea hărții mentale predictive a realității; activarea reactivă a complexelor culturale defensive (Singer & Kimbles) și identificarea cu agresorul geopolitic sub masca apărării suveranității.'
   },
   {
     id: 't1-dim-5',
@@ -79,7 +79,7 @@ export const TABLE_2_DATA: Table2Row[] = [
     humanBiology:
       'Reducerea uzurii alostatice (McEwen) și a hiperactivării cronice a axei HPA prin scăderea insecurității materiale și birocratice; protejarea somnului și a atenției copiilor și adulților prin limitarea expunerii la fluxurile adictive de stimuli care provoacă capturarea circuitelor dopaminergice în nucleul accumbens; restabilirea latenței temporale necesare pentru deblocarea cortexului prefrontal dorsolateral.',
     digitalAndSociospatial:
-      'Aplicarea Regulamentului DSA (Legea nr. 50/2024) și a AI Act prin cuplarea Ordinelor de eliminare a conținutului ilegal (art. 9 DSA / art. 7 Legea 50/2024) cu Ordinele de furnizare a informațiilor financiare și a identității plătitorilor (art. 10 DSA) transmise către VLOPs prin ANCOM; standardizarea probatorie a detecției de către DNSC și hub-ul regional EDMO/BROD în format STIX și maparea pe matricea DISARM; introducerea frânelor de viralitate, etichetarea criptografică a datelor sintetice și investiții de urgență în serviciile de bază din enclavele de excluziune socială.',
+      'Aplicarea Regulamentului DSA (Legea nr. 50/2024) și a AI Act prin asocierea Ordinelor de eliminare a conținutului ilegal (art. 9 DSA / art. 7 Legea 50/2024) cu Ordinele de furnizare a informațiilor financiare și a identității plătitorilor (art. 10 DSA) transmise către VLOPs prin ANCOM; standardizarea probatorie a detecției de către DNSC și hub-ul regional EDMO/BROD în format STIX și maparea pe matricea DISARM; introducerea frânelor de viralitate, etichetarea criptografică a datelor sintetice și investiții de urgență în serviciile de bază din enclavele de excluziune socială.',
     informationalLifestyle:
       'Campanii publice de conștientizare a igienei digitale și a mecanismelor de capturare a atenției; înlocuirea comunicării oficiale arogante sau alarmiste cu o comunicare strategică de decompresie alostatică bazată pe principiile CDC CERC (Crisis and Emergency Risk Communication), menită să dezamorseze hipervigilența rețelei de detecție a relevanței (Salience Network – SN) și să oprească bucla reactivă dezadaptativă a Traseului A.',
     institutionalSystem:
@@ -105,7 +105,7 @@ export const TABLE_2_DATA: Table2Row[] = [
     phaseSubtitle: 'Consolidarea statului de drept și individuarea colectivă',
     horizon: 'Orizont strategic: 3–10 ani',
     humanBiology:
-      'Stabilizarea pe termen lung a rezervei neurobiologice și a echilibrului psihofiziologic al populației printr-un mediu social predictibil și meritocratic; menținerea tonusului integrativ al conștiinței civice și prevenirea scăderii tensiunii conștiente în fața șocurilor geopolitice viitoare.',
+      'Stabilizarea pe termen lung a rezervei neurobiologice și a echilibrului psihofiziologic al populației printr-un mediu social predictibil și meritocratic; menținerea capacității minții conștiente de a integra critic informațiile și prevenirea scăderii tensiunii conștiente (abaissement du niveau mental) în fața șocurilor geopolitice viitoare.',
     digitalAndSociospatial:
       'Reducerea structurală a faliilor sociospațiale dintre centrele metropolitane și periferiile interne; reconstrucția capitalului social de punte (Putnam, 2000) în mediul rural și depășirea familismului amoral (Banfield, 1958) prin reforma guvernanței cooperativelor agricole (Legea nr. 566/2004, art. 16 și art. 76: director executiv recrutat competitiv, interdicția rudelor sau afinilor până la gradul al III-lea ai administratorului, filtre de integritate contractuală și protejarea rambursărilor de TVA); integrarea diasporei în rețelele economice și civice ale țării.',
     informationalLifestyle:
@@ -155,7 +155,7 @@ export const REGIONAL_CONTROL_GROUP: RegionalCase[] = [
     roleInModel: 'Oglinda comparativă a rezilienței în condiții de resurse reduse și asalt hibrid extrem',
     exposureProfile: 'Resurse economice și militare mult mai reduse, lipsa umbrelei NATO, șantaj energetic decenal și finanțare ilegală masivă a rețelelor oligarhice de cumpărare de voturi, plus amenințarea transnistreană.',
     stratumA: 'Crearea de instituții dedicate, precum Centrul pentru Comunicare Strategică și Combatere a Dezinformării, și aplicarea de sancțiuni legale ferme împotriva fluxurilor financiare ilicite și a canalelor de propagandă.',
-    stratumB: 'Confruntarea directă și deconstrucția operațiunilor de cumpărare a voinței politice și de reciclare și disimulare a sursei informaționale în momente electorale critice.',
+    stratumB: 'Confruntarea directă și deconstrucția operațiunilor de cumpărare a voinței politice și de reciclare și disimulare a sursei informaționale prin intermediari (information laundering) în momente electorale critice.',
     stratumC: 'Articularea unui proiect de modernizare în care integrarea europeană este asumată conștient ca garanție existențială a supraviețuirii naționale.',
     strategicLesson: 'Voința politică fermă de a sancționa fluxurile financiare ilicite și de a apăra instituțional spațiul informațional poate compensa deficite majore de resurse materiale.',
     statusType: 'synthesis'
@@ -199,8 +199,8 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'B',
     authors: 'Nikolai Berdiaev, 1937 · Dumitru Stăniloae, 1978 · Jürgen Habermas, 2006 · Charles Taylor, 2007',
     domain: 'Filosofie constituțională și teologie',
-    definition: 'Sinteza europeană dintre etica creștină a demnității inalienabile a persoanei — întemeiată pe principiul Imago Dei, libertatea conștiinței și iubirea aproapelui — și raționalismul juridic modern bazat pe domnia legii impersonale, separarea puterilor și judecata critică.',
-    monographContext: 'Stabilizează închiderea operațională în Stratul A, primul sistem etic al cooperării în Stratul B și axa Ego–Sine în Stratul C.',
+    definition: 'Cadrul normativ al democrației constituționale europene (societatea postseculară analizată de Habermas, 2006) în care tensiunile și dezbaterile filosofice reale dintre etica creștină conservatoare și secularismul modern sunt mediate pașnic prin dialog, libertatea conștiinței și respectarea demnității inalienabile a persoanei (Imago Dei), în cadrul primului sistem etic al cooperării procedurale (Lefebvre, 1982).',
+    monographContext: 'Stabilizează închiderea operațională în Stratul A, primul sistem etic al cooperării în Stratul B și axa Ego–Sine în Stratul C, opunându-se deturnării acestor dezbateri legitime într-un război civil simbolic de anihilare reciprocă.',
     polarity: 'synthesis'
   },
   {
@@ -239,7 +239,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'C',
     authors: 'Alexander și Margarete Mitscherlich, 1967 · Vamık D. Volkan, 1997, 2004',
     domain: 'Psihanaliză socială și psihopolitică',
-    definition: 'Cuplarea a două mecanisme psihodinamice colective: incapacitatea de a ține doliu (Die Unfähigkeit zu trauern, Mitscherlich & Mitscherlich, 1967), definită drept refuzul confruntării morale oneste cu propriile complicități interne din regimurile totalitare, și trauma aleasă (chosen trauma, Volkan, 1997, 2004), definită drept reprezentarea mentală a unei nedreptăți istorice care fixează grupul într-o identitate transgenerațională de victimă inocentă și perpetuă.',
+    definition: 'Articularea a două mecanisme psihodinamice colective: incapacitatea de a ține doliu (Die Unfähigkeit zu trauern, Mitscherlich & Mitscherlich, 1967), definită drept refuzul confruntării morale oneste cu propriile complicități interne din regimurile totalitare, și trauma aleasă (chosen trauma, Volkan, 1997, 2004), definită drept reprezentarea mentală a unei nedreptăți istorice care fixează grupul într-o identitate transgenerațională de victimă inocentă și perpetuă.',
     monographContext: 'Blochează maturizarea civică și favorizează evacuarea vinovăției istorice prin proiecții paranoide asupra unor „persecutori externi”.',
     polarity: 'tension'
   },
@@ -289,7 +289,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'C',
     authors: 'Pierre Janet · Carl Gustav Jung, 1934',
     domain: 'Psihologie dinamică și analitică',
-    definition: 'Concept psihodinamic introdus de Pierre Janet și dezvoltat în psihologia analitică de Carl Gustav Jung (1934) pentru a desemna diminuarea tonusului integrativ al Eului conștient sub presiunea oboselii cronice și a afectelor negative, care coboară pragul controlului inhibitor și al filtrajului metacognitiv și permite complexelor autonome din inconștient să invadeze conștiința.',
+    definition: 'Concept psihodinamic introdus de Pierre Janet și dezvoltat în psihologia analitică de Carl Gustav Jung (1934) pentru a desemna slăbirea capacității minții conștiente de a integra critic informațiile și de a-și regla impulsurile sub presiunea oboselii cronice și a afectelor negative, ceea ce coboară pragul controlului inhibitor și al filtrajului metacognitiv și permite complexelor neintegrate din inconștient să invadeze conștiința.',
     monographContext: 'Corespondentul psihodinamic din Stratul C al inhibiției prefrontale produse de uzura alostatică în Stratul B.',
     polarity: 'tension'
   },
@@ -359,8 +359,8 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'B',
     authors: 'Vladimir Lefebvre, 1982, 2001 · Timothy L. Thomas, 2004',
     domain: 'Psihologie matematică și cibernetică',
-    definition: 'Spre deosebire de controlul reflexiv de rang întâi (inducerea tactică în eroare asupra datelor punctuale), controlul reflexiv de rang secund modifică însăși arhitectura axiologică, criteriile epistemice și regulile de inferență morală ale țintei din faza de Orientare, comutând-o din primul sistem etic al cooperării procedurale și al dialogului în al doilea sistem etic al confruntării intransigente și al anihilării oponentului (Lefebvre, 1982, 2001).',
-    monographContext: 'Determină cetățeanul capturat cognitiv să adopte din proprie convingere decizii autodistructive pe care le percepe ca expresie a voinței sale suverane.',
+    definition: 'Spre deosebire de controlul reflexiv de rang întâi (inducerea tactică în eroare asupra datelor punctuale), controlul reflexiv de rang secund îi furnizează țintei informații selectate strategic, false repere morale și impulsuri emoționale atent calibrate, modificându-i arhitectura valorică din faza de Orientare și comutând-o din primul sistem etic al cooperării procedurale și al dialogului în al doilea sistem etic al confruntării intransigente și al anihilării oponentului (Lefebvre, 1982, 2001).',
+    monographContext: 'Determină cetățeanul capturat cognitiv să ajungă în mod aparent autonom exact la deciziile autodistructive urmărite de inițiatorul operațiunii.',
     polarity: 'tension'
   },
   {
@@ -369,7 +369,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'B',
     authors: 'Charles Sanders Peirce, 1931–1958 · Iuri Lotman, 1990, 1992 · Iuri Lotman și Boris Uspenski, 1985',
     domain: 'Semiotica culturii și pragmatică',
-    definition: 'Opoziția structurală dintre semioza ternară a lui Charles Sanders Peirce (bazată pe triada semn – obiect – interpretant) și culturile ternare analizate de Iuri Lotman și Boris Uspenski (1985) — care mențin un spațiu neutru al legii impersonale, al verificării probatorii și al competiției legitime — și semiotica binară a anihilării, lipsită de zonă axiologică neutră, în care oponentul este tratat ca un dușman ontologic ce trebuie exterminat.',
+    definition: 'Opoziția structurală dintre semioza ternară a lui Charles Sanders Peirce — o relație în trei termeni între semn (mesajul sau informația), obiectul din realitate și interpretant (spațiul mental și comunitar al discernământului și al verificării empirice), regăsită în culturile ternare analizate de Iuri Lotman și Boris Uspenski (1985) — și semiotica binară a anihilării, lipsită de zonă neutră de mediere, în care semnul declanșează o reacție reflexă în doi timpi, iar oponentul este tratat ca un dușman ontologic ce trebuie exterminat.',
     monographContext: 'Operațiunile cognitive exportă semiotica binară în democrații pentru a prăbuși pacea civilă și deliberarea rațională.',
     polarity: 'synthesis'
   },
@@ -390,7 +390,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     authors: 'Wolfram Schultz, 1998, 2016 · Anna Lembke, 2021',
     domain: 'Neurobiologia adicției și a atenției',
     definition: 'Exploatarea mecanismului neurochimic al erorii de predicție a recompensei (reward prediction error) în nucleul accumbens prin administrarea de recompense variabile intermitente, derulare infinită și stimuli inflamatori care stârnesc indignarea morală, inducând desensibilizarea și reducerea densității receptorilor dopaminergici postsinaptici D2 (downregulation), sevraj informațional și suprimarea latenței temporale necesare activării cortexului prefrontal.',
-    monographContext: 'Menține utilizatorul digital într-o stare de hipnoză reactivă și vulnerabilitate la sugestie.',
+    monographContext: 'Menține utilizatorul digital într-o stare de captivitate a atenției, de reactivitate automată și de vulnerabilitate la sugestie.',
     polarity: 'tension'
   },
   {
@@ -419,8 +419,8 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'C',
     authors: 'Heraclit · Carl Gustav Jung, 1921',
     domain: 'Psihologie analitică',
-    definition: 'Principiu formulat de Heraclit și teoretizat în psihologia analitică de Carl Gustav Jung (1921), potrivit căruia orice atitudine extremă, rigidă și unilaterală a conștiinței se răstoarnă inevitabil, la atingerea unui prag critic de saturație, în contrariul său psihodinamic autonom. Operaționalizat în această analiză, conceptul explică pendularea colectivă de la mimetismul prooccidental de fațadă (Persona instituțională) la respingerea radicală a modernității constituționale.',
-    monographContext: 'Explică pendularea violentă de la mimetismul prooccidental de fațadă la respingerea radicală a modernității constituționale.',
+    definition: 'Principiu formulat de Heraclit și teoretizat în psihologia analitică de Carl Gustav Jung (1921), care descrie tiparul colectiv de reacție și mecanismul defensiv de compensare prin care o societate lipsită de instituții previzibile (Stratul A) și epuizată de stres cronic (Stratul B), a cărei atitudine oficială a devenit excesiv de unilaterală și ruptă de frustrările refulate în Umbră, basculează reactiv în extremul său opus.',
+    monographContext: 'Explică pendularea colectivă de la mimetismul prooccidental de fațadă (Persona instituțională) la respingerea radicală a modernității constituționale, fără a trata conceptele din Stratul C drept forțe oculte autonome.',
     polarity: 'tension'
   },
   {
@@ -449,8 +449,8 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'C',
     authors: 'Marie-Louise von Franz, 1970/2000 · James Hillman, 1979 · Erich Neumann, 1949/1954',
     domain: 'Psihologie analitică a culturii',
-    definition: 'Structură psihică individuală sau colectivă (von Franz, 1970/2000; Hillman, 1979) care refuză angajamentul instituțional răbdător, metodic și limitat în lumea concretă, preferând provizoratul perpetuu, gândirea magică, pendularea între entuziasme mesianice scurte și deflație fatalistă, așteptarea pasivă a unui „salvator” providențial și regresia spre dependența de un stat paternalist tutelar (Neumann, 1949/1954).',
-    monographContext: 'Generează blocajul decizional strategic și paralizia instituțională a statului-țintă în momentele de criză.',
+    definition: 'Tipar colectiv de reacție și mecanism de apărare (von Franz, 1970/2000; Hillman, 1979) prin care o societate lipsită de instituții previzibile (Stratul A) și epuizată de stres cronic (Stratul B) își compensează insecuritatea refuzând angajamentul instituțional răbdător și metodic, în favoarea provizoratului perpetuu, a gândirii magice, a așteptării pasive a unui „salvator” providențial și a regresiei spre dependența de un stat paternalist tutelar (Neumann, 1949/1954).',
+    monographContext: 'Contribuie la blocajul decizional strategic și la paralizia instituțională a statului-țintă în momentele de criză.',
     polarity: 'tension'
   },
   {
@@ -460,16 +460,16 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     authors: 'Wilfred R. Bion, 1962, 1970 · Stephen W. Porges, 2011 · Julian F. Thayer și Richard D. Lane, 2009',
     domain: 'Neurobiologia deciziei și psihanaliză epistemică',
     definition: 'Model decizional care descrie opoziția, în nodul de criză acută, între bucla reactivă dezadaptativă a Traseului A — dominată de hiperactivarea amigdaliană, tunelul dopaminergic și Sistemul 1 — și Traseul deliberativ adaptativ B, susținut de integrarea neuroviscerală (Thayer & Lane, 2009), reglarea vagală (Porges, 2011), inhibiția prefrontală descendentă, capacitatea negativă de a tolera incertitudinea (Bion, 1970) și validarea în comunități epistemice deschise.',
-    monographContext: 'Fundamentează neurobiologic suveranitatea decizională a cetățeanului ilustrată în Figura 6.',
+    monographContext: 'În momentul șocului acut, responsabilitatea deschiderii Traseului B revine în primul rând liderilor instituționali și cadrelor profesionale, în timp ce pentru populația largă trecerea stabilă pe Traseul B devine posibilă prin decompresia alostatică și frânele algoritmice din Faza I (Figura 6).',
     polarity: 'synthesis'
   },
   {
     id: 'prebunking-inoculare',
-    term: 'Pregătirea psihocognitivă preventivă (prebunking) și teoria inoculării',
+    term: 'Pregătirea psihocognitivă preventivă (prebunking) și rezistența la persuasiune',
     stratum: 'B',
     authors: 'William J. McGuire, 1964 · Jon Roozenbeek și Sander van der Linden, 2019, 2022 · Hermann Ebbinghaus, 1885',
     domain: 'Psihologie experimentală și educație cognitivă',
-    definition: 'Mecanism de imunizare cognitivă preventivă fundamentat pe teoria inoculării psihologice (McGuire, 1964) și operaționalizat digital drept prebunking (Roozenbeek & van der Linden, 2019, 2022), prin care populația este expusă anticipat și explicat la tiparele formale de manipulare, însoțit de sesiuni periodice de consolidare mnezică calibrate pe curba uitării (Ebbinghaus, 1885) pentru transferul discernământului în memoria procedurală de lungă durată.',
+    definition: 'Mecanism de consolidare preventivă a rezilienței epistemice fundamentat pe teoria rezistenței la persuasiune (McGuire, 1964) și operaționalizat digital drept prebunking (Roozenbeek & van der Linden, 2019, 2022), prin care populația este antrenată anticipat și explicat să recunoască tiparele formale de manipulare, însoțit de sesiuni periodice de consolidare mnezică calibrate pe curba uitării (Ebbinghaus, 1885) pentru transferul discernământului în memoria procedurală de lungă durată.',
     monographContext: 'Al doilea pilon al Fazei a II-a din protocolul de reconstrucție a rezilienței.',
     polarity: 'synthesis'
   },
@@ -545,7 +545,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'spalare-informationala',
-    term: 'Reciclarea și disimularea sursei informaționale: rețelele Doppelgänger, Matrioșka și Pravda',
+    term: 'Reciclarea și disimularea sursei informaționale prin intermediari: rețelele Doppelgänger, Matrioșka și Pravda',
     stratum: 'A',
     authors: 'Thomas Rid, 2020 · Peter Pomerantsev, 2014, 2019 · Ilia Shumailov et al., 2024',
     domain: 'Securitate cibernetică și analiză OSINT',
@@ -640,7 +640,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     authors: 'Wilfred R. Bion, 1962, 1970 · Stephen W. Porges, 2011 · Julian F. Thayer și Richard D. Lane, 2009',
     domain: 'Psihanaliză epistemică și neurobiologia deciziei',
     definition: 'Aptitudinea psihică și metacognitivă formulată de John Keats și teoretizată în psihanaliză de Wilfred R. Bion (1962, 1970) de a tolera incertitudinea, ambiguitatea și lipsa unui răspuns imediat în mijlocul unei crize acute, susținută neurofiziologic de reglarea inhibitoare descendentă (top-down regulation) a cortexului prefrontal asupra amigdalei și de tonusul vagal parasimpatic (Porges, 2011; Thayer & Lane, 2009).',
-    monographContext: 'Condiția decisivă în nodul de bifurcație pentru activarea Traseului deliberativ B în criză acută, ilustrată în Figura 6.',
+    monographContext: 'Condiția decisivă în nodul de bifurcație pentru deschiderea Traseului deliberativ B în criză acută de către liderii instituționali și cadrele profesionale, ilustrată în Figura 6.',
     polarity: 'synthesis'
   },
   {
@@ -864,7 +864,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         takeaway:
           'Distrugerea capitalului social de punte prin replierea în familism amoral, secesiunea păturilor urbane prospere și imersiunea algoritmică a diasporei pe platformele de clipuri video scurte creează bule informaționale închise la scară transnațională.',
         implication:
-          'Faliile demografice și trauma dezrădăcinării oferă vectorilor de control reflexiv de rang secund suprafețe directe de cuplare emoțională și mobilizare antisistem.'
+          'Pe fondul eșecului partidelor democratice tradiționale de a reprezenta aceste comunități, faliile demografice și trauma dezrădăcinării lasă un vid politic pe care actorii oportuniști și operațiunile de control reflexiv de rang secund îl exploatează direct pentru mobilizare antisistem.'
       },
       {
         id: 'exec-1-3',
@@ -886,7 +886,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         takeaway:
           'Regimul cleptocratic rus funcționează prin inversiunea normativă a Antilumii și cinismul transgresiv al stării Bobok, camuflate la export sub masca apărării tradiției și a suveranității.',
         implication:
-          'Pentru a ocoli rusofobia istorică a românilor, vectorul ostil parazitează semiotic codurile identitare autohtone prin rețele de reciclare și disimulare a sursei informaționale.'
+          'Pentru a ocoli rusofobia istorică a românilor, vectorul ostil parazitează semiotic dezbaterile legitime și codurile identitare autohtone prin rețele de reciclare și disimulare a sursei informaționale prin intermediari (information laundering).'
       },
       {
         id: 'exec-2-2',
@@ -902,7 +902,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         takeaway:
           'Comparația cu Estonia, Polonia și Republica Moldova demonstrează că reziliența rezultă din sancționarea fluxurilor ilicite, memoria istorică instituționalizată și apărarea antropologiei patristice a persoanei.',
         implication:
-          'Autoritățile trebuie să destructureze rețelele financiare de reciclare și disimulare a sursei informaționale și să susțină dialogul dintre cultura constituțională și teologia ortodoxă canonică.'
+          'Autoritățile trebuie să destructureze rețelele financiare de reciclare și disimulare a sursei informaționale prin intermediari și să susțină dialogul dintre cultura constituțională și teologia ortodoxă canonică.'
       }
     ]
   },
@@ -944,7 +944,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-4-1',
         title: 'Mecanismul diagnosticat: Enantiodromia suveranistă și proiecția Umbrei',
         takeaway:
-          'Saturația față de Persona instituțională mimetică declanșează legea enantiodromiei, răsturnând conformismul prooccidental de fațadă în respingerea radicală a ordinii constituționale.',
+          'Saturația față de Persona instituțională mimetică într-o societate lipsită de instituții previzibile și epuizată de stres cronic generează o pendulare reactivă de tip enantiodromic, răsturnând conformismul prooccidental de fațadă în respingerea radicală a ordinii constituționale.',
         implication:
           'Conținuturile neintegrate din Umbra colectivă sunt evacuate prin proiecție paranoidă asupra unui „persecutor extern”, mascând responsabilitatea rețelelor extractive interne.'
       },
@@ -974,9 +974,9 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-5-1',
         title: 'Mecanismul diagnosticat: Sindromul Puer Aeternus și apărarea maniacală',
         takeaway:
-          'În momentele de criză strategică, activarea arhetipului Puer Aeternus alimentează așteptarea magică a unui „salvator” providențial și iluzia neutralității izolaționiste.',
+          'În momentele de criză strategică, o societate epuizată de impredictibilitate instituțională și stres cronic își compensează insecuritatea prin tiparul defensiv Puer Aeternus, așteptarea magică a unui „salvator” providențial și iluzia neutralității izolaționiste.',
         implication:
-          'Nostalgia după dependența pasivă de un stat paternalist tutelar paralizează voința politică și capacitatea de descurajare strategică a statului-țintă.'
+          'Nostalgia defensivă după dependența pasivă de un stat paternalist tutelar paralizează voința politică și capacitatea de descurajare strategică a statului-țintă.'
       },
       {
         id: 'exec-5-2',
@@ -988,11 +988,11 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
       },
       {
         id: 'exec-5-3',
-        title: 'Decizia strategică: Capacitatea negativă și validarea în comunități deschise',
+        title: 'Decizia strategică: Responsabilitatea liderilor în șocul acut și decompresia din Faza I',
         takeaway:
-          'Comutarea pe Traseul deliberativ B depinde de reglarea descendentă exercitată de cortexul prefrontal, de tonusul vagal și de capacitatea negativă de a tolera incertitudinea fără reacții paranoide premature.',
+          'În momentul șocului acut, responsabilitatea deschiderii Traseului deliberativ B (prin capacitate negativă și comunicare calmă, verificabilă probatoriu) revine în primul rând liderilor instituționali, cadrelor profesionale și formatorilor de opinie.',
         implication:
-          'Liderii instituționali trebuie să practice o comunicare calmă, predictibilă și verificabilă probatoriu, care să ancoreze cetățenii în regimul grupului de lucru și al medierii ternare.'
+          'Pentru populația largă epuizată biologic, trecerea stabilă și autonomă pe Traseul B devine posibilă abia prin decompresia alostatică și frânele algoritmice din Faza I a protocolului.'
       }
     ]
   },
@@ -1037,7 +1037,7 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
     targetObjective:
       'Oprirea buclei reactive dezadaptative a Traseului A, scăderea hipercortizolemiei bazale pe axa HPA, întreruperea capturării dopaminergice în nucleul accumbens și blocarea fluxurilor financiare și criptografice ale operațiunilor informaționale.',
     concreteIntervention:
-      'Cuplarea sistematică a Ordinelor de eliminare a conținutului ilegal (art. 9 din DSA / art. 7 din Legea nr. 50/2024) cu Ordinele obligatorii de furnizare a informațiilor financiare și a identității plătitorilor (art. 10 din DSA) transmise către VLOPs prin punctul unic de contact ANCOM; verificarea codului unic al mandatarului financiar (CMF) și blocarea publicității politice nemarcate sau finanțate din țări terțe prin AEP și BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025 și Regulamentul UE 2024/900 TTPA, art. 13, 15 și 17); înghețarea operativă în timp real a tranzacțiilor suspecte și blocarea conversiilor cripto off-ramp prin ONPCSB, BNR și ASF în temeiul art. 33 și art. 34 din Legea nr. 129/2019 (blocare de drept 24h și suspendare ONPCSB 48–72h, interogarea automată a registrului BARIS conform Legii nr. 86/2025, aplicarea O.U.G. nr. 10/2025 / Regulamentului MiCA 2023/1114 și a Regulamentului TFR 2023/1113 – Travel Rule, urmate de sesizarea PICCJ pentru sechestru asigurător); standardizarea probatorie a detecției de către DNSC și hub-ul regional EDMO/BROD în format STIX și maparea pe matricea DISARM; comunicare strategică de decompresie alostatică bazată pe principiile CDC CERC și debirocratizare digitală după modelul e-Estonia.',
+      'Asocierea sistematică a Ordinelor de eliminare a conținutului ilegal (art. 9 din DSA / art. 7 din Legea nr. 50/2024) cu Ordinele obligatorii de furnizare a informațiilor financiare și a identității plătitorilor (art. 10 din DSA) transmise către VLOPs prin punctul unic de contact ANCOM; verificarea codului unic al mandatarului financiar (CMF) și blocarea publicității politice nemarcate sau finanțate din țări terțe prin AEP și BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025 și Regulamentul UE 2024/900 TTPA, art. 13, 15 și 17); înghețarea operativă în timp real a tranzacțiilor suspecte și blocarea conversiilor cripto off-ramp prin ONPCSB, BNR și ASF în temeiul art. 33 și art. 34 din Legea nr. 129/2019 (blocare de drept 24h și suspendare ONPCSB 48–72h, interogarea automată a registrului BARIS conform Legii nr. 86/2025, aplicarea O.U.G. nr. 10/2025 / Regulamentului MiCA 2023/1114 și a Regulamentului TFR 2023/1113 – Travel Rule, urmate de sesizarea PICCJ pentru sechestru asigurător); standardizarea probatorie a detecției de către DNSC și hub-ul regional EDMO/BROD în format STIX și maparea pe matricea DISARM; comunicare strategică de decompresie alostatică bazată pe principiile CDC CERC și debirocratizare digitală după modelul e-Estonia.',
     responsibleActors:
       'ANCOM în calitate de Coordonator al Serviciilor Digitale (DSC, Legea nr. 50/2024), DNSC, AEP și BEC, ONPCSB, BNR, ASF și PICCJ, celulele de criză din CSAT, MAI și MApN, în coordonare directă cu Comisia Europeană și European Digital Media Observatory (EDMO / hub-ul regional BROD).'
   },
