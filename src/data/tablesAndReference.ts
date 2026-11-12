@@ -93,7 +93,7 @@ export const TABLE_2_DATA: Table2Row[] = [
     humanBiology:
       'Antrenarea reglării descendente a amigdalei bazolaterale de către cortexul prefrontal ventromedial și dorsolateral; cultivarea capacității negative (Bion) și a toleranței la incertitudine pentru comutarea stabilă a procesării informației din nodul de bifurcație pe Traseul deliberativ adaptativ B; sesiuni periodice de consolidare mnezică calibrate pe curba uitării a lui Hermann Ebbinghaus.',
     digitalAndSociospatial:
-      'Reconstrucția infrastructurii comunitare și culturale de proximitate în mediul rural, în orașele mici și în comunitățile din diaspora pentru a înlocui izolarea în bule informaționale închise cu spații fizice de interacțiune umană directă; crearea de rețele locale care favorizează contagiunea socială complexă pozitivă (Centola) și refacerea capitalului social de punte (bridging, Putnam).',
+      'Reconstrucția infrastructurii comunitare și culturale de proximitate în mediul rural, în orașele mici și în comunitățile din diaspora pentru a înlocui izolarea în bule informaționale închise cu spații fizice de interacțiune umană directă; crearea de rețele locale care favorizează contagiunea socială complexă pozitivă (Centola, 2018) și refacerea capitalului social de punte (Putnam, 2000).',
     informationalLifestyle:
       'Instituționalizarea pregătirii psihocognitive preventive în școli, universități și programe pentru adulți, axată pe detecția controlului reflexiv de rang secund și a semiozei binare; reconcilierea filtrului moral creștin–secular prin dialog între teologia ortodoxă patristică a demnității persoanei și etica civică constituțională, consolidând primul sistem etic al cooperării.',
     institutionalSystem:
@@ -107,7 +107,7 @@ export const TABLE_2_DATA: Table2Row[] = [
     humanBiology:
       'Stabilizarea pe termen lung a rezervei neurobiologice și a echilibrului psihofiziologic al populației printr-un mediu social predictibil și meritocratic; menținerea tonusului integrativ al conștiinței civice și prevenirea scăderii tensiunii conștiente în fața șocurilor geopolitice viitoare.',
     digitalAndSociospatial:
-      'Reducerea structurală a faliilor sociospațiale dintre centrele metropolitane și periferiile interne; reconstrucția capitalului social de punte (bridging, Putnam) în mediul rural și depășirea familismului amoral (Banfield) prin reforma guvernanței cooperativelor agricole (Legea nr. 566/2004, art. 16 și art. 76: director executiv recrutat competitiv, interdicția rudelor sau afinilor până la gradul al III-lea ai administratorului, filtre de integritate contractuală și protejarea rambursărilor de TVA); integrarea diasporei în rețelele economice și civice ale țării.',
+      'Reducerea structurală a faliilor sociospațiale dintre centrele metropolitane și periferiile interne; reconstrucția capitalului social de punte (Putnam, 2000) în mediul rural și depășirea familismului amoral (Banfield, 1958) prin reforma guvernanței cooperativelor agricole (Legea nr. 566/2004, art. 16 și art. 76: director executiv recrutat competitiv, interdicția rudelor sau afinilor până la gradul al III-lea ai administratorului, filtre de integritate contractuală și protejarea rambursărilor de TVA); integrarea diasporei în rețelele economice și civice ale țării.',
     informationalLifestyle:
       'Asumarea critică și onestă a istoriei naționale în educație și în cultura publică, depășind incapacitatea de a ține doliu și trauma aleasă; conversia funcțională a resurselor latente din Umbra colectivă și a arhetipului Trickster-ului în agilitate cognitivă și inovație; maturizarea conștiinței civice dincolo de sindromul Puer Aeternus și realizarea individuării colective pe axa Ego–Sine.',
     institutionalSystem:
@@ -217,9 +217,9 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     id: 'forme-fara-fond',
     term: 'Forme fără fond și instituții extractive versus incluzive',
     stratum: 'A',
-    authors: 'Titu Maiorescu, 1868 · Daron Acemoglu și James A. Robinson, 2012 · North, Wallis și Weingast, 2009',
+    authors: 'Titu Maiorescu, 1868 · Constantin Rădulescu-Motru, 1904 · Constantin Dobrogeanu-Gherea, 1910 · Henri H. Stahl, 1980 · Daron Acemoglu și James A. Robinson, 2012 · North, Wallis și Weingast, 2009',
     domain: 'Sociologie istorică și economie instituțională',
-    definition: 'Disocierea dintre arhitectura constituțională occidentală formală — instituțiile incluzive — și practicile informale de capturare a rentei și blocare a meritocrației specifice instituțiilor extractive dintr-o ordine socială cu acces limitat.',
+    definition: 'Paradigmă analitică inaugurată de Titu Maiorescu (1868) și dezvoltată în sociologia modernizării românești (Rădulescu-Motru, 1904; Dobrogeanu-Gherea, 1910; Stahl, 1980), care desemnează disocierea structurală dintre arhitectura constituțională occidentală adoptată formal — instituțiile incluzive — și persistența practicilor informale de capturare a rentei și blocare a meritocrației, specifice instituțiilor extractive dintr-o ordine socială cu acces limitat (North, Wallis & Weingast, 2009; Acemoglu & Robinson, 2012).',
     monographContext: 'Constituie rădăcina istorică a neîncrederii cetățeanului român în discursul oficial și a scindării dintre Persona instituțională mimetică și Umbra colectivă.',
     polarity: 'tension'
   },
@@ -227,9 +227,9 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     id: 'persona-si-umbra',
     term: 'Persona instituțională mimetică și Umbra colectivă',
     stratum: 'C',
-    authors: 'Carl Gustav Jung, 1928 · Joseph Henderson, 1984 · Thomas Singer și Samuel L. Kimbles, 2004',
-    domain: 'Psihologie analitică postjungiană',
-    definition: 'Scindarea în inconștientul cultural între fațada conformistă de aliniere declarativă la standardele externe — Persona mimetică — și fondul refulat de strategii informale de supraviețuire și traume istorice neintegrate care alcătuiesc Umbra colectivă.',
+    authors: 'Carl Gustav Jung, 1928 · Joseph Henderson, 1984 · Thomas Singer și Samuel L. Kimbles, 2004 · Gail Kligman și Katherine Verdery, 2011',
+    domain: 'Psihologie analitică postjungiană și antropologie istorică',
+    definition: 'Scindarea din inconștientul cultural (Henderson, 1984) și din complexele culturale (Singer & Kimbles, 2004) între fațada conformistă de aliniere declarativă la standardele externe — Persona instituțională mimetică — și fondul refulat de strategii informale de supraviețuire, politică a duplicității (Kligman & Verdery, 2011) și traume istorice neintegrate care alcătuiesc Umbra colectivă.',
     monographContext: 'Explică de ce impostura elitelor interne compromite simbolic însăși ideea de modernizare europeană în ochii cetățeanului vulnerabilizat.',
     polarity: 'tension'
   },
@@ -239,7 +239,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'C',
     authors: 'Alexander și Margarete Mitscherlich, 1967 · Vamık D. Volkan, 1997, 2004',
     domain: 'Psihanaliză socială și psihopolitică',
-    definition: 'Refuzul confruntării morale oneste cu complicitățile interne din regimurile totalitare și fixarea transgenerațională într-o identitate colectivă de victimă inocentă și perpetuă.',
+    definition: 'Cuplarea a două mecanisme psihodinamice colective: incapacitatea de a ține doliu (Die Unfähigkeit zu trauern, Mitscherlich & Mitscherlich, 1967), definită drept refuzul confruntării morale oneste cu propriile complicități interne din regimurile totalitare, și trauma aleasă (chosen trauma, Volkan, 1997, 2004), definită drept reprezentarea mentală a unei nedreptăți istorice care fixează grupul într-o identitate transgenerațională de victimă inocentă și perpetuă.',
     monographContext: 'Blochează maturizarea civică și favorizează evacuarea vinovăției istorice prin proiecții paranoide asupra unor „persecutori externi”.',
     polarity: 'tension'
   },
@@ -367,9 +367,9 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     id: 'mediere-ternara-vs-binara',
     term: 'Semioza ternară versus semiotica binară a anihilării',
     stratum: 'B',
-    authors: 'Charles Sanders Peirce, 1931–1958 · Iuri Lotman, 1990, 1992 · Lotman și Uspenski, 1985',
-    domain: 'Semiotica culturii',
-    definition: 'Opoziția dintre culturile ternare — care mențin un spațiu neutru al interpretantului, al dreptului civil și al competiției legitime — și sistemele binare ale anihilării, lipsite de zonă axiologică neutră, în care oponentul este tratat ca un dușman ontologic ce trebuie exterminat.',
+    authors: 'Charles Sanders Peirce, 1931–1958 · Iuri Lotman, 1990, 1992 · Iuri Lotman și Boris Uspenski, 1985',
+    domain: 'Semiotica culturii și pragmatică',
+    definition: 'Opoziția structurală dintre semioza ternară a lui Charles Sanders Peirce (bazată pe triada semn – obiect – interpretant) și culturile ternare analizate de Iuri Lotman și Boris Uspenski (1985) — care mențin un spațiu neutru al legii impersonale, al verificării probatorii și al competiției legitime — și semiotica binară a anihilării, lipsită de zonă axiologică neutră, în care oponentul este tratat ca un dușman ontologic ce trebuie exterminat.',
     monographContext: 'Operațiunile cognitive exportă semiotica binară în democrații pentru a prăbuși pacea civilă și deliberarea rațională.',
     polarity: 'synthesis'
   },
@@ -409,7 +409,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'B',
     authors: 'Damon Centola, 2018, 2021 · Mark Granovetter, 1973',
     domain: 'Sociologia rețelelor',
-    definition: 'Mecanism prin care adoptarea unor credințe radicale sau norme comportamentale costisitoare necesită confirmări multiple și redundante din vecinătatea socială imediată, spre deosebire de contagiunea simplă prin legături slabe.',
+    definition: 'Mecanism de difuziune în rețelele sociale teoretizat de Damon Centola (2018, 2021), prin care adoptarea unor credințe radicale, identități politice sau norme comportamentale cu cost ridicat necesită confirmări multiple și redundante prin „punți largi” (wide bridges) din vecinătatea socială imediată, spre deosebire de contagiunea simplă a informației banale prin „legături slabe” (weak ties, Granovetter, 1973).',
     monographContext: 'Roiurile coordonate de boți și microinfluenceri fabrică artificial iluzia unui consens social majoritar; în Faza a II-a, spațiile comunitare fizice generează contagiune complexă pozitivă.',
     polarity: 'neutral'
   },
@@ -1058,7 +1058,7 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
     targetObjective:
       'Eliminarea rădăcinii istorice a „formelor fără fond”, consolidarea barierei instituționale în matricea lui Cipolla prin arhitectura alegerii (Thaler & Sunstein) pentru atragerea în Cadranul I al cooperării inteligente și susținerea instituțională a patriotismului constituțional matur.',
     concreteIntervention:
-      'Eliminarea numirilor temporare discreționare în funcțiile publice (art. 509–510 din Codul administrativ – O.U.G. nr. 57/2019); reforma de lege ferenda a art. 182 și art. 281 din Legea nr. 207/2015 privind Codul de procedură fiscală („penalizarea în oglindă a statului” și isonomia fiscală): calculul și virarea automată, din oficiu, prin Trezoreria Statului, în același ordin de plată IBAN, a dobânzilor și penalităților în oglindă pentru întârzierea rambursării TVA (art. 169 CPF), a decontării concediilor medicale din FNUASS (art. 40 O.U.G. nr. 158/2005) sau a facturilor din e-Factura (Legea nr. 72/2013), înlăturând asimetria din O.G. nr. 22/2002 și Decizia ÎCCJ RIL nr. 24/2025, alături de răspunderea solidară a funcționarilor (art. 281 CPF, art. 499–500 Codul administrativ și Decizia CCR nr. 694/2015); reforma guvernanței cooperativelor agricole (Legea nr. 566/2004, art. 16 și art. 76: director executiv recrutat competitiv, interdicția rudelor și afinilor până la gradul al III-lea ai administratorului, filtre de integritate și protejarea rambursărilor de TVA) pentru reconstrucția capitalului social de punte (bridging, Putnam); mecanism dublu de audit periodic independent: Auditul public extern al performanței realizat bienal de Curtea de Conturi a României (art. 2 lit. b și art. 28 alin. 2 din Legea nr. 94/1992) asupra creditelor de angajament multianuale (Legea nr. 500/2002) și Auditul științific și civic independent realizat de consorțiile universitare acreditate ca „cercetători agreați” (art. 40 DSA / EDMO / grilele DigComp, KAVI și simulările Serious Games).',
+      'Eliminarea numirilor temporare discreționare în funcțiile publice (art. 509–510 din Codul administrativ – O.U.G. nr. 57/2019); reforma de lege ferenda a art. 182 și art. 281 din Legea nr. 207/2015 privind Codul de procedură fiscală („penalizarea în oglindă a statului” și isonomia fiscală): calculul și virarea automată, din oficiu, prin Trezoreria Statului, în același ordin de plată IBAN, a dobânzilor și penalităților în oglindă pentru întârzierea rambursării TVA (art. 169 CPF), a decontării concediilor medicale din FNUASS (art. 40 O.U.G. nr. 158/2005) sau a facturilor din e-Factura (Legea nr. 72/2013), înlăturând asimetria din O.G. nr. 22/2002 și Decizia ÎCCJ RIL nr. 24/2025, alături de răspunderea solidară a funcționarilor (art. 281 CPF, art. 499–500 Codul administrativ și Decizia CCR nr. 694/2015); reforma guvernanței cooperativelor agricole (Legea nr. 566/2004, art. 16 și art. 76: director executiv recrutat competitiv, interdicția rudelor și afinilor până la gradul al III-lea ai administratorului, filtre de integritate și protejarea rambursărilor de TVA) pentru reconstrucția capitalului social de punte (Putnam, 2000); mecanism dublu de audit periodic independent: Auditul public extern al performanței realizat bienal de Curtea de Conturi a României (art. 2 lit. b și art. 28 alin. 2 din Legea nr. 94/1992) asupra creditelor de angajament multianuale (Legea nr. 500/2002) și Auditul științific și civic independent realizat de consorțiile universitare acreditate ca „cercetători agreați” (art. 40 DSA / EDMO / grilele DigComp, KAVI și simulările Serious Games).',
     responsibleActors:
       'Parlamentul României, Ministerul Finanțelor și Trezoreria Statului, Curtea de Conturi a României, sistemul judiciar și administrativ, Ministerul Educației, consorțiile universitare acreditate (cercetători agreați conform art. 40 DSA / EDMO), cooperativele agricole și administrația publică locală.'
   }

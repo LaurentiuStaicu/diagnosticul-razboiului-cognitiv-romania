@@ -149,7 +149,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'forme-fara-fond',
-    regex: /(?<!\p{L})(formelor\s+fără\s+fond|forme\s+fără\s+fond)(?!\p{L})/iu
+    regex: /(?<!\p{L})(formelor\s+fără\s+fond|formele\s+fără\s+fond|forme\s+fără\s+fond|formă\s+fără\s+fond)(?!\p{L})/iu
   },
   {
     conceptId: 'institutii-extractive',
@@ -173,7 +173,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'spalare-informationala',
-    regex: /(?<!\p{L})(Doppelgänger|information\s+laundering|spălăr(?:e|ea|ii)\s+informațional(?:ă|e)|reciclăr(?:e|ea|ii)\s+(?:și\s+disimulăr(?:e|ea|ii)\s+)?informațional(?:ă|e))(?!\p{L})/iu
+    regex: /(?<!\p{L})(Doppelgänger|information\s+laundering|spălăr(?:e|ea|ii)\s+informațional(?:ă|e)|reciclăr(?:e|ea|ii)\s+(?:și\s+disimulăr(?:e|ea|ii)\s+)?(?:informațional(?:ă|e)|sursei\s+informaționale))(?!\p{L})/iu
   },
   {
     conceptId: 'sistema',
@@ -195,11 +195,11 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'axa-hpa-dlpf',
-    regex: /(?<!\p{L})(ax(?:a|ei)\s+HPA|cortex(?:ul|ului)?\s+prefrontal\s+dorsolateral|dlPFC)(?!\p{L})/iu
+    regex: /(?<!\p{L})(ax(?:a|ei)\s+(?:hipotalamo-hipofizo-suprarenalian(?:ă|e)|HPA)|rețea(?:ua|lei)\s+de\s+detecție\s+a\s+relevanței|triad(?:a|ei)\s+rețelelor\s+cerebrale|cortex(?:ul|ului)?\s+prefrontal\s+dorsolateral|dlPFC)(?!\p{L})/iu
   },
   {
     conceptId: 'bucla-ooda',
-    regex: /(?<!\p{L})(bucl(?:a|ei)\s+(?:decizional(?:ă|e)\s+)?OODA)(?!\p{L})/iu
+    regex: /(?<!\p{L})(bucl(?:a|ei)\s+(?:decizional(?:ă|e)\s+)?OODA|faz(?:a|ei)\s+de\s+Orientare)(?!\p{L})/iu
   },
   {
     conceptId: 'control-reflexiv-rang-secund',
@@ -211,15 +211,15 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'capturare-dopaminergica',
-    regex: /(?<!\p{L})(captur(?:are|area|ării)\s+dopaminergic(?:ă|e)|desensibiliz(?:are|area|ării)\s+receptorilor\s+D2)(?!\p{L})/iu
+    regex: /(?<!\p{L})(captur(?:are|area|ării)\s+(?:adictiv(?:ă|e)\s+a\s+circuitelor\s+)?dopaminergic(?:ă|e)|eroar(?:ea|ii)\s+de\s+predicție\s+a\s+recompensei|desensibiliz(?:are|area|ării)\s+receptorilor\s+(?:dopaminergici\s+(?:postsinaptici\s+)?)?D2)(?!\p{L})/iu
   },
   {
     conceptId: 'sistemele-etice-lefebvre',
-    regex: /(?<!\p{L})(prim(?:ul|ului)\s+sistem\s+etic|al\s+doilea\s+sistem\s+etic|sistemel(?:e|or)\s+etice\s+(?:ale\s+lui\s+)?Lefebvre|algebr(?:a|ei)\s+moral(?:ă|e)\s+a\s+lui\s+Lefebvre)(?!\p{L})/iu
+    regex: /(?<!\p{L})(prim(?:ul|ului)\s+sistem\s+etic|cel(?:ui)?\s+de-al\s+doilea\s+sistem\s+etic|al\s+doilea\s+sistem\s+etic|sistemel(?:e|or)\s+etice\s+(?:ale\s+lui\s+)?Lefebvre|algebr(?:a|ei)\s+moral(?:ă|e)\s+a\s+lui\s+Lefebvre)(?!\p{L})/iu
   },
   {
     conceptId: 'mediere-ternara-vs-binara',
-    regex: /(?<!\p{L})(semiotic(?:ă|a|ii)\s+binar(?:ă|e)\s+a\s+anihilării|medier(?:e|ea|ii)\s+(?:semiotic(?:ă|e)\s+)?ternar(?:ă|e))(?!\p{L})/iu
+    regex: /(?<!\p{L})((?:semiotic(?:ă|a|ii)|semioz(?:ă|a|ei)|logic(?:ă|a|ii))\s+binar(?:ă|e)\s+a\s+anihilării|semioz(?:ă|a|ei)\s+ternar(?:ă|e)|medier(?:e|ea|ii)\s+(?:semiotic(?:ă|e)\s+)?ternar(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'dubla-falsificare-axiologica',
@@ -235,7 +235,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'russkii-mir-etnofiletism',
-    regex: /(?<!\p{L})(Russkii\s+Mir|etnofiletism(?:ul|ului)?)(?!\p{L})/iu
+    regex: /(?<!\p{L})(Russkii\s+Mir|erezi(?:a|ei)\s+etnofiletist(?:ă|e)|etnofiletism(?:ul|ului)?)(?!\p{L})/iu
   },
   {
     conceptId: 'triada-ilin-gumiliov-dughin',
@@ -247,7 +247,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'bifurcare-track-a-track-b',
-    regex: /(?<!\p{L})(Trase(?:ul|ului)\s+A\s+reactiv|Trase(?:ul|ului)\s+B\s+deliberativ|Traseul\s+A|Traseul\s+B|Track\s+A|Track\s+B)(?!\p{L})/iu
+    regex: /(?<!\p{L})(Trase(?:ul|ului)\s+reactiv\s+dezadaptativ|Trase(?:ul|ului)\s+deliberativ\s+adaptativ|Trase(?:ul|ului)\s+A\s+reactiv|Trase(?:ul|ului)\s+B\s+deliberativ|Traseul\s+A|Traseul\s+B|Track\s+A|Track\s+B)(?!\p{L})/iu
   },
   {
     conceptId: 'prebunking-inoculare',
@@ -255,7 +255,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'curba-uitarii-ebbinghaus',
-    regex: /(?<!\p{L})(curb(?:a|ei)\s+uitării(?:\s+a\s+lui\s+Ebbinghaus)?|curb(?:a|ei)\s+lui\s+Ebbinghaus|consolidar(?:e|ea|ii)\s+mnezic(?:ă|e)(?:\s+(?:spațiat(?:ă|e)|Ebbinghaus))?)(?!\p{L})/iu
+    regex: /(?<!\p{L})(curb(?:a|ei)\s+uitării(?:\s+a\s+lui\s+(?:Hermann\s+)?Ebbinghaus)?|curb(?:a|ei)\s+lui\s+Ebbinghaus|consolidar(?:e|ea|ii)\s+mnezic(?:ă|e)(?:\s+(?:spațiat(?:ă|e)|Ebbinghaus))?)(?!\p{L})/iu
   },
   {
     conceptId: 'contagiune-complexa',
@@ -321,7 +321,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'puer-aeternus',
-    regex: /(?<!\p{L})(Puer\s+Aeternus)(?!\p{L})/u
+    regex: /(?<!\p{L})(Puer\s+Aeternus|stat(?:ul|ului)?\s+paternalist\s+tutelar)(?!\p{L})/iu
   },
   {
     conceptId: 'functia-transcendenta',
