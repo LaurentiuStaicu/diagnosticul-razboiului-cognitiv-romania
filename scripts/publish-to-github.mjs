@@ -202,30 +202,38 @@ async function main() {
   let refRes = await ghRequest(`/repos/${authenticatedOwner}/${REPO}/git/ref/heads/${BRANCH}`);
   const latestCommitSha = refRes.ok ? refRes.data.object.sha : null;
 
+  const commitMessage =
+    process.env.COMMIT_MESSAGE ||
+    'Revizie aprofundată de claritate, coerență logică și proprietate a limbajului (Capitolele 1–6, Tabele și Glosar)';
+
   const workspaceRoot = process.cwd();
   const allSourceFiles = collectFiles(workspaceRoot);
   console.log(`3. Încărcare ${allSourceFiles.length} fișiere sursă pe ramura ${BRANCH}...`);
-  await uploadFilesToBranch(
+  const mainCommitSha = await uploadFilesToBranch(
     authenticatedOwner,
     REPO,
     BRANCH,
     allSourceFiles,
-    'Publicare cod sursă Diagnosticul războiului cognitiv în România (Versiunea 1.0)',
+    commitMessage,
     latestCommitSha
   );
+  console.log(`   -> Commit creat pe ${BRANCH}: ${mainCommitSha}`);
 
   const distDir = path.join(workspaceRoot, 'dist');
   if (fs.existsSync(distDir)) {
+    const pagesRefRes = await ghRequest(`/repos/${authenticatedOwner}/${REPO}/git/ref/heads/${PAGES_BRANCH}`);
+    const latestPagesSha = pagesRefRes.ok ? pagesRefRes.data.object.sha : null;
     const distFiles = collectDistFiles(distDir);
     console.log(`4. Încărcare ${distFiles.length} fișiere compilate (dist) pe ramura ${PAGES_BRANCH}...`);
-    await uploadFilesToBranch(
+    const pagesCommitSha = await uploadFilesToBranch(
       authenticatedOwner,
       REPO,
       PAGES_BRANCH,
       distFiles,
-      'Publicare build static pentru GitHub Pages',
-      null
+      `Publicare build static GitHub Pages (${commitMessage})`,
+      latestPagesSha
     );
+    console.log(`   -> Commit creat pe ${PAGES_BRANCH}: ${pagesCommitSha}`);
   }
 
   console.log(`5. Configurare GitHub Pages din ramura ${PAGES_BRANCH}...`);
