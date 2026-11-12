@@ -60,6 +60,17 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   <span>Citește monografia online</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
                 </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    document
+                      .getElementById('video-teaser-section')
+                      ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }}
+                  className="px-5 py-3.5 text-xs sm:text-sm font-mono font-semibold text-[#222426] bg-[#F6F5EE] border-2 border-[#222426] hover:bg-[#E5B822]/25 transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                >
+                  <span>Urmărește sinteza video (Teaser)</span>
+                </button>
               </div>
 
               <div className="pt-3 border-t border-[#8C9BA5]">
@@ -464,6 +475,52 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
             </div>
           </div>
         </div>
+
+        {/* Dedicated Video Teaser Plate (#video-teaser-section) */}
+        <section
+          id="video-teaser-section"
+          className="pt-8 lg:pt-10 mt-4 mb-8 lg:mb-10 border-t border-[#222426]"
+        >
+          <div className="max-w-[860px] w-full mx-auto bg-[#F6F5EE] border-2 border-[#222426] p-4 sm:p-6">
+            {/* Header Bar */}
+            <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-[#8C9BA5]">
+              <div>
+                <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono font-bold tracking-wider text-[#222426] uppercase bg-[#E5B822] border border-[#222426]">
+                  SINTEZĂ VIDEO • INTRODUCERE VIZUALĂ
+                </span>
+                <h2 className="font-serif text-base sm:text-lg font-bold text-[#222426] mt-1.5">
+                  Prezentare video a arhitecturii cauzale din monografie
+                </h2>
+              </div>
+              <a
+                href="https://youtu.be/alJXGWmn3lU"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono text-[#6E7376] hover:text-[#222426] underline underline-offset-4"
+              >
+                Deschide pe YouTube ↗
+              </a>
+            </div>
+
+            {/* 16:9 Video Player Inner Frame */}
+            <div className="relative w-full aspect-video border-2 border-[#222426] bg-[#222426] overflow-hidden">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/alJXGWmn3lU?rel=0&modestbranding=1"
+                title="Diagnosticul războiului cognitiv în România — Video Teaser Oficial"
+                className="absolute inset-0 w-full h-full border-0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+
+            {/* Footer Caption */}
+            <p className="mt-3 text-xs font-serif italic text-[#6E7376] leading-relaxed">
+              Sinteză audio-vizuală a modelului pe trei straturi (instituțional, neurocognitiv și cultural), construită fără indicatori statistici bruți, exclusiv pe dinamici structurale și cauzale.
+            </p>
+          </div>
+        </section>
 
         {/* Bottom Archival Summary Strip (Static Text Metadata — Zero Buttons) */}
         <div className="pt-6 border-t border-[#222426] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-[#6E7376]">
