@@ -1283,7 +1283,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               <rect x="0" y="0" width="960" height="430" fill="url(#stipple-bg)" />
 
               {/* ============================================================
-                  ZONA STÂNGA: Triunghiul echilibrat în #E5B822
+                  ZONA STÂNGA: Cadrul echilibrat în #E5B822
                   (Primul sistem etic / Spațiul compromisului democratic)
                  ============================================================ */}
               <g
@@ -1291,47 +1291,61 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <text
-                  x="122"
+                  x="118"
                   y="42"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold tracking-wider fill-[#6E7376]"
                 >
                   PRIMUL SISTEM ETIC
                 </text>
-                <polygon
-                  points="122,65 30,250 215,250"
+                <rect
+                  x="21"
+                  y="110"
+                  width="194"
+                  height="176"
                   fill="#E5B822"
                   fillOpacity={fig3SelectedStage === 'primul-sistem' ? '0.4' : '0.22'}
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
+                {/* Simbolul medierii ternare înscris în partea superioară a chenarului */}
+                <polygon
+                  points="118,124 100,154 136,154"
+                  fill="#E5B822"
+                  fillOpacity="0.45"
+                  stroke="#222426"
+                  strokeWidth="1.75"
+                />
+                <circle cx="118" cy="124" r="2.75" fill="#222426" />
+                <circle cx="100" cy="154" r="2.75" fill="#222426" />
+                <circle cx="136" cy="154" r="2.75" fill="#222426" />
                 <text
-                  x="122"
-                  y="145"
+                  x="118"
+                  y="184"
                   textAnchor="middle"
                   className="font-sans text-[13px] font-bold fill-[#222426]"
                 >
                   Primul sistem etic
                 </text>
                 <text
-                  x="122"
-                  y="166"
+                  x="118"
+                  y="208"
                   textAnchor="middle"
                   className="font-sans text-[11.5px] font-semibold fill-[#222426]"
                 >
                   Compromis democratic
                 </text>
                 <text
-                  x="122"
-                  y="185"
+                  x="118"
+                  y="229"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
                   și mediere ternară
                 </text>
                 <text
-                  x="122"
-                  y="204"
+                  x="118"
+                  y="250"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
