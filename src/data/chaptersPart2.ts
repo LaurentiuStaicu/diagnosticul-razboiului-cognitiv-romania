@@ -121,7 +121,7 @@ export const CHAPTERS_PART_2: SubchapterStep[] = [
       }
     ],
     keyConceptIds: ['matricea-cipolla', 'control-reflexiv-rang-secund'],
-    citedAuthorNames: ['Cipolla (1976/2011)', 'North, Wallis & Weingast (2009)']
+    citedAuthorNames: ['Cipolla (1976/2011)', 'North, Wallis & Weingast (2009)', 'Lefebvre (1982)']
   },
   {
     id: 'cap-5-1',
@@ -242,7 +242,7 @@ export const CHAPTERS_PART_2: SubchapterStep[] = [
       }
     ],
     keyConceptIds: ['protocolul-secvential-trei-faze', 'uzura-alostatica', 'capturare-dopaminergica', 'model-collapse-mad'],
-    citedAuthorNames: ['Shumailov et al. (2024)', 'Alemohammad et al. (2024)']
+    citedAuthorNames: ['Lalonde (1974)', 'Dever (1976)', 'McEwen (1998)', 'Shumailov et al. (2024)', 'Alemohammad et al. (2024)']
   },
   {
     id: 'cap-6-2',
@@ -321,7 +321,7 @@ export const CHAPTERS_PART_2: SubchapterStep[] = [
       }
     ],
     keyConceptIds: ['guvernanta-policentrica-ostrom', 'individuare-colectiva', 'inchidere-operationala', 'matricea-cipolla'],
-    citedAuthorNames: ['North, Wallis & Weingast (2009)', 'Acemoglu & Robinson (2012)', 'Luhmann (1995, 2004)', 'Ostrom (1990, 2010)', 'Bandura (1997)', 'Jung (1928/1966)', 'Edinger (1972)', 'Mitscherlich & Mitscherlich (1967/1975)', 'Volkan (1997)']
+    citedAuthorNames: ['North, Wallis & Weingast (2009)', 'Acemoglu & Robinson (2012)', 'Luhmann (1995, 2004)', 'Thaler & Sunstein (2008)', 'Ostrom (1990, 2010)', 'Putnam (2000)', 'Banfield (1958)', 'Bandura (1997)', 'Jung (1928/1966)', 'Edinger (1972)', 'Mitscherlich & Mitscherlich (1967/1975)', 'Volkan (1997)']
   },
   {
     id: 'cap-6-4',
@@ -361,6 +361,6 @@ export const CHAPTERS_PART_2: SubchapterStep[] = [
       }
     ],
     keyConceptIds: ['modernitate-organica', 'inchidere-operationala', 'protocolul-secvential-trei-faze', 'al-saselea-domeniu'],
-    citedAuthorNames: ['Maiorescu (1868/1984)']
+    citedAuthorNames: ['Maiorescu (1868/1984)', 'Luhmann (2004)', 'Ostrom (2010)', 'Habermas (1992/1996)']
   }
 ];

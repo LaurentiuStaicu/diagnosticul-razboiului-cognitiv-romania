@@ -116,7 +116,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       }
     ],
     keyConceptIds: ['forme-fara-fond', 'institutii-extractive', 'inchidere-operationala', 'persona-si-umbra', 'axa-ego-sine', 'trauma-aleasa'],
-    citedAuthorNames: ['Maiorescu (1868/1984)', 'Dobrogeanu-Gherea (1910)', 'Rădulescu-Motru (1904/1996)', 'Zeletin (1925/1991)', 'Lovinescu (1924–1925/1997)', 'Stahl (1980)', 'Acemoglu & Robinson (2012)', 'North, Wallis & Weingast (2009)', 'Henderson (1984)', 'Singer & Kimbles (2004)', 'Kligman & Verdery (2011)', 'Mitscherlich & Mitscherlich (1967/1975)', 'Volkan (1997, 2004)', 'Edinger (1972)', 'Seligman (1975)']
+    citedAuthorNames: ['Wallerstein (1974)', 'Bădescu (2002)', 'Maiorescu (1868/1984)', 'Dobrogeanu-Gherea (1910)', 'Rădulescu-Motru (1904/1996)', 'Zeletin (1925/1991)', 'Lovinescu (1924–1925/1997)', 'Stahl (1980)', 'Acemoglu & Robinson (2012)', 'North, Wallis & Weingast (2009)', 'Luhmann (1995)', 'Henderson (1984)', 'Singer & Kimbles (2004)', 'Ioanid (2000)', 'Schmitt (2017)', 'Kligman & Verdery (2011)', 'Tismaneanu (2003)', 'Verdery (1991)', 'Mitscherlich & Mitscherlich (1967/1975)', 'Boia (1997)', 'Volkan (1997, 2004)', 'Edinger (1972)', 'Seligman (1975)']
   },
   {
     id: 'cap-1-3',
@@ -158,7 +158,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       }
     ],
     keyConceptIds: ['uzura-alostatica', 'axa-hpa-dlpf', 'abaissement-du-niveau-mental', 'familism-amoral'],
-    citedAuthorNames: ['Lipset & Rokkan (1967)', 'Sandu (2010)', 'Durkheim (1897/2005)', 'Merton (1938)', 'Putnam (2000)', 'Banfield (1958)', 'Sterling & Eyer (1988)', 'McEwen & Stellar (1993)', 'McEwen (1998)', 'Sapolsky (2004, 2017)', 'Arnsten (2009)', 'Menon (2011)', 'Kahneman (2011)', 'Stanovich (2009)', 'Jung (1934/1960)']
+    citedAuthorNames: ['Lipset & Rokkan (1967)', 'Sandu (2010)', 'Bădescu et al. (2010)', 'Durkheim (1897/2005)', 'Merton (1938)', 'Putnam (2000)', 'Banfield (1958)', 'Sterling & Eyer (1988)', 'McEwen & Stellar (1993)', 'McEwen (1998)', 'Sapolsky (2004, 2017)', 'Arnsten (2009)', 'Menon (2011)', 'Kahneman (2011)', 'Stanovich (2009)', 'Jung (1934/1960)', 'Lefebvre (1982, 2001)']
   },
   {
     id: 'cap-2-1',
@@ -239,7 +239,7 @@ export const CHAPTERS_PART_1: SubchapterStep[] = [
       }
     ],
     keyConceptIds: ['dubla-falsificare-axiologica', 'russkii-mir-etnofiletism', 'filtrul-axiologic'],
-    citedAuthorNames: ['Soloviov (1900/1994)', 'Berdiaev (1937/1996)', 'Stăniloae (1978)', 'Kalaitzidis (2012)', 'Hovorun (2018)', 'Papanikolaou (2012)', 'Kalaitzidis et al. (2022)', 'Verdery (1991)', 'Boia (1997)', 'Schmitt (2017)']
+    citedAuthorNames: ['Soloviov (1900/1994)', 'Berdiaev (1937/1996)', 'Stăniloae (1978)', 'Kalaitzidis (2012)', 'Hovorun (2018)', 'Papanikolaou (2012)', 'Kalaitzidis et al. (2022)', 'Centola (2018)', 'Verdery (1991)', 'Boia (1997)', 'Schmitt (2017)', 'Epstein (2022)']
   },
   {
     id: 'cap-2-3',

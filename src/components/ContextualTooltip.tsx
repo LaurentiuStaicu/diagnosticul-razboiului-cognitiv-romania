@@ -141,7 +141,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'determinantii-lalonde-dever',
-    regex: /(?<!\p{L})(determinanț(?:ii|ilor)\s+(?:sistemici\s+)?Lalonde[–-]Dever|determinanț(?:ii|ilor)\s+sănătății\s+publice(?:\s+\(și\s+mintale\)|\s+și\s+mintale))(?!\p{L})/iu
+    regex: /(?<!\p{L})(determinanț(?:i|ii|ilor)\s+(?:sistemici\s+)?(?:ai\s+modelului\s+|modelului\s+)?Lalonde[–-]Dever|model(?:ul|ului)\s+Lalonde[–-]Dever|determinanț(?:ii|ilor)\s+sănătății\s+publice(?:\s+\(și\s+mintale\)|\s+și\s+mintale))(?!\p{L})/iu
   },
   {
     conceptId: 'inchidere-operationala',
@@ -165,7 +165,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'protocolul-secvential-trei-faze',
-    regex: /(?<!\p{L})(protocol(?:ul|ului)?\s+secvențial(?:\s+în\s+trei\s+faze)?|protocolul\s+în\s+trei\s+faze)(?!\p{L})/iu
+    regex: /(?<!\p{L})(protocol(?:ul|ului)?\s+secvențial(?:\s+în\s+trei\s+faze)?|protocol(?:ul|ului)?\s+în\s+trei\s+faze|protocol(?:ul|ului)?\s+de\s+reconstrucție\s+a\s+rezilienței(?:\s+cognitive(?:\s+și\s+instituționale|\s+societale)?)?)(?!\p{L})/iu
   },
   {
     conceptId: 'grup-control-regional',
@@ -173,7 +173,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'spalare-informationala',
-    regex: /(?<!\p{L})(Doppelgänger|information\s+laundering|spălăr(?:e|ea|ii)\s+informațional(?:ă|e)|reciclăr(?:e|ea|ii)\s+(?:și\s+disimulăr(?:e|ea|ii)\s+)?(?:informațional(?:ă|e)|sursei\s+informaționale))(?!\p{L})/iu
+    regex: /(?<!\p{L})(Doppelgänger|Matrioșka|rețea(?:ua|lei)\s+Pravda|information\s+laundering|spăl(?:are|area|ării)\s+informațional(?:ă|e)|recicl(?:are|area|ării)\s+(?:și\s+disimul(?:are|area|ării)\s+(?:a\s+)?)?(?:informațional(?:ă|e)|sursei\s+informaționale))(?!\p{L})/iu
   },
   {
     conceptId: 'sistema',
@@ -207,7 +207,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'inchidere-cognitiva-seizing-freezing',
-    regex: /(?<!\p{L})(nevoi(?:a|i)\s+de\s+închidere\s+cognitivă|închider(?:e|ea|ii)\s+cognitiv(?:ă|e)|seizing|freezing)(?!\p{L})/iu
+    regex: /(?<!\p{L})(nevoi(?:a|i)\s+de\s+închidere\s+cognitivă|închider(?:e|ea|ii)\s+cognitiv(?:ă|e)|îngheț(?:are|area|ării)\s+epistemic(?:ă|e)|seizing|freezing)(?!\p{L})/iu
   },
   {
     conceptId: 'capturare-dopaminergica',
@@ -243,7 +243,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'cognitia-protectoare-a-identitatii',
-    regex: /(?<!\p{L})(cogniți(?:a|ei)\s+protectoar(?:e|ii)\s+a\s+identității|procesar(?:e|ea|ii)\s+defensiv(?:ă|e)\s+motivat(?:ă|e)\s+de\s+protejarea\s+identității|Identity[–-]Protective\s+Cognition)(?!\p{L})/iu
+    regex: /(?<!\p{L})(cogniți(?:a|ei)\s+protectoar(?:e|ii)\s+a\s+identității|proces(?:are|area|ării)\s+defensiv(?:ă|e)\s+motivat(?:ă|e)\s+de\s+protejarea\s+identității(?:\s+de\s+grup)?|Identity[–-]Protective\s+Cognition)(?!\p{L})/iu
   },
   {
     conceptId: 'bifurcare-track-a-track-b',
@@ -251,7 +251,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'prebunking-inoculare',
-    regex: /(?<!\p{L})(prebunking|pregătir(?:ea|e|ii)\s+psihocognitiv(?:ă|e)\s+preventiv(?:ă|e)|teori(?:a|ei)\s+inoculării|inocular(?:e|ea|ii)\s+psihologic(?:ă|e))(?!\p{L})/iu
+    regex: /(?<!\p{L})(prebunking|pregătir(?:ea|e|ii)\s+psihocognitiv(?:ă|e)\s+preventiv(?:ă|e)|teori(?:a|ei)\s+(?:inoculării|rezistenței\s+la\s+persuasiune)|inocular(?:e|ea|ii)\s+psihologic(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'curba-uitarii-ebbinghaus',
@@ -301,7 +301,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'trauma-aleasa',
-    regex: /(?<!\p{L})(traum(?:a|ă|ei)\s+aleas(?:ă|e)|incapacitat(?:ea|ii)\s+de\s+a\s+ține\s+doliu)(?!\p{L})/iu
+    regex: /(?<!\p{L})(traum(?:a|ă|e|ei)\s+ale(?:asă|se)|incapacitat(?:ea|ii)\s+de\s+a\s+ține\s+doliu)(?!\p{L})/iu
   },
   {
     conceptId: 'proiectie-paranoida',
@@ -313,7 +313,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'aparare-maniacala-izolationism',
-    regex: /(?<!\p{L})(apărăr(?:e|ea|ii)\s+maniacal(?:ă|e)|suveranit(?:ate|atea|ății)\s+izolaționist(?:ă|e))(?!\p{L})/iu
+    regex: /(?<!\p{L})(apăr(?:are|area|ării)\s+maniacal(?:ă|e)|(?:suveranit|neutralit)(?:ate|atea|ății)\s+izolaționist(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'capacitate-negativa-bion',
@@ -329,11 +329,11 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'individuare-colectiva',
-    regex: /(?<!\p{L})(individuar(?:e|ea|ii)\s+colectiv(?:ă|e))(?!\p{L})/iu
+    regex: /(?<!\p{L})(individu(?:are|area|ării)\s+colectiv(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'modernitate-organica',
-    regex: /(?<!\p{L})(modernitat(?:e|ea|ii)\s+organic(?:ă|e))(?!\p{L})/iu
+    regex: /(?<!\p{L})(modernit(?:ate|atea|ății)\s+organic(?:ă|e))(?!\p{L})/iu
   },
   {
     conceptId: 'proairesis',
