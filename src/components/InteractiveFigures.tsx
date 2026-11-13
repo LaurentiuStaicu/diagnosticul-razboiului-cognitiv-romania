@@ -1065,17 +1065,18 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 920 490"
+              viewBox="0 0 920 520"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="920" height="490" fill="#F6F5EE" />
-              <rect x="0" y="0" width="920" height="490" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="920" height="520" fill="#F6F5EE" />
+              <rect x="0" y="0" width="920" height="520" fill="url(#stipple-bg)" />
 
-              {/* Central Vertical Divider at x=430 & Top Header Line at y=80 */}
-              <line x1="430" y1="15" x2="430" y2="475" stroke="#8C9BA5" strokeWidth="2" />
+              {/* Central Vertical Divider at x=420 (interrupted in center channel y=190..310) & Top Header Line at y=80 */}
+              <line x1="420" y1="15" x2="420" y2="190" stroke="#8C9BA5" strokeWidth="2" />
+              <line x1="420" y1="310" x2="420" y2="475" stroke="#8C9BA5" strokeWidth="2" />
               <line x1="25" y1="80" x2="895" y2="80" stroke="#8C9BA5" strokeWidth="1.5" />
 
               {/* Left Column Header (center x=170) */}
@@ -1116,7 +1117,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
               {/* LEFT COLUMN NODES (x=45, width=250, center=170) */}
               <g onClick={() => setFig2Inspect('sinteza-stanga')} className="cursor-pointer">
-                {/* Box L1 */}
+                {/* Box L1 (y=102..176) */}
                 <rect
                   x="45"
                   y="102"
@@ -1149,7 +1150,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x1="170"
                   y1="176"
                   x2="170"
-                  y2="224"
+                  y2="238"
                   stroke="#222426"
                   strokeWidth="5"
                 />
@@ -1157,18 +1158,18 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x1="170"
                   y1="176"
                   x2="170"
-                  y2="224"
+                  y2="238"
                   stroke="#E5B822"
                   strokeWidth="3.5"
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* Box L2 (y=230..306, center y=268) */}
+                {/* Box L2 (y=244..316, center y=280) */}
                 <rect
                   x="45"
-                  y="230"
+                  y="244"
                   width="250"
-                  height="76"
+                  height="72"
                   fill={fig2Inspect === 'sinteza-stanga' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'sinteza-stanga' ? '0.35' : '1'}
                   stroke="#222426"
@@ -1176,7 +1177,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="170"
-                  y="256"
+                  y="268"
                   textAnchor="middle"
                   className="font-sans text-[13.5px] font-bold fill-[#222426]"
                 >
@@ -1184,7 +1185,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="170"
-                  y="276"
+                  y="288"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
@@ -1192,7 +1193,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="170"
-                  y="293"
+                  y="305"
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
                 >
@@ -1202,28 +1203,28 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {/* Arrow L2 -> L3 */}
                 <line
                   x1="170"
-                  y1="306"
+                  y1="316"
                   x2="170"
-                  y2="386"
+                  y2="420"
                   stroke="#222426"
                   strokeWidth="5"
                 />
                 <line
                   x1="170"
-                  y1="306"
+                  y1="316"
                   x2="170"
-                  y2="386"
+                  y2="420"
                   stroke="#E5B822"
                   strokeWidth="3.5"
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* Box L3 (y=394..468) */}
+                {/* Box L3 (y=426..494) */}
                 <rect
                   x="45"
-                  y="394"
+                  y="426"
                   width="250"
-                  height="74"
+                  height="68"
                   fill={fig2Inspect === 'sinteza-stanga' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'sinteza-stanga' ? '0.35' : '1'}
                   stroke="#222426"
@@ -1231,7 +1232,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="170"
-                  y="422"
+                  y="454"
                   textAnchor="middle"
                   className="font-sans text-[13.5px] font-bold fill-[#222426]"
                 >
@@ -1239,7 +1240,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="170"
-                  y="443"
+                  y="475"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
@@ -1247,14 +1248,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* CANALUL CENTRAL DE 250px LĂȚIME (x=295..545) */}
+              {/* CANALUL CENTRAL DE 250px LĂȚIME (x=295..545, centru x=420) */}
               {fig2Mode === 'camouflage' ? (
                 <g>
                   <line
-                    x1="297"
-                    y1="268"
+                    x1="295"
+                    y1="272"
                     x2="538"
-                    y2="268"
+                    y2="272"
                     stroke="#F01E1E"
                     strokeWidth="3"
                     markerEnd="url(#arrow-red)"
@@ -1263,14 +1264,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     x="320"
                     y="226"
                     width="200"
-                    height="32"
+                    height="34"
                     fill="#F6F5EE"
                     stroke="#F01E1E"
                     strokeWidth="1.5"
                   />
                   <text
                     x="420"
-                    y="240"
+                    y="241"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
                   >
@@ -1278,7 +1279,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="420"
-                    y="252"
+                    y="253"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
                   >
@@ -1287,35 +1288,54 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </g>
               ) : (
                 <g>
+                  {/* În stânga T-bar-ului (x=295..416): linie orizontală aurie dublată de contur #222426 din Filtrul moral spre T-bar */}
                   <line
-                    x1="543"
-                    y1="268"
-                    x2="424"
-                    y2="268"
+                    x1="295"
+                    y1="272"
+                    x2="416"
+                    y2="272"
+                    stroke="#222426"
+                    strokeWidth="6"
+                  />
+                  <line
+                    x1="295"
+                    y1="272"
+                    x2="416"
+                    y2="272"
+                    stroke="#E5B822"
+                    strokeWidth="4"
+                  />
+                  {/* În dreapta T-bar-ului (x=426..545): linie punctată gri-ardezie oprită/neutralizată */}
+                  <line
+                    x1="426"
+                    y1="272"
+                    x2="545"
+                    y2="272"
                     stroke="#8C9BA5"
                     strokeWidth="2.5"
-                    strokeDasharray="4 3"
+                    strokeDasharray="4 4"
+                    opacity="0.55"
                   />
-                  {/* T-bar scut auriu în Modul 2 la x=420, y=248..288 */}
+                  {/* T-bar scut auriu în Modul 2 exact la x=420, y=252..292 */}
                   <line
                     x1="420"
-                    y1="248"
+                    y1="252"
                     x2="420"
-                    y2="288"
+                    y2="292"
                     stroke="#222426"
                     strokeWidth="8"
                   />
                   <line
                     x1="420"
-                    y1="248"
+                    y1="252"
                     x2="420"
-                    y2="288"
+                    y2="292"
                     stroke="#E5B822"
                     strokeWidth="5.5"
                   />
                   <rect
                     x="325"
-                    y="204"
+                    y="206"
                     width="190"
                     height="34"
                     fill="#E5B822"
@@ -1324,7 +1344,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   />
                   <text
                     x="420"
-                    y="218"
+                    y="220"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#222426]"
                   >
@@ -1332,7 +1352,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="420"
-                    y="231"
+                    y="233"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#222426]"
                   >
@@ -1342,12 +1362,12 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               )}
 
               {/* RIGHT COLUMN NODES (x=545..875, center=710) */}
-              {/* Outer Camouflage Container (x=535, y=100, width=350, height=120) */}
+              {/* Outer Camouflage Container (x=535, y=96, width=350, height=114, y=96..210) */}
               <rect
                 x="535"
-                y="100"
+                y="96"
                 width="350"
-                height="120"
+                height="114"
                 fill="#8C9BA5"
                 fillOpacity={fig2Mode === 'deconstructed' ? '0.08' : '0.22'}
                 stroke="#6E7376"
@@ -1356,7 +1376,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               />
               <text
                 x="710"
-                y="119"
+                y="115"
                 textAnchor="middle"
                 className="font-sans text-[10.5px] font-bold fill-[#222426]"
               >
@@ -1365,16 +1385,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   : 'Camuflaj demascat prin discernământ patristic și istoric'}
               </text>
 
-              {/* Sub-casetă 1: Falsificarea I (x=547, y=132, width=160, height=76, center=627) */}
+              {/* Sub-casetă 1: Falsificarea I (x=547, y=126, width=160, height=72, center=627, bottom=198) */}
               <g
                 onClick={() => setFig2Inspect('falsificare-ortodoxie')}
                 className="cursor-pointer"
               >
                 <rect
                   x="547"
-                  y="132"
+                  y="126"
                   width="160"
-                  height="76"
+                  height="72"
                   fill={fig2Inspect === 'falsificare-ortodoxie' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'falsificare-ortodoxie' ? '0.32' : '1'}
                   stroke="#222426"
@@ -1382,7 +1402,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="627"
-                  y="154"
+                  y="147"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] font-bold fill-[#222426]"
                 >
@@ -1390,7 +1410,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="627"
-                  y="172"
+                  y="165"
                   textAnchor="middle"
                   className="font-sans text-[10px] font-semibold fill-[#F01E1E]"
                 >
@@ -1398,7 +1418,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="627"
-                  y="191"
+                  y="183"
                   textAnchor="middle"
                   className="font-sans text-[9px] fill-[#6E7376]"
                 >
@@ -1406,16 +1426,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Sub-casetă 2: Falsificarea II (x=715, y=132, width=160, height=76, center=795) */}
+              {/* Sub-casetă 2: Falsificarea II (x=715, y=126, width=160, height=72, center=795, bottom=198) */}
               <g
                 onClick={() => setFig2Inspect('falsificare-suveranitate')}
                 className="cursor-pointer"
               >
                 <rect
                   x="715"
-                  y="132"
+                  y="126"
                   width="160"
-                  height="76"
+                  height="72"
                   fill={fig2Inspect === 'falsificare-suveranitate' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'falsificare-suveranitate' ? '0.32' : '1'}
                   stroke="#222426"
@@ -1423,7 +1443,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="795"
-                  y="154"
+                  y="147"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] font-bold fill-[#222426]"
                 >
@@ -1431,7 +1451,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="795"
-                  y="172"
+                  y="165"
                   textAnchor="middle"
                   className="font-sans text-[10px] font-semibold fill-[#F01E1E]"
                 >
@@ -1439,7 +1459,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="795"
-                  y="191"
+                  y="183"
                   textAnchor="middle"
                   className="font-sans text-[9px] fill-[#6E7376]"
                 >
@@ -1447,33 +1467,33 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Arrows from Camouflage sub-boxes to Inner Core Antimir (40px height gap: y=208..248) */}
+              {/* Arrows from Camouflage sub-boxes (y1=198) to Inner Core Antimir (y2=254) — 56px vertical run */}
               <g opacity={fig2Mode === 'deconstructed' ? '0.35' : '1'}>
                 <line
                   x1="627"
-                  y1="208"
+                  y1="198"
                   x2="665"
-                  y2="243"
+                  y2="254"
                   stroke="#F01E1E"
                   strokeWidth="2"
                   markerEnd="url(#arrow-red)"
                 />
                 <line
                   x1="795"
-                  y1="208"
+                  y1="198"
                   x2="755"
-                  y2="243"
+                  y2="254"
                   stroke="#F01E1E"
                   strokeWidth="2"
                   markerEnd="url(#arrow-red)"
                 />
               </g>
 
-              {/* Inner Core Box: Inversiune normativă (Antimir) și cinism (Bobok) (x=545, y=248..308, width=330) */}
+              {/* Inner Core Box: Inversiune normativă (Antimir) și cinism (Bobok) (x=545, y=256..316, width=330) */}
               <g onClick={() => setFig2Inspect('nucleu-antimir')} className="cursor-pointer">
                 <rect
                   x="545"
-                  y="248"
+                  y="256"
                   width="330"
                   height="60"
                   fill={fig2Inspect === 'nucleu-antimir' ? '#F01E1E' : '#F6F5EE'}
@@ -1483,7 +1503,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="710"
-                  y="273"
+                  y="281"
                   textAnchor="middle"
                   className="font-sans text-[13px] font-bold fill-[#222426]"
                 >
@@ -1491,7 +1511,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="710"
-                  y="293"
+                  y="301"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
@@ -1499,25 +1519,25 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Red arrow down to 3 Paliere de spălare informațională (y=308..334) */}
+              {/* Red arrow down to 3 Paliere de spălare informațională (y1=316 to y2=346, 30px) */}
               <line
                 x1="710"
-                y1="308"
+                y1="316"
                 x2="710"
-                y2="329"
+                y2="346"
                 stroke="#F01E1E"
                 strokeWidth="3"
                 opacity={fig2Mode === 'deconstructed' ? '0.35' : '1'}
                 markerEnd="url(#arrow-red)"
               />
 
-              {/* Intermediate Node: 3 paliere de spălare informațională (x=545, y=334..388, width=330) */}
+              {/* Intermediate Node: 3 paliere de spălare informațională (x=545, y=348..404, width=330, height=56) */}
               <g onClick={() => setFig2Inspect('retele-spalare')} className="cursor-pointer">
                 <rect
                   x="545"
-                  y="334"
+                  y="348"
                   width="330"
-                  height="54"
+                  height="56"
                   fill={fig2Inspect === 'retele-spalare' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'retele-spalare' ? '0.28' : '1'}
                   stroke="#222426"
@@ -1525,7 +1545,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="710"
-                  y="356"
+                  y="371"
                   textAnchor="middle"
                   className="font-sans text-[11.5px] font-bold fill-[#222426]"
                 >
@@ -1533,7 +1553,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="710"
-                  y="375"
+                  y="390"
                   textAnchor="middle"
                   className="font-mono text-[9.5px] fill-[#6E7376]"
                 >
@@ -1541,19 +1561,19 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Red arrow down to Subordonare imperială și anomie (y=388..414) */}
+              {/* Red arrow down to Subordonare imperială și anomie (y1=404 to y2=434, 30px) */}
               <line
                 x1="710"
-                y1="388"
+                y1="404"
                 x2="710"
-                y2="409"
+                y2="434"
                 stroke="#F01E1E"
                 strokeWidth="3.5"
                 opacity={fig2Mode === 'deconstructed' ? '0.35' : '1'}
                 markerEnd="url(#arrow-red)"
               />
 
-              {/* Bottom Right Box: Subordonare imperială și anomie (x=545, y=414..468, width=330) */}
+              {/* Bottom Right Box: Subordonare imperială și anomie (x=545, y=436..494, width=330, height=58) */}
               <g
                 onClick={() => setFig2Inspect('subordonare')}
                 className="cursor-pointer"
@@ -1561,9 +1581,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               >
                 <rect
                   x="545"
-                  y="414"
+                  y="436"
                   width="330"
-                  height="54"
+                  height="58"
                   fill={fig2Inspect === 'subordonare' ? '#F01E1E' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'subordonare' ? '0.14' : '1'}
                   stroke={fig2Mode === 'deconstructed' ? '#6E7376' : '#F01E1E'}
@@ -1572,7 +1592,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="710"
-                  y="436"
+                  y="460"
                   textAnchor="middle"
                   className="font-sans text-[13.5px] font-bold fill-[#222426]"
                 >
@@ -1580,7 +1600,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="710"
-                  y="455"
+                  y="480"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
@@ -1672,14 +1692,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 960 430"
+              viewBox="0 0 980 430"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="960" height="430" fill="#F6F5EE" />
-              <rect x="0" y="0" width="960" height="430" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="980" height="430" fill="#F6F5EE" />
+              <rect x="0" y="0" width="980" height="430" fill="url(#stipple-bg)" />
 
               {/* ============================================================
                   ZONA STÂNGA: Cadrul echilibrat în #E5B822
@@ -1690,7 +1710,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <text
-                  x="118"
+                  x="114"
                   y="42"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold tracking-wider fill-[#6E7376]"
@@ -1698,9 +1718,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   PRIMUL SISTEM ETIC
                 </text>
                 <rect
-                  x="21"
+                  x="18"
                   y="110"
-                  width="194"
+                  width="192"
                   height="176"
                   fill="#E5B822"
                   fillOpacity={
@@ -1715,17 +1735,17 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 {/* Simbolul medierii ternare înscris în partea superioară a chenarului */}
                 <polygon
-                  points="118,124 100,154 136,154"
+                  points="114,124 96,154 132,154"
                   fill="#E5B822"
                   fillOpacity="0.45"
                   stroke="#222426"
                   strokeWidth="1.75"
                 />
-                <circle cx="118" cy="124" r="2.75" fill="#222426" />
-                <circle cx="100" cy="154" r="2.75" fill="#222426" />
-                <circle cx="136" cy="154" r="2.75" fill="#222426" />
+                <circle cx="114" cy="124" r="2.75" fill="#222426" />
+                <circle cx="96" cy="154" r="2.75" fill="#222426" />
+                <circle cx="132" cy="154" r="2.75" fill="#222426" />
                 <text
-                  x="118"
+                  x="114"
                   y="184"
                   textAnchor="middle"
                   className="font-sans text-[13px] font-bold fill-[#222426]"
@@ -1733,7 +1753,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Primul sistem etic
                 </text>
                 <text
-                  x="118"
+                  x="114"
                   y="208"
                   textAnchor="middle"
                   className="font-sans text-[11.5px] font-semibold fill-[#222426]"
@@ -1741,7 +1761,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Compromis democratic
                 </text>
                 <text
-                  x="118"
+                  x="114"
                   y="229"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
@@ -1749,7 +1769,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   și mediere ternară
                 </text>
                 <text
-                  x="118"
+                  x="114"
                   y="250"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
@@ -1758,11 +1778,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Dotted border line separating Left and Center zones */}
+              {/* Dotted border line separating Left and Center zones at x=222 */}
               <line
-                x1="230"
+                x1="222"
                 y1="30"
-                x2="230"
+                x2="222"
                 y2="380"
                 stroke="#8C9BA5"
                 strokeWidth="1.5"
@@ -1774,7 +1794,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   cu injecția de control reflexiv străpungând Orientarea
                  ============================================================ */}
               <text
-                x="510"
+                x="514"
                 y="42"
                 textAnchor="middle"
                 className="font-sans text-[11px] font-bold tracking-wider fill-[#6E7376]"
@@ -1782,16 +1802,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 BUCLA CIBERNETICĂ OODA · BOYD
               </text>
 
-              {/* TOP LEFT BOX ABOVE OBSERVARE: Poluare sintetică (MAD) și capturare D2 */}
+              {/* TOP LEFT BOX ABOVE OBSERVARE: Poluare sintetică (MAD) și capturare D2 (x=228, y=55, width=148, height=56, center=302) */}
               <g
                 onClick={() => setFig3SelectedStage('poluare-mad')}
                 className="cursor-pointer"
                 opacity={fig3ReflexiveActive ? '1' : '0.35'}
               >
                 <rect
-                  x="236"
+                  x="228"
                   y="55"
-                  width="124"
+                  width="148"
                   height="56"
                   fill={fig3SelectedStage === 'poluare-mad' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig3SelectedStage === 'poluare-mad' ? '0.32' : '1'}
@@ -1799,15 +1819,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2"
                 />
                 <text
-                  x="298"
+                  x="302"
                   y="78"
                   textAnchor="middle"
-                  className="font-sans text-[10.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   Poluare sintetică (MAD)
                 </text>
                 <text
-                  x="298"
+                  x="302"
                   y="96"
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
@@ -1816,9 +1836,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
               <line
-                x1="295"
+                x1="296"
                 y1="111"
-                x2="295"
+                x2="296"
                 y2="188"
                 stroke={fig3ReflexiveActive ? '#F01E1E' : '#6E7376'}
                 strokeWidth="2"
@@ -1827,14 +1847,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
               />
 
-              {/* TOP BOX: Control reflexiv de rang secund */}
+              {/* TOP BOX: Control reflexiv de rang secund (x=361, y=55, width=170, height=56, center=446) */}
               <g
                 onClick={() => setFig3SelectedStage('reflexiv')}
                 className="cursor-pointer"
                 opacity={fig3ReflexiveActive ? '1' : '0.35'}
               >
                 <rect
-                  x="375"
+                  x="361"
                   y="55"
                   width="170"
                   height="56"
@@ -1843,7 +1863,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth={fig3ReflexiveActive ? '2.5' : '1.5'}
                 />
                 <text
-                  x="460"
+                  x="446"
                   y="78"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -1851,7 +1871,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Control reflexiv
                 </text>
                 <text
-                  x="460"
+                  x="446"
                   y="96"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -1860,21 +1880,21 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* PIERCING VERMILION VECTOR: Injecție de control reflexiv străpungând Orientarea */}
+              {/* PIERCING VERMILION VECTOR: Injecție de control reflexiv străpungând Orientarea (x=446) */}
               <g opacity={fig3ReflexiveActive ? '1' : '0.35'}>
                 <line
-                  x1="460"
+                  x1="446"
                   y1="111"
-                  x2="460"
+                  x2="446"
                   y2="188"
                   stroke={fig3ReflexiveActive ? '#F01E1E' : '#8C9BA5'}
                   strokeWidth={fig3ReflexiveActive ? '4' : '2'}
                   strokeDasharray={fig3ReflexiveActive ? undefined : '5 4'}
                   markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
                 />
-                <rect x="350" y="136" width="220" height="22" rx="2" fill="#F6F5EE" />
+                <rect x="351" y="136" width="190" height="22" rx="2" fill="#F6F5EE" />
                 <text
-                  x="460"
+                  x="446"
                   y="151"
                   textAnchor="middle"
                   className={`font-sans text-[10.5px] font-bold ${
@@ -1889,17 +1909,17 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               {!fig3ReflexiveActive ? (
                 <g>
                   <line
-                    x1="215"
+                    x1="210"
                     y1="215"
-                    x2="395"
+                    x2="381"
                     y2="215"
                     stroke="#222426"
                     strokeWidth="4.5"
                   />
                   <line
-                    x1="215"
+                    x1="210"
                     y1="215"
-                    x2="395"
+                    x2="381"
                     y2="215"
                     stroke="#E5B822"
                     strokeWidth="3"
@@ -1909,19 +1929,19 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               ) : (
                 <g>
                   <line
-                    x1="215"
+                    x1="210"
                     y1="215"
-                    x2="395"
+                    x2="381"
                     y2="215"
                     stroke="#F01E1E"
                     strokeWidth="2"
                     strokeDasharray="4 3"
                   />
-                  {/* T-bar roșu de blocare a primului sistem etic */}
+                  {/* T-bar roșu de blocare a primului sistem etic la x=222 */}
                   <line
-                    x1="230"
+                    x1="222"
                     y1="203"
-                    x2="230"
+                    x2="222"
                     y2="227"
                     stroke="#F01E1E"
                     strokeWidth="4"
@@ -1929,13 +1949,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </g>
               )}
 
-              {/* OODA 1: Observare (x=245..345) */}
+              {/* OODA 1: Observare (x=246, y=190, width=100, height=72, center=296) */}
               <g
                 onClick={() => setFig3SelectedStage('observare')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="245"
+                  x="246"
                   y="190"
                   width="100"
                   height="72"
@@ -1945,7 +1965,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2"
                 />
                 <text
-                  x="295"
+                  x="296"
                   y="218"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -1953,7 +1973,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Observare
                 </text>
                 <text
-                  x="295"
+                  x="296"
                   y="236"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
@@ -1962,24 +1982,24 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Arrow Observare -> Orientare */}
+              {/* Arrow Observare -> Orientare (x1=346 to x2=380) */}
               <line
-                x1="345"
+                x1="346"
                 y1="226"
-                x2="392"
+                x2="380"
                 y2="226"
                 stroke="#222426"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* OODA 2: Orientare (x=400..520) */}
+              {/* OODA 2: Orientare (x=386, y=190, width=120, height=72, center=446) */}
               <g
                 onClick={() => setFig3SelectedStage('orientare')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="400"
+                  x="386"
                   y="190"
                   width="120"
                   height="72"
@@ -1999,7 +2019,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2.5"
                 />
                 <text
-                  x="460"
+                  x="446"
                   y="211"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -2007,7 +2027,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Orientare
                 </text>
                 <text
-                  x="460"
+                  x="446"
                   y="228"
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
@@ -2015,7 +2035,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   modele mentale
                 </text>
                 <text
-                  x="460"
+                  x="446"
                   y="246"
                   textAnchor="middle"
                   className={`font-mono text-[9.5px] font-bold ${
@@ -2026,36 +2046,36 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Arrow Orientare -> Decizie (x1=520 to x2=538) */}
+              {/* Arrow Orientare -> Decizie (x1=506 to x2=526) */}
               {!fig3ReflexiveActive && (
                 <line
-                  x1="520"
+                  x1="506"
                   y1="226"
-                  x2="538"
+                  x2="526"
                   y2="226"
                   stroke="#222426"
                   strokeWidth="4"
                 />
               )}
               <line
-                x1="520"
+                x1="506"
                 y1="226"
-                x2="538"
+                x2="526"
                 y2="226"
                 stroke={fig3ReflexiveActive ? '#F01E1E' : '#E5B822'}
                 strokeWidth="2.5"
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
 
-              {/* OODA 3: Decizie (x=545, width=90, center=590) */}
+              {/* OODA 3: Decizie (x=532, y=190, width=88, height=72, center=576) */}
               <g
                 onClick={() => setFig3SelectedStage('decizie')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="545"
+                  x="532"
                   y="190"
-                  width="90"
+                  width="88"
                   height="72"
                   fill={
                     fig3SelectedStage === 'decizie'
@@ -2077,7 +2097,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2"
                 />
                 <text
-                  x="590"
+                  x="576"
                   y="218"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -2085,7 +2105,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Decizie
                 </text>
                 <text
-                  x="590"
+                  x="576"
                   y="236"
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
@@ -2094,36 +2114,36 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Arrow Decizie -> Acțiune (x1=635 to x2=649) */}
+              {/* Arrow Decizie -> Acțiune (x1=620 to x2=636) */}
               {!fig3ReflexiveActive && (
                 <line
-                  x1="635"
+                  x1="620"
                   y1="226"
-                  x2="649"
+                  x2="636"
                   y2="226"
                   stroke="#222426"
                   strokeWidth="4"
                 />
               )}
               <line
-                x1="635"
+                x1="620"
                 y1="226"
-                x2="649"
+                x2="636"
                 y2="226"
                 stroke={fig3ReflexiveActive ? '#F01E1E' : '#E5B822'}
                 strokeWidth="2.5"
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
 
-              {/* OODA 4: Acțiune (x=655, width=85, ends at x=740, center=697.5) */}
+              {/* OODA 4: Acțiune (x=642, y=190, width=84, height=72, ends at x=726, center=684) */}
               <g
                 onClick={() => setFig3SelectedStage('actiune')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="655"
+                  x="642"
                   y="190"
-                  width="85"
+                  width="84"
                   height="72"
                   fill={
                     fig3SelectedStage === 'actiune'
@@ -2145,7 +2165,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2"
                 />
                 <text
-                  x="697.5"
+                  x="684"
                   y="218"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -2153,7 +2173,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Acțiune
                 </text>
                 <text
-                  x="697.5"
+                  x="684"
                   y="236"
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
@@ -2162,26 +2182,26 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Cybernetic Feedback Loop: beneath from Acțiune returning to Orientare and Observare */}
+              {/* Cybernetic Feedback Loop: beneath from Acțiune (x=684) returning to Orientare (x=446) and Observare (x=296) */}
               <polyline
-                points="697.5,262 697.5,330 295,330 295,264"
+                points="684,262 684,330 296,330 296,264"
                 fill="none"
                 stroke="#8C9BA5"
                 strokeWidth="1.5"
                 markerEnd="url(#arrow-slate)"
               />
               <line
-                x1="460"
+                x1="446"
                 y1="330"
-                x2="460"
+                x2="446"
                 y2="264"
                 stroke="#8C9BA5"
                 strokeWidth="1.5"
                 markerEnd="url(#arrow-slate)"
               />
-              <rect x="415" y="320" width="165" height="20" fill="#F6F5EE" />
+              <rect x="408" y="320" width="165" height="20" fill="#F6F5EE" />
               <text
-                x="497.5"
+                x="490.5"
                 y="334"
                 textAnchor="middle"
                 className="font-mono text-[9.5px] font-semibold fill-[#6E7376]"
@@ -2189,11 +2209,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 Buclă cibernetică de feedback
               </text>
 
-              {/* Arrow connecting Acțiune (x=740) to Right Zone (Binary Wall at x=795) */}
+              {/* Arrow connecting Acțiune (x=726, y=226) to Right Zone (Binary Wall at x=810, y=202) across 86px corridor */}
               <line
-                x1="740"
+                x1="726"
                 y1="226"
-                x2="795"
+                x2="810"
                 y2="202"
                 stroke={fig3ReflexiveActive ? '#F01E1E' : '#8C9BA5'}
                 strokeWidth="2.5"
@@ -2202,25 +2222,25 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
               />
 
-              {/* Inspectable label: Contagiune complexă (x=642, y=124, width=140, height=36, completely left of x=790) */}
+              {/* Inspectable label: Contagiune complexă (x=660, y=132, width=136, height=36, center=728, completely left of x=805) */}
               <g
                 onClick={() => setFig3SelectedStage('contagiune')}
                 className="cursor-pointer"
                 opacity={fig3ReflexiveActive ? '1' : '0.35'}
               >
                 <line
-                  x1="745"
-                  y1="160"
-                  x2="765"
-                  y2="213"
+                  x1="758"
+                  y1="168"
+                  x2="768"
+                  y2="214"
                   stroke={fig3ReflexiveActive ? '#F01E1E' : '#6E7376'}
                   strokeWidth="1.5"
                   strokeDasharray="3 3"
                 />
                 <rect
-                  x="642"
-                  y="124"
-                  width="140"
+                  x="660"
+                  y="132"
+                  width="136"
                   height="36"
                   rx="2"
                   fill={fig3SelectedStage === 'contagiune' ? '#E5B822' : '#F6F5EE'}
@@ -2229,16 +2249,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="1.5"
                 />
                 <text
-                  x="712"
-                  y="139"
+                  x="728"
+                  y="147"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] font-bold fill-[#222426]"
                 >
                   Contagiune complexă
                 </text>
                 <text
-                  x="712"
-                  y="153"
+                  x="728"
+                  y="161"
                   textAnchor="middle"
                   className="font-mono text-[8.5px] fill-[#6E7376]"
                 >
@@ -2246,11 +2266,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Dotted border line separating Center and Right zones at x=790 */}
+              {/* Dotted border line separating Center and Right zones at x=805 */}
               <line
-                x1="790"
+                x1="805"
                 y1="30"
-                x2="790"
+                x2="805"
                 y2="380"
                 stroke="#8C9BA5"
                 strokeWidth="1.5"
@@ -2259,11 +2279,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
               {/* ============================================================
                   ZONA DREAPTA: Compresia în sistemul binar fracturat
-                  (Noi / Victime vs. Ei / Dușmani), separate de zidul de fractură
+                  (Noi / Victime vs. Ei / Dușmani), centrate la x=888 (x=816..960)
                  ============================================================ */}
               <g opacity={fig3ReflexiveActive ? '1' : '0.35'}>
                 <text
-                  x="875"
+                  x="888"
                   y="42"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold tracking-wider fill-[#F01E1E]"
@@ -2277,7 +2297,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   className="cursor-pointer"
                 >
                   <rect
-                    x="803"
+                    x="816"
                     y="110"
                     width="144"
                     height="60"
@@ -2286,7 +2306,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     strokeWidth="2"
                   />
                   <text
-                    x="875"
+                    x="888"
                     y="135"
                     textAnchor="middle"
                     className="font-sans text-[12px] font-bold fill-[#F01E1E]"
@@ -2294,7 +2314,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     Noi / Victime
                   </text>
                   <text
-                    x="875"
+                    x="888"
                     y="153"
                     textAnchor="middle"
                     className="font-sans text-[10.5px] fill-[#6E7376]"
@@ -2305,15 +2325,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
                 {/* Fractured Wall in Vermilion Red (#F01E1E) */}
                 <path
-                  d="M 798,198 L 826,190 L 856,204 L 886,192 L 916,206 L 950,198"
+                  d="M 810,198 L 838,190 L 868,204 L 898,192 L 928,206 L 964,198"
                   fill="none"
                   stroke="#F01E1E"
                   strokeWidth="4"
                 />
                 <rect
-                  x="797"
+                  x="812"
                   y="188"
-                  width="156"
+                  width="152"
                   height="20"
                   rx="2"
                   fill="#F6F5EE"
@@ -2321,7 +2341,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="1.5"
                 />
                 <text
-                  x="875"
+                  x="888"
                   y="202"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
@@ -2335,7 +2355,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   className="cursor-pointer"
                 >
                   <rect
-                    x="803"
+                    x="816"
                     y="226"
                     width="144"
                     height="60"
@@ -2344,7 +2364,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     strokeWidth="2"
                   />
                   <text
-                    x="875"
+                    x="888"
                     y="251"
                     textAnchor="middle"
                     className="font-sans text-[12px] font-bold fill-[#F01E1E]"
@@ -2352,7 +2372,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     Ei / Dușmani
                   </text>
                   <text
-                    x="875"
+                    x="888"
                     y="269"
                     textAnchor="middle"
                     className="font-sans text-[10.5px] fill-[#6E7376]"
