@@ -204,7 +204,7 @@ async function main() {
 
   const commitMessage =
     process.env.COMMIT_MESSAGE ||
-    'Revizie aprofundată de claritate, coerență logică și proprietate a limbajului (Capitolele 1–6, Tabele și Glosar)';
+    'Runda a III-a: optimizare logico-terminologică (Lalonde-Dever, Bion, Ostrom) și recalibrare SVG Figurile 2 și 3';
 
   const workspaceRoot = process.cwd();
   const allSourceFiles = collectFiles(workspaceRoot);
