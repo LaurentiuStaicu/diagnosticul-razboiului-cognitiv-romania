@@ -321,28 +321,28 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 900 540"
+              viewBox="0 0 940 650"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="900" height="540" fill="#F6F5EE" />
-              <rect x="0" y="0" width="900" height="540" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="940" height="650" fill="#F6F5EE" />
+              <rect x="0" y="0" width="940" height="650" fill="url(#stipple-bg)" />
 
-              {/* STRATUL A CONTAINER: Casete rectangulare cu contur ferm (#222426) */}
+              {/* STRATUL A CONTAINER (x=75..665, y=28..154, height=126) */}
               <rect
-                x="35"
+                x="75"
                 y="28"
-                width="605"
-                height="125"
+                width="590"
+                height="126"
                 fill="#F6F5EE"
                 stroke="#222426"
                 strokeWidth="2.5"
               />
-              <rect x="175" y="16" width="325" height="24" fill="#F6F5EE" stroke="#6E7376" strokeWidth="1" />
+              <rect x="200" y="16" width="340" height="24" fill="#F6F5EE" stroke="#6E7376" strokeWidth="1" />
               <text
-                x="337"
+                x="370"
                 y="32"
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
@@ -350,40 +350,40 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 Stratul A · Determinanți structurali și instituționali
               </text>
 
-              {/* Node A1: Det. I · Servicii publice */}
+              {/* Node A1: Det. I · Servicii publice (x=95, y=52, width=240, height=82, center=215,93) */}
               <g
                 onClick={() => setFig1SelectedNode('servicii')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="55"
+                  x="95"
                   y="52"
                   width="240"
-                  height="76"
+                  height="82"
                   fill={fig1SelectedNode === 'servicii' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig1SelectedNode === 'servicii' ? '0.3' : '1'}
                   stroke="#222426"
                   strokeWidth="2"
                 />
                 <text
-                  x="175"
-                  y="73"
+                  x="215"
+                  y="75"
                   textAnchor="middle"
                   className="font-mono text-[10px] font-bold fill-[#6E7376]"
                 >
                   Det. I · Servicii publice
                 </text>
                 <text
-                  x="175"
-                  y="93"
+                  x="215"
+                  y="96"
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-semibold fill-[#222426]"
                 >
                   {fig1Mode === 'vulnerable' ? 'și închidere operațională' : 'Servicii publice integre'}
                 </text>
                 <text
-                  x="175"
-                  y="113"
+                  x="215"
+                  y="117"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
@@ -391,61 +391,61 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Horizontal arrow A1 -> A2 */}
+              {/* Horizontal arrow A1 -> A2 (x1=335, y1=93 to x2=398, y2=93) */}
               {fig1Mode === 'resilient' && (
                 <line
-                  x1="295"
-                  y1="90"
-                  x2="370"
-                  y2="90"
+                  x1="335"
+                  y1="93"
+                  x2="398"
+                  y2="93"
                   stroke="#222426"
                   strokeWidth="4.5"
                 />
               )}
               <line
-                x1="295"
-                y1="90"
-                x2="370"
-                y2="90"
+                x1="335"
+                y1="93"
+                x2="398"
+                y2="93"
                 stroke={fig1Mode === 'vulnerable' ? '#F01E1E' : '#E5B822'}
                 strokeWidth="3"
                 markerEnd={fig1Mode === 'vulnerable' ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
 
-              {/* Node A2: Det. II · Mediu socioeconomic */}
+              {/* Node A2: Det. II · Mediu socioeconomic (x=405, y=52, width=240, height=82, center=525,93) */}
               <g
                 onClick={() => setFig1SelectedNode('mediu')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="378"
+                  x="405"
                   y="52"
                   width="240"
-                  height="76"
+                  height="82"
                   fill={fig1SelectedNode === 'mediu' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig1SelectedNode === 'mediu' ? '0.3' : '1'}
                   stroke="#222426"
                   strokeWidth="2"
                 />
                 <text
-                  x="498"
-                  y="73"
+                  x="525"
+                  y="75"
                   textAnchor="middle"
                   className="font-mono text-[10px] font-bold fill-[#6E7376]"
                 >
                   Det. II · Mediu socioeconomic
                 </text>
                 <text
-                  x="498"
-                  y="93"
+                  x="525"
+                  y="96"
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-semibold fill-[#222426]"
                 >
                   {fig1Mode === 'vulnerable' ? 'Precaritate și polarizare' : 'Coeziune sociospațială'}
                 </text>
                 <text
-                  x="498"
-                  y="113"
+                  x="525"
+                  y="117"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
@@ -453,96 +453,96 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Vertical downward arrows from Stratul A to Stratul B */}
+              {/* CORIDORUL 1: Stratul A -> Stratul B (y=154..216, 62px înălțime) */}
               <line
-                x1="175"
-                y1="128"
-                x2="175"
-                y2="190"
+                x1="215"
+                y1="134"
+                x2="215"
+                y2="210"
                 stroke="#222426"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-dark)"
               />
               <line
-                x1="498"
-                y1="128"
-                x2="498"
-                y2="190"
+                x1="525"
+                y1="134"
+                x2="525"
+                y2="210"
                 stroke="#222426"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* Etichetă casetată centrală: 1. Tranziție Macro → Micro (Mecanisme situaționale Coleman) */}
+              {/* Etichetă casetată centrală: 1. Tranziție Macro → Micro (x=185, y=166, width=370, height=22) */}
               <rect
-                x="152"
-                y="156"
+                x="185"
+                y="166"
                 width="370"
-                height="20"
+                height="22"
                 fill="#F6F5EE"
                 stroke="#6E7376"
                 strokeWidth="1"
               />
               <text
-                x="337"
-                y="170"
+                x="370"
+                y="181"
                 textAnchor="middle"
                 className="font-mono text-[9.5px] font-bold fill-[#222426]"
               >
                 1. Tranziție Macro → Micro (Mecanisme situaționale Coleman)
               </text>
 
-              {/* STRATUL B CONTAINER: Noduri romboidale/circulare și bucle cibernetice de feedback */}
+              {/* STRATUL B CONTAINER (x=75..665, y=216..384, height=168) */}
               <rect
-                x="35"
-                y="194"
-                width="605"
-                height="138"
+                x="75"
+                y="216"
+                width="590"
+                height="168"
                 fill="#F6F5EE"
                 stroke="#222426"
                 strokeWidth="2.5"
               />
-              <rect x="175" y="182" width="325" height="24" fill="#F6F5EE" stroke="#6E7376" strokeWidth="1" />
+              <rect x="200" y="204" width="340" height="24" fill="#F6F5EE" stroke="#6E7376" strokeWidth="1" />
               <text
-                x="337"
-                y="198"
+                x="370"
+                y="220"
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
                 Stratul B · Mecanisme neurocognitive și cibernetice
               </text>
               <text
-                x="337"
-                y="218"
+                x="370"
+                y="242"
                 textAnchor="middle"
-                className="font-mono text-[9.5px] font-bold fill-[#6E7376]"
+                className="font-mono text-[10.5px] font-bold fill-[#6E7376]"
               >
                 2. Nivel Micro (Formarea acțiunii) · Det. IV: Rezervă neurobiologică
               </text>
 
-              {/* Node B1: Romb / Diamond (Stres alostatic / Amigdală) */}
+              {/* Node B1: Romb (center 215, 302) */}
               <g
                 onClick={() => setFig1SelectedNode('alostazie')}
                 className="cursor-pointer"
               >
                 <polygon
-                  points="175,222 265,266 175,310 85,266"
+                  points="215,254 305,302 215,350 125,302"
                   fill={fig1SelectedNode === 'alostazie' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig1SelectedNode === 'alostazie' ? '0.35' : '1'}
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
-                  x="175"
-                  y="260"
+                  x="215"
+                  y="296"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   {fig1Mode === 'vulnerable' ? 'Stres alostatic' : 'Reglare executivă'}
                 </text>
                 <text
-                  x="175"
-                  y="278"
+                  x="215"
+                  y="314"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
@@ -550,31 +550,31 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Forward arrow B1 -> B2 */}
+              {/* Forward arrow B1 -> B2 (x1=305, y1=294 to x2=430, y2=294) */}
               {fig1Mode === 'resilient' && (
                 <line
-                  x1="265"
-                  y1="256"
-                  x2="400"
-                  y2="256"
+                  x1="305"
+                  y1="294"
+                  x2="430"
+                  y2="294"
                   stroke="#222426"
                   strokeWidth="4"
                 />
               )}
               <line
-                x1="265"
-                y1="256"
-                x2="400"
-                y2="256"
+                x1="305"
+                y1="294"
+                x2="430"
+                y2="294"
                 stroke={fig1Mode === 'vulnerable' ? '#F01E1E' : '#E5B822'}
                 strokeWidth="2.5"
                 markerEnd={fig1Mode === 'vulnerable' ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
 
-              {/* Cybernetic Feedback Arc B2 -> B1 (returning back) */}
+              {/* Cybernetic Feedback Arc B2 -> B1 */}
               {fig1Mode === 'resilient' && (
                 <path
-                  d="M 435,288 C 385,314 285,314 235,288"
+                  d="M 465,326 C 415,358 325,358 275,326"
                   fill="none"
                   stroke="#222426"
                   strokeWidth="3.5"
@@ -582,46 +582,46 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
               )}
               <path
-                d="M 435,288 C 385,314 285,314 235,288"
+                d="M 465,326 C 415,358 325,358 275,326"
                 fill="none"
                 stroke={fig1Mode === 'vulnerable' ? '#F01E1E' : '#E5B822'}
                 strokeWidth="2"
                 strokeDasharray="4 3"
                 markerEnd={fig1Mode === 'vulnerable' ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
-              <rect x="272" y="294" width="130" height="18" fill="#F6F5EE" />
+              <rect x="305" y="343" width="130" height="18" fill="#F6F5EE" />
               <text
-                x="337"
-                y="307"
+                x="370"
+                y="356"
                 textAnchor="middle"
                 className="font-mono text-[9.5px] font-semibold fill-[#6E7376]"
               >
                 Buclă cibernetică
               </text>
 
-              {/* Node B2: Romb / Diamond (Inhibiție dlPFC și disraționalitate S2) */}
+              {/* Node B2: Romb (center 525, 302) */}
               <g
                 onClick={() => setFig1SelectedNode('reactiv')}
                 className="cursor-pointer"
               >
                 <polygon
-                  points="498,222 592,266 498,310 404,266"
+                  points="525,254 615,302 525,350 435,302"
                   fill={fig1SelectedNode === 'reactiv' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig1SelectedNode === 'reactiv' ? '0.35' : '1'}
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
-                  x="498"
-                  y="260"
+                  x="525"
+                  y="296"
                   textAnchor="middle"
                   className="font-sans text-[11.5px] font-bold fill-[#222426]"
                 >
                   {fig1Mode === 'vulnerable' ? 'Inhibiție dlPFC și' : 'Sistemul 2 activ'}
                 </text>
                 <text
-                  x="498"
-                  y="278"
+                  x="525"
+                  y="314"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
@@ -629,73 +629,73 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Vertical downward arrows from Stratul B to Stratul C */}
+              {/* CORIDORUL 2: Stratul B -> Stratul C (y=384..446, 62px înălțime) */}
               <line
-                x1="175"
-                y1="310"
-                x2="175"
-                y2="375"
+                x1="215"
+                y1="350"
+                x2="215"
+                y2="440"
                 stroke="#222426"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-dark)"
               />
               <line
-                x1="498"
-                y1="310"
-                x2="498"
-                y2="375"
+                x1="525"
+                y1="350"
+                x2="525"
+                y2="440"
                 stroke="#222426"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* Etichetă casetată centrală: 3. Tranziție Micro → Macro (Agregare transformațională) */}
+              {/* Etichetă casetată centrală: 3. Tranziție Micro → Macro (x=195, y=396, width=350, height=22) */}
               <rect
-                x="184"
-                y="338"
-                width="340"
-                height="20"
+                x="195"
+                y="396"
+                width="350"
+                height="22"
                 fill="#F6F5EE"
                 stroke="#6E7376"
                 strokeWidth="1"
               />
               <text
-                x="354"
-                y="352"
+                x="370"
+                y="411"
                 textAnchor="middle"
                 className="font-mono text-[9.5px] font-bold fill-[#222426]"
               >
                 3. Tranziție Micro → Macro (Agregare transformațională)
               </text>
 
-              {/* STRATUL C CONTAINER: Elipse, axa Ego–Sine și filtrul moral creștin-secular */}
+              {/* STRATUL C CONTAINER (x=75..665, y=446..606, height=160) */}
               <rect
-                x="35"
-                y="375"
-                width="605"
-                height="145"
+                x="75"
+                y="446"
+                width="590"
+                height="160"
                 fill="#F6F5EE"
                 stroke="#222426"
                 strokeWidth="2.5"
               />
-              <rect x="175" y="363" width="325" height="24" fill="#F6F5EE" stroke="#6E7376" strokeWidth="1" />
+              <rect x="200" y="434" width="340" height="24" fill="#F6F5EE" stroke="#6E7376" strokeWidth="1" />
               <text
-                x="337"
-                y="379"
+                x="370"
+                y="450"
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
                 Stratul C · Arhitectură psihoculturală și inconștient
               </text>
 
-              {/* Node C1: Elipsă Persona mimetică */}
+              {/* Node C1: Elipsă Persona mimetică (cx=215, cy=508, rx=95, ry=38) */}
               <g
                 onClick={() => setFig1SelectedNode('persona')}
                 className="cursor-pointer"
               >
                 <ellipse
-                  cx="175"
-                  cy="435"
+                  cx="215"
+                  cy="508"
                   rx="95"
                   ry="38"
                   fill={fig1SelectedNode === 'persona' ? '#E5B822' : '#F6F5EE'}
@@ -704,16 +704,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2.5"
                 />
                 <text
-                  x="175"
-                  y="430"
+                  x="215"
+                  y="503"
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-bold fill-[#222426]"
                 >
                   Persona mimetică
                 </text>
                 <text
-                  x="175"
-                  y="448"
+                  x="215"
+                  y="521"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
@@ -721,34 +721,34 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Axa de simetrie psihoculturală: Axa Ego–Sine */}
+              {/* Axa de simetrie psihoculturală: Axa Ego–Sine (x1=310..430, y=508) */}
               <line
-                x1="270"
-                y1="435"
-                x2="403"
-                y2="435"
+                x1="310"
+                y1="508"
+                x2="430"
+                y2="508"
                 stroke="#6E7376"
                 strokeWidth="2"
                 strokeDasharray="4 3"
               />
-              <rect x="297" y="426" width="78" height="18" fill="#F6F5EE" />
+              <rect x="331" y="499" width="78" height="18" fill="#F6F5EE" />
               <text
-                x="336"
-                y="439"
+                x="370"
+                y="512"
                 textAnchor="middle"
                 className="font-mono text-[10px] font-bold fill-[#6E7376]"
               >
                 Axa Ego–Sine
               </text>
 
-              {/* Node C2: Elipsă Umbra colectivă */}
+              {/* Node C2: Elipsă Umbra colectivă (cx=525, cy=508, rx=95, ry=38) */}
               <g
                 onClick={() => setFig1SelectedNode('fatalism')}
                 className="cursor-pointer"
               >
                 <ellipse
-                  cx="498"
-                  cy="435"
+                  cx="525"
+                  cy="508"
                   rx="95"
                   ry="38"
                   fill={fig1SelectedNode === 'fatalism' ? '#E5B822' : '#F6F5EE'}
@@ -757,16 +757,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2.5"
                 />
                 <text
-                  x="498"
-                  y="430"
+                  x="525"
+                  y="503"
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-bold fill-[#222426]"
                 >
                   {fig1Mode === 'vulnerable' ? 'Umbra colectivă' : 'Integrare psihodinamică'}
                 </text>
                 <text
-                  x="498"
-                  y="448"
+                  x="525"
+                  y="521"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
@@ -774,15 +774,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* FILTRUL VALORILOR MORALE CREȘTINE ȘI SECULARE (Det. III) */}
+              {/* FILTRUL VALORILOR MORALE CREȘTINE ȘI SECULARE (Det. III: x=175, y=560, width=390, height=30) */}
               <g
                 onClick={() => setFig1SelectedNode('filtru-moral')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="132"
-                  y="480"
-                  width="410"
+                  x="175"
+                  y="560"
+                  width="390"
                   height="30"
                   rx="3"
                   fill={fig1Mode === 'resilient' ? '#E5B822' : '#F6F5EE'}
@@ -791,8 +791,8 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeDasharray={fig1Mode === 'vulnerable' ? '4 3' : undefined}
                 />
                 <text
-                  x="337"
-                  y="500"
+                  x="370"
+                  y="580"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] font-bold fill-[#222426]"
                 >
@@ -802,39 +802,74 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Săgeată punctată ascendentă de retroacțiune pe flancul stâng (Stratul C -> Stratul B -> Stratul A) */}
+              {/* Săgeată punctată ascendentă de retroacțiune pe flancul stâng (x=36, în afara containerelor x=75..665) */}
               <line
-                x1="48"
-                y1="435"
-                x2="48"
-                y2="92"
+                x1="75"
+                y1="508"
+                x2="36"
+                y2="508"
+                stroke="#6E7376"
+                strokeWidth="2"
+                strokeDasharray="4 3"
+              />
+              <line
+                x1="36"
+                y1="302"
+                x2="75"
+                y2="302"
+                stroke="#6E7376"
+                strokeWidth="1.5"
+                strokeDasharray="3 3"
+              />
+              <line
+                x1="36"
+                y1="508"
+                x2="36"
+                y2="93"
+                stroke="#6E7376"
+                strokeWidth="2"
+                strokeDasharray="4 3"
+              />
+              <line
+                x1="36"
+                y1="93"
+                x2="72"
+                y2="93"
                 stroke="#6E7376"
                 strokeWidth="2"
                 strokeDasharray="4 3"
                 markerEnd="url(#arrow-slate)"
               />
               <rect
-                x="42"
-                y="334"
-                width="132"
-                height="18"
+                x="4"
+                y="392"
+                width="64"
+                height="30"
                 fill="#F6F5EE"
                 stroke="#6E7376"
                 strokeWidth="1"
               />
               <text
-                x="108"
-                y="346"
+                x="36"
+                y="404"
                 textAnchor="middle"
-                className="font-mono text-[9.5px] font-bold fill-[#222426]"
+                className="font-mono text-[8.5px] font-bold fill-[#222426]"
               >
-                Recursivitate C → B → A
+                Recursivitate
+              </text>
+              <text
+                x="36"
+                y="417"
+                textAnchor="middle"
+                className="font-mono text-[8.5px] font-bold fill-[#6E7376]"
+              >
+                C → B → A
               </text>
 
-              {/* In vulnerable mode: Scurtcircuitarea filtrului moral de catre vectorul rosu (rutare ortogonală) */}
+              {/* In vulnerable mode: Scurtcircuitarea filtrului moral de către vectorul roșu */}
               {fig1Mode === 'vulnerable' && (
                 <path
-                  d="M 675,435 L 675,495 L 544,495"
+                  d="M 715,508 L 715,575 L 568,575"
                   fill="none"
                   stroke="#F01E1E"
                   strokeWidth="3"
@@ -843,14 +878,14 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
               )}
 
-              {/* RIGHT SIDE: VECTOR DE RAZBOI COGNITIV & COUPLING SPINE */}
+              {/* RIGHT SIDE: VECTOR DE RĂZBOI COGNITIV (x=755, y=263, width=160, height=78, center=835,302) */}
               <g
                 onClick={() => setFig1SelectedNode('vector')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="715"
-                  y="225"
+                  x="755"
+                  y="263"
                   width="160"
                   height="78"
                   fill={fig1SelectedNode === 'vector' ? '#F01E1E' : '#F6F5EE'}
@@ -859,16 +894,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="3"
                 />
                 <text
-                  x="795"
-                  y="257"
+                  x="835"
+                  y="295"
                   textAnchor="middle"
                   className="font-sans text-[13.5px] font-bold fill-[#F01E1E]"
                 >
                   Vector de
                 </text>
                 <text
-                  x="795"
-                  y="278"
+                  x="835"
+                  y="316"
                   textAnchor="middle"
                   className="font-sans text-[13.5px] font-bold fill-[#F01E1E]"
                 >
@@ -876,89 +911,89 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Vertical red collector spine at x=675 */}
+              {/* Vertical red collector spine at x=715 */}
+              <line
+                x1="755"
+                y1="302"
+                x2="715"
+                y2="302"
+                stroke="#F01E1E"
+                strokeWidth="3"
+                strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
+              />
               <line
                 x1="715"
-                y1="264"
-                x2="675"
-                y2="264"
-                stroke="#F01E1E"
-                strokeWidth="3"
-                strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
-              />
-              <line
-                x1="675"
-                y1="90"
-                x2="675"
-                y2="435"
+                y1="93"
+                x2="715"
+                y2="508"
                 stroke="#F01E1E"
                 strokeWidth="3"
                 strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
               />
 
-              {/* 3 Horizontal coupling arrows into Strata A, B, C */}
+              {/* 3 Horizontal coupling arrows into Strata A, B, C (stopping at x2=693 before shield when resilient!) */}
               <line
-                x1="675"
-                y1="90"
-                x2="618"
-                y2="90"
+                x1="715"
+                y1="93"
+                x2={fig1Mode === 'resilient' ? '693' : '648'}
+                y2="93"
                 stroke="#F01E1E"
                 strokeWidth="3"
                 strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
                 markerEnd="url(#arrow-red)"
               />
               <line
-                x1="675"
-                y1="266"
-                x2="594"
-                y2="266"
+                x1="715"
+                y1="302"
+                x2={fig1Mode === 'resilient' ? '693' : '619'}
+                y2="302"
                 stroke="#F01E1E"
                 strokeWidth="3"
                 strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
                 markerEnd="url(#arrow-red)"
               />
               <line
-                x1="675"
-                y1="435"
-                x2="593"
-                y2="435"
+                x1="715"
+                y1="508"
+                x2={fig1Mode === 'resilient' ? '693' : '623'}
+                y2="508"
                 stroke="#F01E1E"
                 strokeWidth="3"
                 strokeDasharray={fig1Mode === 'resilient' ? '5 4' : undefined}
                 markerEnd="url(#arrow-red)"
               />
 
-              {/* Resilient Shield Bar when in resilient mode */}
+              {/* Resilient Shield Bar at x=685 when in resilient mode */}
               {fig1Mode === 'resilient' && (
                 <g>
                   <line
-                    x1="648"
+                    x1="685"
                     y1="45"
-                    x2="648"
-                    y2="505"
+                    x2="685"
+                    y2="595"
                     stroke="#222426"
                     strokeWidth="8"
                   />
                   <line
-                    x1="648"
+                    x1="685"
                     y1="45"
-                    x2="648"
-                    y2="505"
+                    x2="685"
+                    y2="595"
                     stroke="#E5B822"
                     strokeWidth="6"
                   />
                   <rect
-                    x="620"
-                    y="512"
-                    width="155"
+                    x="608"
+                    y="602"
+                    width="154"
                     height="24"
                     fill="#E5B822"
                     stroke="#222426"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="697"
-                    y="528"
+                    x="685"
+                    y="618"
                     textAnchor="middle"
                     className="font-mono text-[10px] font-bold fill-[#222426]"
                   >
@@ -1030,22 +1065,22 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 860 500"
+              viewBox="0 0 920 490"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="860" height="500" fill="#F6F5EE" />
-              <rect x="0" y="0" width="860" height="500" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="920" height="490" fill="#F6F5EE" />
+              <rect x="0" y="0" width="920" height="490" fill="url(#stipple-bg)" />
 
-              {/* Central Vertical Divider & Top Header Line */}
-              <line x1="410" y1="15" x2="410" y2="485" stroke="#8C9BA5" strokeWidth="2" />
-              <line x1="20" y1="80" x2="840" y2="80" stroke="#8C9BA5" strokeWidth="1.5" />
+              {/* Central Vertical Divider at x=430 & Top Header Line at y=80 */}
+              <line x1="430" y1="15" x2="430" y2="475" stroke="#8C9BA5" strokeWidth="2" />
+              <line x1="25" y1="80" x2="895" y2="80" stroke="#8C9BA5" strokeWidth="1.5" />
 
-              {/* Left Column Header */}
+              {/* Left Column Header (center x=170) */}
               <text
-                x="195"
+                x="170"
                 y="40"
                 textAnchor="middle"
                 className="font-sans text-[16px] font-bold fill-[#222426]"
@@ -1053,7 +1088,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 Sinteza creștin-seculară
               </text>
               <text
-                x="195"
+                x="170"
                 y="62"
                 textAnchor="middle"
                 className="font-sans text-[16px] font-bold fill-[#222426]"
@@ -1061,9 +1096,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 europeană
               </text>
 
-              {/* Right Column Header */}
+              {/* Right Column Header (center x=710) */}
               <text
-                x="635"
+                x="710"
                 y="40"
                 textAnchor="middle"
                 className="font-sans text-[16px] font-bold fill-[#222426]"
@@ -1071,7 +1106,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 Ideologia revizionistă
               </text>
               <text
-                x="635"
+                x="710"
                 y="62"
                 textAnchor="middle"
                 className="font-sans text-[16px] font-bold fill-[#222426]"
@@ -1079,13 +1114,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 a Antilumii
               </text>
 
-              {/* LEFT COLUMN NODES */}
+              {/* LEFT COLUMN NODES (x=45, width=250, center=170) */}
               <g onClick={() => setFig2Inspect('sinteza-stanga')} className="cursor-pointer">
                 {/* Box L1 */}
                 <rect
-                  x="55"
+                  x="45"
                   y="102"
-                  width="280"
+                  width="250"
                   height="74"
                   fill={fig2Inspect === 'sinteza-stanga' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'sinteza-stanga' ? '0.35' : '1'}
@@ -1093,101 +1128,101 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2.5"
                 />
                 <text
-                  x="195"
+                  x="170"
                   y="130"
                   textAnchor="middle"
-                  className="font-sans text-[14px] font-bold fill-[#222426]"
+                  className="font-sans text-[13.5px] font-bold fill-[#222426]"
                 >
                   Demnitate umană inalienabilă
                 </text>
                 <text
-                  x="195"
+                  x="170"
                   y="151"
                   textAnchor="middle"
-                  className="font-sans text-[11.5px] fill-[#6E7376]"
+                  className="font-sans text-[11px] fill-[#6E7376]"
                 >
                   Imago Dei, proairesis și drepturi universale
                 </text>
 
                 {/* Arrow L1 -> L2 */}
                 <line
-                  x1="195"
+                  x1="170"
                   y1="176"
-                  x2="195"
-                  y2="220"
+                  x2="170"
+                  y2="224"
                   stroke="#222426"
                   strokeWidth="5"
                 />
                 <line
-                  x1="195"
+                  x1="170"
                   y1="176"
-                  x2="195"
-                  y2="220"
+                  x2="170"
+                  y2="224"
                   stroke="#E5B822"
                   strokeWidth="3.5"
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* Box L2 */}
+                {/* Box L2 (y=230..306, center y=268) */}
                 <rect
-                  x="55"
-                  y="226"
-                  width="280"
-                  height="78"
+                  x="45"
+                  y="230"
+                  width="250"
+                  height="76"
                   fill={fig2Inspect === 'sinteza-stanga' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'sinteza-stanga' ? '0.35' : '1'}
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
-                  x="195"
-                  y="254"
+                  x="170"
+                  y="256"
                   textAnchor="middle"
-                  className="font-sans text-[14px] font-bold fill-[#222426]"
+                  className="font-sans text-[13.5px] font-bold fill-[#222426]"
                 >
                   Filtru moral și constituțional
                 </text>
                 <text
-                  x="195"
-                  y="274"
+                  x="170"
+                  y="276"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
                   Dezbateri legitime în Primul sistem etic
                 </text>
                 <text
-                  x="195"
-                  y="291"
+                  x="170"
+                  y="293"
                   textAnchor="middle"
-                  className="font-sans text-[10.5px] fill-[#6E7376]"
+                  className="font-sans text-[10px] fill-[#6E7376]"
                 >
                   (Habermas · Lefebvre)
                 </text>
 
                 {/* Arrow L2 -> L3 */}
                 <line
-                  x1="195"
-                  y1="304"
-                  x2="195"
-                  y2="382"
+                  x1="170"
+                  y1="306"
+                  x2="170"
+                  y2="386"
                   stroke="#222426"
                   strokeWidth="5"
                 />
                 <line
-                  x1="195"
-                  y1="304"
-                  x2="195"
-                  y2="382"
+                  x1="170"
+                  y1="306"
+                  x2="170"
+                  y2="386"
                   stroke="#E5B822"
                   strokeWidth="3.5"
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* Box L3 */}
+                {/* Box L3 (y=394..468) */}
                 <rect
-                  x="55"
-                  y="390"
-                  width="280"
+                  x="45"
+                  y="394"
+                  width="250"
                   height="74"
                   fill={fig2Inspect === 'sinteza-stanga' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'sinteza-stanga' ? '0.35' : '1'}
@@ -1195,56 +1230,55 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2.5"
                 />
                 <text
-                  x="195"
-                  y="418"
+                  x="170"
+                  y="422"
                   textAnchor="middle"
-                  className="font-sans text-[14px] font-bold fill-[#222426]"
+                  className="font-sans text-[13.5px] font-bold fill-[#222426]"
                 >
                   Modernitate organică și libertate
                 </text>
                 <text
-                  x="195"
-                  y="439"
+                  x="170"
+                  y="443"
                   textAnchor="middle"
-                  className="font-sans text-[11.5px] fill-[#6E7376]"
+                  className="font-sans text-[11px] fill-[#6E7376]"
                 >
                   Autonomie suverană în alianțele euro-atlantice
                 </text>
               </g>
 
-              {/* VECTOR TRANSVERSAL ORIZONTAL DE PARAZITARE SEMIOTICĂ PESTE LINIA CENTRALĂ (x=335 .. x=465) */}
+              {/* CANALUL CENTRAL DE 250px LĂȚIME (x=295..545) */}
               {fig2Mode === 'camouflage' ? (
                 <g>
                   <line
-                    x1="465"
-                    y1="265"
-                    x2="342"
-                    y2="265"
+                    x1="297"
+                    y1="268"
+                    x2="538"
+                    y2="268"
                     stroke="#F01E1E"
                     strokeWidth="3"
-                    strokeDasharray="6 3"
                     markerEnd="url(#arrow-red)"
                   />
                   <rect
-                    x="338"
-                    y="224"
-                    width="144"
-                    height="30"
+                    x="320"
+                    y="226"
+                    width="200"
+                    height="32"
                     fill="#F6F5EE"
                     stroke="#F01E1E"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="410"
-                    y="237"
+                    x="420"
+                    y="240"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
                   >
                     Parazitare semiotică a
                   </text>
                   <text
-                    x="410"
-                    y="249"
+                    x="420"
+                    y="252"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
                   >
@@ -1254,50 +1288,50 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               ) : (
                 <g>
                   <line
-                    x1="465"
-                    y1="265"
-                    x2="386"
-                    y2="265"
+                    x1="543"
+                    y1="268"
+                    x2="424"
+                    y2="268"
                     stroke="#8C9BA5"
                     strokeWidth="2.5"
                     strokeDasharray="4 3"
                   />
-                  {/* T-bar scut auriu în Modul 2 */}
+                  {/* T-bar scut auriu în Modul 2 la x=420, y=248..288 */}
                   <line
-                    x1="382"
-                    y1="242"
-                    x2="382"
+                    x1="420"
+                    y1="248"
+                    x2="420"
                     y2="288"
                     stroke="#222426"
                     strokeWidth="8"
                   />
                   <line
-                    x1="382"
-                    y1="242"
-                    x2="382"
+                    x1="420"
+                    y1="248"
+                    x2="420"
                     y2="288"
                     stroke="#E5B822"
                     strokeWidth="5.5"
                   />
                   <rect
-                    x="336"
-                    y="206"
-                    width="148"
-                    height="30"
+                    x="325"
+                    y="204"
+                    width="190"
+                    height="34"
                     fill="#E5B822"
                     stroke="#222426"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="410"
-                    y="219"
+                    x="420"
+                    y="218"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#222426]"
                   >
                     Scut Proairesis și
                   </text>
                   <text
-                    x="410"
+                    x="420"
                     y="231"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#222426]"
@@ -1307,13 +1341,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </g>
               )}
 
-              {/* RIGHT COLUMN NODES: Dubla falsificare de camuflaj + Nucleu Antimir + 3 paliere spălare + Subordonare */}
-              {/* Outer Camouflage Container */}
+              {/* RIGHT COLUMN NODES (x=545..875, center=710) */}
+              {/* Outer Camouflage Container (x=535, y=100, width=350, height=120) */}
               <rect
-                x="465"
-                y="94"
-                width="365"
-                height="96"
+                x="535"
+                y="100"
+                width="350"
+                height="120"
                 fill="#8C9BA5"
                 fillOpacity={fig2Mode === 'deconstructed' ? '0.08' : '0.22'}
                 stroke="#6E7376"
@@ -1321,50 +1355,50 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 strokeDasharray="5 3"
               />
               <text
-                x="647"
-                y="111"
+                x="710"
+                y="119"
                 textAnchor="middle"
-                className="font-sans text-[11px] font-bold fill-[#222426]"
+                className="font-sans text-[10.5px] font-bold fill-[#222426]"
               >
                 {fig2Mode === 'camouflage'
                   ? 'Camuflaj discursiv de suprafață (Falsificare mimetică · Soloviov)'
                   : 'Camuflaj demascat prin discernământ patristic și istoric'}
               </text>
 
-              {/* Sub-casetă 1: Falsificarea I (Etnofiletismul Russkii Mir) */}
+              {/* Sub-casetă 1: Falsificarea I (x=547, y=132, width=160, height=76, center=627) */}
               <g
                 onClick={() => setFig2Inspect('falsificare-ortodoxie')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="476"
-                  y="119"
-                  width="166"
-                  height="62"
+                  x="547"
+                  y="132"
+                  width="160"
+                  height="76"
                   fill={fig2Inspect === 'falsificare-ortodoxie' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'falsificare-ortodoxie' ? '0.32' : '1'}
                   stroke="#222426"
                   strokeWidth="1.8"
                 />
                 <text
-                  x="559"
-                  y="138"
+                  x="627"
+                  y="154"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] font-bold fill-[#222426]"
                 >
                   Falsificarea I: Etnofiletismul
                 </text>
                 <text
-                  x="559"
-                  y="153"
+                  x="627"
+                  y="172"
                   textAnchor="middle"
                   className="font-sans text-[10px] font-semibold fill-[#F01E1E]"
                 >
                   Russkii Mir (Sinod 1872)
                 </text>
                 <text
-                  x="559"
-                  y="169"
+                  x="627"
+                  y="191"
                   textAnchor="middle"
                   className="font-sans text-[9px] fill-[#6E7376]"
                 >
@@ -1372,40 +1406,40 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Sub-casetă 2: Falsificarea II (Falsul suveranism izolaționist) */}
+              {/* Sub-casetă 2: Falsificarea II (x=715, y=132, width=160, height=76, center=795) */}
               <g
                 onClick={() => setFig2Inspect('falsificare-suveranitate')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="652"
-                  y="119"
-                  width="166"
-                  height="62"
+                  x="715"
+                  y="132"
+                  width="160"
+                  height="76"
                   fill={fig2Inspect === 'falsificare-suveranitate' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'falsificare-suveranitate' ? '0.32' : '1'}
                   stroke="#222426"
                   strokeWidth="1.8"
                 />
                 <text
-                  x="735"
-                  y="138"
+                  x="795"
+                  y="154"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] font-bold fill-[#222426]"
                 >
                   Falsificarea II: Falsul
                 </text>
                 <text
-                  x="735"
-                  y="153"
+                  x="795"
+                  y="172"
                   textAnchor="middle"
                   className="font-sans text-[10px] font-semibold fill-[#F01E1E]"
                 >
                   suveranism izolaționist
                 </text>
                 <text
-                  x="735"
-                  y="169"
+                  x="795"
+                  y="191"
                   textAnchor="middle"
                   className="font-sans text-[9px] fill-[#6E7376]"
                 >
@@ -1413,49 +1447,51 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Arrows from Camouflage sub-boxes to Inner Core Antimir */}
-              <line
-                x1="559"
-                y1="181"
-                x2="595"
-                y2="206"
-                stroke="#F01E1E"
-                strokeWidth="2"
-                markerEnd="url(#arrow-red)"
-              />
-              <line
-                x1="735"
-                y1="181"
-                x2="695"
-                y2="206"
-                stroke="#F01E1E"
-                strokeWidth="2"
-                markerEnd="url(#arrow-red)"
-              />
+              {/* Arrows from Camouflage sub-boxes to Inner Core Antimir (40px height gap: y=208..248) */}
+              <g opacity={fig2Mode === 'deconstructed' ? '0.35' : '1'}>
+                <line
+                  x1="627"
+                  y1="208"
+                  x2="665"
+                  y2="243"
+                  stroke="#F01E1E"
+                  strokeWidth="2"
+                  markerEnd="url(#arrow-red)"
+                />
+                <line
+                  x1="795"
+                  y1="208"
+                  x2="755"
+                  y2="243"
+                  stroke="#F01E1E"
+                  strokeWidth="2"
+                  markerEnd="url(#arrow-red)"
+                />
+              </g>
 
-              {/* Inner Core Box: Inversiune normativă (Antimir) și cinism (Bobok) */}
+              {/* Inner Core Box: Inversiune normativă (Antimir) și cinism (Bobok) (x=545, y=248..308, width=330) */}
               <g onClick={() => setFig2Inspect('nucleu-antimir')} className="cursor-pointer">
                 <rect
-                  x="485"
-                  y="210"
-                  width="325"
-                  height="64"
+                  x="545"
+                  y="248"
+                  width="330"
+                  height="60"
                   fill={fig2Inspect === 'nucleu-antimir' ? '#F01E1E' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'nucleu-antimir' ? '0.14' : '1'}
                   stroke="#F01E1E"
                   strokeWidth="2.5"
                 />
                 <text
-                  x="647"
-                  y="236"
+                  x="710"
+                  y="273"
                   textAnchor="middle"
                   className="font-sans text-[13px] font-bold fill-[#222426]"
                 >
                   Inversiune normativă (Antimir) și cinism (Bobok)
                 </text>
                 <text
-                  x="647"
-                  y="256"
+                  x="710"
+                  y="293"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
@@ -1463,40 +1499,41 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Red arrow down to 3 Paliere de spălare informațională */}
+              {/* Red arrow down to 3 Paliere de spălare informațională (y=308..334) */}
               <line
-                x1="647"
-                y1="274"
-                x2="647"
-                y2="298"
+                x1="710"
+                y1="308"
+                x2="710"
+                y2="329"
                 stroke="#F01E1E"
                 strokeWidth="3"
+                opacity={fig2Mode === 'deconstructed' ? '0.35' : '1'}
                 markerEnd="url(#arrow-red)"
               />
 
-              {/* Intermediate Node: 3 paliere de spălare informațională */}
+              {/* Intermediate Node: 3 paliere de spălare informațională (x=545, y=334..388, width=330) */}
               <g onClick={() => setFig2Inspect('retele-spalare')} className="cursor-pointer">
                 <rect
-                  x="475"
-                  y="302"
-                  width="345"
-                  height="56"
+                  x="545"
+                  y="334"
+                  width="330"
+                  height="54"
                   fill={fig2Inspect === 'retele-spalare' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'retele-spalare' ? '0.28' : '1'}
                   stroke="#222426"
                   strokeWidth="2"
                 />
                 <text
-                  x="647"
-                  y="324"
+                  x="710"
+                  y="356"
                   textAnchor="middle"
                   className="font-sans text-[11.5px] font-bold fill-[#222426]"
                 >
                   3 paliere de spălare informațională
                 </text>
                 <text
-                  x="647"
-                  y="343"
+                  x="710"
+                  y="375"
                   textAnchor="middle"
                   className="font-mono text-[9.5px] fill-[#6E7376]"
                 >
@@ -1504,42 +1541,48 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Red arrow down to Subordonare imperială și anomie */}
+              {/* Red arrow down to Subordonare imperială și anomie (y=388..414) */}
               <line
-                x1="647"
-                y1="358"
-                x2="647"
-                y2="384"
+                x1="710"
+                y1="388"
+                x2="710"
+                y2="409"
                 stroke="#F01E1E"
                 strokeWidth="3.5"
+                opacity={fig2Mode === 'deconstructed' ? '0.35' : '1'}
                 markerEnd="url(#arrow-red)"
               />
 
-              {/* Bottom Right Box: Subordonare imperială și anomie */}
-              <g onClick={() => setFig2Inspect('subordonare')} className="cursor-pointer">
+              {/* Bottom Right Box: Subordonare imperială și anomie (x=545, y=414..468, width=330) */}
+              <g
+                onClick={() => setFig2Inspect('subordonare')}
+                className="cursor-pointer"
+                opacity={fig2Mode === 'deconstructed' ? '0.45' : '1'}
+              >
                 <rect
-                  x="485"
-                  y="390"
-                  width="325"
-                  height="74"
+                  x="545"
+                  y="414"
+                  width="330"
+                  height="54"
                   fill={fig2Inspect === 'subordonare' ? '#F01E1E' : '#F6F5EE'}
                   fillOpacity={fig2Inspect === 'subordonare' ? '0.14' : '1'}
-                  stroke="#F01E1E"
+                  stroke={fig2Mode === 'deconstructed' ? '#6E7376' : '#F01E1E'}
                   strokeWidth="2.5"
+                  strokeDasharray={fig2Mode === 'deconstructed' ? '5 3' : undefined}
                 />
                 <text
-                  x="647"
-                  y="418"
+                  x="710"
+                  y="436"
                   textAnchor="middle"
-                  className="font-sans text-[14px] font-bold fill-[#222426]"
+                  className="font-sans text-[13.5px] font-bold fill-[#222426]"
                 >
                   Subordonare imperială și anomie
                 </text>
                 <text
-                  x="647"
-                  y="439"
+                  x="710"
+                  y="455"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
                   Decuplare de NATO/UE și bilateralism asimetric
                 </text>
@@ -1660,7 +1703,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   width="194"
                   height="176"
                   fill="#E5B822"
-                  fillOpacity={fig3SelectedStage === 'primul-sistem' ? '0.4' : '0.22'}
+                  fillOpacity={
+                    fig3SelectedStage === 'primul-sistem'
+                      ? '0.45'
+                      : !fig3ReflexiveActive
+                        ? '0.32'
+                        : '0.18'
+                  }
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
@@ -1737,6 +1786,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               <g
                 onClick={() => setFig3SelectedStage('poluare-mad')}
                 className="cursor-pointer"
+                opacity={fig3ReflexiveActive ? '1' : '0.35'}
               >
                 <rect
                   x="236"
@@ -1773,6 +1823,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 stroke={fig3ReflexiveActive ? '#F01E1E' : '#6E7376'}
                 strokeWidth="2"
                 strokeDasharray="4 3"
+                opacity={fig3ReflexiveActive ? '1' : '0.35'}
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
               />
 
@@ -1780,6 +1831,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               <g
                 onClick={() => setFig3SelectedStage('reflexiv')}
                 className="cursor-pointer"
+                opacity={fig3ReflexiveActive ? '1' : '0.35'}
               >
                 <rect
                   x="375"
@@ -1809,27 +1861,31 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </g>
 
               {/* PIERCING VERMILION VECTOR: Injecție de control reflexiv străpungând Orientarea */}
-              <line
-                x1="460"
-                y1="111"
-                x2="460"
-                y2="188"
-                stroke={fig3ReflexiveActive ? '#F01E1E' : '#8C9BA5'}
-                strokeWidth={fig3ReflexiveActive ? '4' : '2'}
-                strokeDasharray={fig3ReflexiveActive ? undefined : '5 4'}
-                markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
-              />
-              <rect x="350" y="136" width="220" height="22" rx="2" fill="#F6F5EE" />
-              <text
-                x="460"
-                y="151"
-                textAnchor="middle"
-                className="font-sans text-[10.5px] font-bold fill-[#F01E1E]"
-              >
-                Injecție de control reflexiv
-              </text>
+              <g opacity={fig3ReflexiveActive ? '1' : '0.35'}>
+                <line
+                  x1="460"
+                  y1="111"
+                  x2="460"
+                  y2="188"
+                  stroke={fig3ReflexiveActive ? '#F01E1E' : '#8C9BA5'}
+                  strokeWidth={fig3ReflexiveActive ? '4' : '2'}
+                  strokeDasharray={fig3ReflexiveActive ? undefined : '5 4'}
+                  markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
+                />
+                <rect x="350" y="136" width="220" height="22" rx="2" fill="#F6F5EE" />
+                <text
+                  x="460"
+                  y="151"
+                  textAnchor="middle"
+                  className={`font-sans text-[10.5px] font-bold ${
+                    fig3ReflexiveActive ? 'fill-[#F01E1E]' : 'fill-[#6E7376]'
+                  }`}
+                >
+                  Injecție de control reflexiv
+                </text>
+              </g>
 
-              {/* Săgeată dinspre triunghiul stâng („Primul sistem etic”) către nodul „Orientare” */}
+              {/* Săgeată dinspre „Primul sistem etic” către nodul „Orientare” */}
               {!fig3ReflexiveActive ? (
                 <g>
                   <line
@@ -1838,7 +1894,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     x2="395"
                     y2="215"
                     stroke="#222426"
-                    strokeWidth="4"
+                    strokeWidth="4.5"
                   />
                   <line
                     x1="215"
@@ -1846,7 +1902,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     x2="395"
                     y2="215"
                     stroke="#E5B822"
-                    strokeWidth="2.5"
+                    strokeWidth="3"
                     markerEnd="url(#arrow-gold)"
                   />
                 </g>
@@ -1873,7 +1929,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </g>
               )}
 
-              {/* OODA 1: Observare */}
+              {/* OODA 1: Observare (x=245..345) */}
               <g
                 onClick={() => setFig3SelectedStage('observare')}
                 className="cursor-pointer"
@@ -1917,7 +1973,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* OODA 2: Orientare (străpunsă de vectorul roșu de sus) */}
+              {/* OODA 2: Orientare (x=400..520) */}
               <g
                 onClick={() => setFig3SelectedStage('orientare')}
                 className="cursor-pointer"
@@ -1927,8 +1983,18 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="190"
                   width="120"
                   height="72"
-                  fill={fig3SelectedStage === 'orientare' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig3SelectedStage === 'orientare' ? '0.35' : '1'}
+                  fill={
+                    fig3SelectedStage === 'orientare' || !fig3ReflexiveActive
+                      ? '#E5B822'
+                      : '#F6F5EE'
+                  }
+                  fillOpacity={
+                    fig3SelectedStage === 'orientare'
+                      ? '0.35'
+                      : !fig3ReflexiveActive
+                        ? '0.22'
+                        : '1'
+                  }
                   stroke={fig3ReflexiveActive ? '#F01E1E' : '#222426'}
                   strokeWidth="2.5"
                 />
@@ -1960,12 +2026,12 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Arrow Orientare -> Decizie */}
+              {/* Arrow Orientare -> Decizie (x1=520 to x2=538) */}
               {!fig3ReflexiveActive && (
                 <line
                   x1="520"
                   y1="226"
-                  x2="552"
+                  x2="538"
                   y2="226"
                   stroke="#222426"
                   strokeWidth="4"
@@ -1974,30 +2040,44 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               <line
                 x1="520"
                 y1="226"
-                x2="552"
+                x2="538"
                 y2="226"
                 stroke={fig3ReflexiveActive ? '#F01E1E' : '#E5B822'}
                 strokeWidth="2.5"
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
 
-              {/* OODA 3: Decizie */}
+              {/* OODA 3: Decizie (x=545, width=90, center=590) */}
               <g
                 onClick={() => setFig3SelectedStage('decizie')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="560"
+                  x="545"
                   y="190"
-                  width="95"
+                  width="90"
                   height="72"
-                  fill={fig3SelectedStage === 'decizie' ? (fig3ReflexiveActive ? '#F01E1E' : '#E5B822') : '#F6F5EE'}
-                  fillOpacity={fig3SelectedStage === 'decizie' ? '0.2' : '1'}
+                  fill={
+                    fig3SelectedStage === 'decizie'
+                      ? fig3ReflexiveActive
+                        ? '#F01E1E'
+                        : '#E5B822'
+                      : !fig3ReflexiveActive
+                        ? '#E5B822'
+                        : '#F6F5EE'
+                  }
+                  fillOpacity={
+                    fig3SelectedStage === 'decizie'
+                      ? '0.28'
+                      : !fig3ReflexiveActive
+                        ? '0.18'
+                        : '1'
+                  }
                   stroke={fig3ReflexiveActive ? '#F01E1E' : '#222426'}
                   strokeWidth="2"
                 />
                 <text
-                  x="607"
+                  x="590"
                   y="218"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -2005,7 +2085,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Decizie
                 </text>
                 <text
-                  x="607"
+                  x="590"
                   y="236"
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
@@ -2014,44 +2094,58 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Arrow Decizie -> Actiune */}
+              {/* Arrow Decizie -> Acțiune (x1=635 to x2=649) */}
               {!fig3ReflexiveActive && (
                 <line
-                  x1="655"
+                  x1="635"
                   y1="226"
-                  x2="677"
+                  x2="649"
                   y2="226"
                   stroke="#222426"
                   strokeWidth="4"
                 />
               )}
               <line
-                x1="655"
+                x1="635"
                 y1="226"
-                x2="677"
+                x2="649"
                 y2="226"
                 stroke={fig3ReflexiveActive ? '#F01E1E' : '#E5B822'}
                 strokeWidth="2.5"
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-gold)'}
               />
 
-              {/* OODA 4: Actiune */}
+              {/* OODA 4: Acțiune (x=655, width=85, ends at x=740, center=697.5) */}
               <g
                 onClick={() => setFig3SelectedStage('actiune')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="685"
+                  x="655"
                   y="190"
                   width="85"
                   height="72"
-                  fill={fig3SelectedStage === 'actiune' ? (fig3ReflexiveActive ? '#F01E1E' : '#E5B822') : '#F6F5EE'}
-                  fillOpacity={fig3SelectedStage === 'actiune' ? '0.2' : '1'}
+                  fill={
+                    fig3SelectedStage === 'actiune'
+                      ? fig3ReflexiveActive
+                        ? '#F01E1E'
+                        : '#E5B822'
+                      : !fig3ReflexiveActive
+                        ? '#E5B822'
+                        : '#F6F5EE'
+                  }
+                  fillOpacity={
+                    fig3SelectedStage === 'actiune'
+                      ? '0.28'
+                      : !fig3ReflexiveActive
+                        ? '0.18'
+                        : '1'
+                  }
                   stroke={fig3ReflexiveActive ? '#F01E1E' : '#222426'}
                   strokeWidth="2"
                 />
                 <text
-                  x="727"
+                  x="697.5"
                   y="218"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -2059,7 +2153,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Acțiune
                 </text>
                 <text
-                  x="727"
+                  x="697.5"
                   y="236"
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
@@ -2068,9 +2162,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Cybernetic Feedback Loop: beneath from Actiune returning to Orientare and Observare */}
+              {/* Cybernetic Feedback Loop: beneath from Acțiune returning to Orientare and Observare */}
               <polyline
-                points="727,262 727,330 295,330 295,264"
+                points="697.5,262 697.5,330 295,330 295,264"
                 fill="none"
                 stroke="#8C9BA5"
                 strokeWidth="1.5"
@@ -2085,9 +2179,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 strokeWidth="1.5"
                 markerEnd="url(#arrow-slate)"
               />
-              <rect x="420" y="320" width="165" height="20" fill="#F6F5EE" />
+              <rect x="415" y="320" width="165" height="20" fill="#F6F5EE" />
               <text
-                x="502"
+                x="497.5"
                 y="334"
                 textAnchor="middle"
                 className="font-mono text-[9.5px] font-semibold fill-[#6E7376]"
@@ -2095,28 +2189,39 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 Buclă cibernetică de feedback
               </text>
 
-              {/* Arrow connecting Actiune to Right Zone (Binary Wall) */}
+              {/* Arrow connecting Acțiune (x=740) to Right Zone (Binary Wall at x=795) */}
               <line
-                x1="770"
+                x1="740"
                 y1="226"
                 x2="795"
-                y2="200"
+                y2="202"
                 stroke={fig3ReflexiveActive ? '#F01E1E' : '#8C9BA5'}
                 strokeWidth="2.5"
                 strokeDasharray={fig3ReflexiveActive ? undefined : '4 3'}
+                opacity={fig3ReflexiveActive ? '1' : '0.35'}
                 markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
               />
 
-              {/* Inspectable label: Contagiune complexă (punți largi) */}
+              {/* Inspectable label: Contagiune complexă (x=642, y=124, width=140, height=36, completely left of x=790) */}
               <g
                 onClick={() => setFig3SelectedStage('contagiune')}
                 className="cursor-pointer"
+                opacity={fig3ReflexiveActive ? '1' : '0.35'}
               >
+                <line
+                  x1="745"
+                  y1="160"
+                  x2="765"
+                  y2="213"
+                  stroke={fig3ReflexiveActive ? '#F01E1E' : '#6E7376'}
+                  strokeWidth="1.5"
+                  strokeDasharray="3 3"
+                />
                 <rect
-                  x="672"
-                  y="145"
-                  width="120"
-                  height="34"
+                  x="642"
+                  y="124"
+                  width="140"
+                  height="36"
                   rx="2"
                   fill={fig3SelectedStage === 'contagiune' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig3SelectedStage === 'contagiune' ? '0.32' : '1'}
@@ -2124,16 +2229,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="1.5"
                 />
                 <text
-                  x="732"
-                  y="159"
+                  x="712"
+                  y="139"
                   textAnchor="middle"
-                  className="font-sans text-[9px] font-bold fill-[#222426]"
+                  className="font-sans text-[9.5px] font-bold fill-[#222426]"
                 >
                   Contagiune complexă
                 </text>
                 <text
-                  x="732"
-                  y="172"
+                  x="712"
+                  y="153"
                   textAnchor="middle"
                   className="font-mono text-[8.5px] fill-[#6E7376]"
                 >
@@ -2141,11 +2246,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Dotted border line separating Center and Right zones */}
+              {/* Dotted border line separating Center and Right zones at x=790 */}
               <line
-                x1="785"
+                x1="790"
                 y1="30"
-                x2="785"
+                x2="790"
                 y2="380"
                 stroke="#8C9BA5"
                 strokeWidth="1.5"
@@ -2156,94 +2261,105 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   ZONA DREAPTA: Compresia în sistemul binar fracturat
                   (Noi / Victime vs. Ei / Dușmani), separate de zidul de fractură
                  ============================================================ */}
-              <text
-                x="875"
-                y="42"
-                textAnchor="middle"
-                className="font-sans text-[11px] font-bold tracking-wider fill-[#F01E1E]"
-              >
-                AL DOILEA SISTEM ETIC
-              </text>
+              <g opacity={fig3ReflexiveActive ? '1' : '0.35'}>
+                <text
+                  x="875"
+                  y="42"
+                  textAnchor="middle"
+                  className="font-sans text-[11px] font-bold tracking-wider fill-[#F01E1E]"
+                >
+                  AL DOILEA SISTEM ETIC
+                </text>
 
-              {/* Binary Node Top: Noi / Victime */}
-              <g
-                onClick={() => setFig3SelectedStage('binar')}
-                className="cursor-pointer"
-              >
+                {/* Binary Node Top: Noi / Victime */}
+                <g
+                  onClick={() => setFig3SelectedStage('binar')}
+                  className="cursor-pointer"
+                >
+                  <rect
+                    x="803"
+                    y="110"
+                    width="144"
+                    height="60"
+                    fill="#F6F5EE"
+                    stroke="#F01E1E"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="875"
+                    y="135"
+                    textAnchor="middle"
+                    className="font-sans text-[12px] font-bold fill-[#F01E1E]"
+                  >
+                    Noi / Victime
+                  </text>
+                  <text
+                    x="875"
+                    y="153"
+                    textAnchor="middle"
+                    className="font-sans text-[10.5px] fill-[#6E7376]"
+                  >
+                    puritate morală
+                  </text>
+                </g>
+
+                {/* Fractured Wall in Vermilion Red (#F01E1E) */}
+                <path
+                  d="M 798,198 L 826,190 L 856,204 L 886,192 L 916,206 L 950,198"
+                  fill="none"
+                  stroke="#F01E1E"
+                  strokeWidth="4"
+                />
                 <rect
-                  x="800"
-                  y="110"
-                  width="145"
-                  height="60"
+                  x="797"
+                  y="188"
+                  width="156"
+                  height="20"
+                  rx="2"
                   fill="#F6F5EE"
                   stroke="#F01E1E"
-                  strokeWidth="2"
+                  strokeWidth="1.5"
                 />
                 <text
-                  x="872"
-                  y="135"
+                  x="875"
+                  y="202"
                   textAnchor="middle"
-                  className="font-sans text-[12px] font-bold fill-[#F01E1E]"
+                  className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
                 >
-                  Noi / Victime
+                  Zid de fractură identitară
                 </text>
-                <text
-                  x="872"
-                  y="153"
-                  textAnchor="middle"
-                  className="font-sans text-[10.5px] fill-[#6E7376]"
-                >
-                  puritate morală
-                </text>
-              </g>
 
-              {/* Fractured Wall in Vermilion Red (#F01E1E) */}
-              <path
-                d="M 795,198 L 825,190 L 855,204 L 885,192 L 915,206 L 950,198"
-                fill="none"
-                stroke="#F01E1E"
-                strokeWidth="4"
-              />
-              <rect x="792" y="188" width="160" height="20" rx="2" fill="#F6F5EE" stroke="#F01E1E" strokeWidth="1.5" />
-              <text
-                x="872"
-                y="202"
-                textAnchor="middle"
-                className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
-              >
-                Zid de fractură identitară
-              </text>
-
-              {/* Binary Node Bottom: Ei / Dușmani */}
-              <g
-                onClick={() => setFig3SelectedStage('binar')}
-                className="cursor-pointer"
-              >
-                <rect
-                  x="800"
-                  y="226"
-                  width="145"
-                  height="60"
-                  fill="#F6F5EE"
-                  stroke="#F01E1E"
-                  strokeWidth="2"
-                />
-                <text
-                  x="872"
-                  y="251"
-                  textAnchor="middle"
-                  className="font-sans text-[12px] font-bold fill-[#F01E1E]"
+                {/* Binary Node Bottom: Ei / Dușmani */}
+                <g
+                  onClick={() => setFig3SelectedStage('binar')}
+                  className="cursor-pointer"
                 >
-                  Ei / Dușmani
-                </text>
-                <text
-                  x="872"
-                  y="269"
-                  textAnchor="middle"
-                  className="font-sans text-[10.5px] fill-[#6E7376]"
-                >
-                  țapi ispășitori
-                </text>
+                  <rect
+                    x="803"
+                    y="226"
+                    width="144"
+                    height="60"
+                    fill="#F6F5EE"
+                    stroke="#F01E1E"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="875"
+                    y="251"
+                    textAnchor="middle"
+                    className="font-sans text-[12px] font-bold fill-[#F01E1E]"
+                  >
+                    Ei / Dușmani
+                  </text>
+                  <text
+                    x="875"
+                    y="269"
+                    textAnchor="middle"
+                    className="font-sans text-[10.5px] fill-[#6E7376]"
+                  >
+                    țapi ispășitori
+                  </text>
+                </g>
               </g>
             </svg>
 
@@ -2285,7 +2401,10 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             <div className="flex flex-wrap items-center gap-2">
               <button
                 type="button"
-                onClick={() => setFig4FiltersActive(true)}
+                onClick={() => {
+                  setFig4FiltersActive(true);
+                  setFig4ActiveNode('filtru-lege');
+                }}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   fig4FiltersActive
                     ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
@@ -2296,7 +2415,10 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </button>
               <button
                 type="button"
-                onClick={() => setFig4FiltersActive(false)}
+                onClick={() => {
+                  setFig4FiltersActive(false);
+                  setFig4ActiveNode('anomizare');
+                }}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   !fig4FiltersActive
                     ? 'bg-[#F01E1E] text-[#F6F5EE] border-[#F01E1E]'
@@ -2310,18 +2432,18 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 920 470"
+              viewBox="0 0 960 490"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="920" height="470" fill="#F6F5EE" />
-              <rect x="0" y="0" width="920" height="470" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="960" height="490" fill="#F6F5EE" />
+              <rect x="0" y="0" width="960" height="490" fill="url(#stipple-bg)" />
 
               {/* 3 Column Headers */}
               <text
-                x="145"
+                x="135"
                 y="34"
                 textAnchor="middle"
                 className="font-sans text-[12px] font-bold tracking-wider fill-[#6E7376]"
@@ -2329,7 +2451,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 STRATUL C · UMBRA COLECTIVĂ
               </text>
               <text
-                x="455"
+                x="405"
                 y="34"
                 textAnchor="middle"
                 className="font-sans text-[12px] font-bold tracking-wider fill-[#6E7376]"
@@ -2337,7 +2459,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 FILTRE DE CONVERSIE · STRATURILE A ȘI B
               </text>
               <text
-                x="765"
+                x="822"
                 y="34"
                 textAnchor="middle"
                 className="font-sans text-[12px] font-bold tracking-wider fill-[#6E7376]"
@@ -2345,153 +2467,171 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 SINTEZA AXEI EGO–SINE
               </text>
 
-              {/* Converging Bézier curves from Left Column (x=255) to Middle Filters (x=345) */}
-              <path
-                d="M 255 96 C 295 96, 305 96, 338 96"
-                fill="none"
-                stroke="#222426"
-                strokeWidth="2"
-                markerEnd="url(#arrow-dark)"
-              />
-              <path
-                d="M 255 200 C 295 200, 305 110, 338 104"
-                fill="none"
-                stroke="#222426"
-                strokeWidth="2"
-                markerEnd="url(#arrow-dark)"
-              />
-              <path
-                d="M 255 200 C 295 200, 305 200, 338 200"
-                fill="none"
-                stroke="#222426"
-                strokeWidth="2"
-                markerEnd="url(#arrow-dark)"
-              />
-              <path
-                d="M 255 304 C 295 304, 305 215, 338 208"
-                fill="none"
-                stroke="#222426"
-                strokeWidth="2"
-                markerEnd="url(#arrow-dark)"
-              />
-              <path
-                d="M 255 304 C 295 304, 305 304, 338 304"
-                fill="none"
-                stroke="#222426"
-                strokeWidth="2"
-                markerEnd="url(#arrow-dark)"
-              />
+              {/* Converging Bézier curves from Left Column (x=240) to Middle Filters (x=294) */}
+              <g opacity={fig4FiltersActive ? '1' : '0.35'}>
+                <path
+                  d="M 240 96 C 265 96, 275 96, 294 96"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="2"
+                  markerEnd="url(#arrow-dark)"
+                />
+                <path
+                  d="M 240 200 C 268 200, 272 110, 294 104"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="2"
+                  markerEnd="url(#arrow-dark)"
+                />
+                <path
+                  d="M 240 200 C 265 200, 275 200, 294 200"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="2"
+                  markerEnd="url(#arrow-dark)"
+                />
+                <path
+                  d="M 240 304 C 268 304, 272 215, 294 208"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="2"
+                  markerEnd="url(#arrow-dark)"
+                />
+                <path
+                  d="M 240 304 C 265 304, 275 304, 294 304"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="2"
+                  markerEnd="url(#arrow-dark)"
+                />
+              </g>
 
-              {/* Converging Gold Curves from Middle Filters (x=565) to Right Ego-Self Synthesis (x=640) */}
-              <path
-                d="M 565 96 C 600 96, 610 140, 634 142"
-                fill="none"
-                stroke="#222426"
-                strokeWidth="4.5"
-                opacity={fig4FiltersActive ? '1' : '0.35'}
-              />
-              <path
-                d="M 565 96 C 600 96, 610 140, 634 142"
-                fill="none"
-                stroke="#E5B822"
-                strokeWidth="3"
-                opacity={fig4FiltersActive ? '1' : '0.35'}
-                markerEnd="url(#arrow-gold)"
-              />
-              <path
-                d="M 565 200 C 600 200, 610 155, 634 152"
-                fill="none"
-                stroke="#222426"
-                strokeWidth="4.5"
-                opacity={fig4FiltersActive ? '1' : '0.35'}
-              />
-              <path
-                d="M 565 200 C 600 200, 610 155, 634 152"
-                fill="none"
-                stroke="#E5B822"
-                strokeWidth="3"
-                opacity={fig4FiltersActive ? '1' : '0.35'}
-                markerEnd="url(#arrow-gold)"
-              />
-              <path
-                d="M 565 200 C 600 200, 610 265, 634 268"
-                fill="none"
-                stroke="#222426"
-                strokeWidth="4.5"
-                opacity={fig4FiltersActive ? '1' : '0.35'}
-              />
-              <path
-                d="M 565 200 C 600 200, 610 265, 634 268"
-                fill="none"
-                stroke="#E5B822"
-                strokeWidth="3"
-                opacity={fig4FiltersActive ? '1' : '0.35'}
-                markerEnd="url(#arrow-gold)"
-              />
-              <path
-                d="M 565 304 C 600 304, 610 280, 634 278"
-                fill="none"
-                stroke="#222426"
-                strokeWidth="4.5"
-                opacity={fig4FiltersActive ? '1' : '0.35'}
-              />
-              <path
-                d="M 565 304 C 600 304, 610 280, 634 278"
-                fill="none"
-                stroke="#E5B822"
-                strokeWidth="3"
-                opacity={fig4FiltersActive ? '1' : '0.35'}
-                markerEnd="url(#arrow-gold)"
-              />
+              {/* Curves from Middle Filters (x=510, y=96/200/304) into left edge of Funcția transcendentă (x=555, y=178/200/222) */}
+              <g opacity={fig4FiltersActive ? '1' : '0.35'}>
+                <path
+                  d="M 510 96 C 532 96, 534 178, 550 178"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
+                <path
+                  d="M 510 96 C 532 96, 534 178, 550 178"
+                  fill="none"
+                  stroke="#E5B822"
+                  strokeWidth="2.5"
+                  markerEnd="url(#arrow-gold)"
+                />
+                <path
+                  d="M 510 200 L 550 200"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
+                <path
+                  d="M 510 200 L 550 200"
+                  fill="none"
+                  stroke="#E5B822"
+                  strokeWidth="2.5"
+                  markerEnd="url(#arrow-gold)"
+                />
+                <path
+                  d="M 510 304 C 532 304, 534 222, 550 222"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
+                <path
+                  d="M 510 304 C 532 304, 534 222, 550 222"
+                  fill="none"
+                  stroke="#E5B822"
+                  strokeWidth="2.5"
+                  markerEnd="url(#arrow-gold)"
+                />
 
-              {/* Insignă verticală de mediere: Funcția transcendentă (Jung) */}
+                {/* 2 Gold Curves from right edge of Funcția transcendentă (x=667, y=185/215) to Column 3 (x=712, y=145/273) */}
+                <path
+                  d="M 667 185 C 688 185, 690 145, 706 145"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="4.5"
+                />
+                <path
+                  d="M 667 185 C 688 185, 690 145, 706 145"
+                  fill="none"
+                  stroke="#E5B822"
+                  strokeWidth="3"
+                  markerEnd="url(#arrow-gold)"
+                />
+                <path
+                  d="M 667 215 C 688 215, 690 273, 706 273"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="4.5"
+                />
+                <path
+                  d="M 667 215 C 688 215, 690 273, 706 273"
+                  fill="none"
+                  stroke="#E5B822"
+                  strokeWidth="3"
+                  markerEnd="url(#arrow-gold)"
+                />
+              </g>
+
+              {/* Nod integrator în canal propriu: Funcția transcendentă (Jung) (x=555, y=155, width=112, height=90, center=611) */}
               <g
                 onClick={() => setFig4ActiveNode('functie-transcendenta')}
                 className="cursor-pointer"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
               >
                 <rect
-                  x="572"
-                  y="172"
-                  width="62"
-                  height="64"
+                  x="555"
+                  y="155"
+                  width="112"
+                  height="90"
                   rx="3"
-                  fill="#E5B822"
-                  fillOpacity={fig4ActiveNode === 'functie-transcendenta' ? '0.95' : '0.82'}
+                  fill={fig4FiltersActive ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={
+                    !fig4FiltersActive
+                      ? '1'
+                      : fig4ActiveNode === 'functie-transcendenta'
+                        ? '0.95'
+                        : '0.82'
+                  }
                   stroke="#222426"
                   strokeWidth="2"
                 />
                 <text
-                  x="603"
-                  y="192"
+                  x="611"
+                  y="184"
                   textAnchor="middle"
-                  className="font-sans text-[8.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   Funcția
                 </text>
                 <text
-                  x="603"
-                  y="206"
+                  x="611"
+                  y="203"
                   textAnchor="middle"
-                  className="font-sans text-[8.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   transcendentă
                 </text>
                 <text
-                  x="603"
-                  y="221"
+                  x="611"
+                  y="222"
                   textAnchor="middle"
-                  className="font-mono text-[8px] font-semibold fill-[#222426]"
+                  className="font-mono text-[10px] font-semibold fill-[#222426]"
                 >
                   (Jung)
                 </text>
               </g>
 
-              {/* LEFT COLUMN BOXES (3 nodes) */}
+              {/* LEFT COLUMN BOXES (3 nodes: x=30, width=210, center=135) */}
               <g onClick={() => setFig4ActiveNode('umbra-bruta')} className="cursor-pointer">
                 <rect
-                  x="35"
+                  x="30"
                   y="60"
-                  width="220"
+                  width="210"
                   height="72"
                   fill={fig4ActiveNode === 'umbra-bruta' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig4ActiveNode === 'umbra-bruta' ? '0.22' : '1'}
@@ -2499,18 +2639,18 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2"
                 />
                 <text
-                  x="145"
+                  x="135"
                   y="89"
                   textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Resurse latente în Umbră
                 </text>
                 <text
-                  x="145"
+                  x="135"
                   y="110"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
                   Potențial psihodinamic neintegrat
                 </text>
@@ -2518,9 +2658,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
               <g onClick={() => setFig4ActiveNode('memorie')} className="cursor-pointer">
                 <rect
-                  x="35"
+                  x="30"
                   y="164"
-                  width="220"
+                  width="210"
                   height="72"
                   fill={fig4ActiveNode === 'memorie' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig4ActiveNode === 'memorie' ? '0.22' : '1'}
@@ -2528,18 +2668,18 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2"
                 />
                 <text
-                  x="145"
+                  x="135"
                   y="193"
                   textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Memorie istorică defensivă
                 </text>
                 <text
-                  x="145"
+                  x="135"
                   y="214"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
                   Scepticism față de hegemonie
                 </text>
@@ -2547,9 +2687,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
               <g onClick={() => setFig4ActiveNode('trickster')} className="cursor-pointer">
                 <rect
-                  x="35"
+                  x="30"
                   y="268"
-                  width="220"
+                  width="210"
                   height="72"
                   fill={fig4ActiveNode === 'trickster' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig4ActiveNode === 'trickster' ? '0.22' : '1'}
@@ -2557,7 +2697,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2"
                 />
                 <text
-                  x="145"
+                  x="135"
                   y="297"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -2565,7 +2705,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Vitalitate adaptativă
                 </text>
                 <text
-                  x="145"
+                  x="135"
                   y="318"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
@@ -2574,20 +2714,24 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* MIDDLE COLUMN BOXES (3 conversion filters) */}
-              <g onClick={() => setFig4ActiveNode('filtru-lege')} className="cursor-pointer">
+              {/* MIDDLE COLUMN BOXES (3 conversion filters: x=300, width=210, center=405) */}
+              <g
+                onClick={() => setFig4ActiveNode('filtru-lege')}
+                className="cursor-pointer"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
+              >
                 <rect
-                  x="345"
+                  x="300"
                   y="60"
-                  width="220"
+                  width="210"
                   height="72"
-                  fill={fig4ActiveNode === 'filtru-lege' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig4ActiveNode === 'filtru-lege' ? '0.25' : '1'}
+                  fill={fig4FiltersActive && fig4ActiveNode === 'filtru-lege' ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig4FiltersActive && fig4ActiveNode === 'filtru-lege' ? '0.25' : '1'}
                   stroke="#222426"
                   strokeWidth="2"
                 />
                 <text
-                  x="455"
+                  x="405"
                   y="89"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -2595,7 +2739,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Lege impersonală dreaptă
                 </text>
                 <text
-                  x="455"
+                  x="405"
                   y="110"
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
@@ -2604,78 +2748,96 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              <g onClick={() => setFig4ActiveNode('filtru-istorie')} className="cursor-pointer">
+              <g
+                onClick={() => setFig4ActiveNode('filtru-istorie')}
+                className="cursor-pointer"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
+              >
                 <rect
-                  x="345"
+                  x="300"
                   y="164"
-                  width="220"
+                  width="210"
                   height="72"
-                  fill={fig4ActiveNode === 'filtru-istorie' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig4ActiveNode === 'filtru-istorie' ? '0.25' : '1'}
+                  fill={fig4FiltersActive && fig4ActiveNode === 'filtru-istorie' ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig4FiltersActive && fig4ActiveNode === 'filtru-istorie' ? '0.25' : '1'}
                   stroke="#222426"
                   strokeWidth="2"
                 />
                 <text
-                  x="455"
+                  x="405"
                   y="193"
                   textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Discernământ critic
                 </text>
                 <text
-                  x="455"
+                  x="405"
                   y="214"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
                   Asumarea adevărului istoric
                 </text>
               </g>
 
-              <g onClick={() => setFig4ActiveNode('filtru-meta')} className="cursor-pointer">
+              <g
+                onClick={() => setFig4ActiveNode('filtru-meta')}
+                className="cursor-pointer"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
+              >
                 <rect
-                  x="345"
+                  x="300"
                   y="268"
-                  width="220"
+                  width="210"
                   height="72"
-                  fill={fig4ActiveNode === 'filtru-meta' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig4ActiveNode === 'filtru-meta' ? '0.25' : '1'}
+                  fill={fig4FiltersActive && fig4ActiveNode === 'filtru-meta' ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig4FiltersActive && fig4ActiveNode === 'filtru-meta' ? '0.25' : '1'}
                   stroke="#222426"
                   strokeWidth="2"
                 />
                 <text
-                  x="455"
+                  x="405"
                   y="297"
                   textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Vigilență metacognitivă
                 </text>
                 <text
-                  x="455"
+                  x="405"
                   y="318"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
                   Reglare executivă prefrontală
                 </text>
               </g>
 
-              {/* RIGHT COLUMN BOXES (2 synthesis outputs) */}
-              <g onClick={() => setFig4ActiveNode('modernitate')} className="cursor-pointer">
+              {/* RIGHT COLUMN BOXES (2 synthesis outputs: x=712, width=220, center=822) */}
+              <g
+                onClick={() => setFig4ActiveNode('modernitate')}
+                className="cursor-pointer"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
+              >
                 <rect
-                  x="642"
+                  x="712"
                   y="108"
-                  width="245"
+                  width="220"
                   height="74"
-                  fill="#E5B822"
-                  fillOpacity={fig4ActiveNode === 'modernitate' ? '0.38' : '0.2'}
+                  fill={fig4FiltersActive ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={
+                    !fig4FiltersActive
+                      ? '1'
+                      : fig4ActiveNode === 'modernitate'
+                        ? '0.38'
+                        : '0.2'
+                  }
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
-                  x="764"
+                  x="822"
                   y="138"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -2683,7 +2845,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Modernitate organică
                 </text>
                 <text
-                  x="764"
+                  x="822"
                   y="159"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
@@ -2694,29 +2856,40 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
               {/* Bidirectional vertical arrow between the 2 synthesis nodes */}
               <line
-                x1="764"
+                x1="822"
                 y1="186"
-                x2="764"
+                x2="822"
                 y2="230"
                 stroke="#222426"
                 strokeWidth="2"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
                 markerStart="url(#arrow-dark)"
                 markerEnd="url(#arrow-dark)"
               />
 
-              <g onClick={() => setFig4ActiveNode('cooperare')} className="cursor-pointer">
+              <g
+                onClick={() => setFig4ActiveNode('cooperare')}
+                className="cursor-pointer"
+                opacity={fig4FiltersActive ? '1' : '0.35'}
+              >
                 <rect
-                  x="642"
+                  x="712"
                   y="236"
-                  width="245"
+                  width="220"
                   height="74"
-                  fill="#E5B822"
-                  fillOpacity={fig4ActiveNode === 'cooperare' ? '0.38' : '0.2'}
+                  fill={fig4FiltersActive ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={
+                    !fig4FiltersActive
+                      ? '1'
+                      : fig4ActiveNode === 'cooperare'
+                        ? '0.38'
+                        : '0.2'
+                  }
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
-                  x="764"
+                  x="822"
                   y="266"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
@@ -2724,7 +2897,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   Cooperare instituțională
                 </text>
                 <text
-                  x="764"
+                  x="822"
                   y="287"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
@@ -2733,43 +2906,45 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* BOTTOM RED BYPASS PATH: Fara filtru (Enantiodromie si cinism) -> Capturare in revolta anomizanta */}
-              <polyline
-                points="145,340 145,415 478,415"
-                fill="none"
-                stroke="#F01E1E"
-                strokeWidth="2.5"
-                strokeDasharray="6 4"
-                markerEnd="url(#arrow-red)"
-              />
-              <text
-                x="312"
-                y="406"
-                textAnchor="middle"
-                className="font-sans text-[10.5px] font-bold fill-[#F01E1E]"
-              >
-                Incapacitate de doliu, proiecție paranoidă și enantiodromie
-              </text>
-
-              <g onClick={() => setFig4ActiveNode('anomizare')} className="cursor-pointer">
-                <rect
-                  x="488"
-                  y="392"
-                  width="235"
-                  height="46"
-                  fill={!fig4FiltersActive || fig4ActiveNode === 'anomizare' ? '#F01E1E' : '#F6F5EE'}
-                  fillOpacity={!fig4FiltersActive || fig4ActiveNode === 'anomizare' ? '0.12' : '1'}
+              {/* BOTTOM RED BYPASS PATH: Fara filtru (Enantiodromie si cinism) -> Capturare in revolta distructivă */}
+              <g opacity={!fig4FiltersActive ? '1' : '0.35'}>
+                <polyline
+                  points="135,340 135,425 478,425"
+                  fill="none"
                   stroke="#F01E1E"
-                  strokeWidth="2.5"
+                  strokeWidth={!fig4FiltersActive ? '3.5' : '2.5'}
+                  strokeDasharray="6 4"
+                  markerEnd="url(#arrow-red)"
                 />
                 <text
-                  x="605"
-                  y="420"
+                  x="306"
+                  y="413"
                   textAnchor="middle"
-                  className="font-sans text-[12px] font-bold fill-[#F01E1E]"
+                  className="font-sans text-[10.5px] font-bold fill-[#F01E1E]"
                 >
-                  Capturare în revoltă distructivă
+                  Incapacitate de doliu, proiecție paranoidă și enantiodromie
                 </text>
+
+                <g onClick={() => setFig4ActiveNode('anomizare')} className="cursor-pointer">
+                  <rect
+                    x="488"
+                    y="400"
+                    width="245"
+                    height="50"
+                    fill={!fig4FiltersActive || fig4ActiveNode === 'anomizare' ? '#F01E1E' : '#F6F5EE'}
+                    fillOpacity={!fig4FiltersActive || fig4ActiveNode === 'anomizare' ? '0.16' : '1'}
+                    stroke="#F01E1E"
+                    strokeWidth={!fig4FiltersActive ? '3' : '2.5'}
+                  />
+                  <text
+                    x="610.5"
+                    y="430"
+                    textAnchor="middle"
+                    className="font-sans text-[12px] font-bold fill-[#F01E1E]"
+                  >
+                    Capturare în revoltă distructivă
+                  </text>
+                </g>
               </g>
             </svg>
 
@@ -2854,21 +3029,21 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 880 540"
+              viewBox="0 0 920 580"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="880" height="540" fill="#F6F5EE" />
-              <rect x="0" y="0" width="880" height="540" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="920" height="580" fill="#F6F5EE" />
+              <rect x="0" y="0" width="920" height="580" fill="url(#stipple-bg)" />
 
-              {/* Outer Matrix Frame */}
+              {/* Outer Matrix Frame (x=70..850, y=50..530) */}
               <rect
                 x="70"
-                y="45"
-                width="740"
-                height="450"
+                y="50"
+                width="780"
+                height="480"
                 fill="none"
                 stroke="#222426"
                 strokeWidth="1.5"
@@ -2881,33 +3056,33 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               >
                 <rect
                   x="70"
-                  y="45"
-                  width="370"
-                  height="225"
+                  y="50"
+                  width="390"
+                  height="240"
                   fill={fig5SelectedQuadrant === 'II' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig5SelectedQuadrant === 'II' ? '0.18' : '0.6'}
                   stroke="#8C9BA5"
                   strokeWidth="1"
                 />
                 <text
-                  x="255"
-                  y="92"
+                  x="265"
+                  y="80"
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#6E7376]"
                 >
                   Cadranul II · Cetățeni vulnerabili
                 </text>
                 <text
-                  x="255"
-                  y="117"
+                  x="265"
+                  y="102"
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
                   Pierdere proprie · Beneficiu societal
                 </text>
                 <text
-                  x="255"
-                  y="139"
+                  x="265"
+                  y="122"
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
@@ -2921,34 +3096,34 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <rect
-                  x="440"
-                  y="45"
-                  width="370"
-                  height="225"
+                  x="460"
+                  y="50"
+                  width="390"
+                  height="240"
                   fill="#E5B822"
-                  fillOpacity={fig5SelectedQuadrant === 'I' ? '0.3' : '0.12'}
+                  fillOpacity={fig5SelectedQuadrant === 'I' || fig5BarrierIntact ? '0.28' : '0.12'}
                   stroke="#222426"
                   strokeWidth="1.5"
                 />
                 <text
-                  x="625"
-                  y="92"
+                  x="655"
+                  y="80"
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#222426]"
                 >
                   Cadranul I · Cooperare inteligentă
                 </text>
                 <text
-                  x="625"
-                  y="117"
+                  x="655"
+                  y="102"
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#222426]"
                 >
                   Beneficiu propriu · Beneficiu colectiv
                 </text>
                 <text
-                  x="625"
-                  y="139"
+                  x="655"
+                  y="122"
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
@@ -2963,33 +3138,33 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               >
                 <rect
                   x="70"
-                  y="270"
-                  width="370"
-                  height="225"
+                  y="290"
+                  width="390"
+                  height="240"
                   fill="#F01E1E"
-                  fillOpacity={fig5SelectedQuadrant === 'III' ? '0.18' : '0.08'}
+                  fillOpacity={fig5SelectedQuadrant === 'III' || !fig5BarrierIntact ? '0.15' : '0.06'}
                   stroke="#F01E1E"
                   strokeWidth="1.5"
                 />
                 <text
-                  x="255"
-                  y="395"
+                  x="265"
+                  y="430"
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#F01E1E]"
                 >
                   Cadranul III · Autosabotaj colectiv
                 </text>
                 <text
-                  x="255"
-                  y="418"
+                  x="265"
+                  y="452"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-semibold fill-[#F01E1E]"
                 >
                   Iraționalitate autodistructivă
                 </text>
                 <text
-                  x="255"
-                  y="440"
+                  x="265"
+                  y="474"
                   textAnchor="middle"
                   className="font-sans text-[11.5px] fill-[#6E7376]"
                 >
@@ -3003,34 +3178,34 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <rect
-                  x="440"
-                  y="270"
-                  width="370"
-                  height="225"
+                  x="460"
+                  y="290"
+                  width="390"
+                  height="240"
                   fill={fig5SelectedQuadrant === 'IV' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig5SelectedQuadrant === 'IV' ? '0.18' : '0.6'}
                   stroke="#222426"
                   strokeWidth="1"
                 />
                 <text
-                  x="625"
-                  y="395"
+                  x="655"
+                  y="430"
                   textAnchor="middle"
                   className="font-sans text-[14.5px] font-bold fill-[#222426]"
                 >
                   Cadranul IV · Elite extractive
                 </text>
                 <text
-                  x="625"
-                  y="418"
+                  x="655"
+                  y="452"
                   textAnchor="middle"
                   className="font-sans text-[12px] fill-[#6E7376]"
                 >
                   Câștig propriu · Daună societală
                 </text>
                 <text
-                  x="625"
-                  y="440"
+                  x="655"
+                  y="474"
                   textAnchor="middle"
                   className="font-sans text-[11.5px] font-semibold fill-[#222426]"
                 >
@@ -3042,9 +3217,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               {/* Horizontal Axis -X to +X */}
               <line
                 x1="50"
-                y1="270"
-                x2="830"
-                y2="270"
+                y1="290"
+                x2="870"
+                y2="290"
                 stroke="#222426"
                 strokeWidth="2.5"
                 markerStart="url(#arrow-dark)"
@@ -3052,9 +3227,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               />
               {/* Vertical Axis -Y to +Y */}
               <line
-                x1="440"
-                y1="505"
-                x2="440"
+                x1="460"
+                y1="545"
+                x2="460"
                 y2="35"
                 stroke="#222426"
                 strokeWidth="2.5"
@@ -3063,9 +3238,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               />
 
               {/* Axis Labels */}
-              <rect x="365" y="10" width="150" height="24" fill="#F6F5EE" />
+              <rect x="385" y="10" width="150" height="22" fill="#F6F5EE" />
               <text
-                x="440"
+                x="460"
                 y="26"
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
@@ -3073,30 +3248,30 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 +Y · Beneficiu societal
               </text>
 
-              <rect x="375" y="515" width="130" height="22" fill="#F6F5EE" />
+              <rect x="395" y="550" width="130" height="22" fill="#F6F5EE" />
               <text
-                x="440"
-                y="530"
+                x="460"
+                y="566"
                 textAnchor="middle"
                 className="font-sans text-[12.5px] font-bold fill-[#222426]"
               >
                 -Y · Daună societală
               </text>
 
-              <rect x="74" y="236" width="138" height="22" fill="#F6F5EE" />
+              <rect x="72" y="247" width="132" height="22" fill="#F6F5EE" />
               <text
-                x="78"
-                y="251"
+                x="76"
+                y="262"
                 textAnchor="start"
                 className="font-sans text-[12px] font-bold fill-[#222426]"
               >
                 -X · Pierdere proprie
               </text>
 
-              <rect x="676" y="236" width="130" height="22" fill="#F6F5EE" />
+              <rect x="716" y="247" width="132" height="22" fill="#F6F5EE" />
               <text
-                x="802"
-                y="251"
+                x="844"
+                y="262"
                 textAnchor="end"
                 className="font-sans text-[12px] font-bold fill-[#222426]"
               >
@@ -3104,59 +3279,59 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </text>
 
               {/* Diagonal Dashed Vector: Presiune de spoliere sistemică din (+X, -Y) spre (-X, +Y) */}
-              <line
-                x1="570"
-                y1="365"
-                x2="335"
-                y2="165"
-                stroke="#222426"
-                strokeWidth="2"
-                strokeDasharray="6 4"
-                markerEnd="url(#arrow-dark)"
-              />
-              <rect
-                x="456"
-                y="296"
-                width="195"
-                height="24"
-                fill="#F6F5EE"
-                stroke="#222426"
-                strokeWidth="1.5"
-              />
-              <text
-                x="553"
-                y="312"
-                textAnchor="middle"
-                className="font-sans text-[11px] font-bold fill-[#222426]"
-              >
-                Presiune de spoliere sistemică
-              </text>
+              <g opacity={fig5BarrierIntact ? '0.25' : '1'}>
+                <line
+                  x1="605"
+                  y1="395"
+                  x2="345"
+                  y2="200"
+                  stroke="#222426"
+                  strokeWidth="2"
+                  strokeDasharray="6 4"
+                  markerEnd="url(#arrow-dark)"
+                />
+                <rect
+                  x="495"
+                  y="335"
+                  width="175"
+                  height="24"
+                  fill="#F6F5EE"
+                  stroke="#222426"
+                  strokeWidth="1.5"
+                />
+                <text
+                  x="582.5"
+                  y="351"
+                  textAnchor="middle"
+                  className="font-sans text-[10.5px] font-bold fill-[#222426]"
+                >
+                  Presiune de spoliere sistemică
+                </text>
+              </g>
 
               {/* DINAMICA 1 & 2: Cele două bariere ortogonale în regim vulnerabil vs. consolidat */}
               {!fig5BarrierIntact ? (
                 <g>
-                  {/* Săgeată punctată subțire din Cadranul II spre Cadranul IV: Iluzia pedepsirii spoliatorilor */}
-                  <line
-                    x1="255"
-                    y1="165"
-                    x2="520"
-                    y2="340"
+                  {/* Săgeată curbată punctată din Cadranul II spre Cadranul IV: Iluzia pedepsirii spoliatorilor */}
+                  <path
+                    d="M 330,175 Q 485,190 565,320"
+                    fill="none"
                     stroke="#6E7376"
                     strokeWidth="1.8"
                     strokeDasharray="3 3"
                     markerEnd="url(#arrow-slate)"
                   />
                   <rect
-                    x="275"
-                    y="206"
-                    width="160"
-                    height="20"
+                    x="395"
+                    y="205"
+                    width="165"
+                    height="22"
                     fill="#F6F5EE"
                     stroke="#6E7376"
                     strokeWidth="1"
                   />
                   <text
-                    x="355"
+                    x="477.5"
                     y="220"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-semibold fill-[#6E7376]"
@@ -3164,127 +3339,127 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     Iluzia pedepsirii spoliatorilor
                   </text>
 
-                  {/* Traiectorie orizontală blocată de T-bar în #F01E1E */}
+                  {/* Traiectorie orizontală blocată de T-bar în #F01E1E la y=168 */}
                   <line
-                    x1="265"
-                    y1="165"
-                    x2="425"
-                    y2="165"
+                    x1="280"
+                    y1="168"
+                    x2="444"
+                    y2="168"
                     stroke="#F01E1E"
                     strokeWidth="3.5"
                   />
                   {/* T-BAR VERTICAL (Baraj extractiv împotriva mobilității meritocratice) */}
                   <line
-                    x1="425"
-                    y1="135"
-                    x2="425"
-                    y2="195"
+                    x1="444"
+                    y1="144"
+                    x2="444"
+                    y2="192"
                     stroke="#F01E1E"
                     strokeWidth="7"
                   />
                   <rect
-                    x="262"
-                    y="140"
-                    width="158"
+                    x="275"
+                    y="136"
+                    width="162"
                     height="22"
                     fill="#F6F5EE"
                     stroke="#F01E1E"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="341"
-                    y="155"
+                    x="356"
+                    y="151"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
                   >
                     Baraj extractiv (mobilitate blocată)
                   </text>
 
-                  {/* PLAFON ORIZONTAL FISURAT (x=75..435, y=270) cu breșă la x=185 */}
+                  {/* PLAFON ORIZONTAL FISURAT pe segmentul x=215..445 cu breșă deschisă la x=235..265 (în jurul lui x=250) */}
                   <line
-                    x1="75"
-                    y1="266"
-                    x2="155"
-                    y2="266"
+                    x1="215"
+                    y1="284"
+                    x2="235"
+                    y2="284"
+                    stroke="#F01E1E"
+                    strokeWidth="2.5"
+                    strokeDasharray="5 3"
+                  />
+                  <line
+                    x1="265"
+                    y1="284"
+                    x2="445"
+                    y2="284"
                     stroke="#F01E1E"
                     strokeWidth="2.5"
                     strokeDasharray="6 4"
                   />
                   <line
                     x1="215"
-                    y1="266"
-                    x2="435"
-                    y2="266"
+                    y1="296"
+                    x2="235"
+                    y2="296"
                     stroke="#F01E1E"
                     strokeWidth="2.5"
-                    strokeDasharray="6 4"
+                    strokeDasharray="5 3"
                   />
                   <line
-                    x1="75"
-                    y1="274"
-                    x2="155"
-                    y2="274"
-                    stroke="#F01E1E"
-                    strokeWidth="2.5"
-                    strokeDasharray="6 4"
-                  />
-                  <line
-                    x1="215"
-                    y1="274"
-                    x2="435"
-                    y2="274"
+                    x1="265"
+                    y1="296"
+                    x2="445"
+                    y2="296"
                     stroke="#F01E1E"
                     strokeWidth="2.5"
                     strokeDasharray="6 4"
                   />
                   <rect
-                    x="282"
+                    x="285"
                     y="258"
-                    width="150"
-                    height="19"
+                    width="155"
+                    height="20"
                     fill="#F6F5EE"
                     stroke="#F01E1E"
                     strokeWidth="1.2"
                   />
                   <text
-                    x="357"
-                    y="271"
+                    x="362.5"
+                    y="272"
                     textAnchor="middle"
-                    className="font-sans text-[9px] font-bold fill-[#F01E1E]"
+                    className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
                   >
                     Plafon constituțional fisurat
                   </text>
 
-                  {/* DINAMICA 2: Vectorul descendent masiv în #F01E1E prin breșa de la x=185 */}
+                  {/* DINAMICA 2: Vectorul descendent masiv în #F01E1E la x=250 (46px la dreapta etichetei -X) */}
                   <line
-                    x1="185"
-                    y1="165"
-                    x2="185"
-                    y2="365"
+                    x1="250"
+                    y1="185"
+                    x2="250"
+                    y2="400"
                     stroke="#F01E1E"
                     strokeWidth="5"
                     markerEnd="url(#arrow-red)"
                   />
                   <rect
-                    x="76"
-                    y="282"
-                    width="218"
+                    x="150"
+                    y="312"
+                    width="200"
                     height="36"
                     fill="#F6F5EE"
                     stroke="#F01E1E"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="185"
-                    y="297"
+                    x="250"
+                    y="327"
                     textAnchor="middle"
                     className="font-sans text-[10px] font-bold fill-[#F01E1E]"
                   >
                     Prăbușire în autosabotaj (-X, -Y)
                   </text>
                   <text
-                    x="185"
-                    y="311"
+                    x="250"
+                    y="341"
                     textAnchor="middle"
                     className="font-sans text-[9px] font-semibold fill-[#6E7376]"
                   >
@@ -3293,36 +3468,36 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </g>
               ) : (
                 <g>
-                  {/* Barieră consolidată și tranziție orizontală deblocată în #E5B822 */}
+                  {/* Barieră consolidată pe axa X (x=75..455, y=290) și tranziție orizontală deblocată în #E5B822 */}
                   <line
                     x1="75"
-                    y1="276"
-                    x2="435"
-                    y2="276"
+                    y1="290"
+                    x2="455"
+                    y2="290"
                     stroke="#222426"
                     strokeWidth="7"
                   />
                   <line
                     x1="75"
-                    y1="276"
-                    x2="435"
-                    y2="276"
+                    y1="290"
+                    x2="455"
+                    y2="290"
                     stroke="#E5B822"
                     strokeWidth="5"
                   />
                   <rect
-                    x="214"
-                    y="256"
-                    width="216"
-                    height="26"
+                    x="220"
+                    y="261"
+                    width="210"
+                    height="24"
                     rx="3"
                     fill="#E5B822"
                     stroke="#222426"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="322"
-                    y="273"
+                    x="325"
+                    y="277"
                     textAnchor="middle"
                     className="font-sans text-[11px] font-bold fill-[#222426]"
                   >
@@ -3330,33 +3505,33 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <line
                     x1="265"
-                    y1="165"
-                    x2="520"
-                    y2="165"
+                    y1="162"
+                    x2="555"
+                    y2="162"
                     stroke="#222426"
                     strokeWidth="5.5"
                   />
                   <line
                     x1="265"
-                    y1="165"
-                    x2="520"
-                    y2="165"
+                    y1="162"
+                    x2="555"
+                    y2="162"
                     stroke="#E5B822"
                     strokeWidth="4"
                     markerEnd="url(#arrow-gold)"
                   />
                   <rect
-                    x="306"
-                    y="148"
-                    width="184"
+                    x="315"
+                    y="132"
+                    width="190"
                     height="22"
                     fill="#F6F5EE"
                     stroke="#222426"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="398"
-                    y="163"
+                    x="410"
+                    y="147"
                     textAnchor="middle"
                     className="font-sans text-[10.5px] font-bold fill-[#222426]"
                   >
@@ -3400,7 +3575,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig6SelectedStep('trackA');
                 }}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
-                  !fig6InterventionActive && fig6ActiveTrack === 'A'
+                  fig6ActiveTrack === 'A'
                     ? 'bg-[#F01E1E] text-[#F6F5EE] border-[#F01E1E]'
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
@@ -3415,7 +3590,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig6SelectedStep('punte-cerc');
                 }}
                 className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
-                  fig6InterventionActive || fig6ActiveTrack === 'B'
+                  fig6ActiveTrack === 'B'
                     ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-semibold'
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
@@ -3427,25 +3602,25 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 920 620"
+              viewBox="0 0 920 660"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="920" height="620" fill="#F6F5EE" />
-              <rect x="0" y="0" width="920" height="620" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="920" height="660" fill="#F6F5EE" />
+              <rect x="0" y="0" width="920" height="660" fill="url(#stipple-bg)" />
 
-              {/* NOD UNIC DE BIFURCAȚIE CENTRAL SUPERIOR */}
+              {/* NOD UNIC DE BIFURCAȚIE CENTRAL SUPERIOR (x=300, y=16, width=320, height=58) */}
               <g
                 onClick={() => setFig6SelectedStep('bifurcatie')}
                 className="cursor-pointer"
               >
                 <rect
                   x="300"
-                  y="18"
+                  y="16"
                   width="320"
-                  height="62"
+                  height="58"
                   rx="4"
                   fill={fig6SelectedStep === 'bifurcatie' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig6SelectedStep === 'bifurcatie' ? '0.25' : '1'}
@@ -3454,7 +3629,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="460"
-                  y="43"
+                  y="40"
                   textAnchor="middle"
                   className="font-sans text-[13px] font-bold fill-[#222426]"
                 >
@@ -3462,7 +3637,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="460"
-                  y="63"
+                  y="59"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
@@ -3470,81 +3645,41 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* SĂGEȚI DIVERGENTE DE BIFURCAȚIE */}
-              {/* Spre Track A (stânga) */}
-              <path
-                d="M 360 80 C 310 96, 250 106, 230 120"
-                fill="none"
-                stroke="#F01E1E"
-                strokeWidth={fig6InterventionActive ? '2' : '3.5'}
-                strokeDasharray={fig6InterventionActive ? '4 3' : undefined}
-                markerEnd="url(#arrow-red)"
-              />
-              <rect
-                x="195"
-                y="86"
-                width="162"
-                height="20"
-                fill="#F6F5EE"
-                stroke="#F01E1E"
-                strokeWidth="1"
-              />
-              <text
-                x="276"
-                y="100"
-                textAnchor="middle"
-                className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
-              >
-                Track A: Procesare defensivă
-              </text>
-
-              {/* Spre Track B (dreapta) + Nod inspectabil Punte CERC */}
-              <path
-                d="M 560 80 C 610 96, 670 106, 690 120"
-                fill="none"
-                stroke="#222426"
-                strokeWidth="4.5"
-              />
-              <path
-                d="M 560 80 C 610 96, 670 106, 690 120"
-                fill="none"
-                stroke="#E5B822"
-                strokeWidth="3"
-                markerEnd="url(#arrow-gold)"
-              />
-              <g
-                onClick={() => setFig6SelectedStep('punte-cerc')}
-                className="cursor-pointer"
-              >
-                <rect
-                  x="545"
-                  y="82"
-                  width="248"
-                  height="24"
-                  rx="2"
-                  fill="#E5B822"
-                  fillOpacity={fig6SelectedStep === 'punte-cerc' || fig6InterventionActive ? '0.92' : '0.45'}
-                  stroke="#222426"
-                  strokeWidth="1.5"
-                />
-                <text
-                  x="669"
-                  y="98"
-                  textAnchor="middle"
-                  className="font-sans text-[9.5px] font-bold fill-[#222426]"
-                >
-                  Punte: Calm instituțional CERC și frâne Faza I
-                </text>
-              </g>
-
               {/* ============================================================
                   TRACK A: PROCESARE DEFENSIVĂ (Stânga)
                  ============================================================ */}
-              <g opacity={fig6InterventionActive ? '0.72' : '1'}>
-                {/* Header bar Track A */}
+              <g opacity={fig6ActiveTrack === 'A' ? '1' : '0.35'}>
+                {/* Săgeată de bifurcație spre Track A */}
+                <path
+                  d="M 370 74 C 315 102, 255 124, 230 155"
+                  fill="none"
+                  stroke="#F01E1E"
+                  strokeWidth={fig6ActiveTrack === 'A' ? '3.5' : '2'}
+                  strokeDasharray={fig6ActiveTrack === 'B' ? '4 3' : undefined}
+                  markerEnd="url(#arrow-red)"
+                />
+                <rect
+                  x="155"
+                  y="94"
+                  width="150"
+                  height="22"
+                  fill="#F6F5EE"
+                  stroke="#F01E1E"
+                  strokeWidth="1.2"
+                />
+                <text
+                  x="230"
+                  y="109"
+                  textAnchor="middle"
+                  className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
+                >
+                  Track A: Procesare defensivă
+                </text>
+
+                {/* Header bar Track A (y=158..184) */}
                 <rect
                   x="85"
-                  y="126"
+                  y="158"
                   width="290"
                   height="26"
                   fill="#F01E1E"
@@ -3554,21 +3689,25 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="230"
-                  y="143"
+                  y="175"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#F01E1E]"
                 >
                   Track A · Procesare defensivă și reactivă
                 </text>
 
-                {/* A1: Anxietate cronică */}
+                {/* A1: Anxietate cronică (y=190..240) */}
                 <g
-                  onClick={() => setFig6SelectedStep('anxietate')}
+                  onClick={() => {
+                    setFig6InterventionActive(false);
+                    setFig6ActiveTrack('A');
+                    setFig6SelectedStep('anxietate');
+                  }}
                   className="cursor-pointer"
                 >
                   <rect
                     x="85"
-                    y="158"
+                    y="190"
                     width="290"
                     height="50"
                     rx="3"
@@ -3579,7 +3718,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   />
                   <text
                     x="230"
-                    y="178"
+                    y="210"
                     textAnchor="middle"
                     className="font-sans text-[11.5px] font-bold fill-[#222426]"
                   >
@@ -3587,7 +3726,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="230"
-                    y="196"
+                    y="228"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] fill-[#6E7376]"
                   >
@@ -3598,22 +3737,26 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {/* Săgeată A1 -> A2 */}
                 <line
                   x1="230"
-                  y1="208"
+                  y1="240"
                   x2="230"
-                  y2="228"
+                  y2="260"
                   stroke="#F01E1E"
                   strokeWidth="2.5"
                   markerEnd="url(#arrow-red)"
                 />
 
-                {/* A2: Nevoia de închidere cognitivă (NFCC) */}
+                {/* A2: Nevoia de închidere cognitivă (NFCC) (y=262..312) */}
                 <g
-                  onClick={() => setFig6SelectedStep('nfcc')}
+                  onClick={() => {
+                    setFig6InterventionActive(false);
+                    setFig6ActiveTrack('A');
+                    setFig6SelectedStep('nfcc');
+                  }}
                   className="cursor-pointer"
                 >
                   <rect
                     x="85"
-                    y="230"
+                    y="262"
                     width="290"
                     height="50"
                     rx="3"
@@ -3624,7 +3767,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   />
                   <text
                     x="230"
-                    y="250"
+                    y="282"
                     textAnchor="middle"
                     className="font-sans text-[11.5px] font-bold fill-[#222426]"
                   >
@@ -3632,7 +3775,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="230"
-                    y="268"
+                    y="300"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] fill-[#6E7376]"
                   >
@@ -3643,22 +3786,26 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {/* Săgeată A2 -> A3 */}
                 <line
                   x1="230"
-                  y1="280"
+                  y1="312"
                   x2="230"
-                  y2="300"
+                  y2="332"
                   stroke="#F01E1E"
                   strokeWidth="2.5"
                   markerEnd="url(#arrow-red)"
                 />
 
-                {/* A3: Persona mimetică */}
+                {/* A3: Persona mimetică (y=334..384) */}
                 <g
-                  onClick={() => setFig6SelectedStep('persona')}
+                  onClick={() => {
+                    setFig6InterventionActive(false);
+                    setFig6ActiveTrack('A');
+                    setFig6SelectedStep('persona');
+                  }}
                   className="cursor-pointer"
                 >
                   <rect
                     x="85"
-                    y="302"
+                    y="334"
                     width="290"
                     height="50"
                     rx="3"
@@ -3669,7 +3816,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   />
                   <text
                     x="230"
-                    y="322"
+                    y="354"
                     textAnchor="middle"
                     className="font-sans text-[11.5px] font-bold fill-[#222426]"
                   >
@@ -3677,7 +3824,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="230"
-                    y="340"
+                    y="372"
                     textAnchor="middle"
                     className="font-sans text-[10px] fill-[#6E7376]"
                   >
@@ -3688,25 +3835,25 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {/* Vector bidirecțional Persona mimetică <-> Umbra colectivă */}
                 <line
                   x1="210"
-                  y1="352"
+                  y1="384"
                   x2="210"
-                  y2="390"
+                  y2="422"
                   stroke="#F01E1E"
                   strokeWidth="2"
                   markerEnd="url(#arrow-red)"
                 />
                 <line
                   x1="250"
-                  y1="392"
+                  y1="424"
                   x2="250"
-                  y2="354"
+                  y2="386"
                   stroke="#F01E1E"
                   strokeWidth="2"
                   markerEnd="url(#arrow-red)"
                 />
                 <rect
                   x="150"
-                  y="363"
+                  y="395"
                   width="160"
                   height="18"
                   fill="#F6F5EE"
@@ -3715,21 +3862,25 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="230"
-                  y="376"
+                  y="408"
                   textAnchor="middle"
                   className="font-sans text-[9px] font-bold fill-[#F01E1E]"
                 >
                   Tensiune și compensare
                 </text>
 
-                {/* A4: Umbra colectivă */}
+                {/* A4: Umbra colectivă (y=426..476) */}
                 <g
-                  onClick={() => setFig6SelectedStep('umbra')}
+                  onClick={() => {
+                    setFig6InterventionActive(false);
+                    setFig6ActiveTrack('A');
+                    setFig6SelectedStep('umbra');
+                  }}
                   className="cursor-pointer"
                 >
                   <rect
                     x="85"
-                    y="394"
+                    y="426"
                     width="290"
                     height="50"
                     rx="3"
@@ -3740,7 +3891,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   />
                   <text
                     x="230"
-                    y="414"
+                    y="446"
                     textAnchor="middle"
                     className="font-sans text-[11.5px] font-bold fill-[#F01E1E]"
                   >
@@ -3748,7 +3899,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="230"
-                    y="432"
+                    y="464"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] fill-[#6E7376]"
                   >
@@ -3759,22 +3910,26 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {/* Săgeată A4 -> A5 */}
                 <line
                   x1="230"
-                  y1="444"
+                  y1="476"
                   x2="230"
-                  y2="466"
+                  y2="498"
                   stroke="#F01E1E"
                   strokeWidth="2.5"
                   markerEnd="url(#arrow-red)"
                 />
 
-                {/* A5: Buclă de feedback algoritmic */}
+                {/* A5: Buclă de feedback algoritmic (y=500..550) */}
                 <g
-                  onClick={() => setFig6SelectedStep('bucla_algoritmica')}
+                  onClick={() => {
+                    setFig6InterventionActive(false);
+                    setFig6ActiveTrack('A');
+                    setFig6SelectedStep('bucla_algoritmica');
+                  }}
                   className="cursor-pointer"
                 >
                   <rect
                     x="85"
-                    y="468"
+                    y="500"
                     width="290"
                     height="50"
                     rx="3"
@@ -3785,7 +3940,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   />
                   <text
                     x="230"
-                    y="488"
+                    y="520"
                     textAnchor="middle"
                     className="font-sans text-[11.5px] font-bold fill-[#F01E1E]"
                   >
@@ -3793,7 +3948,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="230"
-                    y="506"
+                    y="538"
                     textAnchor="middle"
                     className="font-sans text-[10px] fill-[#6E7376]"
                   >
@@ -3803,7 +3958,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
                 {/* ÎNCHIDEREA FIZICĂ A BUCLEI ALGORITMICE (R) ÎNAPOI LA ANXIETATE CRONICĂ */}
                 <polyline
-                  points="85,493 36,493 36,183 83,183"
+                  points="85,525 36,525 36,215 83,215"
                   fill="none"
                   stroke="#F01E1E"
                   strokeWidth="2.5"
@@ -3812,7 +3967,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <circle
                   cx="36"
-                  cy="338"
+                  cy="370"
                   r="14"
                   fill="#F6F5EE"
                   stroke="#F01E1E"
@@ -3820,7 +3975,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="36"
-                  y="343"
+                  y="375"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#F01E1E]"
                 >
@@ -3828,7 +3983,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <rect
                   x="6"
-                  y="360"
+                  y="392"
                   width="60"
                   height="26"
                   fill="#F6F5EE"
@@ -3837,7 +3992,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="36"
-                  y="371"
+                  y="403"
                   textAnchor="middle"
                   className="font-sans text-[8px] font-bold fill-[#F01E1E]"
                 >
@@ -3845,7 +4000,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="36"
-                  y="381"
+                  y="413"
                   textAnchor="middle"
                   className="font-sans text-[8px] font-bold fill-[#F01E1E]"
                 >
@@ -3854,72 +4009,141 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               </g>
 
               {/* RECUPERAREA SELECTIVĂ A INGENIOZITĂȚII (TRICKSTER) */}
-              <path
-                d="M 375 419 C 430 419, 475 306, 543 306"
-                fill="none"
-                stroke="#6E7376"
-                strokeWidth="2"
-                strokeDasharray="4 4"
-                markerEnd="url(#arrow-slate)"
-              />
-              <rect
-                x="400"
-                y="348"
-                width="130"
-                height="30"
-                fill="#F6F5EE"
-                stroke="#6E7376"
-                strokeWidth="1"
-              />
-              <text
-                x="465"
-                y="361"
-                textAnchor="middle"
-                className="font-sans text-[8.5px] font-bold fill-[#222426]"
-              >
-                Recuperare ingeniozitate
-              </text>
-              <text
-                x="465"
-                y="372"
-                textAnchor="middle"
-                className="font-sans text-[8.5px] fill-[#6E7376]"
-              >
-                integrare Trickster
-              </text>
+              <g opacity={fig6ActiveTrack === 'B' ? '1' : '0.4'}>
+                <path
+                  d="M 375 451 C 430 451, 475 338, 543 338"
+                  fill="none"
+                  stroke="#6E7376"
+                  strokeWidth="2"
+                  strokeDasharray="4 4"
+                  markerEnd="url(#arrow-slate)"
+                />
+                <rect
+                  x="400"
+                  y="380"
+                  width="130"
+                  height="30"
+                  fill="#F6F5EE"
+                  stroke="#6E7376"
+                  strokeWidth="1"
+                />
+                <text
+                  x="465"
+                  y="393"
+                  textAnchor="middle"
+                  className="font-sans text-[8.5px] font-bold fill-[#222426]"
+                >
+                  Recuperare ingeniozitate
+                </text>
+                <text
+                  x="465"
+                  y="404"
+                  textAnchor="middle"
+                  className="font-sans text-[8.5px] fill-[#6E7376]"
+                >
+                  integrare Trickster
+                </text>
+              </g>
 
               {/* ============================================================
-                  TRACK B: PROCESARE ADAPTATIVĂ (Dreapta)
+                  TRACK B: PROCESARE ADAPTATIVĂ (Dreapta) + PUNTE CERC
                  ============================================================ */}
-              <g>
-                {/* Header bar Track B */}
+              <g opacity={fig6ActiveTrack === 'B' ? '1' : '0.35'}>
+                {/* Săgeată scurtă din nodul de bifurcație (550, 74) în plafonul casetei Punte CERC (690, 90) */}
+                <path
+                  d="M 550 74 C 600 80, 655 82, 690 90"
+                  fill="none"
+                  stroke="#222426"
+                  strokeWidth="4"
+                />
+                <path
+                  d="M 550 74 C 600 80, 655 82, 690 90"
+                  fill="none"
+                  stroke="#E5B822"
+                  strokeWidth="2.5"
+                />
+
+                {/* Caseta intermediară: Punte: Calm instituțional CERC și frâne Faza I (x=550, y=92, width=280, height=32) */}
+                <g
+                  onClick={() => {
+                    setFig6InterventionActive(true);
+                    setFig6ActiveTrack('B');
+                    setFig6SelectedStep('punte-cerc');
+                  }}
+                  className="cursor-pointer"
+                >
+                  <rect
+                    x="550"
+                    y="92"
+                    width="280"
+                    height="32"
+                    rx="3"
+                    fill={fig6ActiveTrack === 'B' || fig6SelectedStep === 'punte-cerc' ? '#E5B822' : '#F6F5EE'}
+                    fillOpacity={fig6ActiveTrack === 'B' ? '0.92' : '1'}
+                    stroke="#222426"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="690"
+                    y="112"
+                    textAnchor="middle"
+                    className="font-sans text-[10px] font-bold fill-[#222426]"
+                  >
+                    Punte: Calm instituțional CERC și frâne Faza I
+                  </text>
+                </g>
+
+                {/* Săgeată verticală din baza casetei Punte CERC (690, 124) în antetul Track B (690, 155) */}
+                <line
+                  x1="690"
+                  y1="124"
+                  x2="690"
+                  y2="155"
+                  stroke="#222426"
+                  strokeWidth="4.5"
+                />
+                <line
+                  x1="690"
+                  y1="124"
+                  x2="690"
+                  y2="155"
+                  stroke="#E5B822"
+                  strokeWidth="3"
+                  markerEnd="url(#arrow-gold)"
+                />
+
+                {/* Header bar Track B (y=158..184) */}
                 <rect
                   x="545"
-                  y="126"
+                  y="158"
                   width="290"
                   height="26"
-                  fill="#E5B822"
-                  fillOpacity="0.2"
+                  fill={fig6ActiveTrack === 'B' ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig6ActiveTrack === 'B' ? '0.28' : '1'}
                   stroke="#222426"
                   strokeWidth="1.5"
                 />
                 <text
                   x="690"
-                  y="143"
+                  y="175"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   Track B · Procesare adaptativă și deliberativă
                 </text>
 
-                {/* B1: Acceptarea incertitudinii */}
+                {/* B1: Acceptarea incertitudinii (y=190..234) */}
                 <g
-                  onClick={() => setFig6SelectedStep('b1')}
+                  onClick={() => {
+                    setFig6InterventionActive(true);
+                    setFig6ActiveTrack('B');
+                    setFig6SelectedStep('b1');
+                  }}
                   className="cursor-pointer"
                 >
                   <rect
                     x="545"
-                    y="158"
+                    y="190"
                     width="290"
                     height="44"
                     rx="3"
@@ -3930,7 +4154,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   />
                   <text
                     x="690"
-                    y="176"
+                    y="208"
                     textAnchor="middle"
                     className="font-sans text-[11px] font-bold fill-[#222426]"
                   >
@@ -3938,7 +4162,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="690"
-                    y="192"
+                    y="224"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] fill-[#6E7376]"
                   >
@@ -3949,30 +4173,34 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {/* Săgeată B1 -> B2 */}
                 <line
                   x1="690"
-                  y1="202"
+                  y1="234"
                   x2="690"
-                  y2="218"
+                  y2="250"
                   stroke="#222426"
                   strokeWidth="4"
                 />
                 <line
                   x1="690"
-                  y1="202"
+                  y1="234"
                   x2="690"
-                  y2="218"
+                  y2="250"
                   stroke="#E5B822"
                   strokeWidth="2.5"
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* B2: 2. Sistemul 2 și gândire deschisă activă */}
+                {/* B2: 2. Sistemul 2 și gândire deschisă activă (y=252..296) */}
                 <g
-                  onClick={() => setFig6SelectedStep('b2')}
+                  onClick={() => {
+                    setFig6InterventionActive(true);
+                    setFig6ActiveTrack('B');
+                    setFig6SelectedStep('b2');
+                  }}
                   className="cursor-pointer"
                 >
                   <rect
                     x="545"
-                    y="220"
+                    y="252"
                     width="290"
                     height="44"
                     rx="3"
@@ -3983,7 +4211,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   />
                   <text
                     x="690"
-                    y="238"
+                    y="270"
                     textAnchor="middle"
                     className="font-sans text-[11px] font-bold fill-[#222426]"
                   >
@@ -3991,7 +4219,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="690"
-                    y="254"
+                    y="286"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] fill-[#6E7376]"
                   >
@@ -4002,30 +4230,34 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {/* Săgeată B2 -> B3 */}
                 <line
                   x1="690"
-                  y1="264"
+                  y1="296"
                   x2="690"
-                  y2="280"
+                  y2="312"
                   stroke="#222426"
                   strokeWidth="4"
                 />
                 <line
                   x1="690"
-                  y1="264"
+                  y1="296"
                   x2="690"
-                  y2="280"
+                  y2="312"
                   stroke="#E5B822"
                   strokeWidth="2.5"
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* B3: Toleranța disonanței */}
+                {/* B3: Toleranța disonanței (y=314..362) */}
                 <g
-                  onClick={() => setFig6SelectedStep('b3')}
+                  onClick={() => {
+                    setFig6InterventionActive(true);
+                    setFig6ActiveTrack('B');
+                    setFig6SelectedStep('b3');
+                  }}
                   className="cursor-pointer"
                 >
                   <rect
                     x="545"
-                    y="282"
+                    y="314"
                     width="290"
                     height="48"
                     rx="3"
@@ -4036,7 +4268,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   />
                   <text
                     x="690"
-                    y="300"
+                    y="332"
                     textAnchor="middle"
                     className="font-sans text-[11px] font-bold fill-[#222426]"
                   >
@@ -4044,7 +4276,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="690"
-                    y="316"
+                    y="348"
                     textAnchor="middle"
                     className="font-sans text-[9px] font-medium fill-[#222426]"
                   >
@@ -4055,30 +4287,34 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {/* Săgeată B3 -> B4 */}
                 <line
                   x1="690"
-                  y1="330"
+                  y1="362"
                   x2="690"
-                  y2="346"
+                  y2="378"
                   stroke="#222426"
                   strokeWidth="4"
                 />
                 <line
                   x1="690"
-                  y1="330"
+                  y1="362"
                   x2="690"
-                  y2="346"
+                  y2="378"
                   stroke="#E5B822"
                   strokeWidth="2.5"
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* B4: Discernământ critic */}
+                {/* B4: Discernământ critic (y=380..424) */}
                 <g
-                  onClick={() => setFig6SelectedStep('b4')}
+                  onClick={() => {
+                    setFig6InterventionActive(true);
+                    setFig6ActiveTrack('B');
+                    setFig6SelectedStep('b4');
+                  }}
                   className="cursor-pointer"
                 >
                   <rect
                     x="545"
-                    y="348"
+                    y="380"
                     width="290"
                     height="44"
                     rx="3"
@@ -4089,7 +4325,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   />
                   <text
                     x="690"
-                    y="366"
+                    y="398"
                     textAnchor="middle"
                     className="font-sans text-[11px] font-bold fill-[#222426]"
                   >
@@ -4097,7 +4333,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="690"
-                    y="382"
+                    y="414"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] fill-[#6E7376]"
                   >
@@ -4108,40 +4344,44 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {/* Săgeată B4 -> B5 */}
                 <line
                   x1="690"
-                  y1="392"
+                  y1="424"
                   x2="690"
-                  y2="408"
+                  y2="440"
                   stroke="#222426"
                   strokeWidth="4"
                 />
                 <line
                   x1="690"
-                  y1="392"
+                  y1="424"
                   x2="690"
-                  y2="408"
+                  y2="440"
                   stroke="#E5B822"
                   strokeWidth="2.5"
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* B5: Creație suverană */}
+                {/* B5: Creație suverană (y=442..490) */}
                 <g
-                  onClick={() => setFig6SelectedStep('b5')}
+                  onClick={() => {
+                    setFig6InterventionActive(true);
+                    setFig6ActiveTrack('B');
+                    setFig6SelectedStep('b5');
+                  }}
                   className="cursor-pointer"
                 >
                   <rect
                     x="545"
-                    y="410"
+                    y="442"
                     width="290"
                     height="48"
                     rx="3"
-                    fill="#E5B822"
+                    fill={fig6ActiveTrack === 'B' || fig6SelectedStep === 'b5' ? '#E5B822' : '#F6F5EE'}
                     stroke="#222426"
                     strokeWidth="2.5"
                   />
                   <text
                     x="690"
-                    y="430"
+                    y="462"
                     textAnchor="middle"
                     className="font-sans text-[12px] font-bold fill-[#222426]"
                   >
@@ -4149,7 +4389,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                   <text
                     x="690"
-                    y="447"
+                    y="479"
                     textAnchor="middle"
                     className="font-sans text-[10px] font-medium fill-[#222426]"
                   >
@@ -4160,9 +4400,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {/* Linie punctată spre Axa Ego-Sine la bază */}
                 <line
                   x1="690"
-                  y1="458"
+                  y1="490"
                   x2="690"
-                  y2="520"
+                  y2="554"
                   stroke="#222426"
                   strokeWidth="2"
                   strokeDasharray="4 4"
@@ -4170,7 +4410,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <rect
                   x="635"
-                  y="478"
+                  y="512"
                   width="110"
                   height="18"
                   fill="#F6F5EE"
@@ -4179,17 +4419,17 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="690"
-                  y="491"
+                  y="525"
                   textAnchor="middle"
                   className="font-sans text-[8.5px] font-bold fill-[#6E7376]"
                 >
                   Aliniere ontologică
                 </text>
 
-                {/* Baza: Axa Ego–Sine */}
+                {/* Baza: Axa Ego–Sine (cy=582) */}
                 <ellipse
                   cx="690"
-                  cy="546"
+                  cy="582"
                   rx="145"
                   ry="24"
                   fill="#F6F5EE"
@@ -4198,7 +4438,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="690"
-                  y="550"
+                  y="586"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
@@ -4207,7 +4447,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
                 {/* Buclă de consolidare a rezilienței */}
                 <polyline
-                  points="835,434 870,434 870,178 837,178"
+                  points="835,466 870,466 870,210 837,210"
                   fill="none"
                   stroke="#6E7376"
                   strokeWidth="1.8"
@@ -4216,7 +4456,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <rect
                   x="830"
-                  y="290"
+                  y="322"
                   width="80"
                   height="32"
                   fill="#F6F5EE"
@@ -4225,7 +4465,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 />
                 <text
                   x="870"
-                  y="303"
+                  y="335"
                   textAnchor="middle"
                   className="font-sans text-[8px] font-bold fill-[#6E7376]"
                 >
@@ -4233,7 +4473,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="870"
-                  y="314"
+                  y="346"
                   textAnchor="middle"
                   className="font-sans text-[8px] fill-[#6E7376]"
                 >
@@ -4315,41 +4555,41 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
           <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
             <svg
-              viewBox="0 0 920 520"
+              viewBox="0 0 960 560"
               className={svgClass}
               role="img"
               aria-label={meta.title}
             >
               <SharedSvgDefs />
-              <rect x="0" y="0" width="920" height="520" fill="#F6F5EE" />
-              <rect x="0" y="0" width="920" height="520" fill="url(#stipple-bg)" />
+              <rect x="0" y="0" width="960" height="560" fill="#F6F5EE" />
+              <rect x="0" y="0" width="960" height="560" fill="url(#stipple-bg)" />
 
-              {/* TOP FRONTON: Arhitectura suveranitatii democratice si sinteza modernitatii organice */}
+              {/* TOP FRONTON: Arhitectura suveranitatii democratice si sinteza modernitatii organice (x=30, y=20, width=900, height=62) */}
               <g
                 onClick={() => setFig7SelectedNode('fronton')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="45"
-                  y="18"
-                  width="830"
-                  height="60"
+                  x="30"
+                  y="20"
+                  width="900"
+                  height="62"
                   fill="#E5B822"
                   fillOpacity={fig7SelectedNode === 'fronton' ? '0.35' : '0.22'}
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
-                  x="460"
-                  y="43"
+                  x="480"
+                  y="45"
                   textAnchor="middle"
                   className="font-sans text-[13.5px] font-bold fill-[#222426]"
                 >
                   Arhitectura suveranității democratice și sinteza modernității organice
                 </text>
                 <text
-                  x="460"
-                  y="62"
+                  x="480"
+                  y="65"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
@@ -4357,61 +4597,61 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* 3 Upward Gold Arrows into Top Fronton */}
+              {/* 3 Upward Gold Arrows into Top Fronton (y=134 -> y=86, 52px corridor) */}
               <line
-                x1="168"
-                y1="112"
-                x2="168"
-                y2="83"
+                x1="155"
+                y1="134"
+                x2="155"
+                y2="86"
                 stroke="#222426"
                 strokeWidth="4"
               />
               <line
-                x1="168"
-                y1="112"
-                x2="168"
-                y2="83"
+                x1="155"
+                y1="134"
+                x2="155"
+                y2="86"
                 stroke="#E5B822"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-gold)"
               />
               <line
-                x1="460"
-                y1="112"
-                x2="460"
-                y2="83"
+                x1="480"
+                y1="134"
+                x2="480"
+                y2="86"
                 stroke="#222426"
                 strokeWidth="4"
               />
               <line
-                x1="460"
-                y1="112"
-                x2="460"
-                y2="83"
+                x1="480"
+                y1="134"
+                x2="480"
+                y2="86"
                 stroke="#E5B822"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-gold)"
               />
               <line
-                x1="752"
-                y1="112"
-                x2="752"
-                y2="83"
+                x1="805"
+                y1="134"
+                x2="805"
+                y2="86"
                 stroke="#222426"
                 strokeWidth="4"
               />
               <line
-                x1="752"
-                y1="112"
-                x2="752"
-                y2="83"
+                x1="805"
+                y1="134"
+                x2="805"
+                y2="86"
                 stroke="#E5B822"
                 strokeWidth="2.5"
                 markerEnd="url(#arrow-gold)"
               />
 
               {/* ============================================================
-                  COLUMN 1: FAZA I (x=45, width=246)
+                  COLUMN 1: FAZA I (x=30, width=250, center=155)
                  ============================================================ */}
               <g
                 onClick={() => {
@@ -4421,35 +4661,35 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <rect
-                  x="45"
-                  y="114"
-                  width="246"
-                  height="66"
+                  x="30"
+                  y="134"
+                  width="250"
+                  height="68"
                   rx="4"
                   fill={fig7ActivePhase === 1 ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7ActivePhase === 1 ? '0.25' : '1'}
+                  fillOpacity={fig7ActivePhase === 1 ? '0.35' : '1'}
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
-                  x="168"
-                  y="136"
+                  x="155"
+                  y="156"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Faza I · Decompresie și
                 </text>
                 <text
-                  x="168"
-                  y="152"
+                  x="155"
+                  y="172"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   igienă digitală
                 </text>
                 <text
-                  x="168"
-                  y="169"
+                  x="155"
+                  y="190"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
@@ -4464,28 +4704,29 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig7SelectedNode('faza1-1');
                 }}
                 className="cursor-pointer"
+                opacity={fig7ActivePhase === 1 ? '1' : '0.75'}
               >
                 <rect
-                  x="45"
-                  y="194"
-                  width="246"
-                  height="64"
-                  fill={fig7SelectedNode === 'faza1-1' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'faza1-1' ? '0.22' : '1'}
-                  stroke={fig7SelectedNode === 'faza1-1' ? '#222426' : '#6E7376'}
-                  strokeWidth={fig7SelectedNode === 'faza1-1' ? '2' : '1.5'}
+                  x="30"
+                  y="222"
+                  width="250"
+                  height="58"
+                  fill={fig7SelectedNode === 'faza1-1' || fig7ActivePhase === 1 ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig7SelectedNode === 'faza1-1' ? '0.35' : fig7ActivePhase === 1 ? '0.14' : '1'}
+                  stroke={fig7ActivePhase === 1 ? '#222426' : '#8C9BA5'}
+                  strokeWidth={fig7SelectedNode === 'faza1-1' ? '2.5' : fig7ActivePhase === 1 ? '2' : '1.5'}
                 />
                 <text
-                  x="168"
-                  y="220"
+                  x="155"
+                  y="246"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   1.1 Triaj acut 0–72h: CERC și frâne DSA
                 </text>
                 <text
-                  x="168"
-                  y="240"
+                  x="155"
+                  y="265"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
@@ -4500,28 +4741,29 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig7SelectedNode('faza1-2');
                 }}
                 className="cursor-pointer"
+                opacity={fig7ActivePhase === 1 ? '1' : '0.75'}
               >
                 <rect
-                  x="45"
-                  y="270"
-                  width="246"
-                  height="64"
-                  fill={fig7SelectedNode === 'faza1-2' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'faza1-2' ? '0.22' : '1'}
-                  stroke={fig7SelectedNode === 'faza1-2' ? '#222426' : '#6E7376'}
-                  strokeWidth={fig7SelectedNode === 'faza1-2' ? '2' : '1.5'}
+                  x="30"
+                  y="294"
+                  width="250"
+                  height="58"
+                  fill={fig7SelectedNode === 'faza1-2' || fig7ActivePhase === 1 ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig7SelectedNode === 'faza1-2' ? '0.35' : fig7ActivePhase === 1 ? '0.14' : '1'}
+                  stroke={fig7ActivePhase === 1 ? '#222426' : '#8C9BA5'}
+                  strokeWidth={fig7SelectedNode === 'faza1-2' ? '2.5' : fig7ActivePhase === 1 ? '2' : '1.5'}
                 />
                 <text
-                  x="168"
-                  y="296"
+                  x="155"
+                  y="318"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   1.2 Interdicție Follow the Money (24–72h)
                 </text>
                 <text
-                  x="168"
-                  y="316"
+                  x="155"
+                  y="337"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
@@ -4536,28 +4778,29 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig7SelectedNode('faza1-3');
                 }}
                 className="cursor-pointer"
+                opacity={fig7ActivePhase === 1 ? '1' : '0.75'}
               >
                 <rect
-                  x="45"
-                  y="346"
-                  width="246"
-                  height="64"
-                  fill={fig7SelectedNode === 'faza1-3' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'faza1-3' ? '0.22' : '1'}
-                  stroke={fig7SelectedNode === 'faza1-3' ? '#222426' : '#6E7376'}
-                  strokeWidth={fig7SelectedNode === 'faza1-3' ? '2' : '1.5'}
+                  x="30"
+                  y="366"
+                  width="250"
+                  height="58"
+                  fill={fig7SelectedNode === 'faza1-3' || fig7ActivePhase === 1 ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig7SelectedNode === 'faza1-3' ? '0.35' : fig7ActivePhase === 1 ? '0.14' : '1'}
+                  stroke={fig7ActivePhase === 1 ? '#222426' : '#8C9BA5'}
+                  strokeWidth={fig7SelectedNode === 'faza1-3' ? '2.5' : fig7ActivePhase === 1 ? '2' : '1.5'}
                 />
                 <text
-                  x="168"
-                  y="372"
+                  x="155"
+                  y="390"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   1.3 Decompresie alostatică (0–12 luni)
                 </text>
                 <text
-                  x="168"
-                  y="392"
+                  x="155"
+                  y="409"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
@@ -4565,43 +4808,60 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Horizontal Causal Arrow Faza I -> Faza II + Poarta 1 */}
+              {/* Horizontal Causal Arrow Faza I -> Faza II (x=280..355, 75px corridor) + Poarta 1 */}
               <line
-                x1="291"
-                y1="147"
-                x2="330"
-                y2="147"
+                x1="280"
+                y1="168"
+                x2="349"
+                y2="168"
                 stroke="#222426"
                 strokeWidth="3"
                 markerEnd="url(#arrow-dark)"
+              />
+              <line
+                x1="317"
+                y1="126"
+                x2="317"
+                y2="168"
+                stroke="#222426"
+                strokeWidth="1.5"
+                strokeDasharray="3 3"
               />
               <g
                 onClick={() => setFig7SelectedNode('poarta1')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="222"
-                  y="88"
-                  width="184"
-                  height="22"
+                  x="242"
+                  y="96"
+                  width="150"
+                  height="30"
                   rx="2"
                   fill={fig7SelectedNode === 'poarta1' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'poarta1' ? '0.35' : '0.96'}
+                  fillOpacity={fig7SelectedNode === 'poarta1' ? '0.35' : '0.98'}
                   stroke="#222426"
                   strokeWidth="1.5"
                 />
                 <text
-                  x="314"
-                  y="102"
+                  x="317"
+                  y="109"
                   textAnchor="middle"
-                  className="font-sans text-[8.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[9.5px] font-bold fill-[#222426]"
                 >
-                  Poarta 1: Deblocare dlPFC (fără efect bumerang)
+                  Poarta 1: Deblocare dlPFC
+                </text>
+                <text
+                  x="317"
+                  y="121"
+                  textAnchor="middle"
+                  className="font-sans text-[8.5px] fill-[#6E7376]"
+                >
+                  fără efect de bumerang
                 </text>
               </g>
 
               {/* ============================================================
-                  COLUMN 2: FAZA II (x=337, width=246)
+                  COLUMN 2: FAZA II (x=355, width=250, center=480)
                  ============================================================ */}
               <g
                 onClick={() => {
@@ -4611,35 +4871,35 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <rect
-                  x="337"
-                  y="114"
-                  width="246"
-                  height="66"
+                  x="355"
+                  y="134"
+                  width="250"
+                  height="68"
                   rx="4"
                   fill={fig7ActivePhase === 2 ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7ActivePhase === 2 ? '0.25' : '1'}
+                  fillOpacity={fig7ActivePhase === 2 ? '0.35' : '1'}
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
-                  x="460"
-                  y="136"
+                  x="480"
+                  y="156"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Faza II · Prebunking și
                 </text>
                 <text
-                  x="460"
-                  y="152"
+                  x="480"
+                  y="172"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   validare morală
                 </text>
                 <text
-                  x="460"
-                  y="169"
+                  x="480"
+                  y="190"
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
                 >
@@ -4654,28 +4914,29 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig7SelectedNode('faza2-1');
                 }}
                 className="cursor-pointer"
+                opacity={fig7ActivePhase === 2 ? '1' : '0.75'}
               >
                 <rect
-                  x="337"
-                  y="194"
-                  width="246"
-                  height="64"
-                  fill={fig7SelectedNode === 'faza2-1' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'faza2-1' ? '0.22' : '1'}
-                  stroke={fig7SelectedNode === 'faza2-1' ? '#222426' : '#6E7376'}
-                  strokeWidth={fig7SelectedNode === 'faza2-1' ? '2' : '1.5'}
+                  x="355"
+                  y="222"
+                  width="250"
+                  height="58"
+                  fill={fig7SelectedNode === 'faza2-1' || fig7ActivePhase === 2 ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig7SelectedNode === 'faza2-1' ? '0.35' : fig7ActivePhase === 2 ? '0.14' : '1'}
+                  stroke={fig7ActivePhase === 2 ? '#222426' : '#8C9BA5'}
+                  strokeWidth={fig7SelectedNode === 'faza2-1' ? '2.5' : fig7ActivePhase === 2 ? '2' : '1.5'}
                 />
                 <text
-                  x="460"
-                  y="220"
+                  x="480"
+                  y="246"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   2.1 Validare comunitară și punți largi
                 </text>
                 <text
-                  x="460"
-                  y="240"
+                  x="480"
+                  y="265"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
@@ -4690,28 +4951,29 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig7SelectedNode('faza2-2');
                 }}
                 className="cursor-pointer"
+                opacity={fig7ActivePhase === 2 ? '1' : '0.75'}
               >
                 <rect
-                  x="337"
-                  y="270"
-                  width="246"
-                  height="64"
-                  fill={fig7SelectedNode === 'faza2-2' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'faza2-2' ? '0.22' : '1'}
-                  stroke={fig7SelectedNode === 'faza2-2' ? '#222426' : '#6E7376'}
-                  strokeWidth={fig7SelectedNode === 'faza2-2' ? '2' : '1.5'}
+                  x="355"
+                  y="294"
+                  width="250"
+                  height="58"
+                  fill={fig7SelectedNode === 'faza2-2' || fig7ActivePhase === 2 ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig7SelectedNode === 'faza2-2' ? '0.35' : fig7ActivePhase === 2 ? '0.14' : '1'}
+                  stroke={fig7ActivePhase === 2 ? '#222426' : '#8C9BA5'}
+                  strokeWidth={fig7SelectedNode === 'faza2-2' ? '2.5' : fig7ActivePhase === 2 ? '2' : '1.5'}
                 />
                 <text
-                  x="460"
-                  y="296"
+                  x="480"
+                  y="318"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   2.2 Prebunking și consolidare Ebbinghaus
                 </text>
                 <text
-                  x="460"
-                  y="316"
+                  x="480"
+                  y="337"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
@@ -4726,28 +4988,29 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig7SelectedNode('faza2-3');
                 }}
                 className="cursor-pointer"
+                opacity={fig7ActivePhase === 2 ? '1' : '0.75'}
               >
                 <rect
-                  x="337"
-                  y="346"
-                  width="246"
-                  height="64"
-                  fill={fig7SelectedNode === 'faza2-3' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'faza2-3' ? '0.22' : '1'}
-                  stroke={fig7SelectedNode === 'faza2-3' ? '#222426' : '#6E7376'}
-                  strokeWidth={fig7SelectedNode === 'faza2-3' ? '2' : '1.5'}
+                  x="355"
+                  y="366"
+                  width="250"
+                  height="58"
+                  fill={fig7SelectedNode === 'faza2-3' || fig7ActivePhase === 2 ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig7SelectedNode === 'faza2-3' ? '0.35' : fig7ActivePhase === 2 ? '0.14' : '1'}
+                  stroke={fig7ActivePhase === 2 ? '#222426' : '#8C9BA5'}
+                  strokeWidth={fig7SelectedNode === 'faza2-3' ? '2.5' : fig7ActivePhase === 2 ? '2' : '1.5'}
                 />
                 <text
-                  x="460"
-                  y="372"
+                  x="480"
+                  y="390"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   2.3 Parteneriat axiologic creștin-secular
                 </text>
                 <text
-                  x="460"
-                  y="392"
+                  x="480"
+                  y="409"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
@@ -4755,43 +5018,60 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Horizontal Causal Arrow Faza II -> Faza III + Poarta 2 */}
+              {/* Horizontal Causal Arrow Faza II -> Faza III (x=605..680, 75px corridor) + Poarta 2 */}
               <line
-                x1="583"
-                y1="147"
-                x2="622"
-                y2="147"
+                x1="605"
+                y1="168"
+                x2="674"
+                y2="168"
                 stroke="#222426"
                 strokeWidth="3"
                 markerEnd="url(#arrow-dark)"
+              />
+              <line
+                x1="642"
+                y1="126"
+                x2="642"
+                y2="168"
+                stroke="#222426"
+                strokeWidth="1.5"
+                strokeDasharray="3 3"
               />
               <g
                 onClick={() => setFig7SelectedNode('poarta2')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="514"
-                  y="88"
-                  width="184"
-                  height="22"
+                  x="567"
+                  y="96"
+                  width="150"
+                  height="30"
                   rx="2"
                   fill={fig7SelectedNode === 'poarta2' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'poarta2' ? '0.35' : '0.96'}
+                  fillOpacity={fig7SelectedNode === 'poarta2' ? '0.35' : '0.98'}
                   stroke="#222426"
                   strokeWidth="1.5"
                 />
                 <text
-                  x="606"
-                  y="102"
+                  x="642"
+                  y="109"
                   textAnchor="middle"
-                  className="font-sans text-[8.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[9.5px] font-bold fill-[#222426]"
                 >
-                  Poarta 2: Presiune civică în Coridorul îngust
+                  Poarta 2: Presiune civică
+                </text>
+                <text
+                  x="642"
+                  y="121"
+                  textAnchor="middle"
+                  className="font-sans text-[8.5px] fill-[#6E7376]"
+                >
+                  în Coridorul îngust
                 </text>
               </g>
 
               {/* ============================================================
-                  COLUMN 3: FAZA III (x=629, width=246)
+                  COLUMN 3: FAZA III (x=680, width=250, center=805)
                  ============================================================ */}
               <g
                 onClick={() => {
@@ -4801,35 +5081,35 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 className="cursor-pointer"
               >
                 <rect
-                  x="629"
-                  y="114"
-                  width="246"
-                  height="66"
+                  x="680"
+                  y="134"
+                  width="250"
+                  height="68"
                   rx="4"
                   fill={fig7ActivePhase === 3 ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7ActivePhase === 3 ? '0.25' : '1'}
+                  fillOpacity={fig7ActivePhase === 3 ? '0.35' : '1'}
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
                 <text
-                  x="752"
-                  y="136"
+                  x="805"
+                  y="156"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   Faza III · Stat de drept și
                 </text>
                 <text
-                  x="752"
-                  y="152"
+                  x="805"
+                  y="172"
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
                   individuare
                 </text>
                 <text
-                  x="752"
-                  y="169"
+                  x="805"
+                  y="190"
                   textAnchor="middle"
                   className="font-sans text-[10px] fill-[#6E7376]"
                 >
@@ -4844,28 +5124,29 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig7SelectedNode('faza3-1');
                 }}
                 className="cursor-pointer"
+                opacity={fig7ActivePhase === 3 ? '1' : '0.75'}
               >
                 <rect
-                  x="629"
-                  y="194"
-                  width="246"
-                  height="64"
-                  fill={fig7SelectedNode === 'faza3-1' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'faza3-1' ? '0.22' : '1'}
-                  stroke={fig7SelectedNode === 'faza3-1' ? '#222426' : '#6E7376'}
-                  strokeWidth={fig7SelectedNode === 'faza3-1' ? '2' : '1.5'}
+                  x="680"
+                  y="222"
+                  width="250"
+                  height="58"
+                  fill={fig7SelectedNode === 'faza3-1' || fig7ActivePhase === 3 ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig7SelectedNode === 'faza3-1' ? '0.35' : fig7ActivePhase === 3 ? '0.14' : '1'}
+                  stroke={fig7ActivePhase === 3 ? '#222426' : '#8C9BA5'}
+                  strokeWidth={fig7SelectedNode === 'faza3-1' ? '2.5' : fig7ActivePhase === 3 ? '2' : '1.5'}
                 />
                 <text
-                  x="752"
-                  y="220"
+                  x="805"
+                  y="246"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   3.1 Închidere operațională și isonomie fiscală
                 </text>
                 <text
-                  x="752"
-                  y="240"
+                  x="805"
+                  y="265"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
@@ -4880,28 +5161,29 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig7SelectedNode('faza3-2');
                 }}
                 className="cursor-pointer"
+                opacity={fig7ActivePhase === 3 ? '1' : '0.75'}
               >
                 <rect
-                  x="629"
-                  y="270"
-                  width="246"
-                  height="64"
-                  fill={fig7SelectedNode === 'faza3-2' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'faza3-2' ? '0.22' : '1'}
-                  stroke={fig7SelectedNode === 'faza3-2' ? '#222426' : '#6E7376'}
-                  strokeWidth={fig7SelectedNode === 'faza3-2' ? '2' : '1.5'}
+                  x="680"
+                  y="294"
+                  width="250"
+                  height="58"
+                  fill={fig7SelectedNode === 'faza3-2' || fig7ActivePhase === 3 ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig7SelectedNode === 'faza3-2' ? '0.35' : fig7ActivePhase === 3 ? '0.14' : '1'}
+                  stroke={fig7ActivePhase === 3 ? '#222426' : '#8C9BA5'}
+                  strokeWidth={fig7SelectedNode === 'faza3-2' ? '2.5' : fig7ActivePhase === 3 ? '2' : '1.5'}
                 />
                 <text
-                  x="752"
-                  y="296"
+                  x="805"
+                  y="318"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   3.2 Guvernanță policentrică (Ostrom)
                 </text>
                 <text
-                  x="752"
-                  y="316"
+                  x="805"
+                  y="337"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
@@ -4916,28 +5198,29 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   setFig7SelectedNode('faza3-3');
                 }}
                 className="cursor-pointer"
+                opacity={fig7ActivePhase === 3 ? '1' : '0.75'}
               >
                 <rect
-                  x="629"
-                  y="346"
-                  width="246"
-                  height="64"
-                  fill={fig7SelectedNode === 'faza3-3' ? '#E5B822' : '#F6F5EE'}
-                  fillOpacity={fig7SelectedNode === 'faza3-3' ? '0.22' : '1'}
-                  stroke={fig7SelectedNode === 'faza3-3' ? '#222426' : '#6E7376'}
-                  strokeWidth={fig7SelectedNode === 'faza3-3' ? '2' : '1.5'}
+                  x="680"
+                  y="366"
+                  width="250"
+                  height="58"
+                  fill={fig7SelectedNode === 'faza3-3' || fig7ActivePhase === 3 ? '#E5B822' : '#F6F5EE'}
+                  fillOpacity={fig7SelectedNode === 'faza3-3' ? '0.35' : fig7ActivePhase === 3 ? '0.14' : '1'}
+                  stroke={fig7ActivePhase === 3 ? '#222426' : '#8C9BA5'}
+                  strokeWidth={fig7SelectedNode === 'faza3-3' ? '2.5' : fig7ActivePhase === 3 ? '2' : '1.5'}
                 />
                 <text
-                  x="752"
-                  y="372"
+                  x="805"
+                  y="390"
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
                   3.3 Individuare colectivă și dublu audit
                 </text>
                 <text
-                  x="752"
-                  y="392"
+                  x="805"
+                  y="409"
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
@@ -4945,44 +5228,44 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* 3 Upward Dark Arrows from Bottom Foundation to the 3 Phases */}
+              {/* 3 Upward Dark Arrows from Bottom Foundation to the 3 Phases (y=468 -> y=430) */}
               <line
-                x1="168"
-                y1="440"
-                x2="168"
-                y2="415"
+                x1="155"
+                y1="468"
+                x2="155"
+                y2="430"
                 stroke="#222426"
                 strokeWidth="2"
                 markerEnd="url(#arrow-dark)"
               />
               <line
-                x1="460"
-                y1="440"
-                x2="460"
-                y2="415"
+                x1="480"
+                y1="468"
+                x2="480"
+                y2="430"
                 stroke="#222426"
                 strokeWidth="2"
                 markerEnd="url(#arrow-dark)"
               />
               <line
-                x1="752"
-                y1="440"
-                x2="752"
-                y2="415"
+                x1="805"
+                y1="468"
+                x2="805"
+                y2="430"
                 stroke="#222426"
                 strokeWidth="2"
                 markerEnd="url(#arrow-dark)"
               />
 
-              {/* BOTTOM FOUNDATION: Determinanții Lalonde–Dever */}
+              {/* BOTTOM FOUNDATION: Determinanții Lalonde–Dever (x=30, y=470, width=900, height=56) */}
               <g
                 onClick={() => setFig7SelectedNode('fundament')}
                 className="cursor-pointer"
               >
                 <rect
-                  x="45"
-                  y="442"
-                  width="830"
+                  x="30"
+                  y="470"
+                  width="900"
                   height="56"
                   fill={fig7SelectedNode === 'fundament' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig7SelectedNode === 'fundament' ? '0.22' : '1'}
@@ -4990,16 +5273,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2.5"
                 />
                 <text
-                  x="460"
-                  y="464"
+                  x="480"
+                  y="492"
                   textAnchor="middle"
                   className="font-sans text-[12.5px] font-bold fill-[#222426]"
                 >
                   Fundamentul sistemic Lalonde–Dever
                 </text>
                 <text
-                  x="460"
-                  y="483"
+                  x="480"
+                  y="511"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
