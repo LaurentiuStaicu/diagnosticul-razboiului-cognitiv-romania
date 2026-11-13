@@ -23,7 +23,7 @@ const COVER_BLOCK_INFO: Record<
   }
 > = {
   'stratul-a': {
-    badge: 'STRATUL A · MACRO-INSTITUȚIONAL',
+    badge: 'STRATUL A · MACROINSTITUȚIONAL',
     title: 'Cadrul constituțional, închiderea operațională și vectorul revizionist',
     synthesis:
       'Examinează tensiunea istorică dintre arhitectura constituțională occidentală („forme fără fond”) și rețelele extractive dintr-o ordine socială cu acces limitat, deficitul cronic de închidere operațională (Luhmann) și polarizarea sociospațială, pe care vectorul revizionist al Antilumii (Epstein) și nihilismul stării Bobok (Dostoievski) le exploatează oportunist.',
@@ -247,7 +247,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                     fontWeight="700"
                     fill="#6E7376"
                   >
-                    STRATUL A · MACRO-INSTITUȚIONAL · CAPITOLELE 1–2
+                    STRATUL A · MACROINSTITUȚIONAL · CAPITOLELE 1–2
                   </text>
                   <text
                     x="30"

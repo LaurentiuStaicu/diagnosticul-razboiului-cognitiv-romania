@@ -22,7 +22,7 @@ export const TABLE_1_DATA: Table1Row[] = [
     stratumB:
       'Erodarea încrederii în regulile formale și percepția legii ca instrument selectiv de spoliere. Această percepție slăbește angajamentul față de primul sistem etic al cooperării procedurale (Lefebvre) și crește toleranța cognitivă față de transgresiunea normativă.',
     stratumC:
-      'Scindarea structurală între Persona instituțională mimetică (conformismul oficial prooccidental de fațadă) și Umbra colectivă. În această Umbră sunt refulate strategiile informale de supraviețuire, „descurcăreala” și ambivalența arhetipului Trickster-ului.'
+      'Scindarea structurală între Persona instituțională mimetică (conformismul oficial prooccidental de fațadă) și Umbra colectivă. În această Umbră sunt refulate strategiile informale de supraviețuire, „descurcăreala” și ambivalența arhetipului Tricksterului.'
   },
   {
     id: 't1-dim-2',
@@ -75,7 +75,7 @@ export const TABLE_2_DATA: Table2Row[] = [
     id: 't2-faza-1',
     phaseCode: 'Faza I',
     phaseSubtitle: 'Decompresia alostatică și igiena informațională',
-    horizon: 'Orizont tactic imediat: 0–72 ore în criză acută · 0–12 luni structural',
+    horizon: 'Orizont tactic imediat: 0–72 de ore în criză acută · 0–12 luni structural',
     humanBiology:
       'Reducerea uzurii alostatice (McEwen) și a hiperactivării cronice a axei HPA prin scăderea insecurității materiale și birocratice. Protejarea somnului și a atenției prin limitarea expunerii la fluxurile adictive care capturează circuitele dopaminergice în nucleul accumbens restabilește latența temporală necesară deblocării cortexului prefrontal dorsolateral.',
     digitalAndSociospatial:
@@ -109,7 +109,7 @@ export const TABLE_2_DATA: Table2Row[] = [
     digitalAndSociospatial:
       'Reducerea structurală a faliilor sociospațiale dintre centrele metropolitane și periferiile interne și integrarea diasporei în rețelele economice și civice ale țării. Reconstrucția capitalului social de punte (Putnam, 2000) în mediul rural și depășirea familismului amoral (Banfield, 1958) se realizează prin reforma guvernanței cooperativelor agricole (Legea nr. 566/2004, art. 16 și art. 76: director executiv recrutat competitiv, interdicția rudelor sau afinilor până la gradul al III-lea ai administratorului, filtre de integritate și protejarea rambursărilor de TVA).',
     informationalLifestyle:
-      'Asumarea critică și onestă a istoriei naționale în educație și în cultura publică, depășind incapacitatea de a ține doliu și trauma aleasă. Resursele latente din Umbra colectivă și arhetipul Trickster-ului sunt convertite funcțional în agilitate cognitivă și inovație, susținând maturizarea conștiinței civice dincolo de sindromul Puer Aeternus și individuarea colectivă pe axa Ego–Sine.',
+      'Asumarea critică și onestă a istoriei naționale în educație și în cultura publică, depășind incapacitatea de a ține doliu și trauma aleasă. Resursele latente din Umbra colectivă și arhetipul Tricksterului sunt convertite funcțional în agilitate cognitivă și inovație, susținând maturizarea conștiinței civice dincolo de sindromul Puer Aeternus și individuarea colectivă pe axa Ego–Sine.',
     institutionalSystem:
       'Închiderea operațională autentică a justiției și administrației (eliminarea numirilor temporare discreționare din art. 509–510 O.U.G. nr. 57/2019 și profesionalizarea guvernanței corporative O.U.G. nr. 109/2011 / AMEPIP), dublată de reforma art. 182 și art. 281 din Codul de procedură fiscală (Legea nr. 207/2015) prin „penalizarea în oglindă a statului”. Aceasta impune virarea din oficiu, în același cont IBAN, a dobânzilor și penalităților pentru întârzierea rambursării TVA (art. 169 CPF), a concediilor medicale FNUASS (art. 40 O.U.G. nr. 158/2005) și a facturilor din e-Factura (Legea nr. 72/2013), înlăturând blocajele din O.G. nr. 22/2002 și RIL nr. 24/2025 și activând răspunderea solidară a funcționarilor (art. 281 CPF, art. 499–500 Codul administrativ și Decizia CCR nr. 694/2015). Întregul protocol este verificat prin auditul bienal al Curții de Conturi (art. 2 lit. b și art. 28 alin. 2 din Legea nr. 94/1992; Legea nr. 500/2002) și prin auditul științific al cercetătorilor agreați (art. 40 DSA / EDMO / DigComp, KAVI și Serious Games).'
   }
@@ -269,7 +269,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'B',
     authors: 'Peter Sterling și Joseph Eyer, 1988 · Bruce S. McEwen și Eliot Stellar, 1993 · Bruce S. McEwen, 1998 · Robert M. Sapolsky, 2004, 2017',
     domain: 'Neurobiologia stresului',
-    definition: 'Cadrul neurobiologic care distinge între alostazie — menținerea stabilității fiziologice prin schimbare adaptativă (Sterling & Eyer, 1988) — și sarcina sau uzura alostatică (allostatic load, McEwen & Stellar, 1993; McEwen, 1998), definită drept costul fiziologic cumulativ și deteriorarea tisulară și neurală produse de suprasolicitarea cronică a axei de răspuns la stres. În această analiză, conceptul arată cum insecuritatea socioeconomică, impredictibilitatea legislativă și umilința birocratică din Stratul A epuizează rezerva neurocognitivă a cetățenilor înainte de intervenția propagandei externe.',
+    definition: 'Cadrul neurobiologic care distinge între alostazie — menținerea stabilității fiziologice prin schimbare adaptativă (Sterling & Eyer, 1988) — și sarcina sau uzura alostatică (allostatic load, McEwen & Stellar, 1993; McEwen, 1998), definită drept costul fiziologic cumulativ și deteriorarea tisulară și neurală produse de suprasolicitarea cronică a axei de răspuns la stres. În această analiză, conceptul arată cum insecuritatea socioeconomică, imprevizibilitatea legislativă și umilința birocratică din Stratul A epuizează rezerva neurocognitivă a cetățenilor înainte de intervenția propagandei externe.',
     monographContext: 'Epuizează rezerva neurocognitivă a cetățeanului înainte de contactul cu propaganda digitală; reducerea ei este obiectivul primar din Faza I.',
     polarity: 'tension'
   },
@@ -425,7 +425,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
   },
   {
     id: 'arhetipul-trickster',
-    term: 'Arhetipul Trickster-ului și funcția transcendentă',
+    term: 'Arhetipul Tricksterului și funcția transcendentă',
     stratum: 'C',
     authors: 'Carl Gustav Jung, 1916/1960, 1954/1968 · Paul Radin, 1956 · Marie-Louise von Franz, 1972/1995',
     domain: 'Psihologie analitică și antropologie culturală',
@@ -620,7 +620,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     authors: 'Carl Gustav Jung, 1916/1960 · Edward F. Edinger, 1972',
     domain: 'Psihologie analitică',
     definition: 'Capacitatea unui sistem psihic (Jung, 1916/1960) de a menține în conștiință tensiunea dintre două tendințe opuse — teza modernizării instituționale prooccidentale și antiteza identitară a suveranității și tradiției autohtone — fără a suprima niciunul dintre poli, generând o sinteză integratoare superioară pe axa Ego–Sine (Edinger, 1972).',
-    monographContext: 'Mecanismul psihodinamic care permite conversia memoriei istorice defensive și a vitalității Trickster-ului în modernitate organică, conform Figurii 4.',
+    monographContext: 'Mecanismul psihodinamic care permite conversia memoriei istorice defensive și a vitalității Tricksterului în modernitate organică, conform Figurii 4.',
     polarity: 'synthesis'
   },
   {
@@ -668,7 +668,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     term: 'Individuarea colectivă și reconcilierea fondului cu forma',
     stratum: 'C',
     authors: 'Carl Gustav Jung, 1928 · Edward F. Edinger, 1972 · Alexander și Margarete Mitscherlich, 1967',
-    domain: 'Psihologie analitică și filozofia istoriei',
+    domain: 'Psihologie analitică și filosofia istoriei',
     definition: 'Procesul de maturizare istorică prin care o comunitate națională își integrează onest Umbra și traumele totalitare, depășește scindarea dintre Persona mimetică și realitatea informală și își reconstruiește coerența pe axa Ego–Sine.',
     monographContext: 'Încununează Faza a III-a a protocolului, transformând instituțiile democratice din „forme fără fond” în expresia unei modernități organice.',
     polarity: 'synthesis'
@@ -977,7 +977,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-4-3',
         title: 'Decizia strategică: Activarea celor trei filtre de conversie în modernitate organică',
         takeaway:
-          'Resursele latente din Umbra colectivă — memoria istorică defensivă și vitalitatea adaptativă a arhetipului Trickster-ului — nu trebuie reprimate arogant, ci convertite prin funcția transcendentă.',
+          'Resursele latente din Umbra colectivă — memoria istorică defensivă și vitalitatea adaptativă a arhetipului Tricksterului — nu trebuie reprimate arogant, ci convertite prin funcția transcendentă.',
         implication:
           'Statul trebuie să activeze cele trei filtre structurale: legea impersonală dreaptă în Stratul A, discernământul critic și vigilența metacognitivă în Stratul B, pentru a readuce societatea în Cadranul I (+X, +Y).'
       }
@@ -991,7 +991,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-5-1',
         title: 'Mecanismul diagnosticat: Sindromul Puer Aeternus și apărarea maniacală',
         takeaway:
-          'În momentele de criză strategică, o societate epuizată de impredictibilitate instituțională și stres cronic își compensează insecuritatea prin tiparul defensiv Puer Aeternus, așteptarea magică a unui „salvator” providențial și iluzia neutralității izolaționiste.',
+          'În momentele de criză strategică, o societate epuizată de imprevizibilitate instituțională și stres cronic își compensează insecuritatea prin tiparul defensiv Puer Aeternus, așteptarea magică a unui „salvator” providențial și iluzia neutralității izolaționiste.',
         implication:
           'Nostalgia defensivă după dependența pasivă de un stat paternalist tutelar paralizează voința politică și capacitatea de descurajare strategică a statului-țintă.'
       },
@@ -1050,7 +1050,7 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
     id: 'op-faza-1',
     phaseCode: 'Faza I',
     phaseTitle: 'Decompresia alostatică, neutralizarea circuitelor de finanțare (Follow the Money) și încetinirea tehnică a viralității',
-    horizon: 'Fereastra tactică imediată: 0–72 ore în criză acută · 0–12 luni structural',
+    horizon: 'Fereastra tactică imediată: 0–72 de ore în criză acută · 0–12 luni structural',
     targetObjective:
       'Oprirea buclei reactive dezadaptative a Traseului A, scăderea hipercortizolemiei bazale pe axa HPA, întreruperea capturării dopaminergice în nucleul accumbens și blocarea fluxurilor financiare și criptografice ale operațiunilor informaționale.',
     concreteIntervention:
@@ -1078,7 +1078,7 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
     targetObjective:
       'Eliminarea rădăcinii istorice a „formelor fără fond”, consolidarea barierei instituționale în matricea lui Cipolla prin arhitectura alegerii (Thaler & Sunstein) pentru atragerea în Cadranul I al cooperării inteligente și susținerea instituțională a patriotismului constituțional matur.',
     concreteIntervention:
-      'Protocolul se structurează pe patru piloni macrostructurali: închiderea justiției, meritocrația administrativă (prin eliminarea numirilor temporare discreționare de la art. 509–510 din O.U.G. nr. 57/2019), isonomia fiscală și guvernanța policentrică. În cadrul acestor piloni, protocolul instituie două studii de caz paradigmatice de arhitectură a alegerii instituționale (institutional choice architecture, Thaler & Sunstein, 2008): reforma de lege ferenda a art. 182 și art. 281 din Legea nr. 207/2015 privind Codul de procedură fiscală (penalizarea în oglindă a statului, virarea din oficiu a accesoriilor IBAN și răspunderea solidară a funcționarilor conform Deciziei CCR nr. 694/2015), respectiv reforma guvernanței cooperativelor agricole (art. 16 și art. 76 din Legea nr. 566/2004: director executiv independent, interdicția afinilor și protejarea TVA), care reconstruiește capitalul social de punte (Putnam, 2000). Întregul protocol este supus unui mecanism dublu de audit periodic independent: Auditul public extern al performanței realizat bienal de Curtea de Conturi (art. 2 lit. b și art. 28 alin. 2 din Legea nr. 94/1992; Legea nr. 500/2002) și Auditul științific și civic realizat de consorțiile universitare acreditate în calitate de «cercetători agreați» (art. 40 din DSA / EDMO / DigComp, KAVI și Serious Games).',
+      'Protocolul se structurează pe patru piloni macrostructurali: închiderea justiției, meritocrația administrativă (prin eliminarea numirilor temporare discreționare de la art. 509–510 din O.U.G. nr. 57/2019), isonomia fiscală și guvernanța policentrică. În cadrul acestor piloni, protocolul instituie două studii de caz paradigmatice de arhitectură a alegerii instituționale (institutional choice architecture, Thaler & Sunstein, 2008): reforma de lege ferenda a art. 182 și art. 281 din Legea nr. 207/2015 privind Codul de procedură fiscală (penalizarea în oglindă a statului, virarea din oficiu a dobânzilor și penalităților în același cont IBAN și răspunderea solidară a funcționarilor conform Deciziei CCR nr. 694/2015), respectiv reforma guvernanței cooperativelor agricole (art. 16 și art. 76 din Legea nr. 566/2004: director executiv independent, interdicția afinilor și protejarea TVA), care reconstruiește capitalul social de punte (Putnam, 2000). Întregul protocol este supus unui mecanism dublu de audit periodic independent: Auditul public extern al performanței realizat bienal de Curtea de Conturi (art. 2 lit. b și art. 28 alin. 2 din Legea nr. 94/1992; Legea nr. 500/2002) și Auditul științific și civic realizat de consorțiile universitare acreditate în calitate de «cercetători agreați» (art. 40 din DSA / EDMO / DigComp, KAVI și Serious Games).',
     responsibleActors:
       'Parlamentul României, Ministerul Finanțelor și Trezoreria Statului, Curtea de Conturi a României, sistemul judiciar și administrativ, Ministerul Educației, consorțiile universitare acreditate (cercetători agreați conform art. 40 DSA / EDMO), cooperativele agricole și administrația publică locală.'
   }

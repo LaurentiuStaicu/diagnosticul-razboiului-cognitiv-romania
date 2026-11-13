@@ -64,9 +64,9 @@ export const FIGURE_METADATA: Record<
     chapterRef: 'Capitolul 4 · Subcapitolul 4.2',
     pdfPage: 24,
     caption:
-      'În stânga sunt reprezentate energiile psihodinamice refulate în Stratul C: memoria istorică defensivă și vitalitatea adaptativă necanalizată asociată arhetipului Trickster-ului. În absența medierii, aceste resurse alunecă pe traseul inferior, marcat cu roșu, în enantiodromie, cinism și revoltă distructivă împotriva regulilor democratice. Atunci când sunt procesate prin cele trei filtre centrale din Straturile A și B — cadrul legii impersonale drepte cu închidere operațională, discernământul critic și vigilența metacognitivă prefrontală — ele sunt convertite pe axa Ego–Sine în modernitate organică, încredere și cooperare instituțională autonomă.',
+      'În stânga sunt reprezentate energiile psihodinamice refulate în Stratul C: memoria istorică defensivă și vitalitatea adaptativă necanalizată asociată arhetipului Tricksterului. În absența medierii, aceste resurse alunecă pe traseul inferior, marcat cu roșu, în enantiodromie, cinism și revoltă distructivă împotriva regulilor democratice. Atunci când sunt procesate prin cele trei filtre centrale din Straturile A și B — cadrul legii impersonale drepte cu închidere operațională, discernământul critic și vigilența metacognitivă prefrontală — ele sunt convertite pe axa Ego–Sine în modernitate organică, încredere și cooperare instituțională autonomă.',
     methodologicalNote:
-      'Diagrama ilustrează condițiile structurale prin care resursele refulate în Umbra colectivă, respectiv memoria istorică defensivă și vitalitatea adaptativă a arhetipului Trickster-ului, încetează să alimenteze revolta distructivă împotriva regulilor democratice și sunt convertite în modernitate organică.'
+      'Diagrama ilustrează condițiile structurale prin care resursele refulate în Umbra colectivă, respectiv memoria istorică defensivă și vitalitatea adaptativă a arhetipului Tricksterului, încetează să alimenteze revolta distructivă împotriva regulilor democratice și sunt convertite în modernitate organică.'
   },
   5: {
     id: 5,
@@ -88,7 +88,7 @@ export const FIGURE_METADATA: Record<
     chapterRef: 'Capitolul 5 · Subcapitolul 5.2',
     pdfPage: 30,
     caption:
-      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea reactivă defensivă Track A, în stânga, de procesarea deliberativă adaptativă Track B, în dreapta. Pe Traseul A, anxietatea cronică, inhibiția prefrontală și nevoia de închidere cognitivă (seizing și freezing) îi împing pe subiecți spre conformismul de fațadă al Personei mimetice și spre proiecția ostilă a Umbrei colective, într-o buclă de autoamplificare algoritmică. Pe Traseul B — deschis în momentul șocului acut de liderii instituționali, cadrele profesionale și validatorii comunitari, și stabilizat la nivelul populației prin decompresia alostatică și frânele algoritmice din Faza I —, procesarea parcurge etapele adaptative: capacitatea negativă de acceptare a incertitudinii, reactivarea Sistemului 2 în regim de gândire activ deschisă (Rangul 2+ de reflexivitate), conversia constructivă a agilității arhetipului Trickster-ului, discernământul critic în mediere ternară și acțiunea suverană pe axa Ego–Sine.',
+      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea reactivă defensivă Track A, în stânga, de procesarea deliberativă adaptativă Track B, în dreapta. Pe Traseul A, anxietatea cronică, inhibiția prefrontală și nevoia de închidere cognitivă (seizing și freezing) îi împing pe subiecți spre conformismul de fațadă al Personei mimetice și spre proiecția ostilă a Umbrei colective, într-o buclă de autoamplificare algoritmică. Pe Traseul B — deschis în momentul șocului acut de liderii instituționali, cadrele profesionale și validatorii comunitari, și stabilizat la nivelul populației prin decompresia alostatică și frânele algoritmice din Faza I —, procesarea parcurge etapele adaptative: capacitatea negativă de acceptare a incertitudinii, reactivarea Sistemului 2 în regim de gândire activ deschisă (Rangul 2+ de reflexivitate), conversia constructivă a agilității arhetipului Tricksterului, discernământul critic în mediere ternară și acțiunea suverană pe axa Ego–Sine.',
     methodologicalNote:
       'Modelul sistemic al procesării cognitive în criză, fundamentat pe lucrările lui Kruglanski, Kahneman și pe psihologia analitică, evidențiază bifurcarea dintre bucla reactivă de autoamplificare și traseul deliberativ adaptativ de integrare suverană pe axa Ego–Sine.'
   },
@@ -2991,7 +2991,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig4ActiveNode === 'memorie' &&
                   'Memoria istorică defensivă. Neîncrederea cetățeanului român în discursurile oficiale pompoase își are rădăcina într-un reflex istoric sănătos de autoconservare, format în secolele de rezistență în fața imperiilor hegemonice.'}
                 {fig4ActiveNode === 'trickster' &&
-                  'Ambivalența arhetipului Trickster-ului (Jung, 1954/1968; Radin, 1956). În forma sa regresivă se manifestă ca șmecherie cinică și ocolire a legii, dar în dimensiunea sa prospectivă conține agilitate cognitivă, adaptare rapidă și rezistență la îndoctrinarea dogmatică.'}
+                  'Ambivalența arhetipului Tricksterului (Jung, 1954/1968; Radin, 1956). În forma sa regresivă se manifestă ca șmecherie cinică și ocolire a legii, dar în dimensiunea sa prospectivă conține agilitate cognitivă, adaptare rapidă și rezistență la îndoctrinarea dogmatică.'}
                 {fig4ActiveNode === 'filtru-lege' &&
                   'Primul filtru (Stratul A): Cadrul legii impersonale drepte și „insulele de închidere operațională” (Luhmann, 1995, 2004; Ostrom, 1990; Acemoglu & Robinson, 2019). Această formulare rezolvă paradoxul temporal dintre Subcapitolele 4.2 și 6.3: conversia energiilor din Umbră nu așteaptă perfecționarea integrală a statului la capătul Fazei a III-a, ci este amorsată incremental prin insule de predictibilitate administrativă (debirocratizarea din Faza I, achiziții transparente, cooperative funcționale), care generează încrederea civică necesară pentru a susține ulterior reforma macrostructurală în „coridorul îngust”.'}
                 {fig4ActiveNode === 'filtru-istorie' &&
@@ -3584,7 +3584,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
         <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
             <span className="text-xs font-medium text-[#222426]">
-              Regim de co-reglare în șoc acut
+              Regim de coreglare în șoc acut
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
@@ -3600,7 +3600,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Simulare: Șoc acut fără co-reglare (Dominanța buclei Track A)
+                Simulare: Șoc acut fără coreglare (Dominanța buclei Track A)
               </button>
               <button
                 type="button"
@@ -3615,7 +3615,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5]'
                 }`}
               >
-                Simulare: Co-reglare instituțională CERC și Faza I (Activarea Track B)
+                Simulare: Coreglare instituțională CERC și Faza I (Activarea Track B)
               </button>
             </div>
           </div>
@@ -4507,7 +4507,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'bifurcatie' &&
                   'Nodul unic de bifurcație (stresul material acut și policriza). Reprezintă punctul de incidență al șocului cognitiv și socioeconomic. În absența unei pauze metacognitive și a rezervei neurobiologice, presiunea crizei împinge procesarea în mod automat spre reacția defensivă din Track A.'}
                 {fig6SelectedStep === 'punte-cerc' &&
-                  'Puntea de co-reglare instituțională CERC și frânele Fazei I. Deoarece un cetățean aflat în plin șoc acut și cu cortexul prefrontal inhibat nu își poate activa singur capacitatea negativă, deschiderea Traseului B depinde de un eșafodaj extern: calmul și comunicarea empatică a liderilor instituționali, cadrelor profesionale și validatorilor comunitari (protocolul CDC CERC) în primele 0–72h, cuplate cu frânele algoritmice DSA și decompresia alostatică din Faza I.'}
+                  'Puntea de coreglare instituțională CERC și frânele Fazei I. Deoarece un cetățean aflat în plin șoc acut și cu cortexul prefrontal inhibat nu își poate activa singur capacitatea negativă, deschiderea Traseului B depinde de un eșafodaj extern: calmul și comunicarea empatică a liderilor instituționali, cadrelor profesionale și validatorilor comunitari (protocolul CDC CERC) în primele 0–72h, cuplate cu frânele algoritmice DSA și decompresia alostatică din Faza I.'}
                 {fig6SelectedStep === 'anxietate' &&
                   'Anxietatea cronică, inhibiția dlPFC și raționalizarea motivată (Track A). În comunitățile defavorizate (marcate de precaritate), starea de alertă activează amigdala și rețeaua de detecție a relevanței (SN, Menon, 2011), decuplând cortexul prefrontal dorsolateral (dlPFC) și comutând procesarea pe Sistemul 1; simetric, în bulele urbane educate, Sistemul 2 intact este deturnat în raționalizarea motivată a indignării tribale (Stanovich, 2009; Kahan, 2017).'}
                 {fig6SelectedStep === 'nfcc' &&
@@ -4523,7 +4523,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'b2' &&
                   '2. Sistemul 2 și gândirea activ deschisă (Track B). Susținută de decompresia alostatică și de frânele algoritmice din Faza I, reglarea executivă a rețelei prefrontale (dlPFC și vmPFC) reia controlul asupra impulsurilor amigdaliene. Cuplată cu gândirea activ deschisă (actively open-minded thinking), cu smerenia epistemică și cu Rangul 2+ de reflexivitate strategică (Lefebvre), ea previne raționalizarea motivată și permite analiza logică și contextualizarea istorică.'}
                 {fig6SelectedStep === 'b3' &&
-                  '3. Toleranța disonanței și integrarea ingeniozității Trickster (Track B). Individul tolerează contradicțiile inerente realității și recuperează creativ conținuturile umbrei colective — ingeniozitatea adaptativă, adaptabilitatea și umorul subversiv (figura arhetipală a Trickster-ului) transformate din resentiment destructiv în resursă de supraviețuire și inovație.'}
+                  '3. Toleranța disonanței și integrarea ingeniozității Trickster (Track B). Individul tolerează contradicțiile inerente realității și recuperează creativ conținuturile umbrei colective — ingeniozitatea adaptativă, adaptabilitatea și umorul subversiv (figura arhetipală a Tricksterului) transformate din resentiment distructiv în resursă de supraviețuire și inovație.'}
                 {fig6SelectedStep === 'b4' &&
                   '4. Discernământ critic și Grup de lucru (Track B). Medierea semiotică ternară (semn–obiect–interpretant) și discernământul moral extrag comunitatea din captivitatea ipotezelor de bază și o reconstituie ca „grup de lucru” rațional orientat spre realitate (Bion, 1961).'}
                 {fig6SelectedStep === 'b5' &&
@@ -4533,7 +4533,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   'Track A (procesare defensivă): o traiectorie închisă într-o buclă de autoamplificare (R), guvernată de anxietate, intoleranță la ambiguitate (NFCC), conformism mimetic și regresie în ipotezele de bază ale umbrei colective, exploatată de platformele digitale.'}
                 {(fig6SelectedStep === 'trackB' ||
                   (!fig6SelectedStep && fig6ActiveTrack === 'B')) &&
-                  'Track B (procesare adaptativă): o succesiune deliberată de transformări cognitive și psihosociale, deschisă prin puntea de co-reglare instituțională CERC și consolidată pe axa Ego–Sine.'}
+                  'Track B (procesare adaptativă): o succesiune deliberată de transformări cognitive și psihosociale, deschisă prin puntea de coreglare instituțională CERC și consolidată pe axa Ego–Sine.'}
               </p>
             </div>
           </div>
@@ -5318,7 +5318,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig7SelectedNode === 'faza1-1' &&
                   '1.1 Triaj acut 0–72h: CERC și frâne DSA. În primele 72 de ore ale unei crize hibride, oprirea contagiunii amigdaliene se realizează prin protocolul de comunicare empatică și verificabilă CDC CERC, standardizarea probatorie a indicatorilor de manipulare în format STIX/DISARM (DNSC și EDMO/BROD) și activarea frânelor algoritmice de urgență împotriva amplificării artificiale (art. 34–35 DSA).'}
                 {fig7SelectedNode === 'faza1-2' &&
-                  '1.2 Blocarea fluxurilor financiare ilicite (Follow the Money, 24–72h). Cuplarea obligatorie a ordinelor de eliminare a conținutului ilegal (art. 9 din DSA / art. 7 din Legea nr. 50/2024) cu ordinele de furnizare a identității plătitorilor (art. 10 DSA) prin ANCOM, verificarea în timp real a codului mandatarului financiar (CMF) prin AEP/BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025, Regulamentul TTPA 2024/900) și înghețarea în 24–72h a fluxurilor financiare și ale conversiilor din criptoactive în monedă fiduciară (off-ramp) prin ONPCSB, BNR, ASF și PICCJ (art. 33–34 din Legea nr. 129/2019, BARIS, MiCA, Travel Rule).'}
+                  '1.2 Blocarea fluxurilor financiare ilicite (Follow the Money, 24–72h). Cuplarea obligatorie a ordinelor de eliminare a conținutului ilegal (art. 9 din DSA / art. 7 din Legea nr. 50/2024) cu ordinele de furnizare a identității plătitorilor (art. 10 DSA) prin ANCOM, verificarea în timp real a codului mandatarului financiar (CMF) prin AEP/BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025, Regulamentul TTPA 2024/900) și înghețarea în 24–72h a fluxurilor financiare și a conversiilor din criptoactive în monedă fiduciară (off-ramp) prin ONPCSB, BNR, ASF și PICCJ (art. 33–34 din Legea nr. 129/2019, BARIS, MiCA, Travel Rule).'}
                 {fig7SelectedNode === 'faza1-3' &&
                   '1.3 Decompresie alostatică (0–12 luni). Reducerea poverii alostatice cotidiene și refacerea rezervei prefrontale (dlPFC) a cetățenilor prin simplificare administrativă radicală după modelul e-Estonia (principiul Once-Only, interoperabilitate fără ghișeu) și prin garantarea predictibilității serviciilor publice esențiale în comunitățile vulnerabile.'}
                 {fig7SelectedNode === 'poarta1' &&
@@ -5338,7 +5338,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig7SelectedNode === 'faza3-1' &&
                   '3.1 Închidere operațională și isonomie fiscală (3–10 ani). Eliminarea vulnerabilităților de șantaj instituțional și a numirilor interimare perpetue (art. 509–510 O.U.G. 57/2019), profesionalizarea meritocratică a corpului public și instituirea isonomiei fiscale prin „penalizarea în oglindă a statului” (reforma art. 182 și 281 CPF: dobânzi din oficiu în același IBAN și răspundere solidară conform Deciziei CCR 694/2015).'}
                 {fig7SelectedNode === 'faza3-2' &&
-                  '3.2 Guvernanță policentrică (Ostrom, 1990) și solidaritate economică (3–10 ani). Descentralizarea decizională, dezvoltarea unor centre locale autonome de rezolvare a problemelor comunitare și reforma guvernanței cooperativelor agricole (Legea 566/2004, art. 16 și 76: prag de 20 membri, capital variabil, vot democratic și management profesionist) pentru generarea capitalului social de punte (bridging, Putnam).'}
+                  '3.2 Guvernanță policentrică (Ostrom, 1990) și solidaritate economică (3–10 ani). Descentralizarea decizională, dezvoltarea unor centre locale autonome de rezolvare a problemelor comunitare și reforma guvernanței cooperativelor agricole (Legea 566/2004, art. 16 și 76: prag de 20 de membri, capital variabil, vot democratic și management profesionist) pentru generarea capitalului social de punte (bridging, Putnam).'}
                 {fig7SelectedNode === 'faza3-3' &&
                   '3.3 Individuare colectivă și dublu audit independent (3–10 ani). Integrarea critică a umbrei colective și consolidarea axei Ego–Sine (depășirea sindromului „formelor fără fond”), dublată de un mecanism permanent de verificare: auditul financiar-operațional al Curții de Conturi (Legea 94/1992) și auditul științific al consorțiilor universitare („cercetători agreați” art. 40 DSA, utilizând grilele DigComp, KAVI și Serious Games).'}
                 {fig7SelectedNode === 'fronton' &&
