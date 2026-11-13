@@ -31,7 +31,7 @@ export const TABLE_1_DATA: Table1Row[] = [
     stratumA:
       'Polarizare severă între centrele metropolitane prospere și periferiile dezindustrializate sau rurale, adâncită de declinul demografic și emigrația masivă a forței de muncă active. Rezultatul constă în enclave de excluziune socială și anomie, familism amoral (Banfield) și retragerea individualistă în sfera privată a păturilor urbane.',
     stratumB:
-      'Uzură alostatică ridicată (McEwen) și hiperactivarea cronică a axei HPA. Hipercortizolemia induce hipertrofia și hiperreactivitatea amigdalei bazolaterale și a rețelei de detecție a relevanței, concomitent cu inhibiția funcțională a cortexului prefrontal dorsolateral (dlPFC) și comutarea pe Sistemul 1 (Kahneman).',
+      'Uzură alostatică ridicată (McEwen) și hiperactivarea cronică a axei HPA. Hipercortizolemia induce hipertrofia și hiperreactivitatea amigdalei bazolaterale și a rețelei de detecție a relevanței, concomitent cu inhibiția funcțională a cortexului prefrontal dorsolateral (dlPFC) și comutarea pe Sistemul 1 (Kahneman). În paralel, în rândul păturilor urbane educate retrase în servicii private, absența gândirii deschise activ deturnează Sistemul 2 în disraționalitate și raționalizare motivată (Stanovich; Kahan) pentru apărarea statutului de grup.',
     stratumC:
       'Scăderea tensiunii conștiente (abaissement du niveau mental – Janet/Jung) și blocarea sau scindarea axei Ego–Sine colective (Edinger). Această ruptură instalează deflația Eului colectiv, neputința învățată (learned helplessness) și fatalismul defensiv, care alternează cu inflația naționalistă compensatoare.'
   },
@@ -55,14 +55,14 @@ export const TABLE_1_DATA: Table1Row[] = [
     stratumB:
       'Deturnarea fazei de Orientare din bucla OODA (Boyd) prin control reflexiv de rang secund, comutarea în al doilea sistem etic al confruntării (Lefebvre) și regresia la semiotica binară a anihilării (Lotman). Acest proces este accelerat de capturarea adictivă a circuitelor dopaminergice în nucleul accumbens și de contagiunea complexă în bule informaționale închise (Centola).',
     stratumC:
-      'Captivitatea psihologică în bule identitare închise, omogenizarea cognitivă și deteriorarea hărții mentale predictive a realității. În acest cadru de încapsulare algoritmică, grupurile vulnerabilizate adoptă reactiv tipare culturale defensive (Singer & Kimbles) și mecanismul psihodinamic al identificării cu agresorul geopolitic sub masca apărării suveranității.'
+      'Captivitatea psihologică în bule identitare închise, omogenizarea cognitivă și deteriorarea hărții mentale predictive a realității. În acest cadru de încapsulare algoritmică, grupurile vulnerabilizate adoptă reactiv tipare culturale defensive (Singer & Kimbles) și mecanismul psihodinamic al identificării cu agresorul geopolitic (pe fondul angoasei existențiale de abandon) sub masca apărării suveranității.'
   },
   {
     id: 't1-dim-5',
     dimensionNumber: 5,
     dimensionTitle: '5. Dinamica polarizării și răspunsul la criză acută',
     stratumA:
-      'Alunecarea cetățeanului vulnerabil (-X, +Y), sub presiunea de spoliere a actorilor extractivi (+X, -Y) și pe fondul barierei instituționale fisurate, în cadranul comportamentului autodistructiv și al autosabotajului colectiv (-X, -Y) din matricea lui Cipolla. Rezultatul sistemic este paralizia instituțională și vulnerabilizarea strategică a statului-țintă.',
+      'Alunecarea cetățeanului vulnerabil (-X, +Y), sub presiunea endogenă primară a actorilor extractivi interni (+X, -Y) și sub acțiunea de catalizator exogen a războiului cognitiv (prin scontarea hiperbolică a viitorului și revanșa simbolică punitivă), în cadranul comportamentului autodistructiv și al autosabotajului colectiv (-X, -Y) din matricea lui Cipolla. Rezultatul sistemic este paralizia instituțională și vulnerabilizarea strategică a statului-țintă.',
     stratumB:
       'Bifurcarea procesării în nodul de criză acută și blocarea pe Traseul reactiv dezadaptativ (Track A: hiperactivare amigdaliană, adoptare precipitată și înghețare epistemică seizing/freezing, procesare defensivă motivată de protejarea identității de grup, furie și blocaj decizional). Această blocare survine în detrimentul Traseului deliberativ adaptativ (Track B: reglare prefrontală, capacitate negativă și validare epistemică).',
     stratumC:
@@ -83,7 +83,7 @@ export const TABLE_2_DATA: Table2Row[] = [
     informationalLifestyle:
       'Campanii publice de conștientizare a igienei digitale și a mecanismelor de capturare a atenției. Comunicarea oficială arogantă sau alarmistă este înlocuită cu o comunicare strategică de decompresie alostatică bazată pe principiile CDC CERC (Crisis and Emergency Risk Communication), menită să dezamorseze hipervigilența rețelei de detecție a relevanței (Salience Network – SN) și să oprească bucla reactivă a Traseului A.',
     institutionalSystem:
-      'Simplificarea administrativă după modelul e-Estonia și blocarea publicității politice nemarcate sau finanțate din țări terțe prin AEP și BEC (verificarea CMF conform Legii nr. 334/2006, O.U.G. nr. 1/2025 și Regulamentului TTPA 2024/900, art. 13, 15, 17). Concomitent, ONPCSB, BNR și ASF îngheață operativ tranzacțiile suspecte și conversiile cripto off-ramp în temeiul art. 33–34 din Legea nr. 129/2019 (blocare 24h și suspendare 48–72h, interogarea BARIS conform Legii nr. 86/2025, aplicarea O.U.G. nr. 10/2025 / MiCA 2023/1114 și TFR 2023/1113 – Travel Rule, urmate de sesizarea PICCJ).'
+      'Pe palierul structural (0–12 luni), simplificarea administrativă după modelul e-Estonia. Pe palierul de triaj acut (0–72h), interdicția financiară Follow the Money în trei pași: (1) ordinele ANCOM de identificare a plătitorilor pe VLOPs (art. 9 și 10 DSA / Legea nr. 50/2024); (2) verificarea CMF și blocarea publicității politice nemarcate sau din țări terțe prin AEP și BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025 și Regulamentul TTPA 2024/900, art. 13, 15, 17); și (3) înghețarea operativă în 24–72h a tranzacțiilor suspecte și a conversiilor cripto off-ramp prin ONPCSB, BNR și ASF (art. 33–34 Legea nr. 129/2019, interogarea BARIS conform Legii nr. 86/2025, O.U.G. nr. 10/2025, MiCA 2023/1114 și TFR 2023/1113 – Travel Rule, urmate de sesizarea PICCJ).'
   },
   {
     id: 't2-faza-2',
@@ -360,7 +360,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     authors: 'Vladimir Lefebvre, 1982, 2001 · Timothy L. Thomas, 2004',
     domain: 'Psihologie matematică și cibernetică',
     definition: 'Spre deosebire de controlul reflexiv de rang întâi (inducerea tactică în eroare asupra datelor punctuale), controlul reflexiv de rang secund îi furnizează țintei informații selectate strategic, false repere morale și impulsuri emoționale atent calibrate. Prin această intervenție, inițiatorul modifică arhitectura valorică din faza de Orientare a țintei și o comută din primul sistem etic al cooperării procedurale în al doilea sistem etic al confruntării intransigente și al anihilării oponentului (Lefebvre, 1982, 2001).',
-    monographContext: 'Determină cetățeanul capturat cognitiv să ajungă în mod aparent autonom exact la deciziile autodistructive urmărite de inițiatorul operațiunii. În ecosistemul digital contemporan, algoritmii comerciali de recomandare bazați pe deep reinforcement learning automatizează acest proces la scară de masă, menținând utilizatorul la un rang reflexiv inferior (Rangul 0/1) până la activarea reflecției metacognitive de Rang 2+ pe Traseul B.',
+    monographContext: 'Determină cetățeanul capturat cognitiv să ajungă în mod aparent autonom exact la deciziile autodistructive urmărite de inițiatorul operațiunii. Din perspectiva principiului energiei libere (Friston, 2010), el oferă o „scurtătură predictivă” care comprimă artificial incertitudinea, iar în ecosistemul digital contemporan este automatizat la scară de masă de algoritmii comerciali de recomandare (deep reinforcement learning), menținând utilizatorul la un rang reflexiv inferior (Rangul 0/1) până la activarea reflecției metacognitive de Rang 2+ pe Traseul B.',
     polarity: 'tension'
   },
   {
@@ -440,7 +440,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     authors: 'Carlo M. Cipolla, 1976/2011 · Douglass C. North, John Joseph Wallis și Barry R. Weingast, 2009',
     domain: 'Istorie economică și teoria deciziei',
     definition: 'Sistem cartezian bidimensional (Cipolla, 1976/2011) care clasifică acțiunile umane și instituționale după câștigul sau pierderea proprie pe axa X și beneficiul sau dauna societală pe axa Y în patru cadrane: Cadranul I al cooperării inteligente (+X, +Y), Cadranul II al cetățeanului vulnerabil (-X, +Y, helpless), Cadranul IV al actorului extractiv (+X, -Y, bandits) și Cadranul III al autosabotajului colectiv (-X, -Y). Acest Cadran III este sistemic mai periculos decât Cadranul IV deoarece sfidează raționalitatea mijloc–scop.',
-    monographContext: 'Formalizează traiectoria prin care victima spolierii interne din Cadranul II este împinsă de războiul cognitiv vertical în jos, în Cadranul III al autodistrugerii din Figura 5.',
+    monographContext: 'Formalizează traiectoria prin care cetățeanul vulnerabil din Cadranul II (-X, +Y), supus cauzei primare endogene a spolierii interne din Cadranul IV (+X, -Y), este împins de catalizatorul extern al războiului cognitiv — prin scontarea hiperbolică a viitorului și nevoia de revanșă simbolică imediată — vertical în jos, în Cadranul III al autosabotajului colectiv (-X, -Y) din Figura 5.',
     polarity: 'neutral'
   },
   {
@@ -559,7 +559,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'C',
     authors: 'Sándor Ferenczi, 1933/1949 · Anna Freud, 1936/1993',
     domain: 'Psihanaliză clinică și psihopolitică',
-    definition: 'Mecanism de apărare inconștient (Ferenczi, 1933/1949; Anna Freud, 1936/1993) prin care un subiect sau o colectivitate copleșită de angoasă existențială și de neîncredere în propriile instituții își reprimă frica față de o putere agresoare, îi interiorizează discursul și descarcă resentimentul acumulat asupra unor victime-surogat.',
+    definition: 'Mecanism de apărare inconștient (Ferenczi, 1933/1949; Anna Freud, 1936/1993) declanșat de o angoasă existențială de abandon, prin care un subiect sau o colectivitate care percepe propriile instituții ca fiind extractive și incapabile să o protejeze își reprimă teroarea în fața unei puteri agresoare implacabile, îi interiorizează discursul și își descarcă furia acumulată asupra victimei agresiunii, transformată în țap ispășitor (Girard, 1982).',
     monographContext: 'Explică paradoxul psihodinamic prin care segmente dintr-o națiune agresată istoric de Rusia ajung să justifice revizionismul Kremlinului sub masca „păcii” și a „suveranității”.',
     polarity: 'tension'
   },
@@ -832,7 +832,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-0-2',
         title: 'Vulnerabilitatea sistemică: Cauzalitatea recursivă pe trei straturi',
         takeaway:
-          'Operațiunile ostile acționează ca un catalizator exogen oportunist care parazitează vulnerabilitățile endogene preexistente din trei paliere: instituțiile extractive în Stratul A, rezerva neurocognitivă epuizată de stres în Stratul B și tiparele culturale defensive în Stratul C.',
+          'Operațiunile ostile acționează ca un catalizator exogen oportunist care parazitează vulnerabilitățile endogene preexistente din trei paliere: instituțiile extractive în Stratul A, rezerva neurocognitivă epuizată de stres sau deturnată prin raționalizare motivată în Stratul B și tiparele culturale defensive în Stratul C.',
         implication:
           'Campaniile izolate de comunicare strategică sau verificare a faptelor eșuează inevitabil dacă ignoră cauzele instituționale și neurobiologice ale vulnerabilității.'
       },
@@ -914,7 +914,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-3-1',
         title: 'Mecanismul diagnosticat: Colonizarea fazei de Orientare OODA și semioza binară',
         takeaway:
-          'Controlul reflexiv de rang secund țintește faza de Orientare din bucla OODA, comutând cetățeanul din primul sistem etic al cooperării în al doilea sistem etic al confruntării și al logicii binare a anihilării.',
+          'Controlul reflexiv de rang secund — automatizat astăzi prin algoritmii de recomandare și bazat pe „scurtături predictive” (Friston) care reduc artificial incertitudinea — țintește faza de Orientare din bucla OODA, comutând cetățeanul din primul sistem etic al cooperării în al doilea sistem etic al confruntării binare.',
         implication:
           'Odată alterată matricea de Orientare, cetățeanul respinge spontan verificările faptice pentru a-și proteja identitatea și statutul în interiorul grupului de apartenență.'
       },
@@ -952,7 +952,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-4-2',
         title: 'Vulnerabilitatea sistemică: Alunecarea în Cadranul III al matricei lui Cipolla',
         takeaway:
-          'Sub presiunea actorilor extractivi din Cadranul IV (+X, -Y) și pe fondul barierei instituționale fisurate, cetățeanul vulnerabil din Cadranul II (-X, +Y) este împins de războiul cognitiv în Cadranul III al autosabotajului colectiv (-X, -Y).',
+          'Pe fondul cauzei primare endogene — spolierea exercitată de actorii extractivi interni din Cadranul IV (+X, -Y) —, catalizatorul extern al războiului cognitiv exploatează scontarea hiperbolică a viitorului și nevoia de revanșă simbolică a cetățeanului vulnerabil din Cadranul II (-X, +Y), prăbușindu-l în Cadranul III al autosabotajului colectiv (-X, -Y).',
         implication:
           'Conform celei de-a treia legi fundamentale a lui Cipolla, Cadranul III este mai periculos decât Cadranul IV deoarece sfidează raționalitatea utilitaristă, transformând victima în agentul propriei sale ruine.'
       },
@@ -1004,7 +1004,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-6-1',
         title: 'Mecanismul diagnosticat: Secvențialitatea cauzală obligatorie pe modelul Lalonde–Dever',
         takeaway:
-          'Protocolul de reconstrucție trebuie executat strict secvențial: Faza I de triaj cognitiv și financiar acut (0–72h) și decompresie alostatică structurală (0–12 luni), Faza II de validare comunitară, gândire deschisă activă și pregătire preventivă (1–3 ani) și Faza III de închidere operațională, isonomie fiscală și policentricitate (3–10 ani).',
+          'Protocolul de reconstrucție trebuie executat strict secvențial: Faza I de triaj cognitiv și financiar acut (0–72h) și decompresie alostatică structurală (0–12 luni), Faza II de validare comunitară, gândire deschisă activă și pregătire preventivă (1–3 ani) și Faza III de închidere operațională, isonomie fiscală și policentricitate în „coridorul îngust” (3–10 ani).',
         implication:
           'Inversarea fazelor — lansarea de campanii de educație mediatică peste o populație aflată în uzură alostatică și capturare algoritmică — provoacă efectul de bumerang (întărirea paradoxală a convingerii — backfire effect) și adâncește polarizarea.'
       },
@@ -1037,7 +1037,7 @@ export const OPERATIONAL_PROTOCOL_TABLE: InstitutionalProtocolRow[] = [
     targetObjective:
       'Oprirea buclei reactive dezadaptative a Traseului A, scăderea hipercortizolemiei bazale pe axa HPA, întreruperea capturării dopaminergice în nucleul accumbens și blocarea fluxurilor financiare și criptografice ale operațiunilor informaționale.',
     concreteIntervention:
-      'Asocierea sistematică a Ordinelor de eliminare a conținutului ilegal (art. 9 din DSA / art. 7 din Legea nr. 50/2024) cu Ordinele obligatorii de furnizare a informațiilor financiare și a identității plătitorilor (art. 10 din DSA) transmise către VLOPs prin ANCOM, dublată de verificarea codului unic al mandatarului financiar (CMF) și blocarea publicității politice nemarcate sau finanțate din țări terțe prin AEP și BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025 și Regulamentul UE 2024/900 TTPA, art. 13, 15 și 17). Concomitent, ONPCSB, BNR și ASF execută înghețarea operativă în timp real a tranzacțiilor suspecte și blocarea conversiilor cripto off-ramp în temeiul art. 33 și art. 34 din Legea nr. 129/2019 (blocare 24h și suspendare 48–72h, interogarea registrului BARIS conform Legii nr. 86/2025, aplicarea O.U.G. nr. 10/2025 / MiCA 2023/1114 și TFR 2023/1113 – Travel Rule, urmate de sesizarea PICCJ pentru sechestru asigurător). Aceste măsuri se articulează cu standardizarea probatorie STIX/DISARM prin DNSC și hub-ul regional EDMO/BROD, cu comunicarea strategică bazată pe principiile CDC CERC și cu debirocratizarea digitală după modelul e-Estonia.',
+      'Execuție secvențială pe trei pași de interdicție financiară și tehnică: (1) standardizarea probatorie STIX/DISARM prin DNSC și hub-ul regional EDMO/BROD, dublată de comunicarea strategică CDC CERC și de asocierea sistematică de către ANCOM a Ordinelor de eliminare a conținutului ilegal (art. 9 DSA / art. 7 Legea nr. 50/2024) cu Ordinele obligatorii de furnizare a informațiilor financiare și a identității plătitorilor (art. 10 DSA) către VLOPs; (2) verificarea în timp real a codului mandatarului financiar (CMF) și blocarea publicității politice nemarcate sau finanțate din țări terțe prin AEP și BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025 și Regulamentul UE 2024/900 TTPA, art. 13, 15 și 17); și (3) înghețarea operativă în timp real a tranzacțiilor suspecte și blocarea conversiilor cripto off-ramp de către ONPCSB, BNR și ASF în temeiul art. 33–34 din Legea nr. 129/2019 (blocare de drept 24h și suspendare 48–72h, interogarea registrului BARIS conform Legii nr. 86/2025, aplicarea O.U.G. nr. 10/2025, MiCA 2023/1114 și TFR 2023/1113 – Travel Rule, urmate de sesizarea PICCJ pentru sechestru asigurător), completate pe orizontul de 0–12 luni de debirocratizarea digitală după modelul e-Estonia.',
     responsibleActors:
       'ANCOM în calitate de Coordonator al Serviciilor Digitale (DSC, Legea nr. 50/2024), DNSC, AEP și BEC, ONPCSB, BNR, ASF și PICCJ, celulele de criză din CSAT, MAI și MApN, în coordonare directă cu Comisia Europeană și European Digital Media Observatory (EDMO / hub-ul regional BROD).'
   },

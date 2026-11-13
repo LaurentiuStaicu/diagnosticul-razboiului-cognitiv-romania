@@ -203,7 +203,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'control-reflexiv-rang-secund',
-    regex: /(?<!\p{L})(control(?:ul|ului)?\s+reflexiv(?:\s+de\s+rang\s+secund)?)(?!\p{L})/iu
+    regex: /(?<!\p{L})(control(?:ul|ului)?\s+reflexiv(?:\s+de\s+rang\s+secund)?|scurtătur(?:ă|a|i|ii)\s+predictiv(?:ă|e)|principi(?:ul|ului)\s+energiei\s+libere|Rang(?:ul|ului)?\s+2\+\s+de\s+reflexivitate(?:\s+strategică)?)(?!\p{L})/iu
   },
   {
     conceptId: 'inchidere-cognitiva-seizing-freezing',
@@ -271,7 +271,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'matricea-cipolla',
-    regex: /(?<!\p{L})(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+)?(?:a\s+|ale\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla|matricea\s+lui\s+Cipolla)(?!\p{L})/iu
+    regex: /(?<!\p{L})(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+)?(?:a\s+|ale\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla|matricea\s+lui\s+Cipolla|scont(?:are|area|ării)\s+hiperbolic(?:ă|e)(?:\s+a\s+viitorului)?|revanș(?:ă|a|ei)\s+simbolic(?:ă|e)\s+(?:autodistructiv(?:ă|e)|punitiv(?:ă|e))|spiteful\s+punishment)(?!\p{L})/iu
   },
 
   // Stratul C: Psihodinamic, Arhetipal & Axiologic
@@ -309,7 +309,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'identificarea-cu-agresorul',
-    regex: /(?<!\p{L})(identific(?:are|area|ării)\s+cu\s+agresorul(?:\s+geopolitic)?)(?!\p{L})/iu
+    regex: /(?<!\p{L})(identific(?:are|area|ării)\s+cu\s+agresorul(?:\s+geopolitic)?|angoas(?:ă|a|ei)\s+existențial(?:ă|e)\s+de\s+abandon)(?!\p{L})/iu
   },
   {
     conceptId: 'aparare-maniacala-izolationism',

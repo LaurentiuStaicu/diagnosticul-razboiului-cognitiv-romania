@@ -76,7 +76,7 @@ export const FIGURE_METADATA: Record<
     chapterRef: 'Capitolul 4 · Subcapitolul 4.3',
     pdfPage: 27,
     caption:
-      'Presiunea de spoliere sistemică exercitată de actorii extractivi din Cadranul IV (+X, -Y) asupra cetățeanului vulnerabil din Cadranul II (-X, +Y), pe fondul unei bariere instituționale fisurate, creează condițiile de uzură alostatică și resentiment. Intervenția vectorului de război cognitiv deturnează această frustrare legitimă, împingându-l pe cetățeanul vulnerabil vertical în jos, în Cadranul III al autosabotajului colectiv (-X, -Y), unde acțiunile sale antiinstituționale distrug simultan bunul public și propria sa securitate socioeconomică, subminând spațiul cooperării inteligente din Cadranul I (+X, +Y).',
+      'Presiunea de spoliere sistemică exercitată de actorii extractivi din Cadranul IV (+X, -Y) asupra cetățeanului vulnerabil din Cadranul II (-X, +Y), pe fondul unei bariere instituționale fisurate, creează condițiile de uzură alostatică și resentiment. Pe fondul acestei cauze primare endogene, intervenția catalizatorului extern de război cognitiv exploatează scontarea hiperbolică a viitorului și nevoia de revanșă simbolică imediată, împingându-l pe cetățeanul vulnerabil vertical în jos, în Cadranul III al autosabotajului colectiv (-X, -Y), unde acțiunile sale antiinstituționale distrug simultan bunul public și propria sa securitate socioeconomică, subminând spațiul cooperării inteligente din Cadranul I (+X, +Y).',
     methodologicalNote:
       'Adaptarea matricei bidimensionale a lui Carlo M. Cipolla (1976/2011) evidențiază mecanismul prin care presiunea de spoliere sistemică exercitată de actorii extractivi (+X, -Y) și fisurarea barierei instituționale împing cetățeanul vulnerabil (-X, +Y), sub impulsul capturării cognitive externe, în cadranul comportamentului autodistructiv și al autosabotajului colectiv (-X, -Y).'
   },
@@ -1813,7 +1813,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig3SelectedStage === 'orientare' &&
                   'Faza de Orientare (Schwerpunkt-ul lui John Boyd). Matricea interpretativă unde experiența istorică, valorile morale și modelele mentale conferă semnificație datelor brute. Este ținta principală a injecției de control reflexiv.'}
                 {fig3SelectedStage === 'reflexiv' &&
-                  'Controlul reflexiv de rang secund (Lefebvre). Nu livrează simple știri false, ci transferă o matrice de decizie în mintea țintei, determinând-o să aleagă singură opțiunea dorită de agresor crezând că acționează suveran.'}
+                  'Controlul reflexiv de rang secund (Lefebvre), automatizat astăzi prin algoritmii de recomandare (deep reinforcement learning). Nu livrează simple știri false, ci injectează în faza de Orientare o „scurtătură predictivă” (Friston, 2010) și o matrice de decizie care mențin ținta la Rangul 0/1 de reflexivitate, determinând-o să aleagă singură opțiunea dorită de agresor crezând că acționează suveran.'}
                 {fig3SelectedStage === 'decizie' &&
                   'Faza de Decizie sub capturare reflexivă. Inhibarea deliberării prefrontale produce adoptarea precipitată și necritică a unei explicații simpliste (seizing) și înghețarea epistemică (freezing, Kruglanski), refuzând dovezile contrare.'}
                 {fig3SelectedStage === 'actiune' &&
@@ -2279,7 +2279,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[12px] font-bold fill-[#F01E1E]"
                 >
-                  Capturare în revoltă anomizantă
+                  Capturare în revoltă distructivă
                 </text>
               </g>
             </svg>
@@ -2289,7 +2289,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               <div className="flex items-center gap-2">
                 <span className="inline-block w-6 h-0.5 bg-[#F01E1E] border-b border-dashed border-[#F01E1E] shrink-0" />
                 <span className="text-[#222426]">
-                  Regresie în enantiodromie și revoltă anomizantă
+                  Regresie în enantiodromie și revoltă distructivă
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -2792,7 +2792,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig5SelectedQuadrant === 'IV' &&
                   'Cadranul IV (+X, -Y, elitele extractive / banditismul, bandits). Rețelele politico-economice clientelare și birocrațiile parazitare interne (precum și agresorul geopolitic extern) care își însușesc câștiguri substanțiale (+X) prin spolierea bugetelor publice și degradarea instituțiilor (-Y).'}
                 {fig5SelectedQuadrant === 'III' &&
-                  'Cadranul III (-X, -Y, autosabotajul social / iraționalitatea autodistructivă). Crezând că se mută în Cadranul I sau că îi pedepsește exclusiv pe spoliatorii din Cadranul IV, cetățeanul vulnerabil, blocat de T-bar pe traseul cooperării, este împins de vectorul descendent masiv în Cadranul III, unde votul punitiv extrem distruge bunul public (-Y) și propria securitate socioeconomică (-X).'}
+                  'Cadranul III (-X, -Y, autosabotajul social / iraționalitatea autodistructivă). Sub efectul scontării hiperbolice a viitorului și al revanșei simbolice imediate, cetățeanul vulnerabil spoliat de actorii din Cadranul IV crede că se mută în Cadranul I sau că îi pedepsește exclusiv pe spoliatori; în realitate, blocat de bariera instituțională fisurată (T-bar), este împins vertical în jos în Cadranul III, unde votul punitiv extrem distruge simultan bunul public (-Y) și propria securitate socioeconomică (-X).'}
               </p>
             </div>
           </div>
@@ -3666,7 +3666,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'b1' &&
                   '1. Acceptarea incertitudinii (Track B). Punctul de intrare în procesarea adaptativă constă în capacitatea negativă (Bion) — rezistența la impulsul de a închide prematur cogniția (rezistență la NFCC) și acceptarea calmă a stării de necunoscut fără panică. În plin șoc acut, această pauză metacognitivă este susținută în primul rând de calmul și comunicarea verificabilă a liderilor instituționali și a cadrelor profesionale (conform principiilor CDC CERC), care oferă populației un cadru extern de siguranță epistemică.'}
                 {fig6SelectedStep === 'b2' &&
-                  '2. Reactivarea Sistemului 2 și gândirea deschisă activă (Track B). Susținută de decompresia alostatică și de frânele algoritmice din Faza I, reglarea executivă a rețelei prefrontale (dlPFC și vmPFC) reia controlul asupra impulsurilor amigdaliene. Cuplată cu gândirea deschisă activ (actively open-minded thinking) și cu Rangul 2+ de reflexivitate strategică (Lefebvre), ea previne raționalizarea motivată și permite analiza logică și contextualizarea istorică.'}
+                  '2. Reactivarea Sistemului 2 și gândirea deschisă activă (Track B). Susținută de decompresia alostatică și de frânele algoritmice din Faza I, reglarea executivă a rețelei prefrontale (dlPFC și vmPFC) reia controlul asupra impulsurilor amigdaliene. Cuplată cu gândirea deschisă activ (actively open-minded thinking), cu smerenia epistemică și cu Rangul 2+ de reflexivitate strategică (Lefebvre), ea previne raționalizarea motivată și permite analiza logică și contextualizarea istorică.'}
                 {fig6SelectedStep === 'b3' &&
                   '3. Toleranța disonanței și integrarea ingeniozității Trickster (Track B). Individul tolerează contradicțiile inerente realității și recuperează creativ conținuturile umbrei colective — ingeniozitatea adaptativă, adaptabilitatea și umorul subversiv (figura arhetipală a Trickster-ului) transformate din resentiment destructiv în resursă de supraviețuire și inovație.'}
                 {fig6SelectedStep === 'b4' &&
