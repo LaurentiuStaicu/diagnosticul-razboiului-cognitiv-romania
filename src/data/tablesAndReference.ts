@@ -51,11 +51,11 @@ export const TABLE_1_DATA: Table1Row[] = [
     dimensionNumber: 4,
     dimensionTitle: '4. Ecologia informațională și dinamica decizională în bucla OODA',
     stratumA:
-      'Dereglementarea pieței atenției digitale și proliferarea rețelelor de reciclare și disimulare a sursei informaționale prin intermediari (information laundering: ferme de boți, rețele de microinfluenceri coordonați netransparent, canale criptate). Concomitent, ecosistemul digital este poluat cu date sintetice care induc Model Collapse (Shumailov) și Model Autophagy Disorder (Alemohammad) în modelele generative de inteligență artificială.',
+      'Dereglementarea pieței atenției digitale și proliferarea rețelelor de reciclare și disimulare a sursei informaționale prin intermediari (information laundering: ferme de boți, rețele de microinfluenceri coordonați netransparent, canale criptate). Concomitent, ecosistemul digital este poluat deliberat cu date sintetice care induc degradarea matematică a modelelor generative și a sistemelor RAG prin Model Collapse (Shumailov) și Model Autophagy Disorder (Alemohammad).',
     stratumB:
       'Deturnarea fazei de Orientare din bucla OODA (Boyd) prin control reflexiv de rang secund, comutarea în al doilea sistem etic al confruntării (Lefebvre) și regresia la semiotica binară a anihilării (Lotman). Acest proces este accelerat de capturarea adictivă a circuitelor dopaminergice în nucleul accumbens și de contagiunea complexă în bule informaționale închise (Centola).',
     stratumC:
-      'Captivitatea psihologică în bule identitare închise, omogenizarea cognitivă și deteriorarea hărții mentale predictive a realității. În acest cadru se activează reactiv complexele culturale defensive (Singer & Kimbles) și identificarea cu agresorul geopolitic sub masca apărării suveranității.'
+      'Captivitatea psihologică în bule identitare închise, omogenizarea cognitivă și deteriorarea hărții mentale predictive a realității. În acest cadru de încapsulare algoritmică, grupurile vulnerabilizate adoptă reactiv tipare culturale defensive (Singer & Kimbles) și mecanismul psihodinamic al identificării cu agresorul geopolitic sub masca apărării suveranității.'
   },
   {
     id: 't1-dim-5',
@@ -360,7 +360,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     authors: 'Vladimir Lefebvre, 1982, 2001 · Timothy L. Thomas, 2004',
     domain: 'Psihologie matematică și cibernetică',
     definition: 'Spre deosebire de controlul reflexiv de rang întâi (inducerea tactică în eroare asupra datelor punctuale), controlul reflexiv de rang secund îi furnizează țintei informații selectate strategic, false repere morale și impulsuri emoționale atent calibrate. Prin această intervenție, inițiatorul modifică arhitectura valorică din faza de Orientare a țintei și o comută din primul sistem etic al cooperării procedurale în al doilea sistem etic al confruntării intransigente și al anihilării oponentului (Lefebvre, 1982, 2001).',
-    monographContext: 'Determină cetățeanul capturat cognitiv să ajungă în mod aparent autonom exact la deciziile autodistructive urmărite de inițiatorul operațiunii.',
+    monographContext: 'Determină cetățeanul capturat cognitiv să ajungă în mod aparent autonom exact la deciziile autodistructive urmărite de inițiatorul operațiunii. În ecosistemul digital contemporan, algoritmii comerciali de recomandare bazați pe deep reinforcement learning automatizează acest proces la scară de masă, menținând utilizatorul la un rang reflexiv inferior (Rangul 0/1) până la activarea reflecției metacognitive de Rang 2+ pe Traseul B.',
     polarity: 'tension'
   },
   {
@@ -399,7 +399,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'A',
     authors: 'Ilia Shumailov et al., 2024 · Sina Alemohammad et al., 2024',
     domain: 'Inteligență artificială și informatică teoretică',
-    definition: 'Degradarea matematică și îngustarea varianței modelelor generative — cunoscute în literatură drept Model Collapse și Model Autophagy Disorder — atunci când sunt antrenate sau interogate recursiv pe texte și clipuri sintetice clonate de boți, fără infuzie de date umane autentice.',
+    definition: 'Degradarea matematică a distribuțiilor de probabilitate și îngustarea varianței modelelor generative — cunoscute în informatica teoretică drept Model Collapse (Shumailov et al., 2024) și Model Autophagy Disorder (Alemohammad et al., 2024) — atunci când sunt antrenate sau alimentate recursiv (inclusiv prin sisteme RAG și LLM grooming) cu texte și clipuri sintetice clonate de boți, fără infuzie de date umane autentice. În bucla de retroacțiune epistemică om–mașină, această degradare tehnică a infrastructurii digitale se traduce în plan uman prin îngustarea orizontului informațional și deteriorarea hărții mentale predictive a cetățeanului (Friston, 2010).',
     monographContext: 'Exploatat de rețelele Doppelgänger, Matrioșka și Pravda pentru a polua infrastructura epistemică digitală, motoarele de căutare și sistemele RAG.',
     polarity: 'tension'
   },
@@ -599,7 +599,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'B',
     authors: 'Dan M. Kahan, 2013, 2017 · Ziva Kunda, 1990 · Keith E. Stanovich, 2009 · Marilynn B. Brewer, 1999 · Leon Festinger, 1957',
     domain: 'Psihologie politică și știința comunicării',
-    definition: 'Mecanism psihocognitiv (Identity-Protective Cognition, Kahan, 2013, 2017), articulat cu raționamentul motivat (Kunda, 1990) și disraționalitatea (Stanovich, 2009). Prin acest mecanism, subiecții își deturnează resursele analitice ale Sistemului 2 nu pentru a verifica adevărul empiric al unei afirmații, ci pentru a-și proteja statutul emoțional și solidaritatea în interiorul grupului de apartenență (in-group versus out-group, Brewer, 1999; Festinger, 1957).',
+    definition: 'Mecanism psihocognitiv (Identity-Protective Cognition, Kahan, 2013, 2017), articulat cu raționamentul motivat (Kunda, 1990), disraționalitatea și raționalizarea motivată a Sistemului 2 (Motivated System 2 Reasoning / myside bias, Stanovich, 2009). În absența gândirii deschise activ (actively open-minded thinking) și a smereniei epistemice, chiar și subiecții cu o capacitate analitică ridicată își deturnează resursele Sistemului 2 nu pentru a verifica adevărul empiric al unei afirmații, ci pentru a construi justificări sofisticate care să le protejeze statutul emoțional și solidaritatea în interiorul grupului de apartenență (in-group versus out-group, Brewer, 1999; Festinger, 1957).',
     monographContext: 'Transformă respingerea unui fals demonstrabil într-un act de loialitate tribală și explică eșecul campaniilor de verificare a faptelor purtate pe un ton arogant.',
     polarity: 'tension'
   },
@@ -629,7 +629,7 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     stratum: 'C',
     authors: 'Melanie Klein, 1946/1975 · Marie-Louise von Franz, 1970/2000',
     domain: 'Psihanaliză și psihologie politică',
-    definition: 'Mecanism defensiv de negare a realității periculoase (Klein, 1946/1975) și fantezie de autosuficiență prin care conștiința capturată de arhetipul Puer Aeternus neagă amenințarea militară a unui imperiu revizionist și crede că războiul poate fi evitat prin dezarmare, abandonarea aliaților și retragerea într-o „neutralitate suverană” autarhică.',
+    definition: 'Mecanism defensiv de negare a realității periculoase (Klein, 1946/1975) și fantezie compensatorie de autosuficiență prin care o colectivitate refugiată în tiparul defensiv Puer Aeternus (von Franz, 1970/2000) neagă amenințarea militară a unui imperiu revizionist și crede că războiul poate fi evitat prin dezarmare, abandonarea aliaților și retragerea într-o „neutralitate suverană” autarhică.',
     monographContext: 'Servește obiectivul strategic al Kremlinului de a decupla statul-țintă de garanțiile colective NATO și UE și de a-l izola în bilateralism asimetric.',
     polarity: 'tension'
   },
@@ -832,7 +832,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-0-2',
         title: 'Vulnerabilitatea sistemică: Cauzalitatea recursivă pe trei straturi',
         takeaway:
-          'Operațiunile ostile se grefează simultan pe falii și vulnerabilități preexistente din trei paliere: instituțiile extractive în Stratul A, rezerva neurocognitivă epuizată de stres în Stratul B și complexele culturale neintegrate în Stratul C.',
+          'Operațiunile ostile acționează ca un catalizator exogen oportunist care parazitează vulnerabilitățile endogene preexistente din trei paliere: instituțiile extractive în Stratul A, rezerva neurocognitivă epuizată de stres în Stratul B și tiparele culturale defensive în Stratul C.',
         implication:
           'Campaniile izolate de comunicare strategică sau verificare a faptelor eșuează inevitabil dacă ignoră cauzele instituționale și neurobiologice ale vulnerabilității.'
       },
@@ -1004,7 +1004,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-6-1',
         title: 'Mecanismul diagnosticat: Secvențialitatea cauzală obligatorie pe modelul Lalonde–Dever',
         takeaway:
-          'Protocolul de reconstrucție trebuie executat strict secvențial: Faza I de decompresie alostatică și igienă digitală (0–12 luni), Faza II de validare comunitară și pregătire preventivă (1–3 ani) și Faza III de închidere operațională și policentricitate (3–10 ani).',
+          'Protocolul de reconstrucție trebuie executat strict secvențial: Faza I de triaj cognitiv și financiar acut (0–72h) și decompresie alostatică structurală (0–12 luni), Faza II de validare comunitară, gândire deschisă activă și pregătire preventivă (1–3 ani) și Faza III de închidere operațională, isonomie fiscală și policentricitate (3–10 ani).',
         implication:
           'Inversarea fazelor — lansarea de campanii de educație mediatică peste o populație aflată în uzură alostatică și capturare algoritmică — provoacă efectul de bumerang (întărirea paradoxală a convingerii — backfire effect) și adâncește polarizarea.'
       },

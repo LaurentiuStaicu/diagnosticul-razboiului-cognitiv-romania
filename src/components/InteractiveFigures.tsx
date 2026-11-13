@@ -27,7 +27,7 @@ export const FIGURE_METADATA: Record<
     chapterRef: 'Capitolul 1 · Subcapitolul 1.3',
     pdfPage: 8,
     caption:
-      'Deficitele structurale din Stratul A — deficitul de servicii publice, închiderea operațională incompletă a instituțiilor și mediul socioeconomic precar — induc în Stratul B o stare cronică de stres alostatic și hipervigilență amigdaliană, care inhibă deliberarea prefrontală și împinge cetățenii spre comportamente reactive de supraviețuire. Aceste mecanisme neurocognitive se sedimentează în Stratul C sub forma fatalismului defensiv, a neputinței învățate și a neîncrederii cronice în ordinea constituțională, oferind vectorului de război cognitiv suprafețe directe de cuplare și amplificare.',
+      'Deficitele structurale din Stratul A — deficitul de servicii publice, închiderea operațională incompletă a instituțiilor și mediul socioeconomic precar — induc în Stratul B o stare cronică de stres alostatic și hipervigilență amigdaliană, care inhibă deliberarea prefrontală și împinge cetățenii spre comportamente reactive de supraviețuire. Aceste mecanisme neurocognitive se sedimentează în Stratul C sub forma fatalismului defensiv, a neputinței învățate și a neîncrederii cronice în ordinea constituțională, oferind vectorului de război cognitiv un teren vulnerabil pe care îl poate exploata direct și amplifica.',
     methodologicalNote:
       'Modelul cauzal Macro–Micro–Macro (Coleman, 1990; Hedström, 2005) articulează determinanții instituționali și sociospațiali din Stratul A cu mecanismele de uzură alostatică din Stratul B și cu structurile defensive ale inconștientului cultural din Stratul C.'
   },
@@ -39,7 +39,7 @@ export const FIGURE_METADATA: Record<
     chapterRef: 'Capitolul 2 · Subcapitolul 2.2',
     pdfPage: 12,
     caption:
-      'În jumătatea stângă este reprezentată sinteza creștin-seculară europeană, în care principiul demnității umane inalienabile, întemeiat pe conceptul de Imago Dei și pe universalismul drepturilor fundamentale, susține filtrul moral și constituțional al statului de drept, generând modernitate organică și libertate responsabilă. În jumătatea dreaptă este ilustrată operațiunea de disimulare a ideologiei revizioniste a Antilumii (Epstein, 2022), care proiectează la suprafață un camuflaj tradiționalist ortodox și suveranist pentru a ocoli aversiunea istorică a populației-țintă față de Rusia, mascând nucleul operativ real bazat pe inversiune normativă și cinism transgresiv, a cărui finalitate strategică este subordonarea imperială și anomizarea societății vizate.',
+      'În jumătatea stângă este reprezentată sinteza creștin-seculară europeană, în care principiul demnității umane inalienabile, întemeiat pe conceptul de Imago Dei și pe universalismul drepturilor fundamentale, susține filtrul moral și constituțional al statului de drept, generând modernitate organică și libertate responsabilă. În jumătatea dreaptă este ilustrată operațiunea de disimulare a ideologiei revizioniste a Antilumii (Epstein, 2022), care proiectează la suprafață un camuflaj tradiționalist ortodox și suveranist pentru a ocoli aversiunea istorică a populației-țintă față de Rusia, mascând nucleul operativ real bazat pe inversiune normativă și cinism transgresiv, a cărui finalitate strategică este subordonarea imperială și dezintegrarea coeziunii normative a societății vizate.',
     methodologicalNote:
       'Modelul semiotic comparativ evidențiază contrastul dintre antropologia persoanei libere din sinteza creștin-seculară europeană și operațiunea de disimulare axiologică prin care ideologia Antilumii maschează inversiunea normativă sub un camuflaj tradiționalist.'
   },
@@ -64,9 +64,9 @@ export const FIGURE_METADATA: Record<
     chapterRef: 'Capitolul 4 · Subcapitolul 4.2',
     pdfPage: 24,
     caption:
-      'În stânga sunt reprezentate energiile psihodinamice refulate în Stratul C: memoria istorică defensivă și vitalitatea adaptativă necanalizată asociată arhetipului Trickster-ului. În absența medierii, aceste resurse alunecă pe traseul inferior, marcat cu roșu, în enantiodromie, cinism și revoltă anomizantă. Atunci când sunt procesate prin cele trei filtre centrale din Straturile A și B — cadrul legii impersonale drepte cu închidere operațională, discernământul critic și vigilența metacognitivă prefrontală — ele sunt convertite pe axa Ego–Sine în modernitate organică, încredere și cooperare instituțională autonomă.',
+      'În stânga sunt reprezentate energiile psihodinamice refulate în Stratul C: memoria istorică defensivă și vitalitatea adaptativă necanalizată asociată arhetipului Trickster-ului. În absența medierii, aceste resurse alunecă pe traseul inferior, marcat cu roșu, în enantiodromie, cinism și revoltă distructivă împotriva regulilor democratice. Atunci când sunt procesate prin cele trei filtre centrale din Straturile A și B — cadrul legii impersonale drepte cu închidere operațională, discernământul critic și vigilența metacognitivă prefrontală — ele sunt convertite pe axa Ego–Sine în modernitate organică, încredere și cooperare instituțională autonomă.',
     methodologicalNote:
-      'Diagrama ilustrează condițiile structurale prin care resursele refulate în Umbra colectivă, respectiv memoria istorică defensivă și vitalitatea adaptativă a arhetipului Trickster-ului, încetează să alimenteze revolta anomizantă și sunt convertite în modernitate organică.'
+      'Diagrama ilustrează condițiile structurale prin care resursele refulate în Umbra colectivă, respectiv memoria istorică defensivă și vitalitatea adaptativă a arhetipului Trickster-ului, încetează să alimenteze revolta distructivă împotriva regulilor democratice și sunt convertite în modernitate organică.'
   },
   5: {
     id: 5,
@@ -88,7 +88,7 @@ export const FIGURE_METADATA: Record<
     chapterRef: 'Capitolul 5 · Subcapitolul 5.2',
     pdfPage: 30,
     caption:
-      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea defensivă Track A, în stânga, de procesarea adaptativă Track B, în dreapta. În Track A, anxietatea cronică și nevoia de închidere cognitivă — caracterizată prin intoleranță la ambiguitate și urgență decizională — activează persona mimetică și generează o tensiune compensatorie cu umbra colectivă, închisă într-o buclă de autoamplificare algoritmică. În Track B, procesarea parcurge etapele cognitive adaptative: acceptarea incertitudinii, reactivarea Sistemului 2, toleranța disonanței cu recuperarea ingeniozității arhetipului Trickster, discernământul critic și creația suverană, conectată la bază cu axa Ego–Sine.',
+      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea reactivă defensivă Track A, în stânga, de procesarea deliberativă adaptativă Track B, în dreapta. Pe Traseul A, anxietatea cronică, inhibiția prefrontală și nevoia de închidere cognitivă (seizing și freezing) îi împing pe subiecți spre conformismul de fațadă al Personei mimetice și spre proiecția ostilă a Umbrei colective, într-o buclă de autoamplificare algoritmică. Pe Traseul B — deschis în momentul șocului acut de liderii instituționali, cadrele profesionale și validatorii comunitari, și stabilizat la nivelul populației prin decompresia alostatică și frânele algoritmice din Faza I —, procesarea parcurge etapele adaptative: capacitatea negativă de acceptare a incertitudinii, reactivarea Sistemului 2 în regim de gândire deschisă activă (Rangul 2+ de reflexivitate), conversia constructivă a agilității arhetipului Trickster-ului, discernământul critic în mediere ternară și acțiunea suverană pe axa Ego–Sine.',
     methodologicalNote:
       'Modelul sistemic al procesării cognitive în criză, fundamentat pe lucrările lui Kruglanski, Kahneman și pe psihologia analitică, evidențiază bifurcarea dintre bucla reactivă de autoamplificare și traseul deliberativ adaptativ de integrare suverană pe axa Ego–Sine.'
   },
@@ -2319,7 +2319,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig4ActiveNode === 'cooperare' &&
                   'Cooperare instituțională autonomă. Refacerea capitalului social de punte (bridging, Putnam, 2000) și transformarea naționalismului reactiv în patriotism constituțional responsabil.'}
                 {fig4ActiveNode === 'anomizare' &&
-                  'Traseul inferior fără filtru (Enantiodromie și cinism). Atunci când cele trei filtre lipsesc sau energiile din Umbră sunt reprimate arogant, acestea sunt capturate de vectorii de război cognitiv în revoltă anomizantă și autodistrugere socială.'}
+                  'Traseul inferior fără filtru (Enantiodromie și cinism). Atunci când cele trei filtre lipsesc sau energiile din Umbră sunt reprimate arogant, acestea sunt capturate de vectorii de război cognitiv în revoltă distructivă împotriva regulilor democratice și în autodistrugere socială.'}
               </p>
             </div>
           </div>
@@ -3664,9 +3664,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'bucla_algoritmica' &&
                   'Bucla de feedback algoritmic și închiderea fizică (R). Resentimentul umbrei este capturat de algoritmii de optimizare a atenției și de operatorii de război cognitiv, amplificând polarizarea. Săgeata buclei se întoarce fizic la Anxietate cronică ca reacție pozitivă (buclă de autoamplificare – R), autoamplificând criza.'}
                 {fig6SelectedStep === 'b1' &&
-                  '1. Acceptarea incertitudinii (Track B). Punctul de intrare în procesarea adaptativă constă în capacitatea negativă (Bion) — rezistența la impulsul de a închide prematur cogniția (rezistență la NFCC) și acceptarea calmă a stării de necunoscut fără panică.'}
+                  '1. Acceptarea incertitudinii (Track B). Punctul de intrare în procesarea adaptativă constă în capacitatea negativă (Bion) — rezistența la impulsul de a închide prematur cogniția (rezistență la NFCC) și acceptarea calmă a stării de necunoscut fără panică. În plin șoc acut, această pauză metacognitivă este susținută în primul rând de calmul și comunicarea verificabilă a liderilor instituționali și a cadrelor profesionale (conform principiilor CDC CERC), care oferă populației un cadru extern de siguranță epistemică.'}
                 {fig6SelectedStep === 'b2' &&
-                  '2. Reactivarea Sistemului 2 (Track B). Reglarea executivă a rețelei prefrontale (dlPFC și vmPFC), care reia controlul asupra impulsurilor amigdaliene, permițând analiza logică, contextualizarea istorică și decuplarea de stimulii virali extremi.'}
+                  '2. Reactivarea Sistemului 2 și gândirea deschisă activă (Track B). Susținută de decompresia alostatică și de frânele algoritmice din Faza I, reglarea executivă a rețelei prefrontale (dlPFC și vmPFC) reia controlul asupra impulsurilor amigdaliene. Cuplată cu gândirea deschisă activ (actively open-minded thinking) și cu Rangul 2+ de reflexivitate strategică (Lefebvre), ea previne raționalizarea motivată și permite analiza logică și contextualizarea istorică.'}
                 {fig6SelectedStep === 'b3' &&
                   '3. Toleranța disonanței și integrarea ingeniozității Trickster (Track B). Individul tolerează contradicțiile inerente realității și recuperează creativ conținuturile umbrei colective — ingeniozitatea adaptativă, adaptabilitatea și umorul subversiv (figura arhetipală a Trickster-ului) transformate din resentiment destructiv în resursă de supraviețuire și inovație.'}
                 {fig6SelectedStep === 'b4' &&
@@ -4205,7 +4205,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig7SelectedNode === 'faza1' &&
-                  'Faza I · Orizont tactic imediat, 0–72h în criză / 0–12 luni structural. Oprește bucla reactivă din Track A prin comunicare strategică CDC CERC, debirocratizare după modelul e-Estonia, standardizare probatorie STIX/DISARM (DNSC și EDMO/BROD), cuplarea ordinelor de eliminare (art. 9 DSA / art. 7 Legea 50/2024) cu ordinele de identificare a plătitorilor (art. 10 DSA) prin ANCOM, verificarea CMF prin AEP/BEC (Legea 334/2006, O.U.G. 1/2025, Regulamentul TTPA 2024/900) și înghețarea în 24–72h a tranzacțiilor și conversiilor cripto off-ramp prin ONPCSB, BNR, ASF și PICCJ (art. 33–34 Legea 129/2019, BARIS, MiCA, Travel Rule).'}
+                  'Faza I · Orizont tactic imediat, 0–72h în criză / 0–12 luni structural. Oprește bucla reactivă din Track A prin comunicare strategică CDC CERC, debirocratizare după modelul e-Estonia, standardizare probatorie STIX/DISARM (DNSC și EDMO/BROD), asocierea sistematică a ordinelor de eliminare (art. 9 DSA / art. 7 Legea 50/2024) cu ordinele de identificare a plătitorilor (art. 10 DSA) prin ANCOM, verificarea CMF prin AEP/BEC (Legea 334/2006, O.U.G. 1/2025, Regulamentul TTPA 2024/900) și înghețarea în 24–72h a tranzacțiilor și conversiilor cripto off-ramp prin ONPCSB, BNR, ASF și PICCJ (art. 33–34 Legea 129/2019, BARIS, MiCA, Travel Rule).'}
                 {fig7SelectedNode === 'faza2' &&
                   'Faza II · Orizont operațional mediu, 1–3 ani. Odată ce cortexul prefrontal își recapătă disponibilitatea funcțională, Faza a II-a reconstruiește faza de Orientare din bucla OODA prin trei piloni: validarea comunitară empatică în infrastructura asociativă de proximitate, pregătirea preventivă prebunking calibrată pe curba uitării a lui Ebbinghaus și reconcilierea filtrului moral creștin-secular.'}
                 {fig7SelectedNode === 'faza3' &&
