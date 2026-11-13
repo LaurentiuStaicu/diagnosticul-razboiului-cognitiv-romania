@@ -55,10 +55,6 @@ function findMatchingBibliographyItems(citationText: string): BibliographyItem[]
     'stratum',
     'stratul',
     'track',
-    'grup',
-    'lucru',
-    'bază',
-    'ipoteza',
     'the',
     'basic',
     'laws',
@@ -73,13 +69,29 @@ function findMatchingBibliographyItems(citationText: string): BibliographyItem[]
 
   if (tokens.length === 0) return [];
 
-  return BIBLIOGRAPHY_DATA.filter((item) => {
+  const yearMatches = citationText.match(/\b(18\d{2}|19\d{2}|20\d{2})\b/g) || [];
+
+  const matched = BIBLIOGRAPHY_DATA.filter((item) => {
     const itemAuthorsLower = item.authors.toLowerCase();
     return tokens.some((tok) => {
+      if (tok === 'cogniție' || tok === 'manipulare') {
+        return itemAuthorsLower.includes('cogniție și manipulare');
+      }
       const regex = new RegExp(`\\b${tok}\\b`, 'i');
       return regex.test(itemAuthorsLower);
     });
   });
+
+  if (yearMatches.length > 0 && matched.length > 1) {
+    const exactYearFiltered = matched.filter((item) =>
+      yearMatches.some((y) => item.year.includes(y))
+    );
+    if (exactYearFiltered.length > 0) {
+      return exactYearFiltered;
+    }
+  }
+
+  return matched;
 }
 
 interface ParsedHashTarget {

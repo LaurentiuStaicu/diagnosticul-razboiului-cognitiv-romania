@@ -280,26 +280,31 @@ export const TablesAndRegionalView: React.FC = () => {
                   {filteredTable2.map((row) => (
                     <tr key={row.id} className="align-top hover:bg-[#E5B822]/10 transition-colors">
                       <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
-                        <div className="text-xs font-mono font-bold text-[#222426] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          {row.phaseCode} · {row.horizon}
+                        <div className="mb-1.5 pb-1 border-b border-[#8C9BA5]">
+                          <div className="text-xs font-mono font-bold text-[#222426]">
+                            {row.phaseCode} · Determinant I · Rezervă neurobiologică
+                          </div>
+                          <div className="text-[11px] font-mono text-[#6E7376] mt-0.5">
+                            {row.horizon}
+                          </div>
                         </div>
                         {row.humanBiology}
                       </td>
                       <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          Determinant II · Mediu
+                          {row.phaseCode} · Determinant II · Mediu digital și sociospațial
                         </div>
                         {row.digitalAndSociospatial}
                       </td>
                       <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          Determinant III · Stil de viață și axiologie
+                          {row.phaseCode} · Determinant III · Stil de viață și filtru axiologic
                         </div>
                         {row.informationalLifestyle}
                       </td>
                       <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
                         <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          Determinant I · Sistem instituțional
+                          {row.phaseCode} · Determinant IV · Sistem instituțional și constituțional
                         </div>
                         {row.institutionalSystem}
                       </td>

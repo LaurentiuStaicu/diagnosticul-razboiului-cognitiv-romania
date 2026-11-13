@@ -320,6 +320,10 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
     regex: /(?<!\p{L})(capacit(?:ate|atea|ății|ăți)\s+negativ(?:ă|e))(?!\p{L})/iu
   },
   {
+    conceptId: 'ipoteze-baza-grup-lucru-bion',
+    regex: /(?<!\p{L})(ipotezel(?:e|or)\s+de\s+bază(?:\s+ale\s+lui\s+Bion)?|ipotez(?:a|ei)\s+de\s+bază\s+a\s+(?:dependenței|împerecherii\s+mesianice)|ipotez(?:a|ei)\s+de\s+bază\s+luptă-sau-fugi|grup(?:ul|ului)?\s+de\s+lucru)(?!\p{L})/iu
+  },
+  {
     conceptId: 'puer-aeternus',
     regex: /(?<!\p{L})(Puer\s+Aeternus|stat(?:ul|ului)?\s+paternalist\s+tutelar)(?!\p{L})/iu
   },
