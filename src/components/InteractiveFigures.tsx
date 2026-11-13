@@ -5034,7 +5034,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
-                  Imago Dei, proairesis și autonomie funcțională
+                  Imago Dei, discernământ moral și autonomie
                 </text>
               </g>
 
