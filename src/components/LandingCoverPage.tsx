@@ -36,7 +36,7 @@ const COVER_BLOCK_INFO: Record<
     badge: 'STRATUL B · NEUROCOGNITIV ȘI CIBERNETIC',
     title: 'Uzura alostatică, raționalizarea motivată și capturarea buclei OODA',
     synthesis:
-      'Investighează dublul mecanism neurocognitiv al vulnerabilității — inhibiția funcțională a cortexului prefrontal dorsolateral (dlPFC) și comutarea pe Sistemul 1 reactiv în mediile precarizate, respectiv deturnarea Sistemului 2 în disraționalitate și raționalizare motivată (Stanovich; Kahan) în bulele urbane educate —, alături de colonizarea fazei de Orientare din bucla OODA prin control reflexiv de rang secund (Lefebvre) și poluare algoritmică.',
+      'Investighează dublul mecanism neurocognitiv al vulnerabilității — inhibiția funcțională a cortexului prefrontal dorsolateral (dlPFC) și comutarea pe Sistemul 1 reactiv în mediile marcate de precaritate, respectiv deturnarea Sistemului 2 în disraționalitate și raționalizare motivată (Stanovich; Kahan) în bulele urbane educate —, alături de colonizarea fazei de Orientare din bucla OODA prin control reflexiv de rang secund (Lefebvre) și poluare algoritmică.',
     chapterLabel: 'Capitolul 3',
     chapterHash: '#pasul-8',
     figureLabel: 'Figura 3',

@@ -88,7 +88,7 @@ export const FIGURE_METADATA: Record<
     chapterRef: 'Capitolul 5 · Subcapitolul 5.2',
     pdfPage: 30,
     caption:
-      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea reactivă defensivă Track A, în stânga, de procesarea deliberativă adaptativă Track B, în dreapta. Pe Traseul A, anxietatea cronică, inhibiția prefrontală și nevoia de închidere cognitivă (seizing și freezing) îi împing pe subiecți spre conformismul de fațadă al Personei mimetice și spre proiecția ostilă a Umbrei colective, într-o buclă de autoamplificare algoritmică. Pe Traseul B — deschis în momentul șocului acut de liderii instituționali, cadrele profesionale și validatorii comunitari, și stabilizat la nivelul populației prin decompresia alostatică și frânele algoritmice din Faza I —, procesarea parcurge etapele adaptative: capacitatea negativă de acceptare a incertitudinii, reactivarea Sistemului 2 în regim de gândire deschisă activă (Rangul 2+ de reflexivitate), conversia constructivă a agilității arhetipului Trickster-ului, discernământul critic în mediere ternară și acțiunea suverană pe axa Ego–Sine.',
+      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea reactivă defensivă Track A, în stânga, de procesarea deliberativă adaptativă Track B, în dreapta. Pe Traseul A, anxietatea cronică, inhibiția prefrontală și nevoia de închidere cognitivă (seizing și freezing) îi împing pe subiecți spre conformismul de fațadă al Personei mimetice și spre proiecția ostilă a Umbrei colective, într-o buclă de autoamplificare algoritmică. Pe Traseul B — deschis în momentul șocului acut de liderii instituționali, cadrele profesionale și validatorii comunitari, și stabilizat la nivelul populației prin decompresia alostatică și frânele algoritmice din Faza I —, procesarea parcurge etapele adaptative: capacitatea negativă de acceptare a incertitudinii, reactivarea Sistemului 2 în regim de gândire activ deschisă (Rangul 2+ de reflexivitate), conversia constructivă a agilității arhetipului Trickster-ului, discernământul critic în mediere ternară și acțiunea suverană pe axa Ego–Sine.',
     methodologicalNote:
       'Modelul sistemic al procesării cognitive în criză, fundamentat pe lucrările lui Kruglanski, Kahneman și pe psihologia analitică, evidențiază bifurcarea dintre bucla reactivă de autoamplificare și traseul deliberativ adaptativ de integrare suverană pe axa Ego–Sine.'
   },
@@ -1019,7 +1019,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig1SelectedNode === 'fatalism' &&
                   'Stratul C: Expresia în inconștientul cultural. Scăderea tensiunii conștiente (abaissement du niveau mental, Janet și Jung) și blocarea axei Ego–Sine (Edinger) produc oscilația între neputința învățată (Seligman), ipotezele de bază regresive (Bion) și inflația defensivă compensatoare.'}
                 {fig1SelectedNode === 'filtru-moral' &&
-                  'Stratul C (Determinantul III Lalonde–Dever): Filtrul valorilor morale creștin-seculare și stilul de viață asociativ. În stare integră, antropologia patristică a demnității umane (Imago Dei) reconciliată cu universalismul secular protejează conștiința civică. În condiții de război cognitiv, vectorul ostil scurtcircuitează acest filtru prin instrumentalizarea etnofiletistă și inversiunea normativă.'}
+                  'Stratul C (Determinantul III Lalonde–Dever): Filtrul valorilor morale creștin-seculare și stilul de viață asociativ. În stare integră, antropologia patristică a demnității umane (Imago Dei) reconciliată cu universalismul secular protejează conștiința civică. În condiții de război cognitiv, actorul ostil scurtcircuitează acest filtru prin instrumentalizarea etnofiletistă și inversiunea normativă.'}
                 {fig1SelectedNode === 'vector' &&
                   'Vectorul de război cognitiv extern nu creează din nimic vulnerabilitățile societății-țintă, ci se grefează parazitar pe faliile și vulnerabilitățile preexistente din Straturile A, B și C, atunci când eșecul de reprezentare al partidelor tradiționale lasă un vid politic pe care operațiunile de control reflexiv îl deturnează spre ținte false.'}
               </p>
@@ -1244,7 +1244,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
-                  Autonomie suverană în alianțele euro-atlantice
+                  Autonomie suverană în alianțele euroatlantice
                 </text>
               </g>
 
@@ -1640,13 +1640,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig2Inspect === 'sinteza-stanga' &&
                   'Sinteza creștin-seculară europeană unește antropologia patristică a persoanei libere create după chipul divin (Imago Dei și discernământul proairesis — Berdiaev, Stăniloae, Kalaitzidis) cu domnia legii impersonale și autonomia judecății critice în societatea postseculară (Habermas, Taylor, Lefebvre). Dezbaterile dintre etica conservatoare și secularismul modern se rezolvă pașnic în primul sistem etic, generând modernitate organică.'}
                 {fig2Inspect === 'falsificare-ortodoxie' &&
-                  'Falsificarea I: Etnofiletismul Russkii Mir. Pentru a ocoli aversiunea istorică a românilor față de imperialismul rus (cele 12 invazii, răpirea Basarabiei, Tezaurul și Gulagul), propaganda proiectează o mască pseudo-ortodoxă care substituie universalismul hristic (Imago Dei) cu religia militaristă de stat a „Lumii Ruse” — o falsificare mimetică (Soloviov, 1900/1994) condamnată ca erezie etnofiletistă la Sinodul de la Constantinopol din 1872.'}
+                  'Falsificarea I: Etnofiletismul Russkii Mir. Pentru a ocoli aversiunea istorică a românilor față de imperialismul rus (cele 12 invazii, răpirea Basarabiei, Tezaurul și Gulagul), propaganda proiectează o mască pseudoortodoxă care substituie universalismul hristic (Imago Dei) cu religia militaristă de stat a „Lumii Ruse” — o falsificare mimetică (Soloviov, 1900/1994) condamnată ca erezie etnofiletistă la Sinodul de la Constantinopol din 1872.'}
                 {fig2Inspect === 'falsificare-suveranitate' &&
                   'Falsificarea II: Falsul suveranism izolaționist. Sub sloganul apărării suveranității naționale împotriva instituțiilor europene, operațiunea parazitează dezbaterile legitime din democrația constituțională pentru a promova ieșirea din arhitectura de securitate NATO și UE, transformând patriotismul într-un instrument de dezarmare strategică a statului-țintă.'}
                 {fig2Inspect === 'nucleu-antimir' &&
                   'Nucleul operativ real: Inversiunea normativă a Antilumii (Antimir — Epstein, 2022) și cinismul stării Bobok (Dostoievski, 1873). Sub camuflajul tradiționalist, regimul operativ real răstoarnă semnificația conceptelor fundamentale (războiul de agresiune este numit „pace”, suveranitatea statelor vecine este tratată drept „anomalie”) și cultivă convingerea cinică că adevărul și legea sunt simple ficțiuni ipocrite.'}
                 {fig2Inspect === 'retele-spalare' &&
-                  'Arhitectura în 3 paliere de spălare informațională (information laundering): (1) laboratorul ideologic și de informații de la Moscova (Clubul Izborsk, Institutul Tsargrad, SVR/GRU/FSB); (2) hub-urile intermediare și rețelele de proxy-uri (Voice of Europe, Portal Kombat, Pravda); (3) ecosistemul de amplificare sintetică și micro-targetare algoritmică (operațiunea Doppelgänger, ferme de boți și rețele TikTok/Telegram).'}
+                  'Arhitectura în 3 paliere de spălare informațională (information laundering): (1) laboratorul ideologic și de informații de la Moscova (Clubul Izborsk, Institutul Tsargrad, SVR/GRU/FSB); (2) hub-urile intermediare și rețelele de proxy-uri (Voice of Europe, Portal Kombat, Pravda); (3) ecosistemul de amplificare sintetică și microtargetare algoritmică (operațiunea Doppelgänger, ferme de boți și rețele TikTok/Telegram).'}
                 {fig2Inspect === 'subordonare' &&
                   'Finalitatea strategică: Subordonarea imperială și anomia. Prin compromiterea coeziunii normative interne și decuplarea României de garanțiile colective occidentale, statul-țintă este împins într-o zonă gri de insecuritate și bilateralism asimetric în fața agresiunii revizioniste.'}
               </p>
@@ -2388,19 +2388,19 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig3SelectedStage === 'primul-sistem' &&
                   'Primul sistem etic (Lefebvre, 1982, 2001). Cadrul axiologic al democrației constituționale în care compromisul legal și dialogul sunt privite ca virtuți cardinale, iar adversarul politic rămâne un concurent legitim în interiorul statului de drept.'}
                 {fig3SelectedStage === 'poluare-mad' &&
-                  'Poluarea sintetică (Model Collapse / Model Autophagy Disorder – MAD, Shumailov et al., 2024; Alemohammad et al., 2024) și capturarea dopaminergică pe receptorii D2 (Subcapitolul 3.3). Ecosistemul informațional este saturat cu conținut generat sintetic și optimizat prin programe de întărire cu rată variabilă (Skinner, 1953) pentru a exploata eroarea de predicție a recompensei (Schultz et al., 1997), compromițând calitatea datelor încă de la intrarea în faza de Observare.'}
+                  'Poluarea sintetică (Model Collapse / Model Autophagy Disorder – MAD, Shumailov et al., 2024; Alemohammad et al., 2024) și capturarea dopaminergică pe receptorii D2 (Subcapitolul 3.3). Ecosistemul informațional este saturat cu conținut generat sintetic și optimizat prin programe de întărire cu rată variabilă (Skinner, 1953) pentru a exploata eroarea de predicție a recompensei (Schultz, 1998, 2016), compromițând calitatea datelor încă de la intrarea în faza de Observare.'}
                 {fig3SelectedStage === 'observare' &&
                   'Faza de Observare. Fluxul informațional brut este capturat algoritmic prin optimizarea retenției pe platformele digitale, inundat de dezinformare și conținut sintetic menit să provoace reacții afective primare.'}
                 {fig3SelectedStage === 'orientare' &&
                   'Faza de Orientare (Schwerpunkt-ul lui John Boyd). Matricea interpretativă unde experiența istorică, valorile morale și modelele mentale conferă semnificație datelor brute. Sub control reflexiv activ, ținta este menținută la Rangul 0/1 de reflexivitate (reacție oarbă la stimul); în regim de reziliență, cetățeanul operează la Rangul 2+ de reflexivitate (conștientizarea arhitecturii de manipulare și mediere ternară).'}
                 {fig3SelectedStage === 'reflexiv' &&
-                  'Controlul reflexiv de rang secund (Lefebvre), automatizat astăzi prin algoritmii de recomandare (deep reinforcement learning). Nu livrează simple știri false, ci injectează în faza de Orientare o „scurtătură predictivă” (Friston, 2010) și o matrice de decizie care mențin ținta la Rangul 0/1 de reflexivitate, determinând-o să aleagă singură opțiunea dorită de agresor crezând că acționează suveran.'}
+                  'Controlul reflexiv de rang secund (Lefebvre), automatizat astăzi prin algoritmii de recomandare (deep reinforcement learning). Nu livrează simple știri false, ci injectează în faza de Orientare o euristică predictivă simplificatoare (o «scurtătură predictivă», Friston, 2010) și o matrice de decizie care mențin ținta la Rangul 0/1 de reflexivitate, determinând-o să aleagă singură opțiunea dorită de agresor crezând că acționează suveran.'}
                 {fig3SelectedStage === 'decizie' &&
                   'Faza de Decizie sub capturare reflexivă. Inhibarea deliberării prefrontale produce adoptarea precipitată și necritică a unei explicații simpliste (seizing) și înghețarea epistemică (freezing, Kruglanski), refuzând dovezile contrare.'}
                 {fig3SelectedStage === 'actiune' &&
-                  'Faza de Acțiune. Traducerea deciziei în comportamente polarizante, boicot instituțional sau conflict social anti-sistem, alimentând bucla cibernetică de reacție.'}
+                  'Faza de Acțiune. Traducerea deciziei în comportamente polarizante, boicot instituțional sau conflict social antisistem, alimentând bucla cibernetică de reacție.'}
                 {fig3SelectedStage === 'contagiune' &&
-                  'Contagiunea complexă prin punți largi (wide bridges, Centola, 2018). Adoptarea comportamentelor politice riscante și a polarizării extreme necesită întărire socială convergentă din surse multiple; roiurile de boți și micro-influencerii coordonați fabrică artificial iluzia unui consens majoritar de proximitate.'}
+                  'Contagiunea complexă prin punți largi (wide bridges, Centola, 2018). Adoptarea comportamentelor politice riscante și a polarizării extreme necesită întărire socială convergentă din surse multiple; roiurile de boți și microinfluencerii coordonați fabrică artificial iluzia unui consens majoritar de proximitate.'}
                 {fig3SelectedStage === 'binar' &&
                   'Compresia în sistemul binar fracturat (al doilea sistem etic). Prăbușirea nuanțelor și a spațiului de mediere într-o dihotomie maniheică între poporul pur (victime) și trădători (dușmani ce trebuie anihilați).'}
               </p>
@@ -2993,7 +2993,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig4ActiveNode === 'trickster' &&
                   'Ambivalența arhetipului Trickster-ului (Jung, 1954/1968; Radin, 1956). În forma sa regresivă se manifestă ca șmecherie cinică și ocolire a legii, dar în dimensiunea sa prospectivă conține agilitate cognitivă, adaptare rapidă și rezistență la îndoctrinarea dogmatică.'}
                 {fig4ActiveNode === 'filtru-lege' &&
-                  'Primul filtru (Stratul A): Cadrul legii impersonale drepte și „insulele de închidere operațională” (Luhmann, 1995, 2004; Ostrom, 1990; Acemoglu & Robinson, 2019). Această formulare rezolvă paradoxul temporal dintre Subcapitolele 4.2 și 6.3: conversia energiilor din Umbră nu așteaptă perfecționarea integrală a statului la capătul Fazei a III-a, ci este amorsată incremental prin insule de predictibilitate administrativă (debirocratizarea din Faza I, achiziții transparente, cooperative funcționale), care generează încrederea civică necesară pentru a susține ulterior reforma macro-structurală în „coridorul îngust”.'}
+                  'Primul filtru (Stratul A): Cadrul legii impersonale drepte și „insulele de închidere operațională” (Luhmann, 1995, 2004; Ostrom, 1990; Acemoglu & Robinson, 2019). Această formulare rezolvă paradoxul temporal dintre Subcapitolele 4.2 și 6.3: conversia energiilor din Umbră nu așteaptă perfecționarea integrală a statului la capătul Fazei a III-a, ci este amorsată incremental prin insule de predictibilitate administrativă (debirocratizarea din Faza I, achiziții transparente, cooperative funcționale), care generează încrederea civică necesară pentru a susține ulterior reforma macrostructurală în „coridorul îngust”.'}
                 {fig4ActiveNode === 'filtru-istorie' &&
                   'Al doilea filtru (Stratul B). Discernământul critic și asumarea adevărului istoric, care deconstruiesc proiecțiile paranoide prin separarea tradiției spirituale autentice de falsificările etnofiletiste și totalitare.'}
                 {fig4ActiveNode === 'filtru-meta' &&
@@ -4209,7 +4209,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* B2: 2. Sistemul 2 și gândire deschisă activă (y=252..296) */}
+                {/* B2: 2. Sistemul 2 și gândire activ deschisă (y=252..296) */}
                 <g
                   onClick={() => {
                     setFig6InterventionActive(true);
@@ -4235,7 +4235,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[11px] font-bold fill-[#222426]"
                   >
-                    2. Sistemul 2 și gândire deschisă activă
+                    2. Sistemul 2 și gândire activ deschisă
                   </text>
                   <text
                     x="690"
@@ -4509,7 +4509,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'punte-cerc' &&
                   'Puntea de co-reglare instituțională CERC și frânele Fazei I. Deoarece un cetățean aflat în plin șoc acut și cu cortexul prefrontal inhibat nu își poate activa singur capacitatea negativă, deschiderea Traseului B depinde de un eșafodaj extern: calmul și comunicarea empatică a liderilor instituționali, cadrelor profesionale și validatorilor comunitari (protocolul CDC CERC) în primele 0–72h, cuplate cu frânele algoritmice DSA și decompresia alostatică din Faza I.'}
                 {fig6SelectedStep === 'anxietate' &&
-                  'Anxietatea cronică, inhibiția dlPFC și raționalizarea motivată (Track A). În periferiile precarizate, starea de alertă activează amigdala și rețeaua de detecție a relevanței (SN, Menon, 2011), decuplând cortexul prefrontal dorsolateral (dlPFC) și comutând procesarea pe Sistemul 1; simetric, în bulele urbane educate, Sistemul 2 intact este deturnat în raționalizarea motivată a indignării tribale (Stanovich, 2009; Kahan, 2017).'}
+                  'Anxietatea cronică, inhibiția dlPFC și raționalizarea motivată (Track A). În comunitățile defavorizate (marcate de precaritate), starea de alertă activează amigdala și rețeaua de detecție a relevanței (SN, Menon, 2011), decuplând cortexul prefrontal dorsolateral (dlPFC) și comutând procesarea pe Sistemul 1; simetric, în bulele urbane educate, Sistemul 2 intact este deturnat în raționalizarea motivată a indignării tribale (Stanovich, 2009; Kahan, 2017).'}
                 {fig6SelectedStep === 'nfcc' &&
                   'Nevoia de închidere cognitivă (NFCC, Need for Cognitive Closure). Sub presiunea anxietății, individul manifestă o intoleranță acută la ambiguitate (seizing) și o urgență extremă de a adopta concluzii categorice, rapide și simplificatoare (freezing), refuzând orice nuanță sau complexitate.'}
                 {fig6SelectedStep === 'persona' &&
@@ -4521,7 +4521,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'b1' &&
                   '1. Acceptarea incertitudinii (Track B). Punctul de intrare în procesarea adaptativă constă în capacitatea negativă (Bion) — rezistența la impulsul de a închide prematur cogniția (rezistență la NFCC) și acceptarea calmă a stării de necunoscut fără panică. În plin șoc acut, această pauză metacognitivă este susținută în primul rând de calmul și comunicarea verificabilă a liderilor instituționali și a cadrelor profesionale (conform principiilor CDC CERC), care oferă populației un cadru extern de siguranță epistemică.'}
                 {fig6SelectedStep === 'b2' &&
-                  '2. Sistemul 2 și gândirea deschisă activă (Track B). Susținută de decompresia alostatică și de frânele algoritmice din Faza I, reglarea executivă a rețelei prefrontale (dlPFC și vmPFC) reia controlul asupra impulsurilor amigdaliene. Cuplată cu gândirea deschisă activă (actively open-minded thinking), cu smerenia epistemică și cu Rangul 2+ de reflexivitate strategică (Lefebvre), ea previne raționalizarea motivată și permite analiza logică și contextualizarea istorică.'}
+                  '2. Sistemul 2 și gândirea activ deschisă (Track B). Susținută de decompresia alostatică și de frânele algoritmice din Faza I, reglarea executivă a rețelei prefrontale (dlPFC și vmPFC) reia controlul asupra impulsurilor amigdaliene. Cuplată cu gândirea activ deschisă (actively open-minded thinking), cu smerenia epistemică și cu Rangul 2+ de reflexivitate strategică (Lefebvre), ea previne raționalizarea motivată și permite analiza logică și contextualizarea istorică.'}
                 {fig6SelectedStep === 'b3' &&
                   '3. Toleranța disonanței și integrarea ingeniozității Trickster (Track B). Individul tolerează contradicțiile inerente realității și recuperează creativ conținuturile umbrei colective — ingeniozitatea adaptativă, adaptabilitatea și umorul subversiv (figura arhetipală a Trickster-ului) transformate din resentiment destructiv în resursă de supraviețuire și inovație.'}
                 {fig6SelectedStep === 'b4' &&
@@ -4779,7 +4779,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
-                  1.2 Interdicție Follow the Money (24–72h)
+                  1.2 Blocarea fluxurilor financiare (Follow the Money, 24–72h)
                 </text>
                 <text
                   x="155"
@@ -5314,11 +5314,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig7SelectedNode === 'faza1' &&
-                  'Faza I · Orizont tactic imediat, 0–72h în criză / 0–12 luni structural. Oprește bucla reactivă din Track A prin trei piloni: (1.1) triajul acut 0–72h prin comunicare CDC CERC, standardizare STIX/DISARM și frâne algoritmice DSA; (1.2) interdicția financiară Follow the Money în 24–72h (art. 9–10 DSA, AEP/CMF, ONPCSB/BARIS/MiCA); și (1.3) decompresia alostatică structurală 0–12 luni prin debirocratizare e-Estonia și servicii de bază.'}
+                  'Faza I · Orizont tactic imediat, 0–72h în criză / 0–12 luni structural. Oprește bucla reactivă din Track A prin trei piloni: (1.1) triajul acut 0–72h prin comunicare CDC CERC, standardizare STIX/DISARM și frâne algoritmice DSA; (1.2) blocarea fluxurilor financiare ilicite (Follow the Money) în 24–72h (art. 9–10 DSA, AEP/CMF, ONPCSB/BARIS/MiCA); și (1.3) decompresia alostatică structurală 0–12 luni prin debirocratizare e-Estonia și servicii de bază.'}
                 {fig7SelectedNode === 'faza1-1' &&
                   '1.1 Triaj acut 0–72h: CERC și frâne DSA. În primele 72 de ore ale unei crize hibride, oprirea contagiunii amigdaliene se realizează prin protocolul de comunicare empatică și verificabilă CDC CERC, standardizarea probatorie a indicatorilor de manipulare în format STIX/DISARM (DNSC și EDMO/BROD) și activarea frânelor algoritmice de urgență împotriva amplificării artificiale (art. 34–35 DSA).'}
                 {fig7SelectedNode === 'faza1-2' &&
-                  '1.2 Interdicție Follow the Money (24–72h). Cuplarea obligatorie a ordinelor de eliminare a conținutului ilegal (art. 9 DSA / art. 7 Legea 50/2024) cu ordinele de furnizare a identității plătitorilor (art. 10 DSA) prin ANCOM, verificarea în timp real a codului mandatarului financiar (CMF) prin AEP/BEC (Legea 334/2006, O.U.G. 1/2025, Regulamentul TTPA 2024/900) și înghețarea în 24–72h a fluxurilor financiare și cripto off-ramp prin ONPCSB, BNR, ASF și PICCJ (art. 33–34 Legea 129/2019, BARIS, MiCA, Travel Rule).'}
+                  '1.2 Blocarea fluxurilor financiare ilicite (Follow the Money, 24–72h). Cuplarea obligatorie a ordinelor de eliminare a conținutului ilegal (art. 9 din DSA / art. 7 din Legea nr. 50/2024) cu ordinele de furnizare a identității plătitorilor (art. 10 DSA) prin ANCOM, verificarea în timp real a codului mandatarului financiar (CMF) prin AEP/BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025, Regulamentul TTPA 2024/900) și înghețarea în 24–72h a fluxurilor financiare și ale conversiilor din criptoactive în monedă fiduciară (off-ramp) prin ONPCSB, BNR, ASF și PICCJ (art. 33–34 din Legea nr. 129/2019, BARIS, MiCA, Travel Rule).'}
                 {fig7SelectedNode === 'faza1-3' &&
                   '1.3 Decompresie alostatică (0–12 luni). Reducerea poverii alostatice cotidiene și refacerea rezervei prefrontale (dlPFC) a cetățenilor prin simplificare administrativă radicală după modelul e-Estonia (principiul Once-Only, interoperabilitate fără ghișeu) și prin garantarea predictibilității serviciilor publice esențiale în comunitățile vulnerabile.'}
                 {fig7SelectedNode === 'poarta1' &&
@@ -5328,11 +5328,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig7SelectedNode === 'faza2-1' &&
                   '2.1 Validare comunitară și punți largi (1–3 ani). Reconstrucția încrederii orizontale în infrastructura asociativă de proximitate (școli, parohii, biblioteci, centre comunitare, cooperative) și formarea unor rețele cu „punți largi” (wide bridges, Centola, 2018) capabile să susțină contagiunea complexă a normelor de cooperare și să extragă comunitatea din ipotezele de bază regresive (Bion, 1961).'}
                 {fig7SelectedNode === 'faza2-2' &&
-                  '2.2 Prebunking și consolidare Ebbinghaus (1–3 ani). Inocularea psihologică preventivă împotriva tehnicilor de manipulare (prebunking, McGuire; Roozenbeek & van der Linden), susținută de sesiuni periodice de rapel calibrate pe curba uitării a lui Ebbinghaus și de antrenarea gândirii deschise active (actively open-minded thinking, Stanovich, 2009) împotriva raționalizării motivate.'}
+                  '2.2 Prebunking și consolidare Ebbinghaus (1–3 ani). Inocularea psihologică preventivă împotriva tehnicilor de manipulare (prebunking, McGuire; Roozenbeek & van der Linden), susținută de sesiuni periodice de rapel calibrate pe curba uitării a lui Ebbinghaus și de antrenarea gândirii activ deschise (actively open-minded thinking, Stanovich, 2009) împotriva raționalizării motivate.'}
                 {fig7SelectedNode === 'faza2-3' &&
-                  '2.3 Parteneriat axiologic creștin-secular (1–3 ani). Reconcilierea comunicativă (Habermas, 2006; Taylor, 2007) între etica creștină a demnității inalienabile a persoanei (Imago Dei, proairesis) și universalismul constituțional secular, protejând autonomia funcțională a ambelor sfere împotriva parazitării lor ca „religie politică” (Gentile, 2006) sau falsificare mimetică (Soloviov, 1900/1994).'}
+                  '2.3 Parteneriat axiologic creștin-secular (1–3 ani). Reconcilierea comunicativă (Habermas, 2006; Taylor, 2007) între etica creștină a demnității inalienabile a persoanei (Imago Dei, proairesis) și universalismul constituțional secular, protejând autonomia funcțională a ambelor sfere împotriva parazitării lor ca ideologie militaristă de stat (Hovorun, 2018; Kalaitzidis et al., 2022) sau falsificare mimetică (Soloviov, 1900/1994).'}
                 {fig7SelectedNode === 'poarta2' &&
-                  'Poarta cauzală 2: Presiune civică în „Coridorul îngust” (Acemoglu & Robinson, 2019). Explică de ce Faza a III-a depinde de maturizarea Fazei a II-a: nicio arhitectură constituțională sau reformă legislativă nu se poate auto-aplica în absența unei societăți civile vigilente, dotate cu discernământ critic, capital social de punte (bridging) și capacitate de mobilizare („efectul Reginei Roșii”), care să oblige statul să rămână în „coridorul îngust” al responsabilității democratice.'}
+                  'Poarta cauzală 2: Presiune civică în „Coridorul îngust” (Acemoglu & Robinson, 2019). Explică de ce Faza a III-a depinde de maturizarea Fazei a II-a: nicio arhitectură constituțională sau reformă legislativă nu se poate autoaplica în absența unei societăți civile vigilente, dotate cu discernământ critic, capital social de punte (bridging) și capacitate de mobilizare („efectul Reginei Roșii”), care să oblige statul să rămână în „coridorul îngust” al responsabilității democratice.'}
                 {fig7SelectedNode === 'faza3' &&
                   'Faza III · Orizont strategic, 3–10 ani. Consolidează arhitectura suveranității democratice prin trei piloni: (3.1) închiderea operațională a statului de drept și isonomia fiscală; (3.2) guvernanța policentrică (Ostrom, 1990) și reforma cooperativelor; și (3.3) individuarea colectivă pe axa Ego–Sine, garantată prin dublul audit independent.'}
                 {fig7SelectedNode === 'faza3-1' &&
