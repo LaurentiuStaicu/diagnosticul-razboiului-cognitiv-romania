@@ -1244,9 +1244,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               {fig2Mode === 'camouflage' ? (
                 <g>
                   <line
-                    x1="295"
+                    x1="545"
                     y1="272"
-                    x2="538"
+                    x2="302"
                     y2="272"
                     stroke="#F01E1E"
                     strokeWidth="3"
