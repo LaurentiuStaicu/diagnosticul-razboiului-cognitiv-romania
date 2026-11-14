@@ -25,7 +25,7 @@ export const FIGURE_METADATA: Record<
       'Articularea modelului Macro–Micro–Macro al lui Coleman și Hedström cu determinanții sistemici Lalonde–Dever',
     chapterRef: 'Capitolul 1 · Subcapitolul 1.3',
     caption:
-      'Deficitele structurale din Stratul A — deficitul de servicii publice, închiderea operațională incompletă a instituțiilor, mediul socioeconomic precar și vidul de reprezentare politică (Peter Mair, Cas Mudde) — induc în Stratul B o dublă vulnerabilitate neurocognitivă: pe de o parte, stresul alostatic cronic și hipervigilența amigdaliană care inhibă deliberarea prefrontală (dlPFC) și comută procesarea pe Sistemul 1 reactiv în periferiile precarizate; pe de altă parte, recrutarea unui Sistem 2 biologic intact în disraționalitate și raționalizare motivată (Stanovich, 2009; Kahan, 2017) pentru apărarea statutului în bulele urbane. Prin cele trei mecanisme transformaționale Micro–Macro (sincronizarea afectivă, contagiunea complexă prin punți largi și intermedierea politică oportunistă), aceste procese se sedimentează în Stratul C sub forma fatalismului defensiv, a neputinței învățate și a neîncrederii cronice în ordinea constituțională, oferind vectorului de război cognitiv un teren vulnerabil pe care îl poate exploata direct și amplifica.',
+      'Deficitele structurale din Stratul A — deficitul de servicii publice, închiderea operațională incompletă a instituțiilor, mediul socioeconomic precar și vidul de reprezentare politică (Peter Mair, Cas Mudde) — induc în Stratul B o dublă vulnerabilitate neurocognitivă: pe de o parte, stresul alostatic cronic și hipervigilența amigdaliană care inhibă deliberarea prefrontală (dlPFC) și comută procesarea pe Sistemul 1 reactiv în periferiile afectate de precaritate; pe de altă parte, recrutarea unui Sistem 2 biologic intact în disraționalitate și raționalizare motivată (Stanovich, 2009; Kahan, 2017) pentru apărarea statutului în bulele urbane. Prin cele trei mecanisme transformaționale Micro–Macro (sincronizarea afectivă, contagiunea complexă prin punți largi și intermedierea politică oportunistă), aceste procese se sedimentează în Stratul C sub forma fatalismului defensiv, a neputinței învățate și a neîncrederii cronice în ordinea constituțională, oferind vectorului de război cognitiv un teren vulnerabil pe care îl poate exploata direct și amplifica.',
     methodologicalNote:
       'Modelul cauzal Macro–Micro–Macro (Coleman, 1990; Hedström, 2005), fundamentat pe criteriul falsificabilității (Karl Popper) și pe clauza anti-eroare ecologică (William S. Robinson), articulează determinanții instituționali, sociospațiali și vidul de reprezentare politică din Stratul A cu dubla vulnerabilitate neurocognitivă din Stratul B și cu structurile defensive ale inconștientului cultural din Stratul C.'
   },
@@ -81,7 +81,7 @@ export const FIGURE_METADATA: Record<
       'Divergența dintre bucla reactivă defensivă Track A și traseul deliberativ adaptativ Track B',
     chapterRef: 'Capitolul 5 · Subcapitolul 5.2',
     caption:
-      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea reactivă defensivă Track A, în stânga, de procesarea deliberativă adaptativă Track B, în dreapta. Pe Traseul A, anxietatea cronică, inhibiția prefrontală (Sistemul 1 în mediile precarizate) sau raționalizarea motivată (Sistemul 2 deturnat în bulele urbane) și nevoia de închidere cognitivă (seizing și freezing) îi împing pe subiecți spre conformismul de fațadă al Personei mimetice, spre regresia în ipotezele de bază ale lui Bion (baD, baP, baF) și spre proiecția ostilă a Umbrei colective, într-o buclă de autoamplificare algoritmică (R). Pe Traseul B — deschis în momentul șocului acut prin puntea de calm instituțional CDC CERC, probatoriul tehnic verificabil și validatorii comunitari de proximitate, și stabilizat la nivelul populației prin decompresia alostatică și frânele algoritmice din Faza I —, procesarea parcurge cele cinci etape adaptative: (1) capacitatea negativă de acceptare a incertitudinii, (2) reactivarea Sistemului 2 în regim de gândire activ-deschisă la Rangul 2+ de reflexivitate (Lefebvre), (3) conversia constructivă a agilității arhetipului Tricksterului, (4) discernământul critic în mediere ternară și constituirea comunității ca «grup de lucru» rațional (Bion, 1961) și (5) acțiunea suverană pe axa Ego–Sine.',
+      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea reactivă defensivă Track A, în stânga, de procesarea deliberativă adaptativă Track B, în dreapta. Pe Traseul A, anxietatea cronică, inhibiția prefrontală (Sistemul 1 în mediile afectate de precaritate) sau raționalizarea motivată (Sistemul 2 deturnat în bulele urbane) și nevoia de închidere cognitivă (seizing și freezing) îi împing pe subiecți spre conformismul de fațadă al Personei mimetice, spre regresia în ipotezele de bază ale lui Bion (baD, baP, baF) și spre proiecția ostilă a Umbrei colective, într-o buclă de autoamplificare algoritmică (R). Pe Traseul B — deschis în momentul șocului acut prin puntea de calm instituțional CDC CERC, probatoriul tehnic verificabil și validatorii comunitari de proximitate, și stabilizat la nivelul populației prin decompresia alostatică și măsurile tehnice de limitare a amplificării algoritmice din Faza I —, procesarea parcurge cele cinci etape adaptative: (1) capacitatea negativă de acceptare a incertitudinii, (2) reactivarea Sistemului 2 în regim de gândire activ deschisă la Rangul 2+ de reflexivitate (Lefebvre), (3) conversia constructivă a agilității arhetipului Tricksterului, (4) discernământul critic în mediere ternară și constituirea comunității ca «grup de lucru» rațional (Bion, 1961) și (5) acțiunea suverană pe axa Ego–Sine.',
     methodologicalNote:
       'Modelul sistemic al procesării cognitive în criză, fundamentat pe lucrările lui Kruglanski, Kahneman, Stanovich, Kahan, Bion și pe psihologia analitică, evidențiază bifurcarea dintre bucla reactivă de autoamplificare și traseul deliberativ adaptativ deschis prin arhitectura policentrică de coreglare CERC și integrat pe axa Ego–Sine.'
   },
@@ -1511,7 +1511,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Red arrow down to 3 Paliere de spălare informațională (y1=316 to y2=346, 30px) */}
+              {/* Red arrow down to 3 Paliere de disimulare a sursei (y1=316 to y2=346, 30px) */}
               <line
                 x1="710"
                 y1="316"
@@ -1523,7 +1523,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 markerEnd="url(#arrow-red)"
               />
 
-              {/* Intermediate Node: 3 paliere de spălare informațională (x=545, y=348..404, width=330, height=56) */}
+              {/* Intermediate Node: 3 paliere de disimulare a sursei (x=545, y=348..404, width=330, height=56) */}
               <g onClick={() => setFig2Inspect('retele-spalare')} className="cursor-pointer">
                 <rect
                   x="545"
@@ -1541,7 +1541,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11.5px] font-bold fill-[#222426]"
                 >
-                  3 paliere de spălare informațională
+                  3 paliere de disimulare a sursei
                 </text>
                 <text
                   x="710"
@@ -1610,7 +1610,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                       { id: 'falsificare-ortodoxie', label: '2. Falsificarea I (Russkii Mir)' },
                       { id: 'falsificare-suveranitate', label: '3. Falsificarea II (Fals suveranism)' },
                       { id: 'nucleu-antimir', label: '4. Nucleul Antimir & Bobok' },
-                      { id: 'retele-spalare', label: '5. Rețele de spălare (3 paliere)' },
+                      { id: 'retele-spalare', label: '5. Rețele de disimulare (3 paliere)' },
                       { id: 'subordonare', label: '6. Subordonare imperială' }
                     ] as const
                   ).map((btn) => (
@@ -1725,20 +1725,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   stroke="#222426"
                   strokeWidth="2.5"
                 />
-                {/* Simbolul medierii ternare înscris în partea superioară a chenarului */}
-                <polygon
-                  points="109,124 91,154 127,154"
-                  fill="#E5B822"
-                  fillOpacity="0.45"
-                  stroke="#222426"
-                  strokeWidth="1.75"
-                />
-                <circle cx="109" cy="124" r="2.75" fill="#222426" />
-                <circle cx="91" cy="154" r="2.75" fill="#222426" />
-                <circle cx="127" cy="154" r="2.75" fill="#222426" />
                 <text
                   x="109"
-                  y="184"
+                  y="170"
                   textAnchor="middle"
                   className="font-sans text-[13px] font-bold fill-[#222426]"
                 >
@@ -1746,7 +1735,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="109"
-                  y="208"
+                  y="194"
                   textAnchor="middle"
                   className="font-sans text-[11.5px] font-semibold fill-[#222426]"
                 >
@@ -1754,7 +1743,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="109"
-                  y="229"
+                  y="215"
                   textAnchor="middle"
                   className="font-sans text-[11px] fill-[#6E7376]"
                 >
@@ -1762,7 +1751,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
                 <text
                   x="109"
-                  y="250"
+                  y="236"
                   textAnchor="middle"
                   className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
@@ -2380,7 +2369,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig3SelectedStage === 'primul-sistem' &&
                   'Primul sistem etic (Lefebvre, 1982, 2001). Cadrul axiologic al democrației constituționale în care compromisul legal și dialogul sunt privite ca virtuți cardinale, iar adversarul politic rămâne un concurent legitim în interiorul statului de drept.'}
                 {fig3SelectedStage === 'poluare-mad' &&
-                  'Poluarea sintetică (Model Collapse / Model Autophagy Disorder – MAD, Shumailov et al., 2024; Alemohammad et al., 2024) și capturarea dopaminergică pe receptorii D2 (Subcapitolul 3.3). Ecosistemul informațional este saturat cu conținut generat sintetic și optimizat prin programe de întărire cu rată variabilă (Skinner, 1953) pentru a exploata eroarea de predicție a recompensei (Schultz, 1998, 2016), compromițând calitatea datelor încă de la intrarea în faza de Observare.'}
+                  'Poluarea sintetică (Model Collapse / Model Autophagy Disorder – MAD, Shumailov et al., 2024; Alemohammad et al., 2024) și capturarea dopaminergică pe receptorii D2 (Subcapitolul 3.3). Ecosistemul informațional este saturat cu conținut generat sintetic și optimizat prin scheme de condiționare cu recompense variabile intermitente (Skinner, 1953) pentru a exploata eroarea de predicție a recompensei (Schultz, 1998, 2016), compromițând calitatea datelor încă de la intrarea în faza de Observare.'}
                 {fig3SelectedStage === 'observare' &&
                   'Faza de Observare. Fluxul informațional brut este capturat algoritmic prin optimizarea retenției pe platformele digitale, inundat de dezinformare și conținut sintetic menit să provoace reacții afective primare.'}
                 {fig3SelectedStage === 'orientare' &&
@@ -2985,7 +2974,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig4ActiveNode === 'trickster' &&
                   'Ambivalența arhetipului Tricksterului (Jung, 1954/1968; Radin, 1956). În forma sa regresivă se manifestă ca șmecherie cinică și ocolire a legii, dar în dimensiunea sa prospectivă conține agilitate cognitivă, adaptare rapidă și rezistență la îndoctrinarea dogmatică.'}
                 {fig4ActiveNode === 'filtru-lege' &&
-                  'Primul filtru (Stratul A): Cadrul legii impersonale drepte și „insulele de închidere operațională” (Luhmann, 1995, 2004; Ostrom, 1990; Acemoglu & Robinson, 2019). Această formulare rezolvă paradoxul temporal dintre Subcapitolele 4.2 și 6.3: conversia energiilor din Umbră nu așteaptă perfecționarea integrală a statului la capătul Fazei a III-a, ci este amorsată incremental prin insule de predictibilitate administrativă (debirocratizarea din Faza I, achiziții transparente, cooperative funcționale), care generează încrederea civică necesară pentru a susține ulterior reforma macrostructurală în „coridorul îngust”.'}
+                  'Primul filtru (Stratul A): Cadrul legii impersonale drepte și „insulele de închidere operațională” (Luhmann, 1995, 2004; Ostrom, 1990; Acemoglu & Robinson, 2019). Această formulare rezolvă paradoxul temporal dintre Subcapitolele 4.2 și 6.3: conversia energiilor din Umbră nu așteaptă perfecționarea integrală a statului la capătul Fazei a III-a, ci este inițiată și consolidată treptat prin insule de predictibilitate administrativă (debirocratizarea din Faza I, achiziții transparente, cooperative funcționale), care generează încrederea civică necesară pentru a susține ulterior reforma macrostructurală în „coridorul îngust”.'}
                 {fig4ActiveNode === 'filtru-istorie' &&
                   'Al doilea filtru (Stratul B). Discernământul critic și asumarea adevărului istoric, care deconstruiesc proiecțiile paranoide prin separarea tradiției spirituale autentice de falsificările etnofiletiste și totalitare.'}
                 {fig4ActiveNode === 'filtru-meta' &&
@@ -3994,9 +3983,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   R
                 </text>
                 <rect
-                  x="6"
+                  x="2"
                   y="392"
-                  width="60"
+                  width="68"
                   height="26"
                   fill="#F6F5EE"
                   stroke="#F01E1E"
@@ -4006,9 +3995,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="36"
                   y="403"
                   textAnchor="middle"
-                  className="font-sans text-[8px] font-bold fill-[#F01E1E]"
+                  className="font-sans text-[7.5px] font-bold fill-[#F01E1E]"
                 >
-                  Reacție
+                  Autoamplificare
                 </text>
                 <text
                   x="36"
@@ -4016,7 +4005,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[8px] font-bold fill-[#F01E1E]"
                 >
-                  pozitivă
+                  (feedback +)
                 </text>
               </g>
 
@@ -4075,7 +4064,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="2.5"
                 />
 
-                {/* Caseta intermediară: Punte: Calm instituțional CERC și frâne Faza I (x=550, y=92, width=280, height=32) */}
+                {/* Caseta intermediară: Punte: Calm instituțional CERC și măsuri Faza I (x=550, y=92, width=280, height=32) */}
                 <g
                   onClick={() => {
                     setFig6InterventionActive(true);
@@ -4101,7 +4090,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[10px] font-bold fill-[#222426]"
                   >
-                    Punte: Calm instituțional CERC și frâne Faza I
+                    Punte: Calm instituțional CERC și măsuri Faza I
                   </text>
                 </g>
 
@@ -4201,7 +4190,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* B2: 2. Sistemul 2 și gândire activ-deschisă (y=252..296) */}
+                {/* B2: 2. Sistemul 2 și gândire activ deschisă (y=252..296) */}
                 <g
                   onClick={() => {
                     setFig6InterventionActive(true);
@@ -4227,7 +4216,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[11px] font-bold fill-[#222426]"
                   >
-                    2. Sistemul 2 și gândire activ-deschisă
+                    2. Sistemul 2 și gândire activ deschisă
                   </text>
                   <text
                     x="690"
@@ -4372,7 +4361,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* B5: Creație suverană (y=442..490) */}
+                {/* B5: Acțiune suverană și autonomă (y=442..490) */}
                 <g
                   onClick={() => {
                     setFig6InterventionActive(true);
@@ -4397,7 +4386,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[12px] font-bold fill-[#222426]"
                   >
-                    5. Creație suverană
+                    5. Acțiune suverană și autonomă
                   </text>
                   <text
                     x="690"
@@ -4405,7 +4394,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[10px] font-medium fill-[#222426]"
                   >
-                    Acțiune civică, reziliență și autonomie
+                    Cooperare instituțională pe axa Ego–Sine
                   </text>
                 </g>
 
@@ -4421,9 +4410,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   markerEnd="url(#arrow-dark)"
                 />
                 <rect
-                  x="635"
+                  x="625"
                   y="512"
-                  width="110"
+                  width="130"
                   height="18"
                   fill="#F6F5EE"
                   stroke="#8C9BA5"
@@ -4435,7 +4424,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[8.5px] font-bold fill-[#6E7376]"
                 >
-                  Aliniere ontologică
+                  Coerență psihodinamică
                 </text>
 
                 {/* Baza: Axa Ego–Sine (cy=582) */}
@@ -4454,7 +4443,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
-                  Axa Ego–Sine · Integritate profundă
+                  Axa Ego–Sine · Individuare colectivă
                 </text>
 
                 {/* Buclă de consolidare a rezilienței */}
@@ -4499,7 +4488,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'bifurcatie' &&
                   'Nodul unic de bifurcație (stresul material acut și policriza). Reprezintă punctul de incidență al șocului cognitiv și socioeconomic. În absența unei pauze metacognitive și a rezervei neurobiologice, presiunea crizei împinge procesarea în mod automat spre reacția defensivă din Track A.'}
                 {fig6SelectedStep === 'punte-cerc' &&
-                  'Puntea de coreglare instituțională CERC și frânele Fazei I. Deoarece un cetățean aflat în plin șoc acut și în revoltă față de Persona instituțională mimetică nu își poate activa singur capacitatea negativă și nici nu ascultă retorica politică partizană, deschiderea Traseului B în fereastra de 0–72 de ore se sprijină pe o arhitectură policentrică de dezescaladare pe două paliere (protocolul CDC CERC): (1) palierul tehnic-probatoriu depolitizat (DNSC, ANCOM, AEP, ONPCSB și hub-ul regional EDMO/BROD, cu dovezi verificabile STIX/DISARM și frâne algoritmice) și (2) palierul validatorilor comunitari și epistemici de proximitate (medici, profesori, clerici canonici ancorați în discernământul proairesis, lideri civici și jurnaliști independenți), stabilizată ulterior prin decompresia alostatică din Faza I.'}
+                  'Puntea de coreglare instituțională CERC și măsurile Fazei I. Deoarece un cetățean aflat în plin șoc acut și în revoltă față de Persona instituțională mimetică nu își poate activa singur capacitatea negativă și nici nu ascultă retorica politică partizană, deschiderea Traseului B în fereastra de 0–72 de ore se sprijină pe o arhitectură policentrică de dezescaladare pe două paliere (protocolul CDC CERC): (1) palierul tehnic-probatoriu depolitizat (DNSC, ANCOM, AEP, ONPCSB și hub-ul regional EDMO/BROD, cu dovezi verificabile STIX/DISARM și măsuri tehnice de limitare a amplificării algoritmice) și (2) palierul validatorilor comunitari și epistemici de proximitate (medici, profesori, clerici canonici ancorați în discernământul proairesis, lideri civici și jurnaliști independenți), stabilizată ulterior prin decompresia alostatică din Faza I.'}
                 {fig6SelectedStep === 'anxietate' &&
                   'Anxietatea cronică, inhibiția dlPFC și raționalizarea motivată (Track A). În comunitățile defavorizate (marcate de precaritate), starea de alertă activează amigdala și rețeaua de detecție a relevanței (SN, Menon, 2011), decuplând cortexul prefrontal dorsolateral (dlPFC) și comutând procesarea pe Sistemul 1; simetric, în bulele urbane educate, Sistemul 2 intact este deturnat în raționalizarea motivată a indignării tribale (Stanovich, 2009; Kahan, 2017).'}
                 {fig6SelectedStep === 'nfcc' &&
@@ -4513,13 +4502,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'b1' &&
                   '1. Acceptarea incertitudinii (Track B). Punctul de intrare în procesarea adaptativă constă în capacitatea negativă (Bion, 1962, 1970) — rezistența la impulsul de a închide prematur cogniția (rezistență la NFCC) și acceptarea calmă a stării de necunoscut fără panică. În plin șoc acut (0–72h), această pauză metacognitivă este deschisă de arhitectura policentrică pe două paliere (agențiile tehnice depolitizate cu probatoriu STIX/DISARM și validatorii comunitari de proximitate, conform principiilor CDC CERC), care oferă populației un cadru extern de siguranță epistemică.'}
                 {fig6SelectedStep === 'b2' &&
-                  '2. Sistemul 2 și gândirea activ-deschisă (Track B). Susținută de decompresia alostatică și de frânele algoritmice din Faza I, reglarea executivă a rețelei prefrontale (dlPFC și vmPFC) reia controlul asupra impulsurilor amigdaliene. Cuplată cu gândirea activ-deschisă (actively open-minded thinking), cu smerenia epistemică și cu Rangul 2+ de reflexivitate strategică (Lefebvre), ea previne raționalizarea motivată și permite analiza logică și contextualizarea istorică.'}
+                  '2. Sistemul 2 și gândirea activ deschisă (Track B). Susținută de decompresia alostatică și de măsurile tehnice de limitare a amplificării algoritmice din Faza I, reglarea executivă a rețelei prefrontale (dlPFC și vmPFC) reia controlul asupra impulsurilor amigdaliene. Cuplată cu gândirea activ deschisă (actively open-minded thinking), cu smerenia epistemică și cu Rangul 2+ de reflexivitate strategică (Lefebvre), ea previne raționalizarea motivată și permite analiza logică și contextualizarea istorică.'}
                 {fig6SelectedStep === 'b3' &&
                   '3. Toleranța disonanței și integrarea ingeniozității Trickster (Track B). Individul tolerează contradicțiile inerente realității și recuperează creativ conținuturile umbrei colective — ingeniozitatea adaptativă, adaptabilitatea și umorul subversiv (figura arhetipală a Tricksterului) transformate din resentiment distructiv în resursă de supraviețuire și inovație.'}
                 {fig6SelectedStep === 'b4' &&
                   '4. Discernământ critic și Grup de lucru (Track B). Medierea semiotică ternară (semn–obiect–interpretant) și discernământul moral extrag comunitatea din captivitatea ipotezelor de bază și o reconstituie ca „grup de lucru” rațional orientat spre realitate (Bion, 1961).'}
                 {fig6SelectedStep === 'b5' &&
-                  '5. Creație suverană și Axa Ego–Sine (Track B). Punctul culminant al procesării adaptative: acțiune civică responsabilă, autonomie decizională și coerență profundă pe axa Ego–Sine, producând reziliență sistemică autentică.'}
+                  '5. Acțiune suverană și Axa Ego–Sine (Track B). Punctul culminant al procesării adaptative: acțiune civică responsabilă, autonomie decizională și coerență profundă pe axa Ego–Sine, producând reziliență sistemică autentică.'}
                 {(fig6SelectedStep === 'trackA' ||
                   (!fig6SelectedStep && fig6ActiveTrack === 'A')) &&
                   'Track A (procesare defensivă): o traiectorie închisă într-o buclă de autoamplificare (R), guvernată de anxietate, intoleranță la ambiguitate (NFCC), conformism mimetic și regresie în ipotezele de bază ale umbrei colective, exploatată de platformele digitale.'}
@@ -4734,7 +4723,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
-                  1.1 Triaj acut 0–72h: CERC și frâne DSA
+                  1.1 Triaj acut 0–72h: CERC și măsuri DSA
                 </text>
                 <text
                   x="155"
@@ -4771,7 +4760,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[11px] font-bold fill-[#222426]"
                 >
-                  1.2 Blocarea fluxurilor financiare (Follow the Money, 24–72h)
+                  1.2 Blocarea finanțării ilicite (24–72h)
                 </text>
                 <text
                   x="155"
@@ -4989,7 +4978,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
-                  Antrenament metacognitiv și gândire activ-deschisă
+                  Antrenament metacognitiv și gândire activ deschisă
                 </text>
               </g>
 
@@ -5306,11 +5295,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig7SelectedNode === 'faza1' &&
-                  'Faza I · Orizont tactic imediat, 0–72h în criză / 0–12 luni structural. Oprește bucla reactivă din Track A prin trei piloni: (1.1) triajul acut 0–72h prin comunicare CDC CERC, standardizare STIX/DISARM și frâne algoritmice DSA; (1.2) blocarea fluxurilor financiare ilicite (Follow the Money) în 24–72h (art. 9–10 DSA, CNA/AEP/CMF, ONPCSB, registrul central de conturi și MiCA); și (1.3) decompresia alostatică structurală 0–12 luni prin debirocratizare e-Estonia și servicii de bază.'}
+                  'Faza I · Dublu orizont: 0–72h (triaj tactic acut) · 0–12 luni (decompresie structurală). Oprește bucla reactivă din Track A prin trei piloni: (1.1) triajul acut 0–72h prin comunicare CDC CERC, standardizare STIX/DISARM și măsuri tehnice DSA de limitare a amplificării algoritmice; (1.2) blocarea fluxurilor financiare ilicite (Follow the Money) în 24–72h (art. 9–10 DSA, CNA/AEP/CMF, ONPCSB, registrul central de conturi și MiCA); și (1.3) decompresia alostatică structurală 0–12 luni prin debirocratizare e-Estonia și servicii de bază.'}
                 {fig7SelectedNode === 'faza1-1' &&
-                  '1.1 Triaj acut 0–72h: CERC și frâne DSA. În primele 72 de ore ale unei crize hibride, oprirea contagiunii amigdaliene se realizează prin protocolul de comunicare empatică și verificabilă CDC CERC, standardizarea probatorie a indicatorilor de manipulare în format STIX/DISARM (DNSC și EDMO/BROD) și activarea frânelor algoritmice de urgență împotriva amplificării artificiale (art. 34–35 DSA).'}
+                  '1.1 Triaj acut 0–72h: CERC și măsuri DSA. În primele 72 de ore ale unei crize hibride, oprirea contagiunii amigdaliene se realizează prin protocolul de comunicare empatică și verificabilă CDC CERC, standardizarea probatorie a indicatorilor de manipulare în format STIX/DISARM (DNSC și EDMO/BROD) și activarea măsurilor tehnice de urgență împotriva amplificării algoritmice artificiale (art. 34–35 DSA).'}
                 {fig7SelectedNode === 'faza1-2' &&
-                  '1.2 Blocarea fluxurilor financiare ilicite (Follow the Money, 24–72h). Cuplarea obligatorie a ordinelor de a acționa împotriva conținutului ilegal (art. 9 din DSA / art. 7–8 din Legea nr. 50/2024) cu ordinele de furnizare a informațiilor privind identitatea plătitorilor (art. 10 din DSA / art. 9 din Legea nr. 50/2024) emise de autoritățile sectoriale relevante (CNA pentru audiovizualul online, AEP/BEC, DNSC, parchete) și coordonate procedural prin ANCOM ca DSC; verificarea în timp real a codului mandatarului financiar (CMF) și aplicarea Regulamentului (UE) 2024/900 (TTPA, art. 5 alin. 2, art. 11–12 și 16, aplicabil din 10 octombrie 2025, alături de art. 16–17 din O.U.G. nr. 1/2025 adoptată specific pentru scrutinul prezidențial din mai 2025) prin AEP/BEC; și suspendarea operativă în 24–72h a tranzacțiilor suspecte și a conversiilor din criptoactive în monedă fiduciară (off-ramp) dispusă exclusiv de ONPCSB (art. 33–34 din Legea nr. 129/2019), urmată de sesizarea PICCJ și interogarea registrului central electronic pentru conturi de plăți și conturi bancare (art. 61¹ din Legea nr. 207/2015 – CPF și art. 33 alin. 4–5 din Legea nr. 129/2019, actualizată prin Legea nr. 86/2025), sub supravegherea prudențială a BNR și ASF prin aplicarea O.U.G. nr. 10/2025 (mecanismul național pentru Regulamentul TFR (UE) 2023/1113 – Travel Rule și supravegherea CSB/CFT a CASP conform art. 32¹ din Legea nr. 129/2019), alături de Regulamentul (UE) 2023/1114 (MiCA).'}
+                  '1.2 Blocarea fluxurilor financiare ilicite (Follow the Money, 24–72h). Cuplarea obligatorie a ordinelor de a acționa împotriva conținutului ilegal (art. 9 din DSA / art. 7–8 din Legea nr. 50/2024) cu ordinele de furnizare a informațiilor privind identitatea plătitorilor (art. 10 din DSA / art. 9 din Legea nr. 50/2024) emise de autoritățile sectoriale relevante (CNA pentru audiovizualul online, AEP/BEC, DNSC, parchete) și coordonate procedural prin ANCOM ca DSC; verificarea în timp real a codului mandatarului financiar (CMF) și aplicarea Regulamentului (UE) 2024/900 (TTPA, art. 5 alin. 2, art. 11–12 și 16, aplicabil din 10 octombrie 2025, alături de art. 16–17 din O.U.G. nr. 1/2025 adoptată specific pentru scrutinul prezidențial din mai 2025) prin AEP/BEC; și suspendarea operativă în 24–72h a tranzacțiilor suspecte și a conversiilor din criptoactive în monedă fiduciară (off-ramp) dispusă exclusiv de ONPCSB (art. 33–34 din Legea nr. 129/2019), urmată de sesizarea PICCJ și interogarea registrului central electronic pentru conturi de plăți și conturi bancare (art. 61¹ din Legea nr. 207/2015 – CPF și art. 33 alin. 4–5 din Legea nr. 129/2019, actualizată prin Legea nr. 86/2025), sub supravegherea prudențială a BNR și ASF prin aplicarea O.U.G. nr. 10/2025 (mecanismul național pentru Regulamentul TFR (UE) 2023/1113 – Travel Rule și supravegherea furnizorilor de servicii de criptoactive (CASP) privind combaterea spălării banilor și a finanțării terorismului conform art. 32¹ din Legea nr. 129/2019), alături de Regulamentul (UE) 2023/1114 (MiCA).'}
                 {fig7SelectedNode === 'faza1-3' &&
                   '1.3 Decompresie alostatică (0–12 luni). Reducerea poverii alostatice cotidiene și refacerea rezervei prefrontale (dlPFC) a cetățenilor prin simplificare administrativă radicală după modelul e-Estonia (principiul Once-Only, interoperabilitate fără ghișeu) și prin garantarea predictibilității serviciilor publice esențiale în comunitățile vulnerabile.'}
                 {fig7SelectedNode === 'poarta1' &&
@@ -5320,7 +5309,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig7SelectedNode === 'faza2-1' &&
                   '2.1 Validare comunitară și punți largi (1–3 ani). Reconstrucția încrederii orizontale în infrastructura asociativă de proximitate (școli, parohii, biblioteci, centre comunitare, cooperative) și formarea unor rețele cu „punți largi” (wide bridges, Centola, 2018) capabile să susțină contagiunea complexă a normelor de cooperare și să extragă comunitatea din ipotezele de bază regresive (Bion, 1961).'}
                 {fig7SelectedNode === 'faza2-2' &&
-                  '2.2 Prebunking și consolidare Ebbinghaus (1–3 ani). Inocularea psihologică preventivă împotriva tehnicilor de manipulare (prebunking, McGuire; Roozenbeek & van der Linden), susținută de sesiuni periodice de rapel calibrate pe curba uitării a lui Ebbinghaus și de antrenarea gândirii activ-deschise (actively open-minded thinking, Stanovich, 2009) împotriva raționalizării motivate.'}
+                  '2.2 Prebunking și consolidare Ebbinghaus (1–3 ani). Inocularea psihologică preventivă împotriva tehnicilor de manipulare (prebunking, McGuire; Roozenbeek & van der Linden), susținută de sesiuni periodice de rapel calibrate pe curba uitării a lui Ebbinghaus și de antrenarea gândirii activ deschise (actively open-minded thinking, Stanovich, 2009) împotriva raționalizării motivate.'}
                 {fig7SelectedNode === 'faza2-3' &&
                   '2.3 Parteneriat axiologic creștin-secular (1–3 ani). Reconcilierea comunicativă (Habermas, 2006; Taylor, 2007) între etica creștină a demnității inalienabile a persoanei (Imago Dei, proairesis) și universalismul constituțional secular, protejând autonomia funcțională a ambelor sfere împotriva parazitării lor ca ideologie militaristă de stat (Hovorun, 2018; Kalaitzidis et al., 2022) sau falsificare mimetică (Soloviov, 1900/1994).'}
                 {fig7SelectedNode === 'poarta2' &&

@@ -341,7 +341,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'proairesis',
-    regex: /(?<!\p{L})(proairesis|dreapt(?:ă|a)\s+socoteală)(?!\p{L})/iu
+    regex: /(?<!\p{L})(proairesis|discernământ(?:ul|ului)?\s+moral)(?!\p{L})/iu
   },
   {
     conceptId: 'vid-reprezentare-intermediere',
