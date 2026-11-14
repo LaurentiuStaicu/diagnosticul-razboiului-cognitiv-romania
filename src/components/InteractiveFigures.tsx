@@ -14,7 +14,6 @@ export const FIGURE_METADATA: Record<
     title: string;
     subtitle: string;
     chapterRef: string;
-    pdfPage: number;
     caption: string;
     methodologicalNote: string;
   }
@@ -25,7 +24,6 @@ export const FIGURE_METADATA: Record<
     subtitle:
       'Articularea modelului Macro–Micro–Macro al lui Coleman și Hedström cu determinanții sistemici Lalonde–Dever',
     chapterRef: 'Capitolul 1 · Subcapitolul 1.3',
-    pdfPage: 8,
     caption:
       'Deficitele structurale din Stratul A — deficitul de servicii publice, închiderea operațională incompletă a instituțiilor și mediul socioeconomic precar — induc în Stratul B o stare cronică de stres alostatic și hipervigilență amigdaliană, care inhibă deliberarea prefrontală și împinge cetățenii spre comportamente reactive de supraviețuire. Aceste mecanisme neurocognitive se sedimentează în Stratul C sub forma fatalismului defensiv, a neputinței învățate și a neîncrederii cronice în ordinea constituțională, oferind vectorului de război cognitiv un teren vulnerabil pe care îl poate exploata direct și amplifica.',
     methodologicalNote:
@@ -37,7 +35,6 @@ export const FIGURE_METADATA: Record<
     subtitle:
       'Opoziția structurală dintre sinteza creștin-seculară europeană și ideologia revizionistă a Antilumii',
     chapterRef: 'Capitolul 2 · Subcapitolul 2.2',
-    pdfPage: 12,
     caption:
       'În jumătatea stângă este reprezentată sinteza creștin-seculară europeană, în care principiul demnității umane inalienabile, întemeiat pe conceptul de Imago Dei și pe universalismul drepturilor fundamentale, susține filtrul moral și constituțional al statului de drept, generând modernitate organică și libertate responsabilă. În jumătatea dreaptă este ilustrată operațiunea de disimulare a ideologiei revizioniste a Antilumii (Epstein, 2022), care proiectează la suprafață un camuflaj tradiționalist ortodox și suveranist pentru a ocoli aversiunea istorică a populației-țintă față de Rusia, mascând nucleul operativ real bazat pe inversiune normativă și cinism transgresiv, a cărui finalitate strategică este subordonarea imperială și dezintegrarea coeziunii normative a societății vizate.',
     methodologicalNote:
@@ -50,7 +47,6 @@ export const FIGURE_METADATA: Record<
     subtitle:
       'Integrarea buclei decizionale OODA a lui Boyd, a controlului reflexiv al lui Lefebvre și a semioticii culturii a lui Lotman și Peirce',
     chapterRef: 'Capitolul 3 · Subcapitolele 3.1–3.3',
-    pdfPage: 20,
     caption:
       'Fluxul informațional brut din faza de Observare, amplificat algoritmic prin capturarea circuitelor dopaminergice, intră în faza de Orientare, unde modelele mentale și culturale ale subiectului sunt țintite de controlul reflexiv de rang secund. Această intervenție compromite filtrul axiologic al primului sistem etic, blochează calea medierii ternare și a discernământului rațional prefrontal și deviază procesarea pe traseul celui de-al doilea sistem etic și al logicii binare a anihilării. Rezultatul este o fază de Decizie dominată de selecția emoțională indusă, închiderea cognitivă și procesarea defensivă motivată de protejarea identității de grup, care se traduce în faza de Acțiune prin polarizare socială acută și conflict antiinstituțional.',
     methodologicalNote:
@@ -62,7 +58,6 @@ export const FIGURE_METADATA: Record<
     subtitle:
       'Arhitectura de mediere instituțională și metacognitivă pe axa Ego–Sine și conversia fluxurilor psihodinamice',
     chapterRef: 'Capitolul 4 · Subcapitolul 4.2',
-    pdfPage: 24,
     caption:
       'În stânga sunt reprezentate energiile psihodinamice refulate în Stratul C: memoria istorică defensivă și vitalitatea adaptativă necanalizată asociată arhetipului Tricksterului. În absența medierii, aceste resurse alunecă pe traseul inferior, marcat cu roșu, în enantiodromie, cinism și revoltă distructivă împotriva regulilor democratice. Atunci când sunt procesate prin cele trei filtre centrale din Straturile A și B — cadrul legii impersonale drepte cu închidere operațională, discernământul critic și vigilența metacognitivă prefrontală — ele sunt convertite pe axa Ego–Sine în modernitate organică, încredere și cooperare instituțională autonomă.',
     methodologicalNote:
@@ -74,11 +69,10 @@ export const FIGURE_METADATA: Record<
     subtitle:
       'Dinamica spolierii sistemice (+X, -Y), a vulnerabilizării (-X, +Y) și a autosabotajului colectiv (-X, -Y)',
     chapterRef: 'Capitolul 4 · Subcapitolul 4.3',
-    pdfPage: 27,
     caption:
-      'Presiunea de spoliere sistemică exercitată de actorii extractivi din Cadranul IV (+X, -Y) asupra cetățeanului vulnerabil din Cadranul II (-X, +Y), pe fondul unei bariere instituționale fisurate, creează condițiile de uzură alostatică și resentiment. Pe fondul acestei cauze primare endogene, intervenția catalizatorului extern de război cognitiv exploatează scontarea hiperbolică a viitorului și nevoia de revanșă simbolică imediată, împingându-l pe cetățeanul vulnerabil vertical în jos, în Cadranul III al autosabotajului colectiv (-X, -Y), unde acțiunile sale antiinstituționale distrug simultan bunul public și propria sa securitate socioeconomică, subminând spațiul cooperării inteligente din Cadranul I (+X, +Y).',
+      'Presiunea de spoliere sistemică exercitată de actorii extractivi din Cadranul IV (+X, -Y) asupra cetățeanului vulnerabil din Cadranul II (-X, +Y), pe fondul unui planșeu constituțional de protecție fisurat, creează condițiile de uzură alostatică și resentiment. Pe fondul acestei cauze primare endogene, intervenția catalizatorului extern de război cognitiv exploatează scontarea hiperbolică a viitorului și nevoia de revanșă simbolică imediată, împingându-l pe cetățeanul vulnerabil vertical în jos, în Cadranul III al autosabotajului colectiv (-X, -Y), unde acțiunile sale antiinstituționale distrug simultan bunul public și propria sa securitate socioeconomică, subminând spațiul cooperării inteligente din Cadranul I (+X, +Y).',
     methodologicalNote:
-      'Adaptarea matricei bidimensionale a lui Carlo M. Cipolla (1976/2011) evidențiază mecanismul prin care presiunea de spoliere sistemică exercitată de actorii extractivi (+X, -Y) și fisurarea barierei instituționale împing cetățeanul vulnerabil (-X, +Y), sub impulsul capturării cognitive externe, în cadranul comportamentului autodistructiv și al autosabotajului colectiv (-X, -Y).'
+      'Adaptarea matricei bidimensionale a lui Carlo M. Cipolla (1976/2011) evidențiază mecanismul prin care presiunea de spoliere sistemică exercitată de actorii extractivi (+X, -Y) și fisurarea planșeului constituțional de protecție împing cetățeanul vulnerabil (-X, +Y), sub impulsul capturării cognitive externe, în cadranul comportamentului autodistructiv și al autosabotajului colectiv (-X, -Y).'
   },
   6: {
     id: 6,
@@ -86,9 +80,8 @@ export const FIGURE_METADATA: Record<
     subtitle:
       'Divergența dintre bucla reactivă defensivă Track A și traseul deliberativ adaptativ Track B',
     chapterRef: 'Capitolul 5 · Subcapitolul 5.2',
-    pdfPage: 30,
     caption:
-      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea reactivă defensivă Track A, în stânga, de procesarea deliberativă adaptativă Track B, în dreapta. Pe Traseul A, anxietatea cronică, inhibiția prefrontală și nevoia de închidere cognitivă (seizing și freezing) îi împing pe subiecți spre conformismul de fațadă al Personei mimetice și spre proiecția ostilă a Umbrei colective, într-o buclă de autoamplificare algoritmică. Pe Traseul B — deschis în momentul șocului acut de liderii instituționali, cadrele profesionale și validatorii comunitari, și stabilizat la nivelul populației prin decompresia alostatică și frânele algoritmice din Faza I —, procesarea parcurge etapele adaptative: capacitatea negativă de acceptare a incertitudinii, reactivarea Sistemului 2 în regim de gândire activ deschisă (Rangul 2+ de reflexivitate), conversia constructivă a agilității arhetipului Tricksterului, discernământul critic în mediere ternară și acțiunea suverană pe axa Ego–Sine.',
+      'Nodul unic de bifurcație superior, declanșat de stresul acut și policriză, desprinde divergent procesarea reactivă defensivă Track A, în stânga, de procesarea deliberativă adaptativă Track B, în dreapta. Pe Traseul A, anxietatea cronică, inhibiția prefrontală și nevoia de închidere cognitivă (seizing și freezing) îi împing pe subiecți spre conformismul de fațadă al Personei mimetice și spre proiecția ostilă a Umbrei colective, într-o buclă de autoamplificare algoritmică. Pe Traseul B — deschis în momentul șocului acut de liderii instituționali, cadrele profesionale și validatorii comunitari, și stabilizat la nivelul populației prin decompresia alostatică și frânele algoritmice din Faza I —, procesarea parcurge etapele adaptative: capacitatea negativă de acceptare a incertitudinii, reactivarea Sistemului 2 în regim de gândire activ-deschisă (Rangul 2+ de reflexivitate), conversia constructivă a agilității arhetipului Tricksterului, discernământul critic în mediere ternară și acțiunea suverană pe axa Ego–Sine.',
     methodologicalNote:
       'Modelul sistemic al procesării cognitive în criză, fundamentat pe lucrările lui Kruglanski, Kahneman și pe psihologia analitică, evidențiază bifurcarea dintre bucla reactivă de autoamplificare și traseul deliberativ adaptativ de integrare suverană pe axa Ego–Sine.'
   },
@@ -98,7 +91,6 @@ export const FIGURE_METADATA: Record<
     subtitle:
       'Ordinea obligatorie a intervențiilor pe determinanții Lalonde–Dever și palierele Straturilor A, B și C',
     chapterRef: 'Capitolul 6 · Subcapitolele 6.1–6.4',
-    pdfPage: 39,
     caption:
       'Diagrama evidențiază ordinea cauzală obligatorie a intervențiilor fundamentate pe determinanții modelului Lalonde–Dever: Faza I, dedicată decompresiei alostatice și reglementării ecosistemului digital, creează condițiile neurobiologice pentru Faza a II-a, axată pe pregătirea psihocognitivă preventivă prin prebunking, consolidarea mnezică Ebbinghaus și reconcilierea filtrului moral creștin-secular. Aceasta susține la rândul ei Faza a III-a, care vizează închiderea operațională a statului de drept, guvernanța policentrică și individuarea colectivă, culminând în arhitectura suveranității democratice și a modernității organice.',
     methodologicalNote:
@@ -371,7 +363,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-mono text-[10px] font-bold fill-[#6E7376]"
                 >
-                  Det. I · Servicii publice
+                  Câmp Lalonde–Dever · Servicii publice
                 </text>
                 <text
                   x="215"
@@ -433,7 +425,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-mono text-[10px] font-bold fill-[#6E7376]"
                 >
-                  Det. II · Mediu socioeconomic
+                  Câmp Lalonde–Dever · Mediu socioeconomic
                 </text>
                 <text
                   x="525"
@@ -517,7 +509,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 textAnchor="middle"
                 className="font-mono text-[10.5px] font-bold fill-[#6E7376]"
               >
-                2. Nivel Micro (Formarea acțiunii) · Det. IV: Rezervă neurobiologică
+                2. Nivel Micro (Formarea acțiunii) · Câmp Lalonde–Dever: Rezervă neurobiologică
               </text>
 
               {/* Node B1: Romb (center 215, 302) */}
@@ -797,8 +789,8 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   className="font-sans text-[10.5px] font-bold fill-[#222426]"
                 >
                   {fig1Mode === 'resilient'
-                    ? 'Det. III · Filtru moral creștin-secular integru'
-                    : 'Det. III · Filtru moral creștin-secular scurtcircuitat'}
+                    ? 'Câmp Lalonde–Dever · Filtru moral creștin-secular integru'
+                    : 'Câmp Lalonde–Dever · Filtru moral creștin-secular scurtcircuitat'}
                 </text>
               </g>
 
@@ -1007,11 +999,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig1SelectedNode === 'servicii' &&
-                  'Stratul A (Determinantul I în Figura 1 / Determinantul IV în sinteza Lalonde–Dever): Organizarea sistemului instituțional și a serviciilor publice. Atunci când justiția, administrația, educația și sănătatea suferă de un deficit de închidere operațională (Luhmann) și sunt permeabile la rețelele clientelare extractive, cetățeanul percepe regulile formale ca pe un paravan ipocrit (tranziția Macro → Micro prin mecanisme situaționale Coleman, 1990).'}
+                  'Stratul A (Câmpul Lalonde–Dever: Sistemul instituțional și serviciile publice): Organizarea sistemului instituțional și a serviciilor publice. Atunci când justiția, administrația, educația și sănătatea suferă de un deficit de închidere operațională (Luhmann) și sunt permeabile la rețelele clientelare extractive, cetățeanul percepe regulile formale ca pe un paravan ipocrit (tranziția Macro → Micro prin mecanisme situaționale Coleman, 1990).'}
                 {fig1SelectedNode === 'mediu' &&
-                  'Stratul A (Determinantul II Lalonde–Dever): Mediul socioeconomic și sociospațial. Polarizarea severă dintre centrele metropolitane și periferiile dezindustrializate sau rurale, adâncită de emigrația masivă, distruge capitalul social de punte (bridging, Putnam) prin familism amoral (Banfield) la un pol și secesiune tacită în servicii private la celălalt pol.'}
+                  'Stratul A (Câmpul Lalonde–Dever: Mediul socioeconomic și sociospațial): Polarizarea severă dintre centrele metropolitane și periferiile dezindustrializate sau rurale, adâncită de emigrația masivă, distruge capitalul social de punte (bridging, Putnam) prin familism amoral (Banfield) la un pol și secesiune tacită în servicii private la celălalt pol.'}
                 {fig1SelectedNode === 'alostazie' &&
-                  'Stratul B (Nivelul Micro al formării acțiunii · Rezerva neurobiologică): Alostazia (Sterling & Eyer, 1988), sarcina / uzura alostatică (McEwen & Stellar, 1993; McEwen, 1998) și modelul triadei rețelelor cerebrale (Menon, 2011; Sapolsky, Arnsten). Expunerea cronică la insecuritate și umilință birocratică eliberează excesiv cortizol, provocând hipertrofia amigdalei bazolaterale, hiperactivarea rețelei de detecție a relevanței (Salience Network – SN) și decuplarea rețelei executive centrale (CEN) ancorate în cortexul prefrontal dorsolateral (dlPFC).'}
+                  'Stratul B (Nivelul Micro al formării acțiunii · Câmpul Lalonde–Dever: Rezerva neurobiologică): Alostazia (Sterling & Eyer, 1988), sarcina / uzura alostatică (McEwen & Stellar, 1993; McEwen, 1998) și modelul triadei rețelelor cerebrale (Menon, 2011; Seeley et al., 2007; Sapolsky, Arnsten). Expunerea cronică la insecuritate și umilință birocratică eliberează excesiv cortizol, provocând hipertrofia amigdalei bazolaterale, hiperactivarea rețelei de detecție a relevanței (Salience Network – SN), perturbarea rețelei modului implicit (Default Mode Network – DMN) și decuplarea rețelei executive centrale (CEN) ancorate în cortexul prefrontal dorsolateral (dlPFC).'}
                 {fig1SelectedNode === 'reactiv' &&
                   'Stratul B: Dubla vulnerabilitate neurocognitivă pe Sistemul 1 și Sistemul 2. În regim vulnerabil se activează două mecanisme complementare: (a) comutarea pe Sistemul 1 amigdalian prin inhibiția funcțiilor executive ale cortexului prefrontal dorsolateral (dlPFC) în periferiile afectate de uzură alostatică cronică și (b) deturnarea Sistemului 2 în raționalizare motivată și apărarea identității tribale (disraționalitate și myside bias — Stanovich, 2009; Kahan, 2017) în bulele urbane educate, unde capacitatea analitică intactă este folosită pentru justificarea sofisticată a disprețului de grup.'}
                 {fig1SelectedNode === 'persona' &&
@@ -1019,7 +1011,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig1SelectedNode === 'fatalism' &&
                   'Stratul C: Expresia în inconștientul cultural. Scăderea tensiunii conștiente (abaissement du niveau mental, Janet și Jung) și blocarea axei Ego–Sine (Edinger) produc oscilația între neputința învățată (Seligman), ipotezele de bază regresive (Bion) și inflația defensivă compensatoare.'}
                 {fig1SelectedNode === 'filtru-moral' &&
-                  'Stratul C (Determinantul III Lalonde–Dever): Filtrul valorilor morale creștin-seculare și stilul de viață asociativ. În stare integră, antropologia patristică a demnității umane (Imago Dei) reconciliată cu universalismul secular protejează conștiința civică. În condiții de război cognitiv, actorul ostil scurtcircuitează acest filtru prin instrumentalizarea etnofiletistă și inversiunea normativă.'}
+                  'Stratul C (Câmpul Lalonde–Dever: Filtrul valorilor morale creștin-seculare și stilul de viață asociativ): În stare integră, antropologia patristică a demnității umane (Imago Dei) reconciliată cu universalismul secular protejează conștiința civică. În condiții de război cognitiv, actorul ostil scurtcircuitează acest filtru prin instrumentalizarea etnofiletistă și inversiunea normativă.'}
                 {fig1SelectedNode === 'vector' &&
                   'Vectorul de război cognitiv extern nu creează din nimic vulnerabilitățile societății-țintă, ci se grefează parazitar pe faliile și vulnerabilitățile preexistente din Straturile A, B și C, atunci când eșecul de reprezentare al partidelor tradiționale lasă un vid politic pe care operațiunile de control reflexiv îl deturnează spre ținte false.'}
               </p>
@@ -1640,7 +1632,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig2Inspect === 'sinteza-stanga' &&
                   'Sinteza creștin-seculară europeană unește antropologia patristică a persoanei libere create după chipul divin (Imago Dei și discernământul proairesis — Berdiaev, Stăniloae, Kalaitzidis) cu domnia legii impersonale și autonomia judecății critice în societatea postseculară (Habermas, Taylor, Lefebvre). Dezbaterile dintre etica conservatoare și secularismul modern se rezolvă pașnic în primul sistem etic, generând modernitate organică.'}
                 {fig2Inspect === 'falsificare-ortodoxie' &&
-                  'Falsificarea I: Etnofiletismul Russkii Mir. Pentru a ocoli aversiunea istorică a românilor față de imperialismul rus (cele 12 invazii, răpirea Basarabiei, Tezaurul și Gulagul), propaganda proiectează o mască pseudoortodoxă care substituie universalismul hristic (Imago Dei) cu religia militaristă de stat a „Lumii Ruse” — o falsificare mimetică (Soloviov, 1900/1994) condamnată ca erezie etnofiletistă la Sinodul de la Constantinopol din 1872.'}
+                  'Falsificarea I: Etnofiletismul Russkii Mir. Pentru a ocoli aversiunea istorică a românilor față de imperialismul rus (cele 12 invazii, răpirea Basarabiei în 1812 și reanexarea celor trei județe din sudul Basarabiei — Cahul, Ismail și Bolgrad — în 1878, Tezaurul și Gulagul), propaganda proiectează o mască pseudoortodoxă care substituie universalismul hristic (Imago Dei) cu religia militaristă de stat a „Lumii Ruse” — o falsificare mimetică (Soloviov, 1900/1994) condamnată ca erezie etnofiletistă la Sinodul de la Constantinopol din 1872.'}
                 {fig2Inspect === 'falsificare-suveranitate' &&
                   'Falsificarea II: Falsul suveranism izolaționist. Sub sloganul apărării suveranității naționale împotriva instituțiilor europene, operațiunea parazitează dezbaterile legitime din democrația constituțională pentru a promova ieșirea din arhitectura de securitate NATO și UE, transformând patriotismul într-un instrument de dezarmare strategică a statului-țintă.'}
                 {fig2Inspect === 'nucleu-antimir' &&
@@ -3433,9 +3425,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     strokeDasharray="6 4"
                   />
                   <rect
-                    x="285"
+                    x="275"
                     y="258"
-                    width="155"
+                    width="175"
                     height="20"
                     fill="#F6F5EE"
                     stroke="#F01E1E"
@@ -3447,7 +3439,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
                   >
-                    Plafon constituțional fisurat
+                    Planșeu constituțional de protecție fisurat
                   </text>
 
                   {/* DINAMICA 2: Vectorul descendent masiv în #F01E1E la x=250 (46px la dreapta etichetei -X) */}
@@ -3506,9 +3498,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     strokeWidth="5"
                   />
                   <rect
-                    x="220"
+                    x="205"
                     y="261"
-                    width="210"
+                    width="240"
                     height="24"
                     rx="3"
                     fill="#E5B822"
@@ -3519,9 +3511,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     x="325"
                     y="277"
                     textAnchor="middle"
-                    className="font-sans text-[11px] font-bold fill-[#222426]"
+                    className="font-sans text-[10.5px] font-bold fill-[#222426]"
                   >
-                    Plafon constituțional consolidat
+                    Planșeu constituțional de protecție consolidat
                   </text>
                   <line
                     x1="265"
@@ -3570,7 +3562,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig5SelectedQuadrant === 'IV' &&
                   'Cadranul IV (+X, -Y, elitele extractive / banditismul, bandits). Rețelele politico-economice clientelare și birocrațiile parazitare interne (1. Spoliere endogenă), precum și agresorul geopolitic extern (2. Catalizator extern rus), care își însușesc câștiguri substanțiale (+X) prin spolierea bugetelor publice și degradarea instituțiilor (-Y).'}
                 {fig5SelectedQuadrant === 'III' &&
-                  'Cadranul III (-X, -Y, autosabotajul social / iraționalitatea autodistructivă). În matricea lui Cipolla operează două bariere ortogonale: (1) pe orizontală, între Cadranul II și Cadranul I, oligarhia clientelară ridică un baraj extractiv vertical (T-bar) împotriva mobilității meritocratice; (2) pe verticală, între Cadranul II și Cadranul III, statul eșuează în menținerea plafonului orizontal de protecție constituțională și epistemică. Sub efectul scontării hiperbolice a viitorului și al iluziei că îi pedepsește pe spoliatori, cetățeanul vulnerabil este împins prin plafonul fisurat în Cadranul III, unde votul punitiv extrem distruge simultan bunul public (-Y) și propria securitate socioeconomică (-X).'}
+                  'Cadranul III (-X, -Y, autosabotajul social / iraționalitatea autodistructivă). În matricea lui Cipolla operează două bariere ortogonale: (1) pe orizontală, între Cadranul II și Cadranul I, oligarhia clientelară ridică un baraj extractiv vertical (T-bar) împotriva mobilității meritocratice; (2) pe verticală, între Cadranul II și Cadranul III, statul eșuează în menținerea planșeului constituțional de protecție. Sub efectul scontării hiperbolice a viitorului și al iluziei că îi pedepsește pe spoliatori, cetățeanul vulnerabil este împins prin planșeul constituțional de protecție fisurat în Cadranul III, unde votul punitiv extrem distruge simultan bunul public (-Y) și propria securitate socioeconomică (-X).'}
               </p>
             </div>
           </div>
@@ -4209,7 +4201,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   markerEnd="url(#arrow-gold)"
                 />
 
-                {/* B2: 2. Sistemul 2 și gândire activ deschisă (y=252..296) */}
+                {/* B2: 2. Sistemul 2 și gândire activ-deschisă (y=252..296) */}
                 <g
                   onClick={() => {
                     setFig6InterventionActive(true);
@@ -4235,7 +4227,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     textAnchor="middle"
                     className="font-sans text-[11px] font-bold fill-[#222426]"
                   >
-                    2. Sistemul 2 și gândire activ deschisă
+                    2. Sistemul 2 și gândire activ-deschisă
                   </text>
                   <text
                     x="690"
@@ -4521,7 +4513,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig6SelectedStep === 'b1' &&
                   '1. Acceptarea incertitudinii (Track B). Punctul de intrare în procesarea adaptativă constă în capacitatea negativă (Bion) — rezistența la impulsul de a închide prematur cogniția (rezistență la NFCC) și acceptarea calmă a stării de necunoscut fără panică. În plin șoc acut, această pauză metacognitivă este susținută în primul rând de calmul și comunicarea verificabilă a liderilor instituționali și a cadrelor profesionale (conform principiilor CDC CERC), care oferă populației un cadru extern de siguranță epistemică.'}
                 {fig6SelectedStep === 'b2' &&
-                  '2. Sistemul 2 și gândirea activ deschisă (Track B). Susținută de decompresia alostatică și de frânele algoritmice din Faza I, reglarea executivă a rețelei prefrontale (dlPFC și vmPFC) reia controlul asupra impulsurilor amigdaliene. Cuplată cu gândirea activ deschisă (actively open-minded thinking), cu smerenia epistemică și cu Rangul 2+ de reflexivitate strategică (Lefebvre), ea previne raționalizarea motivată și permite analiza logică și contextualizarea istorică.'}
+                  '2. Sistemul 2 și gândirea activ-deschisă (Track B). Susținută de decompresia alostatică și de frânele algoritmice din Faza I, reglarea executivă a rețelei prefrontale (dlPFC și vmPFC) reia controlul asupra impulsurilor amigdaliene. Cuplată cu gândirea activ-deschisă (actively open-minded thinking), cu smerenia epistemică și cu Rangul 2+ de reflexivitate strategică (Lefebvre), ea previne raționalizarea motivată și permite analiza logică și contextualizarea istorică.'}
                 {fig6SelectedStep === 'b3' &&
                   '3. Toleranța disonanței și integrarea ingeniozității Trickster (Track B). Individul tolerează contradicțiile inerente realității și recuperează creativ conținuturile umbrei colective — ingeniozitatea adaptativă, adaptabilitatea și umorul subversiv (figura arhetipală a Tricksterului) transformate din resentiment distructiv în resursă de supraviețuire și inovație.'}
                 {fig6SelectedStep === 'b4' &&
@@ -4787,7 +4779,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
-                  Art. 9–10 DSA, AEP/CMF, ONPCSB/BARIS/MiCA
+                  Art. 9–10 DSA, CNA/AEP, ONPCSB și Reg. conturi/MiCA
                 </text>
               </g>
 
@@ -4997,7 +4989,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
-                  Antrenament metacognitiv și gândire deschisă
+                  Antrenament metacognitiv și gândire activ-deschisă
                 </text>
               </g>
 
@@ -5170,7 +5162,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   textAnchor="middle"
                   className="font-sans text-[9.5px] fill-[#6E7376]"
                 >
-                  Justiție, meritocrație și art. 182/281 CPF
+                  Justiție, meritocrație și simetrie fiscală (CCR 694/2015)
                 </text>
               </g>
 
@@ -5314,11 +5306,11 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             <div className="mt-4 pt-4 border-t border-[#222426] bg-[#F6F5EE] p-3.5">
               <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
                 {fig7SelectedNode === 'faza1' &&
-                  'Faza I · Orizont tactic imediat, 0–72h în criză / 0–12 luni structural. Oprește bucla reactivă din Track A prin trei piloni: (1.1) triajul acut 0–72h prin comunicare CDC CERC, standardizare STIX/DISARM și frâne algoritmice DSA; (1.2) blocarea fluxurilor financiare ilicite (Follow the Money) în 24–72h (art. 9–10 DSA, AEP/CMF, ONPCSB/BARIS/MiCA); și (1.3) decompresia alostatică structurală 0–12 luni prin debirocratizare e-Estonia și servicii de bază.'}
+                  'Faza I · Orizont tactic imediat, 0–72h în criză / 0–12 luni structural. Oprește bucla reactivă din Track A prin trei piloni: (1.1) triajul acut 0–72h prin comunicare CDC CERC, standardizare STIX/DISARM și frâne algoritmice DSA; (1.2) blocarea fluxurilor financiare ilicite (Follow the Money) în 24–72h (art. 9–10 DSA, CNA/AEP/CMF, ONPCSB, registrul central de conturi și MiCA); și (1.3) decompresia alostatică structurală 0–12 luni prin debirocratizare e-Estonia și servicii de bază.'}
                 {fig7SelectedNode === 'faza1-1' &&
                   '1.1 Triaj acut 0–72h: CERC și frâne DSA. În primele 72 de ore ale unei crize hibride, oprirea contagiunii amigdaliene se realizează prin protocolul de comunicare empatică și verificabilă CDC CERC, standardizarea probatorie a indicatorilor de manipulare în format STIX/DISARM (DNSC și EDMO/BROD) și activarea frânelor algoritmice de urgență împotriva amplificării artificiale (art. 34–35 DSA).'}
                 {fig7SelectedNode === 'faza1-2' &&
-                  '1.2 Blocarea fluxurilor financiare ilicite (Follow the Money, 24–72h). Cuplarea obligatorie a ordinelor de eliminare a conținutului ilegal (art. 9 din DSA / art. 7 din Legea nr. 50/2024) cu ordinele de furnizare a identității plătitorilor (art. 10 DSA) prin ANCOM, verificarea în timp real a codului mandatarului financiar (CMF) prin AEP/BEC (Legea nr. 334/2006, O.U.G. nr. 1/2025, Regulamentul TTPA 2024/900) și înghețarea în 24–72h a fluxurilor financiare și a conversiilor din criptoactive în monedă fiduciară (off-ramp) prin ONPCSB, BNR, ASF și PICCJ (art. 33–34 din Legea nr. 129/2019, BARIS, MiCA, Travel Rule).'}
+                  '1.2 Blocarea fluxurilor financiare ilicite (Follow the Money, 24–72h). Cuplarea obligatorie a ordinelor de a acționa împotriva conținutului ilegal (art. 9 din DSA / art. 7 din Legea nr. 50/2024) cu ordinele de furnizare a informațiilor privind identitatea plătitorilor (art. 10 DSA) emise de autoritățile sectoriale relevante (CNA pentru audiovizualul online, AEP/BEC, DNSC, parchete) și coordonate procedural prin ANCOM ca DSC; verificarea în timp real a codului mandatarului financiar (CMF) și aplicarea Regulamentului (UE) 2024/900 (TTPA, art. 5, 11–12 și 16) prin AEP/BEC (alături de normele O.U.G. nr. 1/2025 adoptate specific pentru scrutinul prezidențial din mai 2025); și suspendarea operativă în 24–72h a tranzacțiilor suspecte și a conversiilor din criptoactive în monedă fiduciară (off-ramp) dispusă exclusiv de ONPCSB (art. 33–34 din Legea nr. 129/2019), urmată de sesizarea PICCJ și interogarea registrului central electronic pentru conturi de plăți și conturi bancare (Legea nr. 129/2019 și Legea nr. 86/2025), sub supravegherea prudențială a BNR și ASF în cadrul național de aplicare a Regulamentului (UE) 2023/1114 (MiCA) instituit prin O.U.G. nr. 10/2025.'}
                 {fig7SelectedNode === 'faza1-3' &&
                   '1.3 Decompresie alostatică (0–12 luni). Reducerea poverii alostatice cotidiene și refacerea rezervei prefrontale (dlPFC) a cetățenilor prin simplificare administrativă radicală după modelul e-Estonia (principiul Once-Only, interoperabilitate fără ghișeu) și prin garantarea predictibilității serviciilor publice esențiale în comunitățile vulnerabile.'}
                 {fig7SelectedNode === 'poarta1' &&
@@ -5328,7 +5320,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig7SelectedNode === 'faza2-1' &&
                   '2.1 Validare comunitară și punți largi (1–3 ani). Reconstrucția încrederii orizontale în infrastructura asociativă de proximitate (școli, parohii, biblioteci, centre comunitare, cooperative) și formarea unor rețele cu „punți largi” (wide bridges, Centola, 2018) capabile să susțină contagiunea complexă a normelor de cooperare și să extragă comunitatea din ipotezele de bază regresive (Bion, 1961).'}
                 {fig7SelectedNode === 'faza2-2' &&
-                  '2.2 Prebunking și consolidare Ebbinghaus (1–3 ani). Inocularea psihologică preventivă împotriva tehnicilor de manipulare (prebunking, McGuire; Roozenbeek & van der Linden), susținută de sesiuni periodice de rapel calibrate pe curba uitării a lui Ebbinghaus și de antrenarea gândirii activ deschise (actively open-minded thinking, Stanovich, 2009) împotriva raționalizării motivate.'}
+                  '2.2 Prebunking și consolidare Ebbinghaus (1–3 ani). Inocularea psihologică preventivă împotriva tehnicilor de manipulare (prebunking, McGuire; Roozenbeek & van der Linden), susținută de sesiuni periodice de rapel calibrate pe curba uitării a lui Ebbinghaus și de antrenarea gândirii activ-deschise (actively open-minded thinking, Stanovich, 2009) împotriva raționalizării motivate.'}
                 {fig7SelectedNode === 'faza2-3' &&
                   '2.3 Parteneriat axiologic creștin-secular (1–3 ani). Reconcilierea comunicativă (Habermas, 2006; Taylor, 2007) între etica creștină a demnității inalienabile a persoanei (Imago Dei, proairesis) și universalismul constituțional secular, protejând autonomia funcțională a ambelor sfere împotriva parazitării lor ca ideologie militaristă de stat (Hovorun, 2018; Kalaitzidis et al., 2022) sau falsificare mimetică (Soloviov, 1900/1994).'}
                 {fig7SelectedNode === 'poarta2' &&
@@ -5336,9 +5328,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 {fig7SelectedNode === 'faza3' &&
                   'Faza III · Orizont strategic, 3–10 ani. Consolidează arhitectura suveranității democratice prin trei piloni: (3.1) închiderea operațională a statului de drept și isonomia fiscală; (3.2) guvernanța policentrică (Ostrom, 1990) și reforma cooperativelor; și (3.3) individuarea colectivă pe axa Ego–Sine, garantată prin dublul audit independent.'}
                 {fig7SelectedNode === 'faza3-1' &&
-                  '3.1 Închidere operațională și isonomie fiscală (3–10 ani). Eliminarea vulnerabilităților de șantaj instituțional și a numirilor interimare perpetue (art. 509–510 O.U.G. 57/2019), profesionalizarea meritocratică a corpului public și instituirea isonomiei fiscale prin „penalizarea în oglindă a statului” (reforma art. 182 și 281 CPF: dobânzi din oficiu în același IBAN și răspundere solidară conform Deciziei CCR 694/2015).'}
+                  '3.1 Închidere operațională și isonomie fiscală (3–10 ani). Eliminarea vulnerabilităților de șantaj instituțional și a numirilor interimare perpetue (art. 509–510 O.U.G. nr. 57/2019), profesionalizarea meritocratică a corpului public și instituirea isonomiei fiscale: în baza principiului simetriei fiscale statuat prin Decizia CCR nr. 694/2015 (referitoare la vechiul art. 124 alin. 1 raportat la art. 70 din O.G. nr. 92/2003 — actualul art. 182 CPF privind obligația statului de a plăti dobânda fiscală pentru sumele încasate necuvenit sau nerambursate la termen), de lege ferenda se impune modificarea art. 182 CPF (creditarea din oficiu a dobânzii în același IBAN) și completarea cadrului procedural (distinct de actualul art. 281 CPF care vizează comunicarea deciziei de soluționare a contestației și de art. 499–500 din Codul administrativ privind răspunderea funcționarului față de autoritatea publică) pentru regresul patrimonial efectiv în caz de rea-credință sau gravă neglijență.'}
                 {fig7SelectedNode === 'faza3-2' &&
-                  '3.2 Guvernanță policentrică (Ostrom, 1990) și solidaritate economică (3–10 ani). Descentralizarea decizională, dezvoltarea unor centre locale autonome de rezolvare a problemelor comunitare și reforma guvernanței cooperativelor agricole (Legea 566/2004, art. 16 și 76: prag de 20 de membri, capital variabil, vot democratic și management profesionist) pentru generarea capitalului social de punte (bridging, Putnam).'}
+                  '3.2 Guvernanță policentrică (Ostrom, 1990) și solidaritate economică (3–10 ani). Descentralizarea decizională, dezvoltarea unor centre locale autonome de rezolvare a problemelor comunitare și profesionalizarea guvernanței cooperativelor agricole conform Legii nr. 566/2004: coroborarea regulilor de incompatibilitate din art. 16 alin. (4) și art. 29 privind consiliul de administrație cu propunerea de lege ferenda de recrutare prin concurs a unui director executiv independent și cu garanțiile și facilitățile fiscale din art. 76 și art. 76¹, pentru generarea capitalului social de punte (bridging, Putnam).'}
                 {fig7SelectedNode === 'faza3-3' &&
                   '3.3 Individuare colectivă și dublu audit independent (3–10 ani). Integrarea critică a umbrei colective și consolidarea axei Ego–Sine (depășirea sindromului „formelor fără fond”), dublată de un mecanism permanent de verificare: auditul financiar-operațional al Curții de Conturi (Legea 94/1992) și auditul științific al consorțiilor universitare („cercetători agreați” art. 40 DSA, utilizând grilele DigComp, KAVI și Serious Games).'}
                 {fig7SelectedNode === 'fronton' &&

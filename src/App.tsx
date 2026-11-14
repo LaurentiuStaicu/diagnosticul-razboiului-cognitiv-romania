@@ -63,7 +63,7 @@ function findMatchingBibliographyItems(citationText: string): BibliographyItem[]
   ]);
 
   const tokens = cleaned
-    .split(/[^a-zăâîșțéöüä'-]+/i)
+    .split(/[^a-zăâîșțáéíóúçıöüä'-]+/iu)
     .map((t) => t.trim())
     .filter((t) => (t.length >= 3 || t === 'wu') && !stopWords.has(t));
 
@@ -74,10 +74,8 @@ function findMatchingBibliographyItems(citationText: string): BibliographyItem[]
   const matched = BIBLIOGRAPHY_DATA.filter((item) => {
     const itemAuthorsLower = item.authors.toLowerCase();
     return tokens.some((tok) => {
-      if (tok === 'cogniție' || tok === 'manipulare') {
-        return itemAuthorsLower.includes('cogniție și manipulare');
-      }
-      const regex = new RegExp(`\\b${tok}\\b`, 'i');
+      const escapedTok = tok.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(`(?<!\\p{L})${escapedTok}(?!\\p{L})`, 'iu');
       return regex.test(itemAuthorsLower);
     });
   });
@@ -363,7 +361,8 @@ export function App() {
   });
 
   const renderParagraphWithCitations = (paragraphText: string) => {
-    const citationRegex = /\(([^)]+?\b(?:19\d{2}|20\d{2})[a-z]?\b[^)]*)\)/g;
+    const citationRegex = /\(((?:[^()]|\([^()]*\))*?\b(?:18\d{2}|19\d{2}|20\d{2})[a-z]?\b(?:[^()]|\([^()]*\))*)\)/g;
+    const legislativeExclusionRegex = /\b(?:Legea|O\.U\.G\.|O\.G\.|Decizia|Regulamentul|art\.|alin\.|CCR|ÎCCJ|RIL)\b/i;
     const matchedConceptsInParagraph = new Set<string>();
 
     const applyGlossaryTooltips = (
@@ -449,23 +448,30 @@ export function App() {
         parts.push(...applyGlossaryTooltips(textChunk, `chunk-${lastIndex}`));
       }
 
-      const isSelected = selectedAuthorCitation === innerCitation;
+      const isLegislative = legislativeExclusionRegex.test(innerCitation);
+      const matchedItems = isLegislative ? [] : findMatchingBibliographyItems(innerCitation);
 
-      parts.push(
-        <button
-          key={`cite-${matchIndex}`}
-          type="button"
-          onClick={() => handleCitationSelect(innerCitation)}
-          className={`inline font-serif text-inherit p-0 m-0 bg-transparent border-0 text-left transition-colors cursor-pointer ${
-            isSelected
-              ? 'font-bold underline decoration-[#222426]'
-              : 'hover:underline text-[#222426]'
-          }`}
-          title="Verifică fișa referinței bibliografice în panoul lateral"
-        >
-          {fullMatch}
-        </button>
-      );
+      if (matchedItems.length > 0) {
+        const isSelected = selectedAuthorCitation === innerCitation;
+
+        parts.push(
+          <button
+            key={`cite-${matchIndex}`}
+            type="button"
+            onClick={() => handleCitationSelect(innerCitation)}
+            className={`inline font-serif text-inherit p-0 m-0 bg-transparent border-0 text-left transition-colors cursor-pointer ${
+              isSelected
+                ? 'font-bold underline decoration-[#222426]'
+                : 'hover:underline text-[#222426]'
+            }`}
+            title="Verifică fișa referinței bibliografice în panoul lateral"
+          >
+            {fullMatch}
+          </button>
+        );
+      } else {
+        parts.push(...applyGlossaryTooltips(fullMatch, `noncite-${matchIndex}`));
+      }
 
       lastIndex = citationRegex.lastIndex;
     }

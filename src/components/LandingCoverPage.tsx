@@ -46,7 +46,7 @@ const COVER_BLOCK_INFO: Record<
     badge: 'FILTRUL AXIOLOGIC CREȘTIN-SECULAR',
     title: 'Demnitatea persoanei (Imago Dei) versus dubla falsificare axiologică',
     synthesis:
-      'Sinteza creștin-seculară europeană unește antropologia patristică a persoanei libere (Imago Dei și discernământul proairesis — Soloviov, Berdiaev, Stăniloae) cu domnia legii impersonale (Habermas, Taylor). Propaganda Kremlinului operează o dublă falsificare mimetică: substituie ortodoxia canonică cu erezia etnofiletistă militaristă Russkii Mir și suveranitatea constituțională cu dezarmarea strategică izolaționistă.',
+      'Sinteza creștin-seculară europeană unește antropologia patristică a persoanei libere (Imago Dei și discernământul proairesis — Berdiaev, Stăniloae, Kalaitzidis) cu domnia legii impersonale (Habermas, Taylor). Propaganda Kremlinului operează o dublă falsificare mimetică (Soloviov, 1900/1994): substituie ortodoxia canonică cu erezia etnofiletistă militaristă Russkii Mir și suveranitatea constituțională cu dezarmarea strategică izolaționistă.',
     chapterLabel: 'Capitolul 2',
     chapterHash: '#pasul-6',
     figureLabel: 'Figura 2',
@@ -66,7 +66,7 @@ const COVER_BLOCK_INFO: Record<
     badge: 'CAPITOLUL 6 · PROTOCOLUL SECVENȚIAL ÎN TREI FAZE',
     title: 'Arhitectura cauzală Lalonde–Dever și sinteza modernității organice',
     synthesis:
-      'Stabilește ordinea cauzală obligatorie a reconstrucției pentru evitarea efectului de bumerang (Nyhan & Reifler): Faza I (0–72h triaj CERC, DSA și Follow the Money · 0–12 luni decompresie alostatică e-Estonia), Faza II (1–3 ani validare comunitară, prebunking calibrat pe curba Ebbinghaus și parteneriat axiologic creștin-secular) și Faza III (3–10 ani închidere operațională, isonomie fiscală art. 182/281 CPF, guvernanță policentrică Ostrom prin Legea 566/2004 și individuare colectivă în „coridorul îngust”).',
+      'Stabilește ordinea cauzală obligatorie a reconstrucției pentru evitarea efectului de bumerang (Nyhan & Reifler): Faza I (0–72h triaj CERC, DSA și Follow the Money · 0–12 luni decompresie alostatică e-Estonia), Faza II (1–3 ani validare comunitară, prebunking calibrat pe curba Ebbinghaus și parteneriat axiologic creștin-secular) și Faza III (3–10 ani închidere operațională, isonomie și simetrie fiscală conform Deciziei CCR nr. 694/2015 și reforma art. 182 CPF, guvernanță policentrică Ostrom — inclusiv reforma cooperativelor din Legea nr. 566/2004 — și individuare colectivă în „coridorul îngust”).',
     chapterLabel: 'Capitolul 6',
     chapterHash: '#pasul-16',
     figureLabel: 'Figura 7',
@@ -101,7 +101,7 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
             MONOGRAFIE ȘTIINȚIFICĂ • VERSIUNEA 1.0
           </span>
           <span>
-            19 secțiuni analitice · 7 diagrame vectoriale · 2 tabele de sinteză · {BIBLIOGRAPHY_DATA.length} referințe academice
+            19 secțiuni analitice · 7 diagrame vectoriale · 2 tabele de sinteză, matricea instituțională și analiza regională · {BIBLIOGRAPHY_DATA.length} referințe academice
           </span>
         </div>
 

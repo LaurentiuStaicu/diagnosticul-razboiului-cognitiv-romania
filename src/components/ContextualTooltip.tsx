@@ -243,7 +243,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'cognitia-protectoare-a-identitatii',
-    regex: /(?<!\p{L})(cogniți(?:a|ei)\s+protectoar(?:e|ii)\s+a\s+identității|proces(?:are|area|ării)\s+defensiv(?:ă|e)\s+motivat(?:ă|e)\s+de\s+protejarea\s+identității(?:\s+de\s+grup)?|raționaliz(?:are|area|ării)\s+motivat(?:ă|e)(?:\s+a\s+Sistemului\s+2)?|Motivated\s+System\s+2\s+Reasoning|gândir(?:e|ea|ii)\s+activ\s+deschis(?:ă|e)|gândir(?:e|ea|ii)\s+deschis(?:ă|e)\s+activ|actively\s+open[–-]minded\s+thinking|disraționalit(?:ate|atea|ății)|dysrationalia|Identity[–-]Protective\s+Cognition)(?!\p{L})/iu
+    regex: /(?<!\p{L})(cogniți(?:a|ei)\s+protectoar(?:e|ii)\s+a\s+identității|proces(?:are|area|ării)\s+defensiv(?:ă|e)\s+motivat(?:ă|e)\s+de\s+protejarea\s+identității(?:\s+de\s+grup)?|raționaliz(?:are|area|ării)\s+motivat(?:ă|e)(?:\s+a\s+Sistemului\s+2)?|Motivated\s+System\s+2\s+Reasoning|gândir(?:e|ea|ii)\s+activ[–\s-]deschis(?:ă|e)|gândir(?:e|ea|ii)\s+deschis(?:ă|e)\s+activ|actively\s+open[–-]minded\s+thinking|smereni(?:e|a|ei)\s+epistemic(?:ă|e)|disraționalit(?:ate|atea|ății)|dysrationalia|Identity[–-]Protective\s+Cognition)(?!\p{L})/iu
   },
   {
     conceptId: 'bifurcare-track-a-track-b',
@@ -293,7 +293,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'arhetipul-trickster',
-    regex: /(?<!\p{L})(arhetip(?:ul|ului)?\s+Trickster(?:-ului)?|Trickster(?:-ului)?)(?!\p{L})/iu
+    regex: /(?<!\p{L})(arhetip(?:ul|ului)?\s+Trickster(?:ului|-ului)?|Trickster(?:ului|-ului)?)(?!\p{L})/iu
   },
   {
     conceptId: 'enantiodromie',
@@ -341,7 +341,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'proairesis',
-    regex: /(?<!\p{L})(proairesis|smereni(?:e|a|ei)\s+epistemic(?:ă|e)|dreapt(?:ă|a)\s+socoteală)(?!\p{L})/iu
+    regex: /(?<!\p{L})(proairesis|dreapt(?:ă|a)\s+socoteală)(?!\p{L})/iu
   }
 ];
 
