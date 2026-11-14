@@ -72,11 +72,11 @@ export const ContextualTooltip: React.FC<ContextualTooltipProps> = ({
         <span
           role="dialog"
           aria-label={concept.term}
-          className="fixed bottom-4 left-3 right-3 z-50 sm:absolute sm:bottom-full sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:mb-2 sm:w-[340px] bg-[#222426] text-[#F6F5EE] border-2 border-[#E5B822] p-4 text-left font-sans normal-case block"
+          className="fixed bottom-4 left-3 right-3 z-50 sm:absolute sm:bottom-full sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:mb-2 sm:w-[340px] bg-[#222426] text-[#F6F5EE] border-2 border-[#E5B822] shadow-[4px_4px_0px_#222426] p-4 text-left font-sans normal-case block"
         >
           <span className="flex items-center justify-between gap-2 pb-2 mb-2 border-b border-[#6E7376]">
             <span className="text-[11px] font-mono font-bold text-[#E5B822]">
-              Stratul {concept.stratum} · {concept.domain}
+              STRATUL {concept.stratum} · {concept.domain}
             </span>
             <button
               type="button"

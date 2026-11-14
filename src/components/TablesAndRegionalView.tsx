@@ -141,45 +141,45 @@ export const TablesAndRegionalView: React.FC = () => {
             <div className="hidden sm:block overflow-x-auto">
               <table className="w-full min-w-[680px] border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
                 <thead>
-                  <tr className="bg-[#F6F5EE] border-b-2 border-[#222426]">
-                    <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/5">
+                  <tr className="bg-[#222426] text-[#F6F5EE] font-sans text-xs uppercase tracking-wider">
+                    <th className="p-4 border-r border-[#8C9BA5] font-semibold w-1/4">
                       Dimensiunea analitică și domeniul de vulnerabilitate
                     </th>
                     {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'A') && (
-                      <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
-                        Stratul A · Mecanismul instituțional, istoric și sociologic
+                      <th className="p-4 border-r border-[#8C9BA5] font-semibold w-1/4">
+                        STRATUL A · Mecanismul instituțional, istoric și sociologic
                       </th>
                     )}
                     {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'B') && (
-                      <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
-                        Stratul B · Mecanismul neurocognitiv, semiotic și axiologic
+                      <th className="p-4 border-r border-[#8C9BA5] font-semibold w-1/4">
+                        STRATUL B · Mecanismul neurocognitiv, semiotic și axiologic
                       </th>
                     )}
                     {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'C') && (
-                      <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
-                        Stratul C · Expresia în inconștientul cultural și dinamica arhetipală
+                      <th className="p-4 font-semibold w-1/4">
+                        STRATUL C · Expresia în inconștientul cultural și dinamica arhetipală
                       </th>
                     )}
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#222426]">
+                <tbody className="divide-y divide-[#8C9BA5]">
                   {TABLE_1_DATA.map((row) => (
-                    <tr key={row.id} className="align-top hover:bg-[#E5B822]/10 transition-colors">
-                      <td className="p-4 border-b border-[#8C9BA5] font-serif font-semibold text-sm text-[#222426] bg-[#F6F5EE]">
+                    <tr key={row.id} className="align-top hover:bg-[#222426]/[0.03] transition-colors">
+                      <td className="p-4 border-r border-[#8C9BA5] font-serif font-semibold text-sm text-[#222426] bg-[#F6F5EE]">
                         {row.dimensionTitle}
                       </td>
                       {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'A') && (
-                        <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
+                        <td className="p-4 border-r border-[#8C9BA5] text-xs sm:text-sm font-sans text-[#222426] leading-relaxed">
                           {row.stratumA}
                         </td>
                       )}
                       {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'B') && (
-                        <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
+                        <td className="p-4 border-r border-[#8C9BA5] text-xs sm:text-sm font-sans text-[#222426] leading-relaxed">
                           {row.stratumB}
                         </td>
                       )}
                       {(selectedStratumFilter === 'ALL' || selectedStratumFilter === 'C') && (
-                        <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
+                        <td className="p-4 text-xs sm:text-sm font-sans text-[#222426] leading-relaxed">
                           {row.stratumC}
                         </td>
                       )}
@@ -226,8 +226,13 @@ export const TablesAndRegionalView: React.FC = () => {
             <div className="sm:hidden space-y-4">
               {filteredTable2.map((row) => (
                 <div key={row.id} className="bg-[#F6F5EE] border-2 border-[#222426] p-4 space-y-3 text-xs">
-                  <div className="font-mono font-bold text-xs text-[#222426] pb-2 border-b border-[#222426] bg-[#E5B822]/25 -mx-4 -mt-4 p-3">
-                    {row.phaseCode} · {row.horizon}
+                  <div className="pb-2 border-b border-[#222426] bg-[#222426]/[0.04] -mx-4 -mt-4 p-3 flex items-center gap-2">
+                    <span className="bg-[#E5B822] text-[#222426] border border-[#222426] font-mono text-xs font-bold px-2 py-0.5">
+                      {row.phaseCode}
+                    </span>
+                    <span className="font-mono font-bold text-xs text-[#222426]">
+                      {row.horizon}
+                    </span>
                   </div>
                   <div className="space-y-1">
                     <div className="font-mono font-bold text-[11px] text-[#6E7376]">
@@ -261,50 +266,70 @@ export const TablesAndRegionalView: React.FC = () => {
             <div className="hidden sm:block overflow-x-auto">
               <table className="w-full min-w-[680px] border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
                 <thead>
-                  <tr className="bg-[#F6F5EE] border-b-2 border-[#222426]">
-                    <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
+                  <tr className="bg-[#222426] text-[#F6F5EE] font-sans text-xs uppercase tracking-wider">
+                    <th className="p-4 border-r border-[#8C9BA5] font-semibold w-1/4">
                       Biologia umană și rezerva neurocognitivă
                     </th>
-                    <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
+                    <th className="p-4 border-r border-[#8C9BA5] font-semibold w-1/4">
                       Mediul digital și sociospațial
                     </th>
-                    <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
+                    <th className="p-4 border-r border-[#8C9BA5] font-semibold w-1/4">
                       Stilul de viață informațional, asociativ și filtrul moral
                     </th>
-                    <th className="p-4 border-b border-[#222426] text-xs font-serif font-bold text-[#222426] w-1/4">
+                    <th className="p-4 font-semibold w-1/4">
                       Sistemul instituțional, juridic și constituțional
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#222426]">
+                <tbody className="divide-y divide-[#8C9BA5]">
                   {filteredTable2.map((row) => (
-                    <tr key={row.id} className="align-top hover:bg-[#E5B822]/10 transition-colors">
-                      <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
-                        <div className="mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          <div className="text-xs font-mono font-bold text-[#222426]">
-                            {row.phaseCode} · Pilonul I de deblocare · Rezervă neurobiologică
+                    <tr key={row.id} className="align-top hover:bg-[#222426]/[0.03] transition-colors">
+                      <td className="p-4 border-r border-[#8C9BA5] text-xs sm:text-sm font-sans text-[#222426] leading-relaxed">
+                        <div className="mb-2 pb-1.5 border-b border-[#8C9BA5]">
+                          <div className="flex flex-wrap items-center gap-1.5">
+                            <span className="bg-[#E5B822] text-[#222426] border border-[#222426] font-mono text-xs font-bold px-2 py-0.5">
+                              {row.phaseCode}
+                            </span>
+                            <span className="text-xs font-mono font-bold text-[#222426]">
+                              Pilonul I · Rezervă neurobiologică
+                            </span>
                           </div>
-                          <div className="text-[11px] font-mono text-[#6E7376] mt-0.5">
+                          <div className="text-[11px] font-mono text-[#6E7376] mt-1">
                             {row.horizon}
                           </div>
                         </div>
                         {row.humanBiology}
                       </td>
-                      <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
-                        <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          {row.phaseCode} · Pilonul II de deblocare · Mediu digital și sociospațial
+                      <td className="p-4 border-r border-[#8C9BA5] text-xs sm:text-sm font-sans text-[#222426] leading-relaxed">
+                        <div className="mb-2 pb-1.5 border-b border-[#8C9BA5] flex flex-wrap items-center gap-1.5">
+                          <span className="bg-[#E5B822] text-[#222426] border border-[#222426] font-mono text-xs font-bold px-2 py-0.5">
+                            {row.phaseCode}
+                          </span>
+                          <span className="text-xs font-mono font-bold text-[#6E7376]">
+                            Pilonul II · Mediu digital și sociospațial
+                          </span>
                         </div>
                         {row.digitalAndSociospatial}
                       </td>
-                      <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
-                        <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          {row.phaseCode} · Pilonul III de deblocare · Stil de viață și filtru axiologic
+                      <td className="p-4 border-r border-[#8C9BA5] text-xs sm:text-sm font-sans text-[#222426] leading-relaxed">
+                        <div className="mb-2 pb-1.5 border-b border-[#8C9BA5] flex flex-wrap items-center gap-1.5">
+                          <span className="bg-[#E5B822] text-[#222426] border border-[#222426] font-mono text-xs font-bold px-2 py-0.5">
+                            {row.phaseCode}
+                          </span>
+                          <span className="text-xs font-mono font-bold text-[#6E7376]">
+                            Pilonul III · Stil de viață și filtru axiologic
+                          </span>
                         </div>
                         {row.informationalLifestyle}
                       </td>
-                      <td className="p-4 border-b border-[#8C9BA5] text-xs sm:text-sm text-[#222426] leading-relaxed">
-                        <div className="text-xs font-mono font-bold text-[#6E7376] mb-1.5 pb-1 border-b border-[#8C9BA5]">
-                          {row.phaseCode} · Pilonul IV de consolidare · Sistem instituțional și constituțional
+                      <td className="p-4 text-xs sm:text-sm font-sans text-[#222426] leading-relaxed">
+                        <div className="mb-2 pb-1.5 border-b border-[#8C9BA5] flex flex-wrap items-center gap-1.5">
+                          <span className="bg-[#E5B822] text-[#222426] border border-[#222426] font-mono text-xs font-bold px-2 py-0.5">
+                            {row.phaseCode}
+                          </span>
+                          <span className="text-xs font-mono font-bold text-[#6E7376]">
+                            Pilonul IV · Sistem instituțional și constituțional
+                          </span>
                         </div>
                         {row.institutionalSystem}
                       </td>
@@ -329,25 +354,30 @@ export const TablesAndRegionalView: React.FC = () => {
             <div className="overflow-x-auto">
               <table className="w-full min-w-[680px] border-collapse border border-[#222426] text-left bg-[#F6F5EE]">
                 <thead>
-                  <tr className="bg-[#222426] text-[#F6F5EE]">
-                    <th className="p-3.5 border-r border-[#6E7376] text-xs font-serif font-bold w-1/6">
+                  <tr className="bg-[#222426] text-[#F6F5EE] font-sans text-xs uppercase tracking-wider">
+                    <th className="p-3.5 border-r border-[#8C9BA5] font-semibold w-1/4">
                       Faza și orizontul temporal
                     </th>
-                    <th className="p-3.5 border-r border-[#6E7376] text-xs font-serif font-bold w-1/5">
+                    <th className="p-3.5 border-r border-[#8C9BA5] font-semibold w-1/4">
                       Obiectivul strategic și neurocognitiv
                     </th>
-                    <th className="p-3.5 border-r border-[#6E7376] text-xs font-serif font-bold w-1/3">
+                    <th className="p-3.5 border-r border-[#8C9BA5] font-semibold w-1/4">
                       Acțiuni tactice, legislative și algoritmice · DSA Art. 34–35 și AI Act
                     </th>
-                    <th className="p-3.5 text-xs font-serif font-bold w-1/4">
+                    <th className="p-3.5 font-semibold w-1/4">
                       Instituții responsabile și parteneri societali · România și UE
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#222426]">
+                <tbody className="divide-y divide-[#8C9BA5]">
                   {filteredOperationalProtocol.map((row) => (
-                    <tr key={row.id} className="align-top hover:bg-[#E5B822]/15 transition-colors">
-                      <td className="p-4 border-r border-[#222426] bg-[#F6F5EE]">
+                    <tr key={row.id} className="align-top hover:bg-[#222426]/[0.03] transition-colors">
+                      <td className="p-4 border-r border-[#8C9BA5] bg-[#F6F5EE]">
+                        <div className="mb-1.5">
+                          <span className="bg-[#E5B822] text-[#222426] border border-[#222426] font-mono text-xs font-bold px-2 py-0.5 inline-block">
+                            {row.phaseCode}
+                          </span>
+                        </div>
                         <div className="font-serif font-bold text-sm text-[#222426]">
                           {row.phaseTitle}
                         </div>
@@ -355,10 +385,10 @@ export const TablesAndRegionalView: React.FC = () => {
                           {row.horizon}
                         </div>
                       </td>
-                      <td className="p-4 border-r border-[#222426] text-xs sm:text-sm text-[#222426] font-medium leading-relaxed">
+                      <td className="p-4 border-r border-[#8C9BA5] text-xs sm:text-sm font-sans text-[#222426] font-medium leading-relaxed">
                         {row.targetObjective}
                       </td>
-                      <td className="p-4 border-r border-[#222426] text-xs sm:text-sm text-[#222426] leading-relaxed">
+                      <td className="p-4 border-r border-[#8C9BA5] text-xs sm:text-sm font-sans text-[#222426] leading-relaxed">
                         {row.concreteIntervention}
                       </td>
                       <td className="p-4 text-xs sm:text-sm text-[#222426] font-mono leading-relaxed bg-[#F6F5EE]">

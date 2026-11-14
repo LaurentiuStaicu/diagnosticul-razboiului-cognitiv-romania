@@ -23,13 +23,12 @@ Aplicația și toate diagramele SVG folosesc exclusiv următoarea paletă de 5 t
 
 ## 2. Tipografie și Sistemul de Fonturi (`src/index.css`, `index.html`)
 
-- **Familia de fonturi unificată**: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` (încărcată din Google Fonts în `index.html` cu greutățile `400, 500, 600, 700, 800`, normal și italic).
-- **Maparea claselor în `src/index.css`**:
-  - `--font-display`, `--font-serif`, `--font-sans`, `--font-mono` sunt mapate unitar pe familia `"Inter"` pentru coerență chirurgicală între textul monografiei, tabele și etichetele din interiorul SVG-urilor.
-  - Clasa `.font-mono` activează automat `font-variant-numeric: tabular-nums` pentru alinierea cifrelor în tabele, faze (`0–72h`, `0–12 luni`, `1–3 ani`, `3–10 ani`) și referințe legislative.
-  - Toate elementele `svg text` moștenesc `font-family: var(--font-sans)` (`Inter, sans-serif`).
+- **Ierarhia tipografică pe 3 familii de fonturi** (încărcate din Google Fonts în `index.html` cu suport complet pentru diacritice românești `latin-ext`):
+  - `--font-serif: "Newsreader", Georgia, Cambria, serif;` -> aplicat pe toate titlurile de capitole/subcapitole (`H1`, `H2`, `H3`), pe paragrafele narative ale monografiei și pe citatele verbatim;
+  - `--font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;` -> aplicat pe navigație, butoane, tabele, glosar și etichetele nodurilor din interiorul diagramelor SVG (`svg text`);
+  - `--font-mono: "JetBrains Mono", monospace;` -> aplicat pe indicatorii de pas (`PASUL 01 / 19`), antetele tehnice ale planșelor (`FIGURA 01`), coordonatele matematice `(+X, +Y)` și codurile de strat (`STRATUL A`, `STRATUL B`, `STRATUL C`), cu `font-variant-numeric: tabular-nums`.
 - **Parametrii de lectură ai textului monografic (`src/App.tsx`)**:
-  - Corpul textului integral: `text-[17px] sm:text-[18px] text-[#222426] leading-[1.65] max-w-[65ch]`.
+  - Corpul textului integral: `font-serif text-[17px] sm:text-[18px] text-[#222426] leading-[1.75] max-w-[72ch] space-y-6`.
   - Primul paragraf al fiecărei secțiuni are letrină editorială (`first-letter:text-4xl first-letter:font-bold first-letter:float-left`).
   - Titlurile majore folosesc clasa `.headline-balance` (`text-wrap: balance`).
 

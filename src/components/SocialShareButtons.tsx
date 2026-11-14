@@ -97,7 +97,7 @@ export const SocialShareButtons: React.FC<SocialShareButtonsProps> = ({
           type="button"
           onClick={handleCopy}
           title="Copiază linkul în clipboard"
-          className="px-2.5 py-1 text-xs font-mono border border-[#222426] bg-[#F4F1EA] text-[#222426] hover:bg-[#E5B822]/40 transition-colors cursor-pointer inline-flex items-center gap-1.5 whitespace-nowrap shrink-0"
+          className="px-2.5 py-1 text-xs font-mono border border-[#222426] bg-[#F6F5EE] text-[#222426] hover:bg-[#E5B822] transition-colors cursor-pointer inline-flex items-center gap-1.5 whitespace-nowrap shrink-0"
         >
           {copied ? (
             <>

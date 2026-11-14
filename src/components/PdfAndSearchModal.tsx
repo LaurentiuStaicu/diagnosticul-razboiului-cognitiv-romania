@@ -44,7 +44,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 bg-[#222426]/70 flex items-start justify-center p-4 sm:p-8 overflow-y-auto">
-      <div className="bg-[#F6F5EE] border-2 border-[#222426] w-full max-w-3xl p-5 sm:p-6 my-8">
+      <div className="bg-[#F6F5EE] border-2 border-[#222426] shadow-[4px_4px_0px_#222426] w-full max-w-3xl p-5 sm:p-6 my-8">
         <div className="flex items-center justify-between gap-4 pb-4 border-b border-[#222426]">
           <div>
             <div className="text-xs font-mono text-[#6E7376]">
@@ -56,7 +56,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="p-2 border border-[#222426] bg-[#F4F1EA] hover:bg-[#E5B822]/30 transition-colors cursor-pointer"
+            className="p-2 border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822] transition-colors cursor-pointer"
             aria-label="Închide căutarea"
           >
             <X className="w-4 h-4 text-[#222426]" />
@@ -71,7 +71,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Introduceți un termen, concept sau autor (ex. Luhmann, OODA, alostazie, Bobok, Cipolla, Bion)..."
-            className="w-full pl-10 pr-4 py-3 text-sm bg-[#F4F1EA] border-2 border-[#222426] text-[#222426] placeholder:text-[#6E7376] focus:outline-none focus:bg-[#F6F5EE]"
+            className="w-full pl-10 pr-4 py-3 text-sm bg-[#F6F5EE] border-2 border-[#222426] text-[#222426] placeholder:text-[#6E7376] focus:outline-none focus:bg-[#F6F5EE]"
           />
         </div>
 
@@ -88,17 +88,17 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                     onNavigateToStep(step.stepNumber);
                     onClose();
                   }}
-                  className="w-full text-left p-3.5 border border-[#222426] bg-[#F4F1EA] hover:bg-[#E5B822]/20 transition-colors flex items-start justify-between gap-3 cursor-pointer"
+                  className="w-full text-left p-3.5 border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822]/20 transition-colors flex items-start justify-between gap-3 cursor-pointer"
                 >
                   <div>
                     <div className="text-xs font-mono text-[#6E7376]">
-                      Pasul {step.stepNumber} din 19 · {step.chapterTitle}
+                      PASUL {String(step.stepNumber).padStart(2, '0')} / 19 · {step.chapterTitle}
                     </div>
                     <div className="font-serif text-sm font-bold text-[#222426] mt-0.5">
                       {step.title}
                     </div>
                     {step.subtitle && (
-                      <div className="font-serif text-xs font-normal text-[#2C3539] mt-0.5 line-clamp-1">
+                      <div className="font-serif text-xs font-normal text-[#6E7376] mt-0.5 line-clamp-1">
                         {step.subtitle}
                       </div>
                     )}
@@ -121,7 +121,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                 {matchingConcepts.map((c) => (
                   <div key={c.id} className="p-3 border border-[#8C9BA5] bg-[#F6F5EE]">
                     <div className="text-xs font-mono text-[#6E7376]">
-                      Stratul {c.stratum} · {c.authors}
+                      STRATUL {c.stratum} · {c.authors}
                     </div>
                     <div className="font-serif text-sm font-bold text-[#222426]">{c.term}</div>
                     <p className="text-xs text-[#222426] mt-1">{c.definition}</p>
@@ -156,7 +156,7 @@ export const PdfDocumentView: React.FC = () => {
 
   return (
     <div className="space-y-5">
-      <div className="bg-[#F4F1EA] border border-[#222426] p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-[#F6F5EE] border border-[#222426] p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="text-xs font-mono text-[#6E7376] mb-1">
             Sursă primară verificată (47 pagini, Versiunea 1.0)
@@ -173,7 +173,7 @@ export const PdfDocumentView: React.FC = () => {
           href={pdfPath}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold bg-[#222426] text-[#F6F5EE] border border-[#222426] hover:bg-[#2C3539] transition-colors whitespace-nowrap shrink-0"
+          className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold bg-[#222426] text-[#F6F5EE] border border-[#222426] hover:bg-[#6E7376] transition-colors whitespace-nowrap shrink-0"
         >
           <FileText className="w-4 h-4" />
           <span>Descărcare PDF original</span>
@@ -181,7 +181,7 @@ export const PdfDocumentView: React.FC = () => {
         </a>
       </div>
 
-      <div className="bg-[#F4F1EA] border-2 border-[#222426] p-2 h-[80vh]">
+      <div className="bg-[#F6F5EE] border-2 border-[#222426] p-2 h-[80vh]">
         <iframe
           src={pdfPath}
           title="Diagnosticul războiului cognitiv în România (PDF)"

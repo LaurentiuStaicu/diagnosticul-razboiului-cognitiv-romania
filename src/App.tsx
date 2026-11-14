@@ -799,7 +799,7 @@ export function App() {
                       <span>19 secțiuni</span>
                     </div>
 
-                    <div className="space-y-3 text-xs font-mono">
+                    <div className="space-y-3 text-xs">
                       {[
                         { chapNum: 0, title: 'Introducere', steps: [1] },
                         { chapNum: 1, title: 'Capitolul 1: Vulnerabilități', steps: [2, 3, 4] },
@@ -810,7 +810,7 @@ export function App() {
                         { chapNum: 6, title: 'Capitolul 6: Reconstrucție', steps: [16, 17, 18, 19] }
                       ].map((group) => (
                         <div key={group.chapNum} className="space-y-1">
-                          <div className="text-[11px] font-bold text-[#222426] pt-1 border-t border-[#8C9BA5]/60">
+                          <div className="text-[11px] font-sans font-bold text-[#222426] pt-1 border-t border-[#8C9BA5]/60">
                             {group.title}
                           </div>
                           <div className="pl-1.5 space-y-0.5">
@@ -823,14 +823,15 @@ export function App() {
                                   key={stNum}
                                   ref={isActive ? activeStepButtonRef : null}
                                   onClick={() => handleStepSelect(stNum)}
-                                  className={`w-full text-left px-2 py-1 text-[11px] border transition-colors cursor-pointer block truncate ${
+                                  className={`w-full text-left px-2 py-1.5 text-[11px] transition-colors cursor-pointer block truncate ${
                                     isActive
-                                      ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
-                                      : 'bg-[#F6F5EE] text-[#222426] border-transparent hover:border-[#8C9BA5]'
+                                      ? 'border-l-4 border-[#E5B822] bg-[#222426]/[0.05] font-semibold text-[#222426]'
+                                      : 'border border-transparent bg-[#F6F5EE] text-[#222426] hover:border-[#8C9BA5]'
                                   }`}
                                   title={stObj.title}
                                 >
-                                  {stNum}. {stObj.code}
+                                  <span className="font-mono">{String(stNum).padStart(2, '0')}.</span>{' '}
+                                  <span className="font-sans">{stObj.code}</span>
                                 </button>
                               );
                             })}
@@ -858,7 +859,7 @@ export function App() {
                   {/* Step Header & Navigation */}
                   <div className="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-[#8C9BA5]">
                     <div className="text-xs font-mono text-[#6E7376]">
-                      Pasul {currentStep.stepNumber} din 19 · {currentStep.chapterTitle}
+                      PASUL {String(currentStep.stepNumber).padStart(2, '0')} / 19 · {currentStep.chapterTitle}
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
                       <button
@@ -1079,7 +1080,7 @@ export function App() {
                         Stratul teoretic și conceptual în oglindă cu realitatea practică și istorică
                       </h3>
 
-                      <div className="space-y-4">
+                      <div className="space-y-6">
                         {currentStep.dualRegister.map((dr) => {
                           const isStratumMatch =
                             selectedStratumHighlight !== 'ALL' &&
@@ -1090,50 +1091,66 @@ export function App() {
                           return (
                             <div
                               key={dr.id}
-                              className={`grid grid-cols-1 md:grid-cols-2 bg-[#F6F5EE] transition-all ${
-                                isStratumMatch
-                                  ? 'border-2 border-[#E5B822] ring-2 ring-[#E5B822]/40'
-                                  : 'border border-[#222426]'
-                              } ${isStratumDimmed ? 'opacity-40' : ''}`}
+                              className={`grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch transition-all ${
+                                isStratumDimmed ? 'opacity-40' : ''
+                              }`}
                             >
                               {/* Left: Theoretical Register */}
-                              <div className="p-4 border-b md:border-b-0 md:border-r border-[#222426]">
-                                <div className="text-xs font-mono text-[#6E7376] mb-1">
-                                  <span>Registrul teoretic · Stratul {dr.stratum}</span>
+                              <div
+                                className={`h-full flex flex-col justify-between bg-[#F6F5EE] ${
+                                  isStratumMatch
+                                    ? 'border-2 border-[#E5B822] ring-2 ring-[#E5B822]/40'
+                                    : 'border border-[#222426]'
+                                }`}
+                              >
+                                <div className="border-b border-[#222426] px-4 py-2.5 bg-[#222426]/[0.04] flex items-center gap-2">
+                                  <span className="w-2.5 h-2.5 bg-[#E5B822] border border-[#222426] shrink-0" />
+                                  <span className="font-mono text-xs uppercase tracking-wider text-[#222426] font-semibold">
+                                    Registrul teoretic · STRATUL {dr.stratum}
+                                  </span>
                                 </div>
-                                <div className="font-serif text-sm font-bold text-[#222426]">
-                                  {dr.theoreticalConcept}
+                                <div className="p-4 flex-1 flex flex-col justify-between">
+                                  <div>
+                                    <div className="font-serif text-sm sm:text-base font-bold text-[#222426]">
+                                      {dr.theoreticalConcept}
+                                    </div>
+                                    <div className="text-xs font-mono text-[#6E7376] mt-0.5 mb-2.5">
+                                      {dr.theoreticalAuthor}
+                                    </div>
+                                    <p className="text-xs sm:text-sm font-sans text-[#222426] leading-relaxed">
+                                      {dr.theoreticalMechanism}
+                                    </p>
+                                  </div>
                                 </div>
-                                <div className="text-xs font-mono text-[#6E7376] mt-0.5 mb-2">
-                                  {dr.theoreticalAuthor}
-                                </div>
-                                <p className="text-xs sm:text-sm text-[#222426] leading-relaxed">
-                                  {dr.theoreticalMechanism}
-                                </p>
                               </div>
 
                               {/* Right: Empirical Reality */}
                               <div
-                                className={`p-4 ${
-                                  dr.systemicOutcome === 'tension'
-                                    ? 'bg-[#F01E1E]/5'
-                                    : 'bg-[#E5B822]/15'
+                                className={`h-full flex flex-col justify-between bg-[#F6F5EE] ${
+                                  isStratumMatch
+                                    ? 'border-2 border-[#E5B822] ring-2 ring-[#E5B822]/40'
+                                    : 'border border-[#222426]'
                                 }`}
                               >
-                                <div
-                                  className={`text-xs font-mono font-semibold mb-1 ${
-                                    dr.systemicOutcome === 'tension'
-                                      ? 'text-[#F01E1E]'
-                                      : 'text-[#222426]'
-                                  }`}
-                                >
-                                  {dr.systemicOutcome === 'tension'
-                                    ? 'Realitatea empirică · Vulnerabilitate structurală'
-                                    : 'Realitatea empirică · Mecanism de reziliență'}
+                                <div className="border-b border-[#222426] px-4 py-2.5 bg-[#222426]/[0.04] flex items-center gap-2">
+                                  <span
+                                    className={`w-2.5 h-2.5 border border-[#222426] shrink-0 ${
+                                      dr.systemicOutcome === 'tension'
+                                        ? 'bg-[#F01E1E]'
+                                        : 'bg-[#6E7376]'
+                                    }`}
+                                  />
+                                  <span className="font-mono text-xs uppercase tracking-wider text-[#222426] font-semibold">
+                                    {dr.systemicOutcome === 'tension'
+                                      ? 'Realitatea empirică · Vulnerabilitate structurală'
+                                      : 'Realitatea empirică · Mecanism de reziliență'}
+                                  </span>
                                 </div>
-                                <p className="text-xs sm:text-sm text-[#222426] leading-relaxed mt-2">
-                                  {dr.empiricalReality}
-                                </p>
+                                <div className="p-4 flex-1 flex flex-col justify-between">
+                                  <p className="text-xs sm:text-sm font-sans text-[#222426] leading-relaxed">
+                                    {dr.empiricalReality}
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           );
@@ -1150,14 +1167,14 @@ export function App() {
                           Textul integral al secțiunii din monografie
                         </div>
                       </div>
-                      <div className="space-y-5 font-serif text-[17px] sm:text-[18px] text-[#222426] leading-[1.65]">
+                      <div className="space-y-6 font-serif text-[17px] sm:text-[18px] text-[#222426] leading-[1.75]">
                         {currentStep.paragraphs.map((paragraph, index) => {
                           const isFigureCaption = paragraph.startsWith('Figura ');
                           if (isFigureCaption && currentStep.linkedFigureId) {
                             return (
                               <div
                                 key={`inline-figure-${currentStep.linkedFigureId}-${index}`}
-                                className="my-6 font-sans w-full"
+                                className="my-8 font-sans w-full"
                               >
                                 <InteractiveFigures
                                   figureId={currentStep.linkedFigureId}
@@ -1170,7 +1187,7 @@ export function App() {
                             return (
                               <div
                                 key={index}
-                                className="p-4 bg-[#F6F5EE] border border-[#222426] text-xs sm:text-sm italic text-[#222426] leading-relaxed my-4 max-w-[65ch]"
+                                className="p-4 bg-[#F6F5EE] border border-[#222426] text-xs sm:text-sm italic text-[#222426] leading-relaxed my-4 max-w-[72ch]"
                               >
                                 {paragraph}
                               </div>
@@ -1179,7 +1196,7 @@ export function App() {
                           return (
                             <p
                               key={index}
-                              className={`max-w-[65ch] ${
+                              className={`max-w-[72ch] ${
                                 index === 0
                                   ? 'first-letter:text-4xl first-letter:font-serif first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[#222426]'
                                   : ''
@@ -1193,7 +1210,7 @@ export function App() {
 
                       {/* Midpoint Summary Callout at Dense Steps */}
                       {[1, 4, 7, 10, 13, 15, 19].includes(currentStep.stepNumber) && (
-                        <div className="mt-8 p-4.5 bg-[#F6F5EE] border-2 border-[#222426] space-y-2 max-w-[65ch]">
+                        <div className="mt-8 p-4.5 bg-[#F6F5EE] border-2 border-[#222426] space-y-2 max-w-[72ch]">
                           <div className="text-xs font-mono font-bold text-[#222426] uppercase tracking-wider flex items-center gap-2">
                             <span className="w-2 h-2 bg-[#E5B822] border border-[#222426] inline-block" />
                             <span>Punct de control și sinteză intermediară</span>
@@ -1233,28 +1250,28 @@ export function App() {
                   </div>
 
                   {/* Bottom Step Navigation */}
-                  <div className="mt-6 pt-5 border-t-2 border-[#222426] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                  <div className="mt-8 pt-6 border-t-2 border-[#222426] grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
                     {currentStepNumber > 1 ? (
                       <button
                         onClick={() => handleStepSelect(currentStepNumber - 1)}
-                        className="px-4 py-2.5 text-xs font-medium border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822]/20 transition-colors cursor-pointer flex items-center gap-2"
+                        className="border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822] text-[#222426] transition-colors px-5 py-3 font-sans text-sm font-medium cursor-pointer flex items-center justify-start gap-2.5 text-left"
                       >
                         <ArrowLeft className="w-4 h-4 shrink-0" />
                         <span className="truncate">
-                          Pasul {currentStepNumber - 1} · {ALL_SUBCHAPTER_STEPS[currentStepNumber - 2].code}
+                          Pasul anterior ({ALL_SUBCHAPTER_STEPS[currentStepNumber - 2].code})
                         </span>
                       </button>
                     ) : (
-                      <div />
+                      <div className="hidden sm:block" />
                     )}
 
                     {currentStepNumber < ALL_SUBCHAPTER_STEPS.length ? (
                       <button
                         onClick={() => handleStepSelect(currentStepNumber + 1)}
-                        className="px-5 py-2.5 text-xs font-semibold border border-[#222426] bg-[#E5B822] hover:bg-[#E5B822]/85 transition-colors cursor-pointer flex items-center justify-center gap-2"
+                        className="border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822] text-[#222426] transition-colors px-5 py-3 font-sans text-sm font-medium cursor-pointer flex items-center justify-end gap-2.5 text-right"
                       >
                         <span className="truncate">
-                          Pasul următor · {ALL_SUBCHAPTER_STEPS[currentStepNumber].code}
+                          Pasul următor ({ALL_SUBCHAPTER_STEPS[currentStepNumber].code})
                         </span>
                         <ArrowRight className="w-4 h-4 shrink-0" />
                       </button>
@@ -1265,7 +1282,7 @@ export function App() {
                           updateUrlHash('tabele');
                           window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}
-                        className="px-5 py-2.5 text-xs font-semibold border border-[#222426] bg-[#E5B822] hover:bg-[#E5B822]/85 transition-colors cursor-pointer flex items-center justify-center gap-2"
+                        className="border border-[#222426] bg-[#F6F5EE] hover:bg-[#E5B822] text-[#222426] transition-colors px-5 py-3 font-sans text-sm font-medium cursor-pointer flex items-center justify-end gap-2.5 text-right"
                       >
                         <span>Explorează Tabelele 1 și 2 de sinteză</span>
                         <ArrowRight className="w-4 h-4 shrink-0" />

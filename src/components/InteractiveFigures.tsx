@@ -211,33 +211,40 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
       : 'w-full h-auto min-w-[660px] select-none';
 
   return (
-    <div className="bg-[#F6F5EE] border border-[#222426] p-5 sm:p-6">
+    <div className="border-2 border-[#222426] bg-[#F6F5EE] my-8">
       {showSelector && onSelectFigure && (
-        <div className="mb-6 pb-4 border-b border-[#8C9BA5]">
+        <div className="px-5 pt-4 pb-3 border-b border-[#8C9BA5] bg-[#222426]/[0.03]">
           <div className="flex flex-wrap gap-1.5">
             {[1, 2, 3, 4, 5, 6, 7].map((id) => (
               <button
                 key={id}
                 onClick={() => onSelectFigure(id)}
-                className={`px-3 py-1.5 text-xs font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+                className={`px-3 py-1.5 text-xs font-mono font-medium border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                   figureId === id
-                    ? 'bg-[#222426] text-[#F6F5EE] border-[#222426]'
+                    ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
                     : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
                 }`}
               >
-                Figura {id}
+                FIGURA 0{id}
               </button>
             ))}
           </div>
         </div>
       )}
 
-      {/* Header */}
-      <div className="mb-5 pb-4 border-b border-[#8C9BA5]">
-        <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#6E7376] mb-1">
-          <span>{meta.chapterRef}</span>
+      {/* 1. Header Bar (Antet tehnic al planșei) */}
+      <div className="px-5 py-4 border-b border-[#222426] bg-[#222426]/[0.03]">
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <div className="flex flex-wrap items-center gap-2.5">
+            <span className="bg-[#E5B822] text-[#222426] border border-[#222426] px-2.5 py-0.5 font-mono text-xs font-bold">
+              FIGURA 0{meta.id}
+            </span>
+            <span className="text-xs font-mono text-[#6E7376]">
+              {meta.chapterRef}
+            </span>
+          </div>
         </div>
-        <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#222426] headline-balance">
+        <h3 className="font-serif text-lg sm:text-xl font-bold text-[#222426] headline-balance">
           {meta.title}
         </h3>
         <p className="text-xs sm:text-sm text-[#6E7376] mt-1">{meta.subtitle}</p>
@@ -280,9 +287,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           FIGURA 1: Arhitectura cauzală pe trei straturi (Pagina 8)
          ===================================================================== */}
       {figureId === 1 && (
-        <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
-            <span className="text-xs font-medium text-[#222426]">
+        <div>
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] px-5 py-3 border-b border-[#8C9BA5]">
+            <span className="text-xs font-mono uppercase tracking-wider font-semibold text-[#222426]">
               Regim sistemic pe Straturile A, B și C
             </span>
             <div className="flex flex-wrap items-center gap-2">
@@ -311,7 +318,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </div>
           </div>
 
-          <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
+          <div className="w-full h-auto bg-[#F6F5EE] p-4 overflow-x-auto">
             <svg
               viewBox="0 0 940 650"
               className={svgClass}
@@ -667,8 +674,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 width="590"
                 height="160"
                 fill="#F6F5EE"
-                stroke="#222426"
-                strokeWidth="2.5"
+                stroke="#6E7376"
+                strokeWidth="2"
+                strokeDasharray="6 4"
               />
               <rect x="200" y="434" width="340" height="24" fill="#F6F5EE" stroke="#6E7376" strokeWidth="1" />
               <text
@@ -776,7 +784,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="560"
                   width="390"
                   height="30"
-                  rx="3"
                   fill={fig1Mode === 'resilient' ? '#E5B822' : '#F6F5EE'}
                   stroke={fig1Mode === 'resilient' ? '#222426' : '#6E7376'}
                   strokeWidth={fig1Mode === 'resilient' ? '2.5' : '1.5'}
@@ -794,7 +801,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 </text>
               </g>
 
-              {/* Săgeată punctată ascendentă de retroacțiune pe flancul stâng (x=36, în afara containerelor x=75..665) */}
+              {/* Săgeți punctate ascendente de retroacțiune C -> B -> A pe flancul stâng (x=36, în afara containerelor x=75..665) */}
               <line
                 x1="75"
                 y1="508"
@@ -806,16 +813,26 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
               />
               <line
                 x1="36"
-                y1="302"
-                x2="75"
+                y1="508"
+                x2="36"
                 y2="302"
                 stroke="#6E7376"
-                strokeWidth="1.5"
-                strokeDasharray="3 3"
+                strokeWidth="2"
+                strokeDasharray="4 3"
               />
               <line
                 x1="36"
-                y1="508"
+                y1="302"
+                x2="72"
+                y2="302"
+                stroke="#6E7376"
+                strokeWidth="2"
+                strokeDasharray="4 3"
+                markerEnd="url(#arrow-slate)"
+              />
+              <line
+                x1="36"
+                y1="302"
                 x2="36"
                 y2="93"
                 stroke="#6E7376"
@@ -1024,9 +1041,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           FIGURA 2: Mecanismul dublei falsificări axiologice (Pagina 12)
          ===================================================================== */}
       {figureId === 2 && (
-        <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
-            <span className="text-xs font-medium text-[#222426]">
+        <div>
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] px-5 py-3 border-b border-[#8C9BA5]">
+            <span className="text-xs font-mono uppercase tracking-wider font-semibold text-[#222426]">
               Regim semiotic și axiologic
             </span>
             <div className="flex flex-wrap items-center gap-2">
@@ -1055,7 +1072,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </div>
           </div>
 
-          <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
+          <div className="w-full h-auto bg-[#F6F5EE] p-4 overflow-x-auto">
             <svg
               viewBox="0 0 920 520"
               className={svgClass}
@@ -1651,9 +1668,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           FIGURA 3: Mecanismul cibernetic și semiotic în bucla OODA (Pagina 20)
          ===================================================================== */}
       {figureId === 3 && (
-        <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
-            <span className="text-xs font-medium text-[#222426]">
+        <div>
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] px-5 py-3 border-b border-[#8C9BA5]">
+            <span className="text-xs font-mono uppercase tracking-wider font-semibold text-[#222426]">
               Faza de Orientare în bucla decizională OODA
             </span>
             <div className="flex flex-wrap items-center gap-2">
@@ -1682,7 +1699,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </div>
           </div>
 
-          <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
+          <div className="w-full h-auto bg-[#F6F5EE] p-4 overflow-x-auto">
             <svg
               viewBox="0 0 980 430"
               className={svgClass}
@@ -1873,7 +1890,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeDasharray={fig3ReflexiveActive ? undefined : '5 4'}
                   markerEnd={fig3ReflexiveActive ? 'url(#arrow-red)' : 'url(#arrow-slate)'}
                 />
-                <rect x="379" y="136" width="190" height="22" rx="2" fill="#F6F5EE" />
+                <rect x="379" y="136" width="190" height="22" fill="#F6F5EE" />
                 <text
                   x="474"
                   y="151"
@@ -2223,7 +2240,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="132"
                   width="134"
                   height="36"
-                  rx="2"
                   fill={fig3SelectedStage === 'contagiune' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig3SelectedStage === 'contagiune' ? '0.32' : '1'}
                   stroke={fig3ReflexiveActive ? '#F01E1E' : '#6E7376'}
@@ -2316,7 +2332,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="188"
                   width="152"
                   height="20"
-                  rx="2"
                   fill="#F6F5EE"
                   stroke="#F01E1E"
                   strokeWidth="1.5"
@@ -2394,9 +2409,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           FIGURA 4: Conversia funcțională a resurselor latente din Umbră (Pagina 24)
          ===================================================================== */}
       {figureId === 4 && (
-        <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
-            <span className="text-xs font-medium text-[#222426]">
+        <div>
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] px-5 py-3 border-b border-[#8C9BA5]">
+            <span className="text-xs font-mono uppercase tracking-wider font-semibold text-[#222426]">
               Traseu psihodinamic
             </span>
             <div className="flex flex-wrap items-center gap-2">
@@ -2431,7 +2446,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </div>
           </div>
 
-          <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
+          <div className="w-full h-auto bg-[#F6F5EE] p-4 overflow-x-auto">
             <svg
               viewBox="0 0 960 490"
               className={svgClass}
@@ -2589,7 +2604,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="155"
                   width="112"
                   height="90"
-                  rx="3"
                   fill={fig4FiltersActive ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={
                     !fig4FiltersActive
@@ -2997,9 +3011,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           FIGURA 5: Matricea comportamentală a lui Carlo M. Cipolla (Pagina 27)
          ===================================================================== */}
       {figureId === 5 && (
-        <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
-            <span className="text-xs font-medium text-[#222426]">
+        <div>
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] px-5 py-3 border-b border-[#8C9BA5]">
+            <span className="text-xs font-mono uppercase tracking-wider font-semibold text-[#222426]">
               Traiectorie în matricea lui Cipolla
             </span>
             <div className="flex flex-wrap items-center gap-2">
@@ -3028,7 +3042,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </div>
           </div>
 
-          <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
+          <div className="w-full h-auto bg-[#F6F5EE] p-4 overflow-x-auto">
             <svg
               viewBox="0 0 920 580"
               className={svgClass}
@@ -3244,7 +3258,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 x="460"
                 y="26"
                 textAnchor="middle"
-                className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                className="font-mono text-[11.5px] font-bold fill-[#222426]"
               >
                 +Y · Beneficiu societal
               </text>
@@ -3254,27 +3268,27 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                 x="460"
                 y="566"
                 textAnchor="middle"
-                className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                className="font-mono text-[11.5px] font-bold fill-[#222426]"
               >
                 -Y · Daună societală
               </text>
 
-              <rect x="72" y="247" width="132" height="22" fill="#F6F5EE" />
+              <rect x="72" y="247" width="145" height="22" fill="#F6F5EE" />
               <text
                 x="76"
                 y="262"
                 textAnchor="start"
-                className="font-sans text-[12px] font-bold fill-[#222426]"
+                className="font-mono text-[11px] font-bold fill-[#222426]"
               >
                 -X · Pierdere proprie
               </text>
 
-              <rect x="716" y="247" width="132" height="22" fill="#F6F5EE" />
+              <rect x="703" y="247" width="145" height="22" fill="#F6F5EE" />
               <text
                 x="844"
                 y="262"
                 textAnchor="end"
-                className="font-sans text-[12px] font-bold fill-[#222426]"
+                className="font-mono text-[11px] font-bold fill-[#222426]"
               >
                 +X · Câștig propriu
               </text>
@@ -3491,7 +3505,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="260"
                     width="255"
                     height="24"
-                    rx="3"
                     fill="#E5B822"
                     stroke="#222426"
                     strokeWidth="1.5"
@@ -3562,9 +3575,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           FIGURA 6: Modelul comparativ al procesării cognitive în criză (Track A vs. Track B)
          ===================================================================== */}
       {figureId === 6 && (
-        <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
-            <span className="text-xs font-medium text-[#222426]">
+        <div>
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] px-5 py-3 border-b border-[#8C9BA5]">
+            <span className="text-xs font-mono uppercase tracking-wider font-semibold text-[#222426]">
               Regim de coreglare în șoc acut
             </span>
             <div className="flex flex-wrap items-center gap-2">
@@ -3601,7 +3614,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </div>
           </div>
 
-          <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
+          <div className="w-full h-auto bg-[#F6F5EE] p-4 overflow-x-auto">
             <svg
               viewBox="0 0 920 660"
               className={svgClass}
@@ -3622,7 +3635,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="16"
                   width="320"
                   height="58"
-                  rx="4"
                   fill={fig6SelectedStep === 'bifurcatie' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig6SelectedStep === 'bifurcatie' ? '0.25' : '1'}
                   stroke="#222426"
@@ -3711,7 +3723,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="190"
                     width="290"
                     height="50"
-                    rx="3"
                     fill={fig6SelectedStep === 'anxietate' ? '#F01E1E' : '#F6F5EE'}
                     fillOpacity={fig6SelectedStep === 'anxietate' ? '0.12' : '1'}
                     stroke="#F01E1E"
@@ -3760,7 +3771,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="262"
                     width="290"
                     height="50"
-                    rx="3"
                     fill={fig6SelectedStep === 'nfcc' ? '#F01E1E' : '#F6F5EE'}
                     fillOpacity={fig6SelectedStep === 'nfcc' ? '0.12' : '1'}
                     stroke="#F01E1E"
@@ -3809,7 +3819,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="334"
                     width="290"
                     height="50"
-                    rx="3"
                     fill={fig6SelectedStep === 'persona' ? '#F01E1E' : '#F6F5EE'}
                     fillOpacity={fig6SelectedStep === 'persona' ? '0.12' : '1'}
                     stroke="#F01E1E"
@@ -3884,7 +3893,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="426"
                     width="290"
                     height="50"
-                    rx="3"
                     fill={fig6SelectedStep === 'umbra' ? '#F01E1E' : '#F6F5EE'}
                     fillOpacity={fig6SelectedStep === 'umbra' ? '0.15' : '1'}
                     stroke="#F01E1E"
@@ -3933,7 +3941,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="500"
                     width="290"
                     height="50"
-                    rx="3"
                     fill={fig6SelectedStep === 'bucla_algoritmica' ? '#F01E1E' : '#F6F5EE'}
                     fillOpacity={fig6SelectedStep === 'bucla_algoritmica' ? '0.15' : '1'}
                     stroke="#F01E1E"
@@ -4078,7 +4085,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="92"
                     width="280"
                     height="32"
-                    rx="3"
                     fill={fig6ActiveTrack === 'B' || fig6SelectedStep === 'punte-cerc' ? '#E5B822' : '#F6F5EE'}
                     fillOpacity={fig6ActiveTrack === 'B' ? '0.92' : '1'}
                     stroke="#222426"
@@ -4094,7 +4100,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   </text>
                 </g>
 
-                {/* Săgeată verticală din baza casetei Punte CERC (690, 124) în antetul Track B (690, 155) */}
+                {/* Săgeată verticală din baza casetei Punte CERC (690, 124) în antetul Track B (690, 155) + T-bar inhibiție reactivă și simbolul de întârziere || */}
                 <line
                   x1="690"
                   y1="124"
@@ -4112,6 +4118,40 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   strokeWidth="3"
                   markerEnd="url(#arrow-gold)"
                 />
+                {/* T-bar orizontal și simbolul de latență deliberativă || pe canalul vertical Track B */}
+                <line
+                  x1="676"
+                  y1="136"
+                  x2="704"
+                  y2="136"
+                  stroke="#222426"
+                  strokeWidth="2.5"
+                />
+                <line
+                  x1="676"
+                  y1="142"
+                  x2="704"
+                  y2="142"
+                  stroke="#222426"
+                  strokeWidth="2.5"
+                />
+                <rect
+                  x="710"
+                  y="130"
+                  width="120"
+                  height="18"
+                  fill="#F6F5EE"
+                  stroke="#6E7376"
+                  strokeWidth="1"
+                />
+                <text
+                  x="770"
+                  y="142"
+                  textAnchor="middle"
+                  className="font-mono text-[8.5px] font-bold fill-[#222426]"
+                >
+                  || Latență deliberativă
+                </text>
 
                 {/* Header bar Track B (y=158..184) */}
                 <rect
@@ -4147,7 +4187,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="190"
                     width="290"
                     height="44"
-                    rx="3"
                     fill={fig6SelectedStep === 'b1' ? '#E5B822' : '#F6F5EE'}
                     fillOpacity={fig6SelectedStep === 'b1' ? '0.25' : '1'}
                     stroke="#222426"
@@ -4204,7 +4243,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="252"
                     width="290"
                     height="44"
-                    rx="3"
                     fill={fig6SelectedStep === 'b2' ? '#E5B822' : '#F6F5EE'}
                     fillOpacity={fig6SelectedStep === 'b2' ? '0.25' : '1'}
                     stroke="#222426"
@@ -4261,7 +4299,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="314"
                     width="290"
                     height="48"
-                    rx="3"
                     fill={fig6SelectedStep === 'b3' ? '#E5B822' : '#F6F5EE'}
                     fillOpacity={fig6SelectedStep === 'b3' ? '0.25' : '1'}
                     stroke="#222426"
@@ -4318,7 +4355,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="380"
                     width="290"
                     height="44"
-                    rx="3"
                     fill={fig6SelectedStep === 'b4' ? '#E5B822' : '#F6F5EE'}
                     fillOpacity={fig6SelectedStep === 'b4' ? '0.25' : '1'}
                     stroke="#222426"
@@ -4375,7 +4411,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     y="442"
                     width="290"
                     height="48"
-                    rx="3"
                     fill={fig6ActiveTrack === 'B' || fig6SelectedStep === 'b5' ? '#E5B822' : '#F6F5EE'}
                     stroke="#222426"
                     strokeWidth="2.5"
@@ -4525,9 +4560,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
           FIGURA 7: Protocolul secvențial în trei faze (Pagina 39)
          ===================================================================== */}
       {figureId === 7 && (
-        <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] p-3 border border-[#8C9BA5]">
-            <span className="text-xs font-medium text-[#222426]">
+        <div>
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-[#F6F5EE] px-5 py-3 border-b border-[#8C9BA5]">
+            <span className="text-xs font-mono uppercase tracking-wider font-semibold text-[#222426]">
               Fazele reconstrucției rezilienței
             </span>
             <div className="flex flex-wrap items-center gap-2">
@@ -4554,7 +4589,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
             </div>
           </div>
 
-          <div className="bg-[#F6F5EE] border border-[#222426] p-3 sm:p-5 overflow-x-auto">
+          <div className="w-full h-auto bg-[#F6F5EE] p-4 overflow-x-auto">
             <svg
               viewBox="0 0 960 560"
               className={svgClass}
@@ -4666,7 +4701,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="134"
                   width="250"
                   height="68"
-                  rx="4"
                   fill={fig7ActivePhase === 1 ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig7ActivePhase === 1 ? '0.35' : '1'}
                   stroke="#222426"
@@ -4837,7 +4871,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="96"
                   width="150"
                   height="30"
-                  rx="2"
                   fill={fig7SelectedNode === 'poarta1' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig7SelectedNode === 'poarta1' ? '0.35' : '0.98'}
                   stroke="#222426"
@@ -4876,7 +4909,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="134"
                   width="250"
                   height="68"
-                  rx="4"
                   fill={fig7ActivePhase === 2 ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig7ActivePhase === 2 ? '0.35' : '1'}
                   stroke="#222426"
@@ -5047,7 +5079,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="96"
                   width="150"
                   height="30"
-                  rx="2"
                   fill={fig7SelectedNode === 'poarta2' ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig7SelectedNode === 'poarta2' ? '0.35' : '0.98'}
                   stroke="#222426"
@@ -5086,7 +5117,6 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   y="134"
                   width="250"
                   height="68"
-                  rx="4"
                   fill={fig7ActivePhase === 3 ? '#E5B822' : '#F6F5EE'}
                   fillOpacity={fig7ActivePhase === 3 ? '0.35' : '1'}
                   stroke="#222426"
@@ -5277,15 +5307,15 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                   x="480"
                   y="492"
                   textAnchor="middle"
-                  className="font-sans text-[12.5px] font-bold fill-[#222426]"
+                  className="font-sans text-[12px] font-bold fill-[#222426]"
                 >
-                  Fundamentul sistemic Lalonde–Dever
+                  Fundament: Cei 4 determinanți ai modelului Lalonde–Dever (Stratul A, B și C)
                 </text>
                 <text
                   x="480"
                   y="511"
                   textAnchor="middle"
-                  className="font-sans text-[11px] fill-[#6E7376]"
+                  className="font-sans text-[10.5px] fill-[#6E7376]"
                 >
                   Rezervă neurobiologică · Mediu digital și sociospațial · Stil de viață · Sistem instituțional
                 </text>
@@ -5332,13 +5362,13 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
         </div>
       )}
 
-      {/* Official Monograph Caption & Methodological Note */}
-      <div className="mt-5 pt-4 border-t border-[#8C9BA5] space-y-2">
-        <p className="text-xs sm:text-sm font-serif italic text-[#222426] leading-relaxed">
+      {/* 3. Footer Bar (Legendă academică și notă metodologică) */}
+      <div className="border-t border-[#8C9BA5] px-5 py-3 text-sm text-[#6E7376] font-serif italic space-y-2">
+        <p className="leading-relaxed text-[#222426]">
           <span className="font-bold not-italic">{meta.title}. </span>
           {meta.caption}
         </p>
-        <p className="text-xs font-mono text-[#6E7376] leading-relaxed">
+        <p className="text-xs font-mono not-italic text-[#6E7376] leading-relaxed">
           Notă metodologică · {meta.chapterRef}. {meta.methodologicalNote}
         </p>
       </div>
