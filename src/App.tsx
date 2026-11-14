@@ -33,7 +33,10 @@ type AudienceReadingMode = 'academic' | 'executive';
 /**
   * Matches a parenthetical string or author label against BIBLIOGRAPHY_DATA
   */
-function findMatchingBibliographyItems(citationText: string): BibliographyItem[] {
+function findMatchingBibliographyItems(
+  citationText: string,
+  precedingContext: string = ''
+): BibliographyItem[] {
   const stopWords = new Set([
     'et',
     'al',
@@ -73,22 +76,76 @@ function findMatchingBibliographyItems(citationText: string): BibliographyItem[]
       .map((t) => t.trim())
       .filter((t) => (t.length >= 3 || t === 'wu') && !stopWords.has(t));
 
-    if (tokens.length === 0) continue;
-
     const yearMatches = clause.match(/\b(18\d{2}|19\d{2}|20\d{2})\b/g) || [];
 
-    const matched = BIBLIOGRAPHY_DATA.filter((item) => {
-      const itemAuthorsLower = item.authors.toLowerCase();
-      return tokens.some((tok) => {
-        const escapedTok = tok.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const regex = new RegExp(`(?<!\\p{L})${escapedTok}(?!\\p{L})`, 'iu');
-        return regex.test(itemAuthorsLower);
-      });
-    });
+    let matched =
+      tokens.length > 0
+        ? BIBLIOGRAPHY_DATA.filter((item) => {
+            const itemAuthorsLower = item.authors.toLowerCase();
+            return tokens.some((tok) => {
+              const escapedTok = tok.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+              const regex = new RegExp(`(?<!\\p{L})${escapedTok}(?!\\p{L})`, 'iu');
+              return regex.test(itemAuthorsLower);
+            });
+          })
+        : [];
+
+    if (
+      tokens.length > 0 &&
+      cleaned.includes('robinson') &&
+      cleaned.includes('william') &&
+      !cleaned.includes('acemoglu')
+    ) {
+      const wsRobinson = matched.filter((item) =>
+        item.authors.toLowerCase().includes('robinson, w.')
+      );
+      if (wsRobinson.length > 0) {
+        matched = wsRobinson;
+      }
+    }
+
+    if (
+      (tokens.length === 0 || matched.length === 0) &&
+      yearMatches.length > 0 &&
+      precedingContext.trim().length > 0
+    ) {
+      const contextLower = precedingContext.toLowerCase();
+      const capitalizedContextWords = (
+        precedingContext.match(/\b\p{Lu}[\p{L}'-]+\b/gu) || []
+      )
+        .map((t) => t.toLowerCase())
+        .filter((t) => (t.length >= 3 || t === 'wu') && !stopWords.has(t));
+
+      if (capitalizedContextWords.length > 0) {
+        matched = BIBLIOGRAPHY_DATA.filter((item) => {
+          const itemAuthorsLower = item.authors.toLowerCase();
+          const hasYear = yearMatches.some((y) => item.year.includes(y));
+          if (!hasYear) return false;
+          return capitalizedContextWords.some((tok) => {
+            const escapedTok = tok.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(`(?<!\\p{L})${escapedTok}(?!\\p{L})`, 'iu');
+            return regex.test(itemAuthorsLower);
+          });
+        });
+
+        if (
+          contextLower.includes('robinson') &&
+          contextLower.includes('william') &&
+          !contextLower.includes('acemoglu')
+        ) {
+          const wsRobinson = matched.filter((item) =>
+            item.authors.toLowerCase().includes('robinson, w.')
+          );
+          if (wsRobinson.length > 0) {
+            matched = wsRobinson;
+          }
+        }
+      }
+    }
 
     let clauseFinal = matched;
-    if (yearMatches.length > 0 && matched.length > 1) {
-      const exactYearFiltered = matched.filter((item) =>
+    if (yearMatches.length > 0 && clauseFinal.length > 1) {
+      const exactYearFiltered = clauseFinal.filter((item) =>
         yearMatches.some((y) => item.year.includes(y))
       );
       if (exactYearFiltered.length > 0) {
@@ -473,16 +530,30 @@ export function App() {
       }
 
       const isLegislative = legislativeExclusionRegex.test(innerCitation);
-      const matchedItems = isLegislative ? [] : findMatchingBibliographyItems(innerCitation);
+      const rawPreceding = paragraphText.slice(Math.max(0, matchIndex - 100), matchIndex);
+      const boundaryParts = rawPreceding.split(/(?:[.!?;:]|\))\s+/);
+      const precedingAuthorContext = boundaryParts[boundaryParts.length - 1] || '';
+
+      const matchedItems = isLegislative
+        ? []
+        : findMatchingBibliographyItems(innerCitation, precedingAuthorContext);
 
       if (matchedItems.length > 0) {
-        const isSelected = selectedAuthorCitation === innerCitation;
+        const innerLower = innerCitation.toLowerCase();
+        const primarySurname = matchedItems[0].authors.split(',')[0].trim();
+        const hasAuthorInInner =
+          primarySurname.length >= 2 &&
+          innerLower.includes(primarySurname.toLowerCase());
+        const citationLabel = hasAuthorInInner
+          ? innerCitation
+          : `${primarySurname} (${innerCitation})`;
+        const isSelected = selectedAuthorCitation === citationLabel;
 
         parts.push(
           <button
             key={`cite-${matchIndex}`}
             type="button"
-            onClick={() => handleCitationSelect(innerCitation)}
+            onClick={() => handleCitationSelect(citationLabel)}
             className={`inline font-serif text-inherit p-0 m-0 bg-transparent border-0 text-left transition-colors cursor-pointer ${
               isSelected
                 ? 'font-bold underline decoration-[#222426]'

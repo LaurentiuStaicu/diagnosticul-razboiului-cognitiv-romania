@@ -179,6 +179,18 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
     conceptId: 'sistema',
     regex: /(?<!\p{L})(rețea(?:ua|lei)\s+sistema|sistema|siloviki|kompromat|deathonomics|economi(?:a|ei)\s+morții)(?!\p{L})/iu
   },
+  {
+    conceptId: 'matricea-cipolla',
+    regex: /(?<!\p{L})(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+)?(?:a\s+|ale\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla|matricea\s+lui\s+Cipolla|scont(?:are|area|ării)\s+hiperbolic(?:ă|e)(?:\s+a\s+viitorului)?|revanș(?:ă|a|ei)\s+simbolic(?:ă|e)\s+(?:autodistructiv(?:ă|e)|punitiv(?:ă|e))|spiteful\s+punishment|pedeps(?:ei|a)\s+altruiste)(?!\p{L})/iu
+  },
+  {
+    conceptId: 'vid-reprezentare-intermediere',
+    regex: /(?<!\p{L})(vid(?:ul|ului)?\s+de\s+reprezentare(?:\s+politică)?|intermedier(?:e|ea|ii)\s+(?:politic(?:ă|e)\s+)?oportunist(?:ă|e))(?!\p{L})/iu
+  },
+  {
+    conceptId: 'isonomie-fiscala-arhitectura-alegerii',
+    regex: /(?<!\p{L})(isonomi(?:e|a|ei)\s+fiscal(?:ă|e)|simetri(?:e|a|ei)\s+fiscal(?:ă|e)|penaliz(?:are|area|ării)\s+în\s+oglindă(?:\s+a\s+statului)?|arhitectur(?:a|ii)\s+alegerii(?:\s+instituționale)?|institutional\s+choice\s+architecture)(?!\p{L})/iu
+  },
 
   // Stratul B: Neurocognitiv, Cibernetic & Semiotic
   {
@@ -270,18 +282,26 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
     regex: /(?<!\p{L})(abaissement\s+du\s+niveau\s+mental|scăder(?:e|ea|ii)\s+tensiunii\s+conștiente)(?!\p{L})/iu
   },
   {
-    conceptId: 'matricea-cipolla',
-    regex: /(?<!\p{L})(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+)?(?:a\s+|ale\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla|matricea\s+lui\s+Cipolla|scont(?:are|area|ării)\s+hiperbolic(?:ă|e)(?:\s+a\s+viitorului)?|revanș(?:ă|a|ei)\s+simbolic(?:ă|e)\s+(?:autodistructiv(?:ă|e)|punitiv(?:ă|e))|spiteful\s+punishment|pedeps(?:ei|a)\s+altruiste)(?!\p{L})/iu
+    conceptId: 'filtrul-axiologic',
+    regex: /(?<!\p{L})(filtr(?:ul|ului)?\s+(?:moral\s+)?(?:creștin[–-]secular|axiologic(?:\s+și\s+normativ)?)|Imago\s+Dei)(?!\p{L})/iu
+  },
+  {
+    conceptId: 'capacitate-negativa-bion',
+    regex: /(?<!\p{L})(capacit(?:ate|atea|ății|ăți)\s+negativ(?:ă|e))(?!\p{L})/iu
+  },
+  {
+    conceptId: 'proairesis',
+    regex: /(?<!\p{L})(proairesis|discernământ(?:ul|ului)?\s+moral)(?!\p{L})/iu
+  },
+  {
+    conceptId: 'coreglare-cerc-validatori',
+    regex: /(?<!\p{L})(CDC\s+CERC|Crisis\s+and\s+Emergency\s+Risk\s+Communication|punt(?:ea|ii)\s+de\s+coreglare(?:\s+instituțională)?|validator(?:i|ii|ilor)\s+(?:comunitari(?:\s+și\s+epistemici)?(?:\s+de\s+proximitate)?|epistemici\s+și\s+morali\s+de\s+proximitate|de\s+proximitate))(?!\p{L})/iu
   },
 
   // Stratul C: Psihodinamic, Arhetipal & Axiologic
   {
     conceptId: 'stratul-c',
     regex: /(?<!\p{L})(Stratul\s+C(?:\s*[:–-]\s*Inconștientul\s+cultural)?|Stratului\s+C)(?!\p{L})/u
-  },
-  {
-    conceptId: 'filtrul-axiologic',
-    regex: /(?<!\p{L})(filtr(?:ul|ului)?\s+(?:moral\s+)?(?:creștin[–-]secular|axiologic(?:\s+și\s+normativ)?)|Imago\s+Dei)(?!\p{L})/iu
   },
   {
     conceptId: 'axa-ego-sine',
@@ -316,10 +336,6 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
     regex: /(?<!\p{L})(apăr(?:are|area|ării)\s+maniacal(?:ă|e)|(?:suveranit|neutralit)(?:ate|atea|ății)\s+izolaționist(?:ă|e))(?!\p{L})/iu
   },
   {
-    conceptId: 'capacitate-negativa-bion',
-    regex: /(?<!\p{L})(capacit(?:ate|atea|ății|ăți)\s+negativ(?:ă|e))(?!\p{L})/iu
-  },
-  {
     conceptId: 'ipoteze-baza-grup-lucru-bion',
     regex: /(?<!\p{L})(ipotezel(?:e|or)\s+de\s+bază(?:\s+ale\s+lui\s+Bion)?|ipotez(?:a|ei)\s+de\s+bază\s+a\s+(?:dependenței|împerecherii\s+mesianice)|ipotez(?:a|ei)\s+de\s+bază\s+luptă-sau-fugi|grup(?:ul|ului)?\s+de\s+lucru|baD|baF|baP)(?!\p{L})/iu
   },
@@ -338,22 +354,6 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   {
     conceptId: 'modernitate-organica',
     regex: /(?<!\p{L})(modernit(?:ate|atea|ății)\s+organic(?:ă|e))(?!\p{L})/iu
-  },
-  {
-    conceptId: 'proairesis',
-    regex: /(?<!\p{L})(proairesis|discernământ(?:ul|ului)?\s+moral)(?!\p{L})/iu
-  },
-  {
-    conceptId: 'vid-reprezentare-intermediere',
-    regex: /(?<!\p{L})(vid(?:ul|ului)?\s+de\s+reprezentare(?:\s+politică)?|intermedier(?:e|ea|ii)\s+(?:politic(?:ă|e)\s+)?oportunist(?:ă|e))(?!\p{L})/iu
-  },
-  {
-    conceptId: 'coreglare-cerc-validatori',
-    regex: /(?<!\p{L})(CDC\s+CERC|Crisis\s+and\s+Emergency\s+Risk\s+Communication|punt(?:ea|ii)\s+de\s+coreglare(?:\s+instituțională)?|validator(?:i|ii|ilor)\s+(?:comunitari(?:\s+și\s+epistemici)?(?:\s+de\s+proximitate)?|epistemici\s+și\s+morali\s+de\s+proximitate|de\s+proximitate))(?!\p{L})/iu
-  },
-  {
-    conceptId: 'isonomie-fiscala-arhitectura-alegerii',
-    regex: /(?<!\p{L})(isonomi(?:e|a|ei)\s+fiscal(?:ă|e)|simetri(?:e|a|ei)\s+fiscal(?:ă|e)|penaliz(?:are|area|ării)\s+în\s+oglindă(?:\s+a\s+statului)?|arhitectur(?:a|ii)\s+alegerii(?:\s+instituționale)?|institutional\s+choice\s+architecture)(?!\p{L})/iu
   }
 ];
 
