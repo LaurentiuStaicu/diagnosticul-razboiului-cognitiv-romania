@@ -29,7 +29,7 @@ export const TABLE_1_DATA: Table1Row[] = [
     dimensionNumber: 2,
     dimensionTitle: '2. Coeziunea sociodemografică și regimul de stres cotidian',
     stratumA:
-      'Polarizare severă între centrele metropolitane prospere și periferiile dezindustrializate sau rurale, adâncită de declinul demografic și emigrația masivă a forței de muncă active. Rezultatul constă în enclave de excluziune socială și anomie, familism amoral (Banfield) și retragerea individualistă în sfera privată a păturilor urbane.',
+      'Polarizare severă între centrele metropolitane prospere și periferiile dezindustrializate sau rurale, adâncită de declinul demografic și emigrația masivă a forței de muncă active. Rezultatul constă în enclave de excluziune socială și anomie, familism amoral (Banfield), retragerea individualistă în sfera privată a păturilor urbane și instalarea unui vid de reprezentare politică a periferiilor (Peter Mair) speculat de intermediarii populiști (Cas Mudde) prin cele trei mecanisme transformaționale Micro–Macro (Coleman, 1990; William S. Robinson).',
     stratumB:
       'Uzură alostatică ridicată (McEwen) și hiperactivarea cronică a axei HPA. Hipercortizolemia induce hipertrofia și hiperreactivitatea amigdalei bazolaterale și a rețelei de detecție a relevanței, concomitent cu inhibiția funcțională a cortexului prefrontal dorsolateral (dlPFC) și comutarea pe Sistemul 1 (Kahneman). În paralel, în rândul păturilor urbane educate retrase în servicii private, absența gândirii activ-deschise deturnează Sistemul 2 în disraționalitate și raționalizare motivată (Stanovich; Kahan) pentru apărarea statutului de grup.',
     stratumC:
@@ -64,7 +64,7 @@ export const TABLE_1_DATA: Table1Row[] = [
     stratumA:
       'Alunecarea cetățeanului vulnerabil (-X, +Y), sub presiunea endogenă primară a actorilor extractivi interni (+X, -Y) și sub acțiunea de catalizator exogen a războiului cognitiv (prin scontarea hiperbolică a viitorului și revanșa simbolică punitivă), în cadranul comportamentului autodistructiv și al autosabotajului colectiv (-X, -Y) din matricea lui Cipolla. Rezultatul sistemic este paralizia instituțională și vulnerabilizarea strategică a statului-țintă.',
     stratumB:
-      'Bifurcarea procesării în punctul critic al unei crize acute (nodul de bifurcație decizională) și blocarea pe Traseul reactiv dezadaptativ (Track A: hiperactivare amigdaliană, adoptare precipitată și înghețare epistemică seizing/freezing, procesare defensivă motivată de protejarea identității de grup, furie și blocaj decizional). Această blocare survine în detrimentul Traseului deliberativ adaptativ (Track B: reglare prefrontală, capacitate negativă și validare epistemică).',
+      'Bifurcarea procesării în punctul critic al unei crize acute (nodul de bifurcație decizională) și blocarea pe Traseul reactiv dezadaptativ (Track A: hiperactivare amigdaliană, adoptare precipitată și înghețare epistemică seizing/freezing, procesare defensivă motivată de protejarea identității de grup, furie și blocaj decizional). Această blocare survine în detrimentul Traseului deliberativ adaptativ (Track B: reglare prefrontală, capacitate negativă și validare epistemică), a cărui deschidere depinde de puntea de coreglare prin protocolul CDC CERC, de probatoriul tehnic verificabil și de validatorii comunitari de proximitate care reconstituie comunitatea ca „grup de lucru” rațional (Bion, 1961).',
     stratumC:
       'Enantiodromia suveranistă, manifestată prin răsturnarea mimetismului prooccidental în respingerea radicală a modernității constituționale. La aceasta se adaugă sindromul Puer Aeternus colectiv (von Franz), iluzia suveranității izolaționiste și regresia spre dependență pasivă față de un stat paternalist tutelar (Neumann).'
   }
@@ -122,7 +122,7 @@ export const REGIONAL_CONTROL_GROUP: RegionalCase[] = [
     roleInModel: 'Societatea-țintă analizată în monografie',
     exposureProfile: 'Expunere intensă la camuflaj discursiv suveranist și parazitare semiotică a ortodoxiei și conservatorismului, ocolind aversiunea istorică directă față de Rusia.',
     stratumA: 'Ordine instituțională semiconformată bazată pe „forme fără fond”; coexistența instituțiilor formale euroatlantice cu rețele extractive clientelare și polarizare sociospațială severă.',
-    stratumB: 'Uzură alostatică ridicată, absența unei strategii naționale de pregătire preventivă și dereglarea spațiului algoritmic, favorizând deturnarea fazei de Orientare din bucla OODA.',
+    stratumB: 'Dublă vulnerabilitate neurocognitivă (uzură alostatică și inhibarea dlPFC cu comutare pe Sistemul 1 în mediile precarizate, respectiv deturnarea Sistemului 2 în disraționalitate și raționalizare motivată în bulele urbane), pe fondul vidului de reprezentare politică (Peter Mair), al absenței unei strategii naționale de pregătire preventivă și al dereglării spațiului algoritmic, favorizând deturnarea fazei de Orientare din bucla OODA.',
     stratumC: 'Scindare între Persona instituțională mimetică și Umbra colectivă, incapacitatea de a ține doliu pentru complicitățile totalitare și declanșarea enantiodromiei suveraniste.',
     strategicLesson: 'Vulnerabilitatea nu decurge dintr-o fatalitate culturală sau din lipsa garanțiilor de securitate, ci din complacerea unei părți a elitelor într-o ordine extractivă care a lăsat filtrul axiologic expus eroziunii.',
     statusType: 'tension'
@@ -177,10 +177,10 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     id: 'macro-micro-macro',
     term: 'Arhitectura cauzală Macro–Micro–Macro: barca lui Coleman',
     stratum: 'A',
-    authors: 'James S. Coleman, 1990 · Peter Hedström, 2005',
+    authors: 'James S. Coleman, 1990 · Peter Hedström, 2005 · Karl Popper · William S. Robinson',
     domain: 'Sociologie analitică',
-    definition: 'Model explicativ din sociologia analitică (cunoscut drept „barca lui Coleman”) care articulează trei mecanisme cauzale înlănțuite: mecanismele situaționale de tranziție de la nivel macro la nivel micro, mecanismele individuale de formare a acțiunii (nivelul micro) și mecanismele transformaționale de agregare colectivă (tranziția micro–macro). Operaționalizat în această monografie, modelul arată cum configurația instituțională din Stratul A condiționează procesarea neurocognitivă din Stratul B și se agregă algoritmic în polarizare sau reziliență în Stratul C.',
-    monographContext: 'Explică științific cum deficitele instituționale din Stratul A modelează procesarea neurocognitivă în Stratul B și se agregă algoritmic în polarizare și autosabotaj colectiv.',
+    definition: 'Model explicativ din sociologia analitică (cunoscut drept „barca lui Coleman”) care articulează trei mecanisme cauzale înlănțuite: mecanismele situaționale de tranziție de la nivel macro la nivel micro, mecanismele individuale de formare a acțiunii (nivelul micro) și cele trei mecanisme transformaționale de agregare colectivă (tranziția micro–macro: sincronizarea afectivă și contagiunea emoțională în rețea, contagiunea socială complexă prin punți largi și intermedierea politică oportunistă în vidul de reprezentare a periferiilor). Operaționalizat în această monografie cu respectarea criteriului falsificabilității (Karl Popper), a clauzei anti-eroare ecologică (anti-ecological fallacy, William S. Robinson) și prin delimitarea față de eroarea metodologică din eseul Wotan al lui Jung, modelul arată cum configurația instituțională din Stratul A condiționează procesarea neurocognitivă din Stratul B și se agregă algoritmic în polarizare sau reziliență în Stratul C.',
+    monographContext: 'Explică științific și falsificabil cum deficitele instituționale din Stratul A modelează procesarea neurocognitivă în Stratul B și se agregă prin cele trei mecanisme transformaționale în polarizare și autosabotaj colectiv, evitând eroarea ecologică.',
     polarity: 'neutral'
   },
   {
@@ -437,10 +437,10 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     id: 'matricea-cipolla',
     term: 'Matricea comportamentală a lui Carlo M. Cipolla',
     stratum: 'A',
-    authors: 'Carlo M. Cipolla, 1976/2011 · Douglass C. North, John Joseph Wallis și Barry R. Weingast, 2009',
+    authors: 'Carlo M. Cipolla, 1976/2011 · Douglass C. North, John Joseph Wallis și Barry R. Weingast, 2009 · Richard H. Thaler și Cass R. Sunstein, 2008',
     domain: 'Istorie economică și teoria deciziei',
     definition: 'Sistem cartezian bidimensional (Cipolla, 1976/2011) care clasifică acțiunile umane și instituționale după câștigul sau pierderea proprie pe axa X și beneficiul sau dauna societală pe axa Y în patru cadrane: Cadranul I al cooperării inteligente (+X, +Y), Cadranul II al cetățeanului vulnerabil (-X, +Y, helpless), Cadranul IV al actorului extractiv (+X, -Y, bandits) și Cadranul III al autosabotajului colectiv (-X, -Y). Acest Cadran III este sistemic mai periculos decât Cadranul IV deoarece sfidează raționalitatea mijloc–scop.',
-    monographContext: 'Formalizează traiectoria prin care cetățeanul vulnerabil din Cadranul II (-X, +Y), supus cauzei primare endogene a spolierii interne din Cadranul IV (+X, -Y), este împins de catalizatorul extern al războiului cognitiv — prin scontarea hiperbolică a viitorului și nevoia de revanșă simbolică imediată — vertical în jos, în Cadranul III al autosabotajului colectiv (-X, -Y) din Figura 5.',
+    monographContext: 'Formalizează traiectoria prin care cetățeanul vulnerabil din Cadranul II (-X, +Y), supus cauzei primare endogene a spolierii interne din Cadranul IV (+X, -Y), este împins de catalizatorul extern al războiului cognitiv — prin scontarea hiperbolică a viitorului și deturnarea pedepsei altruiste în revanșă simbolică imediată — vertical în jos, în Cadranul III al autosabotajului colectiv (-X, -Y), în timp ce tranziția restaurativă spre Cadranul I (+X, +Y) se realizează prin consolidarea planșeului constituțional și înlăturarea barajului extractiv prin arhitectura alegerii instituționale (Richard H. Thaler și Cass R. Sunstein, 2008) din Figura 5.',
     polarity: 'neutral'
   },
   {
@@ -682,6 +682,36 @@ export const GLOSSARY_CONCEPTS: GlossaryConcept[] = [
     definition: 'Distincție fundamentală formulată de Wilfred R. Bion (1961) între „grupul de lucru” (work group — orientat spre testarea realității, cooperare rațională și rezolvarea metodică a sarcinilor) și regresia colectivă în „ipotezele de bază” (basic assumptions) declanșată de angoasă: ipoteza dependenței pasive față de o autoritate tutelară (baD), ipoteza împerecherii mesianice în așteptarea unui salvator providențial (baP) și ipoteza luptă-sau-fugi dominată de proiecții paranoide (baF).',
     monographContext: 'Explică în Subcapitolele 5.1 și 5.2 (și pe Planșa sinoptică de copertă) structura tripartită a regresiei colective pe Traseul A și condițiile constituirii unui grup de lucru rațional pe Traseul B.',
     polarity: 'neutral'
+  },
+  {
+    id: 'vid-reprezentare-intermediere',
+    term: 'Vidul de reprezentare politică și intermedierea oportunistă',
+    stratum: 'A',
+    authors: 'Peter Mair · Cas Mudde · James S. Coleman, 1990 · William S. Robinson',
+    domain: 'Științe politice și sociologia partidelor',
+    definition: 'Veriga politologică intermediară care explică de ce uzura alostatică și hipercortizolemia (stări neurobiologice nespecifice) nu se cuplează mecanic cu propaganda externă: vulnerabilitatea politică apare atunci când partidele democratice tradiționale abandonează reprezentarea periferiilor și a categoriilor vulnerabile (Peter Mair), lăsând un vid de reprezentare pe care actorii populiști oportuniști autohtoni (Cas Mudde) și operațiunile externe de control reflexiv de rang secund îl exploatează pentru a deturna furia legitimă spre ținte false.',
+    monographContext: 'Asigură în Subcapitolul 1.3 și Figura 1 tranziția transformațională Micro–Macro fără salturi cauzale și cu respectarea clauzei lui William S. Robinson împotriva erorii ecologice.',
+    polarity: 'tension'
+  },
+  {
+    id: 'coreglare-cerc-validatori',
+    term: 'Puntea de coreglare CERC și validatorii comunitari de proximitate',
+    stratum: 'B',
+    authors: 'Principiile CDC CERC · Wilfred R. Bion, 1962, 1970 · Stephen W. Porges, 2011 · Julian F. Thayer și Richard D. Lane, 2009',
+    domain: 'Comunicare de criză și neurobiologia deciziei',
+    definition: 'Arhitectură policentrică de dezescaladare în primele 0–72 de ore ale unui șoc informațional acut, bazată pe principiile Crisis and Emergency Risk Communication (CDC CERC: fii primul, fii corect, fii credibil, exprimă empatie, promovează acțiunea concretă și arată respect). Întrucât discursul politic partizan este afectat de neîncrederea față de Persona mimetică, coreglarea afectivă și deschiderea Traseului B se sprijină pe două paliere depolitizate: agențiile tehnice autonome care publică probe verificabile STIX/DISARM și validatorii comunitari de proximitate (medici, profesori, clerici canonici, lideri civici).',
+    monographContext: 'Rezolvă în Subcapitolele 5.2 și 6.1 (și în Figura 6) paradoxul reactivării cortexului prefrontal sub șoc acut.',
+    polarity: 'synthesis'
+  },
+  {
+    id: 'isonomie-fiscala-arhitectura-alegerii',
+    term: 'Isonomia fiscală, penalizarea în oglindă și arhitectura alegerii instituționale',
+    stratum: 'A',
+    authors: 'Richard H. Thaler și Cass R. Sunstein, 2008 · Niklas Luhmann, 2004 · Decizia CCR nr. 694/2015',
+    domain: 'Drept fiscal constituțional și economie instituțională',
+    definition: 'Mecanism de arhitectură a alegerii instituționale (institutional choice architecture, Thaler & Sunstein, 2008) și de închidere operațională (Luhmann, 2004) prin care statul elimină asimetria extractivă din raportul fiscal (art. 182 și 281 din Legea nr. 207/2015 – CPF, în acord cu principiul simetriei fiscale din Decizia CCR nr. 694/2015), virând din oficiu, în același cont IBAN, dobânzile și penalitățile în oglindă datorate cetățeanului sau întreprinderii.',
+    monographContext: 'Sigilează în Subcapitolul 6.3 și Figura 5 planșeul constituțional orizontal dintre Cadranul II și Cadranul III din matricea lui Cipolla, reducând costul de oportunitate al onestității și atrăgând cetățenii în Cadranul I (+X, +Y).',
+    polarity: 'synthesis'
   }
 ];
 
@@ -875,9 +905,9 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-1-1',
         title: 'Mecanismul diagnosticat: Forme fără fond și uzură alostatică',
         takeaway:
-          'Deficitul de închidere operațională, instituțiile extractive și polarizarea sociospațială induc uzură alostatică cronică, hiperactivând amigdala și inhibând cortexul prefrontal dorsolateral.',
+          'Deficitul de închidere operațională, instituțiile extractive și polarizarea sociospațială induc uzură alostatică cronică și inhibarea biologică a cortexului prefrontal dorsolateral (dlPFC, cu comutare pe Sistemul 1) în mediile vulnerabile, în timp ce în păturile urbane retrase în servicii private deturnează Sistemul 2 în disraționalitate și raționalizare motivată (Stanovich, 2009; Kahan, 2017).',
         implication:
-          'Insecuritatea cotidiană și umilința birocratică epuizează biologic capacitatea cetățeanului de a procesa analitic informația prin Sistemul 2 înainte de contactul cu propaganda externă.'
+          'Pe fondul vidului de reprezentare politică (Peter Mair), insecuritatea cotidiană din periferii și conformismul defensiv din bulele urbane compromit procesarea analitică a informației înainte de contactul cu propaganda externă.'
       },
       {
         id: 'exec-1-2',
@@ -983,7 +1013,7 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         takeaway:
           'Resursele latente din Umbra colectivă — memoria istorică defensivă și vitalitatea adaptativă a arhetipului Tricksterului — nu trebuie reprimate arogant, ci convertite prin funcția transcendentă.',
         implication:
-          'Statul trebuie să activeze cele trei filtre structurale: legea impersonală dreaptă în Stratul A, discernământul critic și vigilența metacognitivă în Stratul B, pentru a readuce societatea în Cadranul I (+X, +Y).'
+          'Statul trebuie să activeze cele trei filtre structurale: legea impersonală dreaptă în Stratul A — activată incremental încă din primele etape prin „insule de închidere operațională și predictibilitate administrativă” (Ostrom, 1990; Acemoglu & Robinson, 2019) și prin arhitectura alegerii instituționale (Thaler & Sunstein, 2008) —, alături de discernământul critic și vigilența metacognitivă în Stratul B, pentru a readuce societatea în Cadranul I (+X, +Y).'
       }
     ]
   },
@@ -1011,9 +1041,9 @@ export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
         id: 'exec-5-3',
         title: 'Decizia strategică: Responsabilitatea liderilor în șocul acut și decompresia din Faza I',
         takeaway:
-          'În momentul șocului acut, responsabilitatea deschiderii Traseului deliberativ B (prin capacitate negativă și comunicare calmă, verificabilă probatoriu) revine în primul rând liderilor instituționali, cadrelor profesionale și formatorilor de opinie.',
+          'În momentul șocului acut (0–72h), deschiderea Traseului deliberativ B prin capacitate negativă (Bion, 1970) și comunicare CDC CERC se sprijină pe o arhitectură policentrică pe două paliere: agențiile tehnice depolitizate (cu probatoriu STIX/DISARM) și validatorii comunitari de proximitate (medici, profesori, clerici canonici, jurnaliști independenți).',
         implication:
-          'Pentru populația largă epuizată biologic, trecerea stabilă și autonomă pe Traseul B devine posibilă abia prin decompresia alostatică și frânele algoritmice din Faza I a protocolului.'
+          'Pentru populația largă epuizată biologic, trecerea stabilă și autonomă pe Traseul B devine posibilă pe măsură ce puntea de coreglare din primele 72 de ore este consolidată prin decompresia alostatică și frânele algoritmice din Faza I a protocolului.'
       }
     ]
   },

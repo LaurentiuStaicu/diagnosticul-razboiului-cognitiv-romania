@@ -137,7 +137,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'macro-micro-macro',
-    regex: /(?<!\p{L})(Macro[–-]Micro[–-]Macro|bărc(?:ii|a)\s+lui\s+Coleman|barc(?:a|ii)\s+lui\s+Coleman)(?!\p{L})/iu
+    regex: /(?<!\p{L})(Macro[–-]Micro[–-]Macro|bărc(?:ii|a)\s+lui\s+Coleman|barc(?:a|ii)\s+lui\s+Coleman|eroar(?:ea|ii)\s+ecologic(?:ă|e)|anti-ecological\s+fallacy|ecological\s+fallacy|falsificabilit(?:ate|atea|ății))(?!\p{L})/iu
   },
   {
     conceptId: 'determinantii-lalonde-dever',
@@ -145,7 +145,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'inchidere-operationala',
-    regex: /(?<!\p{L})(închider(?:e|ea|ii|i)\s+operațional(?:ă|e|i)|autonomi(?:e|a|ei)\s+funcțional(?:ă|e))(?!\p{L})/iu
+    regex: /(?<!\p{L})(închider(?:e|ea|ii|i)\s+operațional(?:ă|e|i)|autonomi(?:e|a|ei)\s+funcțional(?:ă|e)|insul(?:e|ele|elor)\s+de\s+închidere\s+operațională)(?!\p{L})/iu
   },
   {
     conceptId: 'forme-fara-fond',
@@ -271,7 +271,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'matricea-cipolla',
-    regex: /(?<!\p{L})(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+)?(?:a\s+|ale\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla|matricea\s+lui\s+Cipolla|scont(?:are|area|ării)\s+hiperbolic(?:ă|e)(?:\s+a\s+viitorului)?|revanș(?:ă|a|ei)\s+simbolic(?:ă|e)\s+(?:autodistructiv(?:ă|e)|punitiv(?:ă|e))|spiteful\s+punishment)(?!\p{L})/iu
+    regex: /(?<!\p{L})(matrice(?:a|i)\s+(?:comportamental(?:ă|e)\s+)?(?:a\s+|ale\s+)?lui\s+(?:Carlo\s+M\.\s+)?Cipolla|matricea\s+lui\s+Cipolla|scont(?:are|area|ării)\s+hiperbolic(?:ă|e)(?:\s+a\s+viitorului)?|revanș(?:ă|a|ei)\s+simbolic(?:ă|e)\s+(?:autodistructiv(?:ă|e)|punitiv(?:ă|e))|spiteful\s+punishment|pedeps(?:ei|a)\s+altruiste)(?!\p{L})/iu
   },
 
   // Stratul C: Psihodinamic, Arhetipal & Axiologic
@@ -321,7 +321,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'ipoteze-baza-grup-lucru-bion',
-    regex: /(?<!\p{L})(ipotezel(?:e|or)\s+de\s+bază(?:\s+ale\s+lui\s+Bion)?|ipotez(?:a|ei)\s+de\s+bază\s+a\s+(?:dependenței|împerecherii\s+mesianice)|ipotez(?:a|ei)\s+de\s+bază\s+luptă-sau-fugi|grup(?:ul|ului)?\s+de\s+lucru)(?!\p{L})/iu
+    regex: /(?<!\p{L})(ipotezel(?:e|or)\s+de\s+bază(?:\s+ale\s+lui\s+Bion)?|ipotez(?:a|ei)\s+de\s+bază\s+a\s+(?:dependenței|împerecherii\s+mesianice)|ipotez(?:a|ei)\s+de\s+bază\s+luptă-sau-fugi|grup(?:ul|ului)?\s+de\s+lucru|baD|baF|baP)(?!\p{L})/iu
   },
   {
     conceptId: 'puer-aeternus',
@@ -342,6 +342,18 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   {
     conceptId: 'proairesis',
     regex: /(?<!\p{L})(proairesis|dreapt(?:ă|a)\s+socoteală)(?!\p{L})/iu
+  },
+  {
+    conceptId: 'vid-reprezentare-intermediere',
+    regex: /(?<!\p{L})(vid(?:ul|ului)?\s+de\s+reprezentare(?:\s+politică)?|intermedier(?:e|ea|ii)\s+(?:politic(?:ă|e)\s+)?oportunist(?:ă|e))(?!\p{L})/iu
+  },
+  {
+    conceptId: 'coreglare-cerc-validatori',
+    regex: /(?<!\p{L})(CDC\s+CERC|Crisis\s+and\s+Emergency\s+Risk\s+Communication|punt(?:ea|ii)\s+de\s+coreglare(?:\s+instituțională)?|validator(?:i|ii|ilor)\s+(?:comunitari(?:\s+și\s+epistemici)?(?:\s+de\s+proximitate)?|epistemici\s+și\s+morali\s+de\s+proximitate|de\s+proximitate))(?!\p{L})/iu
+  },
+  {
+    conceptId: 'isonomie-fiscala-arhitectura-alegerii',
+    regex: /(?<!\p{L})(isonomi(?:e|a|ei)\s+fiscal(?:ă|e)|simetri(?:e|a|ei)\s+fiscal(?:ă|e)|penaliz(?:are|area|ării)\s+în\s+oglindă(?:\s+a\s+statului)?|arhitectur(?:a|ii)\s+alegerii(?:\s+instituționale)?|institutional\s+choice\s+architecture)(?!\p{L})/iu
   }
 ];
 

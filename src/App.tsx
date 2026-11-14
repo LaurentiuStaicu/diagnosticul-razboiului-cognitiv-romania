@@ -1118,20 +1118,6 @@ export function App() {
                             </p>
                           );
                         })}
-
-                        {/* Render full-width figure at the end of section if linkedFigureId is set and no paragraph started with 'Figura ' */}
-                        {currentStep.linkedFigureId &&
-                          !currentStep.paragraphs.some((p) => p.startsWith('Figura ')) && (
-                            <div
-                              key={`inline-figure-end-${currentStep.linkedFigureId}`}
-                              className="my-6 font-sans w-full"
-                            >
-                              <InteractiveFigures
-                                figureId={currentStep.linkedFigureId}
-                                showSelector={false}
-                              />
-                            </div>
-                          )}
                       </div>
 
                       {/* Midpoint Summary Callout at Dense Steps */}
@@ -1402,7 +1388,9 @@ export function App() {
                         {FIGURE_METADATA[currentStep.linkedFigureId]?.title}
                       </div>
                       <p className="text-[11px] text-[#6E7376] leading-relaxed">
-                        Diagrama interactivă este afișată pe întreaga lățime a coloanei centrale de lectură. Pentru inspecție extinsă și compararea celor 7 planșe, deschideți Laboratorul de diagrame.
+                        {currentStep.paragraphs.some((p) => p.startsWith('Figura '))
+                          ? 'Diagrama interactivă este afișată integral în această secțiune pe coloana centrală de lectură și poate fi deschisă pentru inspecție comparativă în Laboratorul de diagrame.'
+                          : 'Diagrama asociată acestui capitol este afișată inline în secțiunea sa canonică și poate fi deschisă oricând pentru inspecție extinsă în Laboratorul de diagrame.'}
                       </p>
                       <button
                         type="button"
