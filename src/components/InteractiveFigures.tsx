@@ -3353,7 +3353,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
 
                   {/* Traiectorie orizontală blocată de T-bar în #F01E1E la y=168 */}
                   <line
-                    x1="280"
+                    x1="260"
                     y1="168"
                     x2="444"
                     y2="168"
@@ -3370,16 +3370,16 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     strokeWidth="7"
                   />
                   <rect
-                    x="275"
+                    x="254"
                     y="136"
-                    width="162"
+                    width="184"
                     height="22"
                     fill="#F6F5EE"
                     stroke="#F01E1E"
                     strokeWidth="1.5"
                   />
                   <text
-                    x="356"
+                    x="346"
                     y="151"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
@@ -3387,73 +3387,73 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     Baraj extractiv (mobilitate blocată)
                   </text>
 
-                  {/* PLAFON ORIZONTAL FISURAT pe segmentul x=215..445 cu breșă deschisă la x=235..265 (în jurul lui x=250) */}
+                  {/* PLAFON ORIZONTAL FISURAT pe segmentul x=202..452 cu breșă deschisă la x=220..244 (în jurul lui x=232) */}
                   <line
-                    x1="215"
+                    x1="202"
                     y1="284"
-                    x2="235"
+                    x2="220"
                     y2="284"
                     stroke="#F01E1E"
                     strokeWidth="2.5"
                     strokeDasharray="5 3"
                   />
                   <line
-                    x1="265"
+                    x1="244"
                     y1="284"
-                    x2="445"
+                    x2="452"
                     y2="284"
                     stroke="#F01E1E"
                     strokeWidth="2.5"
                     strokeDasharray="6 4"
                   />
                   <line
-                    x1="215"
+                    x1="202"
                     y1="296"
-                    x2="235"
+                    x2="220"
                     y2="296"
                     stroke="#F01E1E"
                     strokeWidth="2.5"
                     strokeDasharray="5 3"
                   />
                   <line
-                    x1="265"
+                    x1="244"
                     y1="296"
-                    x2="445"
+                    x2="452"
                     y2="296"
                     stroke="#F01E1E"
                     strokeWidth="2.5"
                     strokeDasharray="6 4"
                   />
                   <rect
-                    x="275"
-                    y="258"
-                    width="175"
-                    height="20"
+                    x="242"
+                    y="256"
+                    width="210"
+                    height="22"
                     fill="#F6F5EE"
                     stroke="#F01E1E"
                     strokeWidth="1.2"
                   />
                   <text
-                    x="362.5"
-                    y="272"
+                    x="347"
+                    y="271"
                     textAnchor="middle"
                     className="font-sans text-[9.5px] font-bold fill-[#F01E1E]"
                   >
                     Planșeu constituțional de protecție fisurat
                   </text>
 
-                  {/* DINAMICA 2: Vectorul descendent masiv în #F01E1E la x=250 (46px la dreapta etichetei -X) */}
+                  {/* DINAMICA 2: Vectorul descendent masiv în #F01E1E la x=232 */}
                   <line
-                    x1="250"
+                    x1="232"
                     y1="185"
-                    x2="250"
+                    x2="232"
                     y2="400"
                     stroke="#F01E1E"
                     strokeWidth="5"
                     markerEnd="url(#arrow-red)"
                   />
                   <rect
-                    x="150"
+                    x="132"
                     y="312"
                     width="200"
                     height="36"
@@ -3462,7 +3462,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     strokeWidth="1.5"
                   />
                   <text
-                    x="250"
+                    x="232"
                     y="327"
                     textAnchor="middle"
                     className="font-sans text-[10px] font-bold fill-[#F01E1E]"
@@ -3470,7 +3470,7 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     Prăbușire în autosabotaj (-X, -Y)
                   </text>
                   <text
-                    x="250"
+                    x="232"
                     y="341"
                     textAnchor="middle"
                     className="font-sans text-[9px] font-semibold fill-[#6E7376]"
@@ -3498,9 +3498,9 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     strokeWidth="5"
                   />
                   <rect
-                    x="205"
-                    y="261"
-                    width="240"
+                    x="195"
+                    y="260"
+                    width="255"
                     height="24"
                     rx="3"
                     fill="#E5B822"
@@ -3508,10 +3508,10 @@ export const InteractiveFigures: React.FC<InteractiveFiguresProps> = ({
                     strokeWidth="1.5"
                   />
                   <text
-                    x="325"
-                    y="277"
+                    x="322.5"
+                    y="276"
                     textAnchor="middle"
-                    className="font-sans text-[10.5px] font-bold fill-[#222426]"
+                    className="font-sans text-[10px] font-bold fill-[#222426]"
                   >
                     Planșeu constituțional de protecție consolidat
                   </text>
