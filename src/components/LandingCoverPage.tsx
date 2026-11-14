@@ -352,6 +352,12 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
                   >
                     Control reflexiv de rang secund vs. mediere semiotică ternară
                   </text>
+                  <polygon
+                    points="412,162 430,182 412,202 394,182"
+                    fill="#F6F5EE"
+                    stroke="#F01E1E"
+                    strokeWidth="1.5"
+                  />
                 </g>
 
                 {/* Arrows from Stratum B through Moral Filter to Stratum C */}
@@ -693,27 +699,27 @@ export const LandingCoverPage: React.FC<LandingCoverPageProps> = ({
         <div className="pt-6 border-t border-[#222426] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-[#6E7376]">
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Stratul A · Capitolele 0–1
+              Diagnosticul endogen · Capitolele 0–1
             </div>
-            <div>Cadrul macro, arhitectura Macro–Micro–Macro (Coleman–Hedström) și rădăcina instituțională</div>
+            <div>Arhitectura cauzală Macro–Micro–Macro (Coleman–Hedström), determinanții Lalonde–Dever și uzura alostatică</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Stratul B · Capitolele 2–3
+              Vectorul rus și OODA · Capitolele 2–3
             </div>
-            <div>Antilumea putinistă, dubla falsificare axiologică și bucla OODA</div>
+            <div>Antilumea putinistă, dubla falsificare axiologică, controlul reflexiv și poluarea cu date sintetice</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">
-              Stratul C · Capitolele 4–5
+              Polarizare și criză · Capitolele 4–5
             </div>
-            <div>Proiecția Umbrei colective și enantiodromia, matricea lui Cipolla și bifurcația Track A/B</div>
+            <div>Proiecția Umbrei colective, enantiodromia, matricea lui Cipolla și bifurcația Track A / Track B</div>
           </div>
           <div>
             <div className="font-mono font-semibold text-[#222426]">
               Reconstrucție · Capitolul 6
             </div>
-            <div>Protocolul secvențial Lalonde–Dever, policentricitate, capital social de punte și modernitate organică</div>
+            <div>Protocolul secvențial în 3 faze Lalonde–Dever, isonomie fiscală, policentricitate și modernitate organică</div>
           </div>
         </div>
       </div>

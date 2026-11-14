@@ -3,8 +3,7 @@ import {
   ALL_SUBCHAPTER_STEPS,
   GLOSSARY_CONCEPTS,
   BIBLIOGRAPHY_DATA,
-  CHAPTER_EXECUTIVE_SUMMARIES,
-  OPERATIONAL_PROTOCOL_TABLE
+  CHAPTER_EXECUTIVE_SUMMARIES
 } from './data/tablesAndReference';
 import { StratumId, BibliographyItem } from './data/types';
 import { InteractiveFigures, FIGURE_METADATA } from './components/InteractiveFigures';
@@ -32,13 +31,9 @@ type ActiveNavView = 'parcurs' | 'diagrame' | 'tabele' | 'glosar';
 type AudienceReadingMode = 'academic' | 'executive';
 
 /**
- * Matches a parenthetical string or author label against BIBLIOGRAPHY_DATA
- */
+  * Matches a parenthetical string or author label against BIBLIOGRAPHY_DATA
+  */
 function findMatchingBibliographyItems(citationText: string): BibliographyItem[] {
-  const cleaned = citationText
-    .replace(/^\(|\)$/g, '')
-    .toLowerCase();
-
   const stopWords = new Set([
     'et',
     'al',
@@ -62,34 +57,54 @@ function findMatchingBibliographyItems(citationText: string): BibliographyItem[]
     'stupidity'
   ]);
 
-  const tokens = cleaned
-    .split(/[^a-zăâîșțáéíóúçıöüä'-]+/iu)
-    .map((t) => t.trim())
-    .filter((t) => (t.length >= 3 || t === 'wu') && !stopWords.has(t));
+  const clauses = citationText
+    .replace(/^\(|\)$/g, '')
+    .split(/[;·]/)
+    .map((c) => c.trim())
+    .filter(Boolean);
 
-  if (tokens.length === 0) return [];
+  const seenIds = new Set<string>();
+  const results: BibliographyItem[] = [];
 
-  const yearMatches = citationText.match(/\b(18\d{2}|19\d{2}|20\d{2})\b/g) || [];
+  for (const clause of clauses) {
+    const cleaned = clause.toLowerCase();
+    const tokens = cleaned
+      .split(/[^a-zăâîșțáéíóúçıöüä'-]+/iu)
+      .map((t) => t.trim())
+      .filter((t) => (t.length >= 3 || t === 'wu') && !stopWords.has(t));
 
-  const matched = BIBLIOGRAPHY_DATA.filter((item) => {
-    const itemAuthorsLower = item.authors.toLowerCase();
-    return tokens.some((tok) => {
-      const escapedTok = tok.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const regex = new RegExp(`(?<!\\p{L})${escapedTok}(?!\\p{L})`, 'iu');
-      return regex.test(itemAuthorsLower);
+    if (tokens.length === 0) continue;
+
+    const yearMatches = clause.match(/\b(18\d{2}|19\d{2}|20\d{2})\b/g) || [];
+
+    const matched = BIBLIOGRAPHY_DATA.filter((item) => {
+      const itemAuthorsLower = item.authors.toLowerCase();
+      return tokens.some((tok) => {
+        const escapedTok = tok.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`(?<!\\p{L})${escapedTok}(?!\\p{L})`, 'iu');
+        return regex.test(itemAuthorsLower);
+      });
     });
-  });
 
-  if (yearMatches.length > 0 && matched.length > 1) {
-    const exactYearFiltered = matched.filter((item) =>
-      yearMatches.some((y) => item.year.includes(y))
-    );
-    if (exactYearFiltered.length > 0) {
-      return exactYearFiltered;
+    let clauseFinal = matched;
+    if (yearMatches.length > 0 && matched.length > 1) {
+      const exactYearFiltered = matched.filter((item) =>
+        yearMatches.some((y) => item.year.includes(y))
+      );
+      if (exactYearFiltered.length > 0) {
+        clauseFinal = exactYearFiltered;
+      }
+    }
+
+    for (const item of clauseFinal) {
+      if (!seenIds.has(item.id)) {
+        seenIds.add(item.id);
+        results.push(item);
+      }
     }
   }
 
-  return matched;
+  return results;
 }
 
 interface ParsedHashTarget {
@@ -203,7 +218,6 @@ export function App() {
   const [selectedStratumHighlight, setSelectedStratumHighlight] = useState<StratumId | 'ALL'>('ALL');
   const [readingTab, setReadingTab] = useState<'integral' | 'registre' | 'ambele'>('ambele');
   const [audienceMode, setAudienceMode] = useState<AudienceReadingMode>(getInitialAudienceMode);
-  const [isAcademicAccordionOpen, setIsAcademicAccordionOpen] = useState<boolean>(false);
   const [isReaderMode, setIsReaderMode] = useState<boolean>(false);
 
   const handleAudienceModeChange = useCallback((newMode: AudienceReadingMode) => {
@@ -252,11 +266,21 @@ export function App() {
     : [];
 
   const matchedSubchaptersForAuthor = selectedAuthorCitation
-    ? ALL_SUBCHAPTER_STEPS.filter((st) =>
-        st.citedAuthorNames.some((authorStr) =>
-          authorStr.toLowerCase().includes(selectedAuthorCitation.toLowerCase())
-        )
-      )
+    ? ALL_SUBCHAPTER_STEPS.filter((st) => {
+        const citLower = selectedAuthorCitation.toLowerCase();
+        if (st.citedAuthorNames.some((authorStr) => authorStr.toLowerCase().includes(citLower))) {
+          return true;
+        }
+        return matchedBibliographyForInspector.some((bib) => {
+          const primarySurname = bib.authors.split(',')[0].trim().toLowerCase();
+          return (
+            primarySurname.length >= 2 &&
+            st.citedAuthorNames.some((authorStr) =>
+              authorStr.toLowerCase().includes(primarySurname)
+            )
+          );
+        });
+      })
     : [];
 
   const updateUrlHash = useCallback((hashStr: string) => {
@@ -493,6 +517,17 @@ export function App() {
           updateUrlHash(`pasul-${currentStepNumber}`);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
+        onNavigateToTarget={(hash) => {
+          const target = parseHashState(hash);
+          setIsPortalOpen(true);
+          if (target.activeView) setActiveView(target.activeView);
+          if (target.currentStepNumber !== undefined) setCurrentStepNumber(target.currentStepNumber);
+          if (target.selectedChapterFilter !== undefined) setSelectedChapterFilter(target.selectedChapterFilter);
+          if (target.activeConceptId !== undefined) setActiveConceptId(target.activeConceptId);
+          if (target.labFigureId !== undefined) setLabFigureId(target.labFigureId);
+          updateUrlHash(hash);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
       />
     );
   }
@@ -683,7 +718,10 @@ export function App() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
               {/* LEFT COLUMN: Sticky Table of Contents (TOC) - 3 cols */}
               {!isReaderMode && (
-                <aside className="hidden lg:block lg:col-span-3 space-y-4 lg:sticky lg:top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-1">
+                <aside
+                  ref={railContainerRef}
+                  className="hidden lg:block lg:col-span-3 space-y-4 lg:sticky lg:top-20 max-h-[calc(100vh-6rem)] overflow-y-auto pr-1"
+                >
                   <div className="bg-[#F6F5EE] border border-[#222426] p-4 space-y-3">
                     <div className="flex items-center justify-between text-xs font-mono font-bold text-[#222426] border-b border-[#8C9BA5] pb-2">
                       <span className="uppercase tracking-wider">Cuprinsul monografiei</span>
@@ -712,6 +750,7 @@ export function App() {
                               return (
                                 <button
                                   key={stNum}
+                                  ref={isActive ? activeStepButtonRef : null}
                                   onClick={() => handleStepSelect(stNum)}
                                   className={`w-full text-left px-2 py-1 text-[11px] border transition-colors cursor-pointer block truncate ${
                                     isActive
@@ -770,34 +809,64 @@ export function App() {
                     </div>
                   </div>
 
-                  {/* Dual-Audience Reading Mode Toggle */}
-                  <div className="mb-5 p-3 bg-[#F6F5EE] border border-[#222426] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-                    <div className="text-xs font-mono text-[#222426] font-semibold">
-                      Mod de lectură
+                  {/* Dual-Audience Reading Mode Toggle & Reading Tab Selector */}
+                  <div className="mb-5 p-3 bg-[#F6F5EE] border border-[#222426] space-y-2.5">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                      <div className="text-xs font-mono text-[#222426] font-semibold">
+                        Mod de lectură
+                      </div>
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        <button
+                          type="button"
+                          onClick={() => handleAudienceModeChange('academic')}
+                          className={`px-3 py-1.5 text-xs font-mono border transition-colors cursor-pointer ${
+                            audienceMode === 'academic'
+                              ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
+                              : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+                          }`}
+                        >
+                          Text integral academic
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleAudienceModeChange('executive')}
+                          className={`px-3 py-1.5 text-xs font-mono border transition-colors cursor-pointer ${
+                            audienceMode === 'executive'
+                              ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-bold'
+                              : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+                          }`}
+                        >
+                          Sinteză executivă
+                        </button>
+                      </div>
                     </div>
-                    <div className="flex flex-wrap items-center gap-1.5">
-                      <button
-                        type="button"
-                        onClick={() => handleAudienceModeChange('academic')}
-                        className={`px-3 py-1.5 text-xs font-mono border transition-colors cursor-pointer ${
-                          audienceMode === 'academic'
-                            ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
-                            : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
-                        }`}
-                      >
-                        Text integral academic
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => handleAudienceModeChange('executive')}
-                        className={`px-3 py-1.5 text-xs font-mono border transition-colors cursor-pointer ${
-                          audienceMode === 'executive'
-                            ? 'bg-[#E5B822] text-[#222426] border-[#222426] font-bold'
-                            : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
-                        }`}
-                      >
-                        Sinteză executivă
-                      </button>
+
+                    <div className="pt-2 border-t border-[#8C9BA5] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <div className="text-[11px] font-mono text-[#6E7376]">
+                        Afișare secțiune
+                      </div>
+                      <div className="flex flex-wrap items-center gap-1">
+                        {(
+                          [
+                            { id: 'ambele', label: 'Text + Registre' },
+                            { id: 'integral', label: 'Doar textul' },
+                            { id: 'registre', label: 'Doar registrele' }
+                          ] as const
+                        ).map((tabOpt) => (
+                          <button
+                            key={tabOpt.id}
+                            type="button"
+                            onClick={() => setReadingTab(tabOpt.id)}
+                            className={`px-2.5 py-1 text-[11px] font-mono border transition-colors cursor-pointer ${
+                              readingTab === tabOpt.id
+                                ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
+                                : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+                            }`}
+                          >
+                            {tabOpt.label}
+                          </button>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
@@ -1254,6 +1323,30 @@ export function App() {
                         <p className="text-xs text-[#6E7376]">
                           Referință contextuală în cadrul secțiunii.
                         </p>
+                      )}
+
+                      {matchedSubchaptersForAuthor.length > 0 && (
+                        <div className="pt-2 border-t border-[#8C9BA5] space-y-1.5">
+                          <div className="text-[11px] font-mono font-semibold text-[#6E7376]">
+                            Secțiuni în care este citată referința:
+                          </div>
+                          <div className="flex flex-wrap gap-1">
+                            {matchedSubchaptersForAuthor.map((st) => (
+                              <button
+                                key={st.id}
+                                type="button"
+                                onClick={() => handleStepSelect(st.stepNumber)}
+                                className={`px-2 py-0.5 text-[11px] font-mono border cursor-pointer ${
+                                  st.stepNumber === currentStepNumber
+                                    ? 'bg-[#222426] text-[#F6F5EE] border-[#222426] font-bold'
+                                    : 'bg-[#F6F5EE] text-[#222426] border-[#8C9BA5] hover:border-[#222426]'
+                                }`}
+                              >
+                                {st.code}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
                       )}
                     </div>
                   )}

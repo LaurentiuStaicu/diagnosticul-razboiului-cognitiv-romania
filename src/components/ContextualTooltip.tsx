@@ -177,7 +177,7 @@ export const INLINE_GLOSSARY_PATTERNS: GlossaryPatternRule[] = [
   },
   {
     conceptId: 'sistema',
-    regex: /(?<!\p{L})(rețea(?:ua|lei)\s+sistema|sistema)(?!\p{L})/iu
+    regex: /(?<!\p{L})(rețea(?:ua|lei)\s+sistema|sistema|siloviki|kompromat|deathonomics|economi(?:a|ei)\s+morții)(?!\p{L})/iu
   },
 
   // Stratul B: Neurocognitiv, Cibernetic & Semiotic
