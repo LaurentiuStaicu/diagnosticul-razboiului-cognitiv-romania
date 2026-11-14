@@ -26,7 +26,7 @@
    - Reproduceri vectoriale interactive SVG ale tuturor celor 7 modele cibernetice, instituționale și cauzale din monografie (afișate atât inline în secțiunile lor canonice, cât și în laboratorul dedicat), prevăzute cu comutatoare de regim/scenariu și inspector de noduri și bucle cauzale.
 4. **Tabelele de sinteză (`Tabelul 1` și `Tabelul 2`), Matricea responsabilităților instituționale și Grupul de control regional**:
    - `Tabelul 1` (sinteza arhitecturii cauzale a diagnosticului pe 3 straturi și 5 dimensiuni majore de vulnerabilitate societală), `Tabelul 2` (protocolul secvențial de reconstrucție pe cele 3 faze și cei 4 determinanți ai modelului Lalonde–Dever), `Matricea responsabilităților instituționale pe cele trei faze secvențiale` (DNSC, ANCOM, CSAT, CNA, AEP/BEC, ONPCSB, BNR, ASF, Ministerul Educației, Biserica Ortodoxă Română, EDMO/BROD) și analiza comparativă în oglindă a României cu grupul de control regional (Estonia, Polonia, Republica Moldova).
-5. **Glosar conceptual (55 de concepte), Bibliografie integrală (152 de lucrări), Șablon de identitate vizuală și Căutare globală în monografie**:
-   - Glosarul interdisciplinar filtrabil pe straturi (`A`, `B`, `C`) și polaritate, bibliografia academică integrală ordonată alfabetic conform standardului APA 7th Edition și filtrabilă pe 5 domenii științifice, șablonul de identitate vizuală al monografiei și motorul de căutare deterministă în textul integral, glosar și bibliografie (`Căutare în monografie`).
+5. **Glosar conceptual (55 de concepte), Bibliografie integrală (152 de lucrări) și Căutare globală în monografie**:
+   - Glosarul interdisciplinar filtrabil pe straturi (`A`, `B`, `C`) și polaritate, bibliografia academică integrală ordonată alfabetic conform standardului APA 7th Edition și filtrabilă pe 5 domenii științifice și motorul de căutare deterministă în textul integral, glosar și bibliografie (`Căutare în monografie`).
 
 

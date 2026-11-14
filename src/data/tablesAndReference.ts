@@ -870,10 +870,6 @@ export const BIBLIOGRAPHY_DATA: BibliographyItem[] = [
   { id: 'bib-107', authors: 'Zuboff, S.', year: '2019', title: 'The age of surveillance capitalism: The fight for a human future at the new frontier of power', publication: 'PublicAffairs', fullCitation: 'Zuboff, S. (2019). The age of surveillance capitalism: The fight for a human future at the new frontier of power. PublicAffairs.', domain: 'Cibernetică și semiotică' }
 ];
 
-export const MASTER_STYLE_PROMPT = `Creează o experiență video în modul Cinematic urmând o rigoare academică strictă (temperatură 0.3: ton analitic, sobru, calm, clinic, fără speculații sau metafore gratuite). Nu menționa și nu afișa niciun fel de date statistice, procente sau scoruri numerice; explică toate ideile exclusiv ca dinamici structurale și cauzale. Structurează prezentarea progresiv, dublând fiecare concept teoretic cu explicația sa practică/empirică, de la definirea cadrului sistemic și a blocajelor până la sinteza și soluția finală.
-
-Regulă vizuală obligatorie: Folosește exclusiv un stil de ilustrație editorială 2D / gravură vectorială curată și diagrame de sistem pe un fundal alb-crem cald texturat (#F6F5EE). Toate liniile, contururile și textul principal vor fi în negru-cărbune (#222426) și nuanțe de gri-ardezie (#6E7376, #8C9BA5). Folosește strict galben-muștar (#E5B822) ca accent pentru concepte-cheie, sinteză și soluții, și roșu-vermilion (#F01E1E) exclusiv pentru tensiuni, crize sau bucle de blocaj. Interzis să folosești alte culori, efecte 3D sau desene de tip whiteboard.`;
-
 export const CHAPTER_EXECUTIVE_SUMMARIES: ChapterExecutiveSummary[] = [
   {
     chapterNumber: 0,
