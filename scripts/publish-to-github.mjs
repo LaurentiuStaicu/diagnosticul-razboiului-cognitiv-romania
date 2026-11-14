@@ -43,7 +43,7 @@ async function ghRequest(url, options = {}) {
 function collectFiles(dir, baseDir = dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   const files = [];
-  const ignoredDirs = new Set(['node_modules', 'dist', '.git', '.aistudio']);
+  const ignoredDirs = new Set(['node_modules', 'dist', '.git', '.aistudio', 'aistudio']);
   const ignoredFiles = new Set(['.env', 'package-lock.json']);
 
   for (const entry of entries) {
@@ -62,7 +62,9 @@ function collectFiles(dir, baseDir = dir) {
 function collectDistFiles(dir, baseDir = dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   const files = [];
+  const ignoredDirs = new Set(['aistudio']);
   for (const entry of entries) {
+    if (ignoredDirs.has(entry.name)) continue;
     const fullPath = path.join(dir, entry.name);
     const relPath = path.relative(baseDir, fullPath).split(path.sep).join('/');
     if (entry.isDirectory()) {
