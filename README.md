@@ -5,6 +5,11 @@
 </p>
 
 <p align="center">
+  <a href="https://img.shields.io/badge/monografie-1.0-E5B822?style=flat-square&labelColor=222426"><img alt="Monografie: 1.0" src="https://img.shields.io/badge/monografie-1.0-E5B822?style=flat-square&labelColor=222426"></a>
+  <a href="https://github.com/LaurentiuStaicu/diagnosticul-razboiului-cognitiv-romania/actions/workflows/deploy.yml"><img alt="GitHub Pages deployment" src="https://img.shields.io/github/actions/workflow/status/LaurentiuStaicu/diagnosticul-razboiului-cognitiv-romania/deploy.yml?branch=main&event=push&style=flat-square&label=GitHub%20Pages&color=707070"></a>
+</p>
+
+<p align="center">
   <a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">
     <img src="https://img.shields.io/badge/CITEȘTE_MONOGRAFIA_ONLINE-E5B822?style=for-the-badge&logoColor=222426&labelColor=222426" alt="Citește monografia online" />
   </a>
@@ -13,6 +18,11 @@
 <p align="center">
   👉 <strong><a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/</a></strong>
 </p>
+
+<p align="center"><small>
+<a href="#structura-aplicației-web-interactive">Structura aplicației web interactive</a> ·
+<a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">Monografia online</a>
+</small></p>
 
 ---
 
@@ -28,5 +38,3 @@
    - `Tabelul 1` (sinteza arhitecturii cauzale a diagnosticului pe 3 straturi și 5 dimensiuni majore de vulnerabilitate societală), `Tabelul 2` (protocolul secvențial de reconstrucție pe cele 3 faze și cei 4 determinanți ai modelului Lalonde–Dever), `Matricea responsabilităților instituționale pe cele trei faze secvențiale` (DNSC, ANCOM, CSAT, CNA, AEP/BEC, ONPCSB, BNR, ASF, Ministerul Educației, Biserica Ortodoxă Română, EDMO/BROD) și analiza comparativă în oglindă a României cu grupul de control regional (Estonia, Polonia, Republica Moldova).
 5. **Glosar conceptual (55 de concepte), Bibliografie integrală (152 de lucrări) și Căutare globală în monografie**:
    - Glosarul interdisciplinar filtrabil pe straturi (`A`, `B`, `C`) și polaritate, bibliografia academică integrală ordonată alfabetic conform standardului APA 7th Edition și filtrabilă pe 5 domenii științifice și motorul de căutare deterministă în textul integral, glosar și bibliografie (`Căutare în monografie`).
-
-
