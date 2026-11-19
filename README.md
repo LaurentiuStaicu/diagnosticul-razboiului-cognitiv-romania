@@ -22,8 +22,8 @@
 <p align="center"><small>
 <a href="#despre-proiect">Despre proiect</a> ·
 <a href="#structura-aplicației-web-interactive">Structura aplicației</a> ·
-<a href="#resursele-analitice">Resurse analitice</a> ·
-<a href="#aparatul-conceptual-și-bibliografic">Glosar și bibliografie</a>
+<a href="#firul-argumentativ">Firul argumentativ</a> ·
+<a href="#glosar-bibliografie-și-căutare">Glosar și bibliografie</a>
 </small></p>
 
 ---
@@ -69,8 +69,8 @@ Instrumentele de lectură și explorare includ:
 - modul `Lectură concentrată`;
 - filtrarea dinamică a conținutului după `Stratul A`, `Stratul B` și `Stratul C`;
 - **39 de casete analitice**, organizate în două registre complementare: *Registrul teoretic* și *Realitatea empirică*;
-- citările academice integrate în text, în format parantetic și narativ;
-- ancorele de autori din subsolul secțiunilor, conectate la dosarul bibliografic lateral;
+- **183 de citări academice interactive** integrate în paragrafe, în format parantetic și narativ;
+- **236 de ancore de autori** în subsolul secțiunilor, conectate la dosarul bibliografic lateral;
 - **55 de explicații terminologice contextuale**, accesibile direct din text prin funcții de tip *tooltip*.
 
 ### 3. Laboratorul celor șapte diagrame vectoriale 2D
@@ -93,7 +93,7 @@ Această secțiune conectează diagnosticul vulnerabilităților cu protocolul d
 - **Matricea responsabilităților instituționale**, care repartizează acțiunile pe cele trei faze secvențiale și include instituții precum DNSC, ANCOM, CSAT, CNA, AEP/BEC, ONPCSB, BNR, ASF, Ministerul Educației, Biserica Ortodoxă Română și EDMO/BROD;
 - **Grupul de control regional**, prin comparația României cu Estonia, Polonia și Republica Moldova.
 
-### 5. Resursele analitice — glosar, bibliografie și căutare în monografie
+### 5. Glosar, bibliografie și căutare în monografie
 
 Aparatul conceptual și bibliografic al lucrării poate fi consultat separat și este conectat la textul monografiei:
 
@@ -103,7 +103,7 @@ Aparatul conceptual și bibliografic al lucrării poate fi consultat separat și
 
 Glosarul oferă acces la explicațiile conceptelor în contextul lor analitic, iar dosarul bibliografic permite identificarea lucrărilor și autorilor citați în secțiunile monografiei.
 
-## Resursele analitice
+## Firul argumentativ
 
 Aplicația reunește într-un singur parcurs:
 
