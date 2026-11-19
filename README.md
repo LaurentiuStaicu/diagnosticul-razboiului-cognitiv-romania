@@ -15,9 +15,6 @@
   </a>
 </p>
 
-<p align="center">
-  👉 <strong><a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/</a></strong>
-</p>
 
 <p align="center"><small>
 <a href="#despre-proiect">Despre proiect</a> ·
@@ -48,11 +45,7 @@ Pagina de deschidere prezintă tema, titlul și subtitlul lucrării, precum și 
 
 Coperta include planșa sinoptică vectorială 2D interactivă, construită în jurul **modelului Macro–Micro–Macro**. Inspectorul planșei permite explorarea celor cinci componente: `Stratul A`, `Stratul B`, `Filtru moral`, `Stratul C` și `Protocol Cap. 6`.
 
-Tot aici sunt disponibile:
-
-- sinteza audiovizuală realizată pe baza monografiei, publicată pe YouTube;
-- distribuirea rapidă prin **Facebook**, **X**, **WhatsApp** și funcția **Copiază link**;
-- accesul direct la monografia online și la sinteza video (*Teaser*).
+Coperta oferă, de asemenea, acces la sinteza audiovizuală publicată pe YouTube, la distribuirea rapidă prin **Facebook**, **X** și **WhatsApp**, precum și la funcția de copiere a linkului.
 
 ### 2. Parcursul monografiei — text integral și sinteză executivă
 
@@ -63,15 +56,7 @@ Cititorul poate alege între două registre de lectură:
 - **Text integral academic** — argumentația completă, cu dezvoltările teoretice, mecanismele explicative și trimiterile bibliografice;
 - **Sinteză executivă** — prezentarea concentrată a mecanismelor diagnosticate, a vulnerabilităților sistemice și a implicațiilor pentru decidenții instituționali și politicile publice.
 
-Instrumentele de lectură și explorare includ:
-
-- selectorul de afișare `Text + Registre`, `Doar textul` și `Doar registrele`;
-- modul `Lectură concentrată`;
-- filtrarea dinamică a conținutului după `Stratul A`, `Stratul B` și `Stratul C`;
-- **39 de casete analitice**, organizate în două registre complementare: *Registrul teoretic* și *Realitatea empirică*;
-- **183 de citări academice interactive** integrate în paragrafe, în format parantetic și narativ;
-- **236 de ancore de autori** în subsolul secțiunilor, conectate la dosarul bibliografic lateral;
-- **55 de explicații terminologice contextuale**, accesibile direct din text prin funcții de tip *tooltip*.
+Instrumentele de lectură permit comutarea între registrele `Text + Registre`, `Doar textul` și `Doar registrele`, activarea modului `Lectură concentrată` și filtrarea dinamică după straturile A, B și C. Textul este completat de **39 de casete analitice** din *Registrul teoretic* și *Realitatea empirică*, **183 de citări academice interactive**, **236 de ancore de autori** conectate la dosarul bibliografic lateral și **55 de explicații terminologice contextuale** de tip *tooltip*.
 
 ### 3. Laboratorul celor șapte diagrame vectoriale 2D
 
@@ -90,7 +75,7 @@ Această secțiune conectează diagnosticul vulnerabilităților cu protocolul d
 
 - **Tabelul 1 — Sinteza arhitecturii cauzale a diagnosticului**, organizată pe trei straturi și cinci dimensiuni majore ale vulnerabilității societale;
 - **Tabelul 2 — Protocolul secvențial de reconstrucție**, structurat pe trei faze de intervenție și cei patru determinanți ai modelului Lalonde–Dever;
-- **Matricea responsabilităților instituționale**, care repartizează acțiunile pe cele trei faze secvențiale și include instituții precum DNSC, ANCOM, CSAT, CNA, AEP/BEC, ONPCSB, BNR, ASF, Ministerul Educației, Biserica Ortodoxă Română și EDMO/BROD;
+- **Matricea responsabilităților instituționale**, care repartizează acțiunile pe cele trei faze secvențiale și corelează intervențiile cu instituțiile publice, autoritățile de reglementare, actorii educaționali și structurile relevante ale societății civile;
 - **Grupul de control regional**, prin comparația României cu Estonia, Polonia și Republica Moldova.
 
 ### 5. Glosar, bibliografie și căutare în monografie
@@ -105,18 +90,20 @@ Glosarul oferă acces la explicațiile conceptelor în contextul lor analitic, i
 
 ## Firul argumentativ
 
-Aplicația reunește într-un singur parcurs:
+Argumentul urmează o succesiune cauzală și operațională:
 
-- arhitectura cauzală Macro–Micro–Macro și interacțiunea celor trei straturi;
-- filtrul axiologic creștin-secular;
-- mecanismele de capturare cognitivă și deturnare a buclei OODA;
-- analiza comparativă regională;
-- protocolul secvențial de reconstrucție a rezilienței cognitive și instituționale.
+1. **Diagnosticul vulnerabilităților endogene** ale societății românești, pe cele trei straturi ale modelului Macro–Micro–Macro.
+2. **Analiza mecanismelor de exploatare și amplificare** a vulnerabilităților prin operațiuni informaționale și ideologie.
+3. **Explicarea capturării cognitive** și a efectelor asupra orientării, judecății și deciziei colective.
+4. **Evaluarea consecințelor societale**, de la polarizare la degradarea rezilienței și autosabotaj.
+5. **Reconstrucția rezilienței cognitive și instituționale**, prin protocolul secvențial propus.
 
-Aceste componente trebuie citite ca părți interdependente ale aceleiași construcții explicative: diagnosticul vulnerabilităților, mecanismele de exploatare și intervențiile propuse.
+Filtrul axiologic creștin-secular, bucla OODA și comparația regională susțin această construcție explicativă; nu sunt teme izolate, ci componente ale legăturii dintre diagnostic, mecanisme și intervenție.
 
 ---
 
 <p align="center">
-  <strong><a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">Citește monografia online</a></strong>
+  <a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">
+    <img src="https://img.shields.io/badge/CITEȘTE_MONOGRAFIA_ONLINE-E5B822?style=for-the-badge&logoColor=222426&labelColor=222426" alt="Citește monografia online" />
+  </a>
 </p>
