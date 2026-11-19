@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">
-    <img src="https://img.shields.io/badge/CITEȘTE%20MONOGRAFIA-333333?style=for-the-badge" alt="Citește monografia online" />
+    <img src="https://img.shields.io/badge/CITEȘTE%20MONOGRAFIA-333333?style=for-the-badge" alt="Citește monografia online" width="320" />
   </a>
 </p>
 
