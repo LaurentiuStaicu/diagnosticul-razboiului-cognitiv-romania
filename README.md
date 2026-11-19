@@ -10,7 +10,9 @@
 </p>
 
 <p align="center">
-  <strong><a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">Citește monografia online</a></strong>
+  <a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">
+    <img src="https://img.shields.io/badge/deschide-Monografia%20online-707070?style=flat-square&labelColor=333333" alt="Deschide monografia online" width="210" />
+  </a>
 </p>
 
 <p align="center"><small>
@@ -100,5 +102,7 @@ Filtrul axiologic creștin-secular, bucla OODA și comparația regională susți
 ---
 
 <p align="center">
-  <strong><a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">Citește monografia online</a></strong>
+  <a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/">
+    <img src="https://img.shields.io/badge/deschide-Monografia%20online-707070?style=flat-square&labelColor=333333" alt="Deschide monografia online" width="210" />
+  </a>
 </p>
