@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://img.shields.io/badge/monografie-1.0-E5B822?style=flat-square&labelColor=222426"><img alt="Monografie: 1.0" src="https://img.shields.io/badge/monografie-1.0-E5B822?style=flat-square&labelColor=222426"></a>
+  <a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/"><img alt="Monografie: 1.0" src="https://img.shields.io/badge/monografie-1.0-E5B822?style=flat-square&labelColor=222426"></a>
   <a href="https://github.com/LaurentiuStaicu/diagnosticul-razboiului-cognitiv-romania/actions/workflows/deploy.yml"><img alt="GitHub Pages deployment" src="https://img.shields.io/github/actions/workflow/status/LaurentiuStaicu/diagnosticul-razboiului-cognitiv-romania/deploy.yml?branch=main&event=push&style=flat-square&label=GitHub%20Pages&color=707070"></a>
 </p>
 
