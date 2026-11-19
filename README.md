@@ -15,7 +15,6 @@
   </a>
 </p>
 
-
 <p align="center"><small>
 <a href="#despre-proiect">Despre proiect</a> ·
 <a href="#structura-aplicației-web-interactive">Structura aplicației</a> ·
@@ -27,7 +26,7 @@
 
 ## Despre proiect
 
-**Diagnosticul războiului cognitiv în România** este o monografie interdisciplinară și o aplicație web interactivă dedicate analizei vulnerabilităților structurale ale societății românești și a mecanismelor prin care operațiunile informaționale ruse și ideologia putinistă le exploatează și le amplifică.
+**Diagnosticul războiului cognitiv în România** este o monografie interdisciplinară și o aplicație web interactivă dedicată analizei vulnerabilităților structurale ale societății românești și mecanismelor prin care operațiunile informaționale ruse și ideologia putinistă le exploatează și le amplifică.
 
 Lucrarea propune o arhitectură explicativă pe trei straturi interdependente — instituțional, neurocognitiv și cultural — și urmărește legăturile cauzale dintre condițiile macroinstituționale, procesele individuale de formare a judecății și deciziei și rezultatele colective. Diagnosticul este urmat de un protocol secvențial de reconstrucție a rezilienței cognitive și instituționale.
 
