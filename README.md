@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/"><img alt="Ediția monografiei: 1.0" src="https://img.shields.io/badge/ediție_monografie-1.0-707070?style=flat-square&labelColor=222426"></a>
+  <a href="https://laurentiustaicu.github.io/diagnosticul-razboiului-cognitiv-romania/"><img alt="Tipul publicației: aplicație web" src="https://img.shields.io/badge/format-aplicație%20web-707070?style=flat-square&labelColor=222426"></a>
   <a href="https://github.com/LaurentiuStaicu/diagnosticul-razboiului-cognitiv-romania/actions/workflows/deploy.yml"><img alt="GitHub Pages deployment" src="https://img.shields.io/github/actions/workflow/status/LaurentiuStaicu/diagnosticul-razboiului-cognitiv-romania/deploy.yml?branch=main&event=push&style=flat-square&label=GitHub%20Pages&color=707070"></a>
 </p>
 
